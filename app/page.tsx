@@ -10,10 +10,17 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[85vh] flex items-center justify-center text-white">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524230572899-a752b3835840?q=80&w=2000')] bg-cover bg-center">
-          <div className="absolute inset-0 bg-black/40" />
+      <section className="relative h-[85vh] flex items-center justify-center text-white overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center transition-transform duration-1000"
+          style={{ 
+            backgroundImage: `url('/images/vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg')` 
+          }}
+        >
+          {/* Dark Overlay to make text readable */}
+          <div className="absolute inset-0 bg-black/50" />
         </div>
+
         <div className="relative z-10 text-center px-6">
           <h1 className="text-5xl md:text-8xl font-serif mb-4">The Royals Gallery</h1>
           <p className="max-w-xl mx-auto italic opacity-90 text-lg mb-8 font-light">A chronicle of royal heritage and timeless elegance</p>

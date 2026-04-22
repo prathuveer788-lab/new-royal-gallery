@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* NAVIGATION */}
         <nav className="fixed top-0 w-full z-[100] bg-white/95 backdrop-blur-md border-b border-neutral-100">
           {/* Responsive Padding: px-4 (Mobile) -> px-16 (Desktop) */}
-          <div className="max-w-full mx-auto px-4 sm:px-8 md:px-12 lg:px-16 py-4 flex justify-between items-center">
+          <div className="max-w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-4 flex justify-between items-center">
             
             {/* LEFT SIDE: Heritage Logo */}
             <Link href="/" className="flex items-center gap-4 group flex-shrink-0">
@@ -57,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/culture" className="hover:text-amber-700 transition-colors tracking-wide">Culture</Link>
               <Link href="/travel" className="hover:text-amber-700 transition-colors tracking-wide">Travel</Link>
               <Link href="/gallery" className="hover:text-amber-700 transition-colors tracking-wide">Gallery</Link>
-              <Link href="/journal" className="hover:text-amber-700 transition-colors italic border-b border-neutral-900">Journal</Link>
+              <Link href="/journal" className="hover:text-amber-700 transition-colors tracking-wide ">Journal</Link>
             </div>
 
             {/* MOBILE TOGGLE */}
