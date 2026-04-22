@@ -55,6 +55,42 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* Ethos Section */}
+      <section className="py-24 bg-[#fcfcfc] border-b border-neutral-100">
+        <div className="max-w-4xl mx-auto text-center px-6">
+          <h2 className="text-sm uppercase tracking-[0.5em] text-amber-600 mb-8">Our Philosophy</h2>
+          <p className="text-2xl md:text-4xl font-serif leading-relaxed text-neutral-800">
+            "Preserving the grandeur of yesteryears through a modern lens, we curate moments that define the intersection of <span className="italic text-amber-700">royalty and reality</span>."
+          </p>
+          <div className="mt-10 w-12 h-[1px] bg-amber-600 mx-auto"></div>
+        </div>
+      </section>
+
+      {/* Featured Exhibit */}
+      <section className="py-20">
+        <div className="max-w-full mx-auto px-4 md:px-10">
+          <div className="flex flex-col md:flex-row items-center gap-12 bg-neutral-50 p-8 md:p-16">
+            <div className="w-full md:w-1/2 overflow-hidden">
+              <img 
+                src="/images/vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg" 
+                alt="Featured" 
+                className="w-full h-[500px] object-cover"
+              />
+            </div>
+            <div className="w-full md:w-1/2 space-y-6">
+              <span className="text-amber-600 font-bold tracking-widest text-[10px] uppercase">Summer Collection 2026</span>
+              <h2 className="text-5xl font-serif">The Amber Fort Chronicles</h2>
+              <p className="text-neutral-600 leading-relaxed font-light">
+                Experience the intricate craftsmanship of Rajasthan's most iconic landmark. Our exclusive 
+                photo-essay takes you behind the closed doors of the royal suites.
+              </p>
+              <button className="text-black border-b border-black pb-1 hover:text-amber-700 hover:border-amber-700 transition uppercase text-xs tracking-tighter font-bold">
+                Read the full story
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
