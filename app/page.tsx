@@ -1,16 +1,16 @@
-import Link from 'next/link';
+import Image from "next/image";
 
 export default function HomePage() {
   const visualChronicles = [
-    { title: "The Imperial Gate", category: "Heritage", img: "https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?q=80&w=800" },
-    { title: "Ancient Textiles", category: "Culture", img: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?q=80&w=800" },
-    { title: "The Desert Palace", category: "Travel", img: "https://images.unsplash.com/photo-1590050752117-23a9d7f280bd?q=80&w=800" }
+    { title: "The Imperial Gate", category: "Heritage", img: "/images/mehrangarh-fort.jpg" },
+    { title: "Ancient Textiles", category: "Culture", img: "/images/colorful-vibrant-indian-landscape.jpg" },
+    { title: "The Desert Palace", category: "Travel", img: "/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg" }
   ];
 
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[85vh] flex items-center justify-center text-white overflow-hidden">
+      <section className="relative min-h-screen sm:min-h-[80vh] flex items-center justify-center text-white overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center transition-transform duration-1000"
           style={{ 
@@ -21,72 +21,84 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
-        <div className="relative z-10 text-center px-6">
-          <h1 className="text-5xl md:text-8xl font-serif mb-4">The Royals Gallery</h1>
-          <p className="max-w-xl mx-auto italic opacity-90 text-lg mb-8 font-light">A chronicle of royal heritage and timeless elegance</p>
-          <Link href="/journal" className="border border-white px-8 py-3 uppercase tracking-widest text-xs hover:bg-white hover:text-black transition">
-            Explore the Journal
-          </Link>
+        <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 py-12 sm:py-20 space-y-3 sm:space-y-4">
+          <p className="uppercase text-xs sm:text-sm tracking-[0.3em] text-amber-100 font-light">Heritage Magazine</p>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif mb-4 sm:mb-6 leading-tight">The Royal Gallery's</h1>
+          <p className="max-w-2xl mx-auto italic opacity-90 text-base sm:text-lg md:text-xl font-light">Curated stories of royal heritage, architectural mastery, and cultural traditions across India and beyond.</p>
         </div>
       </section>
 
       {/* Visual Chronicles Section */}
-      <section className="py-20 px-6 md:px-10 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-10 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="uppercase text-[10px] tracking-[0.4em] text-amber-600 block mb-2">Visual Chronicles</span>
-            <h2 className="text-4xl md:text-5xl font-serif italic">Latest Stories</h2>
+          <div className="text-center mb-10 sm:mb-14 md:mb-16 pb-8 sm:pb-12 border-b border-neutral-200">
+            <span className="uppercase text-[8px] sm:text-[9px] md:text-[10px] tracking-[0.3em] sm:tracking-[0.4em] text-amber-600 block mb-3">Featured Stories</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-3">In This Issue</h2>
+            <p className="text-neutral-600 text-sm sm:text-base max-w-2xl mx-auto font-light">Discover the intersection of heritage and contemporary culture through our curated editorial selections.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {visualChronicles.map((item, idx) => (
               <div key={idx} className="group cursor-pointer">
-                <div className="aspect-[4/5] overflow-hidden mb-4 bg-neutral-100">
-                  <img 
-                    src={item.img} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                <div className="relative aspect-[4/5] overflow-hidden rounded-lg mb-4 bg-neutral-100 shadow-sm group-hover:shadow-md transition-shadow duration-500">
+                  <Image
+                    src={item.img}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
-                <span className="text-[10px] uppercase tracking-widest text-neutral-400">{item.category}</span>
-                <h3 className="text-2xl font-serif mt-1 group-hover:text-amber-800 transition-colors">{item.title}</h3>
+                <div className="space-y-1">
+                  <span className="text-[7px] sm:text-[8px] md:text-[9px] uppercase tracking-widest text-amber-600 font-semibold block">{item.category}</span>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-serif leading-tight group-hover:text-amber-800 transition-colors">{item.title}</h3>
+                  <p className="text-xs sm:text-sm text-neutral-500 mt-2">Explore the narrative</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* Ethos Section */}
-      <section className="py-24 bg-[#fcfcfc] border-b border-neutral-100">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-sm uppercase tracking-[0.5em] text-amber-600 mb-8">Our Philosophy</h2>
-          <p className="text-2xl md:text-4xl font-serif leading-relaxed text-neutral-800">
-            "Preserving the grandeur of yesteryears through a modern lens, we curate moments that define the intersection of <span className="italic text-amber-700">royalty and reality</span>."
+      {/* Editorial Mission */}
+      <section className="py-16 sm:py-20 md:py-28 bg-neutral-900 text-white">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 md:px-8">
+          <h2 className="text-xs sm:text-sm uppercase tracking-[0.4em] sm:tracking-[0.5em] text-amber-500 mb-6 sm:mb-8 font-light">Editorial Vision</h2>
+          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif leading-relaxed mb-6 sm:mb-8">
+            Preserving the grandeur of yesteryears through a modern editorial lens.
           </p>
-          <div className="mt-10 w-12 h-[1px] bg-amber-600 mx-auto"></div>
+          <p className="text-base sm:text-lg text-neutral-300 max-w-2xl mx-auto leading-relaxed font-light">
+            We document royal heritage, architectural marvels, and cultural narratives that define India's aristocratic landscape. Each issue presents carefully curated visual essays and in-depth editorial stories from heritage sites, cultural institutions, and timeless destinations.
+          </p>
+          <div className="mt-8 sm:mt-12 w-12 h-[1px] bg-amber-500 mx-auto"></div>
         </div>
       </section>
 
-      {/* Featured Exhibit */}
-      <section className="py-20">
-        <div className="max-w-full mx-auto px-4 md:px-10">
-          <div className="flex flex-col md:flex-row items-center gap-12 bg-neutral-50 p-8 md:p-16">
-            <div className="w-full md:w-1/2 overflow-hidden">
-              <img 
-                src="/images/vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg" 
-                alt="Featured" 
-                className="w-full h-[500px] object-cover"
+      {/* Featured Story */}
+      <section className="py-12 sm:py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-16 items-center">
+            <div className="order-2 md:order-1 w-full overflow-hidden rounded-lg shadow-lg relative h-64 sm:h-80 md:h-[500px]">
+              <Image
+                src="/images/vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg"
+                alt="Featured Story"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
               />
             </div>
-            <div className="w-full md:w-1/2 space-y-6">
-              <span className="text-amber-600 font-bold tracking-widest text-[10px] uppercase">Summer Collection 2026</span>
-              <h2 className="text-5xl font-serif">The Amber Fort Chronicles</h2>
-              <p className="text-neutral-600 leading-relaxed font-light">
-                Experience the intricate craftsmanship of Rajasthan's most iconic landmark. Our exclusive 
-                photo-essay takes you behind the closed doors of the royal suites.
+            <div className="order-1 md:order-2 w-full space-y-6 sm:space-y-8">
+              <div>
+                <p className="text-amber-600 font-semibold tracking-widest text-[8px] sm:text-[9px] md:text-[10px] uppercase mb-3">Summer Issue 2026</p>
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif leading-tight">The Amber Fort Chronicles</h2>
+              </div>
+              <p className="text-neutral-600 leading-relaxed font-light text-base sm:text-lg">
+                Discover the architectural brilliance and untold stories behind Jaipur's City Palace. In our Summer 2026 editorial feature, we explore the intricate detailing, royal heritage, and contemporary significance of one of India's most iconic structures through exclusive photography and historical narrative.
               </p>
-              <button className="text-black border-b border-black pb-1 hover:text-amber-700 hover:border-amber-700 transition uppercase text-xs tracking-tighter font-bold">
-                Read the full story
-              </button>
+              <div className="flex items-center gap-4 pt-4 border-t border-neutral-200">
+                <div>
+                  <p className="text-xs text-neutral-400">12 min read</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

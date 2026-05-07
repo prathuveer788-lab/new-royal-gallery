@@ -34,18 +34,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             
             {/* LEFT SIDE: Heritage Logo */}
             <Link href="/" className="flex items-center gap-4 group flex-shrink-0">
-              <div className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-neutral-900 rounded-full transition-transform group-hover:rotate-[10deg]">
-                <span className="text-white text-2xl font-serif">R</span> 
-              </div>
+                <div className="flex flex-col items-start text-left">
+                  {/* Main Title: High-contrast, bold, and tightly stacked */}
+                  <h1 
+                    className="font-serif uppercase text-[#2a2a3c] font-normal leading-[0.8] tracking-[-0.02em] text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+                    style={{ fontFamily: 'var(--font-bodoni), serif' }}
+                  >
+                    The Royal <br />
+                    Gallery's
+                  </h1>
 
-              <div className="flex flex-col leading-none">
-                <span className="text-2xl md:text-3xl font-serif italic tracking-tight text-neutral-900" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                  The Royals
-                </span>
-                <span className="text-[10px] font-sans font-bold tracking-[0.4em] text-amber-600 uppercase mt-0.5">
-                  Gallery
-                </span>
-              </div>
+                  {/* Sub-headline: Small, wide-spaced caps */}
+                  <p className="mt-2 font-sans text-[6px] sm:text-[7px] md:text-[9px] lg:text-[10px] uppercase tracking-[0.15em] text-neutral-500 font-bold">
+                    AN INTERNATIONAL CHRONICLE OF HERITAGE
+                  </p>
+                </div>
             </Link>
 
             {/* RIGHT SIDE: Menu (Desktop) */}
@@ -79,15 +82,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </nav>
 
         {/* MAIN CONTENT */}
-        <main className="flex-grow pt-24 md:pt-32">{children}</main>
+        <main className="flex-grow pt-16 sm:pt-20 md:pt-24 lg:pt-32">{children}</main>
 
         {/* FOOTER */}
-        <footer className="bg-[#111111] text-white pt-16 pb-8 px-6 md:px-10 mt-auto">
+        <footer className="bg-[#111111] text-white pt-12 sm:pt-16 pb-6 sm:pb-8 px-4 sm:px-6 md:px-10 mt-auto">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mb-10 sm:mb-14 md:mb-16">
               <div className="space-y-4">
                 <h3 className="text-xl font-serif font-bold tracking-tighter uppercase leading-none text-white">
-                  THE ROYALS <span className="block text-[10px] text-amber-500 tracking-[0.3em] font-sans mt-1">GALLERY</span>
+                  THE ROYAL <span className="block text-[10px] text-amber-500 tracking-[0.3em] font-sans mt-1">GALLERY'S</span>
                 </h3>
                 <p className="text-neutral-400 text-sm font-light leading-relaxed max-w-xs">
                   A premium digital magazine documenting royal heritage and aristocratic culture.
@@ -107,17 +110,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="space-y-4">
                 <h4 className="text-xs uppercase tracking-[0.2em] font-bold text-amber-500">Connect</h4>
                 <div className="flex gap-4 text-neutral-400 text-sm mb-4">
-                  <a href="#" className="hover:text-white transition italic underline underline-offset-4">Instagram</a>
-                  <a href="#" className="hover:text-white transition italic underline underline-offset-4">Email</a>
+                  <a href="https://instagram.com/theroyalsgallery" target="_blank" rel="noreferrer" className="hover:text-white transition italic underline underline-offset-4">Instagram</a>
+                  <a href="mailto:hey.theroyalsgallery@gmail.com" className="hover:text-white transition italic underline underline-offset-4">Email</a>
                 </div>
                 <p className="text-[10px] text-neutral-500 uppercase tracking-widest leading-loose">
-                  editorial@theroyalsgallery.com
+                  hey.theroyalsgallery@gmail.com
                 </p>
               </div>
             </div>
 
-            <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.2em] text-neutral-500">
-              <p>© 2026 The Royals Gallery. All rights reserved.</p>
+            <div className="border-t border-white/10 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.2em] text-neutral-500 text-center sm:text-left">
+              <p>© 2026 The Royal Gallery's. All rights reserved.</p>
               <p className="text-neutral-600">Indian Royal Heritage & Global Aristocratic Culture</p>
             </div>
           </div>
