@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+const blurDataURL = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGw9IiNkZGRkZGQiIGQ9Ik0wIDBoMXYxSDB6Ii8+PC9zdmc+";
+
 export default function HomePage() {
   const visualChronicles = [
     { title: "The Imperial Gate", category: "Heritage", img: "/images/mehrangarh-fort.jpg" },
@@ -11,13 +13,16 @@ export default function HomePage() {
     <div>
       {/* Hero Section */}
       <section className="relative min-h-screen sm:min-h-[80vh] flex items-center justify-center text-white overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-1000"
-          style={{ 
-            backgroundImage: `url('/images/vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg')` 
-          }}
-        >
-          {/* Dark Overlay to make text readable */}
+        <div className="absolute inset-0 transition-transform duration-1000">
+          <Image
+            src="/images/vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg"
+            alt="Jaipur City Palace"
+            fill
+            priority
+            placeholder="blur"
+            blurDataURL={blurDataURL}
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
@@ -34,7 +39,7 @@ export default function HomePage() {
           <div className="text-center mb-10 sm:mb-14 md:mb-16 pb-8 sm:pb-12 border-b border-neutral-200">
             <span className="uppercase text-[8px] sm:text-[9px] md:text-[10px] tracking-[0.3em] sm:tracking-[0.4em] text-amber-600 block mb-3">Featured Stories</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-3">In This Issue</h2>
-            <p className="text-neutral-600 text-sm sm:text-base max-w-2xl mx-auto font-light">Discover the intersection of heritage and contemporary culture through our curated editorial selections.</p>
+            <p className="text-neutral-700 text-sm sm:text-base max-w-2xl mx-auto font-light">Discover the intersection of heritage and contemporary culture through our curated editorial selections.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
@@ -45,14 +50,17 @@ export default function HomePage() {
                     src={item.img}
                     alt={item.title}
                     fill
+                    placeholder="blur"
+                    blurDataURL={blurDataURL}
+                    loading="eager"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
                 <div className="space-y-1">
                   <span className="text-[7px] sm:text-[8px] md:text-[9px] uppercase tracking-widest text-amber-600 font-semibold block">{item.category}</span>
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-serif leading-tight group-hover:text-amber-800 transition-colors">{item.title}</h3>
-                  <p className="text-xs sm:text-sm text-neutral-500 mt-2">Explore the narrative</p>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-serif leading-tight text-neutral-900 group-hover:text-amber-800 transition-colors">{item.title}</h3>
+                  <p className="text-xs sm:text-sm text-neutral-700 mt-2">Explore the narrative</p>
                 </div>
               </div>
             ))}
@@ -82,6 +90,9 @@ export default function HomePage() {
                 src="/images/vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg"
                 alt="Featured Story"
                 fill
+                priority
+                placeholder="blur"
+                blurDataURL={blurDataURL}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
@@ -89,9 +100,9 @@ export default function HomePage() {
             <div className="order-1 md:order-2 w-full space-y-6 sm:space-y-8">
               <div>
                 <p className="text-amber-600 font-semibold tracking-widest text-[8px] sm:text-[9px] md:text-[10px] uppercase mb-3">Summer Issue 2026</p>
-                <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif leading-tight">The Amber Fort Chronicles</h2>
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif leading-tight text-neutral-900">The Amber Fort Chronicles</h2>
               </div>
-              <p className="text-neutral-600 leading-relaxed font-light text-base sm:text-lg">
+              <p className="text-neutral-700 leading-relaxed font-light text-base sm:text-lg">
                 Discover the architectural brilliance and untold stories behind Jaipur's City Palace. In our Summer 2026 editorial feature, we explore the intricate detailing, royal heritage, and contemporary significance of one of India's most iconic structures through exclusive photography and historical narrative.
               </p>
               <div className="flex items-center gap-4 pt-4 border-t border-neutral-200">

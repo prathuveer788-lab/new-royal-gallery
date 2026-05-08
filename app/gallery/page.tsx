@@ -1,5 +1,7 @@
 ﻿import Image from "next/image";
 
+const blurDataURL = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGw9IiNkZGRkZGQiIGQ9Ik0wIDBoMXYxSDB6Ii8+PC9zdmc+";
+
 const photos = [
   'architectural-marvel-with-ornate-columns-arches.jpg',
   'badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg',
@@ -35,7 +37,7 @@ export default function GalleryPage() {
         <header className="text-center py-12 sm:py-16 md:py-20 border-b border-neutral-100">
           <p className="uppercase text-xs sm:text-sm tracking-[0.3em] text-amber-600 font-light mb-3">Visual Collection</p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-4">Gallery</h1>
-          <p className="text-neutral-600 max-w-2xl mx-auto text-sm sm:text-base font-light">
+          <p className="text-neutral-700 max-w-2xl mx-auto text-sm sm:text-base font-light">
             A comprehensive visual archive of India's architectural heritage, royal palaces, cultural landmarks, and contemporary spaces that define editorial excellence.
           </p>
         </header>
@@ -49,6 +51,8 @@ export default function GalleryPage() {
                     src={`/images/${filename}`}
                     alt={cleanAltText(filename)}
                     fill
+                    placeholder="blur"
+                    blurDataURL={blurDataURL}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
