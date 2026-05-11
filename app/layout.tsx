@@ -1,8 +1,67 @@
-"use client";
+import type { Metadata } from "next";
 import { useState } from "react";
 import Link from "next/link";
 import "./globals.css";
 import { Cormorant_Garamond, Montserrat, Bodoni_Moda } from "next/font/google";
+
+export const metadata: Metadata = {
+  title: "The Royal Gallery's | Premium Royal Heritage & Luxury Magazine",
+  description: "Explore India's royal heritage, architectural masterpieces, and luxury travel destinations. The Royal Gallery's is a premium digital magazine documenting aristocratic culture, heritage sites, and contemporary narratives.",
+  keywords: "Royal Gallery's, royal heritage, luxury magazine, Indian palaces, architectural heritage, travel magazine, aristocratic culture",
+  authors: [{ name: "The Royal Gallery's" }],
+  creator: "The Royal Gallery's",
+  publisher: "The Royal Gallery's",
+  formatDetection: {
+    email: false,
+    telephone: false,
+    address: false,
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://yourdomain.com",
+    siteName: "The Royal Gallery's",
+    title: "The Royal Gallery's | Premium Royal Heritage Magazine",
+    description: "Discover India's royal heritage and architectural masterpieces through our premium editorial magazine.",
+    images: [
+      {
+        url: "https://yourdomain.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "The Royal Gallery's - Royal Heritage Magazine",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@theroyalsgallery",
+    creator: "@theroyalsgallery",
+    title: "The Royal Gallery's",
+    description: "Premium magazine exploring royal heritage and luxury travel",
+    images: ["https://yourdomain.com/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://yourdomain.com",
+  },
+};
+
+"use client";
 
 const cormorant = Cormorant_Garamond({ 
   subsets: ["latin"], 

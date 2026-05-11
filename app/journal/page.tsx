@@ -5,7 +5,7 @@ export default function JournalPage() {
         <div className="max-w-3xl mx-auto">
           <div className="border-b border-neutral-200 pb-8 sm:pb-12 mb-12 sm:mb-16 md:mb-20">
             <p className="text-amber-600 font-semibold tracking-widest text-[8px] sm:text-[9px] md:text-[10px] uppercase mb-3">Online Editorial</p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-4">The Journal</h1>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-4 text-neutral-900">The Journal</h1>
             <p className="text-neutral-700 max-w-2xl text-sm sm:text-base font-light leading-relaxed">
               In-depth editorial features and narrative photography exploring India's heritage, architecture, culture, and contemporary narratives. Curated stories from our editorial team.
             </p>
@@ -37,7 +37,7 @@ export default function JournalPage() {
                   </div>
 
                   <div>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-4 group-hover:text-amber-800 transition-colors leading-tight">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-4 text-neutral-900 group-hover:text-amber-800 transition-colors leading-tight">
                       {story.title}
                     </h2>
                     <p className="text-neutral-700 font-light text-base sm:text-lg leading-relaxed mb-6">

@@ -10,7 +10,7 @@ export default function TravelPage() {
           {/* Header */}
           <div className="mb-12 sm:mb-16 md:mb-20 pb-8 sm:pb-12 border-b border-neutral-200">
             <p className="text-amber-600 font-semibold tracking-widest text-[8px] sm:text-[9px] md:text-[10px] uppercase mb-3">Travel Editorial</p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-4">Wanderlust &amp; Luxury</h1>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-4 text-neutral-900">Wanderlust &amp; Luxury</h1>
             <p className="text-neutral-700 max-w-3xl text-sm sm:text-base md:text-lg font-light leading-relaxed">
               Journey through India's most distinguished destinations. From palace hotels to heritage retreats, discover the stories behind iconic travel experiences.
             </p>
@@ -32,7 +32,7 @@ export default function TravelPage() {
                 />
               </div>
               <div>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-3">Grand Palace Hotels</h3>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-3 text-neutral-900">Grand Palace Hotels</h3>
                 <p className="text-neutral-700 font-light text-sm sm:text-base leading-relaxed">
                   Experience luxury in converted palaces, where centuries of history meet contemporary hospitality. Our guide to India's most prestigious palace hotels and heritage properties.
                 </p>
@@ -54,7 +54,7 @@ export default function TravelPage() {
                 />
               </div>
               <div>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-3">Quiet Journeys</h3>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-3 text-neutral-900">Quiet Journeys</h3>
                 <p className="text-neutral-700 font-light text-sm sm:text-base leading-relaxed">
                   Beyond the mainstream: serene destinations and hidden architectural gems. Curated experiences for discerning travelers seeking authentic connection with heritage spaces.
                 </p>

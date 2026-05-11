@@ -9,7 +9,7 @@ export default function CulturePage() {
         {/* Header */}
         <div className="mb-12 sm:mb-16 md:mb-20 pb-8 sm:pb-12 border-b border-neutral-200">
           <p className="text-amber-600 font-semibold tracking-widest text-[8px] sm:text-[9px] md:text-[10px] uppercase mb-3">Editorial Feature</p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-4">Art &amp; Culture</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-4 text-neutral-900">Art &amp; Culture</h1>
           <p className="text-neutral-700 max-w-3xl text-sm sm:text-base md:text-lg font-light leading-relaxed">
             A deep dive into the traditions, craftsmanship, and contemporary expressions that define India's artistic landscape.
           </p>
@@ -33,7 +33,7 @@ export default function CulturePage() {
           {/* Content Section */}
           <div className="flex flex-col justify-between space-y-6 sm:space-y-8">
             <div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-4">Living Traditions</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-4 text-neutral-900">Living Traditions</h2>
               <p className="text-neutral-700 font-light text-base sm:text-lg leading-relaxed mb-4">
                 India's cultural landscape thrives through countless artisans, musicians, and craftspeople dedicated to preserving ancient techniques. From textile dyeing to classical dance, these traditions bridge history and contemporary expression.
               </p>

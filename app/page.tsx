@@ -38,7 +38,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 sm:mb-14 md:mb-16 pb-8 sm:pb-12 border-b border-neutral-200">
             <span className="uppercase text-[8px] sm:text-[9px] md:text-[10px] tracking-[0.3em] sm:tracking-[0.4em] text-amber-600 block mb-3">Featured Stories</span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-3">In This Issue</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-3 text-neutral-900">In This Issue</h2>
             <p className="text-neutral-700 text-sm sm:text-base max-w-2xl mx-auto font-light">Discover the intersection of heritage and contemporary culture through our curated editorial selections.</p>
           </div>
 

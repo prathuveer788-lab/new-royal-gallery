@@ -9,7 +9,7 @@ export default function HeritagePage() {
         {/* Header */}
         <div className="mb-12 sm:mb-16 md:mb-20 pb-8 sm:pb-12 border-b border-neutral-200">
           <p className="text-amber-600 font-semibold tracking-widest text-[8px] sm:text-[9px] md:text-[10px] uppercase mb-3">Editorial Section</p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-4">Heritage &amp; Royalty</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-4 text-neutral-900">Heritage &amp; Royalty</h1>
           <p className="text-neutral-700 max-w-3xl text-sm sm:text-base md:text-lg font-light leading-relaxed">
             Explore the architectural legacy and cultural significance of India's most revered heritage sites. From the majestic palaces of Rajasthan to the gardens of Mughal emperors, we document the stories embedded in stone and history.
           </p>
@@ -31,7 +31,7 @@ export default function HeritagePage() {
           </div>
           <div className="order-1 lg:order-2 space-y-6 sm:space-y-8">
             <div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-4">The Palaces of Udaipur</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-4 text-neutral-900">The Palaces of Udaipur</h2>
               <p className="text-neutral-700 font-light text-base sm:text-lg leading-relaxed">
                 Udaipur's architectural gems represent the pinnacle of Rajasthani heritage. The City Palace, with its intricate jali work and panoramic views of Lake Pichola, stands as a testament to royal craftsmanship. Badi Mahal, the garden palace, embodies the fusion of Mughal and Rajasthani architectural styles, with each courtyard and chamber telling stories of centuries past.
               </p>
@@ -40,21 +40,21 @@ export default function HeritagePage() {
               <li className="flex gap-4 items-start">
                 <span className="text-amber-600 font-bold text-lg">·</span>
                 <div>
-                  <h4 className="font-serif text-lg sm:text-xl mb-1">Architectural Excellence</h4>
+                  <h4 className="font-serif text-lg sm:text-xl mb-1 text-neutral-900">Architectural Excellence</h4>
                   <p className="text-neutral-700 text-sm font-light">Detailed craftsmanship in every jali and arch</p>
                 </div>
               </li>
               <li className="flex gap-4 items-start">
                 <span className="text-amber-600 font-bold text-lg">·</span>
                 <div>
-                  <h4 className="font-serif text-lg sm:text-xl mb-1">Cultural Narrative</h4>
+                  <h4 className="font-serif text-lg sm:text-xl mb-1 text-neutral-900">Cultural Narrative</h4>
                   <p className="text-neutral-700 text-sm font-light">Centuries of royal patronage and tradition</p>
                 </div>
               </li>
               <li className="flex gap-4 items-start">
                 <span className="text-amber-600 font-bold text-lg">·</span>
                 <div>
-                  <h4 className="font-serif text-lg sm:text-xl mb-1">Contemporary Relevance</h4>
+                  <h4 className="font-serif text-lg sm:text-xl mb-1 text-neutral-900">Contemporary Relevance</h4>
                   <p className="text-neutral-700 text-sm font-light">Preserved heritage in a modern context</p>
                 </div>
               </li>

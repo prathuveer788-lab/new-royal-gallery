@@ -36,7 +36,7 @@ export default function GalleryPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
         <header className="text-center py-12 sm:py-16 md:py-20 border-b border-neutral-100">
           <p className="uppercase text-xs sm:text-sm tracking-[0.3em] text-amber-600 font-light mb-3">Visual Collection</p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-4">Gallery</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-4 text-neutral-900">Gallery</h1>
           <p className="text-neutral-700 max-w-2xl mx-auto text-sm sm:text-base font-light">
             A comprehensive visual archive of India's architectural heritage, royal palaces, cultural landmarks, and contemporary spaces that define editorial excellence.
           </p>
