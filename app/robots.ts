@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/.next/', '/public/'],
     },
-    sitemap: 'https://theroyalgallerys.com/sitemap.xml', // Replace with your actual domain
+    sitemap: 'https://theroyalgallerys.com/sitemap.xml',
   }
 }
