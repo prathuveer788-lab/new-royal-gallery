@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
+import { hasExternalUrl, resolveImageUrl } from "@/lib/image-url-map";
 
 interface PhotoFigureProps {
   /** Image source URL — when provided, renders a real image; when omitted, shows a placeholder */
@@ -45,34 +46,73 @@ export default function PhotoFigure({
 }: PhotoFigureProps) {
   const aspect = aspectMap[orientation] || aspectMap.landscape;
   const [hasError, setHasError] = useState(false);
-  const [resolvedSrc, setResolvedSrc] = useState(src);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const mountedRef = useRef(true);
 
   useEffect(() => {
-    setResolvedSrc(src);
+    mountedRef.current = true;
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
+
+  // Reset state when src changes
+  useEffect(() => {
     setHasError(false);
+    setImageLoaded(false);
   }, [src]);
 
-  const isRemote = resolvedSrc?.startsWith("http://") || resolvedSrc?.startsWith("https://");
-  const isLocalAsset = resolvedSrc?.startsWith("/images/");
-  const shouldUseFallback = !resolvedSrc || hasError || (!isRemote && !isLocalAsset);
+  // Resolve the effective source
+  const effectiveSrc = (() => {
+    if (!src) return undefined;
+    // External URLs — use directly
+    if (src.startsWith("http://") || src.startsWith("https://")) return src;
+    // Local experiences images — check URL map first
+    if (src.startsWith("/images/experiences/")) {
+      if (hasExternalUrl(src)) return resolveImageUrl(src);
+      // No external URL and no local file — skip loading, show fallback
+      return undefined;
+    }
+    // Other local images (hero JPGs, etc.) — try loading
+    return src;
+  })();
+
+  const isRemote = effectiveSrc?.startsWith("http://") || effectiveSrc?.startsWith("https://");
+  const isLocalAsset = effectiveSrc?.startsWith("/images/");
+  const shouldUseFallback = !effectiveSrc || hasError || (!isRemote && !isLocalAsset);
+
+  const handleError = useCallback(() => {
+    if (mountedRef.current) setHasError(true);
+  }, []);
+
+  const handleLoad = useCallback(() => {
+    if (mountedRef.current) setImageLoaded(true);
+  }, []);
 
   // ── Real image render ──────────────────────────────
-  if (resolvedSrc && !shouldUseFallback) {
+  if (effectiveSrc && !shouldUseFallback) {
     return (
       <figure className={`group my-8 sm:my-10 md:my-12 ${className}`}>
         <div
           className={`${aspect} relative overflow-hidden bg-neutral-100 border border-neutral-200/80`}
         >
+          {/* Show the editorial fallback behind the image until it loads */}
+          {!imageLoaded && (
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(245,208,122,0.35),_transparent_45%),linear-gradient(135deg,_#f7efe2_0%,_#efe1c7_40%,_#e2c79c_100%)] flex items-center justify-center z-10" />
+          )}
           <Image
-            src={resolvedSrc}
+            src={effectiveSrc}
             alt={alt}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 720px, 720px"
             priority={priority}
             placeholder="blur"
             blurDataURL={blurDataURL}
-            className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-            onError={() => setHasError(true)}
+            className="object-cover transition-opacity duration-500"
+            style={{ opacity: imageLoaded ? 1 : 0 }}
+            onLoad={handleLoad}
+            onError={handleError}
+            unoptimized={isRemote}
           />
           {/* Subtle gradient overlay for text readability on light images */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent pointer-events-none" />
