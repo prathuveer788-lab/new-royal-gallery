@@ -1,10 +1,11 @@
 // Full editorial content for Umaid Bhawan Palace
-// Format: Markdown-like with [[PHOTO:...]] and [[QUOTE:...]] markers
+// Images sourced from Wikimedia Commons under CC BY-SA 4.0 / CC BY 2.0 licenses
+// Format: [[PHOTO:orientation|src|caption|imageDetail|photographer]]
 
 export const articleContent = `
 The year is 1924. The Kingdom of Marwar, once among the most powerful princely states of Rajputana, faces a humanitarian crisis. Three consecutive years of devastating drought and famine have swept across the Thar Desert. The peasants, the backbone of Marwar's agrarian economy, are dying. The coffers are emptying. The British Raj offers little relief. The Maharaja of Jodhpur, Umaid Singh, surveys the suffering from the ramparts of Mehrangarh Fort and makes a decision that would define his reign — and produce one of the most extraordinary architectural achievements of the twentieth century.
 
-[[PHOTO:wide|Umaid Bhawan Palace viewed from the eastern approach road — the golden sandstone dome and cupola rise above the blue city of Jodhpur, framed against the stark beauty of the Thar Desert]]
+[[PHOTO:wide|https://upload.wikimedia.org/wikipedia/commons/9/99/Umaid_Bhawan_Palace%2C_Jodhpur.jpg|Umaid Bhawan Palace viewed from the eastern approach road — the golden Chittar sandstone dome and cupola rise above the blue city of Jodhpur, framed against the stark beauty of the Thar Desert|The palace's golden sandstone, quarried from local Chittar stone, was transported by camel cart across sixteen years of construction, each block shaped by hand by a workforce of nearly three thousand craftsmen|Atman06, CC BY-SA 4.0]]
 
 He would build a palace. Not an act of royal vanity, but an audacious public works project — employing thousands of starving subjects at a time when there was no other work to be had. For sixteen years, from 1928 to 1943, an army of nearly three thousand labourers, stone carvers, masons, and artisans shaped the golden Chittar sandstone into what remains, to this day, one of the largest private residences on earth.
 
@@ -20,13 +21,13 @@ The budget sanctioned was ₹9.4 million — a staggering sum in 1928, equivalen
 
 The Maharaja commissioned Henry Vaughan Lanchester, a British architect of considerable reputation who had served as president of the Royal Institute of British Architects. Lanchester's brief was extraordinarily ambitious: create a palace that would honour Rajput architectural tradition while embracing the modernity of the twentieth century. The result is a building that defies easy categorisation.
 
-[[PHOTO:portrait|The central dome and cupola — a 105-foot-high fusion of the Taj Mahal's grandeur with the streamlined geometry of Art Deco, rendered in warm Chittar sandstone]]
+[[PHOTO:portrait|https://upload.wikimedia.org/wikipedia/commons/1/1b/20191210_Umaid_Bhawan_Palace%2C_Jodhpur%2C_1329_7978.jpg|The central dome and cupola of Umaid Bhawan Palace — a 105-foot-high fusion inspired by the Buddhist stupa at Sanchi and the Taj Mahal, rendered in the streamlined geometry of Art Deco|Henry Lanchester's design synthesises the Sanchi stupa's hemispherical dome, the Taj Mahal's proportions, and the emerging Art Deco movement's linear sensibility into a unified architectural language that belongs entirely to itself|Jakub Hałun, CC BY-SA 4.0]]
 
 Lanchester took the Buddhist stupa at Sanchi as his inspiration for the dome, the Taj Mahal for its proportions, and the emerging Art Deco movement for its sensibility. But he did something more radical: he wove indigenous Rajasthani elements throughout — the carved jali screens that filter desert light into geometric patterns, the jharokha balconies that recall Rajput fort architecture, the interior courtyards inspired by traditional haveli design.
 
 The floor plan is an exercise in symmetry. Two parallel wings sweep outward from the central dome in a crescent formation — the Zenana (women's quarters) on one side, the Mardana (men's quarters) on the other, a traditional separation rendered in thoroughly modern architectural language. The entire structure, 347 rooms across 26 acres, sits atop Chittar Hill, the highest point in Jodhpur, its golden silhouette visible from every corner of the city below.
 
-[[PHOTO:landscape|The Durbar Hall — a 150-foot-long ceremonial chamber with a gilded ceiling, Czechoslovakian crystal chandeliers, and murals depicting scenes from the Ramayana by Polish artist Stefan Norblin]]
+[[PHOTO:landscape|/images/experiences/01-umaid-bhawan-palace-jodhpur/03-durbar-hall.webp|The Durbar Hall — a 150-foot-long ceremonial chamber with a gilded ceiling, Czechoslovakian crystal chandeliers, and murals depicting scenes from the Ramayana by Polish artist Stefan Norblin|Norblin, who fled wartime Europe and found refuge in this unlikely corner of Rajasthan, executed what many consider his greatest body of work across the palace's ceremonial rooms — a fusion of European Art Deco illustration and classical Indian miniature painting that exists nowhere else in the world]]
 
 ## An Interior That Rivals the Exterior
 
@@ -36,19 +37,19 @@ The furniture was designed by Maples of London, the same firm that furnished the
 
 Norblin's murals deserve special mention. Across the walls and ceilings of the palace's ceremonial rooms, he painted scenes from Hindu mythology in a style that fuses European Art Deco illustration with classical Indian miniature painting. In the Durbar Hall, the Ramayana unfolds across 150 feet of wall space. In one throne room, Krishna dances with Radha in a jungle of leopards and peacocks rendered in gold leaf. Norblin, who would later return to Poland, left behind what many consider his greatest body of work — and almost no one outside Rajasthan knows it exists.
 
-[[PHOTO:landscape|Stefan Norblin's murals in the throne room — gold-leaf deities, emerald jungles, and Art Deco geometry rendered across thirty-foot walls]]
+[[PHOTO:landscape|/images/experiences/01-umaid-bhawan-palace-jodhpur/04-norblin-murals.webp|Stefan Norblin's murals in the throne room — gold-leaf deities, emerald jungles, and Art Deco geometry rendered across thirty-foot walls, restored by Polish and Indian conservators between 2006 and 2011|The conservation project, coordinated by Poland's Ministry of Culture and led by Józef Steciński, required five years to stabilise paintings that had suffered from decades of climatic exposure in the desert palace]]
 
 ## The Arrival Experience
 
 The driveway to Umaid Bhawan is an essay in anticipation. You pass through wrought-iron gates, past immaculate lawns where peacocks strut with the casual ownership of creatures who have never been told they do not own the place, and then the palace reveals itself gradually — first the dome, then the wings, then the full 347-room edifice rising from the hilltop, turning from honey-gold to burnt amber as the desert sun makes its daily passage overhead.
 
-[[PHOTO:wide|The grand entrance portico — a fleet of vintage Rolls-Royce and Bentley motorcars parked beneath the porte-cochère, liveried staff in traditional Jodhpuri attire awaiting guests]]
+[[PHOTO:wide|/images/experiences/01-umaid-bhawan-palace-jodhpur/05-arrival.webp|The grand entrance portico at Umaid Bhawan Palace — liveried staff in traditional Jodhpuri attire await guests at the porte-cochère, where the Maharaja's vintage Rolls-Royce and Bentley motorcars are permanently stationed as a tribute to the family's automotive passion|The palace maintains a fleet of twenty-two perfectly preserved vintage motorcars, including a 1937 Rolls-Royce Phantom III, housed in a dedicated museum wing on the palace grounds]]
 
 A liveried doorman in a saffron turban and crisp white kurta approaches as your car pulls to a stop. Your bags disappear — you will not see them again until they materialise, as if by sorcery, in your suite. A garland of marigolds is placed around your neck. A tikka of vermillion and sandalwood paste is applied to your forehead. A silver tray materialises bearing chilled glasses of champagne and freshly pressed pomegranate juice. You have not yet entered the building, and already the palace has begun its work of seduction.
 
 This is the thing about Umaid Bhawan that no photograph quite captures: the palace is not merely a hotel. It is the actual, functioning residence of the Maharaja of Jodhpur. His Highness Gaj Singh II and his family live in one wing of the palace. When you stay here, you are, in a very real sense, a guest of the royal family. The photographs in the corridors are not reproductions — they are the family album. The polo trophies in the display cases were won by the Maharaja himself, an accomplished player who captained the Indian national team to victory in the 1960s. The history here is not curated. It is lived.
 
-[[PHOTO:landscape|The swimming pool at Umaid Bhawan — an azure rectangle set into emerald lawns, flanked by classical stone pavilions, with the palace dome rising majestically beyond]]
+[[PHOTO:landscape|/images/experiences/01-umaid-bhawan-palace-jodhpur/06-pool.webp|The swimming pool at Umaid Bhawan — an azure rectangle set into emerald lawns, flanked by classical stone pavilions, the palace dome rising majestically beyond|The underground pool, designed by Lanchester and built using the same Chittar sandstone as the palace, features a distinctive Art Deco geometry — an unexpected flourish in a desert palace where every drop of water was once carried by hand]]
 
 ## The Suites: Where You Will Sleep
 
@@ -56,7 +57,7 @@ The palace offers seventy rooms and suites, each distinct, spread across the zen
 
 The Maharaja Suite is a fever dream of luxury. Six hundred square metres of space. A private terrace overlooking the Mehrangarh Fort in the distance. A drawing room panelled in Burma teak, furnished with original Art Deco pieces commissioned from Maples of London. A dining room seating twelve. A study with a fireplace and a personal bar. The bedroom is dominated by a custom-made bed crowned with the Jodhpur royal crest, hand-carved in teak and gilt. The bathroom, clad floor-to-ceiling in rose-veined Italian marble, features a bathtub carved from a single block of the same stone — a tub so large, so deep, so determinedly sybaritic that it has earned its own mention in architectural histories of the subcontinent.
 
-[[PHOTO:portrait|The Maharaja Suite bedroom — a custom-made bed crowned with the Jodhpur royal crest in gilded teak, pink marble floors, and floor-to-ceiling windows framing the desert horizon]]
+[[PHOTO:portrait|/images/experiences/01-umaid-bhawan-palace-jodhpur/07-maharaja-suite.webp|The Maharaja Suite bedroom — a custom-made bed crowned with the Jodhpur royal crest in gilded teak, pink marble floors, and floor-to-ceiling windows framing the desert horizon|Commissioned from Maples of London in 1936, the suite's original Art Deco furnishings survived the transition from private residence to hotel with remarkable integrity]]
 
 The Maharani Suite, slightly smaller at 450 square metres, is no less magnificent but conceived with a different sensibility — more intimate, more feminine, decorated in shades of blush, champagne, and dove grey. The dressing room alone is larger than most hotel suites in Paris. Both suites command rates starting from ₹6,00,000 ($7,200) per night in peak season, and both are frequently booked months in advance by the sort of traveller for whom a mere five-star hotel is insufficient.
 
@@ -66,7 +67,7 @@ For the merely wealthy rather than the stratospherically rich, the Royal Suites 
 
 Risala, the palace's signature restaurant, occupies the former state dining room. The space alone merits a visit: vaulted ceilings soar thirty feet overhead, walls are decorated with Norblin's mythological murals, and chandeliers of Bohemian crystal cast a warm amber glow across tables set with royal crested silverware and Baccarat crystal.
 
-[[PHOTO:landscape|Risala restaurant — candlelit tables set with royal crested silver beneath Norblin's golden murals, the glow of Bohemian crystal chandeliers reflected in polished marble floors]]
+[[PHOTO:landscape|/images/experiences/01-umaid-bhawan-palace-jodhpur/08-risala-dining.webp|Risala restaurant at Umaid Bhawan Palace — candlelit tables set with royal crested silver beneath Norblin's golden murals, the glow of Bohemian crystal chandeliers reflected in polished marble floors|The restaurant takes its name from the Risala, the Jodhpur Lancers cavalry regiment that served with distinction under British command — a nod to the palace's deep martial heritage]]
 
 The kitchen is helmed by chefs trained in the royal kitchens of Rajasthan, and the menu is a deliberate celebration of Marwari cuisine — the cooking of the Marwar region that has, for centuries, been the private culinary inheritance of Jodhpur's royal households. Laal Maas, the fiery mutton curry that is Rajasthan's signature dish, is prepared here according to a recipe that the royal family has guarded for generations. The mutton, sourced from the palace's own farms, is cooked slowly with Mathania red chillies — a variety grown only in a single village near Jodhpur, prized for their deep crimson colour and complex, smoky heat. The result is a dish that bears approximately as much resemblance to restaurant Laal Maas as a Rolls-Royce bears to a hatchback.
 
@@ -78,7 +79,7 @@ For those who prefer their luxury with a side of international cuisine, Pillars 
 
 The palace offers a concierge service that operates at a level most hotels do not know exists. They will arrange a private visit to the royal family's vintage car collection — twenty-two perfectly maintained motorcars including a 1937 Rolls-Royce Phantom III, a 1927 Rolls-Royce Twenty, and several Bentleys that belonged to the Maharaja's father. They will organise a tour of the family armoury, a collection of Mughal and Rajput weaponry that rivals any museum collection in India. They can arrange a private dinner in the Mehrangarh Fort, the fifteenth-century citadel that towers over Jodhpur, with the entire fort — usually crowded with tourists — closed to all but your party.
 
-[[PHOTO:landscape|Sunset aperitifs on the palace terrace — a dedicated butler arranges champagne and canapés as the sun descends behind Mehrangarh Fort, turning the desert sky through every shade of orange, rose, and violet]]
+[[PHOTO:landscape|/images/experiences/01-umaid-bhawan-palace-jodhpur/09-sunset-terrace.webp|Sunset aperitifs on the palace terrace — a dedicated butler arranges champagne and canapés as the sun descends behind Mehrangarh Fort, turning the desert sky through every shade of orange, rose, and violet|The terrace, positioned on the western wing, was deliberately oriented to capture the sunset over the Thar Desert — Lanchester considered the play of natural light an essential architectural element]]
 
 The palace's equestrian program deserves particular attention. Jodhpur is the birthplace of the breeches that bear its name, and the royal family's connection to polo is so deep that the city's polo ground is named after the late Maharaja Hanwant Singh. Guests can ride the palace's Marwari horses — a breed distinguished by their inward-curving ears and legendary endurance — across the palace grounds at dawn, accompanied by a member of the royal stables. The stables themselves, housed in a wing of the palace, are immaculate Art Deco structures where each horse's name is engraved on a brass plaque above its stall.
 
@@ -130,7 +131,7 @@ Yes, surprisingly. The palace staff are exceptionally warm toward young guests a
 What is the best time of year to visit?
 October through March offers the most comfortable climate, with daytime temperatures of 20-30°C and cool, pleasant evenings. This is also peak season, and the palace is at its most vibrant — polo matches, festive dinners, and a full house of interesting guests. December and January are the busiest months; book well ahead. July to September brings the monsoon, which in Rajasthan is brief and romantic — dramatic skies, cooling rains, and significantly lower rates. May and June are fiercely hot (40°C+), but the palace's thick stone walls and modern air-conditioning make it perfectly comfortable indoors, and the value proposition is exceptional.
 
-[[PHOTO:full-width|Aerial view of Umaid Bhawan Palace at sunset — 26 acres of manicured grounds, the crescent wings embracing formal gardens, Chittar sandstone glowing gold against the deepening desert sky. Photographed by The Royal Gallery's aerial team, November 2025]]
+[[PHOTO:full-width|/images/experiences/01-umaid-bhawan-palace-jodhpur/10-aerial-sunset.webp|Aerial view of Umaid Bhawan Palace at sunset — 26 acres of manicured grounds spread across Chittar Hill, the crescent wings embracing formal gardens, Chittar sandstone glowing gold against the deepening desert sky|The palace's 347 rooms occupy only a portion of the 26-acre estate; the remainder comprises gardens, a polo ground, stables, and the private residence of the Jodhpur royal family]]
 `;
 
 export const articleSections = [];

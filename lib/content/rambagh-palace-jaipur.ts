@@ -1,11 +1,14 @@
+// Full editorial content for Rambagh Palace, Jaipur
+// Images sourced from Wikimedia Commons under CC BY / CC BY-SA licenses
+
 export const articleContent = `
 There are palace hotels, and then there is Rambagh. The distinction matters. Most of Rajasthan's palace hotels are conversions — royal residences that, at some point in the twentieth century, transitioned from private homes to commercial establishments. Rambagh Palace in Jaipur made that transition more gracefully than any of them, carrying forward not merely the architecture and the furniture but the entire sensibility of a royal household into its present incarnation as what is widely, and correctly, regarded as the finest hotel in the Pink City.
 
-[[PHOTO:wide|Rambagh Palace viewed from the Mughal Gardens at dawn — the ochre facade catching first light, peacocks crossing immaculate lawns, the Aravalli Hills a soft silhouette on the horizon]]
+[[PHOTO:wide|/images/experiences/02-rambagh-palace-jaipur/01-hero.webp|Rambagh Palace viewed from the Mughal Gardens at dawn — the ochre facade catching first light, peacocks crossing immaculate lawns, the Aravalli Hills a soft silhouette on the horizon|The palace's 47-acre estate was originally a modest garden house in 1835; it expanded over a century into the sprawling royal residence seen today, each wing reflecting the architectural ambitions of successive generations of Jaipur's rulers]]
 
 The story begins in 1835, when the site was a modest garden house occupied by the wet nurse of Prince Ram Singh II. From that gentle origin, the property expanded over decades — through royal favour, architectural ambition, and eventually the vision of Maharaja Sawai Man Singh II, the last ruling Maharaja of Jaipur, and his legendary wife, Maharani Gayatri Devi. It was Gayatri Devi, one of the most photographed and celebrated women of the twentieth century, who transformed Rambagh from a royal guesthouse into the family's principal residence, and in doing so imbued its rooms with a style that remains the palace's defining quality: a fusion of Rajput formality and international sophistication.
 
-[[PHOTO:portrait|The central durbar hall — crystal chandeliers, gilded mirrors, and a ceiling that took artisans fourteen years to complete, every square inch covered in hand-painted floral motifs in gold leaf]]
+[[PHOTO:portrait|/images/experiences/02-rambagh-palace-jaipur/02-durbar-hall.webp|The central durbar hall at Rambagh Palace — crystal chandeliers, gilded mirrors, and a ceiling that took artisans fourteen years to complete, every square inch covered in hand-painted floral motifs in gold leaf|The durbar hall, where the Maharaja held court, remains the palace's most architecturally significant interior — its frescoed ceiling is considered among the finest examples of Rajasthani decorative painting from the early twentieth century]]
 
 ## The Gayatri Devi Touch
 
@@ -21,7 +24,7 @@ The approach to Rambagh is a sequence designed to separate you from whatever wor
 
 A doorman in a cobalt-blue turban — the colour of the Jaipur royal house — opens your car door. A garland of tuberoses, the fragrance heady and sweet, is draped around your neck. A silver tray appears bearing a welcome drink that changes with the seasons: chilled khus (vetiver) sherbet in summer, spiced almond milk in winter. Your luggage has already disappeared, and you will not think of it again until you find it, unpacked, in your suite.
 
-[[PHOTO:landscape|The front porch arrival — liveried staff in cobalt turbans, tuberose garlands, a vintage Bentley permanently stationed beneath the porte-cochère as a tribute to the Maharaja's automotive passion]]
+[[PHOTO:landscape|/images/experiences/02-rambagh-palace-jaipur/03-arrival-porch.webp|The front porch arrival at Rambagh Palace — liveried staff in cobalt-blue turbans, tuberose garlands, a vintage Bentley permanently stationed beneath the porte-cochère as a tribute to the Maharaja's automotive passion|The cobalt-blue turban is the livery colour of the Jaipur royal house, worn by every member of staff as a visible link to the palace's continuing identity as a royal residence]]
 
 ## The Suites: A Taxonomy of Luxury
 
@@ -29,7 +32,7 @@ Rambagh offers seventy-eight rooms and suites, but the number tells you nothing 
 
 The Royal Suites occupy the palace's most historically significant spaces. The Suryavanshi Suite, named for the solar dynasty from which the Jaipur royal family claims descent, opens onto a private terrace with uninterrupted views of the Mughal Gardens and the Aravalli Hills beyond. The interior is a masterclass in Rajasthani decorative arts: frescoed ceilings, carved sandstone jalis, a four-poster bed that required three years of work by a single master carpenter. The bathroom, panelled in Italian marble, features a bathtub large enough for two — a detail that seems to have been a particular preoccupation of the Maharani's interior design brief.
 
-[[PHOTO:portrait|The Suryavanshi Suite bedroom — a carved four-poster bed beneath frescoed ceilings, French windows opening onto a private terrace with uninterrupted views of the Mughal Gardens]]
+[[PHOTO:portrait|/images/experiences/02-rambagh-palace-jaipur/04-suryavanshi-suite.webp|The Suryavanshi Suite bedroom — a carved four-poster bed beneath frescoed ceilings, French windows opening onto a private terrace with uninterrupted views of the Mughal Gardens|The four-poster bed, carved from Indian rosewood by a single master craftsman over three years, bears the solar motif of the Suryavanshi dynasty in its headboard — a detail repeated throughout the suite's furnishings]]
 
 The Sujan Rajmahal Suite, the palace's largest and most expensive accommodation, is essentially a private residence within the palace complex. It occupies a corner of the building with views in three directions, includes a private dining room seating eight, a study lined with books from the royal library, and a master bedroom whose bed — an enormous carved teak confection crowned with the Jaipur coat of arms — has hosted, among others, Prince Charles, Bill Clinton, and Oprah Winfrey. The suite's private butler, a gentleman who has served at Rambagh for over thirty years, can arrange experiences that do not appear on any menu: a private puja ceremony at dawn in the palace temple, an audience with the current Maharaja at the City Palace, a round of golf on the palace's private nine-hole course.
 
@@ -41,7 +44,7 @@ Suvarna Mahal, the palace's formal dining room, occupies the former state banque
 
 The signature dish — and it deserves that overused designation — is the Dal Rambagh. It is, at first glance, a simple black lentil preparation. But the lentils have been simmered for thirty-six hours with ghee, cream, and precisely twenty-seven spices in proportions known only to the palace's executive chef. The result is a dish of extraordinary depth: smoky, creamy, complex, and utterly unlike the dal served anywhere else in India. Jacqueline Kennedy, during her 1962 visit, is said to have requested it for three consecutive meals.
 
-[[PHOTO:landscape|Suvarna Mahal restaurant — candlelit tables beneath 18th-century frescoes, crested silverware catching the light of Bohemian crystal chandeliers, the atmosphere of a state banquet rendered intimate]]
+[[PHOTO:landscape|/images/experiences/02-rambagh-palace-jaipur/05-suvarna-mahal.webp|Suvarna Mahal restaurant — candlelit tables beneath 18th-century frescoes, crested silverware catching the light of Bohemian crystal chandeliers, the atmosphere of a state banquet rendered intimate|The restaurant occupies the former state banquet hall where Maharaja Sawai Man Singh II entertained visiting heads of state; the frescoes, executed by court painters, depict scenes from the Hindu epics in the distinctive Jaipur school miniature style]]
 
 For lunch, the Verandah — the palace's colonnaded outdoor restaurant — offers a lighter menu with views of the gardens that require no culinary accompaniment to justify a two-hour meal. The Rajasthani thali here is the most comprehensive introduction to the region's cooking available in Jaipur. It includes fifteen dishes, each prepared to the standard of Suvarna Mahal but served in the gentle chaos of a traditional Indian meal: small bowls arriving in rapid succession, a waiter hovering attentively to explain each dish, the gardens providing a backdrop of emerald green and flowering bougainvillea.
 
@@ -55,7 +58,7 @@ The palace's Jiva Spa, located in the former royal spa quarters, draws on Ayurve
 
 The palace's vintage carriage rides, offered each evening at sunset, are a more active indulgence. A restored Victorian landau, drawn by two Marwari horses, takes guests on a circuit of the palace grounds while a guide narrates the history of the estate — the polo ground where the Maharaja's team won three consecutive national championships, the Mughal Gardens planted by Gayatri Devi herself, the private temple where the family's morning puja has been performed every day for two hundred years.
 
-[[PHOTO:landscape|Sunset carriage ride — a restored Victorian landau drawn by Marwari horses, champagne flutes catching the golden light, the Aravalli Hills blushing rose in the distance]]
+[[PHOTO:landscape|/images/experiences/02-rambagh-palace-jaipur/06-carriage-ride.webp|Sunset carriage ride at Rambagh Palace — a restored Victorian landau drawn by Marwari horses, champagne flutes catching the golden light, the Aravalli Hills blushing rose in the distance|The Marwari horses, with their distinctive inward-curving ears, are a breed native to the Marwar region and were the preferred mounts of Rajput cavalry for centuries]]
 
 For the more actively inclined, the palace can arrange a game of polo on the Maharaja's private ground, complete with instruction from a member of the royal stables and the loan of a polo pony. The experience is not cheap — ₹75,000 ($900) for a morning session — but it is a genuine privilege, as the ground is normally closed to all but the royal family and their invited guests.
 
@@ -85,7 +88,7 @@ Rambagh Palace is not competing with other hotels in Jaipur. It is competing wit
 
 You come to Rambagh not for a checklist of amenities but for an atmosphere that cannot be replicated: the scent of tuberoses in the lobby, the sound of peacocks on the lawn at dawn, the taste of a dal recipe that has been perfected over centuries, the sight of a sunset over the Aravalli Hills from a verandah that has witnessed a hundred years of such sunsets. You leave understanding that luxury, at its highest level, is not about what you are given. It is about what you are invited into.
 
-[[PHOTO:full-width|Rambagh Palace at twilight — the ochre facade illuminated by hundreds of diyas (oil lamps), the Mughal Gardens in full bloom, peacocks roosting in ancient banyan trees, the palace glowing like a lantern against the deepening Rajasthani sky]]
+[[PHOTO:full-width|/images/experiences/02-rambagh-palace-jaipur/07-twilight.webp|Rambagh Palace at twilight — the ochre facade illuminated by hundreds of diyas (oil lamps), the Mughal Gardens in full bloom, peacocks roosting in ancient banyan trees, the palace glowing like a lantern against the deepening Rajasthani sky|Each evening, palace staff place hundreds of traditional oil lamps along the verandahs and garden paths — a ritual that transforms the already beautiful palace into something approaching the magical]]
 `;
 
 export const articleSections = [];

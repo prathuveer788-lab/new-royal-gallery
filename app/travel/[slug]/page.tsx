@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   PhotoPlaceholder,
+  PhotoFigure,
   EditorialQuote,
   FactBox,
   LuxuryDivider,
@@ -69,16 +70,40 @@ function renderContent(content: string): React.ReactNode[] {
   while (i < lines.length) {
     const line = lines[i];
 
-    // Photo placeholder: [[PHOTO:orientation|caption]]
+    // Photo: [[PHOTO:orientation|src|caption|imageDetail|photographer]]
+    // Legacy format: [[PHOTO:orientation|caption]]
     const photoMatch = line.match(/^\[\[PHOTO:(landscape|portrait|square|wide|full-width)\|(.+)\]\]$/);
     if (photoMatch) {
-      nodes.push(
-        <PhotoPlaceholder
-          key={key++}
-          orientation={photoMatch[1] as "landscape" | "portrait" | "square" | "wide" | "full-width"}
-          caption={photoMatch[2]}
-        />
-      );
+      const orientation = photoMatch[1] as "landscape" | "portrait" | "square" | "wide" | "full-width";
+      const parts = photoMatch[2].split("|");
+
+      // Check if extended format with src URL (starts with /images or https://)
+      if (parts.length >= 3 && (parts[0].startsWith("/images") || parts[0].startsWith("https://"))) {
+        const src = parts[0];
+        const caption = parts[1] || "";
+        const imageDetail = parts[2] || undefined;
+        const photographer = parts[3] || undefined;
+        nodes.push(
+          <PhotoFigure
+            key={key++}
+            src={src}
+            alt={caption}
+            caption={caption}
+            imageDetail={imageDetail}
+            photographer={photographer}
+            orientation={orientation}
+          />
+        );
+      } else {
+        // Legacy format: just caption, no src
+        nodes.push(
+          <PhotoPlaceholder
+            key={key++}
+            orientation={orientation}
+            caption={photoMatch[2]}
+          />
+        );
+      }
       i++;
       continue;
     }

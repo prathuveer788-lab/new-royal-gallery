@@ -1,7 +1,7 @@
 export const articleContent = `
 Mihir Garh — the Fortress of the Sun — rises from the Thar Desert forty-five kilometres south of Jodhpur like a geological accident that, on closer inspection, reveals itself to be entirely purposeful. Its walls, curved and organic, seem to have grown from the desert floor rather than been built upon it. Its nine suites, each one a private sanctuary of handcrafted luxury, represent the most intimate palace experience in Rajasthan. And its story — of a family's vision, a community's labour, and a determination to build something that honoured the desert rather than defied it — is as compelling as the architecture itself.
 
-[[PHOTO:wide|Mihir Garh at dawn — the mud-and-stone fortress emerging from the desert floor, its curved organic walls echoing the dunes beyond, an infinity pool the only interruption to the horizon]]
+[[PHOTO:wide|/images/experiences/12-mihir-garh-jodhpur/01-dawn-exterior.webp|Mihir Garh at dawn — the mud-and-stone fortress emerging from the desert floor, its curved organic walls echoing the dunes beyond, an infinity pool the only interruption to the horizon|Built in 2009 using traditional techniques that have served desert communities for millennia, Mihir Garh's walls are constructed of mud and stone mixed by hand — their thickness exceeding two metres in places provides natural insulation against the brutal Thar summer]]
 
 The property was conceived by the Singh family of Rohet Garh, whose ancestral manor forty minutes to the south pioneered Rajasthan's heritage hotel movement in the 1990s. Siddharth Singh, the family's younger son, wanted to create something different: not a restoration of an existing structure, but an entirely new building that drew on the vernacular architecture of desert Rajasthan while incorporating the design sensibilities of the twenty-first century. He hired architect Rajeev Kothari and saddler-turned-designer Jean-Francois Lesage, whose embroidery atelier in Chennai produces some of the world's finest hand-stitched textiles, to collaborate on the interiors. The result, completed in 2009 after seven years of construction, is a fortress unlike any other in Rajasthan.
 
@@ -11,7 +11,7 @@ Mihir Garh was built using traditional techniques that have served desert commun
 
 The interiors are the collaboration between Singh and Lesage: a marriage of rustic desert materials and extraordinary craftsmanship. Each of the nine suites is different, but certain themes recur: floors of polished limestone, walls finished in lime plaster tinted with natural pigments, furniture of reclaimed teak and wrought iron, and Lesage's signature embroidered textiles — bedspreads, cushions, curtains — worked in patterns drawn from the desert's own vocabulary: camel caravans, flowering cacti, the geometric motifs of Rajasthani temple carvings. The embroidery alone represents thousands of hours of skilled handwork, each piece a miniature work of art.
 
-[[PHOTO:portrait|A suite at Mihir Garh — lime-washed walls in warm ochre, hand-embroidered textiles by Jean-Francois Lesage, reclaimed teak furniture, a private courtyard visible through arched doors, every surface bearing the trace of a human hand]]
+[[PHOTO:portrait|/images/experiences/12-mihir-garh-jodhpur/02-suite.webp|A suite at Mihir Garh — lime-washed walls in warm ochre, hand-embroidered textiles by Jean-Francois Lesage, reclaimed teak furniture, a private courtyard visible through arched doors, every surface bearing the trace of a human hand|Each of the nine suites is a self-contained sanctuary — the hand-embroidered textiles, produced by Lesage's Chennai atelier, represent some of the finest hand-stitching in the world and take months to complete for a single room]]
 
 [[QUOTE:Luxury is not about square footage or thread count. It is about the quality of attention — to materials, to craftsmanship, to the land. Mihir Garh is the most attentive building in Rajasthan.|The Royal Gallery Editorial]]
 
@@ -27,7 +27,7 @@ The absence of televisions is deliberate — Mihir Garh is not a place for scree
 
 The infinity pool at Mihir Garh is the property's most photographed feature, and with reason. Set into the fortress's lower terrace, its turquoise water stretches toward the desert horizon with nothing — literally nothing — between you and the dunes but the thin edge of the pool wall. Swimming in it at sunset, when the desert sky performs its nightly opera of pinks, oranges, and violets, is an experience that lingers in memory long after the last of the tan has faded. The pool is heated in winter, and the poolside service is attentive — a chilled glass of something appears at your lounger, unbidden, at the precise moment you begin to think about ordering one.
 
-[[PHOTO:landscape|The infinity pool at Mihir Garh — turquoise water merging with the desert horizon at sunset, the Thar stretching endlessly beyond, the fortress walls glowing with the day's last golden light]]
+[[PHOTO:landscape|/images/experiences/12-mihir-garh-jodhpur/03-infinity-pool.webp|The infinity pool at Mihir Garh — turquoise water merging with the desert horizon at sunset, the Thar stretching endlessly beyond, the fortress walls glowing with the day's last golden light|The pool, like the fortress itself, seems to grow from the landscape rather than interrupt it — the curved edges echoing the organic lines of the dunes beyond, the water an improbable turquoise in the pale gold of the Thar]]
 
 ## The Kitchens and Dining
 
@@ -37,7 +37,7 @@ The food is predominantly Rajasthani, with an emphasis on the desert ingredients
 
 Private dining options include the rooftop terrace, where tables are set beneath the stars; the dune-top platform a kilometre from the fortress, where dinner is served by lantern light with nothing but the desert for company; and your own terrace or courtyard, for those evenings when even the short walk to the dining area feels like an imposition.
 
-[[PHOTO:landscape|A private dune dinner at Mihir Garh — lanterns flickering in the desert darkness, a table set with white linen and silver, Rajasthani dishes arriving one by one from the portable kitchen, the stars above as brilliant as they have ever been seen]]
+[[PHOTO:landscape|/images/experiences/12-mihir-garh-jodhpur/04-dune-dinner.webp|A private dune dinner at Mihir Garh — lanterns flickering in the desert darkness, a table set with white linen and silver, Rajasthani dishes arriving one by one from the portable kitchen, the stars above as brilliant as they have ever been seen|The dining program at Mihir Garh embraces the desert as the ultimate dining room — private dinners on the dunes are accompanied only by the sound of the wind and the distant cry of desert foxes]]
 
 ## The Bishnoi and the Desert
 
@@ -67,7 +67,7 @@ Is there WiFi? Yes, but it is intentionally limited. Embrace the disconnection.
 
 What about children? Children over ten are welcome, but the property's atmosphere — quiet, contemplative, with open terraces and unfenced drops — is better suited to adults. Younger children may find the lack of structured entertainment challenging.
 
-[[PHOTO:full-width|Mihir Garh at night — the fortress a dark silhouette against the desert sky, the Milky Way a river of light overhead, the infinity pool reflecting a perfect image of the stars, the silence so profound it becomes a sound in itself]]
+[[PHOTO:full-width|/images/experiences/12-mihir-garh-jodhpur/05-night-milky-way.webp|Mihir Garh at night — the fortress a dark silhouette against the desert sky, the Milky Way a river of light overhead, the infinity pool reflecting a perfect image of the stars, the silence so profound it becomes a sound in itself|The Thar Desert offers some of the darkest skies in India — with zero light pollution for fifty kilometres in any direction, the star-gazing at Mihir Garh rivals professional observatory conditions]]
 `;
 
 export const articleSections = [];

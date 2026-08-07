@@ -1,7 +1,7 @@
 export const articleContent = `
 Samode Haveli is the city cousin of Samode Palace — a noble townhouse hidden within Jaipur's old city walls, its unassuming entrance on a narrow lane giving no indication of the oasis that lies within. Push past the heavy wooden door, and you enter a world of frescoed courtyards, Mughal gardens, and the unmistakable hush of a well-kept family secret. Where Samode Palace, forty kilometres to the north, offers hillside solitude, Samode Haveli offers the opposite: a tranquil refuge in the heart of the Pink City, a place where the chaos of Jaipur's bazaars — the autorickshaws, the camels, the jewellery shops and spice merchants — feels a world away, despite being five minutes on foot.
 
-[[PHOTO:wide|The inner courtyard of Samode Haveli — hand-painted frescoes in vegetable dyes covering every surface, their colours softened by two centuries of gentle Rajasthani sunlight, a fountain murmuring at the centre of the marble floor]]
+[[PHOTO:wide|https://upload.wikimedia.org/wikipedia/commons/d/df/Courtyard_of_Samode_Haveli%2C_Jaipur.jpg|The inner courtyard of Samode Haveli — hand-painted frescoes in vegetable dyes covering every surface, their colours softened by two centuries of gentle Rajasthani sunlight, a fountain murmuring at the centre of the marble floor|The haveli was designed around a sequence of courtyards, each more private than the last — the outer courtyard for official visitors, the middle for family gatherings, the innermost zenana for the women of the household, the architecture itself a spatial translation of Rajput social hierarchy|Richard Moross, CC BY 2.0]]
 
 The haveli, built in the nineteenth century and expanded over subsequent generations, was the Jaipur residence of the Rawals of Samode — the same noble family whose ancestral palace sits in the hills north of the city. Like all significant havelis in Rajasthan, it was designed around a sequence of courtyards, each one more private than the last, the architecture a spatial translation of Rajput social hierarchy. The outer courtyard received visitors on official business; the middle courtyard was for family gatherings and celebrations; the innermost courtyard, the zenana, was the domain of the women of the household. Today, the entire property functions as a hotel, but the courtyard hierarchy remains legible, and the sense of moving through layers of privacy — of being a guest in a family home rather than a customer in a commercial establishment — is Samode Haveli's defining quality.
 
@@ -11,7 +11,7 @@ The haveli's most distinctive architectural feature is its elephant ramp — the
 
 The frescoes that cover the courtyard walls are the haveli's other great treasure. Painted with the same vegetable dyes — ground lapis lazuli for blue, terra verte for green, iron oxide for red — that the Rawals' artists used at Samode Palace, they depict floral arabesques, mythological scenes, and the recurring motif of elephants in procession, their mahouts holding aloft the standards of the Samode family. The colours have faded with time into a gentle, chalky palette that the midday sun flattens but the low light of early morning or late afternoon renders with extraordinary depth. Photograph them at dawn, when the first light strikes the eastern wall and the courtyard is empty of all but the resident pigeons.
 
-[[PHOTO:portrait|The elephant ramp (haathi pol) at Samode Haveli — the gently sloping stone passageway where the Rawal's ceremonial elephants once ascended, frescoed walls on either side, the morning light catching the faded vegetable-dye colours]]
+[[PHOTO:portrait|/images/experiences/08-samode-haveli-jaipur/02-elephant-ramp.webp|The elephant ramp (haathi pol) at Samode Haveli — the gently sloping stone passageway where the Rawal's ceremonial elephants once ascended, frescoed walls on either side, the morning light catching the faded vegetable-dye colours|Elephants were instruments of state pageantry in Rajput India — their painted foreheads and jewelled howdahs conveying power more effectively than any written proclamation — and this is one of the few surviving elephant ramps in Jaipur]]
 
 ## The Rooms: Heritage With Comfort
 
@@ -19,7 +19,7 @@ The 39 rooms and suites at Samode Haveli spread across the property's various wi
 
 The garden wing rooms are more contemporary in feeling — comfortable, well-appointed, and lacking the frescoed character of the original building. They are worth considering if the haveli rooms are full or if you prefer a more standardised hotel experience. But the point of staying at Samode Haveli is the heritage, and the heritage rooms, for all their charming irregularities (a door that sticks, a floor that slopes gently, a window that frames a view unchanged in two centuries), are the reason to be here.
 
-[[PHOTO:landscape|A suite in the original haveli building — frescoed walls in dusty rose and faded indigo, carved wooden ceiling beams, antique furniture from the Samode family collection, French windows opening onto a private balcony above the garden courtyard]]
+[[PHOTO:landscape|/images/experiences/08-samode-haveli-jaipur/03-suite.webp|A suite in the original haveli building — frescoed walls in dusty rose and faded indigo, carved wooden ceiling beams, antique furniture from the Samode family collection, French windows opening onto a private balcony above the garden courtyard|The best rooms feature frescoed walls, high ceilings with carved wooden beams, and windows overlooking the garden courtyard — they are furnished with carved wooden chests, miniature paintings, and hand-knotted durries in traditional Rajasthani geometries]]
 
 [[QUOTE:To stay at Samode Haveli is to understand what Jaipur was before it became a tourist destination — a city of noble families, hidden courtyards, and the quiet, enduring beauty of well-kept secrets.|The Royal Gallery Editorial]]
 
@@ -55,7 +55,7 @@ What is the dress code? Casual during the day, smart casual in the evening. Jaip
 
 How many nights should I stay? Two to three nights provides time to see the major Jaipur sights — the Amber Fort, the City Palace, Jantar Mantar, Hawa Mahal — while also enjoying the haveli's quieter rhythms. If Jaipur is your first stop in India, a third night allows for recovery from jet lag and a more leisurely exploration of the city.
 
-[[PHOTO:full-width|Samode Haveli at dusk — the neem tree spreading its branches over the garden courtyard, lanterns beginning to glow in the arcades, the frescoed walls catching the last light, the Pink City settling into evening quiet beyond the ancient walls]]
+[[PHOTO:full-width|/images/experiences/08-samode-haveli-jaipur/04-haveli-dusk.webp|Samode Haveli at dusk — the neem tree spreading its branches over the garden courtyard, lanterns beginning to glow in the arcades, the frescoed walls catching the last light, the Pink City settling into evening quiet beyond the ancient walls|To stay at Samode Haveli is to understand what Jaipur was before it became a tourist destination — a city of noble families, hidden courtyards, and the quiet, enduring beauty of well-kept secrets]]
 `;
 
 export const articleSections = [];

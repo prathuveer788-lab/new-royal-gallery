@@ -85,8 +85,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "14 min read",
     publishedDate: "2026-07-15",
-    heroImage: "/images/mehrangarh-fort.jpg",
-    heroCaption: "Umaid Bhawan Palace at golden hour — the 347-room sandstone masterpiece rises from Chittar Hill, one of the world's largest private residences",
+    heroImage: "https://upload.wikimedia.org/wikipedia/commons/9/99/Umaid_Bhawan_Palace%2C_Jodhpur.jpg",
+    heroCaption: "Umaid Bhawan Palace at golden hour — the 347-room sandstone masterpiece rises from Chittar Hill, one of the world's largest private residences. Photo: Atman06, CC BY-SA 4.0, via Wikimedia Commons",
     quickFacts: [
       { label: "Location", value: "Jodhpur, Rajasthan, India" },
       { label: "Built", value: "1928–1943" },
@@ -118,8 +118,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "12 min read",
     publishedDate: "2026-07-18",
-    heroImage: "/images/vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg",
-    heroCaption: "Rambagh Palace at dawn — the ochre facade catching first light, peacocks crossing immaculate lawns, the Aravalli Hills whispering on the horizon",
+    heroImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Rambagh_Palace_view_from_garden%2C_July_2016.jpg/1280px-Rambagh_Palace_view_from_garden%2C_July_2016.jpg",
+    heroCaption: "Rambagh Palace at dawn — the ochre facade catching first light, peacocks crossing immaculate lawns, the Aravalli Hills whispering on the horizon. Photo: via Wikimedia Commons, CC BY-SA",
     quickFacts: [
       { label: "Location", value: "Jaipur, Rajasthan, India" },
       { label: "Built", value: "1835 (expanded 1925–1931)" },
@@ -151,8 +151,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "13 min read",
     publishedDate: "2026-07-20",
-    heroImage: "/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg",
-    heroCaption: "Taj Lake Palace at twilight — the white marble edifice seems to float on Lake Pichola's still waters, the Aravalli Hills silhouetted against a rose-gold sky",
+    heroImage: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Lake_Palace%2C_Lake_Pichola%2C_Udaipur.jpg",
+    heroCaption: "Taj Lake Palace at twilight — the white marble edifice seems to float on Lake Pichola's still waters, the Aravalli Hills silhouetted against a rose-gold sky. Photo: Clément Bardot, CC BY-SA 4.0, via Wikimedia Commons",
     quickFacts: [
       { label: "Location", value: "Lake Pichola, Udaipur, Rajasthan" },
       { label: "Built", value: "1743–1746" },
@@ -184,8 +184,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "15 min read",
     publishedDate: "2026-07-22",
-    heroImage: "/images/architectural-marvel-with-ornate-columns-arches.jpg",
-    heroCaption: "City Palace Udaipur viewed from Lake Pichola — the sprawling complex of eleven palaces rises from the eastern shore, a symphony of Rajput and Mughal architecture",
+    heroImage: "https://upload.wikimedia.org/wikipedia/commons/6/69/Udaipur_City_Palace.jpg",
+    heroCaption: "City Palace Udaipur viewed from Lake Pichola — the sprawling complex of eleven palaces rises from the eastern shore, a symphony of Rajput and Mughal architecture. Photo: Henrik Bennetsen, CC BY-SA 2.0, via Wikimedia Commons",
     quickFacts: [
       { label: "Location", value: "Udaipur, Rajasthan, India" },
       { label: "Built", value: "1559 onwards (over 400 years)" },
@@ -217,7 +217,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "11 min read",
     publishedDate: "2026-07-25",
-    heroImage: "/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg",
+    heroImage: "https://upload.wikimedia.org/wikipedia/commons/3/38/Mor_chowk%2C_City_Palace%2C_Udaipur.jpg",
     heroCaption: "Shiv Niwas Palace — the grand facade with its semi-circular balconies overlooks Lake Pichola, each room a chamber that once hosted the subcontinent's most distinguished guests",
     quickFacts: [
       { label: "Location", value: "City Palace Complex, Udaipur" },
@@ -250,8 +250,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "12 min read",
     publishedDate: "2026-07-28",
-    heroImage: "/images/architectural-marvel-with-ornate-columns-arches.jpg",
-    heroCaption: "The iconic Durbar Hall at Fateh Prakash Palace — crystal chandeliers, gilded walls, and panoramic views of Lake Pichola through arched windows",
+    heroImage: "https://upload.wikimedia.org/wikipedia/commons/4/43/Durbar_Hall%2C_Fateh_Prakash_Palace_Hotel%2C_Udaipur.jpg",
+    heroCaption: "The Durbar Hall at Fateh Prakash Palace — Bohemian crystal chandeliers, gilded mouldings, and floor-to-ceiling arched windows framing panoramic views of Lake Pichola | Photo: Arian Zwegers, CC BY 2.0",
     quickFacts: [
       { label: "Location", value: "City Palace Complex, Udaipur" },
       { label: "Built", value: "Early 20th century" },
@@ -283,8 +283,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "12 min read",
     publishedDate: "2026-08-01",
-    heroImage: "/images/vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg",
-    heroCaption: "Samode Palace at golden hour — the honey-colored facade glows warm against the rugged Aravalli Hills, bougainvillea cascading over ancient stone balconies",
+    heroImage: "https://upload.wikimedia.org/wikipedia/commons/5/53/Samode_Palace_Jaipur.jpg",
+    heroCaption: "Samode Palace at golden hour — the honey-coloured facade glowing against the rugged Aravalli Hills, bougainvillea cascading over ancient stone balconies | Photo: Pcrtravel, CC BY-SA 4.0",
     quickFacts: [
       { label: "Location", value: "Samode, 42 km from Jaipur, Rajasthan" },
       { label: "Built", value: "16th century (475+ years old)" },
@@ -316,8 +316,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "10 min read",
     publishedDate: "2026-08-03",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
-    heroCaption: "The inner courtyard of Samode Haveli — hand-painted frescoes in vegetable dyes cover every surface, their colors softened by two centuries of gentle Rajasthani sunlight",
+    heroImage: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Samode_Haveli_Jaipur.jpg",
+    heroCaption: "Samode Haveli, Jaipur — the noble townhouse hidden within the Pink City's ancient walls, its frescoed courtyards and Mughal gardens a tranquil oasis | Photo: Pcrtravel, CC BY-SA 4.0",
     quickFacts: [
       { label: "Location", value: "Old City, Jaipur, Rajasthan" },
       { label: "Built", value: "19th century (expanded over time)" },
@@ -349,8 +349,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "11 min read",
     publishedDate: "2026-08-05",
-    heroImage: "/images/mehrangarh-fort.jpg",
-    heroCaption: "The infinity pool at RAAS Jodhpur — red sandstone walls of the restored haveli frame a perfect rectangle of turquoise water, with Mehrangarh Fort looming majestically above",
+    heroImage: "https://upload.wikimedia.org/wikipedia/commons/d/dd/Glorious_Mehrangarh_Fort.jpg",
+    heroCaption: "Mehrangarh Fort, Jodhpur — the 560-year-old citadel rising from a 400-foot basalt cliff above RAAS Jodhpur, its golden sandstone ramparts floodlit against the desert sky | Photo: Sharvarism, CC BY-SA 4.0",
     quickFacts: [
       { label: "Location", value: "Old City, Jodhpur, Rajasthan" },
       { label: "Built", value: "18th century (restored 2009)" },
@@ -382,8 +382,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "13 min read",
     publishedDate: "2026-08-07",
-    heroImage: "/images/indian-city-buildings-scene.jpg",
-    heroCaption: "Suryagarh at sunset — the golden sandstone fortress catches the desert sun's last rays, its ramparts, courtyards, and jharokhas glowing like burnished copper against the endless Thar",
+    heroImage: "/images/experiences/10-suryagarh-jaisalmer/01-hero-fortress.webp",
+    heroCaption: "Suryagarh at sunrise — the golden sandstone fortress emerging from the Thar Desert haze, its crenellations and domed chhatris silhouetted against a sky of pale rose and amber",
     quickFacts: [
       { label: "Location", value: "Jaisalmer, Rajasthan, India" },
       { label: "Built", value: "2013 (in traditional 15th-century style)" },
@@ -415,8 +415,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "12 min read",
     publishedDate: "2026-08-10",
-    heroImage: "/images/hallway-arches-with-dramatic-light-shadows.jpg",
-    heroCaption: "Devi Garh at twilight — the 18th-century fortress walls illuminated against the Aravalli Hills, its interiors a stunning juxtaposition of ancient stone and contemporary minimalism",
+    heroImage: "/images/experiences/11-devi-garh-udaipur/01-dawn-exterior.webp",
+    heroCaption: "Devi Garh at dawn — the 18th-century Rajput fort palace rising white and luminous from the Aravalli Hills, its minimalist interiors a radical departure from every other heritage hotel in Rajasthan",
     quickFacts: [
       { label: "Location", value: "Delwara, 28 km from Udaipur, Rajasthan" },
       { label: "Built", value: "1760s (restored 1990s–2000s)" },
@@ -448,8 +448,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "11 min read",
     publishedDate: "2026-08-12",
-    heroImage: "/images/mehrangarh-fort.jpg",
-    heroCaption: "Mihir Garh — the fortress of the sun emerges from the desert floor, its mud-and-stone curves echoing the dunes beyond, an infinity pool the only interruption to the horizon",
+    heroImage: "/images/experiences/12-mihir-garh-jodhpur/01-dawn-exterior.webp",
+    heroCaption: "Mihir Garh — the Fortress of the Sun rises from the Thar Desert, its curved organic walls of mud and stone echoing the dunes beyond, an infinity pool the only interruption to the horizon",
     quickFacts: [
       { label: "Location", value: "Near Jodhpur, Rajasthan, India" },
       { label: "Built", value: "2009 (traditional techniques)" },
@@ -481,8 +481,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "11 min read",
     publishedDate: "2026-08-15",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
-    heroCaption: "Rohet Garh at dusk — the fortified manor house reflects in its placid lake, Marwari horses grazing in the foreground, the welcome lamps of the Champawat family glowing from every window",
+    heroImage: "/images/experiences/13-rohet-garh-jodhpur/01-dusk-manor.webp",
+    heroCaption: "Rohet Garh at dusk — the 400-year-old fortified manor of the Champawat Rajputs reflected in its placid lake, Marwari horses grazing in the foreground, the warm glow of welcome lamps shining from every window",
     quickFacts: [
       { label: "Location", value: "Rohet, 40 km from Jodhpur, Rajasthan" },
       { label: "Built", value: "16th century (400+ years old)" },
@@ -514,8 +514,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "12 min read",
     publishedDate: "2026-08-18",
-    heroImage: "/images/architectural-marvel-with-ornate-columns-arches.jpg",
-    heroCaption: "Ahilya Fort at dawn — the 18th-century ramparts overlook the sacred Narmada River, temple bells drifting across the water, the ghats below already alive with pilgrims and prayer",
+    heroImage: "https://upload.wikimedia.org/wikipedia/commons/6/62/Ahilya_fort_%2C_Maheshwar.jpg",
+    heroCaption: "Ahilya Fort from the Narmada River — the 18th-century ramparts of the warrior queen Ahilyabai Holkar's fortress rise from the water's edge, temple spires silhouetted against the dawn sky | Photo: Squirealll, CC BY-SA 4.0",
     quickFacts: [
       { label: "Location", value: "Maheshwar, Madhya Pradesh, India" },
       { label: "Built", value: "1760s by Rani Ahilyabai Holkar" },
@@ -547,8 +547,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "15 min read",
     publishedDate: "2026-08-20",
-    heroImage: "/images/hawa-mahal-palace-jaipur-india.jpg",
-    heroCaption: "Falaknuma Palace at twilight — the 'Mirror of the Sky' glows atop its 2,000-foot hill overlooking Hyderabad, its neoclassical facade and Venetian chandeliers a vision of Deccan opulence",
+    heroImage: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Falaknuma_Palace_01.jpg",
+    heroCaption: "Falaknuma Palace at twilight — the 'Mirror of the Sky' glows rose-gold against the Deccan sky, Hyderabad sprawled 2,000 feet below, the white marble dome and crescent wings silhouetted against gathering dusk | Photo: Bernard Gagnon, CC BY-SA 3.0",
     quickFacts: [
       { label: "Location", value: "Hyderabad, Telangana, India" },
       { label: "Built", value: "1884–1893" },
@@ -580,8 +580,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "11 min read",
     publishedDate: "2026-08-22",
-    heroImage: "/images/indian-city-buildings-scene.jpg",
-    heroCaption: "Lalgarh Palace — the magnificent red sandstone facade with its intricate jali screens, domed pavilions, and colonnaded verandahs, a jewel of Indo-Saracenic architecture in the Thar Desert",
+    heroImage: "https://upload.wikimedia.org/wikipedia/commons/1/1e/Lalgarh_palace_in_Bikaner_during_sunset.jpg",
+    heroCaption: "Lalgarh Palace at sunset — the red sandstone facade of Bikaner's greatest palace glowing in the last light, carved jali screens and jharokha balconies silhouetted against a sky of amber and rose | Photo: Mahesh Karnapu, CC BY-SA 4.0",
     quickFacts: [
       { label: "Location", value: "Bikaner, Rajasthan, India" },
       { label: "Built", value: "1902–1926" },
@@ -613,8 +613,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "11 min read",
     publishedDate: "2026-08-25",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
-    heroCaption: "Gajner Palace at sunset — the red sandstone edifice reflects in the still waters of Gajner Lake, migratory birds wheeling overhead, the silence of the Thar broken only by peacocks",
+    heroImage: "https://upload.wikimedia.org/wikipedia/commons/9/9b/Gajner_Palace_-_panoramio.jpg",
+    heroCaption: "Gajner Palace at sunset — the red sandstone hunting lodge reflected in the still waters of Gajner Lake, migratory birds wheeling overhead, the silence of the Thar broken only by the call of peacocks | Photo: jokertrekker, CC BY 3.0",
     quickFacts: [
       { label: "Location", value: "Gajner, 32 km from Bikaner, Rajasthan" },
       { label: "Built", value: "Early 20th century" },
@@ -646,8 +646,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "11 min read",
     publishedDate: "2026-08-28",
-    heroImage: "/images/hawa-mahal-palace-jaipur-india.jpg",
-    heroCaption: "Noor-Us-Sabah Palace — 'Light of the Dawn' — its white facade glowing on a hilltop above Bhopal, a luminous tribute to the remarkable Begums who governed India's most progressive princely state",
+    heroImage: "/images/experiences/18-noor-us-sabah-palace-bhopal/01-dawn-exterior.webp",
+    heroCaption: "Noor-Us-Sabah Palace — 'Light of the Dawn' — its white facade glowing on a hilltop above Bhopal's lakes, a luminous tribute to the remarkable Begums who governed India's most progressive princely state for over a century",
     quickFacts: [
       { label: "Location", value: "Bhopal, Madhya Pradesh, India" },
       { label: "Built", value: "Early 20th century" },
@@ -679,8 +679,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "12 min read",
     publishedDate: "2026-08-30",
-    heroImage: "/images/architectural-marvel-with-ornate-columns-arches.jpg",
-    heroCaption: "Neemrana Fort Palace — the sprawling 15th-century fortress cascades down a hillside in the Aravalli range, its twelve palace levels connected by steep staircases, every balcony a different view of eternity",
+    heroImage: "https://upload.wikimedia.org/wikipedia/commons/1/17/Neemrana_Fort_Palace.jpg",
+    heroCaption: "Neemrana Fort Palace — the sprawling 15th-century fortress cascading down a hillside in the Aravalli range, the pioneering restoration that launched India's heritage hotel movement | Photo: Dan Lundberg, CC BY-SA 2.0",
     quickFacts: [
       { label: "Location", value: "Neemrana, Alwar, Rajasthan" },
       { label: "Built", value: "1464 AD (restored from 1986)" },
@@ -712,8 +712,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "10 min read",
     publishedDate: "2026-09-01",
-    heroImage: "/images/indian-city-buildings-scene.jpg",
-    heroCaption: "Bhanwar Vilas Palace — the stately colonial-era facade with its grand portico, set amid manicured gardens in the ancient kingdom of Karauli, a heritage secret known to few travelers",
+    heroImage: "/images/experiences/20-bhanwar-vilas-palace-karauli/01-palace-exterior.webp",
+    heroCaption: "Bhanwar Vilas Palace — the stately colonial-era facade with its grand portico, set amid manicured gardens in the ancient kingdom of Karauli, a heritage secret known to few travellers",
     quickFacts: [
       { label: "Location", value: "Karauli, Eastern Rajasthan, India" },
       { label: "Built", value: "1938 (dynasty since 1348)" },
@@ -747,7 +747,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "16 min read",
     publishedDate: "2026-09-05",
-    heroImage: "/images/hawa-mahal-palace-jaipur-india.jpg",
+    heroImage: "/images/experiences/21-kyoto/01-hero.webp",
     heroCaption: "Kinkaku-ji — the Golden Pavilion — reflected in its mirror pond, a vision of Zen perfection that has drawn pilgrims of beauty to Kyoto for over six centuries",
     quickFacts: [
       { label: "Location", value: "Kyoto, Kansai Region, Japan" },
@@ -780,7 +780,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "15 min read",
     publishedDate: "2026-09-08",
-    heroImage: "/images/hawa-mahal-palace-jaipur-india.jpg",
+    heroImage: "/images/experiences/23-tokyo/01-hero.webp",
     heroCaption: "Tokyo at night from Roppongi Hills — a neon ocean stretching to the horizon, 37 million lives unfolding in the most extraordinary urban experiment in human history",
     quickFacts: [
       { label: "Location", value: "Tokyo, Kanto Region, Japan" },
@@ -813,7 +813,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "13 min read",
     publishedDate: "2026-09-10",
-    heroImage: "/images/hawa-mahal-palace-jaipur-india.jpg",
+    heroImage: "/images/experiences/22-osaka/01-hero.webp",
     heroCaption: "Dotonbori at night — the neon-lit canal district where Osaka's legendary food culture comes alive, the giant mechanical crab of Kani Doraku moving its legs above the crowds",
     quickFacts: [
       { label: "Location", value: "Osaka, Kansai Region, Japan" },
@@ -846,7 +846,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "14 min read",
     publishedDate: "2026-09-12",
-    heroImage: "/images/hawa-mahal-palace-jaipur-india.jpg",
+    heroImage: "/images/experiences/25-seoul/01-hero.webp",
     heroCaption: "Gyeongbokgung Palace at blue hour — the grandest of Seoul's five royal palaces, its painted beams and sweeping roofs a 600-year-old assertion of Joseon Dynasty majesty against a backdrop of modern skyscrapers",
     quickFacts: [
       { label: "Location", value: "Seoul, South Korea" },
@@ -879,7 +879,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "12 min read",
     publishedDate: "2026-09-15",
-    heroImage: "/images/hawa-mahal-palace-jaipur-india.jpg",
+    heroImage: "/images/experiences/24-busan/01-hero.webp",
     heroCaption: "Haedong Yonggungsa Temple at sunrise — one of the world's rare coastal Buddhist temples, its golden Buddha statues gazing out over the East Sea as waves crash against the cliffs below",
     quickFacts: [
       { label: "Location", value: "Busan, South Korea" },
@@ -912,7 +912,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "14 min read",
     publishedDate: "2026-09-18",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
+    heroImage: "/images/experiences/26-hanoi/01-hero.webp",
     heroCaption: "Hoan Kiem Lake at dawn — the red Huc Bridge leads to Ngoc Son Temple as morning mist rises from the emerald water, elderly tai chi practitioners moving in slow silhouette against the waking city",
     quickFacts: [
       { label: "Location", value: "Hanoi, Northern Vietnam" },
@@ -945,7 +945,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "13 min read",
     publishedDate: "2026-09-20",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
+    heroImage: "/images/experiences/27-ho-chi-minh-city/01-hero.webp",
     heroCaption: "The Saigon Opera House at night — French colonial elegance illuminated in the heart of District 1, Vespa swarms circling the square below in the city's ceaseless choreography of movement",
     quickFacts: [
       { label: "Location", value: "Ho Chi Minh City, Southern Vietnam" },
@@ -978,7 +978,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "12 min read",
     publishedDate: "2026-09-22",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
+    heroImage: "/images/experiences/28-hoi-an/01-hero.webp",
     heroCaption: "Hoi An Ancient Town at dusk — silk lanterns in every color reflecting in the still waters of the Thu Bon River, the Japanese Covered Bridge a silhouette against the fading tropical sky",
     quickFacts: [
       { label: "Location", value: "Hoi An, Quang Nam Province, Vietnam" },
@@ -1013,7 +1013,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "15 min read",
     publishedDate: "2026-09-25",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
+    heroImage: "/images/experiences/38-amalfi-coast/01-hero-positano.webp",
     heroCaption: "Positano at golden hour — the vertical village cascades down the cliff in tiers of peach, cream, and terracotta, the Tyrrhenian Sea a sheet of hammered silver stretching to the horizon",
     quickFacts: [
       { label: "Location", value: "Campania, Southern Italy" },
@@ -1046,7 +1046,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "14 min read",
     publishedDate: "2026-09-28",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
+    heroImage: "/images/experiences/36-lake-como/01-hero-villa-balbianello.webp",
     heroCaption: "Villa del Balbianello at golden hour — the 18th-century villa perched on its wooded promontory, its terraced gardens cascading to the lake's edge, the Alps a distant curtain of pearl and grey",
     quickFacts: [
       { label: "Location", value: "Lombardy, Northern Italy" },
@@ -1079,7 +1079,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "15 min read",
     publishedDate: "2026-10-01",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
+    heroImage: "/images/experiences/37-tuscany/01-hero-val-dorcia.webp",
     heroCaption: "Val d'Orcia at dawn — cypress-lined roads winding through wheat fields and vineyards, the distinctive cone of Monte Amiata in the distance, the entire landscape a Renaissance painting come to life",
     quickFacts: [
       { label: "Location", value: "Central Italy" },
@@ -1112,7 +1112,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "16 min read",
     publishedDate: "2026-10-05",
-    heroImage: "/images/hawa-mahal-palace-jaipur-india.jpg",
+    heroImage: "/images/experiences/30-paris/01-hero.webp",
     heroCaption: "The Eiffel Tower from Trocadéro at blue hour — the Iron Lady illuminated against a deepening Parisian sky, the fountains of the Jardins du Trocadéro dancing in the foreground",
     quickFacts: [
       { label: "Location", value: "Île-de-France, France" },
@@ -1145,7 +1145,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "14 min read",
     publishedDate: "2026-10-08",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
+    heroImage: "/images/experiences/35-french-riviera/01-hero-cannes-bay.webp",
     heroCaption: "The Bay of Cannes from Le Suquet — superyachts at anchor in the Mediterranean, the Esterel Massif blushing rose in the evening light, the Croisette a curving ribbon of palm trees and belle époque facades",
     quickFacts: [
       { label: "Location", value: "Provence-Alpes-Côte d'Azur, France" },
@@ -1178,7 +1178,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "14 min read",
     publishedDate: "2026-10-10",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
+    heroImage: "/images/experiences/39-interlaken/01-hero-jungfrau.webp",
     heroCaption: "The Jungfrau massif at sunrise — the peaks of Eiger, Mönch, and Jungfrau catching the first alpenglow above Interlaken, the Lauterbrunnen Valley a corridor of waterfalls in the foreground",
     quickFacts: [
       { label: "Location", value: "Bernese Oberland, Switzerland" },
@@ -1211,7 +1211,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "13 min read",
     publishedDate: "2026-10-12",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
+    heroImage: "/images/experiences/40-lucerne/01-hero-kapellbrucke.webp",
     heroCaption: "The Kapellbrücke (Chapel Bridge) at twilight — Europe's oldest wooden bridge, built in 1333, its flower boxes and triangular paintings reflected in the still waters of the Reuss River, Mount Pilatus rising beyond",
     quickFacts: [
       { label: "Location", value: "Central Switzerland" },
@@ -1244,8 +1244,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "14 min read",
     publishedDate: "2026-10-15",
-    heroImage: "/images/architectural-marvel-with-ornate-columns-arches.jpg",
-    heroCaption: "Edinburgh Castle at blue hour — the ancient fortress on its volcanic crag illuminated against the winter sky, the Royal Mile a ribbon of medieval stone descending toward Holyrood Palace",
+    heroImage: "/images/experiences/31-edinburgh/01-hero.webp",
+    heroCaption: "Edinburgh Castle at blue hour — the ancient fortress on its volcanic crag illuminated against the winter sky, the Royal Mile a ribbon of medieval stone descending toward Holyrood Palace | Photo to be sourced via Unsplash",
     quickFacts: [
       { label: "Location", value: "Edinburgh, Scotland, United Kingdom" },
       { label: "Best Season", value: "May–September, August (Festival), December (Hogmanay)" },
@@ -1277,7 +1277,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "15 min read",
     publishedDate: "2026-10-18",
-    heroImage: "/images/indian-city-buildings-scene.jpg",
+    heroImage: "/images/experiences/32-scottish-highlands/01-hero.webp",
     heroCaption: "Glen Coe at dawn — the weeping glen where the MacDonald clan was massacred in 1692, its volcanic ridges rising through mist like the spine of a sleeping dragon, utterly silent except for the whisper of waterfalls",
     quickFacts: [
       { label: "Location", value: "Northern Scotland, United Kingdom" },
@@ -1310,7 +1310,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "16 min read",
     publishedDate: "2026-10-20",
-    heroImage: "/images/hawa-mahal-palace-jaipur-india.jpg",
+    heroImage: "/images/experiences/29-london/01-hero.webp",
     heroCaption: "The Palace of Westminster and Big Ben at blue hour — the Mother of Parliaments reflected in the Thames, the London Eye a modern counterpoint on the opposite bank, two thousand years of history compressed into a single river bend",
     quickFacts: [
       { label: "Location", value: "Greater London, England, United Kingdom" },
@@ -1343,7 +1343,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "14 min read",
     publishedDate: "2026-10-22",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
+    heroImage: "/images/experiences/34-lisbon/01-hero.webp",
     heroCaption: "The 25 de Abril Bridge and Cristo Rei at sunset — Lisbon's Golden Gate lookalike spanning the Tagus River, the statue of Christ the King silhouetted against a sky of rose, gold, and lavender",
     quickFacts: [
       { label: "Location", value: "Lisbon, Portugal" },
@@ -1376,7 +1376,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "15 min read",
     publishedDate: "2026-10-25",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
+    heroImage: "/images/experiences/33-barcelona/01-hero.webp",
     heroCaption: "Sagrada Família at golden hour — Gaudí's unfinished masterpiece catching the Mediterranean light through its forest of stone columns, the Nativity Facade a vertical garden of carved life",
     quickFacts: [
       { label: "Location", value: "Barcelona, Catalonia, Spain" },
@@ -1411,7 +1411,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "15 min read",
     publishedDate: "2026-10-28",
-    heroImage: "/images/hawa-mahal-palace-jaipur-india.jpg",
+    heroImage: "/images/experiences/41-istanbul/01-bosphorus-twilight.webp",
     heroCaption: "The Blue Mosque and Hagia Sophia at twilight — Byzantine dome and Ottoman minarets rising above the Hippodrome, the Bosphorus a ribbon of silver in the distance, a city on two continents dreaming in the gathering dusk",
     quickFacts: [
       { label: "Location", value: "Marmara Region, Turkey" },
@@ -1444,7 +1444,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "14 min read",
     publishedDate: "2026-11-01",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
+    heroImage: "/images/experiences/45-marrakech/01-jemaa-el-fnaa-dusk.webp",
     heroCaption: "Djemaa el-Fna at sunset — the great square of Marrakech transforms into a medieval theatre as smoke rises from a hundred food stalls, snake charmers play their flutes, and the Koutoubia minaret watches over it all",
     quickFacts: [
       { label: "Location", value: "Marrakech-Safi, Morocco" },
@@ -1477,7 +1477,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "16 min read",
     publishedDate: "2026-11-05",
-    heroImage: "/images/hawa-mahal-palace-jaipur-india.jpg",
+    heroImage: "/images/experiences/43-cairo-nile/01-great-pyramid-dawn.webp",
     heroCaption: "The Pyramids of Giza at dawn — the Great Pyramid catching the first rays of Egyptian sun, the Sphinx keeping its silent vigil of five millennia, the desert horizon still holding the same mystery it held for Herodotus",
     quickFacts: [
       { label: "Location", value: "Cairo / Luxor / Aswan, Egypt" },
@@ -1510,7 +1510,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "15 min read",
     publishedDate: "2026-11-08",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
+    heroImage: "/images/experiences/46-cape-town/01-table-mountain-dawn.webp",
     heroCaption: "Table Mountain at sunset from Bloubergstrand — the flat-topped giant catching the last light, the city bowl a glittering crescent at its foot, Robben Island a silhouette in Table Bay",
     quickFacts: [
       { label: "Location", value: "Western Cape, South Africa" },
@@ -1543,7 +1543,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "14 min read",
     publishedDate: "2026-11-10",
-    heroImage: "/images/indian-city-buildings-scene.jpg",
+    heroImage: "/images/experiences/42-dubai/01-dubai-marina-blue-hour.webp",
     heroCaption: "The Dubai skyline at blue hour from the Dubai Canal — Burj Khalifa piercing the clouds at 828 meters, the city's futuristic towers reflected in the calm waters, a vision of the 21st century that no science fiction writer dared imagine",
     quickFacts: [
       { label: "Location", value: "Dubai Emirate, United Arab Emirates" },
@@ -1576,7 +1576,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "13 min read",
     publishedDate: "2026-11-12",
-    heroImage: "/images/indian-city-buildings-scene.jpg",
+    heroImage: "/images/experiences/44-muscat/01-mutrah-corniche-sunset.webp",
     heroCaption: "The Sultan Qaboos Grand Mosque at dawn — the world's second-largest hand-woven carpet and a 14-meter Swarovski crystal chandelier beneath the vast central dome, white marble glowing in the early light",
     quickFacts: [
       { label: "Location", value: "Muscat Governorate, Oman" },
@@ -1611,7 +1611,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "14 min read",
     publishedDate: "2026-11-15",
-    heroImage: "/images/hawa-mahal-palace-jaipur-india.jpg",
+    heroImage: "/images/experiences/47-sydney/01-sydney-opera-house-dawn.webp",
     heroCaption: "Sydney Opera House and Harbour Bridge at blue hour — the white sails catching the last light, the coathanger bridge a dark arc spanning the glittering water, ferries tracing white lines across the most beautiful harbour on Earth",
     quickFacts: [
       { label: "Location", value: "New South Wales, Australia" },
@@ -1644,7 +1644,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "14 min read",
     publishedDate: "2026-11-18",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
+    heroImage: "/images/experiences/48-queenstown/01-lake-wakatipu-dawn.webp",
     heroCaption: "Lake Wakatipu and the Remarkables at dawn — New Zealand's most iconic landscape rendered in shades of rose and gold, the lake a mirror of perfect stillness, the mountains already dusted with autumn snow",
     quickFacts: [
       { label: "Location", value: "Otago, South Island, New Zealand" },
@@ -1677,7 +1677,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "15 min read",
     publishedDate: "2026-11-20",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
+    heroImage: "/images/experiences/49-banff-rockies/01-banff-avenue-blue-hour.webp",
     heroCaption: "Moraine Lake at sunrise — the Valley of the Ten Peaks reflected in waters of impossible turquoise, the silence broken only by the crack of distant ice, the entire scene a shade of blue that nature had no business inventing",
     quickFacts: [
       { label: "Location", value: "Alberta, Canada" },
@@ -1710,7 +1710,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Travel Correspondent",
     readTime: "15 min read",
     publishedDate: "2026-11-22",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
+    heroImage: "/images/experiences/50-mexico-city/01-palacio-bellas-artes.webp",
     heroCaption: "Palacio de Bellas Artes at blue hour — Mexico City's Art Nouveau-Meets-Art-Deco masterpiece glowing against the deepening sky, the Torre Latinoamericana rising beyond, the Alameda Central park spreading green below",
     quickFacts: [
       { label: "Location", value: "Valley of Mexico, Mexico" },

@@ -1,4 +1,5 @@
 export { default as PhotoPlaceholder } from "./PhotoPlaceholder";
+export { default as PhotoFigure } from "./PhotoFigure";
 export { default as EditorialQuote } from "./EditorialQuote";
 export { default as FactBox } from "./FactBox";
 export { default as LuxuryDivider } from "./LuxuryDivider";
