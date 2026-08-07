@@ -1,7 +1,7 @@
 export const articleContent = `
 There is a photograph, taken during the renovation of Devi Garh in the late 1990s, that every student of Indian design should study. It shows a 260-year-old fort palace in the Aravalli Hills of southern Rajasthan, stripped to its bones — every layer of paint, plaster, and accumulated ornamentation removed. The walls are bare stone. The courtyards are empty. The rooms are shells. It looks like an archaeological excavation, which, in a sense, it was. What rose from those stripped bones, over seven years of obsessive, uncompromising work, is not merely India's most radical heritage hotel. It is one of the most important works of contemporary design in South Asia.
 
-[[PHOTO:wide|Devi Garh at dawn — the all-white marble and local stone facade of an 18th-century fort palace rising from the Aravalli Hills, the village of Delwara visible in the valley below, the morning mist softening the rugged landscape]]
+[[PHOTO:wide|/images/experiences/11-devi-garh-udaipur/01-dawn-exterior.webp|Devi Garh at dawn — the all-white marble and local stone facade of an 18th-century fort palace rising from the Aravalli Hills, the village of Delwara visible in the valley below, the morning mist softening the rugged landscape|Stripped to its bones during a seven-year renovation in the late 1990s, Devi Garh was rebuilt as a temple of contemporary minimalism — white marble floors, white marble walls, and the 260-year-old fort walls left exposed in every room as the only ornament]]
 
 The vision belonged to a young scion of the family that had owned Devi Garh for two centuries. Instead of restoring the palace to its original Rajput grandeur — the obvious choice, the safe choice, the choice that every other heritage hotel in Rajasthan had made — he stripped it to its structural essence and rebuilt the interiors as temples of contemporary minimalism. White marble floors. White marble walls. Clean lines. Open space. The 260-year-old fort walls, left exposed in every room, became the only ornament — a constant, tactile reminder that you are sleeping inside history, even as your surroundings speak the language of tomorrow.
 
@@ -19,7 +19,7 @@ The guiding principle was radical subtraction. Every non-structural element that
 
 Devi Garh offers 39 suites, and no two are alike. This is not marketing hyperbole. Because each suite occupies a unique chamber within the original fort structure, each has its own dimensions, its own relationship to the courtyards and the hills beyond, its own quirks of architecture and light. The design team treated each suite as an individual project, responding to the specific character of its space rather than imposing a standardised template.
 
-[[PHOTO:portrait|A Devi Garh suite — walls of exposed 18th-century stone meeting floors of white marble, a bed dressed in white linen the only object in a chamber of cathedral-like proportions, a single window framing the Aravalli Hills]]
+[[PHOTO:portrait|/images/experiences/11-devi-garh-udaipur/02-suite.webp|A Devi Garh suite — walls of exposed 18th-century stone meeting floors of white marble, a bed dressed in white linen the only object in a chamber of cathedral-like proportions, a single window framing the Aravalli Hills|Every suite at Devi Garh is different — the design philosophy was to strip away every layer of ornament until only the essential remained: ancient stone, white marble, light, and the landscape beyond]]
 
 The palette, consistent across all 39 suites, is a study in restraint. White marble, quarried from nearby Makrana — the same quarries that supplied Shah Jahan for the Taj Mahal — covers every floor. Walls are either exposed original stone or smooth white plaster. Furniture is minimal: a bed, a desk, a low daybed, all in dark teak or clean-lined white. Textiles are white cotton and raw silk, with occasional accents of jewel-toned silk cushions that provide the only colour in rooms otherwise defined by the monochrome interplay of light and stone.
 
@@ -27,7 +27,7 @@ The bathrooms deserve separate consideration. In most suites, they are open to t
 
 The Devi Garh Suite, occupying the fort's former zenana, is the hotel's most extraordinary accommodation. A sequence of three chambers connected by open doorways, it features a private terrace with 360-degree views of the Aravalli Hills, a bathroom that occupies an entire chamber of the original fort, and a master bedroom whose domed ceiling, stripped of all ornament, reveals the exquisite precision of 18th-century Rajasthani stone vaulting.
 
-[[PHOTO:landscape|The Devi Garh Suite bathroom — a marble tub carved from a single block of Makrana stone positioned beneath an 18th-century domed ceiling, the original stonework exposed and illuminated by concealed lighting, a window framing the Aravalli Hills]]
+[[PHOTO:landscape|/images/experiences/11-devi-garh-udaipur/03-bathroom.webp|The Devi Garh Suite bathroom — a marble tub carved from a single block of Makrana stone positioned beneath an 18th-century domed ceiling, the original stonework exposed and illuminated by concealed lighting, a window framing the Aravalli Hills|The bathroom occupies a tower chamber of the original fort — the tub carved from a single block of Makrana marble, the same stone that built the Taj Mahal]]
 
 ## The Public Spaces
 
@@ -37,7 +37,7 @@ The courtyard, the heart of any Rajasthani fort, has been transformed into an al
 
 The pool, carved into a terrace on the fort's eastern flank, is a rectangle of turquoise water surrounded by white marble decking and views of the Aravalli Hills stretching toward Udaipur, 28 kilometres away. The poolside service, attentive and unobtrusive, includes a menu of fresh juices, light Rajasthani cuisine, and a signature cocktail — the Devi Garh Martini, a concoction of vodka, desert lime, and a hint of chilli — that has earned a quiet reputation among Rajasthan's luxury traveller circuit.
 
-[[PHOTO:landscape|The pool terrace at Devi Garh — turquoise water set into white marble decking, the Aravalli Hills stretching to the horizon, white linen umbrellas providing the only shade under the Rajasthani sun]]
+[[PHOTO:landscape|/images/experiences/11-devi-garh-udaipur/04-pool-terrace.webp|The pool terrace at Devi Garh — turquoise water set into white marble decking, the Aravalli Hills stretching to the horizon, white linen umbrellas providing the only shade under the Rajasthani sun|The pool, like everything at Devi Garh, is a study in the tension between ancient and modern — turquoise water floating above the 260-year-old walls of the fort's lower ramparts]]
 
 ## Dining in the Fort
 
@@ -53,7 +53,7 @@ The bar, occupying a chamber off the courtyard, is intimate and moody — dark t
 
 The spa at Devi Garh, located in the fort's lower levels, is a destination in its own right. The treatment rooms occupy chambers that once served as the fort's storerooms — cool, dark, and silent, their walls the original stone, their floors heated white marble. The spa's philosophy is holistic in the genuine sense, drawing on Ayurveda, Tibetan medicine, and international wellness practices with equal respect.
 
-[[PHOTO:portrait|The Devi Garh spa — a treatment room carved into the fort's lower levels, exposed stone walls illuminated by candlelight, a marble treatment bed dressed in white linen, the silence absolute]]
+[[PHOTO:portrait|/images/experiences/11-devi-garh-udaipur/05-spa.webp|The Devi Garh spa — a treatment room carved into the fort's lower levels, exposed stone walls illuminated by candlelight, a marble treatment bed dressed in white linen, the silence absolute|Set in the fort's subterranean chambers, the spa offers Ayurvedic and international treatments in rooms where the only lighting is candlelight, the only soundtrack the distant call of peacocks from the Aravalli Hills]]
 
 The signature treatment, the Devi Garh Ritual, is a five-hour sequence that begins with a consultation with the spa's Ayurvedic doctor, continues through abhyanga massage, shirodhara, and a herbal wrap, and concludes with a vegetarian meal served in a private courtyard. It is, by any measure, one of the most comprehensive spa experiences available in India, and guests have been known to book stays at Devi Garh specifically for it.
 
@@ -61,7 +61,7 @@ The signature treatment, the Devi Garh Ritual, is a five-hour sequence that begi
 
 Devi Garh's location, in the village of Delwara, sets it apart from Udaipur's other luxury hotels, which cluster around Lake Pichola in the city centre. Delwara is a working village of approximately 4,000 people, and the hotel's relationship with the community is genuine and reciprocal. Many of the hotel's staff come from Delwara and its surrounding villages. The hotel's organic garden supplies not only the kitchen but also the village market. The hotel's foundation supports local schools and healthcare initiatives.
 
-[[PHOTO:wide|The village of Delwara at dawn — terracotta roofs and temple spires emerging from the morning mist, women in vivid saris walking to the stepwell, the Aravalli Hills rising beyond, Devi Garh visible on the hilltop above]]
+[[PHOTO:wide|/images/experiences/11-devi-garh-udaipur/06-delwara-village.webp|The village of Delwara at dawn — terracotta roofs and temple spires emerging from the morning mist, women in vivid saris walking to the stepwell, the Aravalli Hills rising beyond, Devi Garh visible on the hilltop above|The village is home to the remarkable stepwell of Delwara — an ancient baoli whose carved stone galleries descend over 200 steps into the earth, a masterpiece of medieval Rajput engineering]]
 
 For guests, this means an experience that goes beyond the walls of the fort. The hotel can arrange guided walks through Delwara — visits to the 11th-century stepwell, the Jain temples, the workshops where local artisans produce the embroidered textiles for which the region is known. These walks are not staged for tourists; they are introductions to a living community that has existed, with its own rhythms and traditions, for a thousand years. The contrast between the austerity of Devi Garh's interiors and the vitality of the village below is deliberate, and one of the hotel's most profound pleasures.
 
@@ -98,7 +98,7 @@ October through March offers the most comfortable climate for exploring the Arav
 How many nights should I stay?
 Three nights minimum. Four to five is ideal. Devi Garh rewards slow inhabitation. You need a day to adjust to the aesthetic — guests often find it disorienting on arrival, seductive by the second morning. You need a day for the spa. You need a day for Delwara village and the surrounding hills. One night is worse than none — you will leave before you have begun to understand the place.
 
-[[PHOTO:full-width|Devi Garh at twilight — the all-white fort palace glowing against the darkening Aravalli Hills, lights beginning to appear in the village of Delwara below, the sky in transition from gold to indigo, the fort's silhouette clean and sharp against the last light of day]]
+[[PHOTO:full-width|/images/experiences/11-devi-garh-udaipur/07-twilight.webp|Devi Garh at twilight — the all-white fort palace glowing against the darkening Aravalli Hills, lights beginning to appear in the village of Delwara below, the sky in transition from gold to indigo, the fort's silhouette clean and sharp against the last light of day|Devi Garh is not merely India's most radical heritage hotel — it is one of the most important works of contemporary design in South Asia, and at twilight, when the white marble catches the dying sun, the architecture speaks for itself]]
 `;
 
 export const articleSections = [];

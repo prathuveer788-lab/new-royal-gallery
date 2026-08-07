@@ -1,7 +1,10 @@
+// Full editorial content for City Palace, Udaipur
+// Images sourced from Wikimedia Commons under CC BY-SA 2.0 / CC BY 2.0
+
 export const articleContent = `
 The City Palace, Udaipur, is not a palace. It is a city within a city — an accumulation of eleven separate palaces built across four centuries by successive rulers of the Sisodia dynasty, each adding their own vision to the complex until it became, by any measure, the largest palace compound in Rajasthan and one of the most significant royal architectural ensembles anywhere in the Indian subcontinent.
 
-[[PHOTO:wide|City Palace Udaipur viewed from Lake Pichola at sunset — the entire eastern shore dominated by the sprawling complex, a cascade of domes, cupolas, balconies, and towers rising from the water's edge to the hilltop, every surface glowing gold in the evening light]]
+[[PHOTO:wide|https://upload.wikimedia.org/wikipedia/commons/6/69/Udaipur_City_Palace.jpg|City Palace Udaipur viewed from Lake Pichola at sunset — the entire eastern shore dominated by the sprawling complex, a cascade of domes, cupolas, balconies, and towers rising from the water's edge to the hilltop, every surface glowing gold in the evening light|The palace complex, spanning five acres and eleven interconnected palaces, is the largest royal residence in Rajasthan and remains partially occupied by the Mewar royal family|Henrik Bennetsen, CC BY-SA 2.0]]
 
 The Sisodias, the dynasty that has ruled Mewar — the region surrounding Udaipur — for more than fifteen centuries, are not merely one of India's oldest royal families. They are, by their own reckoning and that of most historians, the premier Rajput dynasty: the only major Hindu kingdom to resist Mughal domination through the centuries of Mughal supremacy, the custodians of a martial tradition that considers surrender a fate worse than death, and the descendants of a lineage that traces its origins to the sun itself. The Suryavanshi ("Descendants of the Sun") claim is inscribed on every gate and archway of the City Palace, and if the visitor is inclined to dismiss this as royal hyperbole, the architecture of the complex — a sustained, four-hundred-year argument in stone for the magnificence of the Sisodias — will give them considerable pause.
 
@@ -21,7 +24,7 @@ The Maharanas who followed Udai Singh II each left their mark. Maharana Karan Si
 
 The result is an architectural palimpsest — layer upon layer of style, material, and intention that collectively tells the story of the Mewar dynasty more eloquently than any history book. The early structures are pure Rajput: sandstone and marble, brackets and chhatris (domed pavilions), carved jharokhas (overhanging balconies), and pierced jali screens. The later additions incorporate Mughal elements — cusped arches, pietra dura inlay, formal garden layouts — that reflect the shifting balance of power between Mewar and the Mughal court. The most recent additions, from the British colonial period, incorporate European elements — crystal chandeliers, Victorian furniture, stained glass — that speak to the Maharanas' engagement with the wider world.
 
-[[PHOTO:landscape|The Badi Mahal courtyard — a garden courtyard set on a ninety-foot-high natural rock ledge, planted with mature trees and flowering shrubs, surrounded by marble colonnades and carved stone screens, the lake visible through arched windows to the west]]
+[[PHOTO:landscape|/images/experiences/04-city-palace-udaipur/02-badi-mahal.webp|The Badi Mahal courtyard — a garden courtyard set on a ninety-foot-high natural rock ledge, planted with mature trees and flowering shrubs, surrounded by marble colonnades and carved stone screens, the lake visible through arched windows to the west|The Badi Mahal (Great Palace) is unique among Rajasthan's palace courtyards: it is built on a natural rock formation at the highest point of the ridge, offering views across Lake Pichola that were deliberately framed by the palace's architects]]
 
 ## The Eleven Palaces Within
 
@@ -31,9 +34,11 @@ The Bhim Vilas, named for Maharana Bhim Singh (1778-1828), contains a gallery of
 
 The Krishna Vilas contains what may be the single most beautiful room in the complex: a small, jewel-like chamber whose walls and ceiling are covered entirely in miniature paintings — hundreds of individual scenes depicting Krishna's dalliance with the gopis (milkmaids), his childhood exploits in Vrindavan, and his role as divine charioteer in the Bhagavad Gita. The paintings were executed over a period of twelve years by a team of artists brought from the Mughal court at Delhi, and the fusion of Rajput subject matter with Mughal technique represents one of the high points of Indian artistic synthesis.
 
-[[PHOTO:portrait|The Krishna Vilas chamber — every square inch of wall and ceiling covered in miniature paintings of Lord Krishna, jewel-bright colours preserved for three centuries, divine figures emerging from backgrounds of lapis blue and burnished gold]]
+[[PHOTO:portrait|/images/experiences/04-city-palace-udaipur/03-krishna-vilas.webp|The Krishna Vilas chamber — every square inch of wall and ceiling covered in miniature paintings of Lord Krishna, jewel-bright colours preserved for three centuries, divine figures emerging from backgrounds of lapis blue and burnished gold|The pigments used in these paintings, including lapis lazuli from Afghanistan and gold leaf beaten to extraordinary thinness, were prepared using techniques passed down through generations of court painters]]
 
 The Mor Chowk (Peacock Courtyard) is the City Palace's most photographed space, and for good reason. Three peacocks, rendered in high relief in glass mosaic, adorn the walls of the courtyard — their plumage picked out in thousands of pieces of coloured glass and mirror in shades of green, blue, and gold. The peacocks represent the three seasons of Mewar — summer, winter, and monsoon — and the central peacock, the largest and most elaborate, is the monsoon peacock, celebrating the season that transforms the arid Rajasthani landscape into something briefly, vividly green.
+
+[[PHOTO:wide|https://upload.wikimedia.org/wikipedia/commons/3/38/Mor_chowk%2C_City_Palace%2C_Udaipur.jpg|The Mor Chowk (Peacock Courtyard) at the City Palace — three peacocks rendered in high-relief glass mosaic in sapphire, emerald, and gold, their plumage comprising thousands of individual pieces of coloured glass|The three peacocks symbolise the seasons of Mewar: the summer peacock with its brilliant plumage, the monsoon peacock celebrating the life-giving rains, and the winter peacock with its more subdued tones|nborun, CC BY 2.0]]
 
 The courtyard also features a series of wall paintings depicting scenes from the life of the Buddha — an unusual subject for a Rajput palace, and a testament to the Sisodias' historical openness to diverse spiritual traditions. The paintings are executed in the distinctively elongated, graceful style of the Mewar school, and their presence in the principal ceremonial courtyard of the palace suggests that the Maharanas saw themselves not merely as Rajput rulers but as inheritors of a broader Indian civilisational tradition.
 
@@ -53,7 +58,7 @@ The Armoury Gallery displays weapons that span five centuries — the curved tal
 
 The Painting Gallery contains several hundred miniature paintings from the Mewar school, spanning the sixteenth to nineteenth centuries. The collection is particularly strong in the early Mewar period — the so-called "Primitive" style of the late sixteenth and early seventeenth centuries, characterised by a bold, almost expressionistic use of colour and a certain charming disregard for naturalistic proportion. Later paintings in the collection demonstrate the increasing influence of Mughal technique, as Mewari artists absorbed the Persian-derived naturalism, atmospheric perspective, and refined portraiture that characterised painting at the Mughal court.
 
-[[PHOTO:landscape|The Armoury Gallery — glass display cases containing five centuries of Rajput weaponry, talwars and khandas gleaming under museum lighting, Maharana Pratap's seventy-two-kilogram battle armour standing in heroic silhouette against a backdrop of miniature battle paintings]]
+[[PHOTO:landscape|/images/experiences/04-city-palace-udaipur/04-armoury.webp|The Armoury Gallery — glass display cases containing five centuries of Rajput weaponry, talwars and khandas gleaming under museum lighting, Maharana Pratap's seventy-two-kilogram battle armour standing in heroic silhouette|Pratap's armour, forged by armourers in the Mughal tradition, is a testament to the physical prowess required of Rajput warriors: seventy-two kilograms, worn while wielding a two-handed sword and riding a war horse]]
 
 The Textile Gallery displays royal garments, including several that belonged to Maharana Sangram Singh II, whose reign in the early eighteenth century marked the peak of Mewari courtly culture. The textiles — brocade angarkhas (court coats), gold-embroidered odhnis (veils), and the impossibly fine muslin jamas (robes) that were the preferred court dress — are rotated every six months due to their fragility, and the curatorial standards of the gallery are a credit to the foundation's conservation team.
 
@@ -63,7 +68,7 @@ Two subsidiary collections of the City Palace deserve special mention, both hous
 
 The Vintage and Classic Car Collection, housed in the former palace stables, comprises more than twenty motorcars that belonged to the Maharanas of Udaipur. The collection includes several Rolls-Royces — a 1924 Rolls-Royce Twenty, a 1934 Rolls-Royce Phantom II, and a 1938 Rolls-Royce Phantom III that was the personal vehicle of Maharana Bhupal Singh. Also on display are Cadillacs, Mercedes-Benzes, and a 1939 Chevrolet that was used as a luggage car. The cars are maintained in drivable condition by the palace's own mechanics, and several are available for hire by hotel guests for tours of Udaipur.
 
-[[PHOTO:wide|The Vintage Car Collection in the former palace stables — a line of immaculately maintained Rolls-Royces from the 1920s and 1930s, their chrome gleaming, their leather interiors bearing the patina of royal use, the stone arches of the stable block framing each vehicle like a portrait]]
+[[PHOTO:wide|/images/experiences/04-city-palace-udaipur/05-vintage-cars.webp|The Vintage Car Collection in the former palace stables — a line of immaculately maintained Rolls-Royces from the 1920s and 1930s, their chrome gleaming, their leather interiors bearing the patina of royal use|The 1938 Rolls-Royce Phantom III, the collection's centerpiece, features a V12 engine and custom coachwork commissioned personally by Maharana Bhupal Singh]]
 
 ## Boat Rides on Lake Pichola
 
@@ -79,13 +84,7 @@ The City Palace complex offers several dining options that range from casual cou
 
 For a more elevated experience, the Sunset Terrace at Fateh Prakash Palace offers evening cocktails and a pan-Indian menu with views across Lake Pichola that are, without exaggeration, among the finest restaurant views anywhere in India. The restaurant opens at 5:00 PM to capture the sunset hour, and the terrace's western orientation means every table has an unobstructed view of the sun descending behind the Aravalli Hills. Reservations are essential during peak season, and requesting a table along the terrace railing when you book is strongly advised.
 
-[[PHOTO:landscape|The Sunset Terrace at Fateh Prakash Palace — white-linen tables along a marble balustrade, the sun descending behind the Aravalli Hills, Lake Pichola turning from silver to gold to rose, the Lake Palace a distant white jewel on the darkening water]]
-
-## The Festivals
-
-The City Palace is the epicentre of Udaipur's festival calendar, and visitors who time their stay to coincide with one of the palace's celebrations will experience the complex at its most vibrant. The Gangaur Festival, held in March or April (the date varies according to the Hindu calendar), is Udaipur's most important traditional celebration — a three-day festival honouring Gauri, the consort of Lord Shiva, and celebrating marital fidelity and the arrival of spring. The festival culminates in a procession from the City Palace's Tripolia Gate through the streets of the old city to Gangaur Ghat on Lake Pichola, where the idols of Gauri are immersed in the lake. The Maharana and his family lead the procession, and the sight of the royal family in full ceremonial regalia — the Maharana in a brocade angarkha and a turban with a jewelled sarpech (aigrette), the Maharani in a gold-embroidered poshak (traditional Rajasthani dress) — walking through streets lined with thousands of devotees is a scene that has not fundamentally changed in four hundred years.
-
-The Mewar Festival, held simultaneously with Gangaur, adds a cultural program of folk music, dance performances, and fireworks to the religious observances. The festival is organised by the Rajasthan Tourism Development Corporation in partnership with the Maharana of Mewar Charitable Foundation, and the palace's courtyards host performances by some of Rajasthan's finest folk artists — Langa and Manganiyar musicians from the Thar Desert, Kalbelia dancers from the snake-charmer communities of Jodhpur, and Bhavai performers who balance multiple brass pots on their heads while dancing on the edge of a sword.
+[[PHOTO:landscape|/images/experiences/04-city-palace-udaipur/06-sunset-terrace.webp|The Sunset Terrace at Fateh Prakash Palace — white-linen tables along a marble balustrade, the sun descending behind the Aravalli Hills, Lake Pichola turning from silver to gold to rose, the Lake Palace a distant white jewel on the darkening water|The terrace was added to Fateh Prakash Palace in the early twentieth century specifically to capture the sunset — the Maharanas understood that dining with a view is not a modern invention but a princely tradition]]
 
 ## Insider Tips
 
@@ -97,43 +96,20 @@ Arrive at the City Palace at opening time (9:30 AM) to experience the complex be
 The City Palace's official guides, available at the ticket office, are generally excellent — knowledgeable, articulate, and passionate about Mewari history. Hire one for at least two hours (approximately ₹1,500/$18), and specify that you want to focus on the miniature paintings and the architecture rather than the standard highlights-only tour. The guides know the palace's hidden corners — the rarely visited Amar Vilas courtyard, the private temple, the terrace with the best view of the Lake Palace — and will take you to them if you express genuine interest.
 [[/TIP]]
 
-[[TIP:Photography Strategy|📸]]
-The City Palace permits photography throughout the complex except in the Painting Gallery (where flash photography can damage the pigments). The best photographs are captured in the early morning (8:00-10:00 AM) and late afternoon (4:00-5:30 PM), when the light is warm and the shadows are dramatic. The Mor Chowk peacocks photograph best in the afternoon, when the sun illuminates the glass mosaic directly. The view of the Lake Palace from the Amar Vilas terrace is best captured at midday, when the sun is overhead and the white marble palace reflects brilliantly against the blue water. Camera tripods require a special permit, available at no additional cost from the museum office.
-[[/TIP]]
-
-[[TIP:Combining with Other Attractions|🏛️]]
-The City Palace complex can easily consume an entire day — plan for at least four hours to see the museums properly, longer if you intend to visit the Crystal Gallery and the Vintage Car Collection. Combine your palace visit with a late-afternoon boat ride on Lake Pichola (book the 4:00 PM departure for the best light) and dinner at the Sunset Terrace. This sequence — palace, boat, sunset, dinner — constitutes the definitive Udaipur day and is achievable without ever leaving the palace complex.
-[[/TIP]]
-
 [[DIVIDER]]
 
 ## Frequently Asked Questions
 
-How much time do I need to see the City Palace?
-
-A minimum of three to four hours for the museums alone. To do justice to the full complex — the museums, the Crystal Gallery, the Vintage Car Collection, and a leisurely exploration of the courtyards and terraces — plan for five to six hours. Many visitors underestimate the sheer scale of the complex, which covers approximately five acres of built space across multiple levels, and leave feeling that they have rushed through something that deserved their full attention.
+How long does it take to see the City Palace?
+A thorough visit, including the museums and the Crystal Gallery, requires four to five hours. Most visitors spend two to three hours, which covers the principal courtyards, the Mor Chowk, the Armoury Gallery, and a selection of the miniature painting galleries. If you are staying at one of the City Palace hotels, spread your visit over two days — mornings are best for the museums, late afternoons for the courtyards when the light is most beautiful.
 
 Is the City Palace wheelchair accessible?
+Partial accessibility. The ground-floor courtyards and several of the main galleries are accessible, but the upper floors, terraces, and many of the smaller galleries are reached by stairs. The palace, built across multiple levels on a natural rock formation, was not designed with accessibility in mind, and the heritage status of the complex limits the modifications that can be made. Contact the palace in advance for specific accessibility information.
 
-The palace is partially accessible. The main courtyard level, the museum galleries on the ground floor, the Crystal Gallery, and the Vintage Car Collection are wheelchair accessible with ramps and elevators. However, large sections of the upper levels, including the Mor Chowk, the Badi Mahal, and the terraces, are accessible only by stairs — the complex was built on a hillside across multiple levels, and the narrow staircases, low doorways, and uneven stone floors of the upper levels reflect the palace's sixteenth-century origins. The museum staff can advise on accessible routes when you arrive.
+Can I take photographs inside?
+Photography is permitted in the courtyards and most of the museum galleries, though flash is prohibited to protect the paintings and textiles. The Crystal Gallery does not permit photography of any kind. Tripods and professional equipment require a separate permit, available from the palace administration office.
 
-Can I visit the Chandra Mahal where the royal family lives?
-
-No. The Chandra Mahal, the highest and most private section of the complex, remains the residence of the current Maharana and his family and is not open to the public. The palace's public areas — the museum galleries, the courtyards, and the hotel wings — are separated from the private apartments by guarded gates, and access is strictly controlled. The royal family's privacy is maintained with the same rigour that has governed the palace for centuries.
-
-Is there a dress code?
-
-There is no formal dress code, but the City Palace is a functioning royal residence with active temples, and visitors should dress with appropriate respect. Shoulders and knees should be covered — this applies to both men and women. Footwear must be removed before entering the temple areas, and visitors should be aware that the museum guards may request this without advance warning. A scarf or shawl is useful for covering shoulders in the temple areas and for protection from the sun during courtyard exploration.
-
-What is the best time of year to visit Udaipur?
-
-October through March offers the most pleasant climate, with daytime temperatures of 18-28°C and cool evenings. The palace's courtyards can become uncomfortably hot in April through June (35-42°C), though the interior galleries remain relatively cool due to the palace's thick stone walls and passive cooling design. The monsoon season (July-September) brings dramatic skies, lush greenery, and fewer tourists, but heavy rainfall can flood the lower courtyards and restrict access to the terraces.
-
-How do the City Palace hotels — Shiv Niwas and Fateh Prakash — relate to the palace complex?
-
-Both hotels occupy wings of the City Palace complex and are operated under license from the Maharana of Mewar Charitable Foundation. Shiv Niwas Palace occupies the former guest wing, built by Maharana Fateh Singh in the early twentieth century. Fateh Prakash Palace occupies the grandest wing of the late-nineteenth-century palace expansion and houses the Crystal Gallery. Guests of both hotels have privileged access to the City Palace museums (included in the room rate) and can explore the complex outside of public hours — a significant advantage for those who wish to experience the palace's courtyards and terraces in solitude. The hotels share the palace's private jetty for Lake Pichola boat excursions.
-
-[[PHOTO:full-width|Aerial panorama of the City Palace complex at twilight — the sprawling mass of domes, cupolas, and courtyards rising from the shore of Lake Pichola, the Chandra Mahal's highest tower catching the last light of sunset, the Aravalli Hills stretching to the horizon in shades of violet and indigo, the Lake Palace a distant white jewel on the darkening water, the entire scene a testament to four centuries of Sisodia vision and the enduring magnificence of the world's largest royal palace complex]]
+[[PHOTO:full-width|/images/experiences/04-city-palace-udaipur/07-night-panorama.webp|City Palace Udaipur illuminated at night — the entire length of the complex glowing golden against the dark lake, every dome, cupola, and balcony picked out in amber light, reflected with mirror precision in the still waters of Lake Pichola|The palace's illumination system, installed in 2015 by the Maharana of Mewar Charitable Foundation, uses energy-efficient LED technology calibrated to replicate the warm glow of traditional oil lamps — modern sustainability in the service of ancient atmosphere]]
 `;
 
 export const articleSections = [];

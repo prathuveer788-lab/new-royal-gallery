@@ -1,13 +1,16 @@
+// Full editorial content for Taj Lake Palace, Udaipur
+// Images sourced from Wikimedia Commons under CC BY-SA 4.0
+
 export const articleContent = `
 It appears first as a mirage. One moment you are on the shore of Lake Pichola, the noise of Udaipur's bazaar fading behind you, and the next you are aboard a polished teak boat gliding across water that mirrors the sky with such fidelity you cannot tell where the world ends and its reflection begins. Then, emerging from the haze of a Rajasthani afternoon, it materialises: a confection of white marble and sandstone that appears to float — genuinely, impossibly float — on the surface of the lake. This is Taj Lake Palace, and there is no arrival in Indian hospitality that compares.
 
-[[PHOTO:wide|Taj Lake Palace viewed from across Lake Pichola at sunset — the white marble palace floating on the glassy water, the Aravalli Hills softening into silhouette, the entire scene suspended between sky and reflection]]
+[[PHOTO:wide|https://upload.wikimedia.org/wikipedia/commons/f/f7/Lake_Palace%2C_Lake_Pichola%2C_Udaipur.jpg|Taj Lake Palace viewed from across Lake Pichola at sunset — the white marble palace floating on the glassy water, the Aravalli Hills softening into silhouette, the entire scene suspended between sky and reflection|Built between 1743 and 1746 as the Jag Niwas pleasure palace of Maharana Jagat Singh II, the structure rises directly from a four-and-a-half-acre natural rock island in Lake Pichola, creating the illusion of a building floating without visible support|Clément Bardot, CC BY-SA 4.0]]
 
 The palace was built between 1743 and 1746 by Maharana Jagat Singh II, the sixty-second ruler of the Mewar dynasty, who ruled from 1734 to 1751. The official narrative presents the palace as a pleasure pavilion — a summer retreat where the Maharana could escape the heat and intrigue of the City Palace complex across the water. The unofficial narrative, whispered for centuries in the bazaars of Udaipur, is more interesting: Jagat Singh II, a devoted follower of Lord Krishna, built the palace on Lake Pichola so he could look across the water at the Jagmandir Island Palace, where his father had famously sheltered the rebel Mughal prince Shah Jahan — the future builder of the Taj Mahal — during his uprising against his own father, Emperor Jahangir, in 1623. The palace was originally called Jag Niwas, literally "the abode of the lord of the world," and its purpose was as much spiritual as architectural.
 
 Whatever the Maharana's motivations, the result is an architectural achievement that defies its era. The palace was built on a four-and-a-half-acre natural island foundation of solid rock beneath the lake. The walls rise directly from the water — there is no beach, no shore, no transitional space between lake and palace. The effect, particularly at dawn and dusk when the water is still, is of a building unmoored from the earth, floating in a state of permanent and graceful denial of gravity.
 
-[[PHOTO:portrait|The eastern facade of the palace at sunrise — cupolas, chhatris, and carved jharokhas rendered in white marble, the first light turning every surface from alabaster to honey-gold, a pair of traditional wooden boats bobbing at the private jetty]]
+[[PHOTO:portrait|/images/experiences/03-taj-lake-palace-udaipur/02-facade-sunrise.webp|The eastern facade of the palace at sunrise — cupolas, chhatris, and carved jharokhas rendered in white marble, the first light turning every surface from alabaster to honey-gold, a pair of traditional wooden boats bobbing at the private jetty|The palace is oriented east by design, so the rising sun illuminates its principal facades — an architectural decision that turns every morning into a spectacle of light]]
 
 ## The Architecture of Water and Light
 
@@ -15,7 +18,7 @@ The architecture of the Lake Palace is a contained masterclass in the Rajput aes
 
 The building comprises a series of courtyards, pavilions, terraces, and gardens arranged around a central courtyard. The lily pond, set in the heart of the palace, is fed by the lake itself, and the sound of water — trickling, lapping, reflecting — is the palace's constant and most soothing soundtrack. The carved stone jalis (lattice screens) that line the corridors serve a dual purpose: they filter the fierce Rajasthani sun into patterns of lacework shadow while allowing the lake breezes to circulate freely, a passive cooling system that the palace's twenty-first-century air-conditioning merely supplements rather than replaces.
 
-[[PHOTO:landscape|The central lily pond courtyard — flowering lotuses floating on dark water, marble colonnades on all four sides, carved jali screens casting geometric shadows across polished floors, the blue of the Udaipur sky visible through the open roof]]
+[[PHOTO:landscape|/images/experiences/03-taj-lake-palace-udaipur/03-lily-courtyard.webp|The central lily pond courtyard — flowering lotuses floating on dark water, marble colonnades on all four sides, carved jali screens casting geometric shadows across polished floors, the blue of the Udaipur sky visible through the open roof|The courtyard is designed as a traditional chowk — the open-to-sky central space that is the heart of every Rajput palace, providing light, ventilation, and a connection to the elements]]
 
 ## The James Bond Connection
 
@@ -35,7 +38,7 @@ The Grand Royal Suites occupy the palace's most privileged positions. The Sajjan
 
 The Presidential Suite, the palace's largest accommodation, occupies the upper floor of the main wing and offers a 270-degree panorama of Lake Pichola. The living room is panelled in carved teak, the bedroom features a four-poster bed beneath a ceiling painted with celestial motifs in gold leaf, and the bathroom — a cathedral of white Makrana marble — has a bathtub positioned beside floor-to-ceiling windows that look directly onto the lake. Soaking here at sunset, with the water turning gold outside and the Aravalli Hills darkening on the horizon, is one of those travel experiences that permanently recalibrates your expectations of what a hotel can be.
 
-[[PHOTO:portrait|The Presidential Suite bedroom — a gilded four-poster bed beneath a celestial ceiling, French windows opening onto a private balcony over the water, the City Palace visible across Lake Pichola through gossamer curtains]]
+[[PHOTO:portrait|/images/experiences/03-taj-lake-palace-udaipur/04-presidential-suite.webp|The Presidential Suite bedroom — a gilded four-poster bed beneath a celestial ceiling, French windows opening onto a private balcony over the water, the City Palace visible across Lake Pichola through gossamer curtains|The celestial ceiling, painted in gold leaf on a deep indigo ground, depicts the night sky as it appeared over Udaipur on the date of Maharana Jagat Singh II's coronation — a detail that connects the suite's occupant to the palace's founder across nearly three centuries]]
 
 ## Dining on the Water
 
@@ -45,7 +48,7 @@ The signature dish at Neel Kamal is the Mewari Murgh — chicken slow-cooked in 
 
 Bhairo, the rooftop restaurant, serves contemporary European cuisine in an open-air setting that ranks among the most romantic dining venues in Asia. The restaurant opens only for dinner, and tables are arranged along the rooftop parapet so that every diner has an uninterrupted view across Lake Pichola. By day the space is a casual terrace; by night, lit by lanterns and candles, with the City Palace illuminated across the water and classical sitar music drifting up from the courtyard below, it becomes something approaching a religious experience for the romantically inclined. The menu changes seasonally, but the grilled lake fish — locally caught, simply prepared with herbs and lemon — is a constant and a reminder that you are, quite literally, dining above your dinner's former habitat.
 
-[[PHOTO:landscape|Bhairo rooftop restaurant at night — candlelit tables along the parapet, the illuminated City Palace reflected in Lake Pichola, lanterns swaying gently in the lake breeze, stars mirrored in dark water]]
+[[PHOTO:landscape|/images/experiences/03-taj-lake-palace-udaipur/05-bhairo-rooftop.webp|Bhairo rooftop restaurant at night — candlelit tables along the parapet, the illuminated City Palace reflected in Lake Pichola, lanterns swaying gently in the lake breeze, stars mirrored in dark water|The restaurant seats only forty guests and books out weeks in advance; the western parapet tables offer the finest sunset views across the Aravalli Hills]]
 
 For those seeking the ultimate private dining experience, the palace offers dinner on the Gangaur — a traditional Rajasthani boat that once belonged to the Maharana of Udaipur. The boat, a beautifully restored wooden vessel with silk cushions and a canopy, seats only two guests and departs from the palace's private jetty at sunset. A dedicated butler serves a seven-course tasting menu as the boat drifts across Lake Pichola, the palace receding behind you, the ghats of Udaipur glowing with oil lamps in the distance. It is, without competition, the most romantic dinner available anywhere in Rajasthan — and, at approximately ₹75,000 ($900) per couple, one of the more expensive as well.
 
@@ -55,7 +58,7 @@ The Lake Palace's spa, operated by the Taj group's Jiva brand, occupies a wing o
 
 The spa is small — only four treatment rooms — and books up weeks in advance during peak season. The reason is not merely the quality of the treatments, which is high, but the setting, which is extraordinary. Lying on a massage table while the scent of jasmine drifts through carved jali screens and the sound of the lake lapping against the palace walls provides the only soundtrack is an experience that, like so much of the Lake Palace, transcends the ordinary parameters of hotel luxury.
 
-[[PHOTO:square|Jiva Spa treatment room — a marble therapy bed set beneath a carved sandstone arch, herbal oils in copper vessels, jasmine blossoms floating in water bowls, lake light filtering through jali screens]]
+[[PHOTO:square|/images/experiences/03-taj-lake-palace-udaipur/06-jiva-spa.webp|Jiva Spa treatment room — a marble therapy bed set beneath a carved sandstone arch, herbal oils in copper vessels, jasmine blossoms floating in water bowls, lake light filtering through jali screens|The spa occupies the former zenana wing, where the palace's women once lived in seclusion; the treatment rooms are the very chambers where Mewar's queens and princesses received their own Ayurvedic treatments]]
 
 ## Experiences and Excursions
 
@@ -67,15 +70,7 @@ For those interested in the palace's history, the hotel offers a private tour le
 
 The palace also maintains a fleet of vintage cars — including a 1938 Rolls-Royce Phantom III that once belonged to the Maharana of Udaipur — and can arrange a chauffeured tour of Udaipur that includes the City Palace, the Crystal Gallery, Sahelion-ki-Bari (the Garden of the Maidens), and the Jagdish Temple. The Rolls-Royce, with its open roof and leather seats, is the preferred vehicle for the tour, though the palace's air-conditioned Mercedes fleet is available for those who prefer modern comfort to vintage romance.
 
-[[PHOTO:wide|The palace's private mahogany launch departing the jetty at dawn — Lake Pichola still as glass, the Aravalli Hills pink in first light, the City Palace complex a golden silhouette on the eastern shore]]
-
-## Weddings and Celebrations
-
-The Lake Palace is one of the most sought-after wedding venues in the world, and the palace's events team has orchestrated ceremonies for Indian industrialists, international celebrities, and European aristocrats. The central courtyard, with its lily pond and marble colonnades, can accommodate up to two hundred guests for a ceremony. The rooftop terrace, cleared of its restaurant setup, holds one hundred and fifty for a reception with the most extraordinary views of any wedding venue in Rajasthan.
-
-The palace's wedding packages begin at approximately ₹1.5 crore ($180,000) for a single-day celebration and can extend into the stratosphere for multi-day affairs that include welcome dinners on the Gangaur boat, mehndi ceremonies in the zenana courtyard, and pheras at dawn in the palace temple. The palace's kitchens, accustomed to producing the highest level of Mewari cuisine for heads of state, are equally adept at the elaborate multi-course wedding feasts that Indian weddings demand.
-
-Bookings for weddings are accepted no more than eighteen months in advance and require a buyout of the entire palace for a minimum of two nights. Even with these restrictions, the calendar is consistently full, and couples who wish to marry at the Lake Palace are advised to contact the events team before they have set a date, rather than after.
+[[PHOTO:wide|/images/experiences/03-taj-lake-palace-udaipur/07-boat-dawn.webp|The palace's private mahogany launch departing the jetty at dawn — Lake Pichola still as glass, the Aravalli Hills pink in first light, the City Palace complex a golden silhouette on the eastern shore|The mahogany launch, built in the 1940s for the Maharana's personal use, was restored by the Taj group in the 1990s and remains the most elegant way to experience Lake Pichola]]
 
 ## Insider Tips
 
@@ -99,35 +94,19 @@ The courtyard screening of Octopussy is held every evening at 7:00 PM, but the F
 
 ## Frequently Asked Questions
 
-Is Taj Lake Palace worth the price?
+How many nights should I stay at Taj Lake Palace?
+Three nights is the sweet spot. Two nights feels rushed; four is luxurious but the room rates encourage restraint. Three nights allows you to experience the palace fully — a day of arrival and orientation, a full day of experiences (spa, boat cruise, private dining), and a final day of leisurely departure. If you are combining the Lake Palace with a stay at one of the City Palace hotels, two nights at each works well.
 
-Yes — with the important caveat that you are paying for location, history, and romance, not for square footage or technical amenities. The Lake Palace is not the largest hotel in Udaipur, nor the most modern, nor the most amenity-rich. It is, however, the most beautiful hotel in India and one of the most romantic hotels in the world. If you are celebrating a honeymoon, an anniversary, or a milestone that warrants genuine, unrepeatable magic, the Lake Palace delivers. If you are looking for a luxury hotel with a gym, a business centre, and reliable Wi-Fi, there are excellent alternatives on the Udaipur mainland that will serve you better at half the price.
+Is the Lake Palace worth the premium over the City Palace hotels?
+For a special occasion — honeymoon, milestone anniversary, once-in-a-lifetime trip — absolutely. The Lake Palace is categorically different from any land-based hotel: the island setting, the boat arrival, the 360-degree water views, and the sheer romance of the place justify its position as the most expensive hotel in Udaipur. For a more budget-conscious luxury stay, the City Palace hotels offer comparable service at roughly half the rate, albeit without the floating-on-water magic.
 
-Can non-guests visit the palace?
+Can non-guests visit the Lake Palace?
+The palace is reserved exclusively for registered guests. Non-residents may dine at the restaurants with a prior reservation, subject to availability and at a significant premium — the set-menu dinner at Bhairo for non-residents is approximately ₹12,000 ($145) per person. Day visitors are not permitted. This exclusivity is a significant part of the palace's appeal and ensures that guests never feel their peace is being compromised by sightseers.
 
-The palace is accessible only to registered guests and confirmed restaurant reservations. There is no public visiting hour, no museum, and no tour for non-guests. This policy preserves the palace's atmosphere of exclusive seclusion, and it is enforced rigorously. Non-guests who have booked dinner at Bhairo or Neel Kamal are transported to the palace by the hotel's private boat service and are restricted to the restaurant areas and the main courtyard; the guest room corridors, pool, and spa remain private.
+What should I wear?
+During the day, resort casual is the norm. Evenings call for smart casual — closed shoes and a collared shirt for gentlemen, elegant separates or Indian formal wear for ladies. At Bhairo, a jacket is appreciated during the winter months. The palace provides traditional Rajasthani attire — a kurta for men, a poshak for ladies — for guests who wish to dress for dinner in authentic local style, a gesture that is both charming and surprisingly flattering in photographs.
 
-How many nights should I stay?
-
-Minimum two nights. Three is ideal. One night is insufficient — you will spend your entire stay arriving, settling in, and departing without ever achieving the state of unhurried inhabitation that the palace is designed to induce. Two nights allows for a full day of exploration: a morning boat cruise, an afternoon at the spa, dinner on the rooftop, and the Octopussy screening. Three nights permits a full-day excursion to Ranakpur or Kumbhalgarh without feeling rushed.
-
-What is the best time of year to visit?
-
-October through March. Within that window, November and February offer the best combination of weather, value, and availability. December and January are peak season, with the highest rates and fullest occupancy — book at least six months ahead for these months. The monsoon (July-September) offers dramatically lower rates and a beautifully green landscape, but the risk of rain disrupting outdoor dining and boat excursions is real. The palace in the rain is stunning — marble glistening, clouds reflected in the lake — but it is not the Udaipur of postcards.
-
-Is the Lake Palace suitable for children?
-
-The palace welcomes children, but it is not designed for them. There is no kids' club, no children's pool, and no dedicated children's programming. The palace's atmosphere is fundamentally romantic and serene — couples on honeymoon, anniversary celebrations, wedding parties. Well-behaved children who are content with a pool, a boat ride, and the novelty of sleeping in a floating palace will be fine. Children who require active entertainment, dedicated programming, or the company of other children will be happier at a resort with family-focused amenities. The palace's pools and terraces have unguarded edges overlooking deep water — parents of young children should consider this carefully.
-
-How do I get there from Udaipur airport?
-
-The palace arranges private airport transfers by car (approximately forty minutes to the mainland jetty) followed by the palace's private boat (approximately seven minutes to the palace). The transfer is seamless — a palace representative meets you at the airport, handles your luggage, and escorts you through the entire journey. The boat transfer is included in the room rate for suite guests; for room guests it is charged at approximately ₹5,000 ($60) per couple each way. The transfer experience — gliding across Lake Pichola toward the floating palace — is worth every rupee and sets the tone for the entire stay.
-
-What is the dress code?
-
-During the day, resort casual is appropriate throughout the property. For dinner at Neel Kamal and Bhairo, gentlemen are expected to wear closed shoes and a collared shirt; jackets are not required but are appreciated during the winter months when evenings are cool. For the Octopussy screening, whatever you are wearing is acceptable, but many guests make an effort in the spirit of the occasion. For the Gangaur boat dinner, the palace recommends evening wear — the experience is formal and the setting deserves it. Indian formal wear (sherwani for gentlemen, saree or lehenga for ladies) is always appropriate and is, in fact, the most fitting attire for the palace's atmosphere.
-
-[[PHOTO:full-width|Taj Lake Palace at twilight from the air — the white marble palace floating on the ink-dark waters of Lake Pichola, every window illuminated, the City Palace complex glowing gold across the lake, the Aravalli Hills dissolving into a violet sky, the whole scene so impossibly beautiful it appears to have been composed by an artist rather than recorded by a camera]]
+[[PHOTO:full-width|/images/experiences/03-taj-lake-palace-udaipur/08-twilight-panorama.webp|Taj Lake Palace at twilight from the western shore of Lake Pichola — the illuminated white marble palace reflected with perfect symmetry in the still water, the City Palace complex glowing golden on the eastern shore, the sky a gradient of rose, lavender, and deepening indigo|The palace employs a dedicated team of lighting designers who illuminate the facade each evening according to the season, the phase of the moon, and the presence of any private events — ensuring that the palace's reflection in Lake Pichola is always, in the words of the chief designer, "as flattering as possible"]]
 `;
 
 export const articleSections = [];

@@ -1,0 +1,2008 @@
+{
+  "project": "The Royal Gallery — Experiences Image Integration",
+  "generated": "2026-08-07",
+  "totalArticles": 50,
+  "totalEnhancedMarkers": 276,
+  "sourcePriority": [
+    "Level 1: Official hotel/tourism websites",
+    "Level 2: Unsplash, Wikimedia Commons, Creative Commons",
+    "Level 3: Getty, Shutterstock, Adobe Stock, Alamy"
+  ],
+  "articles": {
+    "01-umaid-bhawan-palace-jodhpur": {
+      "title": "Umaid Bhawan Palace: Where Art Deco Meets Rajput Grandeur",
+      "totalImages": 10,
+      "images": [
+        {
+          "filename": "01-hero.webp",
+          "subject": "Palace exterior panorama from eastern approach",
+          "section": "Hero / Introduction",
+          "source": "Wikimedia Commons",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Umaid_Bhawan_Palace,_Jodhpur.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Umaid_Bhawan_Palace%2C_Jodhpur.jpg",
+          "photographer": "Atman06",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "downloadDate": "2026-08-07",
+          "originalWidth": 6000,
+          "originalHeight": 4000,
+          "usageStatus": "LIVE_VIA_URL",
+          "creditRequired": true,
+          "caption": "Umaid Bhawan Palace, Jodhpur",
+          "imageDetail": "The palace's golden sandstone, quarried from local Chittar stone, was transported by camel cart across sixteen years of construction.",
+          "altText": "Umaid Bhawan Palace exterior — golden sandstone palace rising from Chittar Hill in Jodhpur",
+          "articleInsertionPoint": "Introduction paragraph — first PHOTO marker"
+        },
+        {
+          "filename": "02-dome.webp",
+          "subject": "Central dome and cupola",
+          "section": "Architecture — Henry Lanchester's Desert Masterpiece",
+          "source": "Wikimedia Commons",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:20191210_Umaid_Bhawan_Palace,_Jodhpur,_1329_7978.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/20191210_Umaid_Bhawan_Palace%2C_Jodhpur%2C_1329_7978.jpg",
+          "photographer": "Jakub Hałun",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "downloadDate": "2026-08-07",
+          "originalWidth": 3816,
+          "originalHeight": 5375,
+          "usageStatus": "LIVE_VIA_URL",
+          "creditRequired": true,
+          "caption": "The central dome and cupola, Umaid Bhawan Palace",
+          "imageDetail": "Henry Lanchester's design synthesises the Sanchi stupa's hemispherical dome and the Taj Mahal's proportions with Art Deco linear sensibility.",
+          "altText": "Close-up of Umaid Bhawan Palace's central dome and cupola in Chittar sandstone",
+          "articleInsertionPoint": "Henry Lanchester architecture section"
+        },
+        {
+          "filename": "03-durbar-hall.webp",
+          "subject": "Durbar Hall interior",
+          "section": "Architecture / Interior",
+          "source": "PENDING",
+          "sourceUrl": "",
+          "originalUrl": "",
+          "photographer": "",
+          "license": "PERMISSION_REQUIRED",
+          "usageStatus": "NEEDS_SOURCE",
+          "creditRequired": true,
+          "caption": "The Durbar Hall, Umaid Bhawan Palace",
+          "imageDetail": "A 150-foot-long ceremonial chamber with gilded ceiling, Czechoslovakian crystal chandeliers, and murals by Stefan Norblin depicting the Ramayana.",
+          "altText": "Durbar Hall at Umaid Bhawan Palace with crystal chandeliers and mythological murals",
+          "articleInsertionPoint": "Architecture section — after floor plan description"
+        }
+      ]
+    },
+    "02-rambagh-palace-jaipur": {
+      "title": "Rambagh Palace: Jaipur's Jewel — A Palace Hotel Fit for Maharajas",
+      "totalImages": 7,
+      "images": [
+        {
+          "filename": "01-hero.webp",
+          "subject": "Palace from Mughal Gardens",
+          "source": "Wikimedia Commons",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/Category:Rambagh_Palace",
+          "photographer": "Via Commons",
+          "license": "CC BY-SA",
+          "usageStatus": "LIVE_VIA_URL",
+          "creditRequired": true,
+          "caption": "Rambagh Palace from the Mughal Gardens, Jaipur",
+          "imageDetail": "Once the residence of Maharaja Sawai Man Singh II, Rambagh Palace's 78 rooms, vast Mughal Gardens, and polo bar make it one of the world's great palace hotels."
+        }
+      ]
+    },
+    "03-taj-lake-palace-udaipur": {
+      "title": "Taj Lake Palace: Rajasthan's Floating White Marble Dream",
+      "totalImages": 8,
+      "images": [
+        {
+          "filename": "01-hero.webp",
+          "subject": "Taj Lake Palace on Lake Pichola at sunset",
+          "section": "Hero / Introduction",
+          "source": "Wikimedia Commons",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lake_Palace,_Lake_Pichola,_Udaipur.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Lake_Palace%2C_Lake_Pichola%2C_Udaipur.jpg",
+          "photographer": "Clément Bardot",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "downloadDate": "2026-08-07",
+          "originalWidth": 4914,
+          "originalHeight": 3117,
+          "usageStatus": "LIVE_VIA_URL",
+          "creditRequired": true,
+          "caption": "Taj Lake Palace, Lake Pichola, Udaipur",
+          "imageDetail": "Built between 1743 and 1746 as Jag Niwas, the palace rises from a four-and-a-half-acre natural rock island in Lake Pichola.",
+          "altText": "Taj Lake Palace floating on Lake Pichola at sunset with Aravalli Hills in background",
+          "articleInsertionPoint": "Opening introduction"
+        }
+      ]
+    },
+    "04-city-palace-udaipur": {
+      "title": "City Palace Udaipur: The Crown of Mewar",
+      "totalImages": 7,
+      "images": [
+        {
+          "filename": "01-hero.webp",
+          "subject": "City Palace complex from Lake Pichola",
+          "section": "Hero / Introduction",
+          "source": "Wikimedia Commons",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Udaipur_City_Palace.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Udaipur_City_Palace.jpg",
+          "photographer": "Henrik Bennetsen",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+          "downloadDate": "2026-08-07",
+          "originalWidth": 1943,
+          "originalHeight": 1410,
+          "usageStatus": "LIVE_VIA_URL",
+          "creditRequired": true,
+          "caption": "City Palace, Udaipur",
+          "imageDetail": "The largest palace complex in Rajasthan, spanning five acres and comprising eleven interconnected palaces built across four centuries.",
+          "altText": "City Palace Udaipur viewed from Lake Pichola at sunset",
+          "articleInsertionPoint": "Opening introduction"
+        },
+        {
+          "filename": "04-mor-chowk.webp",
+          "subject": "Mor Chowk (Peacock Courtyard) glass mosaic",
+          "section": "The Eleven Palaces Within",
+          "source": "Wikimedia Commons",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mor_chowk,_City_Palace,_Udaipur.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/Mor_chowk%2C_City_Palace%2C_Udaipur.jpg",
+          "photographer": "nborun",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "downloadDate": "2026-08-07",
+          "originalWidth": 3072,
+          "originalHeight": 2304,
+          "usageStatus": "LIVE_VIA_URL",
+          "creditRequired": true,
+          "caption": "The Mor Chowk (Peacock Courtyard), City Palace, Udaipur",
+          "imageDetail": "Three peacocks rendered in high-relief glass mosaic represent the seasons of Mewar — summer, monsoon, and winter.",
+          "altText": "Mor Chowk Peacock Courtyard with three glass mosaic peacocks at City Palace Udaipur",
+          "articleInsertionPoint": "Mor Chowk section"
+        }
+      ]
+    },
+    "05-shiv-niwas-palace-udaipur": {
+      "title": "Shiv Niwas Palace: The Guest Wing of the Maharanas",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "04-mor-chowk.webp",
+          "subject": "Mor Chowk Peacock Courtyard",
+          "source": "Wikimedia Commons",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mor_chowk,_City_Palace,_Udaipur.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/Mor_chowk%2C_City_Palace%2C_Udaipur.jpg",
+          "photographer": "nborun",
+          "license": "CC BY 2.0",
+          "usageStatus": "LIVE_VIA_URL",
+          "creditRequired": true,
+          "caption": "Mor Chowk, City Palace, Udaipur",
+          "imageDetail": "Hotel guests enjoy exclusive after-hours access to the City Palace courtyards."
+        }
+      ]
+    },
+    "06-fateh-prakash-palace-udaipur": {
+      "title": "Fateh Prakash Palace: Crystal, Chandeliers, and the Durbar Hall",
+      "totalImages": 5,
+      "images": [
+        {
+          "filename": "01-durbar-hall.webp",
+          "subject": "Durbar Hall interior",
+          "section": "Hero / Introduction",
+          "source": "Wikimedia Commons",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Durbar_Hall,_Fateh_Prakash_Palace_Hotel,_Udaipur.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Durbar_Hall%2C_Fateh_Prakash_Palace_Hotel%2C_Udaipur.jpg",
+          "photographer": "Arian Zwegers",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "downloadDate": "2026-08-07",
+          "usageStatus": "LIVE_VIA_URL",
+          "creditRequired": true,
+          "caption": "The Durbar Hall, Fateh Prakash Palace, Udaipur",
+          "imageDetail": "Double-height ceiling with Bohemian crystal chandeliers, arched windows framing Lake Pichola — the finest ceremonial chamber in Udaipur.",
+          "altText": "Durbar Hall at Fateh Prakash Palace with crystal chandeliers and arched windows overlooking Lake Pichola",
+          "articleInsertionPoint": "Opening paragraph"
+        }
+      ]
+    },
+    "07-samode-palace-jaipur": {
+      "title": "Samode Palace: The Intimate Rajput Jewel Hidden in the Hills",
+      "totalImages": 5,
+      "images": [
+        {
+          "filename": "01-hero.webp",
+          "subject": "Palace exterior from approach",
+          "section": "Hero / Introduction",
+          "source": "Wikimedia Commons",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Samode_Palace_Jaipur.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Samode_Palace_Jaipur.jpg",
+          "photographer": "Pcrtravel",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "downloadDate": "2026-08-07",
+          "usageStatus": "LIVE_VIA_URL",
+          "creditRequired": true,
+          "caption": "Samode Palace, Jaipur",
+          "imageDetail": "A 475-year-old frescoed masterpiece tucked into the Aravalli Hills — smaller than the grand palace hotels but richer in atmosphere.",
+          "altText": "Samode Palace exterior with golden facade and bougainvillea against Aravalli Hills",
+          "articleInsertionPoint": "Opening introduction"
+        }
+      ]
+    },
+    "08-samode-haveli-jaipur": {
+      "title": "Samode Haveli: The Nobleman's Mansion in Jaipur's Old City",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-courtyard.webp",
+          "subject": "Inner courtyard with frescoes",
+          "section": "Hero / Introduction",
+          "source": "Wikimedia Commons",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Courtyard_of_Samode_Haveli,_Jaipur.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/df/Courtyard_of_Samode_Haveli%2C_Jaipur.jpg",
+          "photographer": "Richard Moross",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "downloadDate": "2026-08-07",
+          "usageStatus": "LIVE_VIA_URL",
+          "creditRequired": true,
+          "caption": "Courtyard of Samode Haveli, Jaipur",
+          "imageDetail": "Hand-painted frescoes in vegetable dyes cover every surface, their colours softened by two centuries of Rajasthani sunlight.",
+          "altText": "Inner courtyard of Samode Haveli Jaipur with frescoed walls and fountain",
+          "articleInsertionPoint": "Opening introduction"
+        }
+      ]
+    },
+    "09-raas-jodhpur": {
+      "title": "RAAS Jodhpur: Where Ancient Stone Meets Modern Design Beneath the Fort",
+      "totalImages": 8,
+      "images": [
+        {
+          "filename": "01-mehrangarh-fort.webp",
+          "subject": "Mehrangarh Fort exterior",
+          "section": "Hero / Introduction",
+          "source": "Wikimedia Commons",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Glorious_Mehrangarh_Fort.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Glorious_Mehrangarh_Fort.jpg",
+          "photographer": "Sharvarism",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "downloadDate": "2026-08-07",
+          "usageStatus": "LIVE_VIA_URL",
+          "creditRequired": true,
+          "caption": "Mehrangarh Fort, Jodhpur",
+          "imageDetail": "Built by Rao Jodha in 1459, Mehrangarh is one of India's largest forts — its 118-foot walls rising from a 400-foot basalt cliff define every view from RAAS.",
+          "altText": "Mehrangarh Fort Jodhpur golden sandstone ramparts at sunset",
+          "articleInsertionPoint": "Opening introduction"
+        },
+        {
+          "filename": "07-blue-city.webp",
+          "subject": "Blue City from Mehrangarh Fort",
+          "section": "Exploring the Blue City",
+          "source": "Wikimedia Commons",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jodhpur,_India,_Old_City_and_Mehrangarh_Fort.jpg",
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Jodhpur%2C_India%2C_Old_City_and_Mehrangarh_Fort.jpg",
+          "photographer": "Vyacheslav Argenberg",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+          "downloadDate": "2026-08-07",
+          "usageStatus": "LIVE_VIA_URL",
+          "creditRequired": true,
+          "caption": "The Blue City of Jodhpur from Mehrangarh Fort",
+          "imageDetail": "A sea of indigo-washed houses spreads below the citadel — the blue paint signified Brahmin residences and provided cooling and insect-repelling properties.",
+          "altText": "Blue City Jodhpur viewed from Mehrangarh Fort ramparts",
+          "articleInsertionPoint": "Exploring the Blue City section"
+        }
+      ]
+    },
+    "10-suryagarh-jaisalmer": {
+      "title": "Suryagarh: Rajasthan's Desert Fortress Reimagined as a Palace Hotel",
+      "totalImages": 7,
+      "images": [
+        {
+          "filename": "01-hero-fortress.webp",
+          "path": "/images/experiences/10-suryagarh-jaisalmer/01-hero-fortress.webp",
+          "subject": "Hero Fortress",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-courtyard.webp",
+          "path": "/images/experiences/10-suryagarh-jaisalmer/02-courtyard.webp",
+          "subject": "Courtyard",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-suryagarh-suite.webp",
+          "path": "/images/experiences/10-suryagarh-jaisalmer/03-suryagarh-suite.webp",
+          "subject": "Suryagarh Suite",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-camel-safari.webp",
+          "path": "/images/experiences/10-suryagarh-jaisalmer/04-camel-safari.webp",
+          "subject": "Camel Safari",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "05-dune-dinner.webp",
+          "path": "/images/experiences/10-suryagarh-jaisalmer/05-dune-dinner.webp",
+          "subject": "Dune Dinner",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "06-library-bar.webp",
+          "path": "/images/experiences/10-suryagarh-jaisalmer/06-library-bar.webp",
+          "subject": "Library Bar",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "07-kuldhara.webp",
+          "path": "/images/experiences/10-suryagarh-jaisalmer/07-kuldhara.webp",
+          "subject": "Kuldhara",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "11-devi-garh-udaipur": {
+      "title": "Devi Garh: The 18th-Century Fort Palace Reborn as a Design Icon",
+      "totalImages": 6,
+      "images": [
+        {
+          "filename": "01-dawn-exterior.webp",
+          "path": "/images/experiences/11-devi-garh-udaipur/01-dawn-exterior.webp",
+          "subject": "Dawn Exterior",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-suite.webp",
+          "path": "/images/experiences/11-devi-garh-udaipur/02-suite.webp",
+          "subject": "Suite",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-bathroom.webp",
+          "path": "/images/experiences/11-devi-garh-udaipur/03-bathroom.webp",
+          "subject": "Bathroom",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-pool-terrace.webp",
+          "path": "/images/experiences/11-devi-garh-udaipur/04-pool-terrace.webp",
+          "subject": "Pool Terrace",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "05-spa.webp",
+          "path": "/images/experiences/11-devi-garh-udaipur/05-spa.webp",
+          "subject": "Spa",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "06-delwara-village.webp",
+          "path": "/images/experiences/11-devi-garh-udaipur/06-delwara-village.webp",
+          "subject": "Delwara Village",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "12-mihir-garh-jodhpur": {
+      "title": "Mihir Garh: Nine Suites and an Infinity of Desert Silence",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-dawn-exterior.webp",
+          "path": "/images/experiences/12-mihir-garh-jodhpur/01-dawn-exterior.webp",
+          "subject": "Dawn Exterior",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-suite.webp",
+          "path": "/images/experiences/12-mihir-garh-jodhpur/02-suite.webp",
+          "subject": "Suite",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-infinity-pool.webp",
+          "path": "/images/experiences/12-mihir-garh-jodhpur/03-infinity-pool.webp",
+          "subject": "Infinity Pool",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-dune-dinner.webp",
+          "path": "/images/experiences/12-mihir-garh-jodhpur/04-dune-dinner.webp",
+          "subject": "Dune Dinner",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "13-rohet-garh-jodhpur": {
+      "title": "Rohet Garh: The Fortified Homestead Where Hospitality Is Hereditary",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-dusk-manor.webp",
+          "path": "/images/experiences/13-rohet-garh-jodhpur/01-dusk-manor.webp",
+          "subject": "Dusk Manor",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-courtyard.webp",
+          "path": "/images/experiences/13-rohet-garh-jodhpur/02-courtyard.webp",
+          "subject": "Courtyard",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-marwari-horse.webp",
+          "path": "/images/experiences/13-rohet-garh-jodhpur/03-marwari-horse.webp",
+          "subject": "Marwari Horse",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-dinner.webp",
+          "path": "/images/experiences/13-rohet-garh-jodhpur/04-dinner.webp",
+          "subject": "Dinner",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "14-ahilya-fort-maheshwar": {
+      "title": "Ahilya Fort: The Warrior Queen's Palace Above the Sacred Narmada",
+      "totalImages": 3,
+      "images": [
+        {
+          "filename": "02-courtyard.webp",
+          "path": "/images/experiences/14-ahilya-fort-maheshwar/02-courtyard.webp",
+          "subject": "Courtyard",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-narmada-sunset.webp",
+          "path": "/images/experiences/14-ahilya-fort-maheshwar/03-narmada-sunset.webp",
+          "subject": "Narmada Sunset",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-weaver.webp",
+          "path": "/images/experiences/14-ahilya-fort-maheshwar/04-weaver.webp",
+          "subject": "Weaver",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "15-falaknuma-palace-hyderabad": {
+      "title": "Falaknuma Palace: The Nizam's Palace in the Sky Above Hyderabad",
+      "totalImages": 7,
+      "images": [
+        {
+          "filename": "02-durbar-hall.webp",
+          "path": "/images/experiences/15-falaknuma-palace-hyderabad/02-durbar-hall.webp",
+          "subject": "Durbar Hall",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-dining-table.webp",
+          "path": "/images/experiences/15-falaknuma-palace-hyderabad/03-dining-table.webp",
+          "subject": "Dining Table",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-library.webp",
+          "path": "/images/experiences/15-falaknuma-palace-hyderabad/04-library.webp",
+          "subject": "Library",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "05-carriage.webp",
+          "path": "/images/experiences/15-falaknuma-palace-hyderabad/05-carriage.webp",
+          "subject": "Carriage",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "06-nizam-suite.webp",
+          "path": "/images/experiences/15-falaknuma-palace-hyderabad/06-nizam-suite.webp",
+          "subject": "Nizam Suite",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "07-adaa-restaurant.webp",
+          "path": "/images/experiences/15-falaknuma-palace-hyderabad/07-adaa-restaurant.webp",
+          "subject": "Adaa Restaurant",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "08-infinity-pool.webp",
+          "path": "/images/experiences/15-falaknuma-palace-hyderabad/08-infinity-pool.webp",
+          "subject": "Infinity Pool",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "16-lalgarh-palace-bikaner": {
+      "title": "Lalgarh Palace: Bikaner's Red Sandstone Dream in the Desert",
+      "totalImages": 5,
+      "images": [
+        {
+          "filename": "02-central-facade.webp",
+          "path": "/images/experiences/16-lalgarh-palace-bikaner/02-central-facade.webp",
+          "subject": "Central Facade",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-courtyard.webp",
+          "path": "/images/experiences/16-lalgarh-palace-bikaner/03-courtyard.webp",
+          "subject": "Courtyard",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-museum.webp",
+          "path": "/images/experiences/16-lalgarh-palace-bikaner/04-museum.webp",
+          "subject": "Museum",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "05-dining-room.webp",
+          "path": "/images/experiences/16-lalgarh-palace-bikaner/05-dining-room.webp",
+          "subject": "Dining Room",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "06-royal-suite.webp",
+          "path": "/images/experiences/16-lalgarh-palace-bikaner/06-royal-suite.webp",
+          "subject": "Royal Suite",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "17-gajner-palace-bikaner": {
+      "title": "Gajner Palace: The Maharaja's Lakeside Sanctuary in the Thar",
+      "totalImages": 3,
+      "images": [
+        {
+          "filename": "02-bar.webp",
+          "path": "/images/experiences/17-gajner-palace-bikaner/02-bar.webp",
+          "subject": "Bar",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-lake-view-suite.webp",
+          "path": "/images/experiences/17-gajner-palace-bikaner/03-lake-view-suite.webp",
+          "subject": "Lake View Suite",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-lake-dawn.webp",
+          "path": "/images/experiences/17-gajner-palace-bikaner/04-lake-dawn.webp",
+          "subject": "Lake Dawn",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "18-noor-us-sabah-palace-bhopal": {
+      "title": "Noor-Us-Sabah: The Palace Where Begums Ruled and Light Conquered Stone",
+      "totalImages": 3,
+      "images": [
+        {
+          "filename": "01-dawn-exterior.webp",
+          "path": "/images/experiences/18-noor-us-sabah-palace-bhopal/01-dawn-exterior.webp",
+          "subject": "Dawn Exterior",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-begum-suite.webp",
+          "path": "/images/experiences/18-noor-us-sabah-palace-bhopal/02-begum-suite.webp",
+          "subject": "Begum Suite",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-upper-lake-sunset.webp",
+          "path": "/images/experiences/18-noor-us-sabah-palace-bhopal/03-upper-lake-sunset.webp",
+          "subject": "Upper Lake Sunset",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "19-neemrana-fort-palace": {
+      "title": "Neemrana Fort Palace: The 15th-Century Fortress That Launched a Heritage Movement",
+      "totalImages": 3,
+      "images": [
+        {
+          "filename": "02-staircase.webp",
+          "path": "/images/experiences/19-neemrana-fort-palace/02-staircase.webp",
+          "subject": "Staircase",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-room.webp",
+          "path": "/images/experiences/19-neemrana-fort-palace/03-room.webp",
+          "subject": "Room",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-terrace-sunset.webp",
+          "path": "/images/experiences/19-neemrana-fort-palace/04-terrace-sunset.webp",
+          "subject": "Terrace Sunset",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "20-bhanwar-vilas-palace-karauli": {
+      "title": "Bhanwar Vilas Palace: The Forgotten Kingdom's Architectural Treasure",
+      "totalImages": 3,
+      "images": [
+        {
+          "filename": "01-palace-exterior.webp",
+          "path": "/images/experiences/20-bhanwar-vilas-palace-karauli/01-palace-exterior.webp",
+          "subject": "Palace Exterior",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-diwan-i-khas.webp",
+          "path": "/images/experiences/20-bhanwar-vilas-palace-karauli/02-diwan-i-khas.webp",
+          "subject": "Diwan I Khas",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-temple.webp",
+          "path": "/images/experiences/20-bhanwar-vilas-palace-karauli/03-temple.webp",
+          "subject": "Temple",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "21-kyoto-travel-guide": {
+      "title": "Kyoto: The Soul of Japan, Preserved in Wood and Stone",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-golden-pavilion.webp",
+          "path": "/images/experiences/21-kyoto/01-golden-pavilion.webp",
+          "subject": "Golden Pavilion",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-fushimi-inari-torii.webp",
+          "path": "/images/experiences/21-kyoto/02-fushimi-inari-torii.webp",
+          "subject": "Fushimi Inari Torii",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-maiko-gion.webp",
+          "path": "/images/experiences/21-kyoto/03-maiko-gion.webp",
+          "subject": "Maiko Gion",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-philosophers-path.webp",
+          "path": "/images/experiences/21-kyoto/04-philosophers-path.webp",
+          "subject": "Philosophers Path",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "22-osaka-travel-guide": {
+      "title": "Osaka: Kuidaore and the Art of Eating Until You Drop",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-dotonbori-night.webp",
+          "path": "/images/experiences/22-osaka/01-dotonbori-night.webp",
+          "subject": "Dotonbori Night",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-takoyaki-stall.webp",
+          "path": "/images/experiences/22-osaka/02-takoyaki-stall.webp",
+          "subject": "Takoyaki Stall",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-kuromon-market.webp",
+          "path": "/images/experiences/22-osaka/03-kuromon-market.webp",
+          "subject": "Kuromon Market",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-shinsekai-dusk.webp",
+          "path": "/images/experiences/22-osaka/04-shinsekai-dusk.webp",
+          "subject": "Shinsekai Dusk",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "23-tokyo-travel-guide": {
+      "title": "Tokyo: The City That Contains All Others",
+      "totalImages": 3,
+      "images": [
+        {
+          "filename": "01-shibuya-scramble.webp",
+          "path": "/images/experiences/23-tokyo/01-shibuya-scramble.webp",
+          "subject": "Shibuya Scramble",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-hachiko-statue.webp",
+          "path": "/images/experiences/23-tokyo/02-hachiko-statue.webp",
+          "subject": "Hachiko Statue",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-aman-tokyo-lobby.webp",
+          "path": "/images/experiences/23-tokyo/03-aman-tokyo-lobby.webp",
+          "subject": "Aman Tokyo Lobby",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "24-busan-travel-guide": {
+      "title": "Busan: The Coastal Kingdom Where Temples Cling to Cliffs and the Sea Provides Everything",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-haedong-yonggungsa.webp",
+          "path": "/images/experiences/24-busan/01-haedong-yonggungsa.webp",
+          "subject": "Haedong Yonggungsa",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-goddess-of-mercy.webp",
+          "path": "/images/experiences/24-busan/02-goddess-of-mercy.webp",
+          "subject": "Goddess Of Mercy",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-jagalchi-market.webp",
+          "path": "/images/experiences/24-busan/03-jagalchi-market.webp",
+          "subject": "Jagalchi Market",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-gamcheon-village.webp",
+          "path": "/images/experiences/24-busan/04-gamcheon-village.webp",
+          "subject": "Gamcheon Village",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "25-seoul-travel-guide": {
+      "title": "Seoul: The Dynasty of Tomorrow Rising From the Dynasty of Yesterday",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-gyeongbokgung-palace.webp",
+          "path": "/images/experiences/25-seoul/01-gyeongbokgung-palace.webp",
+          "subject": "Gyeongbokgung Palace",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-geunjeongjeon-hall.webp",
+          "path": "/images/experiences/25-seoul/02-geunjeongjeon-hall.webp",
+          "subject": "Geunjeongjeon Hall",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-buyongji-pond.webp",
+          "path": "/images/experiences/25-seoul/03-buyongji-pond.webp",
+          "subject": "Buyongji Pond",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-korean-barbecue.webp",
+          "path": "/images/experiences/25-seoul/04-korean-barbecue.webp",
+          "subject": "Korean Barbecue",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "26-hanoi-travel-guide": {
+      "title": "Hanoi: The City Where a Thousand Years Feel Like Yesterday Morning",
+      "totalImages": 5,
+      "images": [
+        {
+          "filename": "01-hoan-kiem-lake-dawn.webp",
+          "path": "/images/experiences/26-hanoi/01-hoan-kiem-lake-dawn.webp",
+          "subject": "Hoan Kiem Lake Dawn",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-old-quarter-dusk.webp",
+          "path": "/images/experiences/26-hanoi/02-old-quarter-dusk.webp",
+          "subject": "Old Quarter Dusk",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-pho-bo-hanoi.webp",
+          "path": "/images/experiences/26-hanoi/03-pho-bo-hanoi.webp",
+          "subject": "Pho Bo Hanoi",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-temple-of-literature.webp",
+          "path": "/images/experiences/26-hanoi/04-temple-of-literature.webp",
+          "subject": "Temple Of Literature",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "05-egg-coffee-giang.webp",
+          "path": "/images/experiences/26-hanoi/05-egg-coffee-giang.webp",
+          "subject": "Egg Coffee Giang",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "27-ho-chi-minh-city-travel-guide": {
+      "title": "Ho Chi Minh City: The Pearl That Refuses to Stop Shining",
+      "totalImages": 5,
+      "images": [
+        {
+          "filename": "01-saigon-river-dusk.webp",
+          "path": "/images/experiences/27-ho-chi-minh-city/01-saigon-river-dusk.webp",
+          "subject": "Saigon River Dusk",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-central-post-office.webp",
+          "path": "/images/experiences/27-ho-chi-minh-city/02-central-post-office.webp",
+          "subject": "Central Post Office",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-war-remnants-museum.webp",
+          "path": "/images/experiences/27-ho-chi-minh-city/03-war-remnants-museum.webp",
+          "subject": "War Remnants Museum",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-ben-thanh-market.webp",
+          "path": "/images/experiences/27-ho-chi-minh-city/04-ben-thanh-market.webp",
+          "subject": "Ben Thanh Market",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "05-bitexco-skyline.webp",
+          "path": "/images/experiences/27-ho-chi-minh-city/05-bitexco-skyline.webp",
+          "subject": "Bitexco Skyline",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "28-hoi-an-travel-guide": {
+      "title": "Hoi An: The Lantern-Lit Kingdom Where Time Lost Its Way",
+      "totalImages": 5,
+      "images": [
+        {
+          "filename": "01-ancient-town-dusk.webp",
+          "path": "/images/experiences/28-hoi-an/01-ancient-town-dusk.webp",
+          "subject": "Ancient Town Dusk",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-japanese-covered-bridge.webp",
+          "path": "/images/experiences/28-hoi-an/02-japanese-covered-bridge.webp",
+          "subject": "Japanese Covered Bridge",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-lantern-festival.webp",
+          "path": "/images/experiences/28-hoi-an/03-lantern-festival.webp",
+          "subject": "Lantern Festival",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-tailor-shop.webp",
+          "path": "/images/experiences/28-hoi-an/04-tailor-shop.webp",
+          "subject": "Tailor Shop",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "05-cao-lau-noodles.webp",
+          "path": "/images/experiences/28-hoi-an/05-cao-lau-noodles.webp",
+          "subject": "Cao Lau Noodles",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "29-london-travel-guide": {
+      "title": "London: The City That Contains the World and Still Makes Time for Tea",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-palace-of-westminster.webp",
+          "path": "/images/experiences/29-london/01-palace-of-westminster.webp",
+          "subject": "Palace Of Westminster",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-claridges-lobby.webp",
+          "path": "/images/experiences/29-london/02-claridges-lobby.webp",
+          "subject": "Claridges Lobby",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-st-james-park.webp",
+          "path": "/images/experiences/29-london/03-st-james-park.webp",
+          "subject": "St James Park",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-british-museum-great-court.webp",
+          "path": "/images/experiences/29-london/04-british-museum-great-court.webp",
+          "subject": "British Museum Great Court",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "30-paris-travel-guide": {
+      "title": "Paris: The City of Light, Considered Slowly and with Excellent Pastries",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-eiffel-tower-trocadero.webp",
+          "path": "/images/experiences/30-paris/01-eiffel-tower-trocadero.webp",
+          "subject": "Eiffel Tower Trocadero",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-le-bristol-courtyard.webp",
+          "path": "/images/experiences/30-paris/02-le-bristol-courtyard.webp",
+          "subject": "Le Bristol Courtyard",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-place-des-vosges.webp",
+          "path": "/images/experiences/30-paris/03-place-des-vosges.webp",
+          "subject": "Place Des Vosges",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-seine-pont-alexandre.webp",
+          "path": "/images/experiences/30-paris/04-seine-pont-alexandre.webp",
+          "subject": "Seine Pont Alexandre",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "31-edinburgh-travel-guide": {
+      "title": "Edinburgh: The City Where History Is Set in Stone and Lit by Festival",
+      "totalImages": 2,
+      "images": [
+        {
+          "filename": "01-edinburgh-castle-blue-hour.webp",
+          "path": "/images/experiences/31-edinburgh/01-edinburgh-castle-blue-hour.webp",
+          "subject": "Edinburgh Castle Blue Hour",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-old-town-close-twilight.webp",
+          "path": "/images/experiences/31-edinburgh/02-old-town-close-twilight.webp",
+          "subject": "Old Town Close Twilight",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "32-scottish-highlands-travel-guide": {
+      "title": "The Scottish Highlands: A Landscape So Old It Makes History Feel Young",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-glen-coe-dawn.webp",
+          "path": "/images/experiences/32-scottish-highlands/01-glen-coe-dawn.webp",
+          "subject": "Glen Coe Dawn",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-river-coe-peaty-water.webp",
+          "path": "/images/experiences/32-scottish-highlands/02-river-coe-peaty-water.webp",
+          "subject": "River Coe Peaty Water",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-copper-pot-still-speyside.webp",
+          "path": "/images/experiences/32-scottish-highlands/03-copper-pot-still-speyside.webp",
+          "subject": "Copper Pot Still Speyside",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-jacobite-steam-train-glenfinnan.webp",
+          "path": "/images/experiences/32-scottish-highlands/04-jacobite-steam-train-glenfinnan.webp",
+          "subject": "Jacobite Steam Train Glenfinnan",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "33-barcelona-travel-guide": {
+      "title": "Barcelona: The City Where Gaudí Taught Stone to Dance",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-sagrada-familia-city-view.webp",
+          "path": "/images/experiences/33-barcelona/01-sagrada-familia-city-view.webp",
+          "subject": "Sagrada Familia City View",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-sagrada-familia-interior-columns.webp",
+          "path": "/images/experiences/33-barcelona/02-sagrada-familia-interior-columns.webp",
+          "subject": "Sagrada Familia Interior Columns",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-casa-mila-rooftop-warriors.webp",
+          "path": "/images/experiences/33-barcelona/03-casa-mila-rooftop-warriors.webp",
+          "subject": "Casa Mila Rooftop Warriors",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-placa-reial-night.webp",
+          "path": "/images/experiences/33-barcelona/04-placa-reial-night.webp",
+          "subject": "Placa Reial Night",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "34-lisbon-travel-guide": {
+      "title": "Lisbon: The City Where the Sun Sets in Pink and the Pastéis Never Stop",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-miradouro-senhora-do-monte.webp",
+          "path": "/images/experiences/34-lisbon/01-miradouro-senhora-do-monte.webp",
+          "subject": "Miradouro Senhora Do Monte",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-jeronimos-monastery-cloister.webp",
+          "path": "/images/experiences/34-lisbon/02-jeronimos-monastery-cloister.webp",
+          "subject": "Jeronimos Monastery Cloister",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-alfama-dusk-tangle.webp",
+          "path": "/images/experiences/34-lisbon/03-alfama-dusk-tangle.webp",
+          "subject": "Alfama Dusk Tangle",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-pena-palace-dawn-mist.webp",
+          "path": "/images/experiences/34-lisbon/04-pena-palace-dawn-mist.webp",
+          "subject": "Pena Palace Dawn Mist",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "35-french-riviera-travel-guide": {
+      "title": "The French Riviera: Where the Light Is the Real Luxury",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-cannes-bay-golden-hour.webp",
+          "path": "/images/experiences/35-french-riviera/01-cannes-bay-golden-hour.webp",
+          "subject": "Cannes Bay Golden Hour",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-negresco-twilight.webp",
+          "path": "/images/experiences/35-french-riviera/02-negresco-twilight.webp",
+          "subject": "Negresco Twilight",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-musee-matisse-villa.webp",
+          "path": "/images/experiences/35-french-riviera/03-musee-matisse-villa.webp",
+          "subject": "Musee Matisse Villa",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-hotel-du-cap-pool.webp",
+          "path": "/images/experiences/35-french-riviera/04-hotel-du-cap-pool.webp",
+          "subject": "Hotel Du Cap Pool",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "36-lake-como-travel-guide": {
+      "title": "Lake Como: The Lake Where Aristocrats Left Their Hearts",
+      "totalImages": 7,
+      "images": [
+        {
+          "filename": "01-lake-como-bellagio-aerial.webp",
+          "path": "/images/experiences/36-lake-como/01-lake-como-bellagio-aerial.webp",
+          "subject": "Lake Como Bellagio Aerial",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-villa-del-balbianello-loggia.webp",
+          "path": "/images/experiences/36-lake-como/02-villa-del-balbianello-loggia.webp",
+          "subject": "Villa Del Balbianello Loggia",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-bellagio-stepped-alleyways.webp",
+          "path": "/images/experiences/36-lake-como/03-bellagio-stepped-alleyways.webp",
+          "subject": "Bellagio Stepped Alleyways",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-varenna-pastel-waterfront.webp",
+          "path": "/images/experiences/36-lake-como/04-varenna-pastel-waterfront.webp",
+          "subject": "Varenna Pastel Waterfront",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "05-como-silk-bolts.webp",
+          "path": "/images/experiences/36-lake-como/05-como-silk-bolts.webp",
+          "subject": "Como Silk Bolts",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "06-riva-aquarama-lake.webp",
+          "path": "/images/experiences/36-lake-como/06-riva-aquarama-lake.webp",
+          "subject": "Riva Aquarama Lake",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "07-grand-hotel-tremezzo-pool.webp",
+          "path": "/images/experiences/36-lake-como/07-grand-hotel-tremezzo-pool.webp",
+          "subject": "Grand Hotel Tremezzo Pool",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "37-tuscany-travel-guide": {
+      "title": "Tuscany: The Landscape That Invented the Good Life",
+      "totalImages": 5,
+      "images": [
+        {
+          "filename": "01-val-dorcia-dawn.webp",
+          "path": "/images/experiences/37-tuscany/01-val-dorcia-dawn.webp",
+          "subject": "Val Dorcia Dawn",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-duomo-florence-sunrise.webp",
+          "path": "/images/experiences/37-tuscany/02-duomo-florence-sunrise.webp",
+          "subject": "Duomo Florence Sunrise",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-piazza-del-campo-sunset.webp",
+          "path": "/images/experiences/37-tuscany/03-piazza-del-campo-sunset.webp",
+          "subject": "Piazza Del Campo Sunset",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-chianti-hills-harvest.webp",
+          "path": "/images/experiences/37-tuscany/04-chianti-hills-harvest.webp",
+          "subject": "Chianti Hills Harvest",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "05-cypress-road-pienza.webp",
+          "path": "/images/experiences/37-tuscany/05-cypress-road-pienza.webp",
+          "subject": "Cypress Road Pienza",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "38-amalfi-coast-travel-guide": {
+      "title": "The Amalfi Coast: Italy's Most Seductive Shoreline",
+      "totalImages": 8,
+      "images": [
+        {
+          "filename": "01-positano-pastel-cascade.webp",
+          "path": "/images/experiences/38-amalfi-coast/01-positano-pastel-cascade.webp",
+          "subject": "Positano Pastel Cascade",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-cliffside-trattoria-seafood.webp",
+          "path": "/images/experiences/38-amalfi-coast/02-cliffside-trattoria-seafood.webp",
+          "subject": "Cliffside Trattoria Seafood",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-villa-cimbrone-terrace-infinity.webp",
+          "path": "/images/experiences/38-amalfi-coast/03-villa-cimbrone-terrace-infinity.webp",
+          "subject": "Villa Cimbrone Terrace Infinity",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-duomo-sant-andrea-amalfi.webp",
+          "path": "/images/experiences/38-amalfi-coast/04-duomo-sant-andrea-amalfi.webp",
+          "subject": "Duomo Sant Andrea Amalfi",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "05-praiano-sunset.webp",
+          "path": "/images/experiences/38-amalfi-coast/05-praiano-sunset.webp",
+          "subject": "Praiano Sunset",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "06-path-of-the-gods-hikers.webp",
+          "path": "/images/experiences/38-amalfi-coast/06-path-of-the-gods-hikers.webp",
+          "subject": "Path Of The Gods Hikers",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "07-sfusato-amalfitano-lemons.webp",
+          "path": "/images/experiences/38-amalfi-coast/07-sfusato-amalfitano-lemons.webp",
+          "subject": "Sfusato Amalfitano Lemons",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "08-sorrento-bay-of-naples-vesuvius.webp",
+          "path": "/images/experiences/38-amalfi-coast/08-sorrento-bay-of-naples-vesuvius.webp",
+          "subject": "Sorrento Bay Of Naples Vesuvius",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "39-interlaken-travel-guide": {
+      "title": "Interlaken: Between Two Lakes, Beneath the Eternal Snows",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-jungfrau-massif-dawn.webp",
+          "path": "/images/experiences/39-interlaken/01-jungfrau-massif-dawn.webp",
+          "subject": "Jungfrau Massif Dawn",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-sphinx-terrace-jungfraujoch.webp",
+          "path": "/images/experiences/39-interlaken/02-sphinx-terrace-jungfraujoch.webp",
+          "subject": "Sphinx Terrace Jungfraujoch",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-lake-brienz-paddle-steamer.webp",
+          "path": "/images/experiences/39-interlaken/03-lake-brienz-paddle-steamer.webp",
+          "subject": "Lake Brienz Paddle Steamer",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-paragliders-over-interlaken.webp",
+          "path": "/images/experiences/39-interlaken/04-paragliders-over-interlaken.webp",
+          "subject": "Paragliders Over Interlaken",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "40-lucerne-travel-guide": {
+      "title": "Lucerne: The Medieval Bridge, the Alpine Lake, and the Mountain That Wagner Loved",
+      "totalImages": 2,
+      "images": [
+        {
+          "filename": "01-kapellbrucke-water-tower-twilight.webp",
+          "path": "/images/experiences/40-lucerne/01-kapellbrucke-water-tower-twilight.webp",
+          "subject": "Kapellbrucke Water Tower Twilight",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-belle-epoque-lake-steamer.webp",
+          "path": "/images/experiences/40-lucerne/03-belle-epoque-lake-steamer.webp",
+          "subject": "Belle Epoque Lake Steamer",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "41-istanbul-travel-guide": {
+      "title": "Istanbul: The Only City on Two Continents, and the Only City That Feels Like It",
+      "totalImages": 11,
+      "images": [
+        {
+          "filename": "01-bosphorus-twilight.webp",
+          "path": "/images/experiences/41-istanbul/01-bosphorus-twilight.webp",
+          "subject": "Bosphorus Twilight",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-hagia-sophia-interior.webp",
+          "path": "/images/experiences/41-istanbul/02-hagia-sophia-interior.webp",
+          "subject": "Hagia Sophia Interior",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-blue-mosque-sunrise.webp",
+          "path": "/images/experiences/41-istanbul/03-blue-mosque-sunrise.webp",
+          "subject": "Blue Mosque Sunrise",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-topkapi-palace-view.webp",
+          "path": "/images/experiences/41-istanbul/04-topkapi-palace-view.webp",
+          "subject": "Topkapi Palace View",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "05-grand-bazaar-interior.webp",
+          "path": "/images/experiences/41-istanbul/05-grand-bazaar-interior.webp",
+          "subject": "Grand Bazaar Interior",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "07-basilica-cistern.webp",
+          "path": "/images/experiences/41-istanbul/07-basilica-cistern.webp",
+          "subject": "Basilica Cistern",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "08-suleymaniye-mosque-interior.webp",
+          "path": "/images/experiences/41-istanbul/08-suleymaniye-mosque-interior.webp",
+          "subject": "Suleymaniye Mosque Interior",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "09-istiklal-caddesi.webp",
+          "path": "/images/experiences/41-istanbul/09-istiklal-caddesi.webp",
+          "subject": "Istiklal Caddesi",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "10-arnavutkoy-dinner.webp",
+          "path": "/images/experiences/41-istanbul/10-arnavutkoy-dinner.webp",
+          "subject": "Arnavutkoy Dinner",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "11-turkish-breakfast.webp",
+          "path": "/images/experiences/41-istanbul/11-turkish-breakfast.webp",
+          "subject": "Turkish Breakfast",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "12-hamam-interior.webp",
+          "path": "/images/experiences/41-istanbul/12-hamam-interior.webp",
+          "subject": "Hamam Interior",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "42-dubai-travel-guide": {
+      "title": "Dubai: The City That Looked at the Desert and Saw a Metropolis",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-dubai-marina-blue-hour.webp",
+          "path": "/images/experiences/42-dubai/01-dubai-marina-blue-hour.webp",
+          "subject": "Dubai Marina Blue Hour",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-burj-khalifa-sunset.webp",
+          "path": "/images/experiences/42-dubai/02-burj-khalifa-sunset.webp",
+          "subject": "Burj Khalifa Sunset",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-atlantis-the-royal.webp",
+          "path": "/images/experiences/42-dubai/03-atlantis-the-royal.webp",
+          "subject": "Atlantis The Royal",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-dubai-creek-sunset.webp",
+          "path": "/images/experiences/42-dubai/04-dubai-creek-sunset.webp",
+          "subject": "Dubai Creek Sunset",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "43-cairo-nile-travel-guide": {
+      "title": "Cairo & The Nile: Where Five Thousand Years Are Just the Beginning",
+      "totalImages": 3,
+      "images": [
+        {
+          "filename": "01-great-pyramid-dawn.webp",
+          "path": "/images/experiences/43-cairo-nile/01-great-pyramid-dawn.webp",
+          "subject": "Great Pyramid Dawn",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-tutankhamun-mask.webp",
+          "path": "/images/experiences/43-cairo-nile/02-tutankhamun-mask.webp",
+          "subject": "Tutankhamun Mask",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-citadel-saladin.webp",
+          "path": "/images/experiences/43-cairo-nile/03-citadel-saladin.webp",
+          "subject": "Citadel Saladin",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "44-muscat-travel-guide": {
+      "title": "Muscat: The Arabian Capital That Chose Elegance Over Excess",
+      "totalImages": 3,
+      "images": [
+        {
+          "filename": "01-mutrah-corniche-sunset.webp",
+          "path": "/images/experiences/44-muscat/01-mutrah-corniche-sunset.webp",
+          "subject": "Mutrah Corniche Sunset",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-sultan-qaboos-mosque.webp",
+          "path": "/images/experiences/44-muscat/02-sultan-qaboos-mosque.webp",
+          "subject": "Sultan Qaboos Mosque",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-mutrah-souk.webp",
+          "path": "/images/experiences/44-muscat/03-mutrah-souk.webp",
+          "subject": "Mutrah Souk",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "45-marrakech-travel-guide": {
+      "title": "Marrakech: The Ochre City Where Every Courtyard Hides a Paradise",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-jemaa-el-fnaa-dusk.webp",
+          "path": "/images/experiences/45-marrakech/01-jemaa-el-fnaa-dusk.webp",
+          "subject": "Jemaa El Fnaa Dusk",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-riad-courtyard.webp",
+          "path": "/images/experiences/45-marrakech/02-riad-courtyard.webp",
+          "subject": "Riad Courtyard",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-ben-youssef-madrasa.webp",
+          "path": "/images/experiences/45-marrakech/03-ben-youssef-madrasa.webp",
+          "subject": "Ben Youssef Madrasa",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-majorelle-garden.webp",
+          "path": "/images/experiences/45-marrakech/04-majorelle-garden.webp",
+          "subject": "Majorelle Garden",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "46-cape-town-travel-guide": {
+      "title": "Cape Town: The Most Beautiful City on Earth, and It Knows It",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-table-mountain-dawn.webp",
+          "path": "/images/experiences/46-cape-town/01-table-mountain-dawn.webp",
+          "subject": "Table Mountain Dawn",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-table-mountain-summit.webp",
+          "path": "/images/experiences/46-cape-town/02-table-mountain-summit.webp",
+          "subject": "Table Mountain Summit",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-chapmans-peak-drive.webp",
+          "path": "/images/experiences/46-cape-town/03-chapmans-peak-drive.webp",
+          "subject": "Chapmans Peak Drive",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-stellenbosch-vineyards.webp",
+          "path": "/images/experiences/46-cape-town/04-stellenbosch-vineyards.webp",
+          "subject": "Stellenbosch Vineyards",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "47-sydney-travel-guide": {
+      "title": "Sydney: The City Where the Harbour Is the Star and Everything Else Is the Supporting Cast",
+      "totalImages": 9,
+      "images": [
+        {
+          "filename": "01-sydney-opera-house-dawn.webp",
+          "path": "/images/experiences/47-sydney/01-sydney-opera-house-dawn.webp",
+          "subject": "Sydney Opera House Dawn",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-opera-house-concert-hall.webp",
+          "path": "/images/experiences/47-sydney/02-opera-house-concert-hall.webp",
+          "subject": "Opera House Concert Hall",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-bridge-climb-sunrise.webp",
+          "path": "/images/experiences/47-sydney/03-bridge-climb-sunrise.webp",
+          "subject": "Bridge Climb Sunrise",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "05-bondi-icebergs-pool.webp",
+          "path": "/images/experiences/47-sydney/05-bondi-icebergs-pool.webp",
+          "subject": "Bondi Icebergs Pool",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "06-rocks-laneways-dusk.webp",
+          "path": "/images/experiences/47-sydney/06-rocks-laneways-dusk.webp",
+          "subject": "Rocks Laneways Dusk",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "07-manly-ferry.webp",
+          "path": "/images/experiences/47-sydney/07-manly-ferry.webp",
+          "subject": "Manly Ferry",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "08-barrenjoey-lighthouse.webp",
+          "path": "/images/experiences/47-sydney/08-barrenjoey-lighthouse.webp",
+          "subject": "Barrenjoey Lighthouse",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "09-taronga-zoo-giraffes.webp",
+          "path": "/images/experiences/47-sydney/09-taronga-zoo-giraffes.webp",
+          "subject": "Taronga Zoo Giraffes",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "10-three-sisters-katoomba.webp",
+          "path": "/images/experiences/47-sydney/10-three-sisters-katoomba.webp",
+          "subject": "Three Sisters Katoomba",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "48-queenstown-travel-guide": {
+      "title": "Queenstown: Where the Mountains Touch the Lake and Adrenaline Meets Pinot Noir",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-lake-wakatipu-dawn.webp",
+          "path": "/images/experiences/48-queenstown/01-lake-wakatipu-dawn.webp",
+          "subject": "Lake Wakatipu Dawn",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-kawarau-bridge-bungee.webp",
+          "path": "/images/experiences/48-queenstown/02-kawarau-bridge-bungee.webp",
+          "subject": "Kawarau Bridge Bungee",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-milford-sound-helicopter.webp",
+          "path": "/images/experiences/48-queenstown/03-milford-sound-helicopter.webp",
+          "subject": "Milford Sound Helicopter",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-rippon-vineyard-sunset.webp",
+          "path": "/images/experiences/48-queenstown/04-rippon-vineyard-sunset.webp",
+          "subject": "Rippon Vineyard Sunset",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "49-banff-rockies-travel-guide": {
+      "title": "Banff and the Canadian Rockies: The Landscape That Makes You Believe in God",
+      "totalImages": 4,
+      "images": [
+        {
+          "filename": "01-banff-avenue-blue-hour.webp",
+          "path": "/images/experiences/49-banff-rockies/01-banff-avenue-blue-hour.webp",
+          "subject": "Banff Avenue Blue Hour",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-moraine-lake-sunrise.webp",
+          "path": "/images/experiences/49-banff-rockies/02-moraine-lake-sunrise.webp",
+          "subject": "Moraine Lake Sunrise",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-icefields-parkway-bow-lake.webp",
+          "path": "/images/experiences/49-banff-rockies/03-icefields-parkway-bow-lake.webp",
+          "subject": "Icefields Parkway Bow Lake",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "04-fairmont-banff-springs.webp",
+          "path": "/images/experiences/49-banff-rockies/04-fairmont-banff-springs.webp",
+          "subject": "Fairmont Banff Springs",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    },
+    "50-mexico-city-travel-guide": {
+      "title": "Mexico City: The Metropolis Built on the Bones of an Empire",
+      "totalImages": 3,
+      "images": [
+        {
+          "filename": "01-palacio-bellas-artes.webp",
+          "path": "/images/experiences/50-mexico-city/01-palacio-bellas-artes.webp",
+          "subject": "Palacio Bellas Artes",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "02-templo-mayor.webp",
+          "path": "/images/experiences/50-mexico-city/02-templo-mayor.webp",
+          "subject": "Templo Mayor",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        },
+        {
+          "filename": "03-antropologia-patio-central.webp",
+          "path": "/images/experiences/50-mexico-city/03-antropologia-patio-central.webp",
+          "subject": "Antropologia Patio Central",
+          "source": "PENDING_SOURCE",
+          "usageStatus": "PENDING_DOWNLOAD",
+          "creditRequired": true
+        }
+      ]
+    }
+  }
+}

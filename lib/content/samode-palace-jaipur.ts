@@ -1,7 +1,7 @@
 export const articleContent = `
 Samode Palace is not on the standard Rajasthan circuit, and that is precisely the point. Forty-two kilometres north of Jaipur, tucked into a fold of the Aravalli Hills, it occupies a geographical and cultural sweet spot: distant enough from the Pink City to feel like a genuine retreat, close enough to be reached in under an hour by car. The drive itself is a decompression — the highway gives way to a single-lane road, the road gives way to a village track, and suddenly you are climbing through the pass that opens onto the Samode valley, where the palace rises from the hillside like something from a miniature painting, all golden stone, domed chhatris, and cascading bougainvillea.
 
-[[PHOTO:wide|Samode Palace at golden hour — the honey-coloured facade glowing against the rugged Aravalli Hills, bougainvillea in magenta and orange cascading over ancient stone balconies, the infinity pool a rectangle of turquoise against the desert landscape]]
+[[PHOTO:wide|https://upload.wikimedia.org/wikipedia/commons/5/53/Samode_Palace_Jaipur.jpg|Samode Palace at golden hour — the honey-coloured facade glowing against the rugged Aravalli Hills, bougainvillea in magenta and orange cascading over ancient stone balconies, the infinity pool a rectangle of turquoise against the desert landscape|Built in the sixteenth century and expanded over 475 years by the Rawals of Samode, the palace occupies a geographical sweet spot 42 kilometres north of Jaipur — distant enough for genuine retreat, close enough to be reached in under an hour|Pcrtravel, CC BY-SA 4.0]]
 
 Built in the sixteenth century by the Rawals of Samode, a noble family of the Amber kingdom, the palace has been expanded and embellished over 475 years. But its defining feature — the extraordinary painted interiors — reached their peak in the nineteenth century, when the Diwan-i-Khas (Hall of Private Audience) was decorated with floor-to-ceiling frescoes of breathtaking intricacy. The artists, working with vegetable and mineral pigments, covered every surface — walls, ceilings, arches, pillars — with scenes from Hindu mythology, floral arabesques, and geometric patterns that anticipate the fractal geometries of contemporary mathematics. The colours, softened by a century and a half of gentle Rajasthani sunlight, have aged into a palette that no decorator could replicate: dusty rose, faded indigo, ochre, sage, the pale green of oxidized copper.
 
@@ -11,7 +11,7 @@ The Diwan-i-Khas is Samode Palace's masterpiece. It is not large — perhaps for
 
 The hall was designed for private audiences — the Rawal's meetings with his ministers, visiting nobles, and the occasional British political agent. Today it serves as the palace's lounge, and taking afternoon tea here, surrounded by 150-year-old frescoes, is one of Rajasthan's most transporting experiences. The frescoes depict scenes from the life of Krishna — his childhood in Vrindavan, his dance with the gopis, his triumph over the serpent Kaliya — but they also include secular subjects: hunting scenes, court processions, floral patterns that seem to have been painted for the sheer joy of colour and form. The artists' names are lost, but their work survives, and it is, without exaggeration, among the finest fresco painting in Rajasthan.
 
-[[PHOTO:portrait|The Diwan-i-Khas at Samode Palace — walls, ceiling, and arches covered in nineteenth-century frescoes depicting Krishna's life, floral arabesques, and geometric patterns, their vegetable-dye colours softened by a century of gentle sunlight]]
+[[PHOTO:portrait|/images/experiences/07-samode-palace-jaipur/02-diwan-i-khas.webp|The Diwan-i-Khas at Samode Palace — walls, ceiling, and arches covered in nineteenth-century frescoes depicting Krishna's life, floral arabesques, and geometric patterns, their vegetable-dye colours softened by a century of gentle sunlight|The artists, working with pigments of ground lapis lazuli, terra verte, and iron oxide, covered every surface — the colours have aged into a palette no decorator could replicate: dusty rose, faded indigo, ochre, sage, the pale green of oxidized copper]]
 
 [[QUOTE:Samode is not a palace you visit. It is a palace you inhabit — and the longer you stay, the more it reveals.|The Royal Gallery Editorial]]
 
@@ -23,7 +23,7 @@ The Maharaja Suite is the property's finest accommodation: a vast chamber with a
 
 The interiors are furnished with antiques from the family's collection: brass-bound chests, carved wooden screens, miniature paintings, hand-knotted carpets. The bathrooms have been modernised — rainfall showers, deep tubs, good water pressure — but the plumbing is discreetly integrated, and the sense of inhabiting a historic space is never compromised.
 
-[[PHOTO:landscape|The Maharaja Suite at Samode Palace — a canopied four-poster bed, frescoed ceilings, antique furniture gathered over generations, French windows opening onto a private terrace with views of the Aravalli Hills]]
+[[PHOTO:landscape|/images/experiences/07-samode-palace-jaipur/03-maharaja-suite.webp|The Maharaja Suite at Samode Palace — a canopied four-poster bed, frescoed ceilings, antique furniture gathered over generations, French windows opening onto a private terrace with views of the Aravalli Hills|The suite's bathroom was once the palace hammam, and the antique furniture is drawn from the Rawal family's collection — brass-bound chests, carved wooden screens, miniature paintings passed down through five centuries]]
 
 ## The Courtyards: Architecture of Leisure
 
@@ -39,7 +39,7 @@ The thali experience at Samode is one of Rajasthan's finest. Served on a silver 
 
 For a special evening, the palace can arrange a private dinner in the Diwan-i-Khas. The room, with its frescoes and chandeliers, becomes your private dining room for the night, and the experience — a candlelit meal in a 475-year-old frescoed chamber — is about as romantic as hotel dinners get.
 
-[[PHOTO:landscape|Dinner in the Samode Palace courtyard — candlelit tables beneath a retractable roof open to the stars, silver thalis laden with a dozen Rajasthani dishes, the arcades of the former zenana glowing with lantern light]]
+[[PHOTO:landscape|/images/experiences/07-samode-palace-jaipur/04-courtyard-dinner.webp|Dinner in the Samode Palace courtyard — candlelit tables beneath a retractable roof open to the stars, silver thalis laden with a dozen Rajasthani dishes, the arcades of the former zenana glowing with lantern light|The restaurant occupies the former zenana courtyard, now covered with a retractable roof — the thali changes daily based on what is fresh, the breads arriving hot from the tandoor in a sequence designed to prevent you from ever eating a cold mouthful]]
 
 ## The Samode Village and Beyond
 
@@ -69,7 +69,7 @@ What is the dress code? Relaxed during the day. In the evening, guests tend towa
 
 Can the palace arrange excursions? Yes — Jaipur day trips, village walks, guided hikes, and visits to the nearby temples of the Aravalli Hills can all be arranged through the front desk. The palace also maintains a stable of Marwari horses, and riding excursions are available for experienced riders.
 
-[[PHOTO:full-width|Samode Palace from the valley below at dusk — the golden stone edifice glowing against the dark outline of the Aravalli Hills, its domed chhatris catching the last light, the village of Samode a cluster of painted houses at its feet, the entire scene a Rajput miniature painting rendered in three dimensions]]
+[[PHOTO:full-width|/images/experiences/07-samode-palace-jaipur/05-palace-dusk-valley.webp|Samode Palace from the valley below at dusk — the golden stone edifice glowing against the dark outline of the Aravalli Hills, its domed chhatris catching the last light, the village of Samode a cluster of painted houses at its feet, the entire scene a Rajput miniature painting rendered in three dimensions|The approach through the Samode valley — the highway giving way to a single-lane road, then a village track, then the pass that opens onto one of Rajasthan's most beautiful vistas — is itself worth the journey from Jaipur]]
 `;
 
 export const articleSections = [];

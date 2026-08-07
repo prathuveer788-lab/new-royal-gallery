@@ -1,7 +1,7 @@
 export const articleContent = `
 Bhanwar Vilas Palace belongs to a Rajasthan that the tourist maps have largely forgotten. The ancient kingdom of Karauli, in the state's eastern reaches, receives a fraction of the visitors who flood Jaipur, Udaipur, and Jodhpur — and that, of course, is precisely the attraction. Here, in a quiet town of temples and havelis that feels as though it has been dozing peacefully for half a century, the ancestral seat of the Jadon Rajputs — a dynasty that traces its lineage to the god Krishna — offers one of Rajasthan's most unspoiled heritage experiences.
 
-[[PHOTO:wide|Bhanwar Vilas Palace — the stately colonial-era facade with its grand portico, manicured gardens spreading before it, the ancient town of Karauli a quiet presence beyond the walls]]
+[[PHOTO:wide|/images/experiences/20-bhanwar-vilas-palace-karauli/01-palace-exterior.webp|Bhanwar Vilas Palace — the stately colonial-era facade with its grand portico, manicured gardens spreading before it, the ancient town of Karauli a quiet presence beyond the walls|Built in 1938 by the Jadon Rajputs of Karauli, Bhanwar Vilas represents the final flowering of princely Indo-Saracenic architecture in Rajasthan — a palace built not for statecraft but for the private pleasure of a dynasty that traced its lineage to the god Krishna]]
 
 The Jadon Rajputs have been in Karauli since 1348, when Raja Arjun Pal established the kingdom on a strategic plateau above the Chambal River valley. For six centuries, the dynasty ruled this small but proud state — one of the oldest surviving Rajput kingdoms — navigating the rise and fall of the Mughal Empire, the arrival of the British, and the integration into independent India with a quiet resilience that is characteristic of the smaller princely states. Bhanwar Vilas Palace, built in 1938 by Maharaja Bhanwar Pal, is the dynasty's most recent architectural statement — a colonial-era palace that blends European classicism with Rajput tradition in a composition of surprising elegance.
 
@@ -13,7 +13,7 @@ The 24 rooms are distributed around the courtyard and the upper floors, and they
 
 The Diwan-i-Khas, the palace's formal reception room, is a treasure. Crystal chandeliers, a gilded ceiling, Belgian mirrors, and oil paintings of the Jadon dynasty's rulers — the room is a time capsule of the late colonial era, when Indian princes navigated the delicate balance between traditional authority and British overlordship with architectural statements that declared their continued relevance.
 
-[[PHOTO:portrait|The Diwan-i-Khas at Bhanwar Vilas Palace — crystal chandeliers casting pools of warm light, a gilded ceiling reflecting the glitter, oil portraits of the Jadon Rajput rulers observing from the walls, the room unchanged since 1938]]
+[[PHOTO:portrait|/images/experiences/20-bhanwar-vilas-palace-karauli/02-diwan-i-khas.webp|The Diwan-i-Khas at Bhanwar Vilas Palace — crystal chandeliers casting pools of warm light, a gilded ceiling reflecting the glitter, oil portraits of the Jadon Rajput rulers observing from the walls, the room unchanged since 1938|The chandeliers were imported from Czechoslovakia, the furniture from England, the carpets from Persia — the Diwan-i-Khas is a time capsule of the globalised aesthetic that defined princely taste in the final years before Indian independence]]
 
 [[QUOTE:In Karauli, the tourist tide has not yet arrived. What you find instead is a Rajasthan that exists for itself, not for the visitor — and a palace whose hospitality has nothing to do with performance.|The Royal Gallery Editorial]]
 
@@ -33,7 +33,7 @@ The Kaila Devi temple, thirty kilometres from Karauli, is one of Rajasthan's mos
 
 The palace can arrange guided walks through Karauli's old town, visiting the temples, the havelis, and the bazaars where the town's artisans — silversmiths, bangle-makers, leather workers — continue trades that have sustained their families for centuries. The walks are led by local guides who know every lane and every story, and the experience, unhurried and unscripted, is a genuine immersion in the life of a Rajasthani town.
 
-[[PHOTO:landscape|The Madan Mohan Ji temple in Karauli — carved pillars and painted ceilings in the Karauli school of temple architecture, worshippers descending the steps to the inner sanctum, incense drifting through the ancient stone corridors]]
+[[PHOTO:landscape|/images/experiences/20-bhanwar-vilas-palace-karauli/03-temple.webp|The Madan Mohan Ji temple in Karauli — carved pillars and painted ceilings in the Karauli school of temple architecture, worshippers descending the steps to the inner sanctum, incense drifting through the ancient stone corridors|The temple, dedicated to Krishna as Madan Mohan — 'He Who Charms the God of Love' — is the spiritual heart of Karauli, a town founded in 1348 that remains one of Rajasthan's most untouched sacred destinations]]
 
 [[TIP:The Journey to Karauli|🚗]]
 Karauli is not on the main tourist circuit, and getting here requires a deliberate effort. The nearest airport is Jaipur (JAI), 170 kilometres to the west — approximately three and a half hours by car. The road passes through increasingly rural landscape as you leave the Jaipur-Agra corridor, and the final approach to Karauli, winding through hills dotted with crumbling forts and ancient temples, is a journey into a Rajasthan that most visitors never see. The palace can arrange private transfers from Jaipur, Agra (150 km), or Bharatpur (100 km).
@@ -57,7 +57,7 @@ Is the palace suitable for children? Yes — the gardens, the temple visits, and
 
 What is the dress code? Relaxed throughout. Modest clothing for temple visits. The evenings in the courtyard can be cool — bring a shawl or light jacket in the cooler months.
 
-[[PHOTO:full-width|Bhanwar Vilas Palace at dusk — the yellow-ochre facade glowing in the last light, peacocks crossing the lawn, the Diwan-i-Khas chandeliers beginning to glitter through the arched windows, the ancient kingdom of Karauli settling into its evening quiet, a Rajasthan that exists for itself, not for the visitor, and is all the more precious for it]]
+[[PHOTO:full-width|/images/experiences/20-bhanwar-vilas-palace-karauli/04-dusk.webp|Bhanwar Vilas Palace at dusk — the yellow-ochre facade glowing in the last light, peacocks crossing the lawn, the Diwan-i-Khas chandeliers beginning to glitter through the arched windows, the ancient kingdom of Karauli settling into its evening quiet, a Rajasthan that exists for itself, not for the visitor, and is all the more precious for it|The Jadon Rajputs consider themselves descendants of Krishna, and Karauli — a holy city second only to Mathura and Vrindavan in the Krishna bhakti tradition — remains one of Rajasthan's most authentic and least commercialised destinations]]
 `;
 
 export const articleSections = [];
