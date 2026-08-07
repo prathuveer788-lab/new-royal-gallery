@@ -73,30 +73,30 @@ export default function HomePage() {
     <div className="bg-white">
 
       {/* ══════════ HERO ══════════ */}
-      <section className="relative min-h-screen flex items-end pb-12 sm:pb-20 md:pb-28">
+      <section className="relative min-h-screen flex items-center py-20 sm:py-24 md:py-28">
         <div className="absolute inset-0">
           <Image src="/images/vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg" alt="Jaipur City Palace" fill priority placeholder="blur" blurDataURL={blurDataURL} className="object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-black/25" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/30" />
         </div>
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
           <div className="max-w-4xl">
-            <p className="text-amber-200/90 text-[10px] sm:text-[11px] uppercase tracking-[0.4em] font-medium mb-6 sm:mb-8 font-sans">
+            <p className="text-amber-300 text-[10px] sm:text-[11px] uppercase tracking-[0.4em] font-medium mb-6 font-sans">
               Summer Issue 2026
             </p>
-            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-serif text-white leading-[1.15] sm:leading-[1.18] md:leading-[1.15] mb-8 sm:mb-10 tracking-normal">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.2] sm:leading-[1.25] mb-6 sm:mb-8 tracking-normal">
               Heritage<br />
               Deserves<br />
               <span className="text-amber-300 italic">More Than</span><br />
               Memory
             </h1>
-            <p className="text-neutral-200/90 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-2xl mb-8 sm:mb-10">
+            <p className="text-neutral-200 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-xl mb-8 sm:mb-10">
               The Royal Gallery is a global heritage media, technology and experiences platform — preserving and amplifying the world&apos;s royal, cultural and luxury heritage through storytelling, AI, and immersive encounters.
             </p>
             <div className="flex flex-wrap gap-3 sm:gap-4">
-              <Link href="/journal" className="inline-block px-8 sm:px-10 py-3.5 bg-white text-neutral-900 hover:bg-neutral-100 transition-colors text-xs sm:text-sm uppercase tracking-[0.25em] font-semibold font-sans">
+              <Link href="/journal" className="inline-block px-8 sm:px-10 py-3 sm:py-3.5 bg-white text-neutral-900 hover:bg-neutral-100 transition-colors text-xs sm:text-sm uppercase tracking-[0.25em] font-semibold font-sans">
                 Read the Journal
               </Link>
-              <Link href="/membership" className="inline-block px-8 sm:px-10 py-3.5 border border-white/30 text-white hover:border-amber-300 hover:text-amber-200 transition-colors text-xs sm:text-sm uppercase tracking-[0.25em] font-medium font-sans">
+              <Link href="/membership" className="inline-block px-8 sm:px-10 py-3 sm:py-3.5 border border-white/30 text-white hover:border-amber-300 hover:text-amber-200 transition-colors text-xs sm:text-sm uppercase tracking-[0.25em] font-medium font-sans">
                 Become a Member
               </Link>
             </div>
