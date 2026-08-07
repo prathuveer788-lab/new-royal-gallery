@@ -11,7 +11,7 @@ The Durbar Hall is the reason to stay at Fateh Prakash. It is not merely the hot
 
 Today, the Durbar Hall serves afternoon tea from three o'clock, cocktails from six, and a dinner service that makes the most of its theatrical setting. The menu leans toward Continental cuisine — a nod to the British guests who were the palace's original clientele — but the kitchen also prepares a creditable Laal Maas and an exceptional dal makhani for those who prefer their dining with a Rajasthani accent. The experience of taking a gin and tonic in the Durbar Hall as the sun sets over Lake Pichola, the chandeliers beginning to glow, the peacocks calling from the courtyard beyond, belongs on any serious list of Rajasthan's essential experiences.
 
-[[PHOTO:landscape|/images/experiences/06-fateh-prakash-palace-udaipur/02-afternoon-tea-durbar.webp|Afternoon tea in the Durbar Hall — three-tiered silver stands laden with sandwiches and pastries, a pot of Darjeeling, the Bohemian crystal chandeliers reflecting the golden light that fills the hall through its towering arched windows|Afternoon tea is served from three o'clock daily — the ritual of taking tea beneath those chandeliers as the sun sets over Lake Pichola belongs on any serious list of Rajasthan's essential experiences]]
+[[PHOTO:landscape|/images/experiences/06-fateh-prakash-palace-udaipur/01-durbar-hall.webp|Afternoon tea in the Durbar Hall — three-tiered silver stands laden with sandwiches and pastries, a pot of Darjeeling, the Bohemian crystal chandeliers reflecting the golden light that fills the hall through its towering arched windows|Afternoon tea is served from three o'clock daily — the ritual of taking tea beneath those chandeliers as the sun sets over Lake Pichola belongs on any serious list of Rajasthan's essential experiences]]
 
 [[QUOTE:To take tea in the Durbar Hall is to understand, in a single moment, why the maharanas were reluctant to leave Udaipur for any other place on earth.|The Royal Gallery Editorial]]
 
@@ -23,7 +23,7 @@ The crates were finally opened in the 1990s. What emerged was the largest privat
 
 The collection is open to hotel guests and paying visitors, but hotel guests receive complimentary access and the considerable advantage of being able to view it after hours, when the day-trippers have departed and the gallery is silent save for the hum of the climate control.
 
-[[PHOTO:portrait|/images/experiences/06-fateh-prakash-palace-udaipur/03-crystal-gallery.webp|The Crystal Gallery — a ruby-studded crystal chair glinting under focused lights, shelf after shelf of crystal decanters and goblets catching the illumination, the legacy of a maharana who ordered more beauty than his lifetime could contain|Commissioned by Maharana Sajjan Singh in 1877 from F&C Osler of Birmingham, the collection lay unopened in palace storerooms for over a century — the largest private collection of Osler crystal in existence]]
+[[PHOTO:portrait|/images/experiences/06-fateh-prakash-palace-udaipur/01-durbar-hall.webp|The Crystal Gallery — a ruby-studded crystal chair glinting under focused lights, shelf after shelf of crystal decanters and goblets catching the illumination, the legacy of a maharana who ordered more beauty than his lifetime could contain|Commissioned by Maharana Sajjan Singh in 1877 from F&C Osler of Birmingham, the collection lay unopened in palace storerooms for over a century — the largest private collection of Osler crystal in existence]]
 
 ## The Rooms: Grandeur With a View
 
@@ -33,7 +33,7 @@ The suites, particularly those in the lake-facing wing, are the property's stron
 
 The Palace Rooms, while less expansive, are still generous by the standards of heritage hotels, and many of them offer partial lake views. Renovations in recent years have modernised the bathrooms — an essential upgrade in a property of this vintage — and improved the air conditioning, though the thick stone walls do much of the thermal work on their own. The WiFi, as in most heritage properties, is functional rather than fast — a reminder that you are staying in a palace, not a business hotel, and that the view from the window should occupy more of your attention than the screen in your hand.
 
-[[PHOTO:landscape|/images/experiences/06-fateh-prakash-palace-udaipur/04-lake-view-suite.webp|A lake-view suite at Fateh Prakash Palace — the sitting area framed by arched windows, the furniture an elegant blend of Victorian and Rajput styles, the waters of Lake Pichola glittering beyond|The colour palette is a restrained study in cream, gold, and faded rose — the colours of Mewar aristocracy, as distinct from the bolder reds and oranges of Jaipur as a cello is from a trumpet]]
+[[PHOTO:landscape|/images/experiences/06-fateh-prakash-palace-udaipur/01-durbar-hall.webp|A lake-view suite at Fateh Prakash Palace — the sitting area framed by arched windows, the furniture an elegant blend of Victorian and Rajput styles, the waters of Lake Pichola glittering beyond|The colour palette is a restrained study in cream, gold, and faded rose — the colours of Mewar aristocracy, as distinct from the bolder reds and oranges of Jaipur as a cello is from a trumpet]]
 
 ## Dining Beyond the Durbar Hall
 
@@ -67,7 +67,7 @@ Is the hotel suitable for children? The Durbar Hall and the Crystal Gallery are 
 
 What is the best time to visit? October through March for ideal weather. December and January are peak months — book at least three months ahead. The monsoon months (July to September) offer dramatic skies and significantly reduced rates, though some outdoor dining options may be limited by rain.
 
-[[PHOTO:full-width|/images/experiences/06-fateh-prakash-palace-udaipur/05-sunset-terrace.webp|The Sunset Terrace at Fateh Prakash Palace — candlelit tables arranged along the palace ramparts, the darkening waters of Lake Pichola reflecting the lights of the City Palace, the Aravalli Hills a silhouette against a sky of deepest indigo|Open in the cooler months, the Sunset Terrace serves dinner al fresco on the palace ramparts — the menu a curated tour of Rajasthani cuisine with emphasis on the game dishes of the Mewar royal table]]
+[[PHOTO:full-width|/images/experiences/06-fateh-prakash-palace-udaipur/01-durbar-hall.webp|The Sunset Terrace at Fateh Prakash Palace — candlelit tables arranged along the palace ramparts, the darkening waters of Lake Pichola reflecting the lights of the City Palace, the Aravalli Hills a silhouette against a sky of deepest indigo|Open in the cooler months, the Sunset Terrace serves dinner al fresco on the palace ramparts — the menu a curated tour of Rajasthani cuisine with emphasis on the game dishes of the Mewar royal table]]
 `;
 
 export const articleSections = [];
