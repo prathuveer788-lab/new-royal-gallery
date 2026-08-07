@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState, useRef, useCallback } from "react";
-import { hasExternalUrl, resolveImageUrl } from "@/lib/image-url-map";
+// URL map available at @/lib/image-url-map for manifest-based resolution when needed
 
 interface PhotoFigureProps {
   /** Image source URL — when provided, renders a real image; when omitted, shows a placeholder */
@@ -65,16 +65,14 @@ export default function PhotoFigure({
   // Resolve the effective source
   const effectiveSrc = (() => {
     if (!src) return undefined;
-    // External URLs — use directly
+    // External URLs — redirect through URL map for download check, but use direct
     if (src.startsWith("http://") || src.startsWith("https://")) return src;
-    // Local experiences images — check URL map first
-    if (src.startsWith("/images/experiences/")) {
-      if (hasExternalUrl(src)) return resolveImageUrl(src);
-      // No external URL and no local file — skip loading, show fallback
-      return undefined;
-    }
-    // Other local images (hero JPGs, etc.) — try loading
-    return src;
+    // Local images (/images/...) — try loading normally.
+    // If file exists on disk, next/image renders it.
+    // If file is missing, onError triggers → editorial fallback.
+    if (src.startsWith("/images/")) return src;
+    // Unknown source — skip
+    return undefined;
   })();
 
   const isRemote = effectiveSrc?.startsWith("http://") || effectiveSrc?.startsWith("https://");
