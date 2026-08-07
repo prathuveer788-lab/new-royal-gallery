@@ -1,0 +1,71 @@
+export const articleContent = `
+Shiv Niwas Palace does not announce itself. There is no grand portico visible from the street, no liveried doorman signalling to arriving cars, no marble lobby designed to impress upon you your own insignificance. Instead, you are led through a discreet entrance within the City Palace complex, past a courtyard where bougainvillea spills over ancient stone walls in cascades of magenta, and into a space that feels less like a hotel and more like the private residence it once was. This is the guest wing where the Maharanas of Mewar hosted visiting royalty, British viceroys, and the occasional wandering dignitary from a neighbouring princely state. The guest wing, in Rajput tradition, was always separate from the family quarters — close enough to extend hospitality, distant enough to preserve the sanctity of domestic life. And this particular guest wing, built in the early twentieth century during the reign of Maharana Fateh Singh, was designed to make a statement about who the Mewar dynasty was and what it considered appropriate for those it honoured.
+
+[[PHOTO:wide|The white marble facade of Shiv Niwas Palace at dawn, its semi-circular balconies overlooking Lake Pichola, the City Palace's imposing walls rising behind it]]
+
+The Mewar dynasty, the oldest surviving royal lineage in the world, has always understood the power of architecture. The City Palace — the sprawling complex of which Shiv Niwas is a part — is the largest palace in Rajasthan, an eleven-palace labyrinth built over four centuries by 22 generations of Sisodia rulers. Each generation added a wing, a courtyard, a pleasure garden, a tower. The result is an architectural palimpsest that begins in the sixteenth century and ends, architecturally speaking, in the twentieth. Shiv Niwas, as one of the most recent additions, represents the moment when Mewari Rajput architecture encountered European taste: the semi-circular balconies, the delicate plasterwork, the proportions of the rooms, all bear the influence of the British Residency style, but the chhatris (domed pavilions) on the rooftop and the jali screens in the windows are unmistakably, unapologetically Mewari.
+
+## The Arrival
+
+The approach to Shiv Niwas is itself a lesson in the layered geography of Udaipur. You drive through the old city, past shops selling miniature paintings and silver jewellery, past cows that have claimed the narrow lanes as their own, past the Jagdish Temple with its carved spire rising above the rooftops. The car stops at the entrance to the City Palace complex. A member of the hotel staff meets you — often a gentleman who has worked for the HRH Group for decades — and escorts you through the palace gates. The transition from the chaotic, vibrant street to the rarefied silence of the palace is almost theatrical. One moment you are in modern India; the next, you are walking through a courtyard where the footsteps of maharanas still echo.
+
+[[PHOTO:portrait|The inner courtyard of Shiv Niwas Palace — marble floors polished to a mirror shine, bougainvillea cascading from the upper terraces, a fountain murmuring at the centre, the arches of the verandah framing a view of Lake Pichola]]
+
+The lobby, such as it is, occupies a modest room off the main courtyard. The check-in process involves a garland of marigolds, a tikka of vermillion and sandalwood, and a glass of something cool and citrus. Your bag disappears in the direction of your room. A member of staff — the same person, perhaps, who greeted you — offers a brief orientation to the property: the swimming pool, the courtyard restaurant, the bar, the passage that connects directly to the City Palace museum. This last is significant. Staying at Shiv Niwas grants you, effectively, private access to one of India's great historical sites. The museum closes to day visitors at 5:30 pm. After that, the palace complex belongs, in a sense, to its guests.
+
+## The Rooms: Where Guests of Maharanas Slept
+
+The 36 rooms and suites at Shiv Niwas are divided across two categories: the original palace rooms and the newer wing. The palace rooms, occupying the upper floors, are the ones you want. They are smaller than the suites of Umaid Bhawan or Rambagh Palace, but what they lack in square footage they compensate for in atmosphere. High ceilings with ornate plasterwork. Windows that open onto the courtyard or — in the best rooms — Lake Pichola. Furniture that is not an antique reproduction but actual antique, some of it belonging to the royal family, with the slight wear that authentic objects accumulate over a century of use.
+
+The bathrooms are a pleasant surprise: modern, spacious, clad in white marble, with rainfall showers and deep soaking tubs. The HRH Group, which manages the property, undertook a significant renovation in the 2010s and made the wise decision to upgrade the plumbing and the wiring without touching the architectural character. You will find WiFi that works (mostly), air conditioning that copes with the Rajasthani summer, and electrical outlets where you need them. But you will also find the original arched windows, the century-old stonework, and the particular quality of light — filtered through jali screens — that no modern hotel can replicate.
+
+[[PHOTO:landscape|A suite at Shiv Niwas Palace — antique furniture arranged beneath a high ceiling with intricate plasterwork, French windows opening onto a private balcony overlooking the lake, the afternoon light filtered through traditional jali screens]]
+
+The best rooms, unquestionably, are the lake-facing suites on the upper floor. Book well in advance — there are only a handful, and they are claimed months ahead by returning guests and those who have done their research. From their balconies, the view sweeps across Lake Pichola to the Taj Lake Palace floating in the middle of the water, the Monsoon Palace perched on its distant hill, and the Aravalli Hills folding away into the haze. At sunset, when the lake turns from silver to rose to indigo, the view is the equal of any hotel room in India.
+
+## The Courtyard: Dining Under a Dome of Sky
+
+Dining at Shiv Niwas takes place primarily in the central courtyard, beneath a canopy of stars and surrounded by the illuminated walls of the palace. The menu is a deliberate celebration of Mewari cuisine — the cooking of the Udaipur region, which differs from the cuisine of Jaipur or Jodhpur in subtle but significant ways. Mewari food is less fiery than Marwari cooking, more reliant on yoghurt and cream, and distinguished by the use of local ingredients: the freshwater fish of Lake Pichola, the wild game of the Aravalli Hills (in season), and the vegetables and pulses grown in the palace's own gardens.
+
+The Laal Maas here — Rajasthan's iconic mutton curry — is prepared according to a recipe from the Mewar royal kitchens. It is, by design, milder than the Jodhpuri version, the Mathania chillies tempered by yoghurt and ghee, the mutton slow-cooked until it yields to the slightest pressure of a spoon. The vegetarian thali, served on a silver platter with twelve dishes, is a comprehensive survey of Mewari cooking: Gatte ki Sabzi (gram flour dumplings in yoghurt), Ker Sangri (dried desert beans), Dal Baati Churma, and, in winter, Sarson ka Saag with Makki ki Roti.
+
+The bar, tucked into a corner of the palace, is the former card room of the maharanas. Photographs of the Mewar royal family — polo teams, hunting parties, state occasions — line the walls. The cocktails incorporate Indian ingredients: a saffron-infused gin and tonic, a chilli-vodka martini, a mango lassi spiked with rum. The bartender, a gentleman who has been with the property since before most of its current guests were born, will happily discuss the merits of single malt versus blended whisky, or the finer points of Mewar's polo history, depending on your interests.
+
+## The City Palace: Your Private Museum
+
+The single greatest privilege of staying at Shiv Niwas is after-hours access to the City Palace museum. The museum, attached directly to the hotel, is one of India's finest — a series of courtyards, galleries, and royal apartments filled with Mewar's extraordinary collections. During the day, it is busy with visitors; the corridors echo with the footfall of tour groups, and the selfie-stick wielders outnumber the art historians by a wide margin.
+
+After 5:30 pm, however, the museum belongs to hotel guests and the resident peacocks. You can walk through the Mor Chowk (Peacock Courtyard), where three peacocks in vivid blue and green glass mosaic adorn a wall of breathtaking intricacy, and have it entirely to yourself. You can stand in the Manak Chowk, the main courtyard, and study the marble throne of the Maharana without anyone jostling for a photograph. You can trace the evolution of Mewar painting from the sixteenth century to the nineteenth, gallery by gallery, in solitude. This is not a hotel amenity. This is a gift. Use it.
+
+[[PHOTO:wide|The Mor Chowk (Peacock Courtyard) in the City Palace at dusk — three glass-mosaic peacocks in sapphire, emerald, and gold glitter against the palace wall, the courtyard empty of all but the resident birds and the setting sun]]
+
+## The Pool: An Emerald in Marble
+
+The swimming pool at Shiv Niwas occupies a terrace above the lake, its water a startling turquoise against the white marble deck. It is not large — this is not a resort pool — but the setting, with the City Palace on one side and Lake Pichola on the other, is as fine as any pool in Rajasthan. The poolside service is attentive without being intrusive. A chilled bottle of water appears at your lounger without your asking. A menu of light lunches — salads, sandwiches, grilled fish — is available throughout the day. In the late afternoon, when the sun drops behind the Aravalli Hills and the lake catches the last light, the pool area becomes the property's most seductive spot.
+
+[[TIP:Room Selection|🔑]]
+Request a lake-facing room on the upper floor. There are fewer than ten of them, and they are not significantly more expensive than the courtyard rooms, but the view transforms the experience. If lake-facing rooms are unavailable, the courtyard rooms on the upper floor are preferable to the ground-floor rooms, which can feel slightly overlooked by guests passing to and from the restaurant. Avoid the rooms in the modern wing — they are perfectly comfortable but lack the architectural character that makes Shiv Niwas special.
+[[/TIP]]
+
+[[TIP:Timing Your Visit|📅]]
+The best months are October through March, when the weather is ideal and the lake is full from the monsoon. December and January are peak season — book at least three months ahead. The monsoon months (July to September) offer a different kind of beauty: dramatic skies, rain-washed marble, and the lake at its fullest. Rates drop by 30-40%, and you will have the property largely to yourself. May and June are fiercely hot, but if you can tolerate 40°C temperatures, the value proposition is compelling.
+[[/TIP]]
+
+[[DIVIDER]]
+
+## Frequently Asked Questions
+
+How does Shiv Niwas compare to Fateh Prakash Palace next door? The two properties, located within the same City Palace complex, are often compared. Fateh Prakash is grander — larger rooms, a spectacular Durbar Hall bar, the crystal gallery. Shiv Niwas is more intimate, more personal, and, in the opinion of its devotees, more charming. If you prioritise scale and grandeur, choose Fateh Prakash. If you value atmosphere and intimacy, choose Shiv Niwas. They are sibling properties, and a visit to one can easily include drinks or dinner at the other.
+
+What is the difference between Shiv Niwas and Taj Lake Palace? The Taj Lake Palace, floating on Lake Pichola, is the most famous hotel in Udaipur and one of the most romantic in the world. It is also significantly more expensive and accessible only by boat. Shiv Niwas offers a different proposition: it is within the City Palace complex, with direct access to the museum, and its rates are roughly half those of the Lake Palace. Many visitors to Udaipur split their stay — two nights at Shiv Niwas for the cultural immersion, two at the Lake Palace for the romance.
+
+Is there a dress code for dinner? Smart casual. Gentlemen are requested to wear closed shoes and a collared shirt in the evening. A jacket is appreciated during the winter months but not required. The courtyard can be cool on winter evenings — bring a shawl or a light jacket.
+
+Can I visit the property if I am not staying here? The restaurants are open to non-residents with a prior reservation. Day visitors may also tour the City Palace museum, which charges a separate admission fee. The hotel wing, pool, and courtyard are reserved for registered guests.
+
+How many nights should I stay? Two nights is the minimum to appreciate the property and explore the City Palace. Three nights allows for a proper immersion in Udaipur — the City Palace, a lake cruise, the Jagdish Temple, the Sahelion-ki-Bari gardens, and an afternoon of doing nothing by the pool. Four nights or more would allow a day trip to the temples of Eklingji and Nagda, or to the fortress of Kumbhalgarh.
+
+[[PHOTO:full-width|The rooftop terrace of Shiv Niwas Palace at sunset — white marble chhatris silhouetted against a sky of rose and gold, Lake Pichola shimmering below, the Taj Lake Palace a distant white vision on the darkening water]]
+`;
+
+export const articleSections = [];

@@ -1,0 +1,61 @@
+export const articleContent = `
+Interlaken does not waste time on subtlety. The town, wedged between Lake Thun and Lake Brienz in the heart of the Bernese Oberland, announces its agenda the moment you step off the train: the Jungfrau massif — the peaks of Eiger, Mönch, and Jungfrau, each one rising above 4,000 metres — fills the southern horizon like a wall at the end of the world, their eternal snows catching the morning light, their north faces (the Eiger's in particular, the most notorious vertical mile in mountaineering) a study in geological menace. The view from the Bahnhofstrasse, the town's main street, is one of the most dramatic urban prospects on Earth — the Alps, suddenly and entirely, framed between the hotels and the souvenir shops like a special effect that nature had no business deploying in such a casual, everyday context.
+
+[[PHOTO:wide|The Jungfrau massif at dawn — Eiger, Mönch, and Jungfrau catching the first alpenglow above Interlaken, their peaks turning from grey to rose to brilliant gold, the Lauterbrunnen Valley a corridor of waterfalls and green pastures in the foreground]]
+
+Interlaken has been a tourist destination since the early nineteenth century, when the Romantics — Goethe, Byron, Mendelssohn — discovered the Alps and wrote about them in prose so ecstatic that Europe's aristocracy felt obliged to experience them for themselves. The Grand Hotels that line the Höheweg — the Victoria-Jungfrau, the Royal-St-Georges, the Interlaken — were built to accommodate this influx, and they remain, two centuries later, the architectural signature of the town: Belle Époque piles of white stucco and wrought-iron balconies, their grand lobbies and formal gardens testifying to an era when a Swiss holiday was the apex of European sophistication.
+
+## The Jungfraujoch: Top of Europe
+
+The Jungfraujoch — the saddle between the Mönch and the Jungfrau — is the highest railway station in Europe at 3,454 metres, and the journey there, on a cogwheel railway that has been climbing through the Eiger since 1912, is one of the world's great rail experiences. The train departs from Kleine Scheidegg, a mountain pass at 2,061 metres, and climbs for fifty minutes through a tunnel carved into the living rock of the Eiger's north face. Two viewing windows, cut into the tunnel at Eigerwand and Eismeer, offer brief, dizzying glimpses of the glacier and the valley below — a pause of five minutes at each, just long enough for photographs and a frisson of vertigo.
+
+The summit complex is a small city in the sky: an Ice Palace of frozen sculptures carved into the glacier, a viewing platform (the Sphinx Terrace, 3,571 metres) that offers a panorama stretching from the Black Forest to the Italian Alps on a clear day, and the Aletsch Glacier — the longest in the Alps, 23 kilometres of ice flowing south toward the Rhône Valley — spread beneath you like a frozen river. The air is thin, the temperature hovers around freezing even in mid-summer, and the experience — standing on the roof of Europe, surrounded by a landscape of such elemental severity that it makes human concerns seem very small and very far away — is one of those rare travel moments that genuinely deserves the word "awesome," in its original, un-degraded sense.
+
+Go early — the first train from Kleine Scheidegg departs at 8 am, and the summit is at its most serene before 10 am, when the day-trippers from Zurich begin to arrive. Dress warmly regardless of the season. And do not, under any circumstances, skip the hot chocolate at the summit café — it is, by some margin, the best hot chocolate you will ever drink, and the combination of thin air, Alpine light, and the view through the café's panoramic windows is alchemy.
+
+[[PHOTO:portrait|The Sphinx Terrace at Jungfraujoch — the viewing platform suspended 3,571 metres above sea level, the Aletsch Glacier a river of ice flowing toward the horizon, the air so clear it seems to magnify the distance, the temperature a reminder that you are standing on the roof of Europe]]
+
+[[QUOTE:The Eiger is not a mountain. It is a north face that happens to have a summit attached — and the view from Jungfraujoch, looking down that face, is the closest most of us will ever get to understanding why climbers die for it.|The Royal Gallery Editorial]]
+
+## The Lakes: Thun and Brienz
+
+Lake Thun and Lake Brienz, each about fourteen kilometres long, bracket Interlaken — the town's name literally means "between lakes" — and they are as beautiful as any bodies of water in Switzerland, which is to say, as beautiful as any bodies of water in the world. Lake Brienz, to the east, is the wilder of the two — its water a startling turquoise (the result of glacial silt suspended in the water column), its shores steep and forested, the Giessbach Falls cascading 500 metres down the mountainside into the lake. The Lake Brienz cruise, on one of the historic paddle steamers that have been plying these waters since the nineteenth century, takes ninety minutes to reach the eastern shore and the town of Brienz, whose tradition of woodcarving — violins, furniture, the ornamental chalet architecture — dates back centuries.
+
+Lake Thun, to the west, is slightly lower, slightly less dramatic, and correspondingly more populated. The castles that guard its shores — Oberhofen, with its towers reflected in the still water; Spiez, with its vineyards sloping down to the lake — are medieval fortifications transformed over centuries into comfortable residences, and the cruise from Interlaken to Thun (two hours, on a paddle steamer that dates from the Belle Époque) offers a view of Swiss life as it has been lived for a thousand years: villages clustered around church spires, vineyards terraced into impossibly steep slopes, the Alps a permanent presence on the southern horizon.
+
+[[PHOTO:wide|Lake Brienz from the paddle steamer — the turquoise water stretching to the forested eastern shore, the Giessbach Falls visible as a silver thread against the dark green of the mountainside, the Jungfrau massif rising in the distance through a veil of morning mist]]
+
+## The Lauterbrunnen Valley: Tolkien's Rivendell
+
+The Lauterbrunnen Valley, a twenty-minute train ride from Interlaken, is the most beautiful valley in the Bernese Oberland — a U-shaped glacial trough whose sheer limestone walls rise 300 metres on either side, and from whose rim seventy-two waterfalls plunge to the valley floor. The most famous, the Staubbach Falls, drops 297 metres in a single, uninterrupted fall — a plume of water that, in certain winds, billows outward like a bridal veil. The Trümmelbach Falls, inside the mountain, are the world's only accessible glacier waterfalls — ten cascades of meltwater from the Eiger, Mönch, and Jungfrau glaciers, roaring through a narrow gorge with a force that shakes the rock. The noise, the spray, the darkness punctuated by electric light — the experience is less of a waterfall than of a descent into the underworld.
+
+J.R.R. Tolkien visited the Lauterbrunnen Valley in 1911, and the landscape — the sheer cliffs, the waterfalls, the sense of a hidden sanctuary — fed directly into his conception of Rivendell, the hidden valley of the Elves in *The Lord of the Rings*. The comparison, once made, is impossible to unsee. The valley is Rivendell, rendered in limestone, spruce, and the particular quality of Alpine light that turns ordinary afternoons into something approaching the numinous.
+
+## Adventure: Paragliding, Canyoning, and the Rest
+
+Interlaken is the adventure capital of Switzerland, and the menu of adrenaline-fuelled activities is comprehensive. Paragliding from the slopes of the Schynige Platte — a twenty-minute flight over Interlaken, the lakes, and the Jungfrau massif — is the most accessible aerial experience, requiring no prior training (you are strapped to a professional pilot) and delivering views that no other vantage point can match. Canyoning in the Saxeten Gorge — rappelling down waterfalls, jumping into pools of crystalline mountain water, sliding down natural rock chutes — is the most intense, and the most fun, way to experience the Alpine landscape up close.
+
+For those who prefer their adventures with less adrenaline and more contemplation, the Schynige Platte cogwheel railway — a vintage train that has been climbing from Wilderswil to the Schynige Platte pass since 1893 — offers one of the finest Alpine panoramas in Switzerland: the Eiger, Mönch, and Jungfrau across the valley, Lake Thun and Lake Brienz glittering below, and the Alpine Garden — a botanical collection of 650 species of Alpine plants, most of them found within hiking distance of the station — a celebration of the extraordinary biodiversity that survives above the tree line. The train itself, with its wooden carriages and its unhurried pace, is a piece of industrial archaeology, and the journey — forty-five minutes of climbing through flower-filled meadows and dark pine forests — is as beautiful as the destination.
+
+[[PHOTO:landscape|Paragliders descending over Interlaken — the brightly coloured canopies silhouetted against the blue of Lake Thun, the Jungfrau massif filling the southern sky, the town reduced to a miniature of hotels, churches, and the green ribbon of the Aare River connecting the two lakes]]
+
+[[TIP:Weather Watching|⛰️]]
+The Alps create their own weather, and a morning that dawns clear can deteriorate by midday into cloud and rain. Check the Jungfraujoch webcam before booking your ticket — there is no point making the ascent (at CHF 210 return from Interlaken) if the summit is socked in. The best strategy is to keep your schedule flexible, with a mountain day and a valley day planned as alternatives, and to decide the evening before which one the weather demands.
+[[/TIP]]
+
+[[DIVIDER]]
+
+## Frequently Asked Questions
+
+When is the best time to visit? June through September for hiking, paragliding, and the mountain railways operating at full schedule. July and August are peak season — warm, sunny, and crowded. May and October are shoulder months offering thinner crowds, lower prices, and unpredictable weather. December through March transforms Interlaken into a winter sports destination — the Jungfrau ski region, accessed from Grindelwald and Wengen, is one of the finest in the Alps, with reliable snow and slopes for every ability level.
+
+How many days do I need? Three full days is the minimum for a satisfying visit: one day for the Jungfraujoch, one for the lakes (cruise on Lake Brienz or Lake Thun), and one for adventure (paragliding, canyoning, or hiking in the Lauterbrunnen Valley). Four to five days allows for a more leisurely pace and the opportunity to wait out bad weather — which, in the Alps, is a strategic necessity.
+
+Is Interlaken expensive? Yes — this is Switzerland. The Jungfraujoch return ticket costs CHF 210. A hotel in the mid-range costs CHF 200-400 per night. A main course at a restaurant costs CHF 25-40. A beer costs CHF 7-9. Budget accordingly, and consider the Swiss Travel Pass if you are exploring beyond Interlaken — it includes the lake steamers and offers a discount on the Jungfraujoch railway.
+
+How do I get there? Interlaken sits on the main rail line between Bern and the Jungfrau region, with direct trains from Zurich (2 hours), Bern (50 minutes), and Geneva (2 hours 45 minutes). The station, Interlaken Ost, is the gateway to the Jungfrau railway network — change here for trains to Grindelwald, Lauterbrunnen, and Kleine Scheidegg. Driving is possible but parking in Interlaken is limited and expensive; the train is the more civilised option.
+
+[[PHOTO:full-width|The view from Harder Kulm at sunset — Interlaken spread beneath you between the two lakes, the Jungfrau massif turning rose and gold in the last light, the Lauterbrunnen Valley a dark gash in the mountains to the south, the whole magnificent theatre of the Bernese Oberland performing its nightly spectacle to an audience of awestruck visitors and the indifferently grazing cows]]
+`;
+
+export const articleSections = [];

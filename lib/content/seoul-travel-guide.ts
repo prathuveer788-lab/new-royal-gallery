@@ -1,0 +1,77 @@
+export const articleContent = `
+Seoul is a city that has done more with less time than any urban centre on Earth. Sixty years ago, it was a war-ravaged capital of a divided nation — its palaces reduced to rubble, its economy in ruins, its future uncertain. Today it is the fourth-largest metropolitan economy in the world, a city of fifteen million that has produced Samsung, BTS, a film industry that won the Oscar for Best Picture, and a cultural export machine — K-pop, K-drama, K-beauty, K-food — that has reshaped global taste. The transformation is so rapid, so total, that it can feel disorienting: one moment you are walking through a neighbourhood of glass skyscrapers and underground shopping malls, and the next you turn a corner into an alley where an elderly woman is selling roasted chestnuts from a charcoal brazier, and the twenty-first century falls away like a dropped call.
+
+[[PHOTO:wide|Gyeongbokgung Palace at blue hour — the grandest of Seoul's five royal palaces, its painted beams and sweeping roofs a 600-year-old assertion of Joseon Dynasty majesty, the modern towers of Jongno-gu rising in the distance like a different country]]
+
+The Joseon Dynasty, which governed Korea from 1392 to 1910, built Seoul as its capital, and the five royal palaces — Gyeongbokgung, Changdeokgung, Changgyeonggung, Deoksugung, and Gyeonghuigung — are its most enduring architectural legacy. To walk the grounds of these palaces, with their painted wooden pavilions, their ceremonial halls, and their Secret Gardens of ponds and pavilions, is to understand that Seoul's modernity is not a rejection of its past but an extension of it — a dynasty of innovation that has simply traded silk robes for semiconductor factories.
+
+## Gyeongbokgung: The Grandest Palace
+
+Gyeongbokgung, the "Palace Greatly Blessed by Heaven," was the principal royal residence of the Joseon Dynasty. Built in 1395 and rebuilt in 1867 after being destroyed by the Japanese invasions of the sixteenth century, it is a complex of stunning scale and beauty — 7,700 rooms distributed across 40 hectares of courtyards, gardens, and ceremonial halls. The centrepiece is Geunjeongjeon, the throne hall, where the king received foreign envoys and conducted affairs of state from a raised platform beneath an elaborately painted ceiling.
+
+The changing of the royal guard ceremony, held at the Gwanghwamun Gate every day except Tuesday at 10 am and 2 pm, is a re-enactment of Joseon-era pageantry that avoids the kitsch into which such performances so easily descend. The guards, in their crimson and blue silk robes, carrying traditional weapons with bladed tips that catch the light, perform their ritual with a solemnity that commands respect. Arrive fifteen minutes early for a good viewing position.
+
+But the palace's finest hour is at the end of the day. As the sun drops behind the Bukhansan mountain range to the north, the painted beams of the pavilions turn gold and crimson, the shadows lengthen across the courtyards, and the crowds thin to a handful of photographers and couples walking hand in hand. The palace closes at 6 pm (5 pm in winter), and the last hour, when the light is at its most beautiful, is the time to be there.
+
+[[PHOTO:portrait|Geunjeongjeon Hall at Gyeongbokgung Palace — the throne hall's painted ceiling and carved wooden pillars illuminated by the golden light of late afternoon, the stone courtyard empty of all but a few lingering visitors]]
+
+## Changdeokgung and the Secret Garden
+
+Changdeokgung, a UNESCO World Heritage Site, is the best-preserved of Seoul's five palaces and, for many visitors, the most beautiful. Built in 1405 as a secondary palace, it became the principal royal residence after Gyeongbokgung was destroyed, and its architecture is more intimately integrated with its natural setting. The buildings seem to grow from the hillside, their eaves echoing the curves of the surrounding forest, their courtyards opening onto views of gardens and distant mountains.
+
+The Huwon, or Secret Garden, is Changdeokgung's greatest treasure — a 78-acre landscape of ponds, pavilions, and forest that served as the private retreat of the Joseon royal family. Access is by guided tour only, and places fill quickly; book online in advance. The tour takes ninety minutes and wanders through a landscape that is not, in the European sense, a "garden" at all — there are no geometric flowerbeds, no manicured lawns — but a curated wilderness, a sequence of views and experiences designed to harmonise with nature rather than subdue it. The Buyongji pond, with its circular island and its pavilion reflected in the dark water, is a composition of such tranquil beauty that it feels less like a landscape and more like a poem rendered in water, stone, and wood.
+
+[[PHOTO:landscape|The Buyongji pond in Changdeokgung's Secret Garden — a circular island reflecting perfectly in the dark water, a wooden pavilion at the water's edge, the forest of Bukhansan rising beyond, the scene unchanged in essence since a Joseon king sat here and composed poetry four centuries ago]]
+
+[[QUOTE:Seoul is not a city that asks to be loved. It is a city that demands to be reckoned with — and in the reckoning, you discover that love has already arrived.|The Royal Gallery Editorial]]
+
+## Insadong and Bukchon: The Old City, Alive
+
+Between Gyeongbokgung and Changdeokgung lies Insadong, the cultural artery of Seoul, where the city's traditional crafts — ceramics, calligraphy, hanji paper, antique furniture — are sold from shops whose proprietors are often masters of the crafts they purvey. The main street, a pedestrian-friendly thoroughfare of galleries, tea houses, and restaurants, is touristy in the best sense: popular enough to be accessible, authentic enough to reward serious exploration. The side alleys, where small galleries show contemporary Korean art and tea houses serve infusions of omija (five-flavour berry) in rooms of polished wood and paper screens, are where Insadong's true treasures lie.
+
+Bukchon Hanok Village, between the two palaces, is a neighbourhood of some 900 traditional Korean houses — hanok — that have been preserved and, in many cases, restored to their Joseon-era appearance. The hanok, with their grey-tiled roofs curving upward at the eaves, their wooden pillars, and their internal courtyards, represent a residential architecture of extraordinary elegance and practicality: the ondol under-floor heating system, still in use today, was keeping Korean houses warm centuries before European homes had anything comparable. Many of the hanok are still private residences; walk the narrow lanes quietly and respectfully, and remember that the elderly woman sweeping her courtyard is not a museum exhibit.
+
+## Myeongdong and the Beauty Empire
+
+Myeongdong is Seoul's commercial heart — a dense grid of cosmetics shops, fashion boutiques, department stores, and street-food stalls that throbs with the energy of a city that has turned shopping into a competitive sport. The Korean beauty industry, which has more or less conquered the global skincare market, is headquartered here: Innisfree, Laneige, Sulwhasoo, Missha, and a dozen other brands operate flagship stores where the sales assistants wear headsets, the testers cover every available surface, and the sheet masks — Korea's great gift to skincare — are sold in quantities that suggest they are a staple food group.
+
+The street food of Myeongdong is a parallel attraction. Stalls sell tteokbokki (cylindrical rice cakes in a fiery red chilli sauce), hotteok (sweet pancakes filled with brown sugar and nuts), and tornado potatoes — a spiral-cut potato on a stick, fried and dusted with chilli powder — that are entirely irresistible. The dining in Myeongdong's restaurants, from Korean barbecue to fried chicken to the legendary Myeongdong Kyoja (a noodle restaurant that has been serving the same kalguksu — knife-cut wheat noodles in chicken broth — since 1966), rewards the hungry shopper with a stamina that mere sightseeing does not require.
+
+## The Korean Food Renaissance
+
+Korean cuisine — hansik — has, in the past decade, emerged from the shadow of its Japanese and Chinese neighbours to claim its place as one of the great culinary traditions of Asia. The foundation of every Korean meal is banchan — the small side dishes that arrive before the main course and cover the table in a mosaic of colours, textures, and fermented flavours. Kimchi, the most famous banchan, is a universe in itself: over 200 documented varieties, from the classic baechu (napa cabbage) to kkakdugi (cubed radish) to the exquisite bossam kimchi of the northern regions, each one a different expression of the Korean genius for fermentation.
+
+Korean barbecue — gogigui — is the experience that most visitors seek out, and Seoul delivers it at every price point. The premium Hanwoo beef, Korea's indigenous cattle breed, compares favourably with Japanese wagyu — less extravagantly marbled but more intensely beefy, with a flavour that lingers on the palate long after the last piece has been grilled and wrapped in a lettuce leaf with ssamjang (fermented soybean paste) and a slice of raw garlic. The best Hanwoo can be found at specialist restaurants like Born and B in Cheongdam-dong, where the beef is dry-aged in-house and the grilling is done over binchotan charcoal.
+
+At the more accessible end of the spectrum, the gamjatang (pork-bone soup) joints of Mapo-gu, the samgyeopsal (pork belly) restaurants of Hongdae, and the fried chicken and beer — chimaek — establishments that blanket the city are reminders that Korean cuisine is, at its core, democratic: designed to be shared, enjoyed loudly, and accompanied by copious quantities of soju, the clear, slightly sweet spirit that is Korea's national drink.
+
+[[PHOTO:landscape|Korean barbecue — thin slices of Hanwoo beef sizzling on a tabletop grill, banchan dishes arrayed around the grill in a mosaic of colours, a bottle of soju and glasses for sharing, the smoke rising into a metal hood above]]
+
+## Hongdae and Gangnam: The Two Faces of Seoul Nightlife
+
+Hongdae, the district around Hongik University, is Seoul's youth-culture capital — a district of indie music clubs, street performances, vintage shops, and themed cafes (cat cafes, dog cafes, raccoon cafes, and the inevitable K-pop cafes) that hums with the energy of a student population on permanent creative overdrive. The streets on a weekend evening are a carnival of buskers — dance troupes, acoustic guitarists, rap battlers — drawing crowds that shift and reform like flocks of starlings.
+
+Gangnam, by contrast, is Seoul's wealth and aspiration, rendered in glass and marble. The district that Psy's 2012 earworm made globally famous is the centre of Korea's luxury industry — flagships of Chanel, Hermès, and Louis Vuitton line the streets, and the plastic surgery clinics for which Seoul is (in)famous cluster around Apgujeong Station. The nightlife here is more polished, more expensive, and correspondingly more exclusive: cocktail bars where the bartenders wear white jackets and the ice is carved into spheres of perfect clarity, clubs where the door policy is mysterious and absolute.
+
+[[TIP:Navigating Seoul|🚇]]
+Seoul's subway system is one of the world's best — clean, efficient, and comprehensively signed in English. Get a T-money card at any convenience store; it works on subways, buses, and even in taxis. The subway app (KakaoMetro or Naver Map — Google Maps is, mysteriously, less reliable in South Korea) will plan your route to the minute. Taxis are plentiful and inexpensive by global standards; the KakaoTaxi app summons them with the ease of Uber.
+[[/TIP]]
+
+[[DIVIDER]]
+
+## Frequently Asked Questions
+
+When is the best time to visit? April through June (spring) and September through November (autumn) offer the most pleasant weather and the most beautiful light. Cherry blossoms bloom in early April — the Yeouido Spring Flower Festival draws enormous crowds. Autumn brings golden ginkgo trees and crisp, clear days. Summer (July-August) is hot, humid, and punctuated by monsoon rains. Winter (December-February) is cold and dry, but the city is quiet, the hotteok (sweet pancakes) taste better in the cold, and the palace snowscapes are magical.
+
+How many days do I need? Four full days is a solid introduction: one for the palaces and Insadong, one for Bukchon, Myeongdong, and the markets, one for Hongdae, Gangnam, and contemporary Seoul, and one for a day trip — either to the DMZ (a sobering, essential experience) or to the fortress city of Suwon. Five to seven days allows for a deeper culinary exploration and day trips to the mountains that surround the city.
+
+Do I need to speak Korean? No — English signage is pervasive, and younger Koreans generally speak at least basic English. But a few phrases — annyeong haseyo (hello), kamsahamnida (thank you), juseyo (please) — will be warmly received, and the effort, however imperfect, is always appreciated.
+
+Is Seoul expensive? By Asian standards, moderate. A Korean barbecue dinner for two costs ₩40,000-80,000. A bowl of naengmyeon (cold noodles) costs ₩8,000-12,000. A luxury hotel room costs ₩300,000-800,000; a comfortable mid-range hotel, ₩100,000-200,000. Compared to Tokyo, Seoul is a bargain. Compared to Southeast Asia, it is expensive. The value for money, across the board, is exceptional.
+
+What about the DMZ? The Korean Demilitarised Zone, approximately an hour north of Seoul, is one of the most surreal and sobering destinations in the world. Visits must be arranged through an approved tour operator; book several days in advance, bring your passport, and dress conservatively (no shorts, no ripped jeans, no clothing with political messages). The experience — standing in a small blue building that straddles the border, looking across at a North Korean guard who is looking back at you — is one you will carry for the rest of your life.
+
+[[PHOTO:full-width|Seoul from Namsan Tower at night — the city spread beneath you in a glittering carpet of lights that stretches to every horizon, the Han River a ribbon of darkness winding through the illuminated grid, the peaks of Bukhansan invisible in the dark, the feeling, unmistakable, of standing at the centre of a city that is still, after all these centuries, just getting started]]
+`;
+
+export const articleSections = [];

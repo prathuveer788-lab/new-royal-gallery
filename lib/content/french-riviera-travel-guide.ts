@@ -1,0 +1,67 @@
+export const articleContent = `
+The French Riviera — the Côte d'Azur — is not, strictly speaking, a destination. It is an idea. A strip of Mediterranean coastline that stretches from Menton, at the Italian border, to Saint-Tropez and beyond, it has been, for over a century, the summer playground of the international elite: the Russian grand dukes and British aristocrats who built its first villas in the Belle Époque; the artists (Matisse, Picasso, Chagall, Léger) who came for the light and stayed for the landscape; the film stars who made Cannes synonymous with glamour; and the superyacht owners who have made the Bay of Cannes and the harbour of Saint-Tropez the most expensive parking spots on Earth.
+
+The light is the real luxury — that particular Mediterranean quality, a fusion of sea reflection and Southern latitude, that turns the sky to cobalt and the sea to turquoise and the white limestone cliffs to gold at sunset, the same light that seduced Matisse into painting a window in Nice and never leaving. Everything else — the three-starred restaurants, the palace hotels, the private beach clubs, the vintage Riva boats — is elaboration on a theme that was established by the sun and the sea before the first grand duke ever checked into the Negresco.
+
+[[PHOTO:wide|The Bay of Cannes from Le Suquet at golden hour — superyachts at anchor in the Mediterranean, the Esterel Massif blushing rose in the evening light, the Croisette a curving ribbon of palm trees and Belle Époque facades, the sky a vast canvas of gold, rose, and pale violet]]
+
+## Nice: The Queen of the Riviera
+
+Nice is the Riviera's capital — a city of 340,000 that has been attracting winter visitors since the eighteenth century, when British aristocrats discovered that the mild Mediterranean climate was kinder to their constitutions than the damp and cold of a London January. The Promenade des Anglais, the seafront boulevard that curves around the Baie des Anges in a four-mile arc, was their gift to the city — funded by the British community in the 1820s, it remains one of the world's great urban walks, and the experience of strolling it at sunset, with the Mediterranean on one side and the Belle Époque hotels on the other, is as close to perfection as a promenade can get.
+
+The Negresco, the grande dame of the Promenade, is a hotel that defies classification. Its pink dome and white facade have been Nice's most recognisable landmark since 1913, and its interior — a collection of art spanning five centuries, from Louis XIII furniture to contemporary sculpture — is a museum that happens to serve breakfast. The doorman, dressed in the traditional costume of the Époque (red breeches, white stockings, tricorne hat), is the most photographed man on the Riviera. The rooms are individually decorated — the Louis XIII suite, the Pompadour suite, the Montserrat Caballé suite (named for the soprano, who lived here for years) — and the Chantecler restaurant, with its two Michelin stars, is one of the finest on the coast.
+
+The Old Town — Vieux Nice — is a warren of narrow streets, baroque churches, and the best socca (chickpea-flour pancake, the city's signature street food) stalls outside the Cours Saleya market. The market itself, held every morning except Monday, is a riot of Provençal colour: olives, cheeses, spices, flowers, vegetables, and the socca vendors tending their griddles in the square. Monday transforms the market into a brocante — antiques, vintage clothing, bric-a-brac — that rewards the persistent browser.
+
+[[PHOTO:portrait|The Negresco at twilight — the pink dome glowing against a deepening Mediterranean sky, the Promenade des Anglais bustling with evening strollers, the doorman in his red breeches and tricorne hat greeting guests beneath the famous awning]]
+
+## Matisse and Chagall: The Light Made Permanent
+
+The Musée Matisse, in the Cimiez neighbourhood above Nice, houses the most important collection of the artist's work in the world — paintings, sculptures, drawings, and the famous cut-outs that he created in his final years, when illness confined him to his bed and he "painted with scissors" in explosions of colour and form that are among the most joyful works in the history of art. The museum, a seventeenth-century Genoese villa set in a park of olive trees, is as beautiful as its contents, and the view from the terrace — the city, the sea, the mountains — is the view that Matisse painted for decades.
+
+The Musée National Marc Chagall, a short walk away, holds the largest public collection of Chagall's work — including the seventeen monumental paintings of the Biblical Message, a cycle that the artist created in the 1950s and 1960s as his spiritual testament. The paintings — Moses receiving the tablets, Abraham and the three angels, the story of Exodus — glow with a colour that is uniquely Chagall's: the blue of memory, the red of passion, the gold of divine light. The concert hall, with its stained-glass windows designed by Chagall, hosts chamber music performances that are among the most atmospheric cultural experiences on the Riviera.
+
+[[PHOTO:landscape|The Musée Matisse — the Genoese villa's ochre facade framed by ancient olive trees, the Mediterranean visible from the terrace, the interior glowing with the colours that Matisse spent his life chasing — and, in this extraordinary building, caught]]
+
+[[QUOTE:When I realised I would see that light every morning, I could not believe my luck.|Henri Matisse|on the Côte d'Azur]]
+
+## Antibes and the Cap d'Antibes
+
+Antibes, twenty minutes west of Nice, is the Riviera's most charming town — a fortified medieval port with a yacht harbour, a daily market, and a Picasso museum housed in the Château Grimaldi, where the artist worked in 1946 and left behind a collection of ceramics, paintings, and drawings that he donated to the town. The view from the château's terrace — the sea, the mountains, the rooftops of the old town — is one of the finest on the coast.
+
+The Cap d'Antibes, the peninsula south of the town, is the Riviera's most exclusive address — a forest of umbrella pines, hidden villas, and the Hotel du Cap-Eden-Roc, which has been the standard-bearer for Riviera luxury since it opened in 1870. The hotel, set in twenty-two acres of gardens on the tip of the cape, is a temple of understated opulence: the saltwater pool carved into the basalt cliffs, the cabanas where F. Scott Fitzgerald and his generation drank gin fizzes and wrote novels, the Eden-Roc restaurant (lunch on the terrace, with the Mediterranean at your feet, is a rite of passage for any serious visitor to the region), the guest list that has included every significant name of the twentieth century and a good portion of the twenty-first. If the Hotel du Cap is beyond your budget — and it will be, at €1,500-10,000 per night in season — lunch at the Eden-Roc Grill (€100-200 per person) is a more accessible taste of the legend.
+
+[[PHOTO:landscape|The saltwater pool at Hotel du Cap-Eden-Roc — carved into the basalt cliffs of the Cap d'Antibes, the Mediterranean stretching to the horizon, the diving board a simple wooden plank over the sea, the cabanas where Fitzgerald and Hemingway sharpened their gin fizzes and their prose]]
+
+## Saint-Paul-de-Vence and the Hill Towns
+
+Behind the coast, the hill towns of the arrière-pays — the "country behind" — offer a different Riviera. Saint-Paul-de-Vence, a perfectly preserved medieval village thirty minutes from Nice, is the most famous — and, inevitably, the most visited — but its fame is justified. The ramparts, the cobbled streets, the views of the Alps and the sea, and the extraordinary collection of modern art (Calder, Miró, Giacometti) at the Fondation Maeght have made it, for decades, the preferred destination of artists and art lovers who find the coast too crowded.
+
+The Colombe d'Or, the village's legendary inn, was where these artists paid for their meals with paintings — a Picasso here, a Léger there, a Braque in the corner — and the collection that accumulated on the walls is now one of the most valuable private art collections in Europe. Lunch on the terrace, beneath the Calder mobile and beside the Léger mural, is a cultural experience disguised as a meal. The food — simple Provençal cooking — is not the point. The art is the point. The setting is the point. The sense of inhabiting a moment in cultural history, when the greatest artists of the twentieth century gathered in a village auberge and argued about painting over daubes of beef and bottles of rosé — that is the point.
+
+## The Rosé and the Terroir
+
+The wines of Provence — the pale, bone-dry rosés that are the region's signature — have conquered the world, but they taste different here, drunk within sight of the vines that produced them. The Bandol appellation, west of Toulon, produces the region's most serious red wines (Mourvèdre-based, structured, age-worthy), and a tasting at one of the domaines — Tempier, Pibarnon, Ott, among others — followed by lunch on a terrace overlooking the vineyards, is an afternoon well spent.
+
+The rosé — served ice-cold, drunk with grilled fish, salade niçoise, or simply a view of the sea — is the Riviera's essential beverage, and the experience of taking a glass on a terrace at sunset as the Mediterranean turns from turquoise to silver to indigo is one that no amount of wealth can improve upon. The rosé costs a few euros. The view is free. The combination is priceless.
+
+[[TIP:Cannes Film Festival Strategy|🎬]]
+During the Cannes Film Festival (usually May), the town becomes a maelstrom of film industry professionals, paparazzi, and price inflation that makes the Riviera's normal expense look reasonable. If you are not attending the festival, avoid Cannes during these two weeks — the Croisette is closed to non-accredited pedestrians, the restaurants are booked solid, and the hotel rates triple. If you are attending, book everything a year in advance and dress as though you might be photographed at any moment, because you will be.
+[[/TIP]]
+
+[[DIVIDER]]
+
+## Frequently Asked Questions
+
+When is the best time to visit? May through June and September through October offer the most pleasant weather (warm but not hot, 22-28°C) and the smallest crowds. July and August are peak season — hot, crowded, and astronomically expensive — but the energy is extraordinary if you enjoy spectacle. The Cannes Film Festival (May) and the Monaco Grand Prix (late May) are thrilling but require advance planning. Winter is mild and quiet, with many hotels and restaurants operating at reduced capacity.
+
+How do I get around? A car is essential for exploring the hill towns and the coastline at your own pace. The coastal roads — the Corniche roads between Nice and Menton, particularly the Grande Corniche — are among the most spectacular drives in Europe. In summer, traffic on the coast road between Nice and Cannes is appalling; the train (TER, 30 minutes) is a saner option.
+
+Is the Riviera expensive? At the luxury end, among the most expensive destinations in Europe. At the mid-range, comparable to any major Mediterranean resort. A three-starred meal: €300-600 per person. A bistro lunch: €40-60. A glass of rosé at a beach club: €15-25. The same rosé from a village épicerie, drunk on a public beach: €5. The Riviera rewards those who know where to spend and where to save.
+
+Saint-Tropez or Cannes? Saint-Tropez for the beach clubs, the nightlife, and the spectacle of seeing and being seen. Cannes for the Belle Époque architecture, the film festival, and a slightly more mature atmosphere. Both are magnificent. Both are suffocating in high summer. Neither is the "real" Riviera — that lives in the hill towns, the fishing villages, and the quiet coves where the superyachts do not anchor.
+
+[[PHOTO:full-width|The Mediterranean from the Grande Corniche at sunset — the sea a sheet of hammered gold stretching to the horizon, the red rocks of the Esterel glowing in the last light, the lights of Cannes beginning to glitter in the distance, the air warm and still and scented with pine and salt, the Riviera doing what it has done for a century and a half — being the most beautiful coastline in Europe, and making it look effortless]]
+`;
+
+export const articleSections = [];

@@ -1,13 +1,30 @@
 import Link from "next/link";
+import { allArticles } from "@/lib/travel-articles";
 
-const featuredStories = [
-  { title: "The Golden Thread: Royal Patronage & Artisan Heritage", summary: "How royal courts throughout Indian history supported and elevated artisanal crafts — tracing traditions from origins to contemporary practice through interviews with master artisans and archival photography.", date: "May 6, 2026", readTime: "15 min read", category: "Editorial Photography" },
-  { title: "Courtly Splendor: Palaces, Processions & Patronage", summary: "An evocative journey through ceremonial rituals and architectural spectacles that shaped royal identity across South Asia, from gilded throne rooms to procession routes.", date: "May 10, 2026", readTime: "12 min read", category: "Historical Narrative" },
-  { title: "The Archive Awakens: AI and the Future of Cultural Memory", summary: "How artificial intelligence is transforming heritage preservation — from digital reconstruction of lost monuments to interactive conversations with historical archives.", date: "June 2, 2026", readTime: "18 min read", category: "Technology & Heritage" },
-  { title: "Whispers of the Zenana: The Hidden Lives of Royal Women", summary: "Uncovering the private worlds of royal women through architecture, art and oral histories — from jali-screened balconies to the inner courtyards of Mughal palaces.", date: "June 20, 2026", readTime: "20 min read", category: "Historical Research" },
-  { title: "Amber Fort: Jaipur's Living Crown", summary: "The architectural brilliance and untold stories behind one of India's most iconic structures — exclusive photography and historical narrative from our Summer 2026 editorial feature.", date: "July 1, 2026", readTime: "12 min read", category: "Cover Story" },
-  { title: "Digital Twins: Rebuilding Heritage in Pixels", summary: "High-fidelity 3D replicas of heritage sites captured with photogrammetry and LiDAR — how technology ensures monuments survive even if the physical structure decays.", date: "July 4, 2026", readTime: "14 min read", category: "Technology & Heritage" },
+const featuredStorySlugs = [
+  "umaid-bhawan-palace-jodhpur",
+  "rambagh-palace-jaipur",
+  "taj-lake-palace-udaipur",
+  "kyoto-travel-guide",
+  "amalfi-coast-travel-guide",
+  "sydney-travel-guide",
 ];
+
+const featuredStories = featuredStorySlugs
+  .map((slug) => allArticles.find((article) => article.slug === slug))
+  .filter((article): article is (typeof allArticles)[number] => Boolean(article))
+  .map((article) => ({
+    slug: article.slug,
+    title: article.headline,
+    summary: article.subtitle,
+    date: new Date(article.publishedDate).toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    }),
+    readTime: article.readTime,
+    category: article.category,
+  }));
 
 const mediaPlatforms = [
   { title: "Magazine", desc: "Quarterly print", freq: "Quarterly" },
@@ -76,7 +93,7 @@ export default function JournalPage() {
                   </p>
                   <div className="flex items-center gap-3 pt-2">
                     <span className="text-xs text-neutral-400 font-light">{story.readTime}</span>
-                    <Link href="#" className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-amber-700 hover:text-amber-900 transition font-semibold border-b border-amber-300 pb-0.5">Read Story →</Link>
+                    <Link href={`/travel/${story.slug}`} className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-amber-700 hover:text-amber-900 transition font-semibold border-b border-amber-300 pb-0.5">Read Story →</Link>
                   </div>
                 </div>
               </article>
