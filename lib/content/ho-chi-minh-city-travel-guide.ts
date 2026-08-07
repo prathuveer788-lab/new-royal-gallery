@@ -1,0 +1,79 @@
+export const articleContent = `
+Ho Chi Minh City is still called Saigon by everyone who loves it, which is to say, almost everyone who lives there. The official name change of 1976, honouring the revolutionary leader who never lived to see reunification, is observed on maps, in government buildings, and in the airport code (SGN — a small but telling act of resistance). But in the cafés, the markets, the rooftop bars, and the millions of motorbikes that pulse through the city's streets like corpuscles in a vast circulatory system, it is Saigon — always Saigon — a name that carries the city's particular glamour, its complicated post-war history, and its irrepressible commercial energy.
+
+[[PHOTO:wide|The Saigon River at dusk from a rooftop bar in District 1 — the water reflecting the neon lights of the skyline, ferries crisscrossing the current, the city's millions of motorbikes reduced to a distant drone, the smell of grilling seafood drifting from a street-level restaurant seven floors below]]
+
+This is Vietnam's economic engine, a city of thirteen million that has transformed itself in a single generation from a war-ravaged capital of a defeated regime into one of Asia's most dynamic metropolises. The pace is faster here, the entrepreneurial energy more palpable, the streets more chaotic, the food sweeter and more assertive than in the northern capital. If Hanoi is Vietnam's head, Ho Chi Minh City is its beating, hungry, unstoppable heart.
+
+## District 1: The Colonial Memory
+
+District 1 is the historical core of the city, where the French colonial administration built its palaces, its cathedral, its post office, and its opera house — a tropical simulacrum of Paris rendered in ochre stucco and wrought iron, softened by the humidity and the intervening century. The buildings survive, handsomely, and they have been absorbed into the Vietnamese city that grew around them with a naturalness that would have surprised their architects.
+
+The Notre-Dame Cathedral Basilica, built between 1863 and 1880 with materials imported from France — the red bricks from Marseille, the stained glass from Chartres — stands at the head of the city's grandest square, its twin spires rising above the plane trees. It is currently undergoing a long-term renovation, and its facade is hidden behind scaffolding, but the surrounding square — with its statue of the Virgin Mary, its manicured gardens, and the Saigon Central Post Office adjacent — remains the city's most photogenic ensemble.
+
+The Central Post Office, designed by the same architect who gave Saigon its Municipal Theatre (now the Opera House), is a cathedral of communication — a vaulted hall of wrought-iron arches, antique telephone boxes, and two enormous maps of the colonial-era city painted on the walls. The natural light, filtered through the arched windows and the glass ceiling, bathes the interior in a golden glow that has not changed since the first letter was posted here in 1891. It is still a functioning post office, and the elderly clerks, stamping letters and weighing parcels with the deliberate grace of another century, are as much a part of the architecture as the ironwork.
+
+[[PHOTO:portrait|The interior of the Saigon Central Post Office — wrought-iron arches soaring above a vaulted hall, the golden light of late afternoon streaming through the arched windows, antique telephone boxes lining the walls, the clerks working with the deliberate grace of another century]]
+
+## The War Remnants Museum: A Necessary Confrontation
+
+The War Remnants Museum, on Vo Van Tan Street, is one of the most important — and most difficult — museums in the world. It tells the story of the American War (as it is known in Vietnam) from the Vietnamese perspective, and the experience is confronting by design. The exhibitions — photographs, military equipment, the "tiger cages" in which political prisoners were held — do not pretend to neutrality. This is a museum created by the victors, and the narrative it presents is unambiguous.
+
+The photographs are the museum's most powerful exhibits. The work of photojournalists — both Vietnamese and international, including Larry Burrows, Nick Ut, and Tim Page — documents the war with a rawness that, fifty years later, has lost none of its power. Ut's photograph of Kim Phuc — the nine-year-old girl running naked down a road, her skin peeling from napalm burns — is here, and it has not become easier to look at. The exhibition on Agent Orange, the defoliant that the US military sprayed over Vietnam's forests and that continues to cause birth defects in subsequent generations, is devastating but essential. You leave the museum in silence. You should.
+
+It is worth noting that the museum has been renamed several times — it was originally the "Exhibition House for US and Puppet Crimes," later the "Exhibition House for Crimes of War and Aggression" — and its current, more conciliatory name reflects Vietnam's pragmatic approach to the past. The war is history now. The future is what matters. But the history cannot be understood without standing in this building, looking at these photographs, and confronting what happened here within living memory.
+
+[[PHOTO:landscape|The War Remnants Museum courtyard — American military equipment parked beneath the shade of tropical trees, visitors moving quietly between the exhibits, the museum's pale yellow facade a reminder that terrible history is often housed in ordinary buildings]]
+
+[[QUOTE:You cannot understand Vietnam without understanding the war. And you cannot understand the war without standing in this museum, looking at these photographs, and asking yourself what you would have done.|The Royal Gallery Editorial]]
+
+## Ben Thanh Market and the Art of Haggling
+
+Ben Thanh Market, occupying an entire city block in the centre of District 1, is Ho Chi Minh City's most famous market and a rite of passage for every visitor. The wet market in the centre sells produce, meat, and seafood in a steamy chaos of fish guts and bargaining. The dry market around the perimeter sells everything else: textiles, clothing, lacquerware, coffee, spices, shoes, handbags, and souvenirs of every description, from the tasteful (hand-embroidered silk) to the bewildering (coconut-carved monkeys, T-shirts featuring Uncle Ho in a variety of improbable settings).
+
+The haggling culture of Ben Thanh is an elaborate dance. The first price the vendor quotes is the price for tourists who do not know better. The final price, arrived at after several rounds of negotiation, will be 30-50% lower. The key is to remain cheerful — this is a game, not a conflict — and to walk away if the price does not meet your expectation. Walking away is the universal signal that you have reached your limit, and it is remarkable how often a vendor's intransigence dissolves when the customer's back is turned.
+
+The food stalls in the market's interior serve lunch to office workers and market vendors from plastic stools arranged around steaming pots. The bun bo Hue (spicy beef and pork noodle soup from the central city of Hue) at one stall, the banh xeo (crispy turmeric pancake filled with shrimp and bean sprouts) at another — the food court at Ben Thanh is one of the city's best-value lunches, and the atmosphere, surrounded by the market's clamour, is an essential Saigon experience.
+
+[[PHOTO:wide|Ben Thanh Market at midday — the vast interior buzzing with commerce, bolts of silk and pyramids of lacquerware, vendors calling out prices in Vietnamese and English, the wet market's seafood section gleaming under fluorescent lights, the air thick with the smell of coffee, spices, and grilled meat]]
+
+## The Food of Saigon: Sweet, Bold, and Utterly Addictive
+
+Saigon's cuisine is the cuisine of the south — sweeter, bolder, more influenced by Chinese, Khmer, and French traditions than the austere cooking of the north. The pho here is different from Hanoi's: the broth is richer, the garnishes are more abundant (basil, bean sprouts, hoisin sauce, chilli), and the argument about which version is superior is one of Vietnam's enduring and unresolvable debates. The correct answer is that both are magnificent, but the heart wants what it wants.
+
+The city's signature dishes extend far beyond pho. Banh mi, the Vietnamese sandwich that is France's most enduring culinary legacy in Indochina, reaches its apotheosis in Saigon, where the bread is lighter and crisper and the fillings more varied — grilled pork, pâté, cold cuts, fried egg, the essential pickled daikon and carrot, cucumber, coriander, and the slash of Maggi seasoning sauce that ties it all together. Banh Mi Huynh Hoa, on Le Thi Rieng Street, is the city's most famous purveyor — a small storefront where the queue snakes out the door from opening until closing, and the sandwich, stuffed with a dozen different fillings, is a meal that requires both hands and all of your attention.
+
+Com tam — broken rice — is Saigon's humblest and most beloved dish, a street-food staple of fractured rice grains (historically the broken rice that was unsellable and was given to the poor, now a sought-after delicacy) topped with grilled pork chop, shredded pork skin, a steamed egg cake, and nuoc cham — the fish-sauce-based dipping sauce that is the foundation of Vietnamese cuisine. It is served from street stalls throughout the city, and the best versions — the pork marinated in lemongrass and fish sauce, the rice nutty and slightly chewy, the nuoc cham perfectly balanced between sweet, sour, salty, and spicy — are revelations.
+
+For the luxury diner, Saigon offers one of Asia's most exciting fine-dining scenes. Anan, in a narrow alley off Ton That Dam Street, is the city's first Michelin-starred restaurant — chef Peter Cuong Franklin's deconstructed Vietnamese cuisine (a banh xeo taco, a $100 banh mi with foie gras and black truffle, a pho tasting menu) is witty, technically brilliant, and deeply respectful of its source material. The restaurant occupies a five-storey shophouse with a rooftop bar — upstairs for cocktails after dinner is as close to a perfect Saigon evening as exists.
+
+[[QUOTE:Saigon is not a city you visit. It is a city you eat — one bowl of pho, one banh mi, one iced coffee at a time.|Anthony Bourdain|Parts Unknown]]
+
+## The Rooftop Bars: A City Seen from Above
+
+Saigon's rooftop bar scene is one of Asia's finest — a consequence of the city's vertical growth, its tropical climate, and its residents' insatiable appetite for socialising. The Saigon Saigon Bar, atop the Caravelle Hotel, was the favourite watering hole of the war correspondents who covered the conflict from Saigon, and its terrace, with views across the Opera House square, retains something of that era's louche glamour. The Chill Skybar, atop the AB Tower in District 1, draws a younger, flashier crowd — the cocktails are ambitious, the DJ booth thumps from dusk until late, and the 360-degree view takes in the Bitexco Financial Tower (the city's most distinctive skyscraper, its helipad jutting from the building's flank like an architectural afterthought) and the river beyond.
+
+But the essential Saigon rooftop experience is not the trendiest or the most expensive. It is the one where you find a seat at the edge of a terrace, order a Saigon beer — a cold, crisp lager that costs a fraction of the cocktails — and watch the city do what Saigon does best: move. The motorbikes, the river, the lights, the noise. The energy of thirteen million people building something new on the bones of something old. The sense that this city, having survived everything the twentieth century could throw at it, is now, finally, having its moment in the tropical sun.
+
+[[PHOTO:landscape|The Saigon skyline from a rooftop bar at blue hour — Bitexco Financial Tower's helipad jutting from its flank like a diving board into the void, the Saigon River a ribbon of silver beyond, the city's motorbikes weaving their eternal, intricate patterns in the streets below]]
+
+[[TIP:Saigon Strategy|🍜]]
+Embrace the motorbike. The Grab app (Southeast Asia's Uber) summons a motorbike taxi in minutes, and riding pillion through Saigon's traffic — the wind in your hair, the city rushing past at a distance of inches, the sense of having been absorbed into the city's bloodstream — is one of the great urban experiences in Asia. The fare is a fraction of a car taxi, and the duration of most journeys is shorter. Wear the helmet. Hold on. Trust the driver, who has been doing this since childhood. And never, under any circumstances, attempt to drive a motorbike in Saigon yourself unless you have a death wish and a very comprehensive insurance policy.
+[[/TIP]]
+
+[[DIVIDER]]
+
+## Frequently Asked Questions
+
+How many days do I need? Three full days is a solid introduction: one for the colonial District 1 landmarks and the War Remnants Museum, one for Ben Thanh Market, Cholon (Chinatown), and the street-food trail, and one for the museums, the rooftop bars, and the river. Four to five days allows for a day trip to the Cu Chi Tunnels (essential for understanding the war from the Vietnamese perspective) and the Mekong Delta.
+
+How does Saigon compare to Hanoi? Saigon is warmer, louder, faster, and more entrepreneurial. The food is sweeter and bolder. The people are more direct and more immediately warm. Hanoi is cooler, more reserved, more literary, more traditional. Vietnam's north-south cultural divide is real, and visiting both cities is essential to understanding the country.
+
+Is it safe? Yes, with the same caveats as Hanoi: pickpocketing and phone-snatching from motorbikes are the main risks. The traffic is the greatest danger — crossing the street requires the same steady, predictable pace as in Hanoi, though the motorbike density in Saigon is even higher.
+
+What is the best time to visit? December through April is the dry season, with the most comfortable temperatures and the least rain. May through November brings the monsoon — dramatic skies, sudden downpours, and heavy humidity — but the rain clears quickly and the cloud cover moderates the temperature. The wet season offers lower hotel rates and fewer tourists, and the city in the rain — the streets slick with water, the motorbike headlights reflecting in a thousand puddles — has a beauty all its own.
+
+[[PHOTO:full-width|Ho Chi Minh City at night from Bitexco Financial Tower — the city spread beneath you to every horizon, a carpet of neon and headlights and the ceaseless movement of thirteen million lives, the Saigon River a dark ribbon winding toward the South China Sea, the memory of war receding into the distance, the future arriving at a hundred kilometres an hour on the back of a Honda motorbike]]
+`;
+
+export const articleSections = [];

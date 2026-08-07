@@ -1,0 +1,112 @@
+// Full editorial content for Lalgarh Palace
+// Format: Markdown-like with [[PHOTO:...]] and [[QUOTE:...]] markers
+
+export const articleContent = `
+The Thar Desert does not announce itself. It simply begins — a subtle shift from scrubland to sand, from villages to vastness, from the familiar rhythms of the Gangetic plain to something older, harsher, and infinitely more beautiful. Bikaner, the northernmost city of Rajasthan, sits at the threshold of this transition: a city of red sandstone that seems to have been baked out of the desert itself rather than built upon it. And at its heart — architecturally, historically, spiritually — stands Lalgarh Palace, the greatest Indo-Saracenic building in northern Rajasthan and a monument to one of the most remarkable figures in Indian princely history.
+
+[[PHOTO:wide|Lalgarh Palace viewed from the formal gardens at dawn — the red sandstone facade glowing in first light, carved jali screens casting intricate shadow patterns across marble courtyards, peacocks crossing the immaculate lawns]]
+
+The palace was commissioned in 1902 by Maharaja Ganga Singh, the twenty-first ruler of Bikaner, and its construction would span twenty-four years — a timeline that speaks less to indolence than to ambition. Ganga Singh was not merely building a residence. He was building a statement. The castle of Junagarh, his ancestral fortress in the old city, had served the Rathore dynasty since 1594, but it was a medieval structure — cramped, defensive, ill-suited to the diplomatic and social requirements of a twentieth-century maharaja who moved easily between the courts of Rajputana and the drawing rooms of Edwardian London. Lalgarh would be different. It would honour Rajput tradition while embracing European modernity. It would be, in the words of its patron, "a palace worthy of a kingdom, and a kingdom worthy of its people."
+
+## The Architect and the Maharaja
+
+Ganga Singh chose Sir Swinton Jacob as his architect — the most inspired decision in the palace's history. Jacob was no ordinary colonial builder. For thirty years he had served as Executive Engineer of the Jaipur State, and in that capacity he had developed an architectural philosophy that was, for its time, almost radical: Indian buildings should look Indian. Not Indian in the superficial, orientalist sense of bulbous domes pasted onto European plans, but genuinely Indian — rooted in the traditions of Rajput, Mughal, and Gujarati architecture, adapted for modern use, executed with indigenous materials and craftsmanship.
+
+[[QUOTE:Sir Swinton Jacob did not impose European architecture on India. He persuaded Indian architecture to absorb European conveniences — a distinction that makes all the difference.|Historian Giles Tillotson]]
+
+The style Jacob pioneered, Indo-Saracenic, was the closest thing the British Raj ever produced to a genuine architectural synthesis. Lalgarh is its masterpiece. The red sandstone facade — the same desert stone used in Junagarh and Bikaner's magnificent fort — is carved into a composition that reads as Rajput from a distance but reveals, on closer inspection, a sophisticated fusion: Mughal arches framing European windows, Rajput jharokha balconies projecting from walls decorated in Art Nouveau floral patterns, carved jali screens filtering desert light through geometries that are simultaneously Islamic and modernist.
+
+[[PHOTO:portrait|The central facade — three storeys of carved red sandstone rising above formal reflecting pools, jharokha balconies and jali screens creating a composition of light, shadow, and intricate geometric pattern]]
+
+The construction employed over 2,000 stone carvers, masons, and artisans — many of them descendants of the craftsmen who had built Junagarh three centuries earlier. The sandstone was quarried from the same pits that had supplied Bikaner's fort. The marble was brought from Makrana, the same source as the Taj Mahal. The teak came from Burma. The craftsmanship was, by any standard, extraordinary: every column carved with a different pattern, every arch framed with a unique floral border, every ceiling a fresco of Rajput miniature painting rendered at architectural scale.
+
+## Ganga Singh: The Uncrowned King
+
+To understand Lalgarh is to understand Ganga Singh, and to understand Ganga Singh is to understand why Bikaner, alone among the minor Rajput states, wielded influence far beyond its size. The maharaja was born in 1880 and ascended the throne at the age of seven. He was educated at Mayo College, Ajmer — the "Eton of India" — and from his earliest years displayed the combination of intelligence, ambition, and political instinct that would make him, by the 1920s, the most influential Indian prince in the British Empire.
+
+His achievements were prodigious. He served on the Imperial War Cabinet during the First World War — the only Indian ruler to do so. He represented India at the Paris Peace Conference in 1919. He was a delegate to the League of Nations. He was knighted, promoted to full General in the British Army, and made a member of the Order of the Star of India. But his most lasting achievement was the transformation of Bikaner itself. He built the Ganga Canal, bringing water to a desert kingdom and transforming its agricultural economy. He built railways, hospitals, and schools. He abolished child marriage and promoted female education in a deeply conservative society. And through it all, he managed to maintain the respect of the British without ever becoming their servant — a balancing act that few Indian princes achieved.
+
+[[QUOTE:Ganga Singh was not merely the ruler of Bikaner. He was the uncrowned king of Rajasthan — a statesman whose influence reached from the Thar Desert to the chancelleries of Europe.|Lord Reading|Viceroy of India, 1921-1926]]
+
+Lalgarh was the physical manifestation of this ambition. Ganga Singh needed a palace that could host viceroys, maharajas, and foreign dignitaries with a grandeur that equalled anything in Jaipur or Jodhpur. And he succeeded. The palace's Durbar Hall, with its fifty-foot ceiling painted with scenes from the Ramayana and its walls lined with portraits of Bikaner's rulers, hosted state banquets for every Viceroy of India from Curzon to Mountbatten. The palace's guest suites were designed to accommodate visiting royalty with their own retinues — each suite a self-contained apartment with private kitchens, courtyard access, and the kind of attention to detail (brass plumbing, electric light, ceiling fans) that was, in 1920s Rajasthan, almost unimaginable.
+
+## The Architecture: A Walk Through Lalgarh
+
+The palace complex covers sixteen acres and is organised around three massive courtyards — a layout borrowed from traditional Rajput haveli architecture but executed at palatial scale. The first courtyard, the Mardana, was the public face of the palace: the Durbar Hall, the audience chambers, the reception rooms where the maharaja conducted the business of state. The second courtyard, the transitional space, housed the guest suites and the palace's administrative offices. The third courtyard, the Zenana, was the private domain of the royal women — inaccessible to outsiders, its balconies screened with particularly dense jali work that allowed the women to observe courtyard ceremonies without being observed themselves.
+
+The palace's most striking architectural feature is its treatment of light. The desert sun is brutal — unmediated by cloud cover for most of the year, it bleaches colour and flattens texture. Jacob's response was to design a building that collaborates with the light rather than fights it. The deeply recessed jharokha balconies, the projecting chhatris (cupolas) that crown every corner, the carved jali screens — all of these function as a three-dimensional lattice that transforms harsh desert sunlight into a constantly shifting chiaroscuro of light and shadow. Walk through Lalgarh at any hour of the day and the experience changes: the morning light catches the eastern jali screens in a blaze of gold, the afternoon sun throws the carved columns into dramatic relief, the evening light paints the red sandstone in every shade of amber, rose, and vermillion.
+
+[[PHOTO:landscape|The inner courtyard at midday — carved columns casting geometric shadows across marble floors, a central fountain playing softly, the red sandstone walls glowing in the fierce desert light filtered through centuries-old jali screens]]
+
+## The Museum Wing
+
+A significant portion of Lalgarh Palace now houses the Shri Sadul Museum, named for Ganga Singh's son Maharaja Sadul Singh, which occupies the palace's former guest wing. The museum is among the finest princely collections in Rajasthan — less crowded than the City Palace Museum in Udaipur, more comprehensive than the Mehrangarh Museum in Jodhpur, and unusually well-curated for a regional museum.
+
+The collection spans four centuries of Bikaner's history. The armoury display includes Mughal swords with jade handles inlaid with rubies, Rajput khandas (double-edged swords) with blades engraved with verses from the Durga Saptashati, and a collection of matchlock guns that were manufactured in Bikaner's own armouries — the city was, for centuries, a centre of weapons production for the Rajput states. The miniature painting gallery features works from the celebrated Bikaner school, which flourished under the patronage of Ganga Singh's predecessors and produced some of the most refined Rajput paintings of the eighteenth century — delicately coloured, exquisitely detailed, and notable for the prominence of female figures, particularly in depictions of the Krishna legend.
+
+The photographic archive is the museum's most affecting section. Glass-plate negatives and early albumen prints document the palace's construction, Ganga Singh's diplomatic travels, the state visits of viceroys, and the daily life of the royal household in the 1920s and 1930s. There are photographs of the maharaja with King George V at Buckingham Palace, with Winston Churchill at the Colonial Office, with the Shah of Persia at the League of Nations. There are photographs of the palace's kitchen staff preparing a state banquet for sixty, of the royal elephants being painted for a ceremonial procession, of the maharani in a chiffon sari receiving female guests in the zenana gardens. The cumulative effect is of a world preserved in amber — vanished, but recoverable through these silver images.
+
+[[PHOTO:portrait|The Shri Sadul Museum — a gallery of Rajput miniature paintings from the celebrated Bikaner school, delicately coloured depictions of courtly life and Krishna legends preserved in climate-controlled vitrines]]
+
+## Bikaneri Cuisine: The Desert's Kitchen
+
+The Bikaner region's culinary tradition is one of Rajasthan's most distinctive — shaped by the scarcity of the desert environment, refined by the wealth of the Bikaner court, and characterised by an ingenious use of dried ingredients, preserved foods, and slow cooking techniques. The palace's restaurant, which occupies the former royal dining chamber, is the most authoritative interpreter of this tradition.
+
+The signature dishes are unlike anything served in Jaipur or Udaipur. Bikaneri Bhujia — the crisp, spicy snack made from moth bean flour — was invented in Bikaner's royal kitchens in the nineteenth century and has since become ubiquitous across India, but the palace's version, made to the original recipe, is a revelation: ethereally light, delicately spiced, and bearing approximately as much resemblance to commercial bhujia as a hand-rolled truffle bears to a candy bar. Ker Sangri, the desert bean and berry preparation that is Rajasthan's most distinctive dish, is served here in its most authentic form — the berries and beans rehydrated overnight, cooked slowly with yoghurt, dried red chillies, and the wild desert spices that grow only in the Thar.
+
+[[PHOTO:landscape|The palace dining room — candlelit tables beneath frescoed ceilings, silver thalis bearing Bikaneri specialities: Ker Sangri, Gatte ki Sabzi, Dal Baati, and the palace's legendary Bikaneri Bhujia]]
+
+The thali experience is the most comprehensive introduction to Bikaneri cuisine — sixteen dishes served on a silver platter, each one representing a different aspect of the desert's culinary repertoire. It includes Papad ki Sabzi (crisp lentil wafers cooked in yoghurt gravy, a dish born of the need to create vegetables from non-perishable ingredients), Mangodi ki Sabzi (sun-dried lentil dumplings in a spiced tomato sauce), and the Bikaneri variant of Laal Maas — the fiery mutton curry made with Mathania chillies that is Rajasthan's signature dish, prepared here according to a recipe that Ganga Singh himself is said to have dictated to his khansama.
+
+Desserts are a particular strength of the Bikaneri kitchen — the desert's scarcity of fresh fruit and dairy having produced a tradition of preserved and fried sweets that is unique in India. The palace's Rasgulla, made from camel milk (Bikaner is one of the few places in India where camel milk is consumed), has a distinctive texture — firmer than its Bengali counterpart, with a subtle salinity that complements the saffron syrup. The Ghevar, a disc of deep-fried batter soaked in sugar syrup and topped with thickened milk and silver leaf, is prepared here with a density and richness that makes most versions of this Rajasthani classic taste, by comparison, as though they have been watered down.
+
+## The Hotel Today
+
+Lalgarh Palace is operated today as a heritage hotel, though the term feels insufficient. A portion of the palace remains the private residence of the Bikaner royal family — a reminder that this is not a museum but a living household. The hotel occupies approximately fifty rooms in the palace's guest wing and zenana quarters, and the experience of staying here is fundamentally different from that of the larger, more commercially oriented palace hotels of Jaipur and Udaipur.
+
+The rooms are not uniform. Some retain their original 1920s furniture — carved four-poster beds, Burmese teak wardrobes, Art Deco dressing tables. Others have been updated with more contemporary furnishings while preserving the architectural elements: the carved sandstone jharokhas, the frescoed ceilings, the marble floors. The bathrooms are a study in old-world plumbing — brass fittings, deep claw-foot tubs, water pressure that is adequate rather than forceful. This is not the place for travellers who require rainfall showers and electronic bidets. It is the place for travellers who understand that sleeping in a room where a maharaja once slept, beneath a ceiling painted by artists who trained their entire lives for the commission, is an experience that no modern renovation could improve.
+
+[[PHOTO:portrait|A Royal Suite bedroom — a carved four-poster bed draped in hand-block-printed cotton, frescoed ceiling overhead, French windows opening onto a private verandah overlooking the palace's formal gardens]]
+
+The service is warm, familial, and slightly eccentric — the hallmark of a palace that remains, in some essential sense, a home. The staff are drawn largely from families that have served the Bikaner royal household for generations. They know the palace's history not from training manuals but from their grandfathers' memories. The doorman's grandfather held the same post for Ganga Singh. The chef's great-grandmother cooked for the maharani's wedding banquet. This continuity — of people, of knowledge, of a particular kind of Rajasthani hospitality that cannot be taught, only inherited — is the palace's most precious asset.
+
+## Insider Tips
+
+[[TIP:Best Time to Visit|🌡️]]
+October through March offers the most comfortable climate for exploring Bikaner and the surrounding desert. December and January are the peak months, coinciding with the Bikaner Camel Festival — a spectacular two-day event of camel races, folk performances, and illuminated desert evenings. Book at least three months in advance if your dates align with the festival. The summer months (April to June) are fiercely hot, but the palace's thick sandstone walls provide natural cooling, and rates drop by up to 40 percent.
+[[/TIP]]
+
+[[TIP:Room Selection|🗝️]]
+Request a room in the original 1920s wing rather than the newer wing. The original wing has higher ceilings, more elaborate frescoes, and the carved jharokha balconies that are Lalgarh's architectural signature. Corner rooms have dual-aspect views and better airflow — a significant advantage in the desert climate. Avoid ground-floor rooms near the main courtyard, where foot traffic from museum visitors can be audible during daytime hours.
+[[/TIP]]
+
+[[TIP:Desert Excursion|🐪]]
+Book the palace's private desert safari — a half-day excursion into the Thar in a restored 1940s Willys jeep, culminating in a sunset dinner at a private dune camp. The experience is vastly superior to the commercial camel safaris offered in Jaisalmer: private, unhurried, and accompanied by a guide from the royal household who can narrate the desert's history and ecology with genuine expertise.
+[[/TIP]]
+
+[[DIVIDER]]
+
+## Frequently Asked Questions
+
+Is Lalgarh Palace worth the price?
+Yes, for the historically inclined traveller. Lalgarh offers something that the larger palace hotels cannot: authenticity. This is not a luxury resort that happens to occupy a heritage building. It is a heritage building that offers accommodation — and the distinction produces an experience that is richer, more textured, and more memorable than a conventional five-star stay. The rates are significantly lower than comparable palace hotels in Jaipur or Udaipur, and the value proposition is exceptional.
+
+How many nights should I stay?
+Minimum two nights. Three is ideal. Bikaner rewards unhurried exploration — the Junagarh Fort alone merits a half-day visit, and the palace museum deserves at least three hours. The surrounding Thar Desert offers exceptional wildlife viewing (the blackbuck sanctuary at Tal Chhapar, the migratory birds at Gajner), and a day's desert excursion is highly recommended. One night is insufficient for anything beyond a superficial encounter.
+
+What is the dress code?
+During the day, resort casual is appropriate throughout the property. For dinner in the palace restaurant, gentlemen are expected to wear a collared shirt and closed shoes; jackets are appreciated in the winter months (November to February) but rarely required. Bikaner is a conservative city — modest dress is appreciated in the public areas and museum, though pool attire is perfectly acceptable at the swimming pool.
+
+Is the palace suitable for children?
+Yes. The palace's sprawling courtyards, extensive gardens, and the adjoining museum provide ample territory for exploration. The staff are warm and welcoming toward young guests and will arrange child-friendly meals. The swimming pool, located in a walled garden, is family-friendly during daytime hours. That said, the palace does not offer dedicated children's programming — families seeking structured activities for young children may wish to consider a resort property.
+
+What is the best time of year to visit?
+November to February offers the ideal desert climate: daytime temperatures of 18-25°C, crisp, cool evenings, and clear, cloudless skies. The Bikaner Camel Festival in January is a highlight. March is warmer but still pleasant, with the added attraction of the desert in bloom — brief, fragile, and extraordinarily beautiful. April through June brings extreme heat (40-45°C), but the palace remains comfortable and rates are at their lowest. The monsoon (July to September) is brief in this part of Rajasthan and brings dramatic skies and the desert's brief, intense greening.
+
+What else should I see in Bikaner?
+The Junagarh Fort is one of Rajasthan's greatest and least-visited fortifications — a complex of palaces, courtyards, and temples built between 1588 and 1944 that encapsulates the entire architectural history of the Bikaner state. The Karni Mata Temple at Deshnoke, thirty kilometres from the city, is the famous "rat temple" — a unique and genuinely fascinating religious site where thousands of sacred rats (kabas) are venerated as reincarnations of Charan bards. The camel breeding farm, operated by the Indian Council of Agricultural Research, is the largest in Asia and offers insight into the animal that has defined desert life for millennia.
+
+[[PHOTO:full-width|Lalgarh Palace at sunset — the red sandstone facade illuminated by the last light of the desert day, carved cupolas and jharokha balconies silhouetted against a sky of amber, rose, and violet, the formal gardens in the foreground reflecting the day's final gold. Photographed by The Royal Gallery, November 2025]]
+`;
+
+export const articleSections = [];

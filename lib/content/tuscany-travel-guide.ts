@@ -1,0 +1,75 @@
+export const articleContent = `
+Tuscany is the most beautiful region in Europe, and it knows it. The knowing is not, as you might expect, insufferable. It is simply the quiet confidence of a place that has been inspiring art, literature, and gastronomy for so long that it has forgotten what it feels like to be unappreciated. The landscape — cypress-lined roads winding through wheat fields and vineyards, medieval towers on every hilltop, the distinctive cone of Monte Amiata on the southern horizon — is so precisely arranged that it seems designed by a painter with an immoderate love of geometry and a very generous patron. The painter, in this case, was a succession of Etruscan, Roman, medieval, and Renaissance civilisations, each one layering its vision onto the canvas of the Val d'Orcia, the Chianti hills, and the slopes of the Apennines. The result is not a region so much as an argument for the existence of beauty.
+
+Tuscany is not a single destination. It is a dozen different regions, each with its own identity, and the luxury traveller's challenge is not deciding what to see — that is impossible in a single visit — but accepting that you will not see everything, and that this is, in its way, a liberation. You are not here to check off a list. You are here to immerse yourself in the landscape that invented the good life, and the good life, as Tuscans understand it, cannot be rushed.
+
+[[PHOTO:wide|Val d'Orcia at dawn — cypress-lined roads winding through wheat fields and vineyards, the distinctive cone of Monte Amiata in the distance, the entire landscape a Renaissance painting come to life in shades of gold, green, and the pale blue of a Tuscan morning]]
+
+## Florence: The Cradle of the Renaissance
+
+Florence is the region's capital and its cultural heavyweight — a city of such concentrated artistic brilliance that it can feel, after a day of churches, museums, and frescoes, like an assault on the senses. The Uffizi Gallery alone, with its Botticellis, Leonardos, and Caravaggios, is a collection that most nations would envy. The Accademia, home to Michelangelo's David, draws queues that stretch around the block. The Duomo, Brunelleschi's dome — an engineering feat so audacious that its construction techniques remained mysterious for centuries — dominates the skyline. And the city itself, a compact warren of medieval streets and Renaissance palazzi, is a museum without walls.
+
+The luxury traveller's Florence requires strategic planning. Book Uffizi and Accademia tickets weeks in advance, for the earliest time slot available, to experience the galleries in relative peace. Hire a private guide — the city's art historians are among the world's finest — to navigate the collections with context and insight. And reserve at least one evening for the Oltrarno, the "other side" of the Arno River, where the artisan workshops (goldsmiths, bookbinders, marblers) have been plying their trades since the Renaissance, and where the restaurants are less touristy and more authentic than those clustered around the Duomo.
+
+The Four Seasons Firenze, occupying a converted Renaissance palace and a former convent connected by a private park, is the city's finest hotel — a masterpiece of restoration that combines the gardens of a Tuscan villa with the location of an urban palace. The Michelin-starred restaurant, Il Palagio, serves Tuscan cuisine of extraordinary refinement. For a more intimate experience, the Portrait Firenze, on the banks of the Arno overlooking the Ponte Vecchio, offers suites with kitchenettes and a rooftop terrace with views that stretch from the Duomo to the Tuscan hills.
+
+[[PHOTO:portrait|The Duomo at sunrise — Brunelleschi's dome rising above the terracotta rooftops of Florence, the marble facade of the cathedral catching the first light, the city still sleeping, the Piazza del Duomo empty of all but the pigeons and the early-rising Florentines heading to work]]
+
+[[QUOTE:Florence is a city that makes you feel simultaneously inspired and inadequate — which is, perhaps, the most honest response to genius.|The Royal Gallery Editorial]]
+
+## Siena and the Palio
+
+Siena, an hour south of Florence, is Florence's medieval rival — a city of brick, not marble; of steep, winding streets, not grand piazzas; of a civic pride that is expressed in the Palio, the bareback horse race that has been run in the Piazza del Campo twice each summer since the Middle Ages. The Campo, a sloping, shell-shaped piazza that is one of the most beautiful public squares in the world, is Siena's heart. The Palazzo Pubblico, with its soaring Torre del Mangia, dominates one end. The surrounding cafés, where you can sit for hours nursing a cappuccino and watching the city's life unfold, are the Campo's greatest gift to the unhurried traveller.
+
+The Siena Duomo, a striped cathedral of black and white marble, is one of Italy's great churches — an interior of such richness that it rivals St Peter's in Rome, with floors inlaid with fifty-six marble panels depicting biblical scenes and allegories, a Piccolomini Library frescoed by Pinturicchio, and a pulpit carved by Nicola Pisano. The marble floor is uncovered only for a few weeks each year, usually in late summer; if your visit coincides, consider yourself fortunate.
+
+The Palio, held on July 2 and August 16, is not a tourist spectacle. It is a civic ritual, a celebration of the seventeen contrade (neighbourhoods) into which Siena is divided, and a competition of such fierce pride that grown men weep when their contrada's horse — blessed in the contrada's church, ridden bareback by a jockey who may not survive the race's notorious turns — crosses the finish line first. Tickets for the Campo's balconies sell out a year in advance, but standing in the centre of the piazza during the Palio, surrounded by Sienese in their contrada scarves, is one of Italy's most intense cultural experiences.
+
+[[PHOTO:landscape|Piazza del Campo at sunset — the shell-shaped piazza glowing in the golden light, the Torre del Mangia casting its long shadow across the brick, the cafés filling with locals taking their evening aperitivo, Siena doing what Siena has done since the twelfth century]]
+
+## The Chianti and the Wine Roads
+
+The Chianti region, between Florence and Siena, is the Tuscany of the imagination — a landscape of vineyards, olive groves, and hilltop villages where the local butcher also sells wine and the baker's schiacciata (Tuscan flatbread) is still warm from the wood-fired oven. The wine — Chianti Classico, marked by the black rooster seal of the original production zone — ranges from the simple, cheerful bottles served in trattorias for a few euros to the structured, age-worthy Riservas and Gran Seleziones that are among Italy's finest red wines.
+
+The essential Chianti experience is a day spent driving the SR222, the Chiantigiana road that winds from Florence to Siena through the heart of the region. The drive takes about two hours without stops — and about ten hours with them, because every village (Greve, Castellina, Radda, Gaiole) demands exploration, every vineyard has a tasting room, and every trattoria offers a lunch that you will remember for years. Hire a driver — the roads are winding, the wine is generous, and the Italian police take drink-driving seriously.
+
+The Antinori nel Chianti Classico winery, a masterpiece of contemporary architecture buried into a hillside near Bargino, is the region's most ambitious wine-tourism destination. The Marchesi Antinori have been making wine since 1385, and their new facility — opened in 2012 — is a museum, a tasting centre, a restaurant, and a working winery in a building whose terracotta curves echo the contours of the surrounding hills. The rooftop restaurant, Rinuccio 1180, serves Tuscan classics with a view of the vineyards from which the wine in your glass came.
+
+[[PHOTO:wide|The Chianti hills at harvest time — rows of Sangiovese vines heavy with purple grapes, the distinctive black rooster sign of the Chianti Classico consortium marking a vineyard entrance, the towers of San Gimignano visible on the distant horizon, the air thick with the smell of fermenting grape must]]
+
+## Val d'Orcia: The Landscape of the Ideal
+
+The Val d'Orcia, a UNESCO World Heritage Site south of Siena, is the most beautiful valley in Tuscany — which is to say, the most beautiful valley in Italy, and therefore a strong candidate for the most beautiful valley in the world. The cypress trees that line the winding roads were planted by Renaissance landowners who understood that a landscape could be art. The wheat fields, the vineyards, the isolated farmhouses on hilltops — every element has been arranged, over centuries of cultivation, into a composition of such harmonious beauty that it has become the definitive image of Tuscany in the global imagination.
+
+The towns of the Val d'Orcia — Pienza, Montalcino, Montepulciano, San Quirico — are jewels of Renaissance urban planning, each one a perfect ensemble of cobbled streets, a central piazza, and views of the valley that make you want to cancel your onward travel plans and stay forever. Pienza, rebuilt by Pope Pius II in the 1450s as his ideal city, is the most complete expression of Renaissance urbanist theory in existence — a tiny town of perfect proportions, with a cathedral, a papal palace, and a town hall arranged around a piazza that is as beautiful as any in Italy.
+
+Montalcino is the home of Brunello, Tuscany's greatest red wine, made from a local clone of the Sangiovese grape grown on the hillsides around the town. The Brunello producers — Biondi-Santi, Soldera, Casanova di Neri, Poggio di Sotto — are legendary names in the wine world, and tastings at their cellars require advance booking and a willingness to pay prices that reflect the wine's status. A bottle of Brunello from a great vintage, opened at a trattoria in Montalcino with a plate of pici (thick, hand-rolled pasta) with wild boar ragu, is one of the great dining experiences of Tuscany.
+
+[[PHOTO:landscape|The cypress-lined road to Pienza at golden hour — the trees casting long shadows across the wheat fields, the Renaissance town a perfect profile on the hilltop, the Val d'Orcia stretching away in folds of gold, green, and the pale blue of distant hills]]
+
+## The Tuscan Table: Food as Philosophy
+
+Tuscan cuisine is the simplest and most rigorous in Italy — a cuisine of bread, olive oil, beans, vegetables, and the less-expensive cuts of meat, transformed by centuries of peasant ingenuity into dishes of extraordinary depth. The bistecca alla fiorentina — a thick-cut T-bone steak from the Chianina breed of cattle, grilled over charcoal and served rare — is the most famous dish, and the best versions (at Mario's in Florence, at Dario Cecchini's restaurants in Panzano) are revelations of what beef can be.
+
+But the soul of Tuscan cooking lies elsewhere: in the ribollita (a bread-and-vegetable soup, reheated — "reboiled" — until it achieves a dense, almost pudding-like consistency), the pappa al pomodoro (tomato and bread soup, the humblest dish in the repertoire and one of the best), the fagioli al fiasco (beans cooked overnight in a flask set in the embers of the dying fire), and the crostini neri (toasts spread with a pâté of chicken livers, capers, and anchovies). These are dishes born of poverty, refined by practice, and elevated by the extraordinary quality of Tuscan raw materials — the olive oil, peppery and green, that is the foundation of every recipe; the bread, saltless and dense, that is the region's most distinctive contribution to world baking; the vegetables and legumes that grow in soil enriched by centuries of cultivation.
+
+[[TIP:Tuscan Pacing|🚗]]
+Tuscany rewards slow travel. The distances between towns are short — Florence to Siena is an hour by car — but the density of beauty along every road is high enough that a sixty-kilometre drive can consume an entire day. Do not attempt to see Florence, Siena, the Chianti, the Val d'Orcia, and the coast in a single week. Choose two bases — Florence for the urban experience, a villa or agriturismo in the countryside for the landscape — and explore from each one without bolting across the region. Tuscany is not going anywhere.
+[[/TIP]]
+
+[[DIVIDER]]
+
+## Frequently Asked Questions
+
+When is the best time to visit? April through June and September through October offer the most pleasant weather and the fewest crowds. July and August are hot, crowded, and — in the cities — oppressively so, though the coast is glorious in summer. Winter (November through March) is cold and quiet, with many rural restaurants and wineries closed, but Florence's museums are blissfully empty.
+
+How many days do I need? A week is the practical minimum for a first visit: three days in Florence, two in Siena, and two in the countryside. Ten days to two weeks allows for a deeper exploration of the Chianti and Val d'Orcia, plus time for the Lucca/Pisa area or the Maremma coast. Three weeks is ideal for a comprehensive survey of the region from the Apennines to the sea. A lifetime is the minimum for knowing Tuscany well.
+
+Should I rent a car? Yes — a car is essential for exploring the countryside, the wine roads, and the hill towns. But park it at the edge of every town and walk within the walls; the medieval centres of Florence, Siena, and the smaller towns are either pedestrianised or so narrow that driving is impossible. Hire the smallest car that fits your luggage; the roads are narrow, and the parking spaces are narrower.
+
+What should I drink? Chianti Classico for everyday excellence. Brunello di Montalcino and Vino Nobile di Montepulciano for special occasions. Vernaccia di San Gimignano for white wine. Vin Santo with cantucci (almond biscuits) for dessert. And the local water — Tuscany's tap water is excellent, which is more than can be said for most regions of Italy.
+
+[[PHOTO:full-width|Val d'Orcia at sunset from the walls of Montalcino — the valley spread beneath you in a patchwork of vineyards, wheat fields, and olive groves, the cypresses casting long shadows across the golden land, the sky a theatre of rose, gold, and violet, the scene unchanged in its essentials since the Renaissance painters set up their easels on this same hilltop and tried, with varying degrees of success, to capture something that no paint has ever quite been able to hold]]
+`;
+
+export const articleSections = [];

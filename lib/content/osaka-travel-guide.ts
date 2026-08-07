@@ -1,0 +1,77 @@
+export const articleContent = `
+Osaka does not try to impress you. Tokyo labours under the impossible weight of being the world's largest, most technologically advanced, most Michelin-starred city. Kyoto, an hour to the northeast, has been polishing its cultural treasures for twelve centuries and expects you to appreciate the effort. Osaka, by contrast, simply is. It is Japan's most exuberant city, the nation's culinary capital, and a place whose inhabitants have elevated eating, drinking, and enjoying oneself into a civic philosophy. Kuidaore — literally "eat until you drop" — is the Osakan credo, and the city lives by it with a sincerity that borders on the religious.
+
+[[PHOTO:wide|Dotonbori at night — the neon-lit canal district blazing with colour, the Glico Running Man sign glowing above the bridge, the giant mechanical crab of Kani Doraku moving its legs above a surging crowd of diners, drinkers, and revellers]]
+
+The city's personality is the product of geography and history. Osaka was Japan's merchant capital — the city where rice was traded, where fortunes were made and lost, where the samurai elite of Edo (Tokyo) were viewed with the suspicion that commercial people have always reserved for the landed gentry. The Osakan stereotype — outgoing, pragmatic, obsessed with food and humour — is rooted in this mercantile identity. This is not a city of temples and tea ceremonies (though it has those too, and very fine ones). It is a city of neon, noise, and the best street food in Japan — a city where the serious business is pleasure, and everyone seems to have understood the assignment.
+
+## Dotonbori: The Beating Heart of Kuidaore
+
+Dotonbori is Osaka's sensory apex — a canal lined with restaurants, bars, and entertainment venues whose facades compete in a decades-long arms race of neon signage and three-dimensional advertising. The Glico Running Man, a giant illuminated figure above the Ebisubashi Bridge, has been the district's landmark since 1935. The giant crab of Kani Doraku, its mechanical legs moving with a slow, hypnotic rhythm, has been luring diners since 1960. The blowfish lanterns, the octopus balls, the gyoza signs — Dotonbori is a museum of Japanese commercial art, and the admission is free.
+
+The food of Dotonbori is Osaka's soul, expressed in batter and sauce. Takoyaki — spheres of wheat batter filled with diced octopus, pickled ginger, and spring onion, fried in a moulded griddle and painted with takoyaki sauce and mayonnaise — are the city's signature street food. The best are sold from stalls with names known to every Osakan: Kukuru, Takoyaki Juhachiban, Akaoni. Eat them immediately — the interior, molten and almost liquid, is at its peak for approximately ninety seconds after leaving the griddle, and a takoyaki that has been sitting in a takeaway box for five minutes is a takoyaki that has been betrayed.
+
+Okonomiyaki — the savoury pancake whose name means "cooked as you like it" — is Osaka's other culinary gift to the world. A batter of flour, eggs, and shredded cabbage, enriched with whatever the diner fancies (pork belly, squid, shrimp, cheese, mochi), cooked on a teppan griddle and finished with okonomiyaki sauce, mayonnaise, bonito flakes, and aonori seaweed powder — it is Japanese comfort food at its most glorious. The best okonomiyaki restaurants — Mizuno, Chibo, Yukari — have queues that stretch down the street, and the wait, endured with a beer from a nearby vending machine, is part of the ritual.
+
+[[PHOTO:portrait|Takoyaki being prepared at a Dotonbori street stall — the batter sizzling in its moulded griddle, the vendor flipping each sphere with the practised speed of decades, the finished product drizzled with sauce and mayonnaise in the distinctive crosshatch pattern]]
+
+[[QUOTE:In Tokyo, people walk fast because they have places to be. In Osaka, people walk fast because the next meal is waiting.|Japanese proverb]]
+
+## Kuromon Market: Osaka's Kitchen
+
+If Dotonbori is Osaka's dining room, Kuromon Ichiba is its kitchen. The covered market, a 580-metre arcade of some 150 stalls, has been supplying Osaka's restaurants and home cooks since the Edo period. It is a sensory education in Japanese ingredients: tuna being carved into sashimi with swords of terrifying sharpness, sea urchins split open to reveal their orange roe, enormous crabs trussed and steaming, strawberries sold individually for prices that would shock anyone unfamiliar with Japanese fruit culture.
+
+The market is also one of Osaka's finest dining destinations. Stalls serve grilled scallops with butter and soy, skewers of Kobe beef, fresh oysters shucked to order, and the legendary uni ikura don — a bowl of rice topped with sea urchin and salmon roe that is, for the five minutes it takes to eat, the best thing you will taste all day. Go hungry. Go early — the market begins to close by late afternoon. And bring cash; most stalls do not accept cards.
+
+[[PHOTO:wide|Kuromon Market at midday — the arcade alive with shoppers and diners, tuna carved to order at one stall, steaming crabs at another, the air thick with the smell of grilled seafood, soy sauce, and the unmistakable energy of a market that has been feeding a city for four centuries]]
+
+## Osaka Castle and the Samurai Past
+
+Osaka Castle, rising from its moated platform in a vast public park, is the city's great historical monument. The original was built in 1583 by Toyotomi Hideyoshi, the peasant-turned-warlord who unified Japan before the Tokugawa shogunate sealed the country's borders. The current structure — a concrete reconstruction from 1931, renovated in the 1990s — is historically inauthentic but visually magnificent: a white-walled fortress with gilded roof ornaments, a museum of samurai armour and weapons within, and an observation deck on the eighth floor that offers panoramic views of the city.
+
+The castle's true pleasures are external. The moat, planted with cherry trees, is one of Japan's finest hanami (cherry-blossom viewing) sites in early April. The Nishinomaru Garden, on the castle's western side, is a 600-tree cherry orchard that transforms into a sea of pink in spring and, on spring evenings, is illuminated for yozakura — night-time cherry-blossom viewing. The juxtaposition of the ancient castle walls, the pink blossoms, and the glass towers of modern Osaka beyond the moat is a distinctly Japanese form of beauty: layered, temporal, aware of its own impermanence.
+
+## Shinsekai and the Nostalgia of the Future
+
+Shinsekai — the "New World" — was Osaka's attempt, in 1912, to build a district modelled on New York and Paris. The centrepiece was Tsutenkaku Tower, inspired by the Eiffel Tower, connected to a Luna Park amusement park that was, briefly, the largest in Asia. The amusement park closed in the 1920s, but the tower survived, rebuilt in 1956 after a fire, and the district around it evolved into Osaka's most eccentric neighbourhood — a working-class enclave of kushikatsu restaurants, shogi parlours, and an atmosphere of nostalgic decay that has become, in the twenty-first century, extraordinarily fashionable.
+
+Kushikatsu — skewered meat, seafood, and vegetables, breaded and deep-fried, served with a communal pot of dipping sauce — is Shinsekai's culinary contribution to Osaka's repertoire. The cardinal rule, posted in every kushikatsu restaurant: no double-dipping. The sauce has been accumulating flavour for decades, and your single dip is your sole opportunity to partake. The classic kushikatsu experience is a counter seat at Daruma, the district's most famous restaurant, where the battered skewers arrive hot from the fryer and the beer arrives cold from the tap, and the conversation — loud, unguarded, deeply Osakan — fills the small, smoke-stained room.
+
+[[PHOTO:landscape|Shinsekai at dusk — Tsutenkaku Tower glowing against a darkening sky, the neon signs of kushikatsu restaurants flickering to life, the streets filling with diners seeking crispy skewers and cold beer in Osaka's most atmospheric neighbourhood]]
+
+## The Culinary Depths: Beyond Street Food
+
+Osaka's gastronomic reputation extends far beyond its street food. The city has more Michelin-starred restaurants than any city in the world except Tokyo and Paris, and its kaiseki, sushi, and tempura establishments are of the highest order. But the city's most interesting dining experiences are in the mid-range: the chef-owned restaurants where a single artisan has been perfecting a single dish for decades.
+
+Hajime, in the Nishi-ku district, is Osaka's three-star kaiseki restaurant — chef Hajime Yoneda's plates are edible philosophy, each course a meditation on a theme (water, earth, time) executed with technical precision and emotional intelligence. Reservations are essential and difficult. Kigawa, in the Kita district, specialises in kushiage — the elevated, kaiseki-adjacent version of kushikatsu — with a tasting menu of twenty or more skewers, each fried to order and served with a specific sauce or salt. Taian, in the Umeda district, is a tempura counter of such refinement that the batter seems to have been painted onto the ingredients with a single-hair brush.
+
+But even at the casual end, Osaka's food culture is extraordinary. The city's ramen shops — particularly those serving the local speciality, tonkotsu-shoyu (pork-bone broth with soy sauce) — are destinations in their own right. The standing sushi bars beneath the Umeda Sky Building serve fish of startling quality at prices that seem like a mistake. The depachika — the basement food halls of department stores including Hankyu, Hanshin, and Daimaru — offer a survey of Japanese gastronomy that would take a year to exhaust, from French patisserie to Kyoto pickles to Hokkaido soft-serve ice cream.
+
+[[QUOTE:Osaka is not a city you visit for its beauty. You visit for its appetite — and you leave with your own permanently enlarged.|Matt Goulding|Rice, Noodle, Fish]]
+
+## Umeda and the Sky Building
+
+The Umeda district, Osaka's northern centre, is a forest of glass towers, shopping malls, and underground pedestrian cities that rival anything in Tokyo for scale and complexity. The Umeda Sky Building, designed by Hiroshi Hara and completed in 1993, is the district's architectural highlight — two forty-storey towers connected at the top by the Floating Garden Observatory, a doughnut-shaped observation deck that offers 360-degree views of the city and, on a clear day, the distant silhouette of Awaji Island in the Seto Inland Sea. The escalator that ascends through the open air between the two towers, enclosed in a glass tube, is an experience that tests the nerve of anyone with even mild vertigo.
+
+[[TIP:Osaka Strategy|🎌]]
+Osaka works best as part of a Kansai-region itinerary. Base yourself here for the food and the energy, and use the excellent rail connections to day-trip to Kyoto (15-30 minutes by shinkansen or express), Nara (45 minutes), and Himeji (30 minutes by shinkansen to see Japan's finest original castle). Osaka's hotels are less expensive than Kyoto's, its restaurants stay open later, and the experience of returning from a day of temples to a city that is still awake — still eating, still drinking, still laughing — is one of the great pleasures of travel in Japan.
+[[/TIP]]
+
+[[DIVIDER]]
+
+## Frequently Asked Questions
+
+How many days should I spend in Osaka? Three full days is a solid introduction: one day for Dotonbori, Kuromon Market, and the southern districts; one for Osaka Castle, the museum district, and Umeda; one for Shinsekai, Sumiyoshi Taisha shrine, and a deep culinary exploration. If Osaka is your Kansai base, five days allows for day trips to Kyoto, Nara, and Himeji.
+
+What is the best time to visit? March through May (cherry blossoms and pleasant temperatures) and October through November (autumn colour and cool, clear days). Summer (June to August) is hot, humid, and punctuated by festivals — the Tenjin Matsuri in July is one of Japan's great celebrations, with boat processions on the river and fireworks.
+
+Is English widely spoken? Less than in Tokyo, but enough to manage. Restaurants with picture menus and English signage are common in the tourist districts. The Google Translate camera function is invaluable for menus without pictures. A few words of Japanese — arigato gozaimasu, sumimasen, oishii — go a long way.
+
+Is Osaka expensive? Compared to Tokyo, moderately less expensive. Compared to Kyoto, noticeably less expensive. A bowl of ramen costs ¥800-1,100; a set lunch at a good restaurant, ¥1,500-3,000; a kaiseki dinner, ¥15,000-40,000. The city offers excellent value at every price point, and the street food — takoyaki, okonomiyaki, kushikatsu — is among the best-value eating in Japan.
+
+How do I get from Kansai Airport to the city? The Nankai Airport Express takes 35 minutes to Namba Station (¥1,450). The JR Haruka Express takes 50 minutes to Tennoji or Shin-Osaka. Both are efficient and comfortable. Taxis from the airport are available but expensive (¥15,000-20,000).
+
+[[PHOTO:full-width|Osaka from the Umeda Sky Building at twilight — the city spread beneath you to every horizon, the neon rivers of Dotonbori flickering to life in the south, the mountains disappearing into a violet dusk, thirty-seven million mouths in the Kansai region about to sit down to dinner, and every single one of them, if they are true Osakans, determined to eat until they drop]]
+`;
+
+export const articleSections = [];

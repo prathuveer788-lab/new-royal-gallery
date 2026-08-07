@@ -1,0 +1,67 @@
+export const articleContent = `
+Paris does not need another guidebook. It has been described, analysed, painted, photographed, filmed, and set to music more than any city on Earth, and the accumulated weight of its representations can make the actual place feel, on first encounter, strangely familiar — a city you have already visited in a thousand dreams. The Eiffel Tower. The Seine. The wrought-iron balconies and mansard roofs. The café terraces where solitary drinkers nurse their espresso and their existentialism. The clichés are clichés because they are true, and because Paris, unlike most cities, is not afraid of its own mythology. It leans into it.
+
+But the Paris that rewards the luxury traveller is not the Paris of the postcards. It is the hidden Paris — the courtyards behind unmarked doors, the private galleries in the Marais, the palace hotels that have been refining the art of hospitality since before the invention of the aeroplane, the restaurants where the chef has been cooking the same three dishes for forty years because no improvement is possible. This Paris requires a guide, and here is one.
+
+[[PHOTO:wide|The Eiffel Tower from Trocadéro at blue hour — the Iron Lady illuminated against a deepening Parisian sky, the fountains of the Jardins du Trocadéro dancing in the foreground, the Seine a dark ribbon winding through the city of light]]
+
+## The Palace Hotels: Where Paris Sleeps
+
+Paris invented the palace hotel, and it has been perfecting the form for two centuries. The city's twelve "Palace" designation hotels — a classification above five stars, created by the French government in 2010 to recognise hotels that are, in effect, national monuments — represent the apex of the hospitality profession, and staying in any of them is an experience that redefines your expectations of what a hotel can be.
+
+Le Bristol, on the rue du Faubourg Saint-Honoré, has been owned by the Oetker family since 1978 — an eternity in the hotel industry — and it shows in every detail. The garden courtyard, a hectare of manicured French formality in the heart of the 8th arrondissement. The three-Michelin-starred restaurant, Epicure, where Eric Frechon's cooking (the stuffed macaroni with black truffle, artichoke, and foie gras; the Bresse chicken cooked in a bladder) is as classic and as perfect as the hotel that houses it. The rooftop swimming pool, modelled on a Roman galley, with views of the Sacré-Cœur. The house cat, Fa-raon, a Burmese who receives guests in the lobby with the serene entitlement of a hotelier who knows that the property could not function without him.
+
+The Ritz, on the Place Vendôme, reopened in 2016 after a four-year, €450-million renovation that was the most extensive — and expensive — in hotel history. The result is a property that honours its extraordinary heritage (Coco Chanel lived here for thirty-four years; Hemingway liberated the bar in 1944; Princess Diana departed from this doorway on her final journey) while delivering the seamless luxury that twenty-first-century travellers expect. The Bar Hemingway, redesigned but still lined with the memorabilia of the writer whose name it bears, serves the best dry martini in Paris. The Chanel spa, the first in the world, offers treatments in rooms whose design would have pleased Mademoiselle herself.
+
+For those who prefer intimacy to grandeur, the Saint James Paris — a château-hotel in the 16th arrondissement, set in its own walled garden — offers a country-house atmosphere five minutes from the Arc de Triomphe. The library bar, with its 12,000 leather-bound volumes; the Guerlain spa; the terrace restaurant beneath a canopy of chestnut trees; the hot-air balloon that lifts guests (weather permitting) above the city's rooftops — the Saint James is the most original hotel in Paris, and to stay here is to see the city from an angle that the guidebooks miss.
+
+[[PHOTO:portrait|The garden courtyard at Le Bristol — manicured box hedges and gravel paths, tables set for lunch beneath white parasols, the hotel's 18th-century facade glowing in the afternoon light, Fa-raon the Burmese surveying his domain from a strategic position on a Louis XV armchair]]
+
+[[QUOTE:Paris is not a city. It is a world — one that demands to be seen, tasted, walked, and loved in every conceivable light.|The Royal Gallery Editorial]]
+
+## The Marais: Hidden Courtyards and Private Mansions
+
+The Marais, spread across the 3rd and 4th arrondissements, is the Paris that survived Haussmann's demolition — a district of narrow streets, medieval buildings, and seventeenth-century hôtels particuliers (private mansions) that was, for much of the twentieth century, a working-class neighbourhood in genteel decline. Its transformation into the city's most fashionable district — a grid of galleries, concept stores, and the best falafel outside the Middle East — is one of the great urban regeneration stories of recent decades.
+
+The Musée Picasso, housed in the Hôtel Salé — a Baroque mansion of such extravagant beauty that its name means "salty," a reference to the tax on salt that funded its construction — is the district's cultural anchor. The collection, 5,000 works spanning Picasso's entire career, is the largest in the world, and the building — its grand staircase, its painted ceilings, its formal garden — is as compelling as the art it contains. Book the first time slot of the day, 10:30 am, to experience the collection in relative peace.
+
+The Place des Vosges, a perfect square of brick-and-stone pavilions surrounding a formal garden, is the Marais's centrepiece — and, indeed, one of the loveliest squares in Europe. Built by Henri IV in 1605, it has been home to Madame de Sévigné, Victor Hugo (whose house is now a museum), and, in the arcades that line its ground floor, some of the city's most quietly excellent restaurants. Lunch at L'Ambroisie, the three-Michelin-starred restaurant in the corner of the square, is a Paris institution — chef Bernard Pacaud's langoustines with curry and sesame, his chocolate tart, his feuilleté of wild mushrooms — and the bill, arriving at the end, is a reminder of what three Michelin stars cost in one of the world's most expensive restaurant markets.
+
+[[PHOTO:landscape|Place des Vosges in spring — the chestnut trees in full leaf, the formal lawns dotted with Parisians reading on benches, the brick-and-stone facades glowing warm in the afternoon light, the arcades sheltering cafés and galleries and the kind of quiet, understated elegance that only Paris can produce]]
+
+## The Seine and Its Bridges
+
+The Seine is Paris's spine, its mirror, its reason for existing — the river that brought the trade that built the city, and that now provides its most beautiful axis of perspective. Walking the banks of the Seine, from the Île Saint-Louis to the Eiffel Tower, is a journey through two millennia of urban history, each bridge — the Pont Neuf (the oldest, despite its name meaning "new"), the Pont des Arts (the lovers' bridge, its railings now cleared of the padlocks that threatened its structure), the Pont Alexandre III (the most extravagant, its gilded statues and art-nouveau lamps a declaration of Belle Époque self-confidence) — a chapter in the story.
+
+The essential experience is a river cruise, and the essential river cruise is not the Bateaux-Mouches (which are crowded, touristy, and loud) but a private charter from a company like Paris Yacht or Seine Privée. The boat — a vintage Riva, perhaps, or a classic mahogany runabout — departs from a quiet quay, and for two hours you drift through the heart of the city, champagne glass in hand, watching Paris unfold as it was designed to be seen: from the water. The Louvre, the Musée d'Orsay, Notre-Dame (still being restored, still magnificent), the Grand Palais, the Eiffel Tower — the monuments of Paris are arranged along the Seine like exhibits in a museum curated by a genius with a taste for the spectacular.
+
+[[PHOTO:wide|The Seine at golden hour from the Pont Alexandre III — the river catching the last light, a bateau-mouche gliding beneath the bridge, the Grand Palais and Petit Palais glowing on the Right Bank, the Eiffel Tower a silhouette in the golden haze beyond]]
+
+## Dining: From Three Stars to the Corner Bistro
+
+Paris's dining scene is the most dynamic it has been in decades. The Michelin three-starred temples — L'Arpège, Guy Savoy, Le Pré Catelan, L'Ambroisie — continue to deliver the sort of meals that justify transatlantic flights, but the action, for the savvy diner, is at the lower levels: the one-star restaurants where ambitious young chefs cook the food they want to eat rather than the food they think the Guide expects; the neo-bistros where classic French technique is applied to ingredients of unprecedented quality; the wine bars where natural-wine evangelists pour bottles from producers whose names are murmured with reverence by the initiated.
+
+Septime, in the 11th arrondissement, is the restaurant that defined the neo-bistro movement — chef Bertrand Grébaut's cooking (a single carrot, roasted and glazed, that tastes more intensely of carrot than any carrot you have ever eaten; a loin of venison with blackberries and juniper; a chocolate dessert so simple and so perfect that you will think about it for weeks) is served in a room of bare wood and exposed stone, and the reservation books open three weeks in advance and fill within minutes. Frenchie, on the rue du Nil, is its smaller, more intimate cousin — chef Gregory Marchand's menu changes daily, the wine list is a natural-wine bible, and the bar across the street (Frenchie Bar à Vins) serves the same quality of food without reservations.
+
+For the classic Paris experience, book a table at Allard, in Saint-Germain-des-Prés, where the duck with olives and the chocolate profiteroles have been on the menu since 1932, and the room — Belle Époque tiles, red banquettes, the accumulated patina of a century of Parisian dining — is as much a reason to visit as the food. Or Bofinger, in the Marais, the oldest brasserie in Paris (founded 1864), where the sauerkraut and the seafood platters are served in an Art Nouveau dining room of stained glass, brass, and polished wood that has not changed since the Belle Époque — because why would it?
+
+[[TIP:The Paris Strategy|🎨]]
+Do not attempt to see everything. Paris is not a city of must-see attractions; it is a city of atmosphere, and the best way to experience it is to choose one or two things each day and allow the rest of the day to unfold around them. The morning at a museum, followed by a long lunch, followed by a walk through a neighbourhood you have not yet explored, followed by an aperitif on a café terrace as the light turns golden — this is the Parisian rhythm, and it is more rewarding than any checklist. The twenty arrondissements spiral outward from the centre like a snail shell, and each one has its own character, its own pace, its own secrets. Choose one arrondissement per day and walk it thoroughly. The best thing you see in Paris will almost certainly be something you were not looking for.
+[[/TIP]]
+
+[[DIVIDER]]
+
+## Frequently Asked Questions
+
+When is the best time to visit? April through June and September through October offer the most pleasant weather and the best light. July and August are hot and crowded with tourists, though Parisians themselves flee the city, and many neighbourhood restaurants close for the annual summer holiday. December brings the Christmas markets, the lights, and a cold-weather romance that suits the city perfectly. January and February are the quietest months — cold, grey, and beautifully empty.
+
+Is Paris expensive? Yes, at the luxury end. Less than you might fear at the mid-range. A three-starred dinner can cost €400-800 per person without wine. A superb bistro dinner: €60-90. A croissant and café crème at a corner café: €5-8. The museums offer free admission on the first Sunday of each month, and the city's greatest pleasures — walking the Seine, exploring the Marais, watching the Eiffel Tower sparkle on the hour at night — are free.
+
+How do I get around? The Métro is efficient, comprehensive, and, for visitors, best avoided during rush hour (8-9:30 am, 5-7 pm). Walking is Paris's greatest transport mode — the city is compact, and the distances between neighbourhoods are shorter than they appear on the map. Taxis are plentiful, and the G7 app summons them reliably. For a splurge, hire a classic Citroën DS or a vintage motorcycle with sidecar for a tour of the city that is as much about the vehicle as the view.
+
+What about the language? Parisians appreciate any attempt to speak French, however mangled. A "bonjour" when entering a shop, a "merci" when leaving — these small courtesies transform the tenor of interactions. English is spoken in luxury establishments; less so in neighbourhood boulangeries and cafés. The Parisian reputation for rudeness is largely a misunderstanding of the city's social codes. Approach with politesse, and you will be treated with the same.
+
+[[PHOTO:full-width|Paris from the top of the Arc de Triomphe at twilight — the twelve avenues radiating outward like the spokes of a wheel, the Eiffel Tower glittering on the hour, the Sacré-Cœur a white dome on its distant hill, the Seine catching the last light, the most beautiful city in the world doing what it has done for centuries — being beautiful, and knowing it, and not caring that you know it too]]
+`;
+
+export const articleSections = [];
