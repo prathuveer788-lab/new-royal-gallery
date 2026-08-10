@@ -69,21 +69,11 @@ const footerSections = [
       { href: "/design", label: "Design" },
       { href: "/culture", label: "Culture" },
       { href: "/society", label: "Society" },
-      { href: "/people", label: "People" },
       { href: "/motoring", label: "Motoring" },
       { href: "/dining", label: "Dining" },
       { href: "/business", label: "Business" },
       { href: "/futures", label: "Futures" },
       { href: "/archive", label: "Archive" },
-    ],
-  },
-  {
-    title: "The Journal",
-    links: [
-      { href: "/journal", label: "All Stories" },
-      { href: "/membership", label: "Subscribe" },
-      { href: "/membership", label: "Newsletter" },
-      { href: "/advertise", label: "Advertise" },
     ],
   },
   {
@@ -100,8 +90,8 @@ const footerSections = [
     links: [
       { href: "https://www.instagram.com/theroyalgallerys/", label: "Instagram" },
       { href: "mailto:hey.theroyalgallerys@gmail.com", label: "Email" },
-      { href: "/membership", label: "Private Consultation" },
-      { href: "/journal", label: "Newsletter" },
+      { href: "/advertise", label: "Advertise" },
+      { href: "/membership", label: "Newsletter" },
     ],
   },
 ];

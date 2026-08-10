@@ -19,7 +19,6 @@ export default function Navigation() {
     { href: "/design", label: "Design" },
     { href: "/culture", label: "Culture" },
     { href: "/society", label: "Society" },
-    { href: "/people", label: "People" },
     { href: "/motoring", label: "Motoring" },
     { href: "/dining", label: "Dining" },
     { href: "/business", label: "Business" },
@@ -28,7 +27,6 @@ export default function Navigation() {
   ];
 
   const utilityLinks = [
-    { href: "/journal", label: "Journal" },
     { href: "/ecosystem", label: "Institute" },
   ];
 
@@ -42,62 +40,59 @@ export default function Navigation() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 py-4 flex justify-between items-center">
+      <div className="flex items-center justify-between gap-6 px-6 sm:px-8 lg:px-10 py-3.5">
 
-        {/* ════════════ LOGO ════════════ */}
+        {/* ════════ LOGO ════════ */}
         <Link href="/" className="group flex-shrink-0 select-none" aria-label="The Royal Gallerys — Home">
-          <div className="text-center leading-none" style={{ fontFamily: "var(--font-bodoni), serif" }}>
-            <span className={`block text-[clamp(7px,1.2vw,10px)] tracking-[0.45em] uppercase font-light transition-colors duration-500 ${ink} opacity-75`}>
+          <div className="leading-none" style={{ fontFamily: "var(--font-bodoni), serif" }}>
+            <span className={`block text-[9px] sm:text-[10px] tracking-[0.35em] uppercase font-light transition-colors duration-500 ${ink} opacity-80`}>
               The
             </span>
-            <span className={`block text-[clamp(16px,2.8vw,26px)] tracking-[0.1em] uppercase font-normal transition-colors duration-500 mt-0.5 ${ink}`}>
+            <span className={`block text-[20px] sm:text-[22px] lg:text-[24px] tracking-[0.06em] uppercase font-normal transition-colors duration-500 leading-none ${ink}`}>
               Royal Gallerys
             </span>
             <span
-              className={`block text-[clamp(5px,0.85vw,7px)] tracking-[0.3em] uppercase font-sans transition-colors duration-500 mt-1 ${ink} opacity-60`}
-              style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 400 }}
+              className={`block text-[7px] sm:text-[7.5px] tracking-[0.2em] uppercase font-sans transition-colors duration-500 mt-0.5 ${ink} opacity-60`}
+              style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 500 }}
             >
               Heritage &middot; Culture &middot; Luxury &middot; Influence
             </span>
           </div>
         </Link>
 
-        {/* ════════════ DESKTOP NAV ════════════ */}
-        <div className="hidden lg:flex items-center gap-0">
-          {/* Primary links */}
+        {/* ════════ DESKTOP NAV ════════ */}
+        <div className="hidden lg:flex items-center gap-0.5">
           {primaryLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`px-2.5 xl:px-3.5 py-2 text-[11px] xl:text-[12px] tracking-[0.08em] transition-colors duration-300 whitespace-nowrap ${
-                scrolled ? "text-neutral-500 hover:text-neutral-900" : "text-white/65 hover:text-white"
+              className={`px-1.5 xl:px-2.5 py-2 text-[15px] xl:text-[16px] tracking-[0.03em] transition-colors duration-300 whitespace-nowrap ${
+                scrolled ? "text-neutral-500 hover:text-neutral-900" : "text-white/70 hover:text-white"
               }`}
-              style={{ fontFamily: "var(--font-cormorant)", fontWeight: 400 }}
+              style={{ fontFamily: "var(--font-cormorant), serif", fontWeight: 600 }}
             >
               {link.label}
             </Link>
           ))}
-          {/* Separator */}
-          <span className={`w-px h-4 mx-2 transition-colors duration-500 ${scrolled ? "bg-neutral-200" : "bg-white/20"}`} />
-          {/* Utility links */}
+          <span className={`w-px h-4 mx-1.5 transition-colors duration-500 ${scrolled ? "bg-neutral-200" : "bg-white/20"}`} />
           {utilityLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`px-2 xl:px-3 py-2 text-[10px] xl:text-[11px] tracking-[0.1em] transition-colors duration-300 whitespace-nowrap ${
-                scrolled ? "text-neutral-400 hover:text-neutral-700" : "text-white/50 hover:text-white/80"
+              className={`px-1.5 xl:px-2 py-2 text-[14px] xl:text-[15px] tracking-[0.03em] transition-colors duration-300 whitespace-nowrap ${
+                scrolled ? "text-neutral-400 hover:text-neutral-700" : "text-white/55 hover:text-white/85"
               }`}
-              style={{ fontFamily: "var(--font-cormorant)", fontWeight: 400 }}
+              style={{ fontFamily: "var(--font-cormorant), serif", fontWeight: 600 }}
             >
               {link.label}
             </Link>
           ))}
           <Link
             href="/membership"
-            className={`ml-2 px-4 xl:px-5 py-2 text-[10px] xl:text-[11px] uppercase tracking-[0.14em] transition-all duration-300 ${
+            className={`ml-2 px-5 xl:px-6 py-2 text-[12px] xl:text-[13px] uppercase tracking-[0.1em] transition-all duration-300 font-medium ${
               scrolled
-                ? "text-neutral-700 border border-neutral-300 hover:border-neutral-900"
-                : "text-white border border-white/35 hover:border-white"
+                ? "text-neutral-800 border border-neutral-300 hover:border-neutral-900 hover:bg-neutral-900 hover:text-white"
+                : "text-white/90 border border-white/35 hover:border-white hover:bg-white hover:text-neutral-900"
             }`}
             style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 500 }}
           >
@@ -105,9 +100,9 @@ export default function Navigation() {
           </Link>
         </div>
 
-        {/* ════════════ MOBILE ════════════ */}
+        {/* ════════ MOBILE ════════ */}
         <button
-          className={`lg:hidden text-2xl p-2 transition-colors duration-500 ${scrolled ? "text-neutral-900" : "text-white"}`}
+          className={`lg:hidden text-2xl p-2 transition-colors duration-500 flex-shrink-0 ${scrolled ? "text-neutral-900" : "text-white"}`}
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -115,6 +110,7 @@ export default function Navigation() {
         </button>
       </div>
 
+      {/* Mobile menu */}
       <div className={`lg:hidden absolute top-full left-0 w-full bg-white border-b border-neutral-100 shadow-2xl transition-all duration-300 ${
         isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
       }`}>

@@ -239,52 +239,31 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ══════════ SOCIETY + PEOPLE ══════════ */}
+      {/* ══════════ SOCIETY ══════════ */}
       <section className="py-20 sm:py-28 md:py-36 px-6 sm:px-8 md:px-12 lg:px-16 bg-[#faf8f5]">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-            {/* Society */}
-            <div>
-              <SectionLabel>Society</SectionLabel>
-              <h2 className="text-[clamp(1.8rem,3.5vw,3.5rem)] font-serif text-neutral-900 leading-[1.08] tracking-tight mt-4 mb-6">Royal Families & Social Institutions</h2>
-              <p className="text-neutral-600 text-base font-light leading-relaxed mb-8">
-                Weddings, polo, philanthropy and the ceremonial life that connects India&apos;s royal houses to the contemporary world.
-              </p>
-              <div className="space-y-1">
-                {[
-                  { tag: "Royalty", title: "The House of Mewar: A Dynasty in the 21st Century" },
-                  { tag: "Polo", title: "The Sport of Kings Returns to Jodhpur" },
-                  { tag: "Philanthropy", title: "How India's Royal Women Are Leading Social Change" },
-                ].map((s) => (
-                  <Link key={s.title} href="/society" className="group flex items-start gap-5 py-5 border-b border-neutral-200 last:border-0">
-                    <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.25em] text-amber-700 font-bold font-sans mt-0.5 whitespace-nowrap">{s.tag}</span>
-                    <h3 className="text-lg sm:text-xl font-serif text-neutral-900 leading-tight group-hover:text-amber-800 transition-colors">{s.title}</h3>
-                  </Link>
-                ))}
-              </div>
-              <Link href="/society" className="inline-block mt-7 text-[11px] uppercase tracking-[0.3em] text-amber-700 hover:text-amber-900 font-semibold border-b border-amber-300 pb-0.5 font-sans">Explore Society →</Link>
-            </div>
-            {/* People */}
-            <div>
-              <SectionLabel>People</SectionLabel>
-              <h2 className="text-[clamp(1.8rem,3.5vw,3.5rem)] font-serif text-neutral-900 leading-[1.08] tracking-tight mt-4 mb-6">Designers, Founders & Visionaries</h2>
-              <p className="text-neutral-600 text-base font-light leading-relaxed mb-8">
-                In-depth profiles and conversations with the people shaping culture, luxury, and heritage — from master craftspeople to global entrepreneurs.
-              </p>
-              <div className="space-y-1">
-                {[
-                  { tag: "Profile", title: "Raghavendra Rathore: The Man Who Gave the Bandhgala a Future" },
-                  { tag: "Interview", title: "The Collector: Inside Five Generations of Indian Art" },
-                  { tag: "Visionary", title: "The Hotelier Restoring Rajasthan's Forgotten Fortresses" },
-                ].map((s) => (
-                  <Link key={s.title} href="/people" className="group flex items-start gap-5 py-5 border-b border-neutral-200 last:border-0">
-                    <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.25em] text-amber-700 font-bold font-sans mt-0.5 whitespace-nowrap">{s.tag}</span>
-                    <h3 className="text-lg sm:text-xl font-serif text-neutral-900 leading-tight group-hover:text-amber-800 transition-colors">{s.title}</h3>
-                  </Link>
-                ))}
-              </div>
-              <Link href="/people" className="inline-block mt-7 text-[11px] uppercase tracking-[0.3em] text-amber-700 hover:text-amber-900 font-semibold border-b border-amber-300 pb-0.5 font-sans">Explore People →</Link>
-            </div>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14 sm:mb-16">
+            <SectionLabel>Society</SectionLabel>
+            <h2 className="text-[clamp(2rem,4vw,3.8rem)] font-serif text-neutral-900 mt-4 sm:mt-5 tracking-tight leading-[1.05]">Royalty · People · Institutions</h2>
+            <p className="text-neutral-600 text-base font-light max-w-2xl mx-auto mt-4 leading-relaxed">The families, visionaries and institutions shaping heritage and culture — from royal dynasties to the designers and founders redefining luxury for a new generation.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {[
+              { tag: "Royalty", title: "The House of Mewar: A Dynasty in the 21st Century" },
+              { tag: "Profile", title: "Raghavendra Rathore: The Man Who Gave the Bandhgala a Future" },
+              { tag: "Polo", title: "The Sport of Kings Returns to Jodhpur" },
+              { tag: "Interview", title: "The Collector: Inside Five Generations of Indian Art" },
+              { tag: "Philanthropy", title: "How India's Royal Women Are Leading Social Change" },
+              { tag: "Visionary", title: "The Hotelier Restoring Rajasthan's Forgotten Fortresses" },
+            ].map((s) => (
+              <Link key={s.title} href="/society" className="group flex items-start gap-5 py-5 px-5 bg-white hover:shadow-md transition-all border border-transparent hover:border-amber-100">
+                <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.25em] text-amber-700 font-bold font-sans mt-0.5 whitespace-nowrap">{s.tag}</span>
+                <h3 className="text-lg sm:text-xl font-serif text-neutral-900 leading-tight group-hover:text-amber-800 transition-colors">{s.title}</h3>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/society" className="inline-block text-[11px] uppercase tracking-[0.3em] text-amber-700 hover:text-amber-900 font-semibold border-b border-amber-300 pb-0.5 font-sans">Explore Society →</Link>
           </div>
         </div>
       </section>
