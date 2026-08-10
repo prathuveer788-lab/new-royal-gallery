@@ -62,17 +62,24 @@ export default function MembershipPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CONTACT & ENQUIRIES */}
       <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16 text-center">
         <div className="max-w-3xl mx-auto">
-          <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-700 font-bold">Contact</span>
+          <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-700 font-bold">Enquiries</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-neutral-900 mt-4 mb-6 tracking-tight">An Invitation to Build the Future of Heritage</h2>
           <p className="text-neutral-500 text-sm font-light max-w-xl mx-auto mb-10">Private consultations available for royal families, luxury brands and heritage institutions.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#" className="inline-block px-10 py-4 bg-neutral-900 text-white hover:bg-neutral-800 transition text-xs uppercase tracking-[0.25em] font-semibold">Schedule a Consultation</Link>
-            <a href="mailto:hello@theroyalgallery.com" className="inline-block px-10 py-4 border border-neutral-300 text-neutral-700 hover:border-neutral-900 transition text-xs uppercase tracking-[0.25em] font-medium">Email Us</a>
+            <a href="mailto:hey.theroyalgallerys@gmail.com" className="inline-block px-10 py-4 border border-neutral-300 text-neutral-700 hover:border-neutral-900 transition text-xs uppercase tracking-[0.25em] font-medium">Email Us</a>
           </div>
-          <p className="mt-6 text-[10px] text-neutral-400 uppercase tracking-[0.3em]">hello@theroyalgallery.com</p>
+          <div className="mt-6 space-y-1.5">
+            <p className="text-[10px] text-neutral-400 uppercase tracking-[0.15em] font-light">
+              <a href="mailto:hey.theroyalgallerys@gmail.com" className="hover:text-amber-700 transition-colors">hey.theroyalgallerys@gmail.com</a>
+            </p>
+            <p className="text-[10px] text-neutral-400 uppercase tracking-[0.15em] font-light">
+              <a href="https://www.instagram.com/theroyalgallerys/" target="_blank" rel="noreferrer" className="hover:text-amber-700 transition-colors">@theroyalgallerys</a>
+            </p>
+          </div>
         </div>
       </section>
     </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import PartnershipCTA from "./components/PartnershipCTA";
 
 const blurDataURL = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGw9IiNkZGRkZGQiIGQ9Ik0wIDBoMXYxSDB6Ii8+PC9zdmc+";
 
@@ -304,25 +305,7 @@ export default function HomePage() {
       </section>
 
       {/* ══════════ PARTNER CTA ══════════ */}
-      <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16 bg-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block text-[9px] sm:text-[10px] uppercase tracking-[0.35em] text-amber-700 font-semibold mb-6 font-sans">An Invitation</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-neutral-900 leading-[1.08] mb-6 tracking-tight">
-            Partner With Us to Build<br />the Future of Heritage
-          </h2>
-          <p className="text-neutral-500 text-sm sm:text-base font-light leading-relaxed max-w-xl mx-auto mb-10">
-            Heritage is humanity&apos;s most valuable asset. The stories that built civilizations deserve to survive. The Royal Gallery exists to ensure they do.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/membership" className="inline-block px-10 py-4 bg-neutral-900 text-white hover:bg-neutral-800 transition-colors text-xs sm:text-sm uppercase tracking-[0.25em] font-semibold font-sans">
-              Become a Partner
-            </Link>
-            <Link href="/global-vision" className="inline-block px-10 py-4 border border-neutral-300 text-neutral-700 hover:border-neutral-900 hover:text-neutral-900 transition-colors text-xs sm:text-sm uppercase tracking-[0.25em] font-medium font-sans">
-              Explore the Vision
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PartnershipCTA />
 
     </div>
   );

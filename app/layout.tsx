@@ -103,7 +103,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <p className="text-neutral-400 text-sm font-light leading-relaxed max-w-sm">
                   A global heritage media, technology and experiences platform preserving and amplifying the world&apos;s royal, cultural and luxury heritage.
                 </p>
-                <p className="text-[9px] sm:text-[10px] text-neutral-500 uppercase tracking-[0.3em] font-semibold">hello@theroyalgallery.com</p>
+                <p className="text-[9px] sm:text-[10px] text-neutral-500 uppercase tracking-[0.3em] font-semibold">hey.theroyalgallerys@gmail.com</p>
               </div>
 
               {/* Explore */}
@@ -134,8 +134,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="space-y-4">
                 <h4 className="text-[10px] sm:text-[11px] uppercase tracking-[0.25em] font-bold text-amber-400 mb-5">Connect</h4>
                 <ul className="flex flex-col gap-3 text-sm text-neutral-400 font-light">
-                  <li><a href="https://instagram.com/theroyalsgallery" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Instagram</a></li>
-                  <li><a href="mailto:hello@theroyalgallery.com" className="hover:text-white transition-colors">Email</a></li>
+                  <li><a href="https://www.instagram.com/theroyalgallerys/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Instagram</a></li>
+                  <li><a href="mailto:hey.theroyalgallerys@gmail.com" className="hover:text-white transition-colors">Email</a></li>
                   <li><Link href="/membership" className="hover:text-white transition-colors">Private Consultation</Link></li>
                   <li><Link href="/journal" className="hover:text-white transition-colors">Newsletter</Link></li>
                 </ul>
