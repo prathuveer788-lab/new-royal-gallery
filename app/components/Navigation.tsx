@@ -13,15 +13,23 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const links = [
-    { href: "/heritage", label: "Heritage" },
+  const primaryLinks = [
+    { href: "/style", label: "Style" },
+    { href: "/travel", label: "Travel" },
+    { href: "/design", label: "Design" },
     { href: "/culture", label: "Culture" },
-    { href: "/travel", label: "Experiences" },
-    { href: "/gallery", label: "Archive" },
-    { href: "/heritage-ai", label: "AI" },
+    { href: "/society", label: "Society" },
+    { href: "/people", label: "People" },
+    { href: "/motoring", label: "Motoring" },
+    { href: "/dining", label: "Dining" },
+    { href: "/business", label: "Business" },
+    { href: "/futures", label: "Futures" },
+    { href: "/archive", label: "Archive" },
+  ];
+
+  const utilityLinks = [
     { href: "/journal", label: "Journal" },
-    { href: "/ecosystem", label: "Ecosystem" },
-    { href: "/global-vision", label: "Vision" },
+    { href: "/ecosystem", label: "Institute" },
   ];
 
   const ink = scrolled ? "text-neutral-900" : "text-white";
@@ -49,18 +57,19 @@ export default function Navigation() {
               className={`block text-[clamp(5px,0.85vw,7px)] tracking-[0.3em] uppercase font-sans transition-colors duration-500 mt-1 ${ink} opacity-60`}
               style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 400 }}
             >
-              Heritage &middot; Media &middot; Technology &middot; Magazine
+              Heritage &middot; Culture &middot; Luxury &middot; Influence
             </span>
           </div>
         </Link>
 
         {/* ════════════ DESKTOP NAV ════════════ */}
-        <div className="hidden lg:flex items-center gap-0.5">
-          {links.map((link) => (
+        <div className="hidden lg:flex items-center gap-0">
+          {/* Primary links */}
+          {primaryLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`px-3 xl:px-4 py-2 text-[12px] xl:text-[13px] tracking-[0.08em] transition-colors duration-300 ${
+              className={`px-2.5 xl:px-3.5 py-2 text-[11px] xl:text-[12px] tracking-[0.08em] transition-colors duration-300 whitespace-nowrap ${
                 scrolled ? "text-neutral-500 hover:text-neutral-900" : "text-white/65 hover:text-white"
               }`}
               style={{ fontFamily: "var(--font-cormorant)", fontWeight: 400 }}
@@ -68,10 +77,24 @@ export default function Navigation() {
               {link.label}
             </Link>
           ))}
-          <span className={`w-px h-4 mx-1.5 transition-colors duration-500 ${scrolled ? "bg-neutral-200" : "bg-white/20"}`} />
+          {/* Separator */}
+          <span className={`w-px h-4 mx-2 transition-colors duration-500 ${scrolled ? "bg-neutral-200" : "bg-white/20"}`} />
+          {/* Utility links */}
+          {utilityLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`px-2 xl:px-3 py-2 text-[10px] xl:text-[11px] tracking-[0.1em] transition-colors duration-300 whitespace-nowrap ${
+                scrolled ? "text-neutral-400 hover:text-neutral-700" : "text-white/50 hover:text-white/80"
+              }`}
+              style={{ fontFamily: "var(--font-cormorant)", fontWeight: 400 }}
+            >
+              {link.label}
+            </Link>
+          ))}
           <Link
             href="/membership"
-            className={`ml-1 px-4 xl:px-5 py-2 text-[10px] xl:text-[11px] uppercase tracking-[0.14em] transition-all duration-300 ${
+            className={`ml-2 px-4 xl:px-5 py-2 text-[10px] xl:text-[11px] uppercase tracking-[0.14em] transition-all duration-300 ${
               scrolled
                 ? "text-neutral-700 border border-neutral-300 hover:border-neutral-900"
                 : "text-white border border-white/35 hover:border-white"
@@ -95,9 +118,15 @@ export default function Navigation() {
       <div className={`lg:hidden absolute top-full left-0 w-full bg-white border-b border-neutral-100 shadow-2xl transition-all duration-300 ${
         isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
       }`}>
-        <div className="flex flex-col items-center py-10 gap-5 text-lg text-neutral-800" style={{ fontFamily: "var(--font-cormorant)" }}>
-          {links.map((link) => (
+        <div className="flex flex-col items-center py-10 gap-4 text-lg text-neutral-800" style={{ fontFamily: "var(--font-cormorant)" }}>
+          {primaryLinks.map((link) => (
             <Link key={link.href} href={link.href} onClick={() => setIsOpen(false)} className="hover:text-neutral-500 transition-colors tracking-wide">
+              {link.label}
+            </Link>
+          ))}
+          <hr className="w-12 border-neutral-200 my-1" />
+          {utilityLinks.map((link) => (
+            <Link key={link.href} href={link.href} onClick={() => setIsOpen(false)} className="text-base text-neutral-500 hover:text-neutral-800 transition-colors tracking-wide">
               {link.label}
             </Link>
           ))}

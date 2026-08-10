@@ -15,6 +15,7 @@ import {
   ArticleTOC,
   ReadingProgress,
 } from "@/app/components/editorial";
+import NewsletterForm from "@/app/components/NewsletterForm";
 
 // ── We'll import the article content from the content files ──
 // For now this serves as the editorial page template
@@ -243,14 +244,32 @@ export default async function TravelArticlePage({
           <div className="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pb-12 sm:pb-16 md:pb-20">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-white/50 text-[10px] sm:text-[11px] uppercase tracking-[0.2em] mb-6 sm:mb-8 font-sans">
+              <Link href="/" className="hover:text-amber-300 transition-colors">The Royal Gallerys</Link>
+              <span className="text-white/20">/</span>
               <Link href="/travel" className="hover:text-amber-300 transition-colors">Travel</Link>
-              <span>→</span>
+              {(article.editorialSection && article.editorialSection !== "travel") && (
+                <>
+                  <span className="text-white/20">/</span>
+                  <Link href={`/${article.editorialSection}`} className="hover:text-amber-300 transition-colors capitalize">{article.editorialSection}</Link>
+                </>
+              )}
+              <span className="text-white/20">/</span>
               <span className="text-amber-300/80">{article.country}</span>
             </div>
-            {/* Category tag */}
-            <span className="inline-block text-amber-300 text-[9px] sm:text-[10px] uppercase tracking-[0.35em] font-semibold mb-4 font-sans">
-              {article.category}
-            </span>
+            {/* Editorial tags */}
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="inline-block text-amber-300 text-[9px] sm:text-[10px] uppercase tracking-[0.35em] font-semibold font-sans">
+                {article.editorialSubcategory === "hotels" ? "Palace Hotels" : article.category}
+              </span>
+              {article.tags && article.tags.length > 0 && (
+                <>
+                  <span className="text-white/20 text-xs">·</span>
+                  {article.tags.slice(0, 3).map((t) => (
+                    <span key={t} className="text-white/40 text-[8px] sm:text-[9px] uppercase tracking-[0.2em] font-light font-sans">{t}</span>
+                  ))}
+                </>
+              )}
+            </div>
             {/* Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-[1.12] sm:leading-[1.15] mb-4 sm:mb-5 max-w-4xl tracking-tight">
               {article.headline}
@@ -436,6 +455,32 @@ export default async function TravelArticlePage({
           </div>
         </div>
 
+        {/* Cross-Section Recommendations */}
+        <section className="py-12 sm:py-16 px-6 sm:px-8 bg-[#faf8f5]">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-700 font-bold font-sans">The Royal Gallerys</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-neutral-900 mt-3 mb-8 tracking-tight">More to Explore</h2>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {[
+                { href: "/style", label: "Style" },
+                { href: "/design", label: "Design" },
+                { href: "/culture", label: "Culture" },
+                { href: "/society", label: "Society" },
+                { href: "/people", label: "People" },
+                { href: "/motoring", label: "Motoring" },
+                { href: "/dining", label: "Dining" },
+                { href: "/business", label: "Business" },
+                { href: "/futures", label: "Futures" },
+                { href: "/archive", label: "Archive" },
+              ].map((s) => (
+                <Link key={s.href} href={s.href} className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-neutral-500 hover:text-amber-800 transition-colors font-sans font-semibold border border-neutral-200 px-5 py-2.5 hover:border-amber-200 bg-white">
+                  {s.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Newsletter CTA */}
         <section className="bg-neutral-900 text-white py-12 sm:py-16 px-6 sm:px-8 text-center">
           <div className="max-w-xl mx-auto">
@@ -445,15 +490,8 @@ export default async function TravelArticlePage({
             <p className="text-neutral-400 text-sm font-light mb-6 leading-relaxed">
               Weekly dispatches from the world&apos;s finest destinations. Curated itineraries, hotel reviews, and insider access — delivered to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 text-white placeholder:text-neutral-500 text-sm focus:outline-none focus:border-amber-400/50 transition-colors font-light"
-              />
-              <button className="px-6 py-3 bg-amber-500 text-neutral-900 hover:bg-amber-400 transition-colors text-xs uppercase tracking-[0.2em] font-semibold font-sans flex-shrink-0">
-                Subscribe
-              </button>
+            <div className="max-w-md mx-auto">
+              <NewsletterForm variant="dark" source={`article-${article.slug}`} />
             </div>
           </div>
         </section>

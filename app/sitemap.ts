@@ -1,24 +1,36 @@
 import { MetadataRoute } from 'next'
+import { allArticles } from '@/lib/travel-articles'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://theroyalgallerys.com'
+  const now = new Date()
 
-  const routes = [
-    { url: baseUrl, changeFrequency: 'weekly' as const, priority: 1 },
-    { url: `${baseUrl}/heritage`, changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/culture`, changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/travel`, changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/gallery`, changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/heritage-ai`, changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/journal`, changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${baseUrl}/ecosystem`, changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${baseUrl}/global-vision`, changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${baseUrl}/membership`, changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/impact`, changeFrequency: 'monthly' as const, priority: 0.7 },
+  const primaryRoutes: MetadataRoute.Sitemap = [
+    { url: baseUrl, changeFrequency: 'weekly' as const, priority: 1, lastModified: now },
+    { url: `${baseUrl}/style`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/travel`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/design`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/culture`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/society`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/people`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/motoring`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/dining`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/business`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/futures`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/archive`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/journal`, changeFrequency: 'weekly' as const, priority: 0.8, lastModified: now },
+    { url: `${baseUrl}/ecosystem`, changeFrequency: 'monthly' as const, priority: 0.8, lastModified: now },
+    { url: `${baseUrl}/global-vision`, changeFrequency: 'monthly' as const, priority: 0.7, lastModified: now },
+    { url: `${baseUrl}/membership`, changeFrequency: 'weekly' as const, priority: 0.8, lastModified: now },
+    { url: `${baseUrl}/impact`, changeFrequency: 'monthly' as const, priority: 0.7, lastModified: now },
   ]
 
-  return routes.map(route => ({
-    ...route,
-    lastModified: new Date(),
+  const articleRoutes: MetadataRoute.Sitemap = allArticles.map((article) => ({
+    url: `${baseUrl}/travel/${article.slug}`,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+    lastModified: new Date(article.publishedDate),
   }))
+
+  return [...primaryRoutes, ...articleRoutes]
 }

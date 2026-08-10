@@ -2,16 +2,45 @@
 
 import { useState } from "react";
 
+const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+
 export default function PartnershipCTA() {
   const [showForm, setShowForm] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (name.trim() && email.trim()) {
-      setSubmitted(true);
+    if (!name.trim() || !email.trim()) return;
+
+    setSubmitting(true);
+    setError(false);
+
+    const formData = new FormData();
+    formData.append("fullName", name.trim());
+    formData.append("email", email.trim());
+    formData.append("source", "partnership-cta");
+    formData.append("_subject", `Partnership Enquiry: ${name.trim()}`);
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -89,6 +118,13 @@ export default function PartnershipCTA() {
               touch.
             </p>
 
+            {error && (
+              <div className="max-w-md mx-auto mb-6 p-3 border border-red-200 bg-red-50 text-red-700 text-xs font-light text-center">
+                Something went wrong. Please email us directly at{" "}
+                <a href="mailto:hey.theroyalgallerys@gmail.com" className="underline font-medium">hey.theroyalgallerys@gmail.com</a>
+              </div>
+            )}
+
             <form
               onSubmit={handleSubmit}
               className="max-w-md mx-auto text-left space-y-6"
@@ -132,14 +168,16 @@ export default function PartnershipCTA() {
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <button
                   type="submit"
-                  className="flex-1 px-8 py-3.5 bg-neutral-900 text-white hover:bg-neutral-800 transition-colors text-xs sm:text-sm uppercase tracking-[0.25em] font-semibold font-sans cursor-pointer"
+                  disabled={submitting}
+                  className="flex-1 px-8 py-3.5 bg-neutral-900 text-white hover:bg-neutral-800 disabled:bg-neutral-400 disabled:cursor-not-allowed transition-colors text-xs sm:text-sm uppercase tracking-[0.25em] font-semibold font-sans cursor-pointer"
                 >
-                  Submit Enquiry
+                  {submitting ? "Sending…" : "Submit Enquiry"}
                 </button>
                 <button
                   type="button"
                   onClick={handleReset}
-                  className="flex-1 px-8 py-3.5 border border-neutral-300 text-neutral-500 hover:border-neutral-900 hover:text-neutral-700 transition-colors text-xs sm:text-sm uppercase tracking-[0.15em] font-medium font-sans cursor-pointer"
+                  disabled={submitting}
+                  className="flex-1 px-8 py-3.5 border border-neutral-300 text-neutral-500 hover:border-neutral-900 hover:text-neutral-700 disabled:opacity-40 transition-colors text-xs sm:text-sm uppercase tracking-[0.15em] font-medium font-sans cursor-pointer"
                 >
                   Cancel
                 </button>
