@@ -62,6 +62,22 @@ export async function generateMetadata({
 }
 
 // ── Content Section Renderer ─────────────────────────
+function renderTextWithLinks(text: string): React.ReactNode[] {
+  if (!text.includes("[[LINK:")) return [text];
+  const parts = text.split(/(\[\[LINK:.+?\|.+?\]\])/);
+  return parts.map((part, idx) => {
+    const linkMatch = part.match(/^\[\[LINK:(.+?)\|(.+?)\]\]$/);
+    if (linkMatch) {
+      return (
+        <a key={idx} href={linkMatch[1]} className="text-amber-800 hover:text-amber-900 underline decoration-amber-300 decoration-1 underline-offset-2 transition-colors">
+          {linkMatch[2]}
+        </a>
+      );
+    }
+    return <span key={idx}>{part}</span>;
+  });
+}
+
 function renderContent(content: string): React.ReactNode[] {
   const nodes: React.ReactNode[] = [];
   const lines = content.split("\n");
@@ -145,7 +161,7 @@ function renderContent(content: string): React.ReactNode[] {
       nodes.push(
         <TravelTipBox key={key++} title={tipMatch[1]} icon={tipMatch[2] || "💡"}>
           {tipContent.map((t, j) => (
-            <p key={j}>{t}</p>
+            <p key={j}>{renderTextWithLinks(t)}</p>
           ))}
         </TravelTipBox>
       );
@@ -177,9 +193,10 @@ function renderContent(content: string): React.ReactNode[] {
         paragraphLines.push(lines[i]);
         i++;
       }
+      const paragraphText = paragraphLines.join(" ");
       nodes.push(
         <p key={key++} className="text-sm sm:text-base md:text-lg text-neutral-700 font-light leading-[1.8] mb-5">
-          {paragraphLines.join(" ")}
+          {renderTextWithLinks(paragraphText)}
         </p>
       );
       continue;
