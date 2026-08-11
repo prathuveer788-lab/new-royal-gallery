@@ -35,38 +35,71 @@ export default function HomePage() {
   return (
     <div className="bg-white">
 
-      {/* ══════════ HERO ══════════ */}
-      <section className="relative min-h-screen flex items-center">
+      {/* ══════════ 01 — HERO / MAGAZINE COVER ══════════ */}
+      <section className="relative min-h-screen flex items-center justify-center">
         <div className="absolute inset-0">
           <Image src="/images/vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg" alt="Jaipur City Palace" fill priority placeholder="blur" blurDataURL={blurDataURL} className="object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/70 to-black/90" />
         </div>
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pt-20 pb-16 sm:pb-20">
-          <div className="max-w-4xl">
-            <p className="text-amber-300/90 text-[10px] sm:text-[11px] uppercase tracking-[0.5em] font-medium mb-8 sm:mb-10 font-sans">
-              Volume I · Summer 2026
-            </p>
-            <h1 className="text-[clamp(2.8rem,7vw,8rem)] font-serif text-white leading-[0.92] mb-8 sm:mb-10 tracking-tight">
-              The New<br />Maharaja
-            </h1>
-            <p className="text-neutral-200/90 text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-xl mb-10 sm:mb-12">
-              How India&apos;s next generation is redefining heritage, style and influence — from palace hotels to fashion houses, from AI preservation to the future of global luxury.
-            </p>
-            <div className="flex flex-wrap items-center gap-4 sm:gap-5">
-              <Link href="/travel/umaid-bhawan-palace-jodhpur" className="inline-block px-10 sm:px-12 py-3.5 sm:py-4 bg-white text-neutral-900 hover:bg-neutral-100 transition-colors text-xs sm:text-sm uppercase tracking-[0.3em] font-semibold font-sans">
-                Read the Story
-              </Link>
-              <Link href="/journal" className="inline-block px-10 sm:px-12 py-3.5 sm:py-4 border border-white/25 text-white hover:border-amber-300 hover:text-amber-200 transition-colors text-xs sm:text-sm uppercase tracking-[0.3em] font-medium font-sans">
-                Explore the Journal
-              </Link>
-            </div>
-          </div>
+
+        {/* Decorative top line */}
+        <div className="absolute top-12 sm:top-16 left-1/2 -translate-x-1/2 w-[clamp(40px,8vw,80px)] h-px bg-amber-400/40" />
+
+        <div className="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pt-20 pb-16 text-center">
+          <p className="text-amber-300/80 text-[10px] sm:text-[11px] uppercase tracking-[0.5em] font-medium mb-10 sm:mb-12 font-sans">
+            Volume I · Summer 2026
+          </p>
+
+          <h1 className="text-[clamp(1.6rem,3.5vw,3.2rem)] font-serif text-white leading-[1.12] mb-6 sm:mb-8 tracking-[0.02em]">
+            THE INTERNATIONAL<br />
+            MAGAZINE OF<br />
+            HERITAGE &amp; LUXURY
+          </h1>
+
+          <p className="text-amber-200/70 text-[clamp(10px,1.2vw,13px)] uppercase tracking-[0.28em] font-light mb-12 sm:mb-14 font-sans">
+            Royalty · Travel · Style · Design · Culture · Society
+          </p>
+
+          <a
+            href="#the-magazine"
+            className="inline-block px-10 sm:px-14 py-3.5 sm:py-4 border border-amber-400/40 text-amber-300 hover:bg-amber-400/10 hover:border-amber-300/60 transition-all duration-500 text-[11px] sm:text-xs uppercase tracking-[0.35em] font-medium font-sans"
+          >
+            Enter the Magazine →
+          </a>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30">
-          <span className="text-[8px] uppercase tracking-[0.3em] font-sans">Scroll</span>
-          <div className="w-px h-10 bg-gradient-to-b from-white/30 to-transparent" />
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/20">
+          <span className="text-[8px] uppercase tracking-[0.35em] font-sans">Scroll</span>
+          <div className="w-px h-12 bg-gradient-to-b from-white/20 to-transparent" />
+        </div>
+      </section>
+
+      {/* ══════════ 02 — THE MAGAZINE ══════════ */}
+      <section id="the-magazine" className="py-24 sm:py-32 md:py-40 px-6 sm:px-8 md:px-12 lg:px-16 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-14 sm:mb-16">
+            <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.4em] text-amber-700 font-semibold font-sans mb-8">
+              02 — The Magazine
+            </p>
+            <h2 className="text-[clamp(2rem,4.5vw,4.2rem)] font-serif text-neutral-900 leading-[1.08] tracking-tight mb-8 sm:mb-10">
+              A World of Heritage.<br />
+              <span className="text-amber-800">A New Language of Luxury.</span>
+            </h2>
+            <EditorialDivider />
+            <p className="text-neutral-600 text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-3xl mx-auto mt-8 sm:mt-10">
+              THE ROYAL GALLERYS is an international magazine dedicated to the worlds of heritage, culture and contemporary luxury. From royal families and historic estates to fashion, jewellery, architecture, travel, art, hospitality and design — we document the people and places carrying extraordinary traditions into the modern world.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/global-vision"
+              className="inline-block px-10 sm:px-12 py-3.5 sm:py-4 bg-neutral-900 text-white hover:bg-neutral-800 transition-colors text-[11px] sm:text-xs uppercase tracking-[0.3em] font-semibold font-sans"
+            >
+              Read Our Story →
+            </Link>
+          </div>
         </div>
       </section>
 
