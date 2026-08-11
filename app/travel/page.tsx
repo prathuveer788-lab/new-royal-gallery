@@ -8,10 +8,12 @@ const blurDataURL = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxI
 const travelArticles = allArticles.filter((a) => a.editorialSection === "travel");
 const hotelsArticles = travelArticles.filter((a) => a.editorialSubcategory === "hotels");
 const destinationsArticles = travelArticles.filter((a) => a.editorialSubcategory === "destinations");
+const insightsArticles = travelArticles.filter((a) => a.editorialSubcategory !== "hotels" && a.editorialSubcategory !== "destinations");
 
 const subcategoryFilters = [
   { label: "Palace Hotels", count: hotelsArticles.length, subcategory: "hotels" as const },
   { label: "Destinations", count: destinationsArticles.length, subcategory: "destinations" as const },
+  ...(insightsArticles.length > 0 ? [{ label: "Luxury Hospitality", count: insightsArticles.length, subcategory: "insights" as const }] : []),
 ];
 
 /* ── FEATURED DESTINATIONS — pulled dynamically ──────── */
@@ -28,6 +30,7 @@ const regions = [
   { label: "Europe", items: destinationsArticles.filter((d) => ["Italy", "France", "Switzerland", "Scotland", "England", "Portugal", "Spain"].includes(d.country)) },
   { label: "Middle East & Africa", items: destinationsArticles.filter((d) => ["Turkey", "Morocco", "Egypt", "South Africa", "UAE", "Oman"].includes(d.country)) },
   { label: "Americas & Oceania", items: destinationsArticles.filter((d) => ["Australia", "New Zealand", "Canada", "Mexico"].includes(d.country)) },
+  ...(insightsArticles.length > 0 ? [{ label: "Luxury Hospitality", items: insightsArticles }] : []),
 ];
 
 export default function TravelPage() {
@@ -45,7 +48,7 @@ export default function TravelPage() {
             Travel
           </h1>
           <p className="text-neutral-300 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-xl mb-5">
-            Palace hotels, heritage properties, iconic cities and extraordinary destinations — fifty definitive luxury travel guides written with firsthand authority.
+            Palace hotels, heritage properties, iconic cities and extraordinary destinations — {travelArticles.length} definitive luxury travel guides written with firsthand authority.
           </p>
           <div className="flex items-center gap-3 text-white/50 text-[10px] sm:text-[11px] font-light font-sans">
             <span>{travelArticles.length} Destinations</span>
@@ -55,6 +58,12 @@ export default function TravelPage() {
             <span>20 Countries</span>
             <span className="text-white/20">·</span>
             <span>{hotelsArticles.length} Palace Hotels</span>
+            {insightsArticles.length > 0 && (
+              <>
+                <span className="text-white/20">·</span>
+                <span>{insightsArticles.length} Insight</span>
+              </>
+            )}
           </div>
         </div>
       </section>

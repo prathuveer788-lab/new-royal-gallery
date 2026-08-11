@@ -8,7 +8,7 @@ const featuredStorySlugs = [
   "taj-lake-palace-udaipur",
   "kyoto-travel-guide",
   "amalfi-coast-travel-guide",
-  "sydney-travel-guide",
+  "luxury-hotel-marketing-india-hnw-travellers",
 ];
 
 const featuredStories = featuredStorySlugs
