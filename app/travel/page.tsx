@@ -24,13 +24,13 @@ const featuredArticles = featuredSlugs
   .slice(0, 5);
 
 /* ── REGIONS ─────────────────────────────────────────── */
-const regions = [
-  { label: "Indian Palace Hotels", items: hotelsArticles },
-  { label: "Asia", items: destinationsArticles.filter((d) => ["Japan", "South Korea", "Vietnam"].includes(d.country)) },
+const regions: { label: string; items: typeof hotelsArticles; anchor?: string }[] = [
+  { label: "Indian Palace Hotels", items: hotelsArticles, anchor: "hotels" },
+  { label: "Asia", items: destinationsArticles.filter((d) => ["Japan", "South Korea", "Vietnam"].includes(d.country)), anchor: "destinations" },
   { label: "Europe", items: destinationsArticles.filter((d) => ["Italy", "France", "Switzerland", "Scotland", "England", "Portugal", "Spain"].includes(d.country)) },
   { label: "Middle East & Africa", items: destinationsArticles.filter((d) => ["Turkey", "Morocco", "Egypt", "South Africa", "UAE", "Oman"].includes(d.country)) },
   { label: "Americas & Oceania", items: destinationsArticles.filter((d) => ["Australia", "New Zealand", "Canada", "Mexico"].includes(d.country)) },
-  ...(insightsArticles.length > 0 ? [{ label: "Luxury Hospitality", items: insightsArticles }] : []),
+  ...(insightsArticles.length > 0 ? [{ label: "Luxury Hospitality", items: insightsArticles, anchor: "insights" as const }] : []),
 ];
 
 export default function TravelPage() {
@@ -139,7 +139,7 @@ export default function TravelPage() {
           </div>
 
           {regions.filter((r) => r.items.length > 0).map((cat) => (
-            <div key={cat.label} className="mb-10 sm:mb-14 last:mb-0">
+            <div key={cat.label} id={cat.anchor} className="mb-10 sm:mb-14 last:mb-0">
               <h3 className="text-sm sm:text-base uppercase tracking-[0.2em] text-amber-800 font-bold mb-5 sm:mb-6 font-sans">
                 {cat.label} <span className="text-neutral-400 font-light ml-2">({cat.items.length})</span>
               </h3>
