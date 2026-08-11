@@ -12,6 +12,18 @@ export const metadata: Metadata = {
     "Explore extraordinary hotels, royal palaces, destinations, journeys and luxury travel experiences from India and around the world.",
 };
 
+const C = {
+  obsidian: "#11110F",
+  charcoal: "#1C1B18",
+  forest: "#17261F",
+  ivory: "#F4F0E7",
+  cream: "#EAE3D5",
+  textDeep: "#181714",
+  textStone: "#9B9589",
+  bronze: "#8A7352",
+  champagne: "#B8A47A",
+};
+
 const blurDataURL =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGw9IiNkZGRkZGQiIGQ9Ik0wIDBoMXYxSDB6Ii8+PC9zdmc+";
 
@@ -24,7 +36,7 @@ const hotelsCount = travelArticles.filter(
 
 export default function TravelPage() {
   return (
-    <div className="bg-white">
+    <div style={{ background: C.ivory }}>
       {/* ══════════ HERO ══════════ */}
       <section className="relative min-h-[65vh] sm:min-h-[75vh] flex items-center">
         <div className="absolute inset-0">
@@ -37,25 +49,25 @@ export default function TravelPage() {
             blurDataURL={blurDataURL}
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/25" />
+          <div className="absolute inset-0" style={{ background: "rgba(17,17,15,0.55)" }} />
         </div>
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pt-28 sm:pt-36 pb-12 sm:pb-16">
-          <span className="text-amber-300 text-[9px] sm:text-[10px] uppercase tracking-[0.35em] font-semibold font-sans">
+          <span className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.champagne }}>
             The Royal Gallerys
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif text-white leading-[0.95] mt-4 mb-6 max-w-3xl tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif leading-[0.95] mt-4 mb-6 max-w-3xl tracking-tight" style={{ color: C.ivory, fontWeight: 400 }}>
             Travel
           </h1>
-          <p className="text-neutral-300 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-xl mb-5">
+          <p className="text-sm sm:text-base md:text-lg font-sans font-normal leading-relaxed max-w-xl mb-5" style={{ color: C.textStone }}>
             The world&apos;s most extraordinary journeys, places and experiences
           </p>
-          <div className="flex items-center gap-3 text-white/50 text-[10px] sm:text-[11px] font-light font-sans">
+          <div className="flex items-center gap-3 text-[10px]/[11px] font-sans font-normal" style={{ color: "rgba(244,240,231,0.5)" }}>
             <span>{travelArticles.length} Stories</span>
-            <span className="text-white/20">·</span>
+            <span style={{ color: "rgba(244,240,231,0.2)" }}>·</span>
             <span>6 Continents</span>
-            <span className="text-white/20">·</span>
+            <span style={{ color: "rgba(244,240,231,0.2)" }}>·</span>
             <span>20 Countries</span>
-            <span className="text-white/20">·</span>
+            <span style={{ color: "rgba(244,240,231,0.2)" }}>·</span>
             <span>{hotelsCount} Palaces</span>
           </div>
         </div>
@@ -65,12 +77,12 @@ export default function TravelPage() {
       <TravelEditorialFeed />
 
       {/* ══════════ CROSS-SECTION LINKS ══════════ */}
-      <section className="py-16 sm:py-24 px-6 sm:px-8 md:px-12 lg:px-16">
+      <section className="py-16 sm:py-24 px-6 sm:px-8 md:px-12 lg:px-16" style={{ background: C.cream }}>
         <div className="max-w-4xl mx-auto text-center">
-          <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-700 font-bold font-sans">
+          <span className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.bronze }}>
             The Royal Gallerys
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-neutral-900 mt-3 mb-10 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mt-3 mb-10 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>
             Explore More Sections
           </h2>
           <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
@@ -85,7 +97,16 @@ export default function TravelPage() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-neutral-500 hover:text-amber-800 transition-colors font-sans font-semibold border border-neutral-200 px-5 py-2.5 hover:border-amber-200"
+                className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans px-5 py-2.5 transition-colors"
+                style={{ color: C.textStone, border: `1px solid rgba(138,115,82,0.35)` }}
+                onMouseEnter={(e) => {
+                  (e.target as HTMLElement).style.color = C.bronze;
+                  (e.target as HTMLElement).style.borderColor = C.bronze;
+                }}
+                onMouseLeave={(e) => {
+                  (e.target as HTMLElement).style.color = C.textStone;
+                  (e.target as HTMLElement).style.borderColor = "rgba(138,115,82,0.35)";
+                }}
               >
                 {link.label}
               </Link>
@@ -95,15 +116,15 @@ export default function TravelPage() {
       </section>
 
       {/* ══════════ NEWSLETTER ══════════ */}
-      <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16 bg-neutral-900 text-white text-center">
+      <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16 text-center" style={{ background: C.obsidian }}>
         <div className="max-w-2xl mx-auto">
-          <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-400 font-bold font-sans">
+          <span className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.champagne }}>
             The Royal Traveler
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mt-4 mb-5 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mt-4 mb-5 tracking-tight" style={{ color: C.ivory, fontWeight: 400 }}>
             Travel Intelligently
           </h2>
-          <p className="text-neutral-400 text-sm sm:text-base font-light leading-relaxed mb-8">
+          <p className="text-sm sm:text-base font-sans font-normal leading-relaxed mb-8" style={{ color: C.textStone }}>
             Join our community of discerning travelers. Weekly dispatches include
             new destination guides, palace hotel reviews, curated itineraries, and
             exclusive early access to our print edition.

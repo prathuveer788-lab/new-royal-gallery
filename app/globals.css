@@ -1,41 +1,112 @@
 @import "tailwindcss";
 
+/* ═══════════════════════════════════════════════════
+   THE ROYAL GALLERYS — DESIGN SYSTEM
+   Old Palaces · Antique Books · Dark Wood · Ivory Paper · Bronze
+   ═══════════════════════════════════════════════════ */
+
 :root {
-  --background: #fcfaf7;
-  --foreground: #1a1a1a;
+  /* ── Backgrounds ── */
+  --bg-obsidian: #11110F;
+  --bg-charcoal: #1C1B18;
+  --bg-forest: #17261F;
+  --bg-oxblood: #4A171B;
+
+  /* ── Editorial Paper ── */
+  --paper-ivory: #F4F0E7;
+  --paper-cream: #EAE3D5;
+
+  /* ── Text ── */
+  --text-deep: #181714;
+  --text-ivory: #F4F0E7;
+  --text-stone: #9B9589;
+
+  /* ── Luxury Accents ── */
+  --accent-bronze: #8A7352;
+  --accent-champagne: #B8A47A;
+
+  /* ── Functional ── */
+  --background: var(--paper-ivory);
+  --foreground: var(--text-deep);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-montserrat);
-  --font-serif: var(--font-bodoni);
+  --font-sans: var(--font-manrope);
+  --font-serif: var(--font-cormorant);
 }
+
+/* ── Base ──────────────────────────────────────── */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), sans-serif;
+  background: var(--paper-ivory);
+  color: var(--text-deep);
+  font-family: var(--font-manrope), sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern" 1, "liga" 1;
 }
 
-/* Magazine-grade typography refinements */
+/* ── Editorial Typography ──────────────────────── */
+
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
+  font-family: var(--font-cormorant), serif;
+  font-weight: 400;
 }
 
 p {
   text-wrap: pretty;
 }
 
-/* Smooth scroll for anchor links */
+/* ── Smooth Scroll ── */
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Selection colour — amber brand accent */
+/* ── Selection ─────────────────────────────────── */
+
 ::selection {
-  background: rgba(180, 130, 30, 0.2);
-  color: #1a1a1a;
+  background: rgba(138, 115, 82, 0.22);
+  color: var(--text-deep);
+}
+
+/* ── Editorial Thin Rules ──────────────────────── */
+
+.editorial-rule {
+  border: none;
+  height: 1px;
+  background: rgba(138, 115, 82, 0.35);
+  width: 100%;
+}
+
+.editorial-rule--short {
+  width: 64px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Focus ──────────────────────────────────────── */
+
+:focus-visible {
+  outline: 1px solid var(--accent-bronze);
+  outline-offset: 2px;
+}
+
+/* ── Scrollbar (dark sections) ──────────────────── */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--paper-ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-bronze);
+  opacity: 0.5;
 }

@@ -9,9 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        // This links the CSS variables from your layout to Tailwind classes
-        serif: ["var(--font-bodoni)", "serif"],
-        sans: ["var(--font-montserrat)", "sans-serif"],
+        // Cormorant Garamond — elegant aristocratic editorial serif
+        serif: ["var(--font-cormorant)", "serif"],
+        // Manrope — clean modern sans-serif for navigation, labels, body
+        sans: ["var(--font-manrope)", "sans-serif"],
       },
     },
   },

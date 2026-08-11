@@ -1,6 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const C = {
+  obsidian: "#11110F",
+  charcoal: "#1C1B18",
+  forest: "#17261F",
+  ivory: "#F4F0E7",
+  cream: "#EAE3D5",
+  textDeep: "#181714",
+  textStone: "#9B9589",
+  bronze: "#8A7352",
+  champagne: "#B8A47A",
+};
+
 const blurDataURL = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGw9IiNkZGRkZGQiIGQ9Ik0wIDBoMXYxSDB6Ii8+PC9zdmc+";
 
 const aiCapabilities = [
@@ -31,38 +43,38 @@ const processSteps = [
 
 export default function HeritageAIPage() {
   return (
-    <div className="bg-white">
+    <div style={{ background: C.ivory }}>
       {/* ══════════ HERO ══════════ */}
       <section className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center">
         <div className="absolute inset-0">
           <Image src="/images/indian-city-buildings-scene.jpg" alt="Heritage AI" fill priority placeholder="blur" blurDataURL={blurDataURL} className="object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/45 to-black/35" />
+          <div className="absolute inset-0" style={{ background: "rgba(17,17,15,0.55)" }} />
         </div>
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pt-32 sm:pt-40 pb-16 sm:pb-24">
-          <span className="text-amber-300 text-[9px] sm:text-[10px] uppercase tracking-[0.35em] font-semibold">Royal Gallery AI · House 03</span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif text-white leading-[0.95] mt-4 mb-6 tracking-tight">
+          <span className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.champagne }}>Royal Gallery AI · House 03</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif leading-[0.95] mt-4 mb-6 tracking-tight" style={{ color: C.ivory, fontWeight: 400 }}>
             Heritage Meets<br />Artificial Intelligence
           </h1>
-          <p className="text-neutral-300 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-2xl">
+          <p className="text-sm sm:text-base md:text-lg font-sans font-normal leading-relaxed max-w-2xl" style={{ color: C.textStone }}>
             Ethical AI systems for heritage preservation, interactive archives and living memory — ensuring future generations learn directly from the voices and wisdom of the past.
           </p>
         </div>
       </section>
 
       {/* ══════════ MANIFESTO ══════════ */}
-      <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16 bg-neutral-900 text-white text-center">
+      <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16 text-center" style={{ background: C.obsidian }}>
         <div className="max-w-3xl mx-auto">
-          <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-400 font-bold">The Living Archive Project</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif mt-4 mb-8 tracking-tight">
+          <span className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.champagne }}>The Living Archive Project</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif mt-4 mb-8 tracking-tight" style={{ color: C.ivory, fontWeight: 400 }}>
             For the first time in history, technology can preserve heritage. And storytelling can amplify it.
           </h2>
-          <p className="text-neutral-400 text-sm sm:text-base font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base font-sans font-normal max-w-2xl mx-auto leading-relaxed" style={{ color: C.textStone }}>
             Carrying the wisdom of the past into the hands of the future. Future generations deserve access to the knowledge that built civilizations. The Royal Gallery exists to make certain they receive it.
           </p>
-          <blockquote className="mt-10 pt-8 border-t border-white/10 text-amber-300 text-base sm:text-lg font-serif italic">
+          <blockquote className="mt-10 pt-8 font-serif text-base sm:text-lg italic" style={{ borderTop: `1px solid rgba(184,164,122,0.15)`, color: C.champagne, fontWeight: 400 }}>
             &ldquo;We are not recreating people. We are preserving knowledge.&rdquo;
           </blockquote>
-          <p className="text-neutral-500 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] mt-3">The Royal Gallery · Ethics of the Archive</p>
+          <p className="text-[10px]/[11px] uppercase tracking-[0.22em] font-sans font-normal mt-3" style={{ color: C.textStone }}>The Royal Gallery · Ethics of the Archive</p>
         </div>
       </section>
 
@@ -70,15 +82,15 @@ export default function HeritageAIPage() {
       <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-700 font-bold">The Process</span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-neutral-900 mt-4 tracking-tight">How Heritage AI Works</h2>
+            <span className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.bronze }}>The Process</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mt-4 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>How Heritage AI Works</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5">
             {processSteps.map((s) => (
-              <div key={s.step} className="border border-neutral-100 p-6 sm:p-7 text-center hover:shadow-md hover:border-amber-100 transition-all">
-                <span className="text-4xl sm:text-5xl font-serif text-amber-300 block mb-4">{s.step}</span>
-                <h3 className="font-serif text-base sm:text-lg text-neutral-900 mb-2">{s.title}</h3>
-                <p className="text-[10px] sm:text-xs text-neutral-500 font-light leading-relaxed">{s.desc}</p>
+              <div key={s.step} className="p-6 sm:p-7 text-center transition-all" style={{ border: `1px solid rgba(138,115,82,0.35)` }}>
+                <span className="text-4xl sm:text-5xl font-serif block mb-4" style={{ color: C.champagne, fontWeight: 400 }}>{s.step}</span>
+                <h3 className="font-serif text-base sm:text-lg mb-2" style={{ color: C.textDeep, fontWeight: 400 }}>{s.title}</h3>
+                <p className="text-[10px]/[11px] font-sans font-normal leading-relaxed" style={{ color: C.textStone }}>{s.desc}</p>
               </div>
             ))}
           </div>
@@ -86,23 +98,23 @@ export default function HeritageAIPage() {
       </section>
 
       {/* ══════════ CAPABILITIES ══════════ */}
-      <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16 bg-[#faf8f5]">
+      <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16" style={{ background: C.cream }}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-700 font-bold">Capabilities</span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-neutral-900 mt-4 tracking-tight">Six Pillars of Heritage AI</h2>
+            <span className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.bronze }}>Capabilities</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mt-4 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>Six Pillars of Heritage AI</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-7">
             {aiCapabilities.map((cap) => (
-              <div key={cap.title} className="bg-white p-6 sm:p-8 border border-neutral-100 hover:shadow-lg hover:border-amber-100 transition-all group">
+              <div key={cap.title} className="p-6 sm:p-8 transition-all group" style={{ background: C.ivory, border: `1px solid rgba(138,115,82,0.35)` }}>
                 <div className="flex gap-4 sm:gap-5">
                   <span className="text-2xl sm:text-3xl flex-shrink-0">{cap.icon}</span>
                   <div className="space-y-2 sm:space-y-3">
-                    <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.2em] text-amber-700 font-bold">{cap.subtitle}</span>
-                    <h3 className="text-xl sm:text-2xl font-serif text-neutral-900 group-hover:text-amber-800 transition-colors">{cap.title}</h3>
-                    <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed">{cap.desc}</p>
+                    <span className="text-[9px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.bronze }}>{cap.subtitle}</span>
+                    <h3 className="text-xl sm:text-2xl font-serif transition-colors" style={{ color: C.textDeep, fontWeight: 400 }}>{cap.title}</h3>
+                    <p className="text-xs sm:text-sm font-sans font-normal leading-relaxed" style={{ color: C.textStone }}>{cap.desc}</p>
                     <div className="flex flex-wrap gap-1.5 pt-1">
-                      {cap.tags.map((t) => (<span key={t} className="text-[7px] sm:text-[8px] bg-[#faf8f5] text-neutral-500 px-2.5 py-1 font-light">{t}</span>))}
+                      {cap.tags.map((t) => (<span key={t} className="text-[8px] font-sans font-normal px-2.5 py-1" style={{ background: C.cream, color: C.textStone }}>{t}</span>))}
                     </div>
                   </div>
                 </div>
@@ -113,17 +125,17 @@ export default function HeritageAIPage() {
       </section>
 
       {/* ══════════ ETHICS ══════════ */}
-      <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16 bg-neutral-900 text-white">
+      <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16" style={{ background: C.obsidian }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-400 font-bold">Ethics</span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mt-4 tracking-tight">The Ethics of the Archive</h2>
+            <span className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.champagne }}>Ethics</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mt-4 tracking-tight" style={{ color: C.ivory, fontWeight: 400 }}>The Ethics of the Archive</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {ethicalPrinciples.map((p) => (
-              <div key={p.title} className="border border-white/10 p-5 sm:p-6 hover:border-amber-400/30 transition-colors">
-                <h3 className="font-serif text-base sm:text-lg text-amber-400 mb-2">{p.title}</h3>
-                <p className="text-xs sm:text-sm text-neutral-400 font-light leading-relaxed">{p.desc}</p>
+              <div key={p.title} className="p-5 sm:p-6 transition-colors" style={{ border: `1px solid rgba(184,164,122,0.15)` }}>
+                <h3 className="font-serif text-base sm:text-lg mb-2" style={{ color: C.champagne, fontWeight: 400 }}>{p.title}</h3>
+                <p className="text-xs sm:text-sm font-sans font-normal leading-relaxed" style={{ color: C.textStone }}>{p.desc}</p>
               </div>
             ))}
           </div>
@@ -133,12 +145,12 @@ export default function HeritageAIPage() {
       {/* ══════════ CTA ══════════ */}
       <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16 text-center">
         <div className="max-w-3xl mx-auto">
-          <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-700 font-bold">Partner With Royal Gallery AI</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-neutral-900 mt-4 mb-6 tracking-tight">The Future of Heritage Is Being Built Now</h2>
-          <p className="text-neutral-500 text-sm sm:text-base font-light max-w-xl mx-auto mb-10">
+          <span className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.bronze }}>Partner With Royal Gallery AI</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mt-4 mb-6 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>The Future of Heritage Is Being Built Now</h2>
+          <p className="text-sm sm:text-base font-sans font-normal max-w-xl mx-auto mb-10" style={{ color: C.textStone }}>
             Technology can preserve what time erodes. Partner with us to ensure your heritage survives — for your family, your institution, and the generations to come.
           </p>
-          <Link href="/membership" className="inline-block px-10 py-4 bg-neutral-900 text-white hover:bg-neutral-800 transition text-xs uppercase tracking-[0.25em] font-semibold">Partner With Us</Link>
+          <Link href="/membership" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }} onMouseEnter={(e) => { (e.target as HTMLElement).style.background = C.charcoal; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.background = C.obsidian; }}>Partner With Us</Link>
         </div>
       </section>
     </div>

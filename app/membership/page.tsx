@@ -1,5 +1,17 @@
 import Link from "next/link";
 
+const C = {
+  obsidian: "#11110F",
+  charcoal: "#1C1B18",
+  forest: "#17261F",
+  ivory: "#F4F0E7",
+  cream: "#EAE3D5",
+  textDeep: "#181714",
+  textStone: "#9B9589",
+  bronze: "#8A7352",
+  champagne: "#B8A47A",
+};
+
 const tiers = [
   { name: "Circle", subtitle: "The Beginning", price: "Complimentary Application", benefits: ["Exclusive event invitations", "Private digital content access", "Quarterly print magazine", "The Dispatch newsletter", "Priority event registration", "Member-only online portal"], cta: "Apply", featured: false },
   { name: "Patron", subtitle: "The Supporter", price: "Annual Membership", benefits: ["All Circle benefits", "Research archive access", "Limited-edition publications", "Salon dinner invitations", "Private heritage tour access", "Annual Patron gathering", "Concierge heritage service"], cta: "Apply", featured: true },
@@ -16,13 +28,13 @@ const partnerTypes = [
 
 export default function MembershipPage() {
   return (
-    <div className="bg-white">
+    <div style={{ background: C.ivory }}>
       {/* HERO */}
-      <section className="py-20 sm:py-28 md:py-36 px-6 sm:px-8 md:px-12 lg:px-16 bg-neutral-900 text-white text-center">
+      <section className="py-20 sm:py-28 md:py-36 px-6 sm:px-8 md:px-12 lg:px-16 text-center" style={{ background: C.obsidian }}>
         <div className="max-w-3xl mx-auto">
-          <span className="text-amber-400 text-[9px] sm:text-[10px] uppercase tracking-[0.35em] font-semibold">Membership</span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif mt-4 mb-6 leading-[0.95] tracking-tight">Join the Royal Gallery Circle</h1>
-          <p className="text-neutral-400 text-sm sm:text-base font-light max-w-2xl mx-auto leading-relaxed">An invitation into the world&apos;s most rarefied heritage community — events, archives, publications and a private royal network.</p>
+          <span className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.champagne }}>Membership</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif mt-4 mb-6 leading-[0.95] tracking-tight" style={{ color: C.ivory, fontWeight: 400 }}>Join the Royal Gallery Circle</h1>
+          <p className="text-sm sm:text-base font-sans font-normal max-w-2xl mx-auto leading-relaxed" style={{ color: C.textStone }}>An invitation into the world&apos;s most rarefied heritage community — events, archives, publications and a private royal network.</p>
         </div>
       </section>
 
@@ -31,15 +43,15 @@ export default function MembershipPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
             {tiers.map((tier) => (
-              <div key={tier.name} className={`p-6 sm:p-8 border flex flex-col transition-all ${tier.featured ? 'border-amber-300 bg-[#faf8f5] shadow-lg ring-1 ring-amber-200' : 'border-neutral-200 hover:border-amber-200 hover:shadow-md'}`}>
-                {tier.featured && <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.2em] bg-amber-500 text-white px-2.5 py-0.5 self-start mb-5 font-bold">Recommended</span>}
-                <p className="text-xl sm:text-2xl font-serif text-neutral-900 mb-0.5">{tier.name}</p>
-                <p className="text-[9px] sm:text-[10px] uppercase tracking-[0.15em] text-amber-700 font-bold mb-1">{tier.subtitle}</p>
-                <p className="text-[10px] sm:text-[11px] text-neutral-400 font-light mb-6">{tier.price}</p>
+              <div key={tier.name} className="p-6 sm:p-8 flex flex-col transition-all" style={{ border: tier.featured ? `1px solid ${C.champagne}` : `1px solid rgba(138,115,82,0.35)`, background: tier.featured ? C.cream : "transparent" }}>
+                {tier.featured && <span className="text-[9px] uppercase tracking-[0.22em] font-medium font-sans px-2.5 py-0.5 self-start mb-5" style={{ background: C.bronze, color: C.ivory }}>Recommended</span>}
+                <p className="text-xl sm:text-2xl font-serif mb-0.5" style={{ color: C.textDeep, fontWeight: 400 }}>{tier.name}</p>
+                <p className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans mb-1" style={{ color: C.bronze }}>{tier.subtitle}</p>
+                <p className="text-[10px]/[11px] font-sans font-normal mb-6" style={{ color: C.textStone }}>{tier.price}</p>
                 <ul className="space-y-2.5 mb-8 flex-grow">
-                  {tier.benefits.map((b) => (<li key={b} className="text-[10px] sm:text-xs text-neutral-600 font-light flex items-start gap-2"><span className="text-amber-500 mt-0.5 flex-shrink-0">·</span>{b}</li>))}
+                  {tier.benefits.map((b) => (<li key={b} className="text-[10px]/[11px] font-sans font-normal flex items-start gap-2" style={{ color: C.textStone }}><span className="mt-0.5 flex-shrink-0" style={{ color: C.bronze }}>·</span>{b}</li>))}
                 </ul>
-                <Link href="#" className={`inline-block text-center text-[10px] sm:text-xs uppercase tracking-[0.2em] font-semibold py-2.5 px-4 transition ${tier.featured ? 'bg-amber-500 text-white hover:bg-amber-400' : 'border border-amber-500 text-amber-700 hover:bg-amber-50'}`}>{tier.cta}</Link>
+                <Link href="#" className="inline-block text-center text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans py-2.5 px-4 transition-colors" style={tier.featured ? { background: C.bronze, color: C.ivory, border: `1px solid ${C.bronze}` } : { color: C.bronze, border: `1px solid ${C.bronze}` }} onMouseEnter={(e) => { if (tier.featured) { (e.target as HTMLElement).style.background = C.champagne; } else { (e.target as HTMLElement).style.background = "rgba(138,115,82,0.08)"; } }} onMouseLeave={(e) => { if (tier.featured) { (e.target as HTMLElement).style.background = C.bronze; } else { (e.target as HTMLElement).style.background = "transparent"; } }}>{tier.cta}</Link>
               </div>
             ))}
           </div>
@@ -47,15 +59,15 @@ export default function MembershipPage() {
       </section>
 
       {/* PARTNER TYPES */}
-      <section className="py-12 sm:py-20 px-6 sm:px-8 md:px-12 lg:px-16 bg-[#faf8f5]">
+      <section className="py-12 sm:py-20 px-6 sm:px-8 md:px-12 lg:px-16" style={{ background: C.cream }}>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-serif text-neutral-900 text-center mb-10 tracking-tight">Partnership Opportunities</h2>
+          <h2 className="text-2xl sm:text-3xl font-serif text-center mb-10 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>Partnership Opportunities</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {partnerTypes.map((p) => (
-              <Link key={p.title} href={p.link} className="bg-white p-6 sm:p-7 border border-neutral-100 hover:shadow-md hover:border-amber-100 transition-all group">
-                <h3 className="font-serif text-base sm:text-lg text-neutral-900 mb-2 group-hover:text-amber-800 transition-colors">{p.title}</h3>
-                <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed">{p.desc}</p>
-                <span className="inline-block mt-4 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-amber-700 font-bold">Learn More →</span>
+              <Link key={p.title} href={p.link} className="p-6 sm:p-7 transition-all group" style={{ background: C.ivory, border: `1px solid rgba(138,115,82,0.2)` }} onMouseEnter={(e) => { (e.target as HTMLElement).style.borderColor = C.bronze; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.borderColor = "rgba(138,115,82,0.2)"; }}>
+                <h3 className="font-serif text-base sm:text-lg mb-2 transition-colors" style={{ color: C.textDeep, fontWeight: 400 }} onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.bronze; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.color = C.textDeep; }}>{p.title}</h3>
+                <p className="text-xs sm:text-sm font-sans font-normal leading-relaxed" style={{ color: C.textStone }}>{p.desc}</p>
+                <span className="inline-block mt-4 text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.bronze }}>Learn More →</span>
               </Link>
             ))}
           </div>
@@ -65,19 +77,19 @@ export default function MembershipPage() {
       {/* CONTACT & ENQUIRIES */}
       <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16 text-center">
         <div className="max-w-3xl mx-auto">
-          <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-700 font-bold">Enquiries</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-neutral-900 mt-4 mb-6 tracking-tight">An Invitation to Build the Future of Heritage</h2>
-          <p className="text-neutral-500 text-sm font-light max-w-xl mx-auto mb-10">Private consultations available for royal families, luxury brands and heritage institutions.</p>
+          <span className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.bronze }}>Enquiries</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mt-4 mb-6 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>An Invitation to Build the Future of Heritage</h2>
+          <p className="text-sm font-sans font-normal max-w-xl mx-auto mb-10" style={{ color: C.textStone }}>Private consultations available for royal families, luxury brands and heritage institutions.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="#" className="inline-block px-10 py-4 bg-neutral-900 text-white hover:bg-neutral-800 transition text-xs uppercase tracking-[0.25em] font-semibold">Schedule a Consultation</Link>
-            <a href="mailto:hey.theroyalgallerys@gmail.com" className="inline-block px-10 py-4 border border-neutral-300 text-neutral-700 hover:border-neutral-900 transition text-xs uppercase tracking-[0.25em] font-medium">Email Us</a>
+            <Link href="#" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }} onMouseEnter={(e) => { (e.target as HTMLElement).style.background = C.charcoal; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.background = C.obsidian; }}>Schedule a Consultation</Link>
+            <a href="mailto:hey.theroyalgallerys@gmail.com" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.textDeep, border: `1px solid ${C.bronze}` }} onMouseEnter={(e) => { (e.target as HTMLElement).style.background = "rgba(138,115,82,0.08)"; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.background = "transparent"; }}>Email Us</a>
           </div>
           <div className="mt-6 space-y-1.5">
-            <p className="text-[10px] text-neutral-400 uppercase tracking-[0.15em] font-light">
-              <a href="mailto:hey.theroyalgallerys@gmail.com" className="hover:text-amber-700 transition-colors">hey.theroyalgallerys@gmail.com</a>
+            <p className="text-[10px]/[11px] uppercase tracking-[0.22em] font-sans font-normal">
+              <a href="mailto:hey.theroyalgallerys@gmail.com" style={{ color: C.textStone }} onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.bronze; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.color = C.textStone; }}>hey.theroyalgallerys@gmail.com</a>
             </p>
-            <p className="text-[10px] text-neutral-400 uppercase tracking-[0.15em] font-light">
-              <a href="https://www.instagram.com/theroyalgallerys/" target="_blank" rel="noreferrer" className="hover:text-amber-700 transition-colors">@theroyalgallerys</a>
+            <p className="text-[10px]/[11px] uppercase tracking-[0.22em] font-sans font-normal">
+              <a href="https://www.instagram.com/theroyalgallerys/" target="_blank" rel="noreferrer" style={{ color: C.textStone }} onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.bronze; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.color = C.textStone; }}>@theroyalgallerys</a>
             </p>
           </div>
         </div>

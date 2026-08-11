@@ -16,10 +16,10 @@ export default function ReadingProgress({ className = "" }: { className?: string
   }, []);
 
   return (
-    <div className={`fixed top-0 left-0 w-full h-[2px] z-[200] ${className}`}>
+    <div className={`fixed top-0 left-0 w-full z-[200] ${className}`} style={{ height: 2 }}>
       <div
-        className="h-full bg-amber-500 transition-[width] duration-150 ease-out"
-        style={{ width: `${Math.min(progress, 100)}%` }}
+        className="h-full transition-[width] duration-150 ease-out"
+        style={{ width: `${Math.min(progress, 100)}%`, background: "#8A7352" }}
       />
     </div>
   );

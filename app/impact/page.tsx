@@ -1,5 +1,17 @@
 import Link from "next/link";
 
+const C = {
+  obsidian: "#11110F",
+  charcoal: "#1C1B18",
+  forest: "#17261F",
+  ivory: "#F4F0E7",
+  cream: "#EAE3D5",
+  textDeep: "#181714",
+  textStone: "#9B9589",
+  bronze: "#8A7352",
+  champagne: "#B8A47A",
+};
+
 const impactNumbers = [
   { v: "10,000+", l: "Heritage Stories", d: "Documented across our media platforms" },
   { v: "50+", l: "Documentaries", d: "Original films on royal families & heritage" },
@@ -20,12 +32,12 @@ const values = [
 
 export default function ImpactPage() {
   return (
-    <div className="bg-white">
-      <section className="py-20 sm:py-28 md:py-36 px-6 sm:px-8 md:px-12 lg:px-16 bg-neutral-900 text-white text-center">
+    <div style={{ background: C.ivory }}>
+      <section className="py-20 sm:py-28 md:py-36 px-6 sm:px-8 md:px-12 lg:px-16 text-center" style={{ background: C.obsidian }}>
         <div className="max-w-3xl mx-auto">
-          <span className="text-amber-400 text-[9px] sm:text-[10px] uppercase tracking-[0.35em] font-semibold">Our Impact</span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif mt-4 mb-6 leading-[0.95] tracking-tight">Building the World&apos;s Largest Living Heritage Archive</h1>
-          <p className="text-neutral-400 text-sm sm:text-base font-light max-w-2xl mx-auto leading-relaxed">Heritage is humanity&apos;s most valuable asset. We measure success by what we preserve, how many we reach, and the generations we serve.</p>
+          <span className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.champagne }}>Our Impact</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif mt-4 mb-6 leading-[0.95] tracking-tight" style={{ color: C.ivory, fontWeight: 400 }}>Building the World&apos;s Largest Living Heritage Archive</h1>
+          <p className="text-sm sm:text-base font-sans font-normal max-w-2xl mx-auto leading-relaxed" style={{ color: C.textStone }}>Heritage is humanity&apos;s most valuable asset. We measure success by what we preserve, how many we reach, and the generations we serve.</p>
         </div>
       </section>
 
@@ -33,45 +45,45 @@ export default function ImpactPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5 sm:gap-6 mb-20 sm:mb-28">
             {impactNumbers.map((n) => (
-              <div key={n.l} className="text-center p-5 sm:p-6 border border-neutral-100 hover:border-amber-100 hover:shadow-sm transition-all">
-                <p className="text-3xl sm:text-4xl md:text-5xl font-serif text-amber-600 mb-1.5">{n.v}</p>
-                <p className="text-[9px] sm:text-[10px] md:text-[11px] font-semibold text-neutral-800 uppercase tracking-wide mb-1">{n.l}</p>
-                <p className="text-[8px] sm:text-[9px] text-neutral-400 font-light">{n.d}</p>
+              <div key={n.l} className="text-center p-5 sm:p-6 transition-all" style={{ border: `1px solid rgba(138,115,82,0.35)` }}>
+                <p className="text-3xl sm:text-4xl md:text-5xl font-serif mb-1.5" style={{ color: C.bronze, fontWeight: 400 }}>{n.v}</p>
+                <p className="text-[10px]/[11px] font-medium font-sans uppercase tracking-[0.22em] mb-1" style={{ color: C.textDeep }}>{n.l}</p>
+                <p className="text-[9px] font-sans font-normal" style={{ color: C.textStone }}>{n.d}</p>
               </div>
             ))}
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-serif text-neutral-900 text-center mb-10 tracking-tight">Our Principles</h2>
+          <h2 className="text-2xl sm:text-3xl font-serif text-center mb-10 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>Our Principles</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-20 sm:mb-28">
             {values.map((v) => (
-              <div key={v.title} className="border border-neutral-100 p-6 sm:p-7 hover:shadow-md hover:border-amber-100 transition-all">
-                <h3 className="font-serif text-lg sm:text-xl text-neutral-900 mb-2">{v.title}</h3>
-                <p className="text-xs sm:text-sm text-neutral-500 font-light leading-relaxed">{v.desc}</p>
+              <div key={v.title} className="p-6 sm:p-7 transition-all" style={{ border: `1px solid rgba(138,115,82,0.35)` }}>
+                <h3 className="font-serif text-lg sm:text-xl mb-2" style={{ color: C.textDeep, fontWeight: 400 }}>{v.title}</h3>
+                <p className="text-xs sm:text-sm font-sans font-normal leading-relaxed" style={{ color: C.textStone }}>{v.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 sm:py-24 px-6 sm:px-8 md:px-12 lg:px-16 bg-neutral-900 text-white">
+      <section className="py-16 sm:py-24 px-6 sm:px-8 md:px-12 lg:px-16" style={{ background: C.obsidian }}>
         <div className="max-w-3xl mx-auto">
-          <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-400 font-bold">Founder&apos;s Letter</span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mt-4 mb-8 tracking-tight">Why We Started</h2>
-          <div className="space-y-6 text-sm sm:text-base font-light leading-relaxed text-neutral-400">
+          <span className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.champagne }}>Founder&apos;s Letter</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mt-4 mb-8 tracking-tight" style={{ color: C.ivory, fontWeight: 400 }}>Why We Started</h2>
+          <div className="space-y-6 text-sm sm:text-base font-sans font-normal leading-relaxed" style={{ color: C.textStone }}>
             <p>Heritage is disappearing. Every year the world loses photographs, letters, voices and traditions that can never be recovered — fading quietly while we look away.</p>
             <p>But for the first time in history, technology can preserve it. And storytelling can amplify it — carrying the wisdom of the past into the hands of the future.</p>
             <p>Future generations deserve access to the knowledge that built civilizations. The Royal Gallery exists to make certain they receive it.</p>
           </div>
-          <p className="mt-10 text-sm font-serif text-amber-300">— The Royal Gallery, Founding Office</p>
+          <p className="mt-10 text-sm font-serif italic" style={{ color: C.champagne, fontWeight: 400 }}>— The Royal Gallery, Founding Office</p>
         </div>
       </section>
 
       <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16 text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-neutral-900 mb-6 tracking-tight">Heritage Is Humanity&apos;s<br />Most Valuable Asset</h2>
-        <p className="text-neutral-500 text-sm sm:text-base font-light max-w-xl mx-auto mb-10">The stories that built civilizations deserve to survive. The Royal Gallery exists to ensure they do.</p>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-6 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>Heritage Is Humanity&apos;s<br />Most Valuable Asset</h2>
+        <p className="text-sm sm:text-base font-sans font-normal max-w-xl mx-auto mb-10" style={{ color: C.textStone }}>The stories that built civilizations deserve to survive. The Royal Gallery exists to ensure they do.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/membership" className="inline-block px-10 py-4 bg-neutral-900 text-white hover:bg-neutral-800 transition text-xs uppercase tracking-[0.25em] font-semibold">Partner With Us</Link>
-          <Link href="/global-vision" className="inline-block px-10 py-4 border border-neutral-300 text-neutral-700 hover:border-neutral-900 transition text-xs uppercase tracking-[0.25em] font-medium">Explore the Vision</Link>
+          <Link href="/membership" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }} onMouseEnter={(e) => { (e.target as HTMLElement).style.background = C.charcoal; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.background = C.obsidian; }}>Partner With Us</Link>
+          <Link href="/global-vision" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.textDeep, border: `1px solid ${C.bronze}` }} onMouseEnter={(e) => { (e.target as HTMLElement).style.background = "rgba(138,115,82,0.08)"; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.background = "transparent"; }}>Explore the Vision</Link>
         </div>
       </section>
     </div>

@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
 import "./globals.css";
-import { Cormorant_Garamond, Montserrat, Bodoni_Moda } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import Navigation from "./components/Navigation";
 
 export const viewport: Viewport = {
@@ -50,14 +50,10 @@ const cormorant = Cormorant_Garamond({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const bodoni = Bodoni_Moda({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-bodoni"
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat"
+  variable: "--font-manrope",
+  weight: ["300", "400", "500", "600"],
 });
 
 const footerSections = [
@@ -99,37 +95,41 @@ const footerSections = [
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${cormorant.variable} ${montserrat.variable} ${bodoni.variable} font-sans bg-white min-h-screen flex flex-col antialiased`}>
+      <body className={`${cormorant.variable} ${manrope.variable} font-sans min-h-screen flex flex-col antialiased`} style={{ background: "#F4F0E7" }}>
         <Navigation />
         <main className="flex-grow">{children}</main>
 
         {/* ── FOOTER ── */}
-        <footer className="bg-neutral-950 text-white pt-16 sm:pt-20 md:pt-28 pb-8 sm:pb-10 px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 mt-auto">
+        <footer style={{ background: "#11110F", color: "#F4F0E7" }} className="pt-16 sm:pt-20 md:pt-28 pb-8 sm:pb-10 px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 mt-auto">
           <div className="max-w-7xl mx-auto">
+
+            {/* Thin bronze rule */}
+            <hr className="editorial-rule mb-16 sm:mb-20 opacity-30" />
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 sm:gap-12 mb-16 sm:mb-20">
               {/* Brand */}
               <div className="lg:col-span-1 space-y-5">
-                <div className="text-center sm:text-left leading-none" style={{ fontFamily: "var(--font-bodoni), serif" }}>
-                  <span className="block text-[clamp(7px,1vw,10px)] tracking-[0.4em] uppercase font-light text-neutral-500">The</span>
-                  <span className="block text-[clamp(20px,2.8vw,30px)] tracking-[0.1em] uppercase font-normal text-white mt-0.5">Royal Gallerys</span>
+                <div className="text-center sm:text-left leading-none" style={{ fontFamily: "var(--font-cormorant), serif" }}>
+                  <span className="block text-[clamp(7px,1vw,10px)] tracking-[0.38em] uppercase font-light opacity-50" style={{ color: "#9B9589" }}>The</span>
+                  <span className="block text-[clamp(20px,2.8vw,30px)] tracking-[0.08em] uppercase font-normal mt-0.5" style={{ color: "#F4F0E7" }}>Royal Gallerys</span>
                 </div>
-                <p className="text-[clamp(5px,0.7vw,7px)] tracking-[0.3em] uppercase text-neutral-500 mt-1" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 400 }}>
-                  Heritage &middot; Culture &middot; Luxury &middot; Influence
+                <p className="text-[clamp(5px,0.7vw,7px)] tracking-[0.28em] uppercase mt-1" style={{ color: "#8A7352", fontFamily: "var(--font-manrope), sans-serif", fontWeight: 500 }}>
+                  Heritage · Culture · Luxury · Influence
                 </p>
-                <p className="text-neutral-400 text-sm font-light leading-relaxed">
+                <p className="text-sm font-light leading-relaxed" style={{ color: "#9B9589" }}>
                   The international magazine for heritage, culture and luxury — editorial authority on the people, places and ideas shaping our world.
                 </p>
-                <p className="text-[9px] sm:text-[10px] text-neutral-500 uppercase tracking-[0.3em] font-semibold font-sans">hey.theroyalgallerys@gmail.com</p>
+                <p style={{ color: "#8A7352" }} className="text-[9px] sm:text-[10px] uppercase tracking-[0.28em] font-medium font-sans">hey.theroyalgallerys@gmail.com</p>
               </div>
 
               {/* Link columns */}
               {footerSections.map((col) => (
                 <div key={col.title} className="space-y-4">
-                  <h4 className="text-[10px] sm:text-[11px] uppercase tracking-[0.25em] font-bold text-amber-400 mb-5 font-sans">{col.title}</h4>
-                  <ul className="flex flex-col gap-3 text-sm text-neutral-400 font-light">
+                  <h4 className="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] font-semibold font-sans mb-5" style={{ color: "#8A7352" }}>{col.title}</h4>
+                  <ul className="flex flex-col gap-3 text-sm font-light" style={{ color: "#9B9589" }}>
                     {col.links.map((link) => (
                       <li key={link.label}>
-                        <Link href={link.href} className="hover:text-white transition-colors">{link.label}</Link>
+                        <Link href={link.href} className="hover:text-[#F4F0E7] transition-colors duration-300">{link.label}</Link>
                       </li>
                     ))}
                   </ul>
@@ -137,9 +137,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               ))}
             </div>
 
-            <div className="border-t border-white/[0.08] pt-8 sm:pt-10 flex flex-col sm:flex-row justify-between items-center gap-4 text-[9px] sm:text-[10px] md:text-[11px] tracking-[0.15em] text-neutral-500 text-center sm:text-left font-light font-sans">
+            {/* Thin bronze rule */}
+            <hr className="editorial-rule mb-8 sm:mb-10 opacity-25" />
+
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-[9px] sm:text-[10px] md:text-[11px] tracking-[0.14em] text-center sm:text-left font-light font-sans" style={{ color: "#9B9589" }}>
               <p>© 2026 The Royal Gallerys. All rights reserved.</p>
-              <p className="text-neutral-600">Preserving Legacy · Amplifying Heritage · Shaping Cultural Memory</p>
+              <p style={{ color: "#8A7352" }}>Preserving Legacy · Amplifying Heritage · Shaping Cultural Memory</p>
             </div>
           </div>
         </footer>

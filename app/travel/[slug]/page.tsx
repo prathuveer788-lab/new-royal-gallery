@@ -17,6 +17,18 @@ import {
 } from "@/app/components/editorial";
 import NewsletterForm from "@/app/components/NewsletterForm";
 
+const C = {
+  obsidian: "#11110F",
+  charcoal: "#1C1B18",
+  forest: "#17261F",
+  ivory: "#F4F0E7",
+  cream: "#EAE3D5",
+  textDeep: "#181714",
+  textStone: "#9B9589",
+  bronze: "#8A7352",
+  champagne: "#B8A47A",
+};
+
 // ── We'll import the article content from the content files ──
 // For now this serves as the editorial page template
 // Each article's full content will be loaded dynamically
@@ -69,7 +81,7 @@ function renderTextWithLinks(text: string): React.ReactNode[] {
     const linkMatch = part.match(/^\[\[LINK:(.+?)\|(.+?)\]\]$/);
     if (linkMatch) {
       return (
-        <a key={idx} href={linkMatch[1]} className="text-amber-800 hover:text-amber-900 underline decoration-amber-300 decoration-1 underline-offset-2 transition-colors">
+        <a key={idx} href={linkMatch[1]} style={{ color: C.bronze, textDecoration: "underline", textDecorationColor: C.champagne, textUnderlineOffset: "2px", textDecorationThickness: "1px" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.textDeep; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.color = C.bronze; }}>
           {linkMatch[2]}
         </a>
       );
@@ -172,7 +184,7 @@ function renderContent(content: string): React.ReactNode[] {
     if (line.startsWith("## ")) {
       const id = line.slice(3).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
       nodes.push(
-        <h3 key={key++} id={id} className="text-xl sm:text-2xl md:text-3xl font-serif text-neutral-900 mt-10 sm:mt-12 mb-4 sm:mb-5 leading-tight">
+        <h3 key={key++} id={id} className="text-xl sm:text-2xl md:text-3xl font-serif mt-10 sm:mt-12 mb-4 sm:mb-5 leading-tight" style={{ color: C.textDeep, fontWeight: 400 }}>
           {line.slice(3)}
         </h3>
       );
@@ -195,7 +207,7 @@ function renderContent(content: string): React.ReactNode[] {
       }
       const paragraphText = paragraphLines.join(" ");
       nodes.push(
-        <p key={key++} className="text-sm sm:text-base md:text-lg text-neutral-700 font-light leading-[1.8] mb-5">
+        <p key={key++} className="text-sm sm:text-base md:text-lg font-sans font-normal leading-[1.8] mb-5" style={{ color: C.textStone }}>
           {renderTextWithLinks(paragraphText)}
         </p>
       );
@@ -243,7 +255,7 @@ export default async function TravelArticlePage({
     <>
       <ReadingProgress />
 
-      <article className="bg-white">
+      <article style={{ background: C.ivory }}>
         {/* ══════════ HERO BANNER ══════════ */}
         <header className="relative min-h-[70vh] sm:min-h-[80vh] flex items-end">
           <div className="absolute inset-0">
@@ -256,51 +268,51 @@ export default async function TravelArticlePage({
               blurDataURL={blurDataURL}
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/20" />
+            <div className="absolute inset-0" style={{ background: "rgba(17,17,15,0.55)" }} />
           </div>
           <div className="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pb-12 sm:pb-16 md:pb-20">
             {/* Breadcrumb */}
-            <div className="flex items-center gap-2 text-white/50 text-[10px] sm:text-[11px] uppercase tracking-[0.2em] mb-6 sm:mb-8 font-sans">
-              <Link href="/" className="hover:text-amber-300 transition-colors">The Royal Gallerys</Link>
-              <span className="text-white/20">/</span>
-              <Link href="/travel" className="hover:text-amber-300 transition-colors">Travel</Link>
+            <div className="flex items-center gap-2 text-[10px]/[11px] uppercase tracking-[0.22em] mb-6 sm:mb-8 font-sans" style={{ color: "rgba(244,240,231,0.5)" }}>
+              <Link href="/" style={{ color: "rgba(244,240,231,0.5)" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.champagne; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.color = "rgba(244,240,231,0.5)"; }}>The Royal Gallerys</Link>
+              <span style={{ color: "rgba(244,240,231,0.2)" }}>/</span>
+              <Link href="/travel" style={{ color: "rgba(244,240,231,0.5)" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.champagne; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.color = "rgba(244,240,231,0.5)"; }}>Travel</Link>
               {(article.editorialSection && article.editorialSection !== "travel") && (
                 <>
-                  <span className="text-white/20">/</span>
-                  <Link href={`/${article.editorialSection}`} className="hover:text-amber-300 transition-colors capitalize">{article.editorialSection}</Link>
+                  <span style={{ color: "rgba(244,240,231,0.2)" }}>/</span>
+                  <Link href={`/${article.editorialSection}`} className="capitalize" style={{ color: "rgba(244,240,231,0.5)" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.champagne; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.color = "rgba(244,240,231,0.5)"; }}>{article.editorialSection}</Link>
                 </>
               )}
-              <span className="text-white/20">/</span>
-              <span className="text-amber-300/80">{article.country}</span>
+              <span style={{ color: "rgba(244,240,231,0.2)" }}>/</span>
+              <span style={{ color: "rgba(184,164,122,0.8)" }}>{article.country}</span>
             </div>
             {/* Editorial tags */}
             <div className="flex flex-wrap items-center gap-3 mb-4">
-              <span className="inline-block text-amber-300 text-[9px] sm:text-[10px] uppercase tracking-[0.35em] font-semibold font-sans">
+              <span className="inline-block text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.champagne }}>
                 {article.editorialSubcategory === "hotels" ? "Palace Hotels" : article.category}
               </span>
               {article.tags && article.tags.length > 0 && (
                 <>
-                  <span className="text-white/20 text-xs">·</span>
+                  <span style={{ color: "rgba(244,240,231,0.2)" }} className="text-xs">·</span>
                   {article.tags.slice(0, 3).map((t) => (
-                    <span key={t} className="text-white/40 text-[8px] sm:text-[9px] uppercase tracking-[0.2em] font-light font-sans">{t}</span>
+                    <span key={t} className="text-[9px] uppercase tracking-[0.22em] font-sans font-normal" style={{ color: "rgba(244,240,231,0.4)" }}>{t}</span>
                   ))}
                 </>
               )}
             </div>
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-[1.12] sm:leading-[1.15] mb-4 sm:mb-5 max-w-4xl tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif leading-[1.12] sm:leading-[1.15] mb-4 sm:mb-5 max-w-4xl tracking-tight" style={{ color: C.ivory, fontWeight: 400 }}>
               {article.headline}
             </h1>
             {/* Subtitle */}
-            <p className="text-neutral-200/90 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-2xl mb-6 sm:mb-8">
+            <p className="text-sm sm:text-base md:text-lg font-sans font-normal leading-relaxed max-w-2xl mb-6 sm:mb-8" style={{ color: "rgba(234,227,213,0.9)" }}>
               {article.subtitle}
             </p>
             {/* Meta row */}
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-white/60 text-[10px] sm:text-[11px] font-light font-sans">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-[10px]/[11px] font-sans font-normal" style={{ color: "rgba(244,240,231,0.6)" }}>
               <span>{article.authorName}</span>
-              <span className="text-white/25">|</span>
+              <span style={{ color: "rgba(244,240,231,0.25)" }}>|</span>
               <span>{article.readTime}</span>
-              <span className="text-white/25">|</span>
+              <span style={{ color: "rgba(244,240,231,0.25)" }}>|</span>
               <time dateTime={article.publishedDate}>
                 {new Date(article.publishedDate).toLocaleDateString("en-US", {
                   month: "long",
@@ -328,12 +340,12 @@ export default async function TravelArticlePage({
                 )}
 
                 {/* Author bio */}
-                <div className="mt-8 pt-6 border-t border-neutral-200">
-                  <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-amber-700 font-bold mb-2 font-sans">
+                <div className="mt-8 pt-6" style={{ borderTop: `1px solid rgba(138,115,82,0.35)` }}>
+                  <p className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium mb-2 font-sans" style={{ color: C.bronze }}>
                     About the Author
                   </p>
-                  <p className="text-sm font-serif text-neutral-800">{article.authorName}</p>
-                  <p className="text-xs text-neutral-500 font-light mt-0.5">{article.authorRole}</p>
+                  <p className="text-sm font-serif" style={{ color: C.textDeep, fontWeight: 400 }}>{article.authorName}</p>
+                  <p className="text-xs font-sans font-normal mt-0.5" style={{ color: C.textStone }}>{article.authorRole}</p>
                 </div>
               </div>
             </aside>
@@ -352,10 +364,10 @@ export default async function TravelArticlePage({
                 <div className="article-content">
                   {sections.map((section) => (
                     <section key={section.id} id={section.id} className="mb-8 sm:mb-10">
-                      <h2 className="text-xl sm:text-2xl md:text-3xl font-serif text-neutral-900 mb-4 sm:mb-5 leading-tight">
+                      <h2 className="text-xl sm:text-2xl md:text-3xl font-serif mb-4 sm:mb-5 leading-tight" style={{ color: C.textDeep, fontWeight: 400 }}>
                         {section.heading}
                       </h2>
-                      <div className="text-sm sm:text-base md:text-lg text-neutral-700 font-light leading-[1.8] space-y-5">
+                      <div className="text-sm sm:text-base md:text-lg font-sans font-normal leading-[1.8] space-y-5" style={{ color: C.textStone }}>
                         {section.content.split("\n\n").map((p, i) => (
                           <p key={i}>{p}</p>
                         ))}
@@ -365,10 +377,10 @@ export default async function TravelArticlePage({
                 </div>
               ) : (
                 <div className="text-center py-20">
-                  <p className="text-neutral-400 font-serif text-lg italic">
+                  <p className="font-serif text-lg italic" style={{ color: C.textStone, fontWeight: 400 }}>
                     Full editorial content coming soon.
                   </p>
-                  <p className="text-neutral-500 text-sm mt-2 font-light">
+                  <p className="text-sm mt-2 font-sans font-normal" style={{ color: C.textStone }}>
                     Our travel editors are crafting this luxury guide.
                   </p>
                 </div>
@@ -379,7 +391,7 @@ export default async function TravelArticlePage({
               {/* Itineraries */}
               {(article.itinerary3Day || article.itinerary5Day || article.itinerary7Day) && (
                 <section id="itineraries" className="mb-10 sm:mb-12">
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-neutral-900 mb-6 sm:mb-8 text-center">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-6 sm:mb-8 text-center" style={{ color: C.textDeep, fontWeight: 400 }}>
                     Luxury Itineraries
                   </h2>
                   {article.itinerary3Day && <ItineraryCard plan={article.itinerary3Day} />}
@@ -391,7 +403,7 @@ export default async function TravelArticlePage({
               {/* Hotels */}
               {article.hotels.length > 0 && (
                 <section id="where-to-stay" className="mb-10 sm:mb-12">
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-neutral-900 mb-6 sm:mb-8 text-center">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-6 sm:mb-8 text-center" style={{ color: C.textDeep, fontWeight: 400 }}>
                     Where to Stay
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
@@ -404,33 +416,33 @@ export default async function TravelArticlePage({
 
               {/* Budget */}
               <section id="budget" className="mb-10 sm:mb-12">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-neutral-900 mb-6 sm:mb-8 text-center">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-6 sm:mb-8 text-center" style={{ color: C.textDeep, fontWeight: 400 }}>
                   Approximate Budgets
                 </h2>
                 <div className="overflow-x-auto">
                   <table className="w-full text-left border-collapse">
                     <thead>
-                      <tr className="border-b-2 border-neutral-200">
-                        <th className="py-3 pr-4 text-[10px] sm:text-[11px] uppercase tracking-[0.15em] text-neutral-400 font-medium font-sans">Category</th>
-                        <th className="py-3 pr-4 text-[10px] sm:text-[11px] uppercase tracking-[0.15em] text-neutral-400 font-medium font-sans">Per Night / Person</th>
+                      <tr style={{ borderBottom: `1px solid ${C.bronze}` }}>
+                        <th className="py-3 pr-4 text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.textStone }}>Category</th>
+                        <th className="py-3 pr-4 text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.textStone }}>Per Night / Person</th>
                       </tr>
                     </thead>
-                    <tbody className="text-sm text-neutral-700 font-light">
-                      <tr className="border-b border-neutral-100">
-                        <td className="py-3 pr-4 font-serif">Budget</td>
+                    <tbody className="text-sm font-sans font-normal" style={{ color: C.textStone }}>
+                      <tr style={{ borderBottom: `1px solid rgba(138,115,82,0.2)` }}>
+                        <td className="py-3 pr-4 font-serif" style={{ color: C.textDeep, fontWeight: 400 }}>Budget</td>
                         <td className="py-3 pr-4">{article.budget.budget}</td>
                       </tr>
-                      <tr className="border-b border-neutral-100">
-                        <td className="py-3 pr-4 font-serif">Mid-Range</td>
+                      <tr style={{ borderBottom: `1px solid rgba(138,115,82,0.2)` }}>
+                        <td className="py-3 pr-4 font-serif" style={{ color: C.textDeep, fontWeight: 400 }}>Mid-Range</td>
                         <td className="py-3 pr-4">{article.budget.midRange}</td>
                       </tr>
-                      <tr className="border-b border-neutral-100">
-                        <td className="py-3 pr-4 font-serif">Luxury</td>
-                        <td className="py-3 pr-4 text-amber-800">{article.budget.luxury}</td>
+                      <tr style={{ borderBottom: `1px solid rgba(138,115,82,0.2)` }}>
+                        <td className="py-3 pr-4 font-serif" style={{ color: C.textDeep, fontWeight: 400 }}>Luxury</td>
+                        <td className="py-3 pr-4" style={{ color: C.bronze }}>{article.budget.luxury}</td>
                       </tr>
-                      <tr className="border-b border-neutral-100">
-                        <td className="py-3 pr-4 font-serif">Ultra-Luxury</td>
-                        <td className="py-3 pr-4 text-amber-800 font-medium">{article.budget.ultraLuxury}</td>
+                      <tr style={{ borderBottom: `1px solid rgba(138,115,82,0.2)` }}>
+                        <td className="py-3 pr-4 font-serif" style={{ color: C.textDeep, fontWeight: 400 }}>Ultra-Luxury</td>
+                        <td className="py-3 pr-4 font-medium" style={{ color: C.bronze }}>{article.budget.ultraLuxury}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -442,7 +454,7 @@ export default async function TravelArticlePage({
               {/* FAQ */}
               {article.faqs.length > 0 && (
                 <section id="faq" className="mb-10 sm:mb-12">
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-neutral-900 mb-6 sm:mb-8 text-center">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-6 sm:mb-8 text-center" style={{ color: C.textDeep, fontWeight: 400 }}>
                     Frequently Asked Questions
                   </h2>
                   <FAQAccordion items={article.faqs} />
@@ -452,7 +464,7 @@ export default async function TravelArticlePage({
               {/* Related Articles */}
               {article.relatedSlugs.length > 0 && (
                 <section className="mb-10 sm:mb-12">
-                  <h2 className="text-xl sm:text-2xl font-serif text-neutral-900 mb-6 text-center">
+                  <h2 className="text-xl sm:text-2xl font-serif mb-6 text-center" style={{ color: C.textDeep, fontWeight: 400 }}>
                     Related Stories
                   </h2>
                   <div className="flex flex-wrap gap-3 justify-center">
@@ -460,7 +472,10 @@ export default async function TravelArticlePage({
                       <Link
                         key={slug}
                         href={`/travel/${slug}`}
-                        className="text-xs sm:text-sm text-neutral-600 hover:text-amber-800 transition-colors border border-neutral-200 px-4 py-2 font-light"
+                        className="text-xs sm:text-sm font-sans font-normal px-4 py-2 transition-colors"
+                        style={{ color: C.textStone, border: `1px solid rgba(138,115,82,0.35)` }}
+                        onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.bronze; (e.target as HTMLElement).style.borderColor = C.bronze; }}
+                        onMouseLeave={(e) => { (e.target as HTMLElement).style.color = C.textStone; (e.target as HTMLElement).style.borderColor = "rgba(138,115,82,0.35)"; }}
                       >
                         {slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
                       </Link>
@@ -473,10 +488,10 @@ export default async function TravelArticlePage({
         </div>
 
         {/* Cross-Section Recommendations */}
-        <section className="py-12 sm:py-16 px-6 sm:px-8 bg-[#faf8f5]">
+        <section className="py-12 sm:py-16 px-6 sm:px-8" style={{ background: C.cream }}>
           <div className="max-w-4xl mx-auto text-center">
-            <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-700 font-bold font-sans">The Royal Gallerys</span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-neutral-900 mt-3 mb-8 tracking-tight">More to Explore</h2>
+            <span className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.bronze }}>The Royal Gallerys</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mt-3 mb-8 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>More to Explore</h2>
             <div className="flex flex-wrap gap-3 justify-center">
               {[
                 { href: "/style", label: "Style" },
@@ -490,7 +505,7 @@ export default async function TravelArticlePage({
                 { href: "/futures", label: "Futures" },
                 { href: "/archive", label: "Archive" },
               ].map((s) => (
-                <Link key={s.href} href={s.href} className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-neutral-500 hover:text-amber-800 transition-colors font-sans font-semibold border border-neutral-200 px-5 py-2.5 hover:border-amber-200 bg-white">
+                <Link key={s.href} href={s.href} className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans px-5 py-2.5 transition-colors" style={{ color: C.textStone, border: `1px solid rgba(138,115,82,0.35)`, background: C.ivory }} onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.bronze; (e.target as HTMLElement).style.borderColor = C.bronze; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.color = C.textStone; (e.target as HTMLElement).style.borderColor = "rgba(138,115,82,0.35)"; }}>
                   {s.label}
                 </Link>
               ))}
@@ -499,12 +514,12 @@ export default async function TravelArticlePage({
         </section>
 
         {/* Newsletter CTA */}
-        <section className="bg-neutral-900 text-white py-12 sm:py-16 px-6 sm:px-8 text-center">
+        <section className="py-12 sm:py-16 px-6 sm:px-8 text-center" style={{ background: C.obsidian }}>
           <div className="max-w-xl mx-auto">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-serif mb-3">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-serif mb-3" style={{ color: C.ivory, fontWeight: 400 }}>
               Join The Royal Traveler
             </h3>
-            <p className="text-neutral-400 text-sm font-light mb-6 leading-relaxed">
+            <p className="text-sm font-sans font-normal mb-6 leading-relaxed" style={{ color: C.textStone }}>
               Weekly dispatches from the world&apos;s finest destinations. Curated itineraries, hotel reviews, and insider access — delivered to your inbox.
             </p>
             <div className="max-w-md mx-auto">

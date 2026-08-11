@@ -9,18 +9,19 @@ export default function FactBox({
 }) {
   return (
     <aside
-      className={`bg-[#faf8f5] border border-neutral-200/80 p-5 sm:p-6 md:p-8 my-8 sm:my-10 ${className}`}
+      className={`p-5 sm:p-6 md:p-8 my-8 sm:my-10 ${className}`}
+      style={{ background: "#EAE3D5", border: "1px solid rgba(138,115,82,0.18)" }}
     >
-      <h4 className="text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-amber-700 font-bold mb-4 sm:mb-5 font-sans">
+      <h4 className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] font-medium font-sans mb-4 sm:mb-5" style={{ color: "#8A7352" }}>
         {title}
       </h4>
       <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         {items.map((item) => (
           <div key={item.label} className="flex flex-col gap-0.5">
-            <dt className="text-[10px] sm:text-[11px] text-neutral-400 uppercase tracking-[0.15em] font-medium font-sans">
+            <dt className="text-[10px] sm:text-[11px] uppercase tracking-[0.14em] font-medium font-sans" style={{ color: "#9B9589" }}>
               {item.label}
             </dt>
-            <dd className="text-sm sm:text-base text-neutral-800 font-serif">
+            <dd className="text-sm sm:text-base font-serif" style={{ color: "#181714" }}>
               {item.value}
             </dd>
           </div>

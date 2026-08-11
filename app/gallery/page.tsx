@@ -3,6 +3,18 @@ import Link from "next/link";
 
 const blurDataURL = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGw9IiNkZGRkZGQiIGQ9Ik0wIDBoMXYxSDB6Ii8+PC9zdmc+";
 
+const C = {
+  obsidian: "#11110F",
+  charcoal: "#1C1B18",
+  forest: "#17261F",
+  ivory: "#F4F0E7",
+  cream: "#EAE3D5",
+  textDeep: "#181714",
+  textStone: "#9B9589",
+  bronze: "#8A7352",
+  champagne: "#B8A47A",
+};
+
 const galleryPhotos = [
   { src: 'vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg', alt: 'Jaipur City Palace' },
   { src: 'mehrangarh-fort.jpg', alt: 'Mehrangarh Fort Jodhpur' },
@@ -27,15 +39,15 @@ const archiveFeatures = [
 
 export default function GalleryPage() {
   return (
-    <div className="bg-white">
+    <div style={{ background: C.ivory }}>
       {/* ══════════ HERO ══════════ */}
-      <section className="py-20 sm:py-28 md:py-36 px-6 sm:px-8 md:px-12 lg:px-16 bg-neutral-900 text-white">
+      <section className="py-20 sm:py-28 md:py-36 px-6 sm:px-8 md:px-12 lg:px-16" style={{ background: C.obsidian }}>
         <div className="max-w-4xl">
-          <span className="text-amber-400 text-[9px] sm:text-[10px] uppercase tracking-[0.35em] font-semibold">Visual Archive & AI</span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif mt-4 mb-6 leading-[0.95] tracking-tight">
+          <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.champagne }}>Visual Archive &amp; AI</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif mt-4 mb-6 leading-[0.95] tracking-tight" style={{ color: C.ivory, fontWeight: 400 }}>
             The Living<br />Archive
           </h1>
-          <p className="text-neutral-400 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-2xl">
+          <p className="font-sans font-normal text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: C.textStone }}>
             A comprehensive visual archive of India&apos;s architectural heritage — and a preview of our AI-powered digital preservation platform that will make heritage accessible for centuries.
           </p>
         </div>
@@ -49,36 +61,36 @@ export default function GalleryPage() {
               <Image src="/images/hallway-arches-with-dramatic-light-shadows.jpg" alt="Living Archive" fill placeholder="blur" blurDataURL={blurDataURL} sizes="(max-width:1024px)100vw,42vw" className="object-cover" />
             </div>
             <div className="lg:col-span-7 space-y-5 sm:space-y-7">
-              <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-700 font-bold">The Living Archive Project</span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-neutral-900 leading-tight tracking-tight">Imagine Speaking with History</h2>
-              <p className="text-neutral-600 font-light text-sm sm:text-base leading-relaxed max-w-xl">
+              <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.bronze }}>The Living Archive Project</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif leading-tight tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>Imagine Speaking with History</h2>
+              <p className="font-sans font-normal text-sm sm:text-base leading-relaxed max-w-xl" style={{ color: C.textStone }}>
                 Our flagship AI initiative uses ethical artificial intelligence, historical research and digital preservation technologies to create interactive heritage experiences — so future generations can learn directly from the voices and wisdom of the past.
               </p>
               <div className="flex flex-wrap gap-2">
                 {archiveFeatures.map((f) => (
-                  <span key={f} className="text-[9px] sm:text-[10px] bg-[#faf8f5] text-neutral-600 px-3 py-1.5 border border-neutral-200 font-light">{f}</span>
+                  <span key={f} className="text-[9px] sm:text-[10px] px-3 py-1.5 font-sans font-normal" style={{ background: C.cream, border: "1px solid rgba(138,115,82,0.35)", color: C.textStone }}>{f}</span>
                 ))}
               </div>
-              <blockquote className="border-l-2 border-amber-400 pl-5 italic text-neutral-400 text-sm mt-4">
+              <blockquote className="pl-5 italic font-sans font-normal text-sm mt-4" style={{ borderLeft: `2px solid ${C.champagne}`, color: C.textStone }}>
                 &ldquo;We are not recreating people. We are preserving knowledge.&rdquo;
               </blockquote>
-              <Link href="/heritage-ai" className="inline-block text-[10px] sm:text-xs uppercase tracking-[0.25em] text-amber-700 hover:text-amber-900 transition font-semibold border-b border-amber-300 pb-0.5">Explore Heritage AI →</Link>
+              <Link href="/heritage-ai" className="inline-block text-[10px] sm:text-xs uppercase tracking-[0.22em] transition font-medium pb-0.5 font-sans" style={{ color: C.bronze, borderBottom: `1px solid ${C.champagne}` }}>Explore Heritage AI →</Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* ══════════ PHOTO MASONRY ══════════ */}
-      <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#faf8f5]">
+      <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 lg:px-12" style={{ background: C.cream }}>
         <div className="text-center mb-12 sm:mb-16">
-          <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-700 font-bold">Visual Archive</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-neutral-900 mt-4 tracking-tight">A Growing Collection</h2>
+          <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.bronze }}>Visual Archive</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mt-4 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>A Growing Collection</h2>
         </div>
         <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 sm:gap-5 space-y-4 sm:space-y-5">
           {galleryPhotos.map((photo, i) => (
             <div key={i} className="break-inside-avoid overflow-hidden group">
-              <div className="relative overflow-hidden bg-neutral-100">
-                <Image src={`/images/${photo.src}`} alt={photo.alt} width={800} height={1000} placeholder="blur" blurDataURL={blurDataURL} sizes="(max-width:640px)100vw,(max-width:1024px)50vw,25vw" className="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-700" />
+              <div className="relative overflow-hidden" style={{ background: C.ivory }}>
+                <Image src={`/images/${photo.src}`} alt={photo.alt} width={800} height={1000} placeholder="blur" blurDataURL={blurDataURL} sizes="(max-width:640px)100vw,(max-width:1024px)50vw,25vw" className="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-1000" />
               </div>
             </div>
           ))}

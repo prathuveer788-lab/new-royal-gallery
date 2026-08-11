@@ -3,6 +3,18 @@ import Link from "next/link";
 
 const blurDataURL = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGw9IiNkZGRkZGQiIGQ9Ik0wIDBoMXYxSDB6Ii8+PC9zdmc+";
 
+const C = {
+  obsidian: "#11110F",
+  charcoal: "#1C1B18",
+  forest: "#17261F",
+  ivory: "#F4F0E7",
+  cream: "#EAE3D5",
+  textDeep: "#181714",
+  textStone: "#9B9589",
+  bronze: "#8A7352",
+  champagne: "#B8A47A",
+};
+
 const houses = [
   {
     num: "01", title: "Royal Gallery Media", subtitle: "Stories That Carry Heritage to the World",
@@ -38,27 +50,27 @@ const houses = [
 
 export default function EcosystemPage() {
   return (
-    <div className="bg-white">
-      <section className="py-20 sm:py-28 md:py-36 px-6 sm:px-8 md:px-12 lg:px-16 bg-neutral-900 text-white">
+    <div style={{ background: C.ivory }}>
+      <section className="py-20 sm:py-28 md:py-36 px-6 sm:px-8 md:px-12 lg:px-16" style={{ background: C.obsidian }}>
         <div className="max-w-4xl">
-          <span className="text-amber-400 text-[9px] sm:text-[10px] uppercase tracking-[0.35em] font-semibold">Our Ecosystem</span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif mt-4 mb-6 leading-[0.95] tracking-tight">Five Houses,<br />One Heritage</h1>
-          <p className="text-neutral-400 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-2xl">Each division preserves heritage through a different craft — together they form a complete system for cultural memory.</p>
+          <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.champagne }}>Our Ecosystem</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif mt-4 mb-6 leading-[0.95] tracking-tight" style={{ color: C.ivory, fontWeight: 400 }}>Five Houses,<br />One Heritage</h1>
+          <p className="font-sans font-normal text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: C.textStone }}>Each division preserves heritage through a different craft — together they form a complete system for cultural memory.</p>
         </div>
       </section>
 
       <div className="space-y-0">
         {houses.map((house, i) => (
-          <section key={house.num} className={`py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16 ${i % 2 === 1 ? 'bg-[#faf8f5]' : 'bg-white'}`}>
+          <section key={house.num} className={`py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16`} style={{ background: i % 2 === 1 ? C.cream : C.ivory }}>
             <div className="max-w-7xl mx-auto">
               <div className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center ${i % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
                 <div className={`${i % 2 === 1 ? 'lg:col-start-2' : ''} lg:col-span-7 space-y-5 sm:space-y-6`}>
-                  <span className="text-5xl sm:text-6xl md:text-7xl font-serif text-amber-300">0{house.num}</span>
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-neutral-900 leading-tight tracking-tight">{house.title}</h2>
-                  <p className="text-amber-700 text-sm sm:text-base font-light tracking-wide">{house.subtitle}</p>
-                  <p className="text-neutral-500 font-light text-sm sm:text-base leading-relaxed max-w-xl">{house.desc}</p>
+                  <span className="text-5xl sm:text-6xl md:text-7xl font-serif" style={{ color: C.champagne, fontWeight: 400 }}>0{house.num}</span>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif leading-tight tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>{house.title}</h2>
+                  <p className="text-sm sm:text-base font-sans font-normal leading-relaxed" style={{ color: C.bronze }}>{house.subtitle}</p>
+                  <p className="font-sans font-normal text-sm sm:text-base leading-relaxed max-w-xl" style={{ color: C.textStone }}>{house.desc}</p>
                   <div className="flex flex-wrap gap-2 pt-1">
-                    {house.services.map((s) => (<span key={s} className="text-[9px] sm:text-[10px] bg-white border border-neutral-200 text-neutral-500 px-3 py-1.5 font-light">{s}</span>))}
+                    {house.services.map((s) => (<span key={s} className="text-[9px] sm:text-[10px] px-3 py-1.5 font-sans font-normal" style={{ background: C.ivory, border: "1px solid rgba(138,115,82,0.35)", color: C.textStone }}>{s}</span>))}
                   </div>
                 </div>
                 <div className={`${i % 2 === 1 ? 'lg:col-start-1' : ''} lg:col-span-5 relative aspect-[3/4] overflow-hidden`}>
@@ -70,11 +82,11 @@ export default function EcosystemPage() {
         ))}
       </div>
 
-      <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16 text-center bg-[#faf8f5]">
-        <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-700 font-bold">Partnership</span>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-neutral-900 mt-4 mb-6 tracking-tight">Collaborate Across the Ecosystem</h2>
-        <p className="text-neutral-500 text-sm sm:text-base font-light max-w-xl mx-auto mb-10">Partner with one house or across the entire ecosystem.</p>
-        <Link href="/membership" className="inline-block px-10 py-4 bg-neutral-900 text-white hover:bg-neutral-800 transition text-xs uppercase tracking-[0.25em] font-semibold">Become a Partner</Link>
+      <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16 text-center" style={{ background: C.cream }}>
+        <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.bronze }}>Partnership</span>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mt-4 mb-6 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>Collaborate Across the Ecosystem</h2>
+        <p className="font-sans font-normal text-sm sm:text-base leading-relaxed max-w-xl mx-auto mb-10" style={{ color: C.textStone }}>Partner with one house or across the entire ecosystem.</p>
+        <Link href="/membership" className="inline-block px-10 py-4 transition text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ border: `1px solid ${C.bronze}`, color: C.bronze }}>Become a Partner</Link>
       </section>
     </div>
   );

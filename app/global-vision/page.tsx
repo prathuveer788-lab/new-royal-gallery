@@ -1,5 +1,17 @@
 import Link from "next/link";
 
+const C = {
+  obsidian: "#11110F",
+  charcoal: "#1C1B18",
+  forest: "#17261F",
+  ivory: "#F4F0E7",
+  cream: "#EAE3D5",
+  textDeep: "#181714",
+  textStone: "#9B9589",
+  bronze: "#8A7352",
+  champagne: "#B8A47A",
+};
+
 const phases = [
   { phase: "Phase 1", region: "India", desc: "Establishing the foundation — partnerships with royal families, heritage institutions, museums and luxury brands across India. Building the core archive, launching the magazine and hosting the first heritage summits.", cities: ["Jaipur", "Udaipur", "Jodhpur", "Delhi", "Mumbai", "Hyderabad"], active: true },
   { phase: "Phase 2", region: "South Asia", desc: "Expanding into the broader South Asian heritage landscape — connecting royal and aristocratic networks across the subcontinent and documenting shared cultural histories.", cities: ["Kathmandu", "Colombo", "Dhaka", "Lahore"], active: false },
@@ -12,20 +24,20 @@ const globalCities = ["India", "London", "Vienna", "Paris", "Rome", "Dubai", "Ne
 
 export default function GlobalVisionPage() {
   return (
-    <div className="bg-white">
-      <section className="py-20 sm:py-28 md:py-36 px-6 sm:px-8 md:px-12 lg:px-16 bg-neutral-900 text-white">
+    <div style={{ background: C.ivory }}>
+      <section className="py-20 sm:py-28 md:py-36 px-6 sm:px-8 md:px-12 lg:px-16" style={{ background: C.obsidian }}>
         <div className="max-w-4xl">
-          <span className="text-amber-400 text-[9px] sm:text-[10px] uppercase tracking-[0.35em] font-semibold">Global Vision</span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif mt-4 mb-6 leading-[0.95] tracking-tight">From India<br />to the World</h1>
-          <p className="text-neutral-400 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-2xl">Building a global heritage preservation network — spanning continents, connecting royal traditions, and uniting cultural institutions in preserving civilization&apos;s memory.</p>
+          <span className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.champagne }}>Global Vision</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif mt-4 mb-6 leading-[0.95] tracking-tight" style={{ color: C.ivory, fontWeight: 400 }}>From India<br />to the World</h1>
+          <p className="text-sm sm:text-base md:text-lg font-sans font-normal leading-relaxed max-w-2xl" style={{ color: C.textStone }}>Building a global heritage preservation network — spanning continents, connecting royal traditions, and uniting cultural institutions in preserving civilization&apos;s memory.</p>
         </div>
       </section>
 
-      <section className="py-12 sm:py-16 border-b border-neutral-100">
+      <section className="py-12 sm:py-16" style={{ borderBottom: `1px solid rgba(138,115,82,0.35)` }}>
         <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 text-center">
-          <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-700 font-bold">Global Presence</span>
+          <span className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.bronze }}>Global Presence</span>
           <div className="flex flex-wrap justify-center gap-3 sm:gap-5 mt-6">
-            {globalCities.map((c) => (<span key={c} className="text-sm sm:text-base font-serif text-neutral-600 bg-[#faf8f5] px-6 py-3 border border-neutral-200 hover:border-amber-200 transition-colors">{c}</span>))}
+            {globalCities.map((c) => (<span key={c} className="text-sm sm:text-base font-serif px-6 py-3 transition-colors" style={{ color: C.textDeep, fontWeight: 400, background: C.cream, border: `1px solid rgba(138,115,82,0.35)` }}>{c}</span>))}
           </div>
         </div>
       </section>
@@ -33,25 +45,25 @@ export default function GlobalVisionPage() {
       <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
           {phases.map((p) => (
-            <div key={p.phase} className={`p-6 sm:p-8 border ${p.active ? 'border-amber-200 bg-[#faf8f5]' : 'border-neutral-200'} hover:shadow-md transition-all`}>
+            <div key={p.phase} className="p-6 sm:p-8 transition-all" style={{ border: p.active ? `1px solid ${C.bronze}` : `1px solid rgba(138,115,82,0.35)`, background: p.active ? C.cream : "transparent" }}>
               <div className="flex flex-wrap items-center gap-3 mb-3">
-                <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.25em] text-amber-700 font-bold">{p.phase}</span>
-                {p.active && <span className="text-[7px] sm:text-[8px] uppercase tracking-[0.2em] bg-amber-100 text-amber-700 px-2.5 py-0.5 font-bold">Active</span>}
+                <span className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.bronze }}>{p.phase}</span>
+                {p.active && <span className="text-[8px] uppercase tracking-[0.22em] font-medium font-sans px-2.5 py-0.5" style={{ background: C.forest, color: C.champagne }}>Active</span>}
               </div>
-              <h3 className="text-2xl sm:text-3xl font-serif text-neutral-900 mb-2">{p.region}</h3>
-              <p className="text-neutral-500 text-sm sm:text-base font-light leading-relaxed mb-4">{p.desc}</p>
+              <h3 className="text-2xl sm:text-3xl font-serif mb-2" style={{ color: C.textDeep, fontWeight: 400 }}>{p.region}</h3>
+              <p className="text-sm sm:text-base font-sans font-normal leading-relaxed mb-4" style={{ color: C.textStone }}>{p.desc}</p>
               <div className="flex flex-wrap gap-2">
-                {p.cities.map((c) => (<span key={c} className="text-[9px] sm:text-[10px] text-neutral-400 font-light bg-neutral-100 px-3 py-1">{c}</span>))}
+                {p.cities.map((c) => (<span key={c} className="text-[9px]/[10px] font-sans font-normal px-3 py-1" style={{ color: C.textStone, background: C.cream }}>{c}</span>))}
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="py-16 sm:py-24 px-6 sm:px-8 md:px-12 lg:px-16 text-center bg-[#faf8f5]">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-neutral-900 mb-6 tracking-tight">Join the Global Network</h2>
-        <p className="text-neutral-500 text-sm sm:text-base font-light max-w-xl mx-auto mb-10">Partner with The Royal Gallery as we expand across continents.</p>
-        <Link href="/membership" className="inline-block px-10 py-4 bg-neutral-900 text-white hover:bg-neutral-800 transition text-xs uppercase tracking-[0.25em] font-semibold">Become a Partner</Link>
+      <section className="py-16 sm:py-24 px-6 sm:px-8 md:px-12 lg:px-16 text-center" style={{ background: C.cream }}>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-6 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>Join the Global Network</h2>
+        <p className="text-sm sm:text-base font-sans font-normal max-w-xl mx-auto mb-10" style={{ color: C.textStone }}>Partner with The Royal Gallery as we expand across continents.</p>
+        <Link href="/membership" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }} onMouseEnter={(e) => { (e.target as HTMLElement).style.background = C.charcoal; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.background = C.obsidian; }}>Become a Partner</Link>
       </section>
     </div>
   );
