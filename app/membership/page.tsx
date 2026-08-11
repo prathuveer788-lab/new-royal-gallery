@@ -51,7 +51,7 @@ export default function MembershipPage() {
                 <ul className="space-y-2.5 mb-8 flex-grow">
                   {tier.benefits.map((b) => (<li key={b} className="text-[10px]/[11px] font-sans font-normal flex items-start gap-2" style={{ color: C.textStone }}><span className="mt-0.5 flex-shrink-0" style={{ color: C.bronze }}>·</span>{b}</li>))}
                 </ul>
-                <Link href="#" className="inline-block text-center text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans py-2.5 px-4 transition-colors" style={tier.featured ? { background: C.bronze, color: C.ivory, border: `1px solid ${C.bronze}` } : { color: C.bronze, border: `1px solid ${C.bronze}` }} onMouseEnter={(e) => { if (tier.featured) { (e.target as HTMLElement).style.background = C.champagne; } else { (e.target as HTMLElement).style.background = "rgba(138,115,82,0.08)"; } }} onMouseLeave={(e) => { if (tier.featured) { (e.target as HTMLElement).style.background = C.bronze; } else { (e.target as HTMLElement).style.background = "transparent"; } }}>{tier.cta}</Link>
+                <Link href="#" className="inline-block text-center text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans py-2.5 px-4 transition-colors" style={tier.featured ? { background: C.bronze, color: C.ivory, border: `1px solid ${C.bronze}` } : { color: C.bronze, border: `1px solid ${C.bronze}` }}>{tier.cta}</Link>
               </div>
             ))}
           </div>
@@ -64,8 +64,8 @@ export default function MembershipPage() {
           <h2 className="text-2xl sm:text-3xl font-serif text-center mb-10 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>Partnership Opportunities</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {partnerTypes.map((p) => (
-              <Link key={p.title} href={p.link} className="p-6 sm:p-7 transition-all group" style={{ background: C.ivory, border: `1px solid rgba(138,115,82,0.2)` }} onMouseEnter={(e) => { (e.target as HTMLElement).style.borderColor = C.bronze; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.borderColor = "rgba(138,115,82,0.2)"; }}>
-                <h3 className="font-serif text-base sm:text-lg mb-2 transition-colors" style={{ color: C.textDeep, fontWeight: 400 }} onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.bronze; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.color = C.textDeep; }}>{p.title}</h3>
+              <Link key={p.title} href={p.link} className="p-6 sm:p-7 transition-all group" style={{ background: C.ivory, border: `1px solid rgba(138,115,82,0.2)` }} >
+                <h3 className="font-serif text-base sm:text-lg mb-2 transition-colors" style={{ color: C.textDeep, fontWeight: 400 }} >{p.title}</h3>
                 <p className="text-xs sm:text-sm font-sans font-normal leading-relaxed" style={{ color: C.textStone }}>{p.desc}</p>
                 <span className="inline-block mt-4 text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.bronze }}>Learn More →</span>
               </Link>
@@ -81,15 +81,15 @@ export default function MembershipPage() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mt-4 mb-6 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>An Invitation to Build the Future of Heritage</h2>
           <p className="text-sm font-sans font-normal max-w-xl mx-auto mb-10" style={{ color: C.textStone }}>Private consultations available for royal families, luxury brands and heritage institutions.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="#" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }} onMouseEnter={(e) => { (e.target as HTMLElement).style.background = C.charcoal; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.background = C.obsidian; }}>Schedule a Consultation</Link>
-            <a href="mailto:hey.theroyalgallerys@gmail.com" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.textDeep, border: `1px solid ${C.bronze}` }} onMouseEnter={(e) => { (e.target as HTMLElement).style.background = "rgba(138,115,82,0.08)"; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.background = "transparent"; }}>Email Us</a>
+            <Link href="#" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }} >Schedule a Consultation</Link>
+            <a href="mailto:hey.theroyalgallerys@gmail.com" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.textDeep, border: `1px solid ${C.bronze}` }} >Email Us</a>
           </div>
           <div className="mt-6 space-y-1.5">
             <p className="text-[10px]/[11px] uppercase tracking-[0.22em] font-sans font-normal">
-              <a href="mailto:hey.theroyalgallerys@gmail.com" style={{ color: C.textStone }} onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.bronze; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.color = C.textStone; }}>hey.theroyalgallerys@gmail.com</a>
+              <a href="mailto:hey.theroyalgallerys@gmail.com" style={{ color: C.textStone }} >hey.theroyalgallerys@gmail.com</a>
             </p>
             <p className="text-[10px]/[11px] uppercase tracking-[0.22em] font-sans font-normal">
-              <a href="https://www.instagram.com/theroyalgallerys/" target="_blank" rel="noreferrer" style={{ color: C.textStone }} onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.bronze; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.color = C.textStone; }}>@theroyalgallerys</a>
+              <a href="https://www.instagram.com/theroyalgallerys/" target="_blank" rel="noreferrer" style={{ color: C.textStone }} >@theroyalgallerys</a>
             </p>
           </div>
         </div>

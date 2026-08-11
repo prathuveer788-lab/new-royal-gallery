@@ -82,8 +82,8 @@ export default function ImpactPage() {
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-6 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>Heritage Is Humanity&apos;s<br />Most Valuable Asset</h2>
         <p className="text-sm sm:text-base font-sans font-normal max-w-xl mx-auto mb-10" style={{ color: C.textStone }}>The stories that built civilizations deserve to survive. The Royal Gallery exists to ensure they do.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/membership" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }} onMouseEnter={(e) => { (e.target as HTMLElement).style.background = C.charcoal; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.background = C.obsidian; }}>Partner With Us</Link>
-          <Link href="/global-vision" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.textDeep, border: `1px solid ${C.bronze}` }} onMouseEnter={(e) => { (e.target as HTMLElement).style.background = "rgba(138,115,82,0.08)"; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.background = "transparent"; }}>Explore the Vision</Link>
+          <Link href="/membership" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }} >Partner With Us</Link>
+          <Link href="/global-vision" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.textDeep, border: `1px solid ${C.bronze}` }} >Explore the Vision</Link>
         </div>
       </section>
     </div>

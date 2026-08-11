@@ -81,19 +81,13 @@ export default function AdvertisePage() {
             <a
               href="#media-kit"
               className="inline-block px-10 py-4 transition-colors text-xs sm:text-sm uppercase tracking-[0.22em] font-medium font-sans"
-              style={{ background: C.bronze, color: C.ivory, border: `1px solid ${C.bronze}` }}
-              onMouseEnter={(e) => { (e.target as HTMLElement).style.background = C.champagne; }}
-              onMouseLeave={(e) => { (e.target as HTMLElement).style.background = C.bronze; }}
-            >
+              style={{ background: C.bronze, color: C.ivory, border: `1px solid ${C.bronze}` }} >
               Download Media Kit
             </a>
             <a
               href="mailto:hey.theroyalgallerys@gmail.com"
               className="inline-block px-10 py-4 transition-colors text-xs sm:text-sm uppercase tracking-[0.22em] font-medium font-sans"
-              style={{ color: C.ivory, border: `1px solid ${C.bronze}` }}
-              onMouseEnter={(e) => { (e.target as HTMLElement).style.background = "rgba(184,164,122,0.1)"; }}
-              onMouseLeave={(e) => { (e.target as HTMLElement).style.background = "transparent"; }}
-            >
+              style={{ color: C.ivory, border: `1px solid ${C.bronze}` }} >
               Contact Partnerships
             </a>
           </div>
@@ -229,10 +223,7 @@ export default function AdvertisePage() {
             <a
               href="mailto:hey.theroyalgallerys@gmail.com?subject=Partnership%20Enquiry"
               className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans"
-              style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }}
-              onMouseEnter={(e) => { (e.target as HTMLElement).style.background = C.charcoal; }}
-              onMouseLeave={(e) => { (e.target as HTMLElement).style.background = C.obsidian; }}
-            >
+              style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }} >
               Email Partnerships
             </a>
             <a
@@ -240,10 +231,7 @@ export default function AdvertisePage() {
               target="_blank"
               rel="noreferrer"
               className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans"
-              style={{ color: C.textDeep, border: `1px solid ${C.bronze}` }}
-              onMouseEnter={(e) => { (e.target as HTMLElement).style.background = "rgba(138,115,82,0.08)"; }}
-              onMouseLeave={(e) => { (e.target as HTMLElement).style.background = "transparent"; }}
-            >
+              style={{ color: C.textDeep, border: `1px solid ${C.bronze}` }} >
               DM on Instagram
             </a>
           </div>

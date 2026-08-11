@@ -81,7 +81,7 @@ function renderTextWithLinks(text: string): React.ReactNode[] {
     const linkMatch = part.match(/^\[\[LINK:(.+?)\|(.+?)\]\]$/);
     if (linkMatch) {
       return (
-        <a key={idx} href={linkMatch[1]} style={{ color: C.bronze, textDecoration: "underline", textDecorationColor: C.champagne, textUnderlineOffset: "2px", textDecorationThickness: "1px" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.textDeep; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.color = C.bronze; }}>
+        <a key={idx} href={linkMatch[1]} style={{ color: C.bronze, textDecoration: "underline", textDecorationColor: C.champagne, textUnderlineOffset: "2px", textDecorationThickness: "1px" }} >
           {linkMatch[2]}
         </a>
       );
@@ -273,13 +273,13 @@ export default async function TravelArticlePage({
           <div className="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pb-12 sm:pb-16 md:pb-20">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-[10px]/[11px] uppercase tracking-[0.22em] mb-6 sm:mb-8 font-sans" style={{ color: "rgba(244,240,231,0.5)" }}>
-              <Link href="/" style={{ color: "rgba(244,240,231,0.5)" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.champagne; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.color = "rgba(244,240,231,0.5)"; }}>The Royal Gallerys</Link>
+              <Link href="/" style={{ color: "rgba(244,240,231,0.5)" }} >The Royal Gallerys</Link>
               <span style={{ color: "rgba(244,240,231,0.2)" }}>/</span>
-              <Link href="/travel" style={{ color: "rgba(244,240,231,0.5)" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.champagne; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.color = "rgba(244,240,231,0.5)"; }}>Travel</Link>
+              <Link href="/travel" style={{ color: "rgba(244,240,231,0.5)" }} >Travel</Link>
               {(article.editorialSection && article.editorialSection !== "travel") && (
                 <>
                   <span style={{ color: "rgba(244,240,231,0.2)" }}>/</span>
-                  <Link href={`/${article.editorialSection}`} className="capitalize" style={{ color: "rgba(244,240,231,0.5)" }} onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.champagne; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.color = "rgba(244,240,231,0.5)"; }}>{article.editorialSection}</Link>
+                  <Link href={`/${article.editorialSection}`} className="capitalize" style={{ color: "rgba(244,240,231,0.5)" }} >{article.editorialSection}</Link>
                 </>
               )}
               <span style={{ color: "rgba(244,240,231,0.2)" }}>/</span>
@@ -473,10 +473,7 @@ export default async function TravelArticlePage({
                         key={slug}
                         href={`/travel/${slug}`}
                         className="text-xs sm:text-sm font-sans font-normal px-4 py-2 transition-colors"
-                        style={{ color: C.textStone, border: `1px solid rgba(138,115,82,0.35)` }}
-                        onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.bronze; (e.target as HTMLElement).style.borderColor = C.bronze; }}
-                        onMouseLeave={(e) => { (e.target as HTMLElement).style.color = C.textStone; (e.target as HTMLElement).style.borderColor = "rgba(138,115,82,0.35)"; }}
-                      >
+                        style={{ color: C.textStone, border: `1px solid rgba(138,115,82,0.35)` }} >
                         {slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
                       </Link>
                     ))}
@@ -505,7 +502,7 @@ export default async function TravelArticlePage({
                 { href: "/futures", label: "Futures" },
                 { href: "/archive", label: "Archive" },
               ].map((s) => (
-                <Link key={s.href} href={s.href} className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans px-5 py-2.5 transition-colors" style={{ color: C.textStone, border: `1px solid rgba(138,115,82,0.35)`, background: C.ivory }} onMouseEnter={(e) => { (e.target as HTMLElement).style.color = C.bronze; (e.target as HTMLElement).style.borderColor = C.bronze; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.color = C.textStone; (e.target as HTMLElement).style.borderColor = "rgba(138,115,82,0.35)"; }}>
+                <Link key={s.href} href={s.href} className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans px-5 py-2.5 transition-colors" style={{ color: C.textStone, border: `1px solid rgba(138,115,82,0.35)`, background: C.ivory }} >
                   {s.label}
                 </Link>
               ))}

@@ -98,16 +98,7 @@ export default function TravelPage() {
                 key={link.href}
                 href={link.href}
                 className="text-[10px]/[11px] uppercase tracking-[0.22em] font-medium font-sans px-5 py-2.5 transition-colors"
-                style={{ color: C.textStone, border: `1px solid rgba(138,115,82,0.35)` }}
-                onMouseEnter={(e) => {
-                  (e.target as HTMLElement).style.color = C.bronze;
-                  (e.target as HTMLElement).style.borderColor = C.bronze;
-                }}
-                onMouseLeave={(e) => {
-                  (e.target as HTMLElement).style.color = C.textStone;
-                  (e.target as HTMLElement).style.borderColor = "rgba(138,115,82,0.35)";
-                }}
-              >
+                style={{ color: C.textStone, border: `1px solid rgba(138,115,82,0.35)` }} >
                 {link.label}
               </Link>
             ))}

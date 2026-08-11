@@ -63,7 +63,7 @@ export default function GlobalVisionPage() {
       <section className="py-16 sm:py-24 px-6 sm:px-8 md:px-12 lg:px-16 text-center" style={{ background: C.cream }}>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-6 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>Join the Global Network</h2>
         <p className="text-sm sm:text-base font-sans font-normal max-w-xl mx-auto mb-10" style={{ color: C.textStone }}>Partner with The Royal Gallery as we expand across continents.</p>
-        <Link href="/membership" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }} onMouseEnter={(e) => { (e.target as HTMLElement).style.background = C.charcoal; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.background = C.obsidian; }}>Become a Partner</Link>
+        <Link href="/membership" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }} >Become a Partner</Link>
       </section>
     </div>
   );

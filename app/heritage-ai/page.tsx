@@ -150,7 +150,7 @@ export default function HeritageAIPage() {
           <p className="text-sm sm:text-base font-sans font-normal max-w-xl mx-auto mb-10" style={{ color: C.textStone }}>
             Technology can preserve what time erodes. Partner with us to ensure your heritage survives — for your family, your institution, and the generations to come.
           </p>
-          <Link href="/membership" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }} onMouseEnter={(e) => { (e.target as HTMLElement).style.background = C.charcoal; }} onMouseLeave={(e) => { (e.target as HTMLElement).style.background = C.obsidian; }}>Partner With Us</Link>
+          <Link href="/membership" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }} >Partner With Us</Link>
         </div>
       </section>
     </div>

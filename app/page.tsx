@@ -77,16 +77,7 @@ function EditorialBtn({ href, children, dark }: { href: string; children: React.
         color: dark ? C.ivory : C.textDeep,
         border: `1px solid ${dark ? "rgba(138,115,82,0.5)" : "rgba(138,115,82,0.4)"}`,
         background: "transparent",
-      }}
-      onMouseEnter={(e) => {
-        (e.target as HTMLElement).style.background = "rgba(138,115,82,0.08)";
-        (e.target as HTMLElement).style.borderColor = C.champagne;
-      }}
-      onMouseLeave={(e) => {
-        (e.target as HTMLElement).style.background = "transparent";
-        (e.target as HTMLElement).style.borderColor = dark ? "rgba(138,115,82,0.5)" : "rgba(138,115,82,0.4)";
-      }}
-    >
+      }} >
       {children} →
     </Link>
   );
@@ -160,16 +151,7 @@ export default function HomePage() {
           <a
             href="#the-magazine"
             className="inline-block text-[11px] sm:text-xs uppercase tracking-[0.28em] font-medium font-sans px-10 sm:px-14 py-3.5 sm:py-4 transition-all duration-700"
-            style={{ color: C.champagne, border: "1px solid rgba(184,164,122,0.35)" }}
-            onMouseEnter={(e) => {
-              (e.target as HTMLElement).style.background = "rgba(184,164,122,0.08)";
-              (e.target as HTMLElement).style.borderColor = "rgba(184,164,122,0.6)";
-            }}
-            onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.background = "transparent";
-              (e.target as HTMLElement).style.borderColor = "rgba(184,164,122,0.35)";
-            }}
-          >
+            style={{ color: C.champagne, border: "1px solid rgba(184,164,122,0.35)" }} >
             Enter the Magazine →
           </a>
         </div>
@@ -204,10 +186,7 @@ export default function HomePage() {
           <Link
             href="/global-vision"
             className="inline-block text-[11px] sm:text-xs uppercase tracking-[0.22em] font-medium font-sans px-10 sm:px-12 py-3.5 transition-all duration-500"
-            style={{ color: C.ivory, background: C.obsidian }}
-            onMouseEnter={(e) => { (e.target as HTMLElement).style.background = C.charcoal; }}
-            onMouseLeave={(e) => { (e.target as HTMLElement).style.background = C.obsidian; }}
-          >
+            style={{ color: C.ivory, background: C.obsidian }} >
             Read Our Story →
           </Link>
         </div>
@@ -568,16 +547,7 @@ export default function HomePage() {
           <Link
             href="/archive"
             className="inline-block text-[11px] sm:text-xs uppercase tracking-[0.22em] font-medium font-sans px-10 sm:px-12 py-3.5 transition-all duration-500"
-            style={{ color: C.champagne, border: "1px solid rgba(184,164,122,0.35)" }}
-            onMouseEnter={(e) => {
-              (e.target as HTMLElement).style.background = "rgba(184,164,122,0.06)";
-              (e.target as HTMLElement).style.borderColor = "rgba(184,164,122,0.6)";
-            }}
-            onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.background = "transparent";
-              (e.target as HTMLElement).style.borderColor = "rgba(184,164,122,0.35)";
-            }}
-          >
+            style={{ color: C.champagne, border: "1px solid rgba(184,164,122,0.35)" }} >
             Enter the Archive
           </Link>
         </div>
@@ -631,25 +601,13 @@ export default function HomePage() {
             <Link
               href="/membership"
               className="inline-block text-[11px] sm:text-xs uppercase tracking-[0.22em] font-medium font-sans px-10 sm:px-12 py-3.5 transition-all duration-500"
-              style={{ color: C.obsidian, background: C.ivory }}
-              onMouseEnter={(e) => { (e.target as HTMLElement).style.background = C.cream; }}
-              onMouseLeave={(e) => { (e.target as HTMLElement).style.background = C.ivory; }}
-            >
+              style={{ color: C.obsidian, background: C.ivory }} >
               Become a Member
             </Link>
             <Link
               href="/journal"
               className="inline-block text-[11px] sm:text-xs uppercase tracking-[0.22em] font-medium font-sans px-10 sm:px-12 py-3.5 transition-all duration-500"
-              style={{ color: C.champagne, border: "1px solid rgba(184,164,122,0.35)" }}
-              onMouseEnter={(e) => {
-                (e.target as HTMLElement).style.background = "rgba(184,164,122,0.06)";
-                (e.target as HTMLElement).style.borderColor = "rgba(184,164,122,0.6)";
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLElement).style.background = "transparent";
-                (e.target as HTMLElement).style.borderColor = "rgba(184,164,122,0.35)";
-              }}
-            >
+              style={{ color: C.champagne, border: "1px solid rgba(184,164,122,0.35)" }} >
               Subscribe to Journal
             </Link>
           </div>
