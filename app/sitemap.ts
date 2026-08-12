@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { allArticles } from '@/lib/travel-articles'
+import { allStyleArticles } from '@/lib/style-articles'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://theroyalgallerys.com'
@@ -25,12 +26,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/impact`, changeFrequency: 'monthly' as const, priority: 0.7, lastModified: now },
   ]
 
-  const articleRoutes: MetadataRoute.Sitemap = allArticles.map((article) => ({
+  const travelArticleRoutes: MetadataRoute.Sitemap = allArticles.map((article) => ({
     url: `${baseUrl}/travel/${article.slug}`,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
     lastModified: new Date(article.publishedDate),
   }))
 
-  return [...primaryRoutes, ...articleRoutes]
+  const styleArticleRoutes: MetadataRoute.Sitemap = allStyleArticles.map((article) => ({
+    url: `${baseUrl}/style/${article.slug}`,
+    changeFrequency: 'monthly' as const,
+    priority: 0.75,
+    lastModified: new Date(article.publishedDate),
+  }))
+
+  return [...primaryRoutes, ...travelArticleRoutes, ...styleArticleRoutes]
 }
