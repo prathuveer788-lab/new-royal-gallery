@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { allArticles } from '@/lib/travel-articles'
 import { allStyleArticles } from '@/lib/style-articles'
+import { getAllEditorialArticles } from '@/lib/editorial/registry'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://theroyalgallerys.com'
@@ -17,6 +18,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/motoring`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
     { url: `${baseUrl}/dining`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
     { url: `${baseUrl}/business`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/royalty`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/jewellery`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/watches`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/weddings`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
     { url: `${baseUrl}/futures`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
     { url: `${baseUrl}/archive`, changeFrequency: 'weekly' as const, priority: 0.9, lastModified: now },
     { url: `${baseUrl}/journal`, changeFrequency: 'weekly' as const, priority: 0.8, lastModified: now },
@@ -40,5 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(article.publishedDate),
   }))
 
-  return [...primaryRoutes, ...travelArticleRoutes, ...styleArticleRoutes]
+  const editorialArticleRoutes: MetadataRoute.Sitemap = getAllEditorialArticles().map((article) => ({
+    url: `${baseUrl}/${article.section}/${article.slug}`,
+    changeFrequency: 'monthly' as const,
+    priority: 0.75,
+    lastModified: new Date(article.publishedDate),
+  }))
+
+  return [...primaryRoutes, ...travelArticleRoutes, ...styleArticleRoutes, ...editorialArticleRoutes]
 }

@@ -61,7 +61,11 @@ const footerSections = [
     title: "Sections",
     links: [
       { href: "/style", label: "Style" },
+      { href: "/jewellery", label: "Jewellery" },
+      { href: "/watches", label: "Watches" },
+      { href: "/weddings", label: "Weddings" },
       { href: "/travel", label: "Travel" },
+      { href: "/royalty", label: "Royalty" },
       { href: "/design", label: "Design" },
       { href: "/culture", label: "Culture" },
       { href: "/society", label: "Society" },
