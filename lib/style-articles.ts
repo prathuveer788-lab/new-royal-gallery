@@ -102,7 +102,7 @@ export const allStyleArticles: StyleArticle[] = [
     ],
     imageBreaks: [
       { image: "/images/style/article-01/indian-luxury-fashion-consumer.jpg", alt: "Indian luxury fashion consumer landscape", caption: "India's luxury fashion market is being driven by younger, digitally native consumers who evaluate brands through the lens of craftsmanship, provenance, and cultural relevance." },
-      { image: "/images/style/article-01/luxury-fashion-editorial.jpg", alt: "Luxury fashion editorial — India's new consumer", caption: "International luxury brands that invest in understanding India's cultural context are finding receptive, sophisticated audiences." }
+      { image: "/images/style/article-01/luxury-consumer-editorial-break.jpg", alt: "Luxury fashion consumer — editorial retail concept", caption: "International luxury brands that invest in understanding India's cultural context are finding receptive, sophisticated audiences eager for authentic engagement." }
     ],
     relatedSlugs: ["new-indian-couture-heritage-meets-modern-luxury", "luxury-fashion-brands-cultural-relevance-india", "future-luxury-fashion-india-2026"],
     keywords: ["luxury fashion India", "Indian luxury market", "luxury consumers India", "luxury brands India", "Indian luxury fashion", "HNW consumers India"]
@@ -239,8 +239,8 @@ export const allStyleArticles: StyleArticle[] = [
     authorRole: "Fashion Trends Correspondent",
     readTime: "12 min read",
     publishedDate: "2026-07-15",
-    heroImage: "/images/style/article-04/luxury-fashion-trends-editorial.jpg",
-    heroCaption: "The 2026 luxury fashion landscape — structured, dramatic, and deeply rooted in cultural context. From reimagined heritage textiles to the reinvention of occasion wear, Indian fashion is defining a new creative vocabulary. Image: Unsplash.",
+    heroImage: "/images/style/article-04/indian-fashion-runway-hero.jpg",
+    heroCaption: "Indian models commanding the runway — the couture collections, silhouettes, and creative statements defining luxury fashion in India this year. From reimagined heritage textiles to the reinvention of occasion wear, a new creative vocabulary is emerging. Image: Pexels / Rajesh Verma.",
     sections: [
       {
         id: "trend-1-heritage-textiles",
@@ -278,7 +278,7 @@ export const allStyleArticles: StyleArticle[] = [
       { quote: "The modern Indian luxury consumer wants pieces that can be restyled, repurposed, and integrated into a living wardrobe.", context: "On the reinvention of occasion wear" }
     ],
     imageBreaks: [
-      { image: "/images/style/article-04/fashion-trends-runway-2026.jpg", alt: "Luxury fashion trends runway 2026", caption: "From architectural silhouettes to the quiet revolution in menswear — the runway signals and couture collections reshaping Indian luxury fashion in 2026." }
+      { image: "/images/style/article-04/fashion-runway-editorial-break.jpg", alt: "Fashion runway editorial — Indian luxury trends", caption: "From architectural silhouettes to the quiet revolution in menswear — the runway signals and couture collections reshaping Indian luxury fashion in 2026." }
     ],
     relatedSlugs: ["indian-craftsmanship-luxury-powerful-story", "luxury-wedding-wardrobe-india-couture-evolving", "future-luxury-fashion-india-2026"],
     keywords: ["fashion trends 2026", "Indian fashion trends", "luxury fashion trends", "Indian couture trends", "fashion trends India", "runway India"]
@@ -301,8 +301,8 @@ export const allStyleArticles: StyleArticle[] = [
     authorRole: "Craft & Heritage Correspondent",
     readTime: "14 min read",
     publishedDate: "2026-07-20",
-    heroImage: "/images/style/article-05/embroidery-craftsmanship-detail.jpg",
-    heroCaption: "India's artisanal craft traditions — practiced at extraordinary levels of skill by millions — offer the global luxury industry its most compelling narrative of authentic human value. Image: Pixabay.",
+    heroImage: "/images/style/article-05/indian-embroidery-craft-hero.jpg",
+    heroCaption: "The intricate detail of Indian hand embroidery — each stitch a transmission of generational knowledge, each motif a cultural narrative made visible. India's artisanal traditions offer global luxury its most compelling story of authentic human value. Image: Pexels / MS Parikh.",
     sections: [
       {
         id: "craftsmanship-matters",
@@ -330,8 +330,8 @@ export const allStyleArticles: StyleArticle[] = [
       { quote: "The story of how a garment was made can be as compelling as how it looks.", context: "On the power of craft provenance in luxury marketing" }
     ],
     imageBreaks: [
-      { image: "/images/style/article-05/traditional-mirror-work-embroidery.jpg", alt: "Traditional Indian mirror work embroidery craftsmanship", caption: "India's embroidery traditions — from zardozi to chikankari to mirror work — represent an unbroken continuum of craft knowledge passed down through generations." },
-      { image: "/images/style/article-05/artisan-textile-craft.jpg", alt: "Artisan textile craftsmanship detail", caption: "When a luxury consumer purchases a hand-embroidered garment, they participate in preserving cultural heritage and supporting artisan communities." }
+      { image: "/images/style/article-05/artisan-textile-market-break.jpg", alt: "Vibrant embroidered textiles at an Indian craft market", caption: "India's embroidery traditions — from zardozi to chikankari to mirror work — represent an unbroken continuum of craft knowledge passed down through generations of artisans." },
+      { image: "/images/style/article-05/embroidery-craftsmanship-detail.jpg", alt: "Artisan textile craftsmanship — intricate handwork detail", caption: "When a luxury consumer purchases a hand-embroidered garment, they participate in preserving cultural heritage and supporting artisan communities — a narrative of authentic value." }
     ],
     relatedSlugs: ["new-indian-couture-heritage-meets-modern-luxury", "palace-to-runway-royal-heritage-fashion", "indias-new-luxury-fashion-consumer"],
     keywords: ["Indian craftsmanship", "Indian luxury brands", "luxury craftsmanship", "Indian textiles", "heritage luxury", "hand embroidery", "Banarasi", "zardozi", "chikankari"]
@@ -354,8 +354,8 @@ export const allStyleArticles: StyleArticle[] = [
     authorRole: "Weddings & Couture Correspondent",
     readTime: "13 min read",
     publishedDate: "2026-07-25",
-    heroImage: "/images/style/article-06/indian-bridal-couture-wedding.jpg",
-    heroCaption: "The Indian luxury wedding — a multi-event celebration generating extraordinary fashion consumption across bridal couture, jewellery, and family dressing. Image: Pixabay.",
+    heroImage: "/images/style/article-06/indian-bridal-couture-hero.jpg",
+    heroCaption: "The Indian luxury bride — the centre of a multi-event celebration generating extraordinary fashion consumption across bridal couture, jewellery, and multi-generational family dressing. A market unlike any other in global luxury. Image: Pexels / Satyampixels.",
     sections: [
       {
         id: "the-market",
@@ -388,7 +388,7 @@ export const allStyleArticles: StyleArticle[] = [
       { quote: "The best bridal couture demonstrates that tradition and innovation are not opposed forces.", context: "On the creative evolution of Indian wedding fashion" }
     ],
     imageBreaks: [
-      { image: "/images/style/article-06/luxury-wedding-bridal.jpg", alt: "Luxury Indian wedding bridal couture", caption: "The best bridal couture collections of 2026 demonstrate that tradition and innovation are complementary forces — the wedding garment can honour cultural heritage while expressing individual creativity." }
+      { image: "/images/style/article-06/bridal-lehenga-couture-break.jpg", alt: "Luxury Indian bridal lehenga couture", caption: "The best bridal couture collections of 2026 demonstrate that tradition and innovation are complementary forces — the wedding garment can honour cultural heritage while expressing individual creativity." }
     ],
     relatedSlugs: ["new-indian-couture-heritage-meets-modern-luxury", "jewellery-couture-royalty-india-new-language-of-luxury", "indias-new-luxury-fashion-consumer"],
     keywords: ["Indian wedding fashion", "luxury wedding fashion", "Indian bridal couture", "destination wedding India", "designer wedding wear", "groom fashion India"]
@@ -602,7 +602,7 @@ export const allStyleArticles: StyleArticle[] = [
     ],
     imageBreaks: [
       { image: "/images/style/article-10/modern-luxury-couture-future.jpg", alt: "Modern luxury couture and the future of Indian fashion", caption: "The emerging visual language of contemporary Indian luxury fashion — where traditional craft, modern design sensibility, and global ambition converge to create something unprecedented." },
-      { image: "/images/style/article-10/future-luxury-fashion-2026.jpg", alt: "India's luxury fashion future — innovation and heritage", caption: "India's contemporary luxury fashion landscape reflects the creative dynamism and ambition that will define its next chapter — one where cultural storytelling and commercial strategy are inseparable." }
+      { image: "/images/style/article-10/digital-luxury-fashion-break.jpg", alt: "Digital luxury fashion — the future of Indian style", caption: "India's contemporary luxury fashion landscape reflects the creative dynamism and ambition that will define its next chapter — one where cultural storytelling and commercial strategy are inseparable." }
     ],
     relatedSlugs: ["indias-new-luxury-fashion-consumer", "luxury-fashion-brands-cultural-relevance-india", "indian-fashion-trends-defining-luxury-2026"],
     keywords: ["future of luxury fashion India", "India luxury fashion market", "luxury fashion trends India", "Indian luxury market", "luxury brands India", "future of Indian fashion"]
