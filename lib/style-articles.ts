@@ -67,8 +67,8 @@ export const allStyleArticles: StyleArticle[] = [
     readTime: "14 min read",
     publishedDate: "2026-07-01",
     modifiedDate: "2026-08-10",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
-    heroCaption: "India's luxury fashion landscape is being reshaped by a new generation of consumers who move fluidly between global brands and Indian heritage — creating an entirely new luxury paradigm. Image: The Royal Gallerys.",
+    heroImage: "/images/style/article-01/luxury-fashion-editorial.jpg",
+    heroCaption: "The Indian luxury fashion consumer of 2026 is globally sophisticated, digitally native, and discerning — demanding cultural intelligence and genuine craftsmanship from the brands they choose. Image: Unsplash.",
     sections: [
       {
         id: "the-shift",
@@ -101,8 +101,8 @@ export const allStyleArticles: StyleArticle[] = [
       { quote: "A luxury brand that treats India simply as a market to extract revenue from will find itself increasingly sidelined.", context: "On cultural relevance in the Indian market" }
     ],
     imageBreaks: [
-      { image: "/images/indian-city-buildings-scene.jpg", alt: "Indian luxury fashion retail landscape", caption: "India's luxury retail landscape is evolving rapidly, with new concepts and experiences reshaping how consumers engage with fashion brands." },
-      { image: "/images/beautiful-shot-lodhi-garden-delhi-india-cloudy-sky.jpg", alt: "Delhi luxury landscape", caption: "Delhi, India's luxury capital, where centuries of heritage meet the ambitions of a new generation of luxury consumers." }
+      { image: "/images/style/article-01/indian-luxury-fashion-consumer.jpg", alt: "Indian luxury fashion consumer landscape", caption: "India's luxury fashion market is being driven by younger, digitally native consumers who evaluate brands through the lens of craftsmanship, provenance, and cultural relevance." },
+      { image: "/images/style/article-01/luxury-fashion-editorial.jpg", alt: "Luxury fashion editorial — India's new consumer", caption: "International luxury brands that invest in understanding India's cultural context are finding receptive, sophisticated audiences." }
     ],
     relatedSlugs: ["new-indian-couture-heritage-meets-modern-luxury", "luxury-fashion-brands-cultural-relevance-india", "future-luxury-fashion-india-2026"],
     keywords: ["luxury fashion India", "Indian luxury market", "luxury consumers India", "luxury brands India", "Indian luxury fashion", "HNW consumers India"]
@@ -125,8 +125,8 @@ export const allStyleArticles: StyleArticle[] = [
     authorRole: "Couture & Heritage Correspondent",
     readTime: "15 min read",
     publishedDate: "2026-07-05",
-    heroImage: "/images/colorful-vibrant-indian-landscape(1).jpg",
-    heroCaption: "Indian couture at its finest: hand-embroidered textiles represent centuries of craft tradition meeting contemporary design vision. Image: The Royal Gallerys.",
+    heroImage: "/images/style/article-02/indian-couture-runway.jpg",
+    heroCaption: "Contemporary Indian couture — where centuries of textile tradition meet the creative vision of designers shaping the global luxury conversation. Image: Unsplash.",
     sections: [
       {
         id: "the-renaissance",
@@ -159,7 +159,7 @@ export const allStyleArticles: StyleArticle[] = [
       { quote: "Indian craftsmanship belongs at the creative summit of luxury fashion — as a complete artistic vision in its own right.", context: "On Rahul Mishra's Paris presence" }
     ],
     imageBreaks: [
-      { image: "/images/architectural-marvel-with-ornate-columns-arches.jpg", alt: "Indian palace architecture inspiring couture", caption: "The architectural grandeur of India's palaces continues to inspire contemporary couture — a dialogue between built heritage and wearable art." }
+      { image: "/images/style/article-02/couture-fabric-detail.jpg", alt: "Indian couture fabric and embroidery detail", caption: "The creative vocabulary of Indian couture draws from centuries of textile and surface-embellishment techniques — each garment a repository of accumulated craft knowledge." }
     ],
     relatedSlugs: ["indias-new-luxury-fashion-consumer", "indian-craftsmanship-luxury-powerful-story", "palace-to-runway-royal-heritage-fashion"],
     keywords: ["Indian couture", "luxury Indian fashion", "Indian designers", "couture India", "Sabyasachi", "Rahul Mishra", "Indian heritage fashion", "royal fashion India"]
@@ -182,8 +182,8 @@ export const allStyleArticles: StyleArticle[] = [
     authorRole: "Heritage & Fashion Correspondent",
     readTime: "13 min read",
     publishedDate: "2026-07-10",
-    heroImage: "/images/architectural-marvel-with-ornate-columns-arches.jpg",
-    heroCaption: "India's royal architectural heritage provides an enduring visual vocabulary for contemporary luxury fashion — from colour palettes to textile motifs. Image: The Royal Gallerys.",
+    heroImage: "/images/style/article-03/rajasthan-palace-heritage.jpg",
+    heroCaption: "The architectural grandeur and visual sophistication of India's royal courts continue to shape contemporary fashion — from colour palettes to textile motifs. Image: Pixabay.",
     sections: [
       {
         id: "archival-influence",
@@ -216,7 +216,7 @@ export const allStyleArticles: StyleArticle[] = [
       { quote: "The Indian consumer's wardrobe includes categories of clothing that have no direct equivalent in Western fashion.", context: "On the unique structure of Indian luxury fashion consumption" }
     ],
     imageBreaks: [
-      { image: "/images/hawa-mahal-palace-jaipur-india.jpg", alt: "Hawa Mahal Jaipur — Rajasthan heritage architecture", caption: "Rajasthan's architectural heritage — a source of enduring inspiration for fashion designers, jewellers, and textile artists across India." }
+      { image: "/images/style/article-03/palace-architecture-detail.jpg", alt: "Rajasthan palace heritage and royal fashion influence", caption: "The palaces of Rajasthan — an enduring source of inspiration for designers, jewellers, and textile artists across India whose work continues to reference royal aesthetics." }
     ],
     relatedSlugs: ["palace-to-runway-royal-heritage-fashion", "new-indian-couture-heritage-meets-modern-luxury", "jewellery-couture-royalty-india-new-language-of-luxury"],
     keywords: ["royal fashion India", "Indian royal fashion", "heritage fashion", "royal style", "Indian fashion history", "royal jewellery", "Rajasthan fashion"]
@@ -239,8 +239,8 @@ export const allStyleArticles: StyleArticle[] = [
     authorRole: "Fashion Trends Correspondent",
     readTime: "12 min read",
     publishedDate: "2026-07-15",
-    heroImage: "/images/hallway-arches-with-dramatic-light-shadows.jpg",
-    heroCaption: "The interplay of light and architecture in India's heritage spaces mirrors the current luxury fashion moment — structured, dramatic, and deeply rooted in cultural context. Image: The Royal Gallerys.",
+    heroImage: "/images/style/article-04/luxury-fashion-trends-editorial.jpg",
+    heroCaption: "The 2026 luxury fashion landscape — structured, dramatic, and deeply rooted in cultural context. From reimagined heritage textiles to the reinvention of occasion wear, Indian fashion is defining a new creative vocabulary. Image: Unsplash.",
     sections: [
       {
         id: "trend-1-heritage-textiles",
@@ -278,7 +278,7 @@ export const allStyleArticles: StyleArticle[] = [
       { quote: "The modern Indian luxury consumer wants pieces that can be restyled, repurposed, and integrated into a living wardrobe.", context: "On the reinvention of occasion wear" }
     ],
     imageBreaks: [
-      { image: "/images/colorful-vibrant-indian-landscape.jpg", alt: "Indian fashion trends 2026", caption: "India's vibrant cultural landscape continues to inspire fashion innovation — from colour theory to textile patterns to silhouette experimentation." }
+      { image: "/images/style/article-04/fashion-trends-runway-2026.jpg", alt: "Luxury fashion trends runway 2026", caption: "From architectural silhouettes to the quiet revolution in menswear — the runway signals and couture collections reshaping Indian luxury fashion in 2026." }
     ],
     relatedSlugs: ["indian-craftsmanship-luxury-powerful-story", "luxury-wedding-wardrobe-india-couture-evolving", "future-luxury-fashion-india-2026"],
     keywords: ["fashion trends 2026", "Indian fashion trends", "luxury fashion trends", "Indian couture trends", "fashion trends India", "runway India"]
@@ -301,8 +301,8 @@ export const allStyleArticles: StyleArticle[] = [
     authorRole: "Craft & Heritage Correspondent",
     readTime: "14 min read",
     publishedDate: "2026-07-20",
-    heroImage: "/images/beautiful-shot-lodhi-garden-delhi-india-cloudy-sky.jpg",
-    heroCaption: "India's craft heritage lives in its landscapes, its architecture, and most powerfully, in the hands of millions of artisans who carry forward traditions spanning centuries. Image: The Royal Gallerys.",
+    heroImage: "/images/style/article-05/embroidery-craftsmanship-detail.jpg",
+    heroCaption: "India's artisanal craft traditions — practiced at extraordinary levels of skill by millions — offer the global luxury industry its most compelling narrative of authentic human value. Image: Pixabay.",
     sections: [
       {
         id: "craftsmanship-matters",
@@ -330,8 +330,8 @@ export const allStyleArticles: StyleArticle[] = [
       { quote: "The story of how a garment was made can be as compelling as how it looks.", context: "On the power of craft provenance in luxury marketing" }
     ],
     imageBreaks: [
-      { image: "/images/colorful-vibrant-indian-landscape(1).jpg", alt: "Indian textile and craft traditions", caption: "India's craft traditions span every region, every community, and centuries of accumulated knowledge — a living heritage that continues to evolve." },
-      { image: "/images/architectural-marvel-with-ornate-columns-arches.jpg", alt: "Indian architectural craftsmanship", caption: "The same artisan traditions that created India's architectural masterpieces continue to inform its textile and fashion craftsmanship." }
+      { image: "/images/style/article-05/traditional-mirror-work-embroidery.jpg", alt: "Traditional Indian mirror work embroidery craftsmanship", caption: "India's embroidery traditions — from zardozi to chikankari to mirror work — represent an unbroken continuum of craft knowledge passed down through generations." },
+      { image: "/images/style/article-05/artisan-textile-craft.jpg", alt: "Artisan textile craftsmanship detail", caption: "When a luxury consumer purchases a hand-embroidered garment, they participate in preserving cultural heritage and supporting artisan communities." }
     ],
     relatedSlugs: ["new-indian-couture-heritage-meets-modern-luxury", "palace-to-runway-royal-heritage-fashion", "indias-new-luxury-fashion-consumer"],
     keywords: ["Indian craftsmanship", "Indian luxury brands", "luxury craftsmanship", "Indian textiles", "heritage luxury", "hand embroidery", "Banarasi", "zardozi", "chikankari"]
@@ -354,8 +354,8 @@ export const allStyleArticles: StyleArticle[] = [
     authorRole: "Weddings & Couture Correspondent",
     readTime: "13 min read",
     publishedDate: "2026-07-25",
-    heroImage: "/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg",
-    heroCaption: "Udaipur, Rajasthan — one of the world's most coveted destination wedding locations, where palace venues frame celebrations of extraordinary scale and beauty. Image: The Royal Gallerys.",
+    heroImage: "/images/style/article-06/indian-bridal-couture-wedding.jpg",
+    heroCaption: "The Indian luxury wedding — a multi-event celebration generating extraordinary fashion consumption across bridal couture, jewellery, and family dressing. Image: Pixabay.",
     sections: [
       {
         id: "the-market",
@@ -388,7 +388,7 @@ export const allStyleArticles: StyleArticle[] = [
       { quote: "The best bridal couture demonstrates that tradition and innovation are not opposed forces.", context: "On the creative evolution of Indian wedding fashion" }
     ],
     imageBreaks: [
-      { image: "/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg", alt: "Udaipur palace gardens — luxury wedding venue", caption: "The palace gardens of Udaipur — the ultimate canvas for India's most extraordinary luxury wedding celebrations and the fashion that accompanies them." }
+      { image: "/images/style/article-06/luxury-wedding-bridal.jpg", alt: "Luxury Indian wedding bridal couture", caption: "The best bridal couture collections of 2026 demonstrate that tradition and innovation are complementary forces — the wedding garment can honour cultural heritage while expressing individual creativity." }
     ],
     relatedSlugs: ["new-indian-couture-heritage-meets-modern-luxury", "jewellery-couture-royalty-india-new-language-of-luxury", "indias-new-luxury-fashion-consumer"],
     keywords: ["Indian wedding fashion", "luxury wedding fashion", "Indian bridal couture", "destination wedding India", "designer wedding wear", "groom fashion India"]
@@ -411,8 +411,8 @@ export const allStyleArticles: StyleArticle[] = [
     authorRole: "Jewellery & Luxury Correspondent",
     readTime: "13 min read",
     publishedDate: "2026-08-01",
-    heroImage: "/images/udaipur-city-view-from-hotel-balcony-rajasthan-india(1).jpg",
-    heroCaption: "India's luxury landscape — where jewellery, architecture, and heritage create a visual language that has inspired artisans and designers for centuries. Image: The Royal Gallerys.",
+    heroImage: "/images/style/article-07/high-jewellery-gold-luxury.jpg",
+    heroCaption: "In the Indian luxury tradition, jewellery has never been merely an accessory — it has been central to the conception of dress, often more valuable and more carefully considered than the clothing it accompanies. Image: Pixabay.",
     sections: [
       {
         id: "the-intersection",
@@ -440,7 +440,7 @@ export const allStyleArticles: StyleArticle[] = [
       { quote: "The royal jewellery forms are not being resurrected from museum displays — they have never stopped being produced, worn, and valued.", context: "On the living tradition of Indian jewellery" }
     ],
     imageBreaks: [
-      { image: "/images/hallway-arches-with-dramatic-light-shadows.jpg", alt: "Indian heritage architecture and jewellery inspiration", caption: "The interplay of light, material, and ornament in India's architectural heritage finds its echo in the country's jewellery traditions." }
+      { image: "/images/style/article-07/fine-jewellery-detail.jpg", alt: "Fine jewellery detail — gold luxury craftsmanship", caption: "The intricate craftsmanship and luminous materiality of Indian high jewellery — a tradition where technique, artistry, and cultural narrative converge in objects of extraordinary refinement." }
     ],
     relatedSlugs: ["luxury-wedding-wardrobe-india-couture-evolving", "royal-dressing-21st-century-heritage-modern-indian-style", "new-indian-couture-heritage-meets-modern-luxury"],
     keywords: ["luxury jewellery India", "Indian jewellery", "royal jewellery", "Indian luxury", "high jewellery India", "jewellery fashion India"]
@@ -463,8 +463,8 @@ export const allStyleArticles: StyleArticle[] = [
     authorRole: "Luxury Strategy Correspondent",
     readTime: "14 min read",
     publishedDate: "2026-08-05",
-    heroImage: "/images/indian-city-buildings-scene.jpg",
-    heroCaption: "India's cities are home to one of the world's most sophisticated luxury consumer bases — educated, globally exposed, and increasingly discerning about brand authenticity. Image: The Royal Gallerys.",
+    heroImage: "/images/style/article-08/luxury-brand-marketing-editorial.jpg",
+    heroCaption: "The international luxury brands that succeed in India are those that invest in understanding the cultural context — not those that simply present themselves as 'international.' Image: Unsplash.",
     sections: [
       {
         id: "what-brands-get-wrong",
@@ -492,7 +492,7 @@ export const allStyleArticles: StyleArticle[] = [
       { quote: "Cultural relevance is not achieved through surface-level gestures but through substantive engagement with India's creative ecosystem.", context: "On the depth required for genuine cultural engagement" }
     ],
     imageBreaks: [
-      { image: "/images/indian-city-buildings-scene(1).jpg", alt: "Indian luxury retail environment", caption: "India's retail landscape blends heritage architecture with contemporary luxury — a metaphor for the cultural intelligence international brands must develop." }
+      { image: "/images/style/article-08/fashion-campaign-visual.jpg", alt: "Luxury fashion campaign visual and brand storytelling", caption: "The power of editorial storytelling — how luxury brands communicate cultural intelligence through sophisticated visual narrative and genuine engagement with India's creative ecosystem." }
     ],
     relatedSlugs: ["indias-new-luxury-fashion-consumer", "future-luxury-fashion-india-2026", "indian-craftsmanship-luxury-powerful-story"],
     keywords: ["luxury brand marketing India", "fashion marketing India", "luxury fashion marketing", "luxury brands India", "luxury marketing strategy", "Indian luxury market"]
@@ -515,8 +515,8 @@ export const allStyleArticles: StyleArticle[] = [
     authorRole: "Heritage & Fashion Correspondent",
     readTime: "14 min read",
     publishedDate: "2026-08-08",
-    heroImage: "/images/hawa-mahal-palace-jaipur-india.jpg",
-    heroCaption: "Hawa Mahal, Jaipur — the Palace of Winds, one of Rajasthan's most iconic architectural landmarks and an enduring source of inspiration for fashion designers drawn to India's royal visual heritage. Image: The Royal Gallerys.",
+    heroImage: "/images/style/article-09/rajasthan-palace-runway.jpg",
+    heroCaption: "The visual vocabulary of Rajasthan's royal palaces — sandstone, marble, carved jali screens, and monumental gates — continues to inspire contemporary fashion designers, photographers, and creative directors across the world. Image: Unsplash.",
     sections: [
       {
         id: "rajasthan-visual-heritage",
@@ -544,7 +544,7 @@ export const allStyleArticles: StyleArticle[] = [
       { quote: "A Sabyasachi bridal lehenga is recognisably a garment of its time — but a time in active dialogue with the past.", context: "On contemporary reinterpretation of royal aesthetics" }
     ],
     imageBreaks: [
-      { image: "/images/mehrangarh-fort.jpg", alt: "Mehrangarh Fort Jodhpur — royal heritage", caption: "Mehrangarh Fort, Jodhpur — a monumental expression of Rajasthan's royal heritage that continues to inspire designers, photographers, and creative directors." }
+      { image: "/images/style/article-09/palace-heritage-fashion.jpg", alt: "Palace heritage inspiring contemporary fashion design", caption: "The extraordinary architectural legacy of Rajasthan's royal courts — a living creative resource that continues to shape contemporary luxury fashion through its colours, textures, proportions, and ornamental vocabulary." }
     ],
     relatedSlugs: ["royal-dressing-21st-century-heritage-modern-indian-style", "new-indian-couture-heritage-meets-modern-luxury", "indian-craftsmanship-luxury-powerful-story"],
     keywords: ["royal fashion", "Indian heritage fashion", "palace fashion", "Rajasthan fashion", "royal heritage India", "Indian couture"]
@@ -567,8 +567,8 @@ export const allStyleArticles: StyleArticle[] = [
     authorRole: "Fashion Futures Correspondent",
     readTime: "15 min read",
     publishedDate: "2026-08-10",
-    heroImage: "/images/mehrangarh-fort.jpg",
-    heroCaption: "India's luxury fashion future will be built on the foundation of its extraordinary heritage — but its ambitions, its platforms, and its consumers will look dramatically different. Image: The Royal Gallerys.",
+    heroImage: "/images/style/article-10/future-luxury-fashion-2026.jpg",
+    heroCaption: "The future of Indian luxury fashion — a landscape shaped by digital innovation, Gen Z consumers, global ambition, and cultural storytelling. The most interesting chapters are still being written. Image: Unsplash.",
     sections: [
       {
         id: "digital-luxury",
@@ -601,8 +601,8 @@ export const allStyleArticles: StyleArticle[] = [
       { quote: "Each Indian designer who succeeds internationally adds to the credibility and visibility of Indian fashion as a category.", context: "On the global expansion of Indian fashion houses" }
     ],
     imageBreaks: [
-      { image: "/images/vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg", alt: "Jaipur City Palace — heritage and future", caption: "Jaipur's City Palace — a reminder that India's luxury fashion future is built on foundations of extraordinary cultural depth and sophistication." },
-      { image: "/images/indian-city-buildings-scene.jpg", alt: "Modern India — the future of luxury", caption: "India's contemporary urban landscape reflects the dynamism and ambition that will shape the next chapter of its luxury fashion story." }
+      { image: "/images/style/article-10/modern-luxury-couture-future.jpg", alt: "Modern luxury couture and the future of Indian fashion", caption: "The emerging visual language of contemporary Indian luxury fashion — where traditional craft, modern design sensibility, and global ambition converge to create something unprecedented." },
+      { image: "/images/style/article-10/future-luxury-fashion-2026.jpg", alt: "India's luxury fashion future — innovation and heritage", caption: "India's contemporary luxury fashion landscape reflects the creative dynamism and ambition that will define its next chapter — one where cultural storytelling and commercial strategy are inseparable." }
     ],
     relatedSlugs: ["indias-new-luxury-fashion-consumer", "luxury-fashion-brands-cultural-relevance-india", "indian-fashion-trends-defining-luxury-2026"],
     keywords: ["future of luxury fashion India", "India luxury fashion market", "luxury fashion trends India", "Indian luxury market", "luxury brands India", "future of Indian fashion"]

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "STYLE — The Royal Gallerys Fashion & Luxury Editorial",
     description: "Fashion, couture, jewellery, watches, beauty — the art of personal style through the lens of heritage, craftsmanship, and contemporary luxury.",
     type: "website",
-    images: [{ url: "https://theroyalgallerys.com/images/colorful-vibrant-indian-landscape(1).jpg", width: 1200, height: 630, alt: "The Royal Gallerys — Style" }],
+    images: [{ url: "https://theroyalgallerys.com/images/style/hero/style-hero-luxury-fashion.jpg", width: 1200, height: 630, alt: "The Royal Gallerys — Style" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -41,8 +41,8 @@ export default function StylePage() {
       <section className="relative min-h-[80vh] sm:min-h-[90vh] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg"
-            alt="Style — The Royal Gallerys"
+            src="/images/style/hero/style-hero-luxury-fashion.jpg"
+            alt="Luxury fashion editorial — The Royal Gallerys Style"
             fill
             priority
             placeholder="blur"
@@ -105,7 +105,7 @@ export default function StylePage() {
             <div className="grid grid-cols-1 lg:grid-cols-12">
               <div className="lg:col-span-7 relative aspect-[16/10] lg:aspect-auto lg:min-h-[540px] overflow-hidden">
                 <Image
-                  src="/images/colorful-vibrant-indian-landscape.jpg"
+                  src="/images/style/article-01/luxury-fashion-editorial.jpg"
                   alt="India's New Luxury Fashion Consumer"
                   fill
                   placeholder="blur"
