@@ -207,7 +207,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-14">
             {[
-              { href: "/style", label: "Style", title: "The Indian Fashion Houses Redefining Global Luxury", meta: "Fashion · 8 min read", img: "/images/colorful-vibrant-indian-landscape.jpg" },
+              { href: "/style", label: "Style", title: "The Indian Fashion Houses Redefining Global Luxury", meta: "Fashion · 8 min read", img: "/images/sama-ali.jpeg" },
               { href: "/travel", label: "Travel", title: "The World's Most Extraordinary Palace Hotels", meta: "Hotels · 14 min read", img: "/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg" },
               { href: "/culture", label: "Culture", title: "The Golden Thread: Royal Patronage and Artisan Heritage", meta: "Essay · 15 min read", img: "/images/hawa-mahal-palace-jaipur-india.jpg" },
             ].map((item) => (
