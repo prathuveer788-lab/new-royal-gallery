@@ -12,7 +12,7 @@ const CROSS_LINKS = [
   { href: "/design", label: "Design", title: "Architecture, Interiors & Craft", img: "/images/hallway-arches-with-dramatic-light-shadows.jpg" },
   { href: "/weddings", label: "Weddings", title: "Bridal Couture & Destination Venues", img: "/images/style/article-06/indian-bridal-couture-hero.jpg" },
   { href: "/jewellery", label: "Jewellery", title: "High Jewellery & Gemstone Heritage", img: "/images/style/article-07/high-jewellery-gold-luxury.jpg" },
-  { href: "/watches", label: "Watches", title: "Luxury Horology & Collecting", img: "/images/style/article-07/fine-jewellery-detail.jpg" },
+  { href: "/watches", label: "Watches", title: "Luxury Horology & Collecting", img: "/images/watches/watch-hero.jpeg" },
 ];
 
 export default function SectionLanding({ section, articles }: { section: SectionConfig; articles: EditorialArticle[] }) {

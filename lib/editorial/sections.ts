@@ -43,8 +43,8 @@ export const SECTIONS: SectionConfig[] = [
   {
     slug: "watches",
     label: "Watches",
-    heroImage: "/images/style/article-07/fine-jewellery-detail.jpg",
-    heroCaption: "The art of precision — luxury horology and the craftsmanship that defines it. Image: Unsplash.",
+    heroImage: "/images/watches/watch-hero.jpeg",
+    heroCaption: "The art of precision — luxury horology and the craftsmanship that defines it. Image: The Royal Gallerys.",
     heroAlt: "Luxury watchmaking detail — The Royal Gallerys Watches section",
     tagline: "Horology · Collecting · Craftsmanship · Market Insight",
     description:
