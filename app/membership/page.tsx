@@ -13,8 +13,7 @@ const C = {
 };
 
 const tiers = [
-  { name: "Circle", subtitle: "The Beginning", price: "Complimentary Application", benefits: ["Exclusive event invitations", "Private digital content access", "Quarterly print magazine", "The Dispatch newsletter", "Priority event registration", "Member-only online portal"], cta: "Apply", featured: false },
-  { name: "Patron", subtitle: "The Supporter", price: "Annual Membership", benefits: ["All Circle benefits", "Research archive access", "Limited-edition publications", "Salon dinner invitations", "Private heritage tour access", "Annual Patron gathering", "Concierge heritage service"], cta: "Apply", featured: true },
+  { name: "Patron", subtitle: "The Supporter", price: "Annual Membership", benefits: ["Research archive access", "Limited-edition publications", "Salon dinner invitations", "Private heritage tour access", "Annual Patron gathering", "Concierge heritage service"], cta: "Apply", featured: true },
   { name: "Legacy", subtitle: "The Custodian", price: "Curated Membership", benefits: ["All Patron benefits", "Full royal network access", "Private heritage journeys", "Personal archive consultation", "Royal family introductions", "Bespoke documentary production", "Legacy book commission", "Annual Legacy Summit seat"], cta: "Apply", featured: false },
   { name: "Founder", subtitle: "By Invitation", price: "Founding Circle", benefits: ["All Legacy benefits", "Founding circle governance seat", "Shape institutional direction", "Lifetime archive access", "Global summit hosting rights", "Named archive collection", "Private royal audiences", "Founder recognition in perpetuity"], cta: "Enquire", featured: false },
 ];
@@ -41,7 +40,7 @@ export default function MembershipPage() {
       {/* TIERS */}
       <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {tiers.map((tier) => (
               <div key={tier.name} className="p-6 sm:p-8 flex flex-col transition-all" style={{ border: tier.featured ? `1px solid ${C.champagne}` : `1px solid rgba(138,115,82,0.35)`, background: tier.featured ? C.cream : "transparent" }}>
                 {tier.featured && <span className="text-[9px] uppercase tracking-[0.22em] font-medium font-sans px-2.5 py-0.5 self-start mb-5" style={{ background: C.bronze, color: C.ivory }}>Recommended</span>}
