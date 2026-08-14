@@ -254,7 +254,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-12">
               <div className="lg:col-span-7 relative aspect-[16/10] lg:aspect-auto lg:min-h-[520px] overflow-hidden">
                 <Image
-                  src="/images/mehrangarh-fort.jpg" alt={featuredTravel[0]?.headline || "Palace Hotel"}
+                  src={featuredTravel[0]?.heroImage || "/images/mehrangarh-fort.jpg"} alt={featuredTravel[0]?.headline || "Palace Hotel"}
                   fill placeholder="blur" blurDataURL={blurDataURL} sizes="(max-width:1024px)100vw,58vw"
                   className="object-cover group-hover:scale-[1.03] transition-transform duration-1000 ease-in-out"
                 />
@@ -284,7 +284,7 @@ export default function HomePage() {
               <Link key={article.slug} href={`/travel/${article.slug}`} className="group flex flex-col transition-all duration-500" style={{ background: C.cream }}>
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
-                    src="/images/architectural-marvel-with-ornate-columns-arches.jpg" alt={article.headline}
+                    src={article.heroImage} alt={article.headline}
                     fill placeholder="blur" blurDataURL={blurDataURL} sizes="(max-width:640px)100vw,33vw"
                     className="object-cover group-hover:scale-[1.03] transition-transform duration-1000 ease-in-out"
                   />
@@ -356,7 +356,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
             {[
-              { title: "The Fort Palaces of Rajasthan", sub: "Architecture", img: "/images/architectural-marvel-with-ornate-columns-arches.jpg" },
+              { title: "The Fort Palaces of Rajasthan", sub: "Architecture", img: "/images/mehrangarh-fort.jpg" },
               { title: "Inside the Homes of Indian Royalty", sub: "Interiors", img: "/images/hallway-arches-with-dramatic-light-shadows.jpg" },
               { title: "The Craftsmen Keeping Centuries Alive", sub: "Craft", img: "/images/beautiful-shot-lodhi-garden-delhi-india-cloudy-sky.jpg" },
             ].map((item) => (

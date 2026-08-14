@@ -53,7 +53,7 @@ export default function PartnershipCTA() {
               Partner With Us to Build<br />the Future of Heritage
             </h2>
             <p className="text-sm sm:text-base font-sans leading-relaxed max-w-xl mx-auto mb-10" style={{ color: C.textStone, fontWeight: 400 }}>
-              Heritage is humanity&apos;s most valuable asset. The stories that built civilizations deserve to survive. The Royal Gallery exists to ensure they do.
+              Heritage is humanity&apos;s most valuable asset. The stories that built civilizations deserve to survive. The Royal Gallerys exists to ensure they do.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button onClick={() => setShowForm(true)} className="inline-block px-10 py-4 text-xs sm:text-sm uppercase tracking-[0.2em] font-medium font-sans cursor-pointer transition-all duration-500" style={{ color: C.ivory, background: C.obsidian, border: "none" }}>
@@ -69,7 +69,7 @@ export default function PartnershipCTA() {
             <span className="inline-block text-[10px] sm:text-[11px] uppercase tracking-[0.22em] font-medium font-sans mb-6" style={{ color: C.bronze }}>Thank You</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif leading-[1.08] mb-6 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>Your Enquiry Has Been Received</h2>
             <p className="text-sm sm:text-base font-sans leading-relaxed max-w-xl mx-auto mb-10" style={{ color: C.textStone, fontWeight: 400 }}>
-              Thank you for your interest in partnering with The Royal Gallery. Our team will reach out to you at <span style={{ color: C.bronze }} className="font-medium">{email}</span> within 48 hours.
+              Thank you for your interest in partnering with The Royal Gallerys. Our team will reach out to you at <span style={{ color: C.bronze }} className="font-medium">{email}</span> within 48 hours.
             </p>
             <button onClick={handleReset} className="inline-block px-10 py-4 text-xs sm:text-sm uppercase tracking-[0.2em] font-medium font-sans cursor-pointer transition-all duration-500" style={{ color: C.textDeep, border: `1px solid rgba(138,115,82,0.35)`, background: "transparent" }}>← Back</button>
           </>

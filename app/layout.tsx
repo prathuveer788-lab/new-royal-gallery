@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   creator: "The Royal Gallerys",
   publisher: "The Royal Gallerys",
   formatDetection: { email: false, telephone: false, address: false },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
   robots: {
     index: true,
     follow: true,
