@@ -130,8 +130,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "12 min read",
     publishedDate: "2026-07-18",
-    heroImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Rambagh_Palace_view_from_garden%2C_July_2016.jpg/1280px-Rambagh_Palace_view_from_garden%2C_July_2016.jpg",
-    heroCaption: "Rambagh Palace at dawn — the ochre facade catching first light, peacocks crossing immaculate lawns, the Aravalli Hills whispering on the horizon. Photo: via Wikimedia Commons, CC BY-SA",
+    heroImage: "/images/experiences/02-rambagh-palace-jaipur/suryavanshi-suite-bedroom.png",
+    heroCaption: "The Suryavanshi Suite bedroom at Rambagh Palace — a carved four-poster bed beneath frescoed ceilings, French windows opening onto a private terrace with uninterrupted views of the Mughal Gardens.",
     quickFacts: [
       { label: "Location", value: "Jaipur, Rajasthan, India" },
       { label: "Built", value: "1835 (expanded 1925–1931)" },
