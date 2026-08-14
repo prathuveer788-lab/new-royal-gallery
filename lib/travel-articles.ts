@@ -202,8 +202,8 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "15 min read",
     publishedDate: "2026-07-22",
-    heroImage: "https://upload.wikimedia.org/wikipedia/commons/6/69/Udaipur_City_Palace.jpg",
-    heroCaption: "City Palace Udaipur viewed from Lake Pichola — the sprawling complex of eleven palaces rises from the eastern shore, a symphony of Rajput and Mughal architecture. Photo: Henrik Bennetsen, CC BY-SA 2.0, via Wikimedia Commons",
+    heroImage: "/images/experiences/04-city-palace-udaipur/city-palace-hero.jpg",
+    heroCaption: "City Palace Udaipur — the sprawling complex of eleven palaces rising from the eastern shore of Lake Pichola.",
     quickFacts: [
       { label: "Location", value: "Udaipur, Rajasthan, India" },
       { label: "Built", value: "1559 onwards (over 400 years)" },

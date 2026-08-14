@@ -72,7 +72,7 @@ export default function PhotoFigure({
             src={effectiveSrc} alt={alt} fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 720px, 720px"
             priority={priority} placeholder="blur" blurDataURL={blurDataURL}
-            className="object-cover transition-opacity duration-500"
+            className="object-contain transition-opacity duration-500"
             style={{ opacity: imageLoaded ? 1 : 0 }}
             onLoad={handleLoad} onError={handleError} unoptimized={isRemote}
           />
