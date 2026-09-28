@@ -1,0 +1,496 @@
+page,slot,file,intrinsic_px,required_px,ratio,sharpness,issues,status,is_editor_supplied
+"app/page.tsx",hero,"/images/hero/jaipur-city-palace-grand-facade.jpg",3200x1600,3840px,0.83,169,"Resolution deficit: ratio 0.83 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"app/page.tsx",hero,"/images/style/hero/style-hero-luxury-fashion.jpg",2000x3020,3840px,0.52,149,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina)",REPLACE,false
+"app/page.tsx",hero,"/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait-1024w.webp",1024x1535,3840px,0.27,67,"Resolution deficit: ratio 0.27 < 1.0 (upscaled on retina); Hero long edge 1535px < 2400px minimum",KEPT-EDITORIAL,true
+"app/page.tsx",hero,"/images/society/shivanjali-kumari-dungarpur/01-hero.jpg",1024x681,3840px,0.27,800,"Resolution deficit: ratio 0.27 < 1.0 (upscaled on retina); Hero long edge 1024px < 2400px minimum",KEPT-EDITORIAL,true
+"app/page.tsx",content,"/images/dining/rajasthani-royal-thali-banquet.jpg",2400x1600,1400px,1.71,30,"Low Laplacian sharpness variance (30) - potential blur",FIX-RENDER,false
+"app/page.tsx",content,"/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg",7000x4672,1400px,5.00,35,"Low Laplacian sharpness variance (35) - potential blur",FIX-RENDER,false
+"app/page.tsx",content,"/images/hallway-arches-with-dramatic-light-shadows.jpg",3072x4096,1400px,2.19,33,"Low Laplacian sharpness variance (33) - potential blur",FIX-RENDER,false
+"app/archive/page.tsx",hero,"/images/hero/jaipur-city-palace-grand-facade.jpg",3200x1600,3840px,0.83,169,"Resolution deficit: ratio 0.83 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"app/archive/page.tsx",content,"/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg",7000x4672,1400px,5.00,37,"Low Laplacian sharpness variance (37) - potential blur",FIX-RENDER,false
+"app/archive/page.tsx",content,"/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg",7000x4672,1400px,5.00,35,"Low Laplacian sharpness variance (35) - potential blur",FIX-RENDER,false
+"app/archive/page.tsx",content,"/images/mehrangarh-fort.jpg",4512x3000,1400px,3.22,162,"None",KEEP,false
+"app/archive/page.tsx",hero,"/images/experiences/01-umaid-bhawan-palace-jodhpur/01-hero.webp",2400x1600,3840px,0.63,743,"Resolution deficit: ratio 0.63 < 1.0 (upscaled on retina)",REPLACE,false
+"app/archive/page.tsx",hero,"/images/hallway-arches-with-dramatic-light-shadows.jpg",3072x4096,3840px,0.80,33,"Resolution deficit: ratio 0.80 < 1.0 (upscaled on retina); Low Laplacian sharpness variance (33) - potential blur",FIX-RENDER,false
+"app/archive/page.tsx",content,"/images/hawa-mahal-palace-jaipur-india.jpg",5000x3319,1400px,3.57,32,"Low Laplacian sharpness variance (32) - potential blur",FIX-RENDER,false
+"app/archive/page.tsx",content,"/images/architectural-marvel-with-ornate-columns-arches.jpg",3072x4096,1400px,2.19,44,"Low Laplacian sharpness variance (44) - potential blur",FIX-RENDER,false
+"app/archive/page.tsx",hero,"/images/experiences/03-taj-lake-palace-udaipur/01-hero.webp",2400x1522,3840px,0.63,239,"Resolution deficit: ratio 0.63 < 1.0 (upscaled on retina)",REPLACE,false
+"app/archive/page.tsx",hero,"/images/design/varanasi-silk-weaving-traditional-loom.jpg",2400x1600,3840px,0.63,537,"Resolution deficit: ratio 0.63 < 1.0 (upscaled on retina)",REPLACE,false
+"app/archive/page.tsx",content,"/images/motoring/maharaja-rolls-royce-vintage-collection.jpg",2400x2003,1400px,1.71,136,"None",KEEP,false
+"app/archive/page.tsx",content,"/images/dining/rajasthani-royal-thali-banquet.jpg",2400x1600,1400px,1.71,30,"Low Laplacian sharpness variance (30) - potential blur",FIX-RENDER,false
+"app/components/ArticlePage.tsx",hero,"${SITE}${article.heroImage}",N/A,3840px,0.00,N/A,"File not found on disk",REPLACE,false
+"app/dining/page.tsx",content,"/images/dining/rajasthani-royal-thali-banquet.jpg",2400x1600,1400px,1.71,30,"Low Laplacian sharpness variance (30) - potential blur",FIX-RENDER,false
+"app/culture/page.tsx",hero,"/images/society/shivanjali-kumari-dungarpur/01-hero.jpg",1024x681,3840px,0.27,800,"Resolution deficit: ratio 0.27 < 1.0 (upscaled on retina); Hero long edge 1024px < 2400px minimum",KEPT-EDITORIAL,true
+"app/futures/page.tsx",content,"/images/hallway-arches-with-dramatic-light-shadows.jpg",3072x4096,1400px,2.19,33,"Low Laplacian sharpness variance (33) - potential blur",FIX-RENDER,false
+"app/gallery/page.tsx",hero,"hero/jaipur-city-palace-grand-facade.jpg",3200x1600,3840px,0.83,169,"Resolution deficit: ratio 0.83 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"app/gallery/page.tsx",hero,"mehrangarh-fort.jpg",4512x3000,3840px,1.18,162,"None",KEEP,false
+"app/gallery/page.tsx",content,"hawa-mahal-palace-jaipur-india.jpg",5000x3319,1400px,3.57,32,"Low Laplacian sharpness variance (32) - potential blur",FIX-RENDER,false
+"app/gallery/page.tsx",content,"badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg",7000x4672,1400px,5.00,37,"Low Laplacian sharpness variance (37) - potential blur",FIX-RENDER,false
+"app/gallery/page.tsx",content,"udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg",7000x4672,1400px,5.00,35,"Low Laplacian sharpness variance (35) - potential blur",FIX-RENDER,false
+"app/gallery/page.tsx",content,"architectural-marvel-with-ornate-columns-arches.jpg",3072x4096,1400px,2.19,44,"Low Laplacian sharpness variance (44) - potential blur",FIX-RENDER,false
+"app/gallery/page.tsx",content,"hallway-arches-with-dramatic-light-shadows.jpg",3072x4096,1400px,2.19,33,"Low Laplacian sharpness variance (33) - potential blur",FIX-RENDER,false
+"app/gallery/page.tsx",hero,"experiences/01-umaid-bhawan-palace-jodhpur/01-hero.webp",2400x1600,3840px,0.63,743,"Resolution deficit: ratio 0.63 < 1.0 (upscaled on retina)",REPLACE,false
+"app/gallery/page.tsx",hero,"experiences/03-taj-lake-palace-udaipur/01-hero.webp",2400x1522,3840px,0.63,239,"Resolution deficit: ratio 0.63 < 1.0 (upscaled on retina)",REPLACE,false
+"app/gallery/page.tsx",hero,"design/varanasi-silk-weaving-traditional-loom.jpg",2400x1600,3840px,0.63,537,"Resolution deficit: ratio 0.63 < 1.0 (upscaled on retina)",REPLACE,false
+"app/gallery/page.tsx",content,"motoring/maharaja-rolls-royce-vintage-collection.jpg",2400x2003,1400px,1.71,136,"None",KEEP,false
+"app/gallery/page.tsx",content,"dining/rajasthani-royal-thali-banquet.jpg",2400x1600,1400px,1.71,30,"Low Laplacian sharpness variance (30) - potential blur",FIX-RENDER,false
+"app/gallery/page.tsx",content,"/images/hallway-arches-with-dramatic-light-shadows.jpg",3072x4096,1400px,2.19,33,"Low Laplacian sharpness variance (33) - potential blur",FIX-RENDER,false
+"app/heritage/page.tsx",content,"/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg",7000x4672,1400px,5.00,37,"Low Laplacian sharpness variance (37) - potential blur",FIX-RENDER,false
+"app/heritage/page.tsx",content,"/images/mehrangarh-fort.jpg",4512x3000,1400px,3.22,162,"None",KEEP,false
+"app/heritage/page.tsx",content,"/images/architectural-marvel-with-ornate-columns-arches.jpg",3072x4096,1400px,2.19,44,"Low Laplacian sharpness variance (44) - potential blur",FIX-RENDER,false
+"app/heritage-ai/page.tsx",content,"/images/indian-city-buildings-scene.jpg",3584x5376,1400px,2.56,2005,"None",KEEP,false
+"app/motoring/page.tsx",content,"/images/motoring/maharaja-rolls-royce-vintage-collection.jpg",2400x2003,1400px,1.71,136,"None",KEEP,false
+"app/people/page.tsx",content,"/images/beautiful-shot-lodhi-garden-delhi-india-cloudy-sky.jpg",5760x3840,1400px,4.11,350,"None",KEEP,false
+"app/royalty/page.tsx",hero,"/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait-1024w.webp",1024x1535,3840px,0.27,67,"Resolution deficit: ratio 0.27 < 1.0 (upscaled on retina); Hero long edge 1535px < 2400px minimum",KEPT-EDITORIAL,true
+"app/society/page.tsx",content,"/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg",7000x4672,1400px,5.00,35,"Low Laplacian sharpness variance (35) - potential blur",FIX-RENDER,false
+"app/society/page.tsx",hero,"/images/society/shivanjali-kumari-dungarpur/01-hero.jpg",1024x681,3840px,0.27,800,"Resolution deficit: ratio 0.27 < 1.0 (upscaled on retina); Hero long edge 1024px < 2400px minimum",KEPT-EDITORIAL,true
+"app/society/page.tsx",hero,"/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait-1024w.webp",1024x1535,3840px,0.27,67,"Resolution deficit: ratio 0.27 < 1.0 (upscaled on retina); Hero long edge 1535px < 2400px minimum",KEPT-EDITORIAL,true
+"app/style/page.tsx",hero,"/images/style/hero/style-hero-luxury-fashion.jpg",2000x3020,3840px,0.52,149,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina)",REPLACE,false
+"app/style/page.tsx",content,"/images/style/article-01/luxury-fashion-editorial.jpg",2000x2500,1400px,1.43,515,"None",KEEP,false
+"app/travel/page.tsx",content,"/images/colorful-vibrant-indian-landscape.jpg",4789x7000,1400px,3.42,36,"Low Laplacian sharpness variance (36) - potential blur",FIX-RENDER,false
+"app/components/editorial/PhotoFigure.tsx",content,"linear-gradient(rgba(0,0,0,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.3) 1px, transparent 1px)",N/A,1400px,0.00,N/A,"File not found on disk",REPLACE,false
+"app/components/editorial/PhotoPlaceholder.tsx",content,"linear-gradient(rgba(0,0,0,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.3) 1px, transparent 1px)",N/A,1400px,0.00,N/A,"File not found on disk",REPLACE,false
+"app/society/aaliya-sultana-babi-dinosaur-princess-balasinor/page.tsx",hero,"https://theroyalgallerys.com/images/aaliya-sultana-babi/og-aaliya-sultana-babi.jpg",N/A,3840px,0.00,N/A,"Remote URL hotlink (should be downloaded locally)",KEPT-EDITORIAL,true
+"app/society/aaliya-sultana-babi-dinosaur-princess-balasinor/page.tsx",hero,"/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait.jpg",683x1024,3840px,0.18,286,"Resolution deficit: ratio 0.18 < 1.0 (upscaled on retina); Hero long edge 1024px < 2400px minimum",KEPT-EDITORIAL,true
+"app/society/aaliya-sultana-babi-dinosaur-princess-balasinor/page.tsx",hero,"/images/society/shivanjali-kumari-dungarpur/01-hero.jpg",1024x681,3840px,0.27,800,"Resolution deficit: ratio 0.27 < 1.0 (upscaled on retina); Hero long edge 1024px < 2400px minimum",KEPT-EDITORIAL,true
+"app/society/portraits-of-heritage/page.tsx",hero,"/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait-1024w.webp",1024x1535,3840px,0.27,67,"Resolution deficit: ratio 0.27 < 1.0 (upscaled on retina); Hero long edge 1535px < 2400px minimum",KEPT-EDITORIAL,true
+"app/society/portraits-of-heritage/page.tsx",hero,"/images/society/shivanjali-kumari-dungarpur/01-hero.jpg",1024x681,3840px,0.27,800,"Resolution deficit: ratio 0.27 < 1.0 (upscaled on retina); Hero long edge 1024px < 2400px minimum",KEPT-EDITORIAL,true
+"app/society/portraits-of-heritage/page.tsx",content,"/images/hallway-arches-with-dramatic-light-shadows.jpg",3072x4096,1400px,2.19,33,"Low Laplacian sharpness variance (33) - potential blur",FIX-RENDER,false
+"app/society/portraits-of-heritage/page.tsx",content,"/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg",7000x4672,1400px,5.00,37,"Low Laplacian sharpness variance (37) - potential blur",FIX-RENDER,false
+"app/society/portraits-of-heritage/page.tsx",content,"/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg",7000x4672,1400px,5.00,35,"Low Laplacian sharpness variance (35) - potential blur",FIX-RENDER,false
+"app/society/shivanjali-kumari-dungarpur-wild-lens-of-royalty/page.tsx",hero,"https://www.theroyalgallerys.com/images/society/shivanjali-kumari-dungarpur/og-shivanjali-kumari-dungarpur.jpg",N/A,3840px,0.00,N/A,"Remote URL hotlink (should be downloaded locally)",KEPT-EDITORIAL,true
+"app/society/shivanjali-kumari-dungarpur-wild-lens-of-royalty/page.tsx",hero,"/images/society/shivanjali-kumari-dungarpur/01-hero.jpg",1024x681,3840px,0.27,800,"Resolution deficit: ratio 0.27 < 1.0 (upscaled on retina); Hero long edge 1024px < 2400px minimum",KEPT-EDITORIAL,true
+"app/society/shivanjali-kumari-dungarpur-wild-lens-of-royalty/page.tsx",hero,"/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait-1024w.webp",1024x1535,3840px,0.27,67,"Resolution deficit: ratio 0.27 < 1.0 (upscaled on retina); Hero long edge 1535px < 2400px minimum",KEPT-EDITORIAL,true
+"app/style/[slug]/page.tsx",hero,"https://theroyalgallerys.com${article.heroImage}",N/A,3840px,0.00,N/A,"Remote URL hotlink (should be downloaded locally)",REPLACE,false
+"app/travel/the-balmoral/page.tsx",hero,"/assets/images/balmoral/balmoral-exterior-hero.jpg",2000x1500,3840px,0.52,321,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",KEPT-EDITORIAL,true
+"app/travel/the-balmoral/page.tsx",content,"/assets/images/balmoral/balmoral-facade-wide.jpg",2000x1582,1400px,1.43,302,"None",KEPT-EDITORIAL,true
+"app/travel/the-balmoral/page.tsx",content,"/assets/images/balmoral/balmoral-clock-tower.jpg",1280x853,1400px,0.91,29,"Resolution deficit: ratio 0.91 < 1.0 (upscaled on retina); Low Laplacian sharpness variance (29) - potential blur",KEPT-EDITORIAL,true
+"app/travel/the-balmoral/page.tsx",content,"/assets/images/balmoral/balmoral-palm-court.jpg",1900x1267,1400px,1.36,434,"None",KEPT-EDITORIAL,true
+"app/travel/the-balmoral/page.tsx",content,"/assets/images/balmoral/balmoral-private-dining.jpg",1000x666,1400px,0.71,404,"Resolution deficit: ratio 0.71 < 1.0 (upscaled on retina)",KEPT-EDITORIAL,true
+"app/travel/the-balmoral/page.tsx",content,"/images/experiences/31-edinburgh/img-01.webp",2000x3018,1400px,1.43,134,"None",KEEP,false
+"app/travel/the-balmoral/page.tsx",content,"/images/experiences/32-scottish-highlands/img-01.webp",640x430,1400px,0.46,1244,"Resolution deficit: ratio 0.46 < 1.0 (upscaled on retina)",REPLACE,false
+"app/travel/the-balmoral/page.tsx",content,"/images/experiences/02-rambagh-palace-jaipur/img-01.webp",2000x1500,1400px,1.43,82,"None",KEEP,false
+"app/society/shivanjali-kumari-dungarpur-wild-lens-of-royalty/components/ColourTurnSection.tsx",content,"/images/society/shivanjali-kumari-dungarpur/02-portrait-colour.jpg",682x1024,1400px,0.49,89,"Resolution deficit: ratio 0.49 < 1.0 (upscaled on retina)",KEPT-EDITORIAL,true
+"app/society/shivanjali-kumari-dungarpur-wild-lens-of-royalty/components/TenDrivesSequence.tsx",content,"/images/society/shivanjali-kumari-dungarpur/03-plate-vigil.jpg",1024x682,1400px,0.73,1009,"Resolution deficit: ratio 0.73 < 1.0 (upscaled on retina)",KEPT-EDITORIAL,true
+"app/travel/the-balmoral/components/BalmoralCarousel.tsx",content,"/assets/images/balmoral/balmoral-palm-court.jpg",1900x1267,1400px,1.36,434,"None",KEPT-EDITORIAL,true
+"app/travel/the-balmoral/components/BalmoralCarousel.tsx",content,"/assets/images/balmoral/balmoral-scone-crombie.jpg",2000x1333,1400px,1.43,691,"None",KEPT-EDITORIAL,true
+"app/travel/the-balmoral/components/BalmoralCarousel.tsx",content,"/assets/images/balmoral/balmoral-scone-crombie-bedroom.jpg",2000x1333,1400px,1.43,260,"None",KEPT-EDITORIAL,true
+"app/travel/the-balmoral/components/BalmoralCarousel.tsx",content,"/assets/images/balmoral/balmoral-castle-view-suite.jpg",2000x1333,1400px,1.43,208,"None",KEPT-EDITORIAL,true
+"app/travel/the-balmoral/components/BalmoralCarousel.tsx",content,"/assets/images/balmoral/balmoral-brasserie-prince.jpg",2000x1333,1400px,1.43,209,"None",KEPT-EDITORIAL,true
+"app/travel/the-balmoral/components/BalmoralCarousel.tsx",content,"/assets/images/balmoral/balmoral-number-one.jpg",2000x1334,1400px,1.43,208,"None",KEPT-EDITORIAL,true
+"app/travel/the-balmoral/components/BalmoralCarousel.tsx",content,"/assets/images/balmoral/balmoral-spa-pool.jpg",2000x1333,1400px,1.43,313,"None",KEPT-EDITORIAL,true
+"app/travel/the-balmoral/components/BalmoralCarousel.tsx",content,"/assets/images/balmoral/balmoral-scotch-bar.jpg",2048x1365,1400px,1.46,251,"None",KEPT-EDITORIAL,true
+"lib/business-articles.ts",hero,"/images/indian-city-buildings-scene.jpg",3584x5376,3840px,0.93,2005,"Resolution deficit: ratio 0.93 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"lib/business-articles.ts",content-wide,"/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg",7000x4672,2400px,2.92,35,"Low Laplacian sharpness variance (35) - potential blur",FIX-RENDER,false
+"lib/business-articles.ts",hero,"/images/style/article-08/luxury-brand-marketing-editorial.jpg",2000x2470,3840px,0.52,18,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Low Laplacian sharpness variance (18) - potential blur",REPLACE,false
+"lib/business-articles.ts",content-wide,"/images/style/article-08/fashion-campaign-visual.jpg",2000x2998,2400px,0.83,16,"Resolution deficit: ratio 0.83 < 1.0 (upscaled on retina); Low Laplacian sharpness variance (16) - potential blur",FIX-RENDER,false
+"lib/business-articles.ts",hero,"/images/style/article-01/indian-luxury-fashion-consumer.jpg",854x1280,3840px,0.22,976,"Resolution deficit: ratio 0.22 < 1.0 (upscaled on retina); Hero long edge 1280px < 2400px minimum",REPLACE,false
+"lib/business-articles.ts",content-wide,"/images/style/article-01/luxury-consumer-editorial-break.jpg",2000x1335,2400px,0.83,158,"Resolution deficit: ratio 0.83 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"lib/business-articles.ts",content-wide,"/images/style/article-08/luxury-brand-marketing-editorial.jpg",2000x2470,2400px,0.83,18,"Resolution deficit: ratio 0.83 < 1.0 (upscaled on retina); Low Laplacian sharpness variance (18) - potential blur",FIX-RENDER,false
+"lib/business-articles.ts",content-wide,"/images/style/article-01/indian-luxury-fashion-consumer.jpg",854x1280,2400px,0.36,976,"Resolution deficit: ratio 0.36 < 1.0 (upscaled on retina); Wide image long edge 1280px < 1600px minimum",REPLACE,false
+"lib/business-articles.ts",hero,"/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg",7000x4672,3840px,1.82,35,"Low Laplacian sharpness variance (35) - potential blur",FIX-RENDER,false
+"lib/culture-articles.ts",hero,"/images/hawa-mahal-palace-jaipur-india.jpg",5000x3319,3840px,1.30,32,"Low Laplacian sharpness variance (32) - potential blur",FIX-RENDER,false
+"lib/culture-articles.ts",content-wide,"/images/style/article-05/artisan-textile-craft.jpg",1280x1280,2400px,0.53,48,"Resolution deficit: ratio 0.53 < 1.0 (upscaled on retina); Wide image long edge 1280px < 1600px minimum; Low Laplacian sharpness variance (48) - potential blur",REPLACE,false
+"lib/culture-articles.ts",hero,"/images/style/article-09/palace-heritage-fashion.jpg",1920x1393,3840px,0.50,579,"Resolution deficit: ratio 0.50 < 1.0 (upscaled on retina); Hero long edge 1920px < 2400px minimum",REPLACE,false
+"lib/culture-articles.ts",content-wide,"/images/hawa-mahal-palace-jaipur-india.jpg",5000x3319,2400px,2.08,32,"Low Laplacian sharpness variance (32) - potential blur",FIX-RENDER,false
+"lib/culture-articles.ts",hero,"/images/style/article-09/rajasthan-palace-runway.jpg",1920x1074,3840px,0.50,2339,"Resolution deficit: ratio 0.50 < 1.0 (upscaled on retina); Hero long edge 1920px < 2400px minimum",REPLACE,false
+"lib/culture-articles.ts",content-wide,"/images/style/article-05/traditional-mirror-work-embroidery.jpg",1280x853,2400px,0.53,3706,"Resolution deficit: ratio 0.53 < 1.0 (upscaled on retina); Wide image long edge 1280px < 1600px minimum",REPLACE,false
+"lib/culture-articles.ts",content-wide,"/images/style/article-05/embroidery-craftsmanship-detail.jpg",1280x853,2400px,0.53,176,"Resolution deficit: ratio 0.53 < 1.0 (upscaled on retina); Wide image long edge 1280px < 1600px minimum",REPLACE,false
+"lib/culture-articles.ts",hero,"/images/colorful-vibrant-indian-landscape.jpg",4789x7000,3840px,1.25,36,"Low Laplacian sharpness variance (36) - potential blur",FIX-RENDER,false
+"lib/culture-articles.ts",content-wide,"/images/style/article-05/artisan-textile-market-break.jpg",2000x1333,2400px,0.83,160,"Resolution deficit: ratio 0.83 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"lib/culture-articles.ts",hero,"/images/style/article-05/indian-embroidery-craft-hero.jpg",2000x2667,3840px,0.52,1029,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina)",REPLACE,false
+"lib/design-articles.ts",hero,"/images/architectural-marvel-with-ornate-columns-arches.jpg",3072x4096,3840px,0.80,44,"Resolution deficit: ratio 0.80 < 1.0 (upscaled on retina); Low Laplacian sharpness variance (44) - potential blur",FIX-RENDER,false
+"lib/design-articles.ts",content-wide,"/images/hallway-arches-with-dramatic-light-shadows.jpg",3072x4096,2400px,1.28,33,"Low Laplacian sharpness variance (33) - potential blur",FIX-RENDER,false
+"lib/design-articles.ts",hero,"/images/hallway-arches-with-dramatic-light-shadows.jpg",3072x4096,3840px,0.80,33,"Resolution deficit: ratio 0.80 < 1.0 (upscaled on retina); Low Laplacian sharpness variance (33) - potential blur",FIX-RENDER,false
+"lib/design-articles.ts",content-wide,"/images/architectural-marvel-with-ornate-columns-arches.jpg",3072x4096,2400px,1.28,44,"Low Laplacian sharpness variance (44) - potential blur",FIX-RENDER,false
+"lib/design-articles.ts",content-wide,"/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg",7000x4672,2400px,2.92,37,"Low Laplacian sharpness variance (37) - potential blur",FIX-RENDER,false
+"lib/design-articles.ts",hero,"/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg",7000x4672,3840px,1.82,37,"Low Laplacian sharpness variance (37) - potential blur",FIX-RENDER,false
+"lib/design-articles.ts",hero,"/images/style/article-03/palace-architecture-detail.jpg",1920x1440,3840px,0.50,1174,"Resolution deficit: ratio 0.50 < 1.0 (upscaled on retina); Hero long edge 1920px < 2400px minimum",REPLACE,false
+"lib/design-articles.ts",hero,"/images/beautiful-shot-lodhi-garden-delhi-india-cloudy-sky.jpg",5760x3840,3840px,1.50,350,"None",KEEP,false
+"lib/jewellery-articles.ts",hero,"/images/style/article-07/high-jewellery-gold-luxury.jpg",1280x853,3840px,0.33,272,"Resolution deficit: ratio 0.33 < 1.0 (upscaled on retina); Hero long edge 1280px < 2400px minimum",REPLACE,false
+"lib/jewellery-articles.ts",content-wide,"/images/style/article-07/fine-jewellery-detail.jpg",1280x848,2400px,0.53,274,"Resolution deficit: ratio 0.53 < 1.0 (upscaled on retina); Wide image long edge 1280px < 1600px minimum",REPLACE,false
+"lib/jewellery-articles.ts",content-wide,"/images/style/article-07/luxury-jewellery-bracelet.jpg",1280x775,2400px,0.53,405,"Resolution deficit: ratio 0.53 < 1.0 (upscaled on retina); Wide image long edge 1280px < 1600px minimum",REPLACE,false
+"lib/jewellery-articles.ts",hero,"/images/style/article-07/luxury-jewellery-bracelet.jpg",1280x775,3840px,0.33,405,"Resolution deficit: ratio 0.33 < 1.0 (upscaled on retina); Hero long edge 1280px < 2400px minimum",REPLACE,false
+"lib/jewellery-articles.ts",content-wide,"/images/style/article-07/high-jewellery-gold-luxury.jpg",1280x853,2400px,0.53,272,"Resolution deficit: ratio 0.53 < 1.0 (upscaled on retina); Wide image long edge 1280px < 1600px minimum",REPLACE,false
+"lib/jewellery-articles.ts",hero,"/images/style/article-07/fine-jewellery-detail.jpg",1280x848,3840px,0.33,274,"Resolution deficit: ratio 0.33 < 1.0 (upscaled on retina); Hero long edge 1280px < 2400px minimum",REPLACE,false
+"lib/jewellery-articles.ts",hero,"/images/style/article-06/luxury-wedding-bridal.jpg",853x1280,3840px,0.22,1151,"Resolution deficit: ratio 0.22 < 1.0 (upscaled on retina); Hero long edge 1280px < 2400px minimum",REPLACE,false
+"lib/royalty-articles.ts",hero,"/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg",7000x4672,3840px,1.82,37,"Low Laplacian sharpness variance (37) - potential blur",FIX-RENDER,false
+"lib/royalty-articles.ts",content-wide,"/images/mehrangarh-fort.jpg",4512x3000,2400px,1.88,162,"None",KEEP,false
+"lib/royalty-articles.ts",content-wide,"/images/vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg",5514x3939,2400px,2.30,486,"Vecteezy stock filename",REPLACE,false
+"lib/royalty-articles.ts",hero,"/images/style/article-03/rajasthan-palace-heritage.jpg",1920x1311,3840px,0.50,2601,"Resolution deficit: ratio 0.50 < 1.0 (upscaled on retina); Hero long edge 1920px < 2400px minimum",REPLACE,false
+"lib/royalty-articles.ts",content-wide,"/images/style/article-05/embroidery-craftsmanship-detail.jpg",1280x853,2400px,0.53,176,"Resolution deficit: ratio 0.53 < 1.0 (upscaled on retina); Wide image long edge 1280px < 1600px minimum",REPLACE,false
+"lib/royalty-articles.ts",content-wide,"/images/hawa-mahal-palace-jaipur-india.jpg",5000x3319,2400px,2.08,32,"Low Laplacian sharpness variance (32) - potential blur",FIX-RENDER,false
+"lib/royalty-articles.ts",hero,"/images/style/article-03/palace-architecture-detail.jpg",1920x1440,3840px,0.50,1174,"Resolution deficit: ratio 0.50 < 1.0 (upscaled on retina); Hero long edge 1920px < 2400px minimum",REPLACE,false
+"lib/royalty-articles.ts",hero,"/images/style/article-03/royal-couture-editorial.jpg",2000x1333,3840px,0.52,44,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum; Low Laplacian sharpness variance (44) - potential blur",REPLACE,false
+"lib/royalty-articles.ts",content-wide,"/images/style/article-09/palace-heritage-fashion.jpg",1920x1393,2400px,0.80,579,"Resolution deficit: ratio 0.80 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"lib/royalty-articles.ts",content-wide,"/images/style/article-09/rajasthan-palace-runway.jpg",1920x1074,2400px,0.80,2339,"Resolution deficit: ratio 0.80 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"lib/royalty-articles.ts",hero,"/images/vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg",5514x3939,3840px,1.44,486,"Vecteezy stock filename",REPLACE,false
+"lib/royalty-articles.ts",content-wide,"/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg",7000x4672,2400px,2.92,37,"Low Laplacian sharpness variance (37) - potential blur",FIX-RENDER,false
+"lib/royalty-articles.ts",content-wide,"/images/style/article-03/rajasthan-palace-heritage.jpg",1920x1311,2400px,0.80,2601,"Resolution deficit: ratio 0.80 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"lib/style-articles.ts",hero,"/images/style/article-01/luxury-fashion-editorial.jpg",2000x2500,3840px,0.52,515,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina)",REPLACE,false
+"lib/style-articles.ts",content-wide,"/images/style/article-01/indian-luxury-fashion-consumer.jpg",854x1280,2400px,0.36,976,"Resolution deficit: ratio 0.36 < 1.0 (upscaled on retina); Wide image long edge 1280px < 1600px minimum",REPLACE,false
+"lib/style-articles.ts",content-wide,"/images/style/article-01/luxury-consumer-editorial-break.jpg",2000x1335,2400px,0.83,158,"Resolution deficit: ratio 0.83 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"lib/style-articles.ts",hero,"/images/style/article-02/indian-couture-runway.jpg",2000x3000,3840px,0.52,35,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Low Laplacian sharpness variance (35) - potential blur",REPLACE,false
+"lib/style-articles.ts",content-wide,"/images/style/article-02/couture-fabric-detail.jpg",1280x1121,2400px,0.53,222,"Resolution deficit: ratio 0.53 < 1.0 (upscaled on retina); Wide image long edge 1280px < 1600px minimum",REPLACE,false
+"lib/style-articles.ts",hero,"/images/style/article-03/rajasthan-palace-heritage.jpg",1920x1311,3840px,0.50,2601,"Resolution deficit: ratio 0.50 < 1.0 (upscaled on retina); Hero long edge 1920px < 2400px minimum",REPLACE,false
+"lib/style-articles.ts",content-wide,"/images/style/article-03/palace-architecture-detail.jpg",1920x1440,2400px,0.80,1174,"Resolution deficit: ratio 0.80 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"lib/style-articles.ts",hero,"/images/style/article-04/indian-fashion-runway-hero.jpg",2000x3000,3840px,0.52,293,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina)",REPLACE,false
+"lib/style-articles.ts",content-wide,"/images/style/article-04/fashion-runway-editorial-break.jpg",2000x1333,2400px,0.83,256,"Resolution deficit: ratio 0.83 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"lib/style-articles.ts",hero,"/images/style/article-05/indian-embroidery-craft-hero.jpg",2000x2667,3840px,0.52,1029,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina)",REPLACE,false
+"lib/style-articles.ts",content-wide,"/images/style/article-05/artisan-textile-market-break.jpg",2000x1333,2400px,0.83,160,"Resolution deficit: ratio 0.83 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"lib/style-articles.ts",content-wide,"/images/style/article-05/embroidery-craftsmanship-detail.jpg",1280x853,2400px,0.53,176,"Resolution deficit: ratio 0.53 < 1.0 (upscaled on retina); Wide image long edge 1280px < 1600px minimum",REPLACE,false
+"lib/style-articles.ts",hero,"/images/style/article-06/indian-bridal-couture-hero.jpg",2000x2999,3840px,0.52,111,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina)",REPLACE,false
+"lib/style-articles.ts",content-wide,"/images/style/article-06/bridal-lehenga-couture-break.jpg",2000x1333,2400px,0.83,371,"Resolution deficit: ratio 0.83 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"lib/style-articles.ts",hero,"/images/style/article-07/high-jewellery-gold-luxury.jpg",1280x853,3840px,0.33,272,"Resolution deficit: ratio 0.33 < 1.0 (upscaled on retina); Hero long edge 1280px < 2400px minimum",REPLACE,false
+"lib/style-articles.ts",content-wide,"/images/style/article-07/fine-jewellery-detail.jpg",1280x848,2400px,0.53,274,"Resolution deficit: ratio 0.53 < 1.0 (upscaled on retina); Wide image long edge 1280px < 1600px minimum",REPLACE,false
+"lib/style-articles.ts",hero,"/images/style/article-08/luxury-brand-marketing-editorial.jpg",2000x2470,3840px,0.52,18,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Low Laplacian sharpness variance (18) - potential blur",REPLACE,false
+"lib/style-articles.ts",content-wide,"/images/style/article-08/fashion-campaign-visual.jpg",2000x2998,2400px,0.83,16,"Resolution deficit: ratio 0.83 < 1.0 (upscaled on retina); Low Laplacian sharpness variance (16) - potential blur",FIX-RENDER,false
+"lib/style-articles.ts",hero,"/images/style/article-09/rajasthan-palace-runway.jpg",1920x1074,3840px,0.50,2339,"Resolution deficit: ratio 0.50 < 1.0 (upscaled on retina); Hero long edge 1920px < 2400px minimum",REPLACE,false
+"lib/style-articles.ts",content-wide,"/images/style/article-09/palace-heritage-fashion.jpg",1920x1393,2400px,0.80,579,"Resolution deficit: ratio 0.80 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"lib/style-articles.ts",hero,"/images/style/article-10/future-luxury-fashion-2026.jpg",2000x3020,3840px,0.52,149,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina)",REPLACE,false
+"lib/style-articles.ts",content-wide,"/images/style/article-10/modern-luxury-couture-future.jpg",2000x3000,2400px,0.83,35,"Resolution deficit: ratio 0.83 < 1.0 (upscaled on retina); Low Laplacian sharpness variance (35) - potential blur",FIX-RENDER,false
+"lib/style-articles.ts",content-wide,"/images/style/article-10/digital-luxury-fashion-break.jpg",2000x3000,2400px,0.83,208,"Resolution deficit: ratio 0.83 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"lib/travel-articles.ts",hero,"/images/experiences/01-umaid-bhawan-palace-jodhpur/01-hero.webp",2400x1600,3840px,0.63,743,"Resolution deficit: ratio 0.63 < 1.0 (upscaled on retina)",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/02-rambagh-palace-jaipur/suryavanshi-suite-bedroom.png",1672x941,3840px,0.44,627,"Resolution deficit: ratio 0.44 < 1.0 (upscaled on retina); Hero long edge 1672px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/03-taj-lake-palace-udaipur/01-hero.webp",2400x1522,3840px,0.63,239,"Resolution deficit: ratio 0.63 < 1.0 (upscaled on retina)",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/04-city-palace-udaipur/city-palace-hero.jpg",574x348,3840px,0.15,574,"Resolution deficit: ratio 0.15 < 1.0 (upscaled on retina); Hero long edge 574px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/05-shiv-niwas-palace-udaipur/04-mor-chowk.webp",2000x1500,3840px,0.52,419,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/06-fateh-prakash-palace-udaipur/01-durbar-hall.webp",2000x1333,3840px,0.52,61,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/07-samode-palace-jaipur/01-hero.webp",2048x1358,3840px,0.53,124,"Resolution deficit: ratio 0.53 < 1.0 (upscaled on retina); Hero long edge 2048px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/08-samode-haveli-jaipur/01-courtyard.webp",2000x1333,3840px,0.52,285,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/09-raas-jodhpur/01-mehrangarh-fort.webp",2000x1333,3840px,0.52,240,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/10-suryagarh-jaisalmer/img-01.webp",2000x1500,3840px,0.52,16,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum; Low Laplacian sharpness variance (16) - potential blur",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/11-devi-garh-udaipur/img-01.webp",2000x771,3840px,0.52,507,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/12-mihir-garh-jodhpur/img-01.webp",1006x500,3840px,0.26,612,"Resolution deficit: ratio 0.26 < 1.0 (upscaled on retina); Hero long edge 1006px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/13-rohet-garh-jodhpur/img-01.webp",2000x1500,3840px,0.52,325,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/14-ahilya-fort-maheshwar/01-hero.webp",2400x1678,3840px,0.63,343,"Resolution deficit: ratio 0.63 < 1.0 (upscaled on retina)",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/15-falaknuma-palace-hyderabad/01-hero.webp",2000x807,3840px,0.52,1017,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/16-lalgarh-palace-bikaner/01-hero.webp",2000x1500,3840px,0.52,112,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/17-gajner-palace-bikaner/01-hero.webp",2000x1333,3840px,0.52,1044,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/18-noor-us-sabah-palace-bhopal/img-01.webp",2000x1500,3840px,0.52,169,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/19-neemrana-fort-palace/01-hero.webp",2400x1800,3840px,0.63,220,"Resolution deficit: ratio 0.63 < 1.0 (upscaled on retina)",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/20-bhanwar-vilas-palace-karauli/img-01.webp",1141x856,3840px,0.30,533,"Resolution deficit: ratio 0.30 < 1.0 (upscaled on retina); Hero long edge 1141px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/21-kyoto/img-01.webp",2000x1333,3840px,0.52,57,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum; Low Laplacian sharpness variance (57) - potential blur",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/23-tokyo/img-01.webp",527x351,3840px,0.14,167,"Resolution deficit: ratio 0.14 < 1.0 (upscaled on retina); Hero long edge 527px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/22-osaka/img-01.webp",2000x892,3840px,0.52,1224,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/25-seoul/img-01.webp",1024x322,3840px,0.27,528,"Resolution deficit: ratio 0.27 < 1.0 (upscaled on retina); Hero long edge 1024px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/24-busan/img-01.webp",800x600,3840px,0.21,479,"Resolution deficit: ratio 0.21 < 1.0 (upscaled on retina); Hero long edge 800px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/26-hanoi/img-01.webp",1600x1200,3840px,0.42,860,"Resolution deficit: ratio 0.42 < 1.0 (upscaled on retina); Hero long edge 1600px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/27-ho-chi-minh-city/img-01.webp",2000x1048,3840px,0.52,163,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/28-hoi-an/img-01.webp",572x876,3840px,0.15,273,"Resolution deficit: ratio 0.15 < 1.0 (upscaled on retina); Hero long edge 876px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/38-amalfi-coast/img-01.webp",2000x1329,3840px,0.52,557,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/36-lake-como/img-01.webp",2000x661,3840px,0.52,426,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/37-tuscany/img-01.webp",2000x1500,3840px,0.52,27,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum; Low Laplacian sharpness variance (27) - potential blur",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/30-paris/img-01.webp",2000x3000,3840px,0.52,42,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Low Laplacian sharpness variance (42) - potential blur",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/35-french-riviera/img-01.webp",1200x900,3840px,0.31,228,"Resolution deficit: ratio 0.31 < 1.0 (upscaled on retina); Hero long edge 1200px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/39-interlaken/img-01.webp",1024x828,3840px,0.27,113,"Resolution deficit: ratio 0.27 < 1.0 (upscaled on retina); Hero long edge 1024px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/40-lucerne/img-01.webp",2000x1334,3840px,0.52,357,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/31-edinburgh/img-01.webp",2000x3018,3840px,0.52,134,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina)",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/32-scottish-highlands/img-01.webp",640x430,3840px,0.17,1244,"Resolution deficit: ratio 0.17 < 1.0 (upscaled on retina); Hero long edge 640px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/29-london/img-01.webp",2000x1001,3840px,0.52,213,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/34-lisbon/img-01.webp",2000x1909,3840px,0.52,727,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/33-barcelona/img-01.webp",2000x4952,3840px,0.52,813,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina)",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/41-istanbul/img-01.webp",2000x957,3840px,0.52,5784,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/45-marrakech/img-01.webp",1170x1563,3840px,0.30,68,"Resolution deficit: ratio 0.30 < 1.0 (upscaled on retina); Hero long edge 1563px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/43-cairo-nile/img-01.webp",640x480,3840px,0.17,614,"Resolution deficit: ratio 0.17 < 1.0 (upscaled on retina); Hero long edge 640px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/46-cape-town/img-01.webp",1203x891,3840px,0.31,194,"Resolution deficit: ratio 0.31 < 1.0 (upscaled on retina); Hero long edge 1203px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/42-dubai/img-01.webp",1229x851,3840px,0.32,182,"Resolution deficit: ratio 0.32 < 1.0 (upscaled on retina); Hero long edge 1229px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/44-muscat/img-01.webp",2000x1032,3840px,0.52,1065,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/47-sydney/img-01.webp",2000x499,3840px,0.52,391,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/48-queenstown/img-01.webp",2000x652,3840px,0.52,431,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/49-banff-rockies/img-01.webp",2000x1189,3840px,0.52,1031,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/experiences/50-mexico-city/img-01.webp",2000x1500,3840px,0.52,290,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Hero long edge 2000px < 2400px minimum",REPLACE,false
+"lib/travel-articles.ts",hero,"/images/style/article-06/indian-bridal-couture-hero.jpg",2000x2999,3840px,0.52,111,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina)",REPLACE,false
+"lib/watches-articles.ts",hero,"/images/watches/watch-hero.jpeg",2048x1376,3840px,0.53,68,"Resolution deficit: ratio 0.53 < 1.0 (upscaled on retina); Hero long edge 2048px < 2400px minimum",REPLACE,false
+"lib/watches-articles.ts",content-wide,"/images/watches/watch-inside.jpeg",1434x1097,2400px,0.60,444,"Resolution deficit: ratio 0.60 < 1.0 (upscaled on retina); Wide image long edge 1434px < 1600px minimum",REPLACE,false
+"lib/watches-articles.ts",hero,"/images/watches/watch-outside.jpeg",1024x683,3840px,0.27,89,"Resolution deficit: ratio 0.27 < 1.0 (upscaled on retina); Hero long edge 1024px < 2400px minimum",REPLACE,false
+"lib/watches-articles.ts",hero,"/images/watches/watch-inside.jpeg",1434x1097,3840px,0.37,444,"Resolution deficit: ratio 0.37 < 1.0 (upscaled on retina); Hero long edge 1434px < 2400px minimum",REPLACE,false
+"lib/watches-articles.ts",content-wide,"/images/watches/watch-outside.jpeg",1024x683,2400px,0.43,89,"Resolution deficit: ratio 0.43 < 1.0 (upscaled on retina); Wide image long edge 1024px < 1600px minimum",REPLACE,false
+"lib/watches-articles.ts",content-wide,"/images/watches/watch-hero.jpeg",2048x1376,2400px,0.85,68,"Resolution deficit: ratio 0.85 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"lib/weddings-articles.ts",hero,"/images/style/article-06/indian-bridal-couture-hero.jpg",2000x2999,3840px,0.52,111,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina)",REPLACE,false
+"lib/weddings-articles.ts",content-wide,"/images/style/article-06/indian-bridal-couture-wedding.jpg",1280x853,2400px,0.53,545,"Resolution deficit: ratio 0.53 < 1.0 (upscaled on retina); Wide image long edge 1280px < 1600px minimum",REPLACE,false
+"lib/weddings-articles.ts",content-wide,"/images/style/article-06/luxury-wedding-bridal.jpg",853x1280,2400px,0.36,1151,"Resolution deficit: ratio 0.36 < 1.0 (upscaled on retina); Wide image long edge 1280px < 1600px minimum",REPLACE,false
+"lib/weddings-articles.ts",hero,"/images/style/article-06/indian-bridal-couture-wedding.jpg",1280x853,3840px,0.33,545,"Resolution deficit: ratio 0.33 < 1.0 (upscaled on retina); Hero long edge 1280px < 2400px minimum",REPLACE,false
+"lib/weddings-articles.ts",content-wide,"/images/style/article-06/bridal-lehenga-couture-break.jpg",2000x1333,2400px,0.83,371,"Resolution deficit: ratio 0.83 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"lib/weddings-articles.ts",hero,"/images/style/article-06/indian-wedding-fashion.jpg",1280x853,3840px,0.33,352,"Resolution deficit: ratio 0.33 < 1.0 (upscaled on retina); Hero long edge 1280px < 2400px minimum",REPLACE,false
+"lib/weddings-articles.ts",content-wide,"/images/style/article-02/couture-fabric-detail.jpg",1280x1121,2400px,0.53,222,"Resolution deficit: ratio 0.53 < 1.0 (upscaled on retina); Wide image long edge 1280px < 1600px minimum",REPLACE,false
+"lib/weddings-articles.ts",hero,"/images/style/article-09/rajasthan-palace-runway.jpg",1920x1074,3840px,0.50,2339,"Resolution deficit: ratio 0.50 < 1.0 (upscaled on retina); Hero long edge 1920px < 2400px minimum",REPLACE,false
+"lib/weddings-articles.ts",content-wide,"/images/style/article-09/fashion-runway-palace-inspired.jpg",2000x1333,2400px,0.83,44,"Resolution deficit: ratio 0.83 < 1.0 (upscaled on retina); Low Laplacian sharpness variance (44) - potential blur",FIX-RENDER,false
+"lib/weddings-articles.ts",hero,"/images/style/article-02/indian-couture-runway.jpg",2000x3000,3840px,0.52,35,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina); Low Laplacian sharpness variance (35) - potential blur",REPLACE,false
+"lib/weddings-articles.ts",content-wide,"/images/style/article-02/fashion-couture-editorial.jpg",2000x1333,2400px,0.83,37,"Resolution deficit: ratio 0.83 < 1.0 (upscaled on retina); Low Laplacian sharpness variance (37) - potential blur",FIX-RENDER,false
+"lib/editorial/sections.ts",hero,"/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg",7000x4672,3840px,1.82,37,"Low Laplacian sharpness variance (37) - potential blur",FIX-RENDER,false
+"lib/editorial/sections.ts",hero,"/images/style/article-07/high-jewellery-gold-luxury.jpg",1280x853,3840px,0.33,272,"Resolution deficit: ratio 0.33 < 1.0 (upscaled on retina); Hero long edge 1280px < 2400px minimum",REPLACE,false
+"lib/editorial/sections.ts",hero,"/images/watches/watch-hero.jpeg",2048x1376,3840px,0.53,68,"Resolution deficit: ratio 0.53 < 1.0 (upscaled on retina); Hero long edge 2048px < 2400px minimum",REPLACE,false
+"lib/editorial/sections.ts",hero,"/images/style/article-06/indian-bridal-couture-hero.jpg",2000x2999,3840px,0.52,111,"Resolution deficit: ratio 0.52 < 1.0 (upscaled on retina)",REPLACE,false
+"lib/editorial/sections.ts",hero,"/images/architectural-marvel-with-ornate-columns-arches.jpg",3072x4096,3840px,0.80,44,"Resolution deficit: ratio 0.80 < 1.0 (upscaled on retina); Low Laplacian sharpness variance (44) - potential blur",FIX-RENDER,false
+"lib/editorial/sections.ts",hero,"/images/hawa-mahal-palace-jaipur-india.jpg",5000x3319,3840px,1.30,32,"Low Laplacian sharpness variance (32) - potential blur",FIX-RENDER,false
+"lib/editorial/sections.ts",hero,"/images/indian-city-buildings-scene.jpg",3584x5376,3840px,0.93,2005,"Resolution deficit: ratio 0.93 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/ChatGPT Image Aug 14, 2026, 10_41_39 AM.png",1672x941,1400px,1.19,354,"AI generated filename",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/colorful-vibrant-indian-landscape(1).jpg",7000x4789,1400px,5.00,132,"Duplicate download suffix (1)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/images (5).jpg",574x348,1400px,0.41,574,"Browser thumbnail download name; Resolution deficit: ratio 0.41 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/indian-city-buildings-scene(1).jpg",5376x3584,1400px,3.84,2684,"Duplicate download suffix (1)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/sama-ali.jpeg",866x956,1400px,0.62,193,"Resolution deficit: ratio 0.62 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/udaipur-city-view-from-hotel-balcony-rajasthan-india(1).jpg",7000x4672,1400px,5.00,93,"Duplicate download suffix (1)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait-1024w.jpg",1024x1535,1400px,0.73,66,"Resolution deficit: ratio 0.73 < 1.0 (upscaled on retina)",KEPT-EDITORIAL,true
+"public-directory",unreferenced-or-static,"/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait-640w.jpg",640x960,1400px,0.46,267,"Resolution deficit: ratio 0.46 < 1.0 (upscaled on retina)",KEPT-EDITORIAL,true
+"public-directory",unreferenced-or-static,"/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait-640w.webp",640x960,1400px,0.46,260,"Resolution deficit: ratio 0.46 < 1.0 (upscaled on retina)",KEPT-EDITORIAL,true
+"public-directory",unreferenced-or-static,"/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait.avif",683x1024,1400px,0.49,269,"Resolution deficit: ratio 0.49 < 1.0 (upscaled on retina)",KEPT-EDITORIAL,true
+"public-directory",unreferenced-or-static,"/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait.webp",683x1024,1400px,0.49,284,"Resolution deficit: ratio 0.49 < 1.0 (upscaled on retina)",KEPT-EDITORIAL,true
+"public-directory",unreferenced-or-static,"/images/aaliya-sultana-babi/og-aaliya-sultana-babi.jpg",1200x630,1400px,0.86,372,"Resolution deficit: ratio 0.86 < 1.0 (upscaled on retina)",KEPT-EDITORIAL,true
+"public-directory",unreferenced-or-static,"/images/design/varanasi-silk-weaving-traditional-loom.webp",2400x1600,1400px,1.71,566,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/dining/rajasthani-royal-thali-banquet.webp",2400x1600,1400px,1.71,35,"Low Laplacian sharpness variance (35) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/hero/jaipur-city-palace-grand-facade.webp",3200x1600,1400px,2.29,189,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/motoring/land-rover-defender-safari-expedition.jpg",2400x1624,1400px,1.71,95,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/motoring/land-rover-defender-safari-expedition.webp",2400x1624,1400px,1.71,110,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/motoring/maharaja-rolls-royce-vintage-collection.webp",2400x2003,1400px,1.71,151,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/_retired/colorful-vibrant-indian-landscape(1).jpg",7000x4789,1400px,5.00,132,"Duplicate download suffix (1)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/_retired/images (5).jpg",574x348,1400px,0.41,574,"Browser thumbnail download name; Resolution deficit: ratio 0.41 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/_retired/indian-city-buildings-scene(1).jpg",5376x3584,1400px,3.84,2684,"Duplicate download suffix (1)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/_retired/udaipur-city-view-from-hotel-balcony-rajasthan-india(1).jpg",7000x4672,1400px,5.00,93,"Duplicate download suffix (1)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/_retired/vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg",5514x3939,1400px,3.94,486,"Vecteezy stock filename",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/01-umaid-bhawan-palace-jodhpur/02-dome.webp",2000x2817,1400px,1.43,393,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/01-umaid-bhawan-palace-jodhpur/03-durbar-hall.webp",2000x1542,1400px,1.43,113,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/01-umaid-bhawan-palace-jodhpur/04-norblin-murals.webp",1022x1500,1400px,0.73,483,"Resolution deficit: ratio 0.73 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/01-umaid-bhawan-palace-jodhpur/05-arrival.webp",2000x722,1400px,1.43,322,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/01-umaid-bhawan-palace-jodhpur/06-pool.webp",2000x1277,1400px,1.43,220,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/01-umaid-bhawan-palace-jodhpur/09-sunset-terrace.webp",2000x1201,1400px,1.43,9,"Low Laplacian sharpness variance (9) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/01-umaid-bhawan-palace-jodhpur/10-aerial-sunset.webp",1920x1080,1400px,1.37,61,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/02-rambagh-palace-jaipur/img-02.webp",2000x1500,1400px,1.43,358,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/02-rambagh-palace-jaipur/img-03.webp",2000x1500,1400px,1.43,263,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/02-rambagh-palace-jaipur/img-04.webp",2000x1500,1400px,1.43,164,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/02-rambagh-palace-jaipur/img-05.webp",2000x1500,1400px,1.43,318,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/02-rambagh-palace-jaipur/img-06.webp",1358x2048,1400px,0.97,13,"Resolution deficit: ratio 0.97 < 1.0 (upscaled on retina); Low Laplacian sharpness variance (13) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/02-rambagh-palace-jaipur/img-07.webp",1358x2048,1400px,0.97,197,"Resolution deficit: ratio 0.97 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/04-city-palace-udaipur/01-hero.webp",1943x1410,1400px,1.39,303,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/04-city-palace-udaipur/04-mor-chowk.webp",2000x1500,1400px,1.43,419,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/04-city-palace-udaipur/img-03.webp",2000x2988,1400px,1.43,246,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/04-city-palace-udaipur/img-04.webp",2000x2988,1400px,1.43,24,"Low Laplacian sharpness variance (24) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/04-city-palace-udaipur/img-05.webp",2000x3083,1400px,1.43,755,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/04-city-palace-udaipur/img-06.webp",1536x2048,1400px,1.10,225,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/04-city-palace-udaipur/krishna-vilas-chamber.png",1672x941,1400px,1.19,354,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/03-taj-lake-palace-udaipur/img-02.webp",2000x1335,1400px,1.43,121,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/03-taj-lake-palace-udaipur/img-03.webp",712x590,1400px,0.51,309,"Resolution deficit: ratio 0.51 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/03-taj-lake-palace-udaipur/img-04.webp",2000x723,1400px,1.43,101,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/03-taj-lake-palace-udaipur/img-05.webp",2000x1333,1400px,1.43,204,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/03-taj-lake-palace-udaipur/img-06.webp",2000x579,1400px,1.43,371,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/03-taj-lake-palace-udaipur/img-07.webp",2000x1125,1400px,1.43,463,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/03-taj-lake-palace-udaipur/img-08.webp",2000x1333,1400px,1.43,61,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/05-shiv-niwas-palace-udaipur/img-02.webp",712x590,1400px,0.51,309,"Resolution deficit: ratio 0.51 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/05-shiv-niwas-palace-udaipur/img-03.webp",2000x1500,1400px,1.43,419,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/05-shiv-niwas-palace-udaipur/img-04.webp",2000x3000,1400px,1.43,277,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/07-samode-palace-jaipur/01-hero.jpg",2048x1358,1400px,1.46,124,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/07-samode-palace-jaipur/img-02.webp",2000x1326,1400px,1.43,127,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/07-samode-palace-jaipur/img-03.webp",2000x1326,1400px,1.43,253,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/07-samode-palace-jaipur/img-04.webp",2000x1326,1400px,1.43,25,"Low Laplacian sharpness variance (25) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/06-fateh-prakash-palace-udaipur/img-02.webp",2000x1333,1400px,1.43,61,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/06-fateh-prakash-palace-udaipur/img-03.webp",2000x1333,1400px,1.43,135,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/06-fateh-prakash-palace-udaipur/img-04.webp",2000x1333,1400px,1.43,276,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/08-samode-haveli-jaipur/img-02.webp",2000x1333,1400px,1.43,160,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/08-samode-haveli-jaipur/img-03.webp",2000x1333,1400px,1.43,285,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/09-raas-jodhpur/07-blue-city.webp",2000x1333,1400px,1.43,311,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/10-suryagarh-jaisalmer/img-02.webp",2000x1333,1400px,1.43,77,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/10-suryagarh-jaisalmer/img-03.webp",2000x1189,1400px,1.43,127,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/10-suryagarh-jaisalmer/img-04.webp",2000x1333,1400px,1.43,94,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/10-suryagarh-jaisalmer/img-05.webp",2000x1333,1400px,1.43,122,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/10-suryagarh-jaisalmer/img-06.webp",2000x1333,1400px,1.43,60,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/10-suryagarh-jaisalmer/img-07.webp",2000x1333,1400px,1.43,215,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/11-devi-garh-udaipur/img-02.webp",2000x1333,1400px,1.43,238,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/11-devi-garh-udaipur/img-03.webp",712x431,1400px,0.51,287,"Resolution deficit: ratio 0.51 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/11-devi-garh-udaipur/img-06.webp",2000x957,1400px,1.43,605,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/11-devi-garh-udaipur/img-07.webp",2000x1058,1400px,1.43,511,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/11-devi-garh-udaipur/img-08.webp",1802x2508,1400px,1.29,107,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/12-mihir-garh-jodhpur/img-02.webp",2000x1277,1400px,1.43,220,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/12-mihir-garh-jodhpur/img-03.webp",2000x1488,1400px,1.43,87,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/12-mihir-garh-jodhpur/img-04.webp",2000x3087,1400px,1.43,31,"Low Laplacian sharpness variance (31) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/13-rohet-garh-jodhpur/img-02.webp",2000x1500,1400px,1.43,397,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/13-rohet-garh-jodhpur/img-03.webp",2000x2667,1400px,1.43,347,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/14-ahilya-fort-maheshwar/01-hero.jpg",2400x1678,1400px,1.71,307,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/14-ahilya-fort-maheshwar/img-02.webp",2000x1333,1400px,1.43,13,"Low Laplacian sharpness variance (13) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/14-ahilya-fort-maheshwar/img-03.webp",2000x1399,1400px,1.43,444,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/15-falaknuma-palace-hyderabad/09-blue-hour.webp",2000x1500,1400px,1.43,118,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/15-falaknuma-palace-hyderabad/img-03.webp",2000x1518,1400px,1.43,238,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/15-falaknuma-palace-hyderabad/img-04.webp",2000x1335,1400px,1.43,318,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/15-falaknuma-palace-hyderabad/img-05.webp",2000x1333,1400px,1.43,467,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/15-falaknuma-palace-hyderabad/img-06.webp",2000x1333,1400px,1.43,410,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/15-falaknuma-palace-hyderabad/img-07.webp",2000x1333,1400px,1.43,244,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/16-lalgarh-palace-bikaner/03-courtyard.webp",950x713,1400px,0.68,2025,"Resolution deficit: ratio 0.68 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/16-lalgarh-palace-bikaner/img-03.webp",950x535,1400px,0.68,506,"Resolution deficit: ratio 0.68 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/16-lalgarh-palace-bikaner/img-04.webp",950x713,1400px,0.68,2025,"Resolution deficit: ratio 0.68 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/16-lalgarh-palace-bikaner/img-05.webp",2000x1324,1400px,1.43,728,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/17-gajner-palace-bikaner/img-02.webp",2000x1333,1400px,1.43,976,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/17-gajner-palace-bikaner/img-06.webp",1280x960,1400px,0.91,106,"Resolution deficit: ratio 0.91 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/18-noor-us-sabah-palace-bhopal/img-02.webp",2000x1347,1400px,1.43,191,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/18-noor-us-sabah-palace-bhopal/img-03.webp",383x240,1400px,0.27,1058,"Resolution deficit: ratio 0.27 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/19-neemrana-fort-palace/01-hero.jpg",2400x1800,1400px,1.71,200,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/19-neemrana-fort-palace/img-02.webp",1004x1464,1400px,0.72,83,"Resolution deficit: ratio 0.72 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/19-neemrana-fort-palace/img-03.webp",1668x1042,1400px,1.19,107,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/21-kyoto/img-02.webp",2000x3000,1400px,1.43,9,"Low Laplacian sharpness variance (9) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/21-kyoto/img-03.webp",2000x1333,1400px,1.43,427,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/21-kyoto/img-04.webp",2000x1333,1400px,1.43,506,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/21-kyoto/img-05.webp",2000x1414,1400px,1.43,57,"Low Laplacian sharpness variance (57) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/22-osaka/img-02.webp",1171x2000,1400px,0.84,174,"Resolution deficit: ratio 0.84 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/22-osaka/img-03.webp",2000x1309,1400px,1.43,590,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/22-osaka/img-04.webp",2000x1417,1400px,1.43,44,"Low Laplacian sharpness variance (44) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/22-osaka/img-05.webp",2000x1333,1400px,1.43,900,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/23-tokyo/img-02.webp",2000x1127,1400px,1.43,1595,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/23-tokyo/img-03.webp",2000x1334,1400px,1.43,444,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/23-tokyo/img-04.webp",2000x1500,1400px,1.43,131,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/24-busan/img-02.webp",2000x1500,1400px,1.43,199,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/24-busan/img-03.webp",280x361,1400px,0.20,2718,"Resolution deficit: ratio 0.20 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/24-busan/img-04.webp",1920x1080,1400px,1.37,273,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/24-busan/img-05.webp",2000x1499,1400px,1.43,501,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/25-seoul/img-02.webp",2000x1332,1400px,1.43,131,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/25-seoul/img-03.webp",2000x1333,1400px,1.43,433,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/25-seoul/img-04.webp",1536x2048,1400px,1.10,533,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/25-seoul/img-06.webp",2000x1435,1400px,1.43,557,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/26-hanoi/img-02.webp",2000x1333,1400px,1.43,114,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/26-hanoi/img-03.webp",2000x1333,1400px,1.43,30,"Low Laplacian sharpness variance (30) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/26-hanoi/img-04.webp",2000x1333,1400px,1.43,24,"Low Laplacian sharpness variance (24) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/26-hanoi/img-05.webp",2000x1333,1400px,1.43,27,"Low Laplacian sharpness variance (27) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/26-hanoi/img-06.webp",2000x3000,1400px,1.43,643,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/27-ho-chi-minh-city/img-02.webp",2000x1727,1400px,1.43,11,"Low Laplacian sharpness variance (11) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/27-ho-chi-minh-city/img-03.webp",2000x1654,1400px,1.43,608,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/27-ho-chi-minh-city/img-04.webp",2000x1349,1400px,1.43,239,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/27-ho-chi-minh-city/img-05.webp",2000x1269,1400px,1.43,4,"Low Laplacian sharpness variance (4) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/27-ho-chi-minh-city/img-06.webp",2000x1333,1400px,1.43,444,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/28-hoi-an/img-02.webp",799x520,1400px,0.57,453,"Resolution deficit: ratio 0.57 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/28-hoi-an/img-03.webp",2000x1328,1400px,1.43,205,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/28-hoi-an/img-04.webp",2000x1500,1400px,1.43,67,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/28-hoi-an/img-05.webp",2000x1500,1400px,1.43,89,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/28-hoi-an/img-06.webp",2000x1500,1400px,1.43,317,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/29-london/img-02.webp",2000x887,1400px,1.43,260,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/29-london/img-03.webp",2000x1012,1400px,1.43,470,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/29-london/img-04.webp",640x480,1400px,0.46,537,"Resolution deficit: ratio 0.46 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/29-london/img-05.webp",480x640,1400px,0.34,673,"Resolution deficit: ratio 0.34 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/30-paris/img-02.webp",1072x1624,1400px,0.77,387,"Resolution deficit: ratio 0.77 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/30-paris/img-03.webp",2000x311,1400px,1.43,230,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/30-paris/img-04.webp",2000x793,1400px,1.43,468,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/30-paris/img-05.webp",1900x1871,1400px,1.36,1336,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/31-edinburgh/img-02.webp",2000x1333,1400px,1.43,799,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/31-edinburgh/img-03.webp",2000x1333,1400px,1.43,870,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/32-scottish-highlands/img-02.webp",645x400,1400px,0.46,191,"Resolution deficit: ratio 0.46 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/32-scottish-highlands/img-03.webp",2000x1186,1400px,1.43,40,"Low Laplacian sharpness variance (40) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/32-scottish-highlands/img-04.webp",2000x1320,1400px,1.43,204,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/32-scottish-highlands/img-05.webp",2000x1333,1400px,1.43,132,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/33-barcelona/img-02.webp",2000x1508,1400px,1.43,400,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/33-barcelona/img-03.webp",2000x1504,1400px,1.43,70,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/33-barcelona/img-04.webp",2000x3107,1400px,1.43,72,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/33-barcelona/img-05.webp",2000x1357,1400px,1.43,569,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/34-lisbon/img-02.webp",1914x2878,1400px,1.37,92,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/34-lisbon/img-03.webp",2000x1534,1400px,1.43,244,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/34-lisbon/img-04.webp",1021x627,1400px,0.73,1281,"Resolution deficit: ratio 0.73 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/34-lisbon/img-05.webp",2000x2992,1400px,1.43,33,"Low Laplacian sharpness variance (33) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/35-french-riviera/img-02.webp",2000x1406,1400px,1.43,57,"Low Laplacian sharpness variance (57) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/35-french-riviera/img-03.webp",2000x1500,1400px,1.43,114,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/35-french-riviera/img-04.webp",2000x1331,1400px,1.43,942,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/35-french-riviera/img-05.webp",2000x1182,1400px,1.43,448,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/36-lake-como/img-02.webp",2000x1418,1400px,1.43,37,"Low Laplacian sharpness variance (37) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/36-lake-como/img-03.webp",1024x769,1400px,0.73,942,"Resolution deficit: ratio 0.73 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/36-lake-como/img-04.webp",1024x760,1400px,0.73,642,"Resolution deficit: ratio 0.73 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/36-lake-como/img-05.webp",2000x1270,1400px,1.43,776,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/36-lake-como/img-06.webp",2000x668,1400px,1.43,163,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/36-lake-como/img-07.webp",2000x810,1400px,1.43,107,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/36-lake-como/img-08.webp",2000x1333,1400px,1.43,76,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/37-tuscany/img-02.webp",1280x960,1400px,0.91,386,"Resolution deficit: ratio 0.91 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/37-tuscany/img-03.webp",1280x960,1400px,0.91,347,"Resolution deficit: ratio 0.91 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/37-tuscany/img-04.webp",2000x1043,1400px,1.43,313,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/37-tuscany/img-05.webp",2000x2000,1400px,1.43,223,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/37-tuscany/img-06.webp",2000x2996,1400px,1.43,238,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/38-amalfi-coast/img-02.webp",2000x683,1400px,1.43,442,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/38-amalfi-coast/img-03.webp",2000x1333,1400px,1.43,444,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/38-amalfi-coast/img-04.webp",2000x1334,1400px,1.43,461,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/38-amalfi-coast/img-05.webp",2000x1333,1400px,1.43,143,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/38-amalfi-coast/img-06.webp",2000x1331,1400px,1.43,349,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/38-amalfi-coast/img-07.webp",2000x1268,1400px,1.43,1119,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/38-amalfi-coast/img-08.webp",2000x3000,1400px,1.43,457,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/38-amalfi-coast/img-09.webp",2000x963,1400px,1.43,196,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/39-interlaken/img-02.webp",2000x1333,1400px,1.43,353,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/39-interlaken/img-03.webp",2000x1333,1400px,1.43,320,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/39-interlaken/img-04.webp",2000x1333,1400px,1.43,205,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/39-interlaken/img-05.webp",2000x1333,1400px,1.43,378,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/40-lucerne/img-02.webp",2000x1358,1400px,1.43,196,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/40-lucerne/img-03.webp",2000x428,1400px,1.43,256,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/40-lucerne/img-04.webp",2000x1335,1400px,1.43,417,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/41-istanbul/img-02.webp",2000x2000,1400px,1.43,275,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/41-istanbul/img-03.webp",2000x1500,1400px,1.43,1006,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/41-istanbul/img-04.webp",2000x1515,1400px,1.43,1332,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/41-istanbul/img-05.webp",2000x1163,1400px,1.43,832,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/41-istanbul/img-06.webp",2000x2837,1400px,1.43,172,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/41-istanbul/img-07.webp",2000x1335,1400px,1.43,1243,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/41-istanbul/img-08.webp",2000x1500,1400px,1.43,808,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/41-istanbul/img-09.webp",2000x1329,1400px,1.43,185,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/41-istanbul/img-10.webp",2000x1334,1400px,1.43,291,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/41-istanbul/img-11.webp",2000x2703,1400px,1.43,50,"Low Laplacian sharpness variance (50) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/41-istanbul/img-12.webp",2000x1359,1400px,1.43,148,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/41-istanbul/img-13.webp",2000x1409,1400px,1.43,116,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/41-istanbul/img-14.webp",2000x3000,1400px,1.43,81,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/42-dubai/img-02.webp",1280x857,1400px,0.91,797,"Resolution deficit: ratio 0.91 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/42-dubai/img-03.webp",1558x1179,1400px,1.11,1607,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/42-dubai/img-04.webp",1280x948,1400px,0.91,481,"Resolution deficit: ratio 0.91 < 1.0 (upscaled on retina)",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/42-dubai/img-05.webp",2000x1333,1400px,1.43,235,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/43-cairo-nile/img-02.webp",2000x1329,1400px,1.43,1150,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/43-cairo-nile/img-03.webp",2000x1330,1400px,1.43,145,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/43-cairo-nile/img-04.webp",640x480,1400px,0.46,473,"Resolution deficit: ratio 0.46 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/44-muscat/img-02.webp",2000x2000,1400px,1.43,135,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/44-muscat/img-03.webp",2000x754,1400px,1.43,640,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/44-muscat/img-04.webp",2000x1333,1400px,1.43,162,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/45-marrakech/img-02.webp",1996x2620,1400px,1.43,245,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/45-marrakech/img-03.webp",2000x1339,1400px,1.43,140,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/45-marrakech/img-04.webp",2000x1325,1400px,1.43,522,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/45-marrakech/img-05.webp",2000x1432,1400px,1.43,168,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/46-cape-town/img-02.webp",2000x1662,1400px,1.43,75,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/46-cape-town/img-03.webp",2000x1474,1400px,1.43,754,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/46-cape-town/img-04.webp",2000x1334,1400px,1.43,239,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/46-cape-town/img-05.webp",2000x2667,1400px,1.43,448,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/47-sydney/img-02.webp",2000x1105,1400px,1.43,399,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/47-sydney/img-03.webp",2000x1150,1400px,1.43,509,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/47-sydney/img-04.webp",2000x911,1400px,1.43,346,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/47-sydney/img-05.webp",2000x1333,1400px,1.43,971,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/47-sydney/img-06.webp",2000x1333,1400px,1.43,691,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/47-sydney/img-07.webp",2000x1339,1400px,1.43,6,"Low Laplacian sharpness variance (6) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/47-sydney/img-08.webp",2000x1266,1400px,1.43,382,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/47-sydney/img-09.webp",2000x1000,1400px,1.43,319,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/47-sydney/img-10.webp",2000x1333,1400px,1.43,415,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/47-sydney/img-11.webp",2000x1333,1400px,1.43,70,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/48-queenstown/img-02.webp",2000x2918,1400px,1.43,95,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/48-queenstown/img-03.webp",2000x3000,1400px,1.43,584,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/48-queenstown/img-04.webp",2000x1333,1400px,1.43,833,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/48-queenstown/img-05.webp",2000x1333,1400px,1.43,775,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/49-banff-rockies/img-02.webp",2000x740,1400px,1.43,795,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/49-banff-rockies/img-03.webp",2000x1335,1400px,1.43,327,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/49-banff-rockies/img-04.webp",2000x1122,1400px,1.43,416,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/49-banff-rockies/img-05.webp",2000x1125,1400px,1.43,504,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/50-mexico-city/img-02.webp",346x190,1400px,0.25,460,"Resolution deficit: ratio 0.25 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/50-mexico-city/img-03.webp",2000x1437,1400px,1.43,250,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/50-mexico-city/img-04.webp",2000x1303,1400px,1.43,472,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/51-luxury-hotel-marketing-india/img-01.webp",1920x1080,1400px,1.37,61,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/51-luxury-hotel-marketing-india/img-02.webp",2400x1522,1400px,1.71,239,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/51-luxury-hotel-marketing-india/img-03.webp",2000x1500,1400px,1.43,263,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/51-luxury-hotel-marketing-india/img-04.webp",2000x1542,1400px,1.43,113,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/51-luxury-hotel-marketing-india/img-05.webp",712x590,1400px,0.51,309,"Resolution deficit: ratio 0.51 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/society/shivanjali-kumari-dungarpur/01-hero.webp",1024x681,1400px,0.73,772,"Resolution deficit: ratio 0.73 < 1.0 (upscaled on retina)",KEPT-EDITORIAL,true
+"public-directory",unreferenced-or-static,"/images/society/shivanjali-kumari-dungarpur/02-portrait-colour.webp",682x1024,1400px,0.49,89,"Resolution deficit: ratio 0.49 < 1.0 (upscaled on retina)",KEPT-EDITORIAL,true
+"public-directory",unreferenced-or-static,"/images/society/shivanjali-kumari-dungarpur/03-plate-vigil.webp",1024x682,1400px,0.73,995,"Resolution deficit: ratio 0.73 < 1.0 (upscaled on retina)",KEPT-EDITORIAL,true
+"public-directory",unreferenced-or-static,"/images/society/shivanjali-kumari-dungarpur/04-plate-arrival.jpg",1024x682,1400px,0.73,764,"Resolution deficit: ratio 0.73 < 1.0 (upscaled on retina)",KEPT-EDITORIAL,true
+"public-directory",unreferenced-or-static,"/images/society/shivanjali-kumari-dungarpur/04-plate-arrival.webp",1024x682,1400px,0.73,754,"Resolution deficit: ratio 0.73 < 1.0 (upscaled on retina)",KEPT-EDITORIAL,true
+"public-directory",unreferenced-or-static,"/images/society/shivanjali-kumari-dungarpur/06-plate-last-light.jpg",1024x682,1400px,0.73,780,"Resolution deficit: ratio 0.73 < 1.0 (upscaled on retina)",KEPT-EDITORIAL,true
+"public-directory",unreferenced-or-static,"/images/society/shivanjali-kumari-dungarpur/06-plate-last-light.webp",1024x682,1400px,0.73,775,"Resolution deficit: ratio 0.73 < 1.0 (upscaled on retina)",KEPT-EDITORIAL,true
+"public-directory",unreferenced-or-static,"/images/society/shivanjali-kumari-dungarpur/og-shivanjali-kumari-dungarpur.jpg",1200x630,1400px,0.86,444,"Resolution deficit: ratio 0.86 < 1.0 (upscaled on retina)",KEPT-EDITORIAL,true
+"public-directory",unreferenced-or-static,"/images/style/article-04/fashion-trends-runway-2026.jpg",2000x1333,1400px,1.43,256,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/style/article-04/luxury-fashion-trends-editorial.jpg",2000x3000,1400px,1.43,21,"Low Laplacian sharpness variance (21) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/style/hero/style-hero-couture-runway.jpg",2000x3000,1400px,1.43,21,"Low Laplacian sharpness variance (21) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/01-umaid-bhawan-palace-jodhpur/originals/01-hero.jpg",6000x4000,1400px,4.29,190,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/01-umaid-bhawan-palace-jodhpur/originals/02-dome.jpg",3816x5375,1400px,2.73,93,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/04-city-palace-udaipur/originals/01-hero.jpg",1943x1410,1400px,1.39,294,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/04-city-palace-udaipur/originals/04-mor-chowk.jpg",3072x2304,1400px,2.19,173,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/03-taj-lake-palace-udaipur/originals/01-hero.jpg",4914x3117,1400px,3.51,64,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/05-shiv-niwas-palace-udaipur/originals/04-mor-chowk.jpg",3072x2304,1400px,2.19,173,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/07-samode-palace-jaipur/originals/01-hero.jpg",800x393,1400px,0.57,1308,"Resolution deficit: ratio 0.57 < 1.0 (upscaled on retina)",REPLACE,false
+"public-directory",unreferenced-or-static,"/images/experiences/06-fateh-prakash-palace-udaipur/originals/01-durbar-hall.jpg",4272x2848,1400px,3.05,15,"Low Laplacian sharpness variance (15) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/08-samode-haveli-jaipur/originals/01-courtyard.jpg",5616x3744,1400px,4.01,96,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/images/experiences/09-raas-jodhpur/originals/01-mehrangarh-fort.jpg",5400x3600,1400px,3.86,20,"Low Laplacian sharpness variance (20) - potential blur",FIX-RENDER,false
+"public-directory",unreferenced-or-static,"/images/experiences/09-raas-jodhpur/originals/07-blue-city.jpg",3072x2048,1400px,2.19,137,"None",KEEP,false
+"public-directory",unreferenced-or-static,"/assets/images/balmoral/balmoral-doorman-tartan.jpg",1500x1125,1400px,1.07,177,"None",KEPT-EDITORIAL,true
+"public-directory",unreferenced-or-static,"/assets/images/balmoral/balmoral-irene-forte-spa.jpg",2000x1333,1400px,1.43,218,"None",KEPT-EDITORIAL,true
+"public-directory",unreferenced-or-static,"/assets/images/balmoral/balmoral-jk-rowling-suite.jpg",2000x1333,1400px,1.43,189,"None",KEPT-EDITORIAL,true
+"public-directory",unreferenced-or-static,"/assets/images/balmoral/balmoral-palm-court-tea.jpg",1750x1167,1400px,1.25,247,"None",KEPT-EDITORIAL,true
