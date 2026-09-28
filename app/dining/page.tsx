@@ -20,7 +20,7 @@ export default function DiningPage() {
     <div style={{ background: C.ivory }}>
       <section className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center">
         <div className="absolute inset-0">
-          <Image src="/images/colorful-vibrant-indian-landscape.jpg" alt="Dining" fill priority placeholder="blur" blurDataURL={blurDataURL} className="object-cover" />
+          <Image src="/images/dining/rajasthani-royal-thali-banquet.jpg" alt="Traditional Rajasthani Royal Thali and Palace Culinary Heritage" fill priority placeholder="blur" blurDataURL={blurDataURL} className="object-cover" />
           <div className="absolute inset-0 bg-black/55" />
         </div>
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pt-32 sm:pt-40 pb-16 sm:pb-24">

@@ -16,18 +16,18 @@ const C = {
 };
 
 const galleryImages = [
-  { src: "/images/heritage-photography.jpg", alt: "Heritage photography", span: "col-span-2 row-span-2", height: "h-full" },
-  { src: "/images/ancient-architecture-background.jpg", alt: "Ancient architecture", span: "", height: "aspect-[3/4]" },
-  { src: "/images/indian-flag-monument.jpg", alt: "Indian flag monument", span: "col-span-2", height: "aspect-[16/8]" },
-  { src: "/images/golden-temple.jpg", alt: "Golden temple", span: "", height: "aspect-[3/4]" },
-  { src: "/images/beautiful-night-view-taj-hotel.jpg", alt: "Taj Hotel at night", span: "row-span-2", height: "h-full" },
+  { src: "/images/hero/jaipur-city-palace-grand-facade.jpg", alt: "Jaipur City Palace facade", span: "col-span-2 row-span-2", height: "h-full" },
+  { src: "/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg", alt: "Badi Mahal Udaipur", span: "", height: "aspect-[3/4]" },
+  { src: "/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg", alt: "Udaipur Lake & City View", span: "col-span-2", height: "aspect-[16/8]" },
+  { src: "/images/mehrangarh-fort.jpg", alt: "Mehrangarh Fort Jodhpur", span: "", height: "aspect-[3/4]" },
+  { src: "/images/experiences/01-umaid-bhawan-palace-jodhpur/01-hero.webp", alt: "Umaid Bhawan Palace Jodhpur", span: "row-span-2", height: "h-full" },
   { src: "/images/hallway-arches-with-dramatic-light-shadows.jpg", alt: "Hallway arches", span: "", height: "aspect-[3/4]" },
-  { src: "/images/ancient-city-landscape.jpg", alt: "Ancient city", span: "", height: "aspect-[3/4]" },
-  { src: "/images/indian-architecture-beautiful-monument.jpg", alt: "Indian monument", span: "col-span-2", height: "aspect-[16/8]" },
-  { src: "/images/beautiful-shot-lodhi-garden-delhi-india-cloudy-sky.jpg", alt: "Lodhi Garden", span: "", height: "aspect-[4/3]" },
-  { src: "/images/colorful-vibrant-indian-landscape.jpg", alt: "Colorful Indian landscape", span: "", height: "aspect-[4/3]" },
-  { src: "/images/indian-city-buildings-scene.jpg", alt: "Indian city buildings", span: "", height: "aspect-[3/4]" },
-  { src: "/images/indian-city-buildings-scene(1).jpg", alt: "City buildings", span: "", height: "aspect-[3/4]" },
+  { src: "/images/hawa-mahal-palace-jaipur-india.jpg", alt: "Hawa Mahal Jaipur", span: "", height: "aspect-[3/4]" },
+  { src: "/images/architectural-marvel-with-ornate-columns-arches.jpg", alt: "Ornate Columns and Arches", span: "col-span-2", height: "aspect-[16/8]" },
+  { src: "/images/experiences/03-taj-lake-palace-udaipur/01-hero.webp", alt: "Taj Lake Palace Udaipur", span: "", height: "aspect-[4/3]" },
+  { src: "/images/design/varanasi-silk-weaving-traditional-loom.jpg", alt: "Varanasi Silk Weaving Handloom", span: "", height: "aspect-[4/3]" },
+  { src: "/images/motoring/maharaja-rolls-royce-vintage-collection.jpg", alt: "Maharaja's Vintage Rolls-Royce", span: "", height: "aspect-[3/4]" },
+  { src: "/images/dining/rajasthani-royal-thali-banquet.jpg", alt: "Rajasthani Royal Banquet", span: "", height: "aspect-[3/4]" },
 ];
 
 const archiveProjects = [
@@ -43,7 +43,7 @@ export default function ArchivePage() {
       {/* Hero */}
       <section className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center">
         <div className="absolute inset-0">
-          <Image src="/images/heritage-photography.jpg" alt="Archive" fill priority placeholder="blur" blurDataURL={blurDataURL} className="object-cover" />
+          <Image src="/images/hero/jaipur-city-palace-grand-facade.jpg" alt="The Royal Gallerys Archive" fill priority placeholder="blur" blurDataURL={blurDataURL} className="object-cover" />
           <div className="absolute inset-0" style={{ background: C.obsidian, opacity: 0.55 }} />
         </div>
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pt-32 sm:pt-40 pb-16 sm:pb-24">

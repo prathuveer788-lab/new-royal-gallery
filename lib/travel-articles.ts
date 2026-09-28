@@ -94,7 +94,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "14 min read",
     publishedDate: "2026-07-15",
-    heroImage: "https://upload.wikimedia.org/wikipedia/commons/9/99/Umaid_Bhawan_Palace%2C_Jodhpur.jpg",
+    heroImage: "/images/experiences/01-umaid-bhawan-palace-jodhpur/01-hero.webp",
     heroCaption: "Umaid Bhawan Palace at golden hour — the 347-room sandstone masterpiece rises from Chittar Hill, one of the world's largest private residences. Photo: Atman06, CC BY-SA 4.0, via Wikimedia Commons",
     quickFacts: [
       { label: "Location", value: "Jodhpur, Rajasthan, India" },
@@ -166,7 +166,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "13 min read",
     publishedDate: "2026-07-20",
-    heroImage: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Lake_Palace%2C_Lake_Pichola%2C_Udaipur.jpg",
+    heroImage: "/images/experiences/03-taj-lake-palace-udaipur/01-hero.webp",
     heroCaption: "Taj Lake Palace at twilight — the white marble edifice seems to float on Lake Pichola's still waters, the Aravalli Hills silhouetted against a rose-gold sky. Photo: Clément Bardot, CC BY-SA 4.0, via Wikimedia Commons",
     quickFacts: [
       { label: "Location", value: "Lake Pichola, Udaipur, Rajasthan" },
@@ -238,7 +238,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "11 min read",
     publishedDate: "2026-07-25",
-    heroImage: "https://upload.wikimedia.org/wikipedia/commons/3/38/Mor_chowk%2C_City_Palace%2C_Udaipur.jpg",
+    heroImage: "/images/experiences/05-shiv-niwas-palace-udaipur/04-mor-chowk.webp",
     heroCaption: "Shiv Niwas Palace — the grand facade with its semi-circular balconies overlooks Lake Pichola, each room a chamber that once hosted the subcontinent's most distinguished guests",
     quickFacts: [
       { label: "Location", value: "City Palace Complex, Udaipur" },
@@ -274,7 +274,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "12 min read",
     publishedDate: "2026-07-28",
-    heroImage: "https://upload.wikimedia.org/wikipedia/commons/4/43/Durbar_Hall%2C_Fateh_Prakash_Palace_Hotel%2C_Udaipur.jpg",
+    heroImage: "/images/experiences/06-fateh-prakash-palace-udaipur/01-durbar-hall.webp",
     heroCaption: "The Durbar Hall at Fateh Prakash Palace — Bohemian crystal chandeliers, gilded mouldings, and floor-to-ceiling arched windows framing panoramic views of Lake Pichola | Photo: Arian Zwegers, CC BY 2.0",
     quickFacts: [
       { label: "Location", value: "City Palace Complex, Udaipur" },
@@ -310,7 +310,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "12 min read",
     publishedDate: "2026-08-01",
-    heroImage: "https://upload.wikimedia.org/wikipedia/commons/5/53/Samode_Palace_Jaipur.jpg",
+    heroImage: "/images/experiences/07-samode-palace-jaipur/01-hero.webp",
     heroCaption: "Samode Palace at golden hour — the honey-coloured facade glowing against the rugged Aravalli Hills, bougainvillea cascading over ancient stone balconies | Photo: Pcrtravel, CC BY-SA 4.0",
     quickFacts: [
       { label: "Location", value: "Samode, 42 km from Jaipur, Rajasthan" },
@@ -346,7 +346,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "10 min read",
     publishedDate: "2026-08-03",
-    heroImage: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Samode_Haveli_Jaipur.jpg",
+    heroImage: "/images/experiences/08-samode-haveli-jaipur/01-courtyard.webp",
     heroCaption: "Samode Haveli, Jaipur — the noble townhouse hidden within the Pink City's ancient walls, its frescoed courtyards and Mughal gardens a tranquil oasis | Photo: Pcrtravel, CC BY-SA 4.0",
     quickFacts: [
       { label: "Location", value: "Old City, Jaipur, Rajasthan" },
@@ -382,7 +382,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "11 min read",
     publishedDate: "2026-08-05",
-    heroImage: "https://upload.wikimedia.org/wikipedia/commons/d/dd/Glorious_Mehrangarh_Fort.jpg",
+    heroImage: "/images/experiences/09-raas-jodhpur/01-mehrangarh-fort.webp",
     heroCaption: "Mehrangarh Fort, Jodhpur — the 560-year-old citadel rising from a 400-foot basalt cliff above RAAS Jodhpur, its golden sandstone ramparts floodlit against the desert sky | Photo: Sharvarism, CC BY-SA 4.0",
     quickFacts: [
       { label: "Location", value: "Old City, Jodhpur, Rajasthan" },
@@ -562,7 +562,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "12 min read",
     publishedDate: "2026-08-18",
-    heroImage: "https://upload.wikimedia.org/wikipedia/commons/6/62/Ahilya_fort_%2C_Maheshwar.jpg",
+    heroImage: "/images/experiences/14-ahilya-fort-maheshwar/01-hero.webp",
     heroCaption: "Ahilya Fort from the Narmada River — the 18th-century ramparts of the warrior queen Ahilyabai Holkar's fortress rise from the water's edge, temple spires silhouetted against the dawn sky | Photo: Squirealll, CC BY-SA 4.0",
     quickFacts: [
       { label: "Location", value: "Maheshwar, Madhya Pradesh, India" },
@@ -598,7 +598,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "15 min read",
     publishedDate: "2026-08-20",
-    heroImage: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Falaknuma_Palace_01.jpg",
+    heroImage: "/images/experiences/15-falaknuma-palace-hyderabad/01-hero.webp",
     heroCaption: "Falaknuma Palace at twilight — the 'Mirror of the Sky' glows rose-gold against the Deccan sky, Hyderabad sprawled 2,000 feet below, the white marble dome and crescent wings silhouetted against gathering dusk | Photo: Bernard Gagnon, CC BY-SA 3.0",
     quickFacts: [
       { label: "Location", value: "Hyderabad, Telangana, India" },
@@ -634,7 +634,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "11 min read",
     publishedDate: "2026-08-22",
-    heroImage: "https://upload.wikimedia.org/wikipedia/commons/1/1e/Lalgarh_palace_in_Bikaner_during_sunset.jpg",
+    heroImage: "/images/experiences/16-lalgarh-palace-bikaner/01-hero.webp",
     heroCaption: "Lalgarh Palace at sunset — the red sandstone facade of Bikaner's greatest palace glowing in the last light, carved jali screens and jharokha balconies silhouetted against a sky of amber and rose | Photo: Mahesh Karnapu, CC BY-SA 4.0",
     quickFacts: [
       { label: "Location", value: "Bikaner, Rajasthan, India" },
@@ -670,7 +670,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "11 min read",
     publishedDate: "2026-08-25",
-    heroImage: "https://upload.wikimedia.org/wikipedia/commons/9/9b/Gajner_Palace_-_panoramio.jpg",
+    heroImage: "/images/experiences/17-gajner-palace-bikaner/01-hero.webp",
     heroCaption: "Gajner Palace at sunset — the red sandstone hunting lodge reflected in the still waters of Gajner Lake, migratory birds wheeling overhead, the silence of the Thar broken only by the call of peacocks | Photo: jokertrekker, CC BY 3.0",
     quickFacts: [
       { label: "Location", value: "Gajner, 32 km from Bikaner, Rajasthan" },
@@ -742,7 +742,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Heritage Correspondent",
     readTime: "12 min read",
     publishedDate: "2026-08-30",
-    heroImage: "https://upload.wikimedia.org/wikipedia/commons/1/17/Neemrana_Fort_Palace.jpg",
+    heroImage: "/images/experiences/19-neemrana-fort-palace/01-hero.webp",
     heroCaption: "Neemrana Fort Palace — the sprawling 15th-century fortress cascading down a hillside in the Aravalli range, the pioneering restoration that launched India's heritage hotel movement | Photo: Dan Lundberg, CC BY-SA 2.0",
     quickFacts: [
       { label: "Location", value: "Neemrana, Alwar, Rajasthan" },
@@ -1903,7 +1903,7 @@ export const allArticles: TravelArticle[] = [
     authorRole: "Luxury Hospitality Correspondent",
     readTime: "26 min read",
     publishedDate: "2026-08-11",
-    heroImage: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Lake_Palace%2C_Lake_Pichola%2C_Udaipur.jpg",
+    heroImage: "/images/experiences/03-taj-lake-palace-udaipur/01-hero.webp",
     heroCaption: "Taj Lake Palace at twilight — four centuries of Mewar royalty, one floating white-marble hotel, and a case study in how cultural heritage becomes pricing power. Palace hotels in Rajasthan command RevPAR premiums of 60 to 120 percent over comparable luxury chain properties. Photo: Clément Bardot, CC BY-SA 4.0, via Wikimedia Commons",
     quickFacts: [
       { label: "Indian Outbound Spend (2024)", value: "Estimated $34 billion, projected $55B by 2034" },

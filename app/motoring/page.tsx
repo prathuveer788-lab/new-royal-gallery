@@ -20,7 +20,7 @@ export default function MotoringPage() {
     <div style={{ background: C.ivory }}>
       <section className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center">
         <div className="absolute inset-0">
-          <Image src="/images/indian-city-buildings-scene(1).jpg" alt="Motoring" fill priority placeholder="blur" blurDataURL={blurDataURL} className="object-cover" />
+          <Image src="/images/motoring/maharaja-rolls-royce-vintage-collection.jpg" alt="The Maharaja's vintage Rolls-Royce collection" fill priority placeholder="blur" blurDataURL={blurDataURL} className="object-cover" />
           <div className="absolute inset-0 bg-black/55" />
         </div>
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pt-32 sm:pt-40 pb-16 sm:pb-24">

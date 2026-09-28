@@ -110,3 +110,162 @@ html {
   background: var(--accent-bronze);
   opacity: 0.5;
 }
+
+/* ═══════════════════════════════════════════════════
+   PORTRAITS OF HERITAGE — FLAGSHIP FEATURE SCOPED STYLES
+   Aaliya Sultana Babi: The Dinosaur Princess of Balasinor
+   ═══════════════════════════════════════════════════ */
+
+.feature--aaliya {
+  --navy: #22344A;       /* title panels, quote band, header strip */
+  --slate: #2F4560;      /* secondary panel */
+  --ember: #D4673A;      /* burnt-orange accent: rules, drop cap, "Giants." accent word */
+  --cream: #F3E7D3;      /* headline text on navy */
+  --sand: #EFE3D2;       /* pull-quote card, footer strip */
+  --paper: #FBF9F5;      /* page background */
+  --ink: #1B1D21;        /* body text */
+  --ink-soft: #6B6F76;   /* captions, meta */
+  --rule: #D9CFC2;       /* subtle dividers */
+
+  background-color: var(--paper);
+  color: var(--ink);
+}
+
+.font-playfair {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.font-eb-garamond {
+  font-family: var(--font-eb-garamond), "EB Garamond", Garamond, serif;
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+}
+
+.font-manrope {
+  font-family: var(--font-manrope), Manrope, sans-serif;
+}
+
+.feature--aaliya .drop-cap::first-letter {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-weight: 700;
+  float: left;
+  font-size: 5.2rem;
+  line-height: 0.8;
+  margin-right: 0.9rem;
+  margin-top: 0.2rem;
+  color: var(--ember);
+}
+
+@keyframes heroSlowScale {
+  0% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hero-scale-motion {
+  animation: heroSlowScale 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .hero-scale-motion {
+    animation: none !important;
+    transform: none !important;
+  }
+  
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   PORTRAITS OF EXCELLENCE — FLAGSHIP FEATURE SCOPED STYLES
+   Princess Shivanjali Kumari Dungarpur: Through the Wild Lens of Royalty
+   ═══════════════════════════════════════════════════ */
+
+.feature--shivanjali {
+  --ink:       #141416;  /* hero, header band, lightbox, footer */
+  --paper:     #F8F7F4;  /* page */
+  --text:      #1C1C1E;
+  --text-soft: #6A6A70;
+  --rose:      #C4687F;  /* dusty rose accent: rubrics, "Wild" accent word, quote bars */
+  --gold-soft: #CDB27A;  /* hero accent word on black only */
+  --mist:      #E3ECEE;  /* At a Glance panel: Pareva-stone blue-grey */
+  --rule:      #D8D6D0;
+
+  background-color: var(--paper);
+  color: var(--text);
+}
+
+.feature--shivanjali .drop-cap::first-letter {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-weight: 700;
+  float: left;
+  font-size: 5rem;
+  line-height: 0.82;
+  margin-right: 0.85rem;
+  margin-top: 0.2rem;
+  color: var(--rose);
+}
+
+/* Hero Corner Brackets */
+.corner-bracket {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+.corner-bracket--tl {
+  top: 28px;
+  left: 28px;
+  border-top: 1.5px solid rgba(205, 178, 122, 0.6);
+  border-left: 1.5px solid rgba(205, 178, 122, 0.6);
+}
+.corner-bracket--tr {
+  top: 28px;
+  right: 28px;
+  border-top: 1.5px solid rgba(205, 178, 122, 0.6);
+  border-right: 1.5px solid rgba(205, 178, 122, 0.6);
+}
+.corner-bracket--bl {
+  bottom: 28px;
+  left: 28px;
+  border-bottom: 1.5px solid rgba(205, 178, 122, 0.6);
+  border-left: 1.5px solid rgba(205, 178, 122, 0.6);
+}
+.corner-bracket--br {
+  bottom: 28px;
+  right: 28px;
+  border-bottom: 1.5px solid rgba(205, 178, 122, 0.6);
+  border-right: 1.5px solid rgba(205, 178, 122, 0.6);
+}
+
+/* Subtle rhythm pulse animation for Two Instruments band */
+@keyframes rhythmPulse {
+  0%, 100% {
+    transform: scaleX(0.92);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 0.85;
+  }
+}
+
+.rhythm-pulse {
+  animation: rhythmPulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rhythm-pulse {
+    animation: none !important;
+    opacity: 0.6 !important;
+  }
+}
+
+

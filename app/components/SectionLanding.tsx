@@ -4,7 +4,19 @@ import { C, blurDataURL } from "@/lib/design-tokens";
 import EditorialFeed from "@/app/components/EditorialFeed";
 import type { EditorialArticle, SectionConfig } from "@/lib/editorial/types";
 
+export interface SectionSpotlight {
+  href: string;
+  tag: string;
+  title: string;
+  dek: string;
+  image: string;
+  readTime: string;
+}
+
 const CROSS_LINKS = [
+  { href: "/society/shivanjali-kumari-dungarpur-wild-lens-of-royalty", label: "Art · Photography", title: "Through the Wild Lens of Royalty", img: "/images/society/shivanjali-kumari-dungarpur/01-hero.jpg" },
+  { href: "/society/aaliya-sultana-babi-dinosaur-princess-balasinor", label: "Society · Profile", title: "The Woman Who Walks With Giants", img: "/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait-1024w.webp" },
+  { href: "/society/portraits-of-heritage", label: "Society · Series Hub", title: "Portraits of Heritage", img: "/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait.webp" },
   { href: "/travel", label: "Travel", title: "Palace Hotels & Heritage Journeys", img: "/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg" },
   { href: "/style", label: "Style", title: "Couture, Jewellery & Luxury Fashion", img: "/images/style/hero/style-hero-luxury-fashion.jpg" },
   { href: "/royalty", label: "Royalty", title: "Palaces, Lineage & Living Heritage", img: "/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg" },
@@ -15,7 +27,15 @@ const CROSS_LINKS = [
   { href: "/watches", label: "Watches", title: "Luxury Horology & Collecting", img: "/images/watches/watch-hero.jpeg" },
 ];
 
-export default function SectionLanding({ section, articles }: { section: SectionConfig; articles: EditorialArticle[] }) {
+export default function SectionLanding({
+  section,
+  articles,
+  spotlight,
+}: {
+  section: SectionConfig;
+  articles: EditorialArticle[];
+  spotlight?: SectionSpotlight;
+}) {
   const featured = articles[0];
   const crossLinks = CROSS_LINKS.filter((l) => l.href !== `/${section.slug}`).slice(0, 4);
 
@@ -134,6 +154,62 @@ export default function SectionLanding({ section, articles }: { section: Section
         </div>
         <EditorialFeed section={section} articles={articles} />
       </div>
+
+      {/* ═══════════════ SPOTLIGHT FEATURE (CROSS-LINK) ═══════════════ */}
+      {spotlight && (
+        <section className="py-16 sm:py-20 px-6 sm:px-8 md:px-12 lg:px-16 border-t border-[rgba(138,115,82,0.25)]" style={{ background: C.cream }}>
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-8" style={{ backgroundColor: "#D4673A" }} />
+              <span className="text-[10px] uppercase tracking-[0.24em] font-sans font-semibold" style={{ color: "#D4673A" }}>
+                Feature Spotlight · {spotlight.tag}
+              </span>
+            </div>
+            <Link
+              href={spotlight.href}
+              className="group block border border-[#D9CFC2] bg-[#FBF9F5] shadow-sm transition-all duration-500 hover:shadow-md hover:border-[#D4673A]"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-12">
+                <div className="lg:col-span-5 relative aspect-[16/10] lg:aspect-auto lg:min-h-[320px] overflow-hidden bg-[#22344A]">
+                  <Image
+                    src={spotlight.image}
+                    alt={spotlight.title}
+                    fill
+                    placeholder="blur"
+                    blurDataURL={blurDataURL}
+                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                    style={{ objectPosition: "50% 25%" }}
+                  />
+                </div>
+                <div className="lg:col-span-7 p-8 sm:p-10 flex flex-col justify-between" style={{ background: "#22344A" }}>
+                  <div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-[10px] uppercase tracking-[0.22em] font-sans font-semibold" style={{ color: "#D4673A" }}>
+                        {spotlight.tag}
+                      </span>
+                      <span className="text-[10px] uppercase tracking-[0.16em] font-sans text-[#B8A47A]">
+                        {spotlight.readTime}
+                      </span>
+                    </div>
+                    <h3 className="text-2xl sm:text-3xl font-serif text-[#F3E7D3] leading-snug mb-3 group-hover:text-[#D4673A] transition-colors" style={{ fontWeight: 400 }}>
+                      {spotlight.title}
+                    </h3>
+                    <p className="text-sm sm:text-base font-sans text-[#EFE3D2]/85 leading-relaxed font-light mb-6">
+                      {spotlight.dek}
+                    </p>
+                  </div>
+                  <div className="pt-4 border-t border-[rgba(243,231,211,0.2)] flex items-center justify-between text-xs font-sans text-[#B8A47A]">
+                    <span>Portraits of Heritage Series · Balasinor</span>
+                    <span className="uppercase tracking-[0.18em] text-[#F3E7D3] group-hover:text-[#D4673A] transition-colors">
+                      Read Flagship Profile →
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* ═══════════════ EDITORIAL STATEMENT ═══════════════ */}
       <section className="py-20 sm:py-28 md:py-36 px-6 sm:px-8 md:px-12 lg:px-16" style={{ background: C.obsidian }}>

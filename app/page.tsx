@@ -95,8 +95,8 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg"
-            alt="Jaipur City Palace"
+            src="/images/hero/jaipur-city-palace-grand-facade.jpg"
+            alt="Jaipur City Palace Chandra Mahal complex"
             fill
             priority
             placeholder="blur"
@@ -196,7 +196,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-14">
             {[
-              { href: "/style", label: "Style", title: "The Indian Fashion Houses Redefining Global Luxury", meta: "Fashion · 8 min read", img: "/images/sama-ali.jpeg" },
+              { href: "/society/aaliya-sultana-babi-dinosaur-princess-balasinor", label: "Society · Profile", title: "The Woman Who Walks With Giants", meta: "Profile · 12 min read", img: "/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait.webp" },
               { href: "/travel", label: "Travel", title: "The World's Most Extraordinary Palace Hotels", meta: "Hotels · 14 min read", img: "/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg" },
               { href: "/culture", label: "Culture", title: "The Golden Thread: Royal Patronage and Artisan Heritage", meta: "Essay · 15 min read", img: "/images/hawa-mahal-palace-jaipur-india.jpg" },
             ].map((item) => (
@@ -305,7 +305,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-24 items-center">
             <div className="relative aspect-[4/5] overflow-hidden order-2 lg:order-1">
               <Image
-                src="/images/colorful-vibrant-indian-landscape(1).jpg" alt="Style & Fashion"
+                src="/images/style/hero/style-hero-luxury-fashion.jpg" alt="Style & Fashion"
                 fill placeholder="blur" blurDataURL={blurDataURL} sizes="(max-width:1024px)100vw,50vw"
                 className="object-cover"
               />
@@ -347,7 +347,7 @@ export default function HomePage() {
             {[
               { title: "The Fort Palaces of Rajasthan", sub: "Architecture", img: "/images/mehrangarh-fort.jpg" },
               { title: "Inside the Homes of Indian Royalty", sub: "Interiors", img: "/images/hallway-arches-with-dramatic-light-shadows.jpg" },
-              { title: "The Craftsmen Keeping Centuries Alive", sub: "Craft", img: "/images/beautiful-shot-lodhi-garden-delhi-india-cloudy-sky.jpg" },
+              { title: "The Craftsmen Keeping Centuries Alive", sub: "Craft", img: "/images/design/varanasi-silk-weaving-traditional-loom.jpg" },
             ].map((item) => (
               <Link key={item.title} href="/design" className="group flex flex-col">
                 <div className="relative aspect-[4/5] overflow-hidden mb-5">
@@ -381,8 +381,8 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
             {[
-              { title: "The Maharaja's Garage", sub: "Classic Cars", desc: "The extraordinary collections of vintage automobiles preserved by India's royal families — Rolls-Royce, Bentley, Daimler and beyond.", img: "/images/indian-city-buildings-scene(1).jpg" },
-              { title: "Defender, G-Wagon & the Modern Safari", sub: "4×4", desc: "How the world's most capable vehicles are redefining luxury adventure travel across India, Africa, and beyond.", img: "/images/indian-city-buildings-scene.jpg" },
+              { title: "The Maharaja's Garage", sub: "Classic Cars", desc: "The extraordinary collections of vintage automobiles preserved by India's royal families — Rolls-Royce, Bentley, Daimler and beyond.", img: "/images/motoring/maharaja-rolls-royce-vintage-collection.jpg" },
+              { title: "Defender, G-Wagon & the Modern Safari", sub: "4×4", desc: "How the world's most capable vehicles are redefining luxury adventure travel across India, Africa, and beyond.", img: "/images/motoring/land-rover-defender-safari-expedition.jpg" },
             ].map((item) => (
               <Link key={item.title} href="/motoring" className="group grid grid-cols-1 sm:grid-cols-5 gap-6 sm:gap-7 items-center transition-colors duration-300 p-5 sm:p-6 -m-5 sm:-m-6" style={{ background: C.ivory }}>
                 <div className="sm:col-span-2 relative aspect-[4/3] overflow-hidden">
@@ -406,7 +406,7 @@ export default function HomePage() {
       {/* ════════════════════════════════════════════════
           08 — SOCIETY
           ════════════════════════════════════════════════ */}
-      <section className="py-24 sm:py-32 md:py-40 px-6 sm:px-8 md:px-12 lg:px-16" style={{ background: C.cream }}>
+      <section id="society" className="py-24 sm:py-32 md:py-40 px-6 sm:px-8 md:px-12 lg:px-16" style={{ background: C.cream }}>
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14 sm:mb-16">
             <SectionNumber n="08 — Society" />
@@ -415,20 +415,149 @@ export default function HomePage() {
               The families, visionaries and institutions shaping heritage and culture — from royal dynasties to the designers and founders redefining luxury for a new generation.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5" style={{ background: "rgba(138,115,82,0.12)" }}>
-            {[
-              { tag: "Royalty", title: "The House of Mewar: A Dynasty in the 21st Century" },
-              { tag: "Profile", title: "Raghavendra Rathore: The Man Who Gave the Bandhgala a Future" },
-              { tag: "Polo", title: "The Sport of Kings Returns to Jodhpur" },
-              { tag: "Interview", title: "The Collector: Inside Five Generations of Indian Art" },
-              { tag: "Philanthropy", title: "How India's Royal Women Are Leading Social Change" },
-              { tag: "Visionary", title: "The Hotelier Restoring Rajasthan's Forgotten Fortresses" },
-            ].map((s) => (
-              <Link key={s.title} href="/society" className="group flex items-start gap-5 py-5 px-5 transition-colors duration-300" style={{ background: C.ivory }}>
-                <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.2em] font-sans font-medium mt-0.5 whitespace-nowrap" style={{ color: C.bronze }}>{s.tag}</span>
-                <h3 className="text-lg sm:text-xl font-serif leading-tight transition-colors duration-300 group-hover:text-[#8A7352]" style={{ color: C.textDeep, fontWeight: 400 }}>
-                  {s.title}
+          {/* Lead Cards: Two Flagship Profiles Side by Side */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch mb-10">
+            {/* FIRST LARGE LEAD CARD: AALIYA SULTANA BABI */}
+            <Link
+              href="/society/aaliya-sultana-babi-dinosaur-princess-balasinor"
+              className="group flex flex-col justify-between p-8 sm:p-10 border border-[#D9CFC2] transition-all duration-500 hover:shadow-lg hover:border-[#D4673A]"
+              style={{ background: "#22344A" }}
+            >
+              <div>
+                <div className="relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden mb-6 bg-[#1C1B18]">
+                  <Image
+                    src="/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait-1024w.webp"
+                    alt="The Woman Who Walks With Giants"
+                    fill
+                    placeholder="blur"
+                    blurDataURL={blurDataURL}
+                    className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                    style={{ objectPosition: "50% 25%" }}
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 text-[9px] uppercase tracking-[0.24em] font-sans font-semibold bg-[#D4673A] text-[#F3E7D3]">
+                      Profile · Lead Feature
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-[10px] uppercase tracking-[0.24em] font-sans font-semibold" style={{ color: "#D4673A" }}>
+                    Profile
+                  </span>
+                  <span className="text-[10px] uppercase tracking-[0.18em] font-sans" style={{ color: "#B8A47A" }}>
+                    Portraits of Heritage
+                  </span>
+                  <span className="text-[10px] uppercase tracking-[0.18em] font-sans text-[#EFE3D2]/50">·</span>
+                  <span className="text-[10px] uppercase tracking-[0.18em] font-sans" style={{ color: "#B8A47A" }}>
+                    12 min read
+                  </span>
+                </div>
+
+                <h3 className="text-2xl sm:text-3xl font-serif leading-[1.1] mb-2 text-[#F3E7D3] group-hover:text-[#D4673A] transition-colors" style={{ fontWeight: 400 }}>
+                  The Woman Who Walks With Giants
                 </h3>
+
+                <p className="font-playfair italic text-base sm:text-lg text-[#F3E7D3]/85 mb-4">
+                  The Dinosaur Princess of Balasinor
+                </p>
+
+                <p className="text-sm font-sans text-[#EFE3D2]/80 leading-relaxed font-light">
+                  In the mineral-rich hills of Balasinor, time does not flow in a straight line. How Aaliya Sultana Babi turned forgotten garden &ldquo;cannonballs&rdquo; into India&apos;s dinosaur capital at Raiyoli.
+                </p>
+              </div>
+
+              <div className="pt-6 mt-6 border-t border-[rgba(243,231,211,0.2)] flex items-center justify-between">
+                <span className="text-xs uppercase tracking-[0.2em] font-sans text-[#B8A47A]">
+                  Words by Krishanpriya Rajawat
+                </span>
+                <span className="text-xs uppercase tracking-[0.2em] font-sans font-medium text-[#F3E7D3] group-hover:text-[#D4673A] transition-colors">
+                  Read Feature →
+                </span>
+              </div>
+            </Link>
+
+            {/* SECOND LARGE LEAD CARD: SHIVANJALI KUMARI DUNGARPUR */}
+            <Link
+              href="/society/shivanjali-kumari-dungarpur-wild-lens-of-royalty"
+              className="group flex flex-col justify-between p-8 sm:p-10 border border-[#D9CFC2] transition-all duration-500 hover:shadow-lg hover:border-[#C4687F]"
+              style={{ background: "#141416" }}
+            >
+              <div>
+                <div className="relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden mb-6 bg-[#11110F]">
+                  <Image
+                    src="/images/society/shivanjali-kumari-dungarpur/01-hero.jpg"
+                    alt="Through the Wild Lens of Royalty"
+                    fill
+                    placeholder="blur"
+                    blurDataURL={blurDataURL}
+                    className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                    style={{ objectPosition: "45% 35%" }}
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 text-[9px] uppercase tracking-[0.24em] font-sans font-semibold bg-[#C4687F] text-[#F8F7F4]">
+                      Profile · Lead Feature
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-[10px] uppercase tracking-[0.24em] font-sans font-semibold" style={{ color: "#C4687F" }}>
+                    Profile
+                  </span>
+                  <span className="text-[10px] uppercase tracking-[0.18em] font-sans" style={{ color: "#CDB27A" }}>
+                    Portraits of Excellence
+                  </span>
+                  <span className="text-[10px] uppercase tracking-[0.18em] font-sans text-white/50">·</span>
+                  <span className="text-[10px] uppercase tracking-[0.18em] font-sans" style={{ color: "#CDB27A" }}>
+                    8 min read
+                  </span>
+                </div>
+
+                <h3 className="text-2xl sm:text-3xl font-serif leading-[1.1] mb-2 text-[#F8F7F4] group-hover:text-[#C4687F] transition-colors" style={{ fontWeight: 400 }}>
+                  Through the <span className="italic" style={{ color: "#CDB27A" }}>Wild Lens</span> of Royalty
+                </h3>
+
+                <p className="font-playfair italic text-base sm:text-lg text-white/85 mb-4">
+                  Princess, photographer, visionary
+                </p>
+
+                <p className="text-sm font-sans text-white/80 leading-relaxed font-light">
+                  In Dungarpur, where ancient Pareva stone meets the wild Masai Mara. How Princess Shivanjali Kumari Dungarpur reimagines a royal inheritance through patience and the photographer&apos;s lens.
+                </p>
+              </div>
+
+              <div className="pt-6 mt-6 border-t border-white/15 flex items-center justify-between">
+                <span className="text-xs uppercase tracking-[0.2em] font-sans text-[#CDB27A]">
+                  Words by Krishanpriya Rajawat
+                </span>
+                <span className="text-xs uppercase tracking-[0.2em] font-sans font-medium text-[#F8F7F4] group-hover:text-[#C4687F] transition-colors">
+                  Read Feature →
+                </span>
+              </div>
+            </Link>
+          </div>
+
+          {/* SECONDARY CARDS GRID (All link to specific article URLs) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" style={{ background: "transparent" }}>
+            {[
+              { tag: "Royalty", title: "The House of Mewar: A Dynasty in the 21st Century", href: "/royalty/royal-heritage-matters-luxury-brands" },
+              { tag: "Profile", title: "Raghavendra Rathore: The Man Who Gave the Bandhgala a Future", href: "/style/new-indian-couture-heritage-meets-modern-luxury" },
+              { tag: "Polo", title: "The Sport of Kings Returns to Jodhpur", href: "/travel/umaid-bhawan-palace-jodhpur" },
+              { tag: "Interview", title: "The Collector: Inside Five Generations of Indian Art", href: "/culture/indian-royal-art-collections" },
+              { tag: "Philanthropy", title: "How India's Royal Women Are Leading Social Change", href: "/society/portraits-of-heritage" },
+              { tag: "Visionary", title: "The Hotelier Restoring Rajasthan's Forgotten Fortresses", href: "/design/indian-palace-architecture-guide" },
+            ].map((s) => (
+              <Link key={s.title} href={s.href} className="group flex flex-col justify-between py-6 px-6 border border-[#D9CFC2] transition-colors duration-300 hover:border-[#8A7352]" style={{ background: C.ivory }}>
+                <div>
+                  <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.2em] font-sans font-medium mb-2.5 block" style={{ color: C.bronze }}>{s.tag}</span>
+                  <h3 className="text-base sm:text-lg font-serif leading-snug transition-colors duration-300 group-hover:text-[#8A7352]" style={{ color: C.textDeep, fontWeight: 400 }}>
+                    {s.title}
+                  </h3>
+                </div>
+                <span className="text-[10px] uppercase tracking-[0.16em] font-sans text-[#8A7352] mt-4 inline-block group-hover:underline">
+                  Read Story →
+                </span>
               </Link>
             ))}
           </div>
@@ -449,7 +578,7 @@ export default function HomePage() {
             <Link href="/dining" className="group block">
               <div className="relative aspect-[16/10] overflow-hidden mb-6">
                 <Image
-                  src="/images/colorful-vibrant-indian-landscape.jpg" alt="Dining"
+                  src="/images/dining/rajasthani-royal-thali-banquet.jpg" alt="Dining"
                   fill placeholder="blur" blurDataURL={blurDataURL} sizes="(max-width:768px)100vw,50vw"
                   className="object-cover group-hover:scale-[1.03] transition-transform duration-1000 ease-in-out"
                 />
@@ -465,7 +594,7 @@ export default function HomePage() {
             <Link href="/business" className="group block">
               <div className="relative aspect-[16/10] overflow-hidden mb-6">
                 <Image
-                  src="/images/udaipur-city-view-from-hotel-balcony-rajasthan-india(1).jpg" alt="Business"
+                  src="/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg" alt="Business"
                   fill placeholder="blur" blurDataURL={blurDataURL} sizes="(max-width:768px)100vw,50vw"
                   className="object-cover group-hover:scale-[1.03] transition-transform duration-1000 ease-in-out"
                 />

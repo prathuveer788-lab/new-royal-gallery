@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Cormorant_Garamond, Manrope, Playfair_Display, EB_Garamond } from "next/font/google";
 import Navigation from "./components/Navigation";
+import GlobalFooter from "./components/GlobalFooter";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -59,12 +60,28 @@ const manrope = Manrope({
   variable: "--font-manrope",
   weight: ["300", "400", "500", "600"],
 });
-import GlobalFooter from "./components/GlobalFooter";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+});
+
+const ebGaramond = EB_Garamond({
+  subsets: ["latin"],
+  variable: "--font-eb-garamond",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${cormorant.variable} ${manrope.variable} font-sans min-h-screen flex flex-col antialiased`} style={{ background: "#F4F0E7" }}>
+      <body
+        className={`${cormorant.variable} ${manrope.variable} ${playfair.variable} ${ebGaramond.variable} font-sans min-h-screen flex flex-col antialiased`}
+        style={{ background: "#F4F0E7" }}
+      >
         <Navigation />
         <main className="flex-grow">{children}</main>
         <GlobalFooter />

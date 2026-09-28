@@ -30,6 +30,7 @@ const footerSections = [
       { href: "/global-vision", label: "Global Vision" },
       { href: "/impact", label: "Our Impact" },
       { href: "/membership", label: "Membership" },
+      { href: "/image-credits", label: "Image Credits & Licensing" },
     ],
   },
   {
@@ -87,7 +88,11 @@ export default function GlobalFooter() {
         <hr className="editorial-rule mb-8 sm:mb-10 opacity-25" />
 
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-[9px] sm:text-[10px] md:text-[11px] tracking-[0.14em] text-center sm:text-left font-light font-sans" style={{ color: "#9B9589" }}>
-          <p>© 2026 The Royal Gallerys. All rights reserved.</p>
+          <div className="flex items-center gap-3">
+            <p>© 2026 The Royal Gallerys. All rights reserved.</p>
+            <span>·</span>
+            <Link href="/image-credits" className="hover:text-[#F4F0E7] transition-colors underline decoration-[#8A7352]/40 underline-offset-4">Image Credits</Link>
+          </div>
           <p style={{ color: "#8A7352" }}>Preserving Legacy · Amplifying Heritage · Shaping Cultural Memory</p>
         </div>
       </div>

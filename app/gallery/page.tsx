@@ -16,19 +16,18 @@ const C = {
 };
 
 const galleryPhotos = [
-  { src: 'vecteezy_jaipur-city-palace-in-jaipur-city_3153081.jpg', alt: 'Jaipur City Palace' },
+  { src: 'hero/jaipur-city-palace-grand-facade.jpg', alt: 'Jaipur City Palace Chandra Mahal Facade' },
   { src: 'mehrangarh-fort.jpg', alt: 'Mehrangarh Fort Jodhpur' },
   { src: 'hawa-mahal-palace-jaipur-india.jpg', alt: 'Hawa Mahal Jaipur' },
   { src: 'badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg', alt: 'Badi Mahal Udaipur' },
-  { src: 'udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg', alt: 'Udaipur City View' },
-  { src: 'udaipur-city-view-from-hotel-balcony-rajasthan-india(1).jpg', alt: 'Udaipur Lake View' },
+  { src: 'udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg', alt: 'Udaipur City and Lake Pichola' },
   { src: 'architectural-marvel-with-ornate-columns-arches.jpg', alt: 'Ornate Columns and Arches' },
   { src: 'hallway-arches-with-dramatic-light-shadows.jpg', alt: 'Heritage Arches' },
-  { src: 'beautiful-shot-lodhi-garden-delhi-india-cloudy-sky.jpg', alt: 'Lodhi Garden Delhi' },
-  { src: 'colorful-vibrant-indian-landscape.jpg', alt: 'Vibrant Indian Landscape' },
-  { src: 'colorful-vibrant-indian-landscape(1).jpg', alt: 'Colorful Indian Culture' },
-  { src: 'indian-city-buildings-scene.jpg', alt: 'Indian City Architecture' },
-  { src: 'indian-city-buildings-scene(1).jpg', alt: 'Indian Heritage Buildings' },
+  { src: 'experiences/01-umaid-bhawan-palace-jodhpur/01-hero.webp', alt: 'Umaid Bhawan Palace Jodhpur' },
+  { src: 'experiences/03-taj-lake-palace-udaipur/01-hero.webp', alt: 'Taj Lake Palace Udaipur' },
+  { src: 'design/varanasi-silk-weaving-traditional-loom.jpg', alt: 'Varanasi Master Silk Weaver' },
+  { src: 'motoring/maharaja-rolls-royce-vintage-collection.jpg', alt: "Maharaja's Vintage Rolls-Royce" },
+  { src: 'dining/rajasthani-royal-thali-banquet.jpg', alt: 'Traditional Rajasthani Royal Thali' },
 ];
 
 const archiveFeatures = [
