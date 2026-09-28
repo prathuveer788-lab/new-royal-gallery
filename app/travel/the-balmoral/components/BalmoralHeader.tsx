@@ -93,7 +93,7 @@ export default function BalmoralHeader() {
             <div className="flex items-center space-x-3 sm:space-x-4">
               <Link
                 href="#newsletter"
-                className="text-[11px] sm:text-[12px] uppercase tracking-[0.18em] font-medium text-[#1A1A1A] hover:text-[#24424F] transition-colors border-b border-[#24424F]/30 hover:border-[#24424F] pb-0.5"
+                className="hidden sm:inline-block text-[11px] sm:text-[12px] uppercase tracking-[0.18em] font-medium text-[#1A1A1A] hover:text-[#24424F] transition-colors border-b border-[#24424F]/30 hover:border-[#24424F] pb-0.5"
                 style={{ fontFamily: "var(--font-manrope), sans-serif" }}
               >
                 Subscribe

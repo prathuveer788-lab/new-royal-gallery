@@ -134,14 +134,15 @@ export default function BalmoralArticlePage() {
 
           {/* Headline */}
           <h1
-            className="text-[38px] sm:text-[54px] md:text-[68px] lg:text-[80px] font-serif font-normal leading-[1.04] tracking-[-0.01em] text-[#1A1A1A] max-w-[860px] mx-auto"
+            className="text-[29px] sm:text-[46px] md:text-[64px] lg:text-[78px] font-serif font-normal leading-[1.1] sm:leading-[1.05] tracking-[-0.01em] text-[#1A1A1A] max-w-[860px] mx-auto"
           >
-            The Balmoral: Three Minutes Ahead of Edinburgh
+            <span className="block sm:inline">The Balmoral:</span>{" "}
+            <span className="block sm:inline">Three Minutes Ahead of Edinburgh</span>
           </h1>
 
           {/* Standfirst */}
           <p
-            className="mt-5 sm:mt-7 text-[19px] sm:text-[23px] md:text-[26px] font-serif italic text-[#5B5B5B] leading-[1.38] max-w-[760px] mx-auto font-light"
+            className="mt-5 sm:mt-7 text-[18px] sm:text-[22px] md:text-[25px] font-serif italic text-[#5B5B5B] leading-[1.38] max-w-[760px] mx-auto font-light text-balance"
           >
             For more than a century the clock above Waverley has run fast on purpose. Inside Edinburgh’s great railway hotel, a house fluent in both Old Town and New.
           </p>
@@ -175,7 +176,7 @@ export default function BalmoralArticlePage() {
                 fill
                 priority
                 sizes="100vw"
-                className="object-cover object-[center_35%]"
+                className="object-cover object-[80%_25%] sm:object-[center_35%]"
               />
             </picture>
           </div>
