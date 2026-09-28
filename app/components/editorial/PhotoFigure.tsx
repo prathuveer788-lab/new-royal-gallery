@@ -46,7 +46,13 @@ export default function PhotoFigure({
   const mountedRef = useRef(true);
 
   useEffect(() => { mountedRef.current = true; return () => { mountedRef.current = false; }; }, []);
-  useEffect(() => { setHasError(false); setImageLoaded(false); setNaturalAspect(undefined); }, [src]);
+  const [prevSrc, setPrevSrc] = useState(src);
+  if (prevSrc !== src) {
+    setPrevSrc(src);
+    setHasError(false);
+    setImageLoaded(false);
+    setNaturalAspect(undefined);
+  }
 
   const effectiveSrc = (() => {
     if (!src) return undefined;

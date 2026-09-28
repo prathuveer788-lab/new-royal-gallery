@@ -1,0 +1,30 @@
+# Photography Credits — The Balmoral, Edinburgh
+**Publisher:** The Royal Gallerys — The International Magazine of Heritage & Luxury  
+**Subject:** The Balmoral, a Rocco Forte Hotel (1 Princes Street, Edinburgh EH2 2EQ, Scotland)  
+**Standard Credit:** *Photograph courtesy of The Balmoral, a Rocco Forte Hotel*
+
+All images are officially sourced from Rocco Forte Hotels and published under editorial permission courtesy of The Balmoral.
+
+---
+
+| Filename | Description | Source URL | Source Page |
+|---|---|---|---|
+| `balmoral-exterior-hero.jpg` | The Balmoral exterior with 58-metre sandstone clock tower rising over Princes Street and North Bridge, Edinburgh | [Direct Image](https://www.roccofortehotels.com/media/5jwb3riu/20-rfh-the-balmoral-exterior-8405790-ah-jul-14.jpg) | [Hotel Source](https://www.roccofortehotels.com/hotels-and-resorts/the-balmoral-hotel/) |
+| `balmoral-facade-wide.jpg` | Sandstone façade detail of The Balmoral showing Victorian Scottish Baronial dormers, turrets, and canted bays | [Direct Image](https://www.roccofortehotels.com/media/d54dutp2/2-rfh-the-balmoral-facade-0474-jg-sep-18.jpg) | [Hotel Source](https://www.roccofortehotels.com/hotels-and-resorts/the-balmoral-hotel/) |
+| `balmoral-clock-tower.jpg` | The Balmoral clock tower dials crafted by Hamilton & Inches, running three minutes fast since 1902 | [Direct Image](https://www.roccofortehotels.com/media/g5pdcd51/rfh-the-balmoral-edinburgh-clocktower-shutterstock-by-egor-baliasov.jpg) | [Hotel Source](https://www.roccofortehotels.com/hotels-and-resorts/the-balmoral-hotel/) |
+| `balmoral-palm-court.jpg` | Palm Court beneath the glass dome with Venetian chandelier, fluted columns, palms and hand-painted de Gournay wallpaper | [Direct Image](https://www.roccofortehotels.com/media/0flpqzmp/rfh-the-balmoral-palm-court-317-pg-jun-23-small-1900x1267.jpg) | [Hotel Source](https://www.roccofortehotels.com/hotels-and-resorts/the-balmoral-hotel/dining/palm-court/) |
+| `balmoral-palm-court-tea.jpg` | Afternoon tea service in Palm Court with harpist setting and eighty-eight loose leaves | [Direct Image](https://www.roccofortehotels.com/media/vqqfq5eo/rfh-the-balmoral-palm-court-339-pg-jun-23-small-1750x1167.jpg) | [Hotel Source](https://www.roccofortehotels.com/hotels-and-resorts/the-balmoral-hotel/dining/palm-court/) |
+| `balmoral-scone-crombie.jpg` | The 120-sqm Scone & Crombie Suite with powder-blue overmantel, carved garlands, and views over Edinburgh Old Town | [Direct Image](https://www.roccofortehotels.com/media/uo5bdbx1/rfh-the-balmoral-scone-_-crombie-suite-2583-jg-feb-18.jpg) | [Hotel Source](https://www.roccofortehotels.com/hotels-and-resorts/the-balmoral-hotel/gallery/) |
+| `balmoral-scone-crombie-bedroom.jpg` | Master bedroom of the Scone & Crombie Suite designed by Olga Polizzi | [Direct Image](https://www.roccofortehotels.com/media/fr5jl2rw/rfh-the-balmoral-scone-_-crombie-suite-2874-jg-mar-19.jpg) | [Hotel Source](https://www.roccofortehotels.com/hotels-and-resorts/the-balmoral-hotel/gallery/) |
+| `balmoral-castle-view-suite.jpg` | Castle View Suite framing Edinburgh Castle atop its volcanic crag across the Princes Street Gardens | [Direct Image](https://www.roccofortehotels.com/media/drohajii/rfh-the-balmoral-junior-suite-with-castle-view-420-5606-jg-apr-19.jpg) | [Hotel Source](https://www.roccofortehotels.com/hotels-and-resorts/the-balmoral-hotel/gallery/) |
+| `balmoral-brasserie-prince.jpg` | Brasserie Prince, designed by Martin Brudnizki with Olga Polizzi, with its own entrance onto Princes Street | [Direct Image](https://www.roccofortehotels.com/media/lgejdhjv/rfh-the-balmoral-brasserie-prince-9905-jg-jun-18.jpg) | [Hotel Source](https://www.roccofortehotels.com/hotels-and-resorts/the-balmoral-hotel/gallery/) |
+| `balmoral-number-one.jpg` | Number One fine dining restaurant at The Balmoral with rich lacquer walls and Scottish culinary excellence | [Direct Image](https://www.roccofortehotels.com/media/4pmiu0ul/the-balmoral-number-one-2-min.jpg) | [Hotel Source](https://www.roccofortehotels.com/hotels-and-resorts/the-balmoral-hotel/gallery/) |
+| `balmoral-irene-forte-spa.jpg` | Irene Forte Spa at The Balmoral featuring lemon-tree frescoes, cork flooring, and bespoke wellness treatments | [Direct Image](https://www.roccofortehotels.com/media/sytonf4w/irene-forte-spa-at-the-balmoral.jpg) | [Hotel Source](https://www.roccofortehotels.com/hotels-and-resorts/the-balmoral-hotel/) |
+| `balmoral-spa-pool.jpg` | The 15-metre heated subterranean lap pool at The Balmoral Spa | [Direct Image](https://www.roccofortehotels.com/media/1rwap3ho/irene-forte-spa-pool-preview-size.jpg) | [Hotel Source](https://www.roccofortehotels.com/hotels-and-resorts/the-balmoral-hotel/) |
+| `balmoral-scotch-bar.jpg` | SCOTCH whisky bar showcasing an amber collection of over 500 whiskies curated by Whisky Ambassadors | [Direct Image](https://www.roccofortehotels.com/media/wgshb1lq/scotch-hero-image-for-web.jpg) | [Hotel Source](https://www.roccofortehotels.com/hotels-and-resorts/the-balmoral-hotel/) |
+| `balmoral-jk-rowling-suite.jpg` | The J.K. Rowling Suite where the author completed the final Harry Potter novel in January 2007 | [Direct Image](https://www.roccofortehotels.com/media/tytltas3/rfh-the-balmoral-jk-rowling-suite-5644_b-jg-oct-17.jpg) | [Hotel Source](https://www.roccofortehotels.com/hotels-and-resorts/the-balmoral-hotel/gallery/) |
+| `balmoral-doorman-tartan.jpg` | The Balmoral doorman at No. 1 Princes Street wearing bespoke house tartan tailored by Kinloch Anderson | [Direct Image](https://www.roccofortehotels.com/media/d1vatzt5/the-balmoral-3276.jpg) | [Hotel Source](https://www.roccofortehotels.com/hotels-and-resorts/the-balmoral-hotel/) |
+| `balmoral-private-dining.jpg` | Private Dining Room at Number One restaurant with curated contemporary art and bespoke tableware | [Direct Image](https://www.roccofortehotels.com/media/j2qh5kjj/number-one-pdr-1-june-2023.jpg) | [Hotel Source](https://www.roccofortehotels.com/hotels-and-resorts/the-balmoral-hotel/) |
+
+---
+*Verified: September 2026*

@@ -170,34 +170,31 @@ export default function StyleEditorialFeed() {
     return counts;
   }, []);
 
-  // Build layout: first article as feature, then alternating patterns
-  const buildLayout = () => {
+  const groups = useMemo(() => {
     if (articles.length === 0) return null;
     const remaining = articles.slice(1);
-    const groups: { type: "two-col" | "three-col"; articles: StyleArticle[] }[] = [];
+    const result: { type: "two-col" | "three-col"; articles: StyleArticle[] }[] = [];
 
     let i = 0;
     while (i < remaining.length) {
       if (i % 5 === 0 || i % 5 === 3) {
         // Two-column
         if (remaining.length - i >= 2) {
-          groups.push({ type: "two-col", articles: [remaining[i], remaining[i + 1]] });
+          result.push({ type: "two-col", articles: [remaining[i], remaining[i + 1]] });
           i += 2;
         } else {
-          groups.push({ type: "two-col", articles: [remaining[i]] });
+          result.push({ type: "two-col", articles: [remaining[i]] });
           i += 1;
         }
       } else {
         // Three-column
         const take = Math.min(3, remaining.length - i);
-        groups.push({ type: "three-col", articles: remaining.slice(i, i + take) });
+        result.push({ type: "three-col", articles: remaining.slice(i, i + take) });
         i += take;
       }
     }
-    return groups;
-  };
-
-  const groups = useMemo(() => buildLayout(), [articles]);
+    return result;
+  }, [articles]);
 
   // Featured article is the first
   const featured = articles[0];

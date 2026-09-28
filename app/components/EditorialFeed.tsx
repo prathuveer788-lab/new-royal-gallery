@@ -144,30 +144,28 @@ export default function EditorialFeed({ section, articles }: { section: SectionC
     }));
   }, [articles]);
 
-  const buildLayout = () => {
+  const groups = useMemo(() => {
     if (filtered.length === 0) return [];
     const remaining = filtered.slice(1);
-    const groups: { type: "two-col" | "three-col"; articles: EditorialArticle[] }[] = [];
+    const result: { type: "two-col" | "three-col"; articles: EditorialArticle[] }[] = [];
     let i = 0;
     while (i < remaining.length) {
       if (i % 5 === 0 || i % 5 === 3) {
         if (remaining.length - i >= 2) {
-          groups.push({ type: "two-col", articles: [remaining[i], remaining[i + 1]] });
+          result.push({ type: "two-col", articles: [remaining[i], remaining[i + 1]] });
           i += 2;
         } else {
-          groups.push({ type: "two-col", articles: [remaining[i]] });
+          result.push({ type: "two-col", articles: [remaining[i]] });
           i += 1;
         }
       } else {
         const take = Math.min(3, remaining.length - i);
-        groups.push({ type: "three-col", articles: remaining.slice(i, i + take) });
+        result.push({ type: "three-col", articles: remaining.slice(i, i + take) });
         i += take;
       }
     }
-    return groups;
-  };
-
-  const groups = useMemo(() => buildLayout(), [filtered]);
+    return result;
+  }, [filtered]);
   const featured = filtered[0];
   const fullWidthArticle = filtered.length > 5 ? filtered[5] : null;
   const quoteArticle = filtered.length > 3 ? filtered[3] : filtered[0];

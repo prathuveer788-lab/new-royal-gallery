@@ -57,17 +57,6 @@ function SectionHeading({ children, light }: { children: React.ReactNode; light?
   );
 }
 
-function EditorialBody({ children, light }: { children: React.ReactNode; light?: boolean }) {
-  return (
-    <p
-      className="text-base sm:text-lg font-sans leading-relaxed max-w-2xl"
-      style={{ color: light ? C.textStone : C.textStone, fontWeight: 400 }}
-    >
-      {children}
-    </p>
-  );
-}
-
 function EditorialBtn({ href, children, dark }: { href: string; children: React.ReactNode; dark?: boolean }) {
   return (
     <Link
