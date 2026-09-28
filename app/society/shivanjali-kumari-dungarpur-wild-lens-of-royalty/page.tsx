@@ -250,28 +250,30 @@ export default function ShivanjaliProfilePage() {
           ════════════════════════════════════════════════ */}
       <header
         aria-label="Profile Hero Banner"
-        className="relative bg-[#141416] text-[#F8F7F4] overflow-hidden"
+        className="relative bg-[#141416] text-[#F8F7F4]"
       >
-        {/* DESKTOP HERO VIEW (md and up): 100vh full-bleed */}
-        <div className="hidden md:flex relative min-h-[92vh] lg:min-h-screen flex-col justify-between p-8 sm:p-12 lg:p-16">
-          {/* Background image: 01-hero.jpg */}
-          <div className="absolute inset-0">
-            <Image
-              src="/images/society/shivanjali-kumari-dungarpur/01-hero.jpg"
-              alt="Princess Shivanjali Kumari Dungarpur seated in a boat on Dungarpur lake with Udai Bilas Palace in background"
-              fill
-              priority
-              quality={90}
-              placeholder="blur"
-              blurDataURL={blurDataURL}
-              sizes="100vw"
-              className="object-cover hero-scale-motion"
-              style={{ objectPosition: "45% 35%" }}
-            />
-            {/* Gradients on LOWER and RIGHT side only; her face on the upper-left/center stays completely clean */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#141416] via-[#141416]/25 to-transparent pointer-events-none" />
-            <div className="absolute inset-0 bg-gradient-to-l from-[#141416]/90 via-[#141416]/40 to-transparent pointer-events-none" />
-          </div>
+        {/* ── DESKTOP HERO (md+) ──────────────────────────────────────
+            Container uses the image's EXACT natural ratio (1024÷681 ≈ 3:2).
+            object-cover fills with ~1.4× zoom (minimum possible)
+            instead of forcing 100vh which caused heavy upscaling + pixelation.
+        ─────────────────────────────────────────────────────────────── */}
+        <div className="hidden md:block relative w-full" style={{ aspectRatio: '1024 / 681' }}>
+          <Image
+            src="/images/society/shivanjali-kumari-dungarpur/01-hero.jpg"
+            alt="Princess Shivanjali Kumari Dungarpur seated in a boat on Dungarpur lake with Udai Bilas Palace in background"
+            fill
+            priority
+            quality={100}
+            placeholder="blur"
+            blurDataURL={blurDataURL}
+            sizes="100vw"
+            className="object-cover"
+            style={{ objectPosition: "45% 30%" }}
+          />
+
+          {/* Gradient: bottom + right only — face stays clean */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#141416]/95 via-[#141416]/20 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-l from-[#141416]/85 via-[#141416]/30 to-transparent pointer-events-none" />
 
           {/* Fine L-shaped Corner Brackets from print */}
           <div className="corner-bracket corner-bracket--tl" aria-hidden="true" />
@@ -280,18 +282,18 @@ export default function ShivanjaliProfilePage() {
           <div className="corner-bracket corner-bracket--br" aria-hidden="true" />
 
           {/* Top Rubric */}
-          <div className="relative z-10 pt-4">
+          <div className="absolute top-8 left-8 lg:left-16 z-10">
             <span
-              className="inline-block text-[10px] sm:text-[11px] uppercase tracking-[0.32em] font-sans font-medium px-3.5 py-1.5 border border-white/20 bg-black/40 backdrop-blur-xs"
+              className="inline-block text-[10px] sm:text-[11px] uppercase tracking-[0.32em] font-sans font-medium px-3.5 py-1.5 border border-white/20 bg-black/40 backdrop-blur-sm"
               style={{ color: "#CDB27A" }}
             >
               FEATURE · WILDLIFE PHOTOGRAPHY · HERITAGE EDITION 2026
             </span>
           </div>
 
-          {/* Bottom Grid: Name block on left, Title on right */}
-          <div className="relative z-10 grid grid-cols-12 gap-8 items-end pb-4 pt-24">
-            {/* Name Block at bottom left */}
+          {/* Bottom text overlay */}
+          <div className="absolute bottom-0 inset-x-0 z-10 px-8 lg:px-16 pb-8 lg:pb-12 grid grid-cols-12 gap-8 items-end">
+            {/* Name block — bottom left */}
             <div className="col-span-5 max-w-sm">
               <span className="text-[10px] uppercase tracking-[0.3em] font-sans font-semibold text-[#C4687F] block mb-2">
                 PORTRAITS OF EXCELLENCE · WILDLIFE &amp; HERITAGE
@@ -304,9 +306,9 @@ export default function ShivanjaliProfilePage() {
               </span>
             </div>
 
-            {/* Headline Block at right */}
+            {/* Headline — bottom right */}
             <div className="col-span-7 text-right">
-              <h1 className="text-5xl sm:text-6xl lg:text-[88px] xl:text-[98px] font-serif leading-[0.94] tracking-tight mb-4 text-[#F8F7F4]">
+              <h1 className="text-5xl sm:text-6xl lg:text-[80px] xl:text-[92px] font-serif leading-[0.94] tracking-tight mb-3 text-[#F8F7F4]">
                 Through the{" "}
                 <span className="italic" style={{ color: "#CDB27A" }}>
                   Wild Lens
@@ -320,45 +322,49 @@ export default function ShivanjaliProfilePage() {
           </div>
         </div>
 
-        {/* MOBILE HERO VIEW (< md): 4:5 image centered on her, text below face */}
-        <div className="block md:hidden pb-10">
-          {/* 4:5 crop centered on her */}
-          <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#141416]">
+        {/* ── MOBILE HERO (< md) ──────────────────────────────────────
+            Natural 3:2 ratio container — image scales DOWN to fit,
+            zero upscaling on any phone (375px wide → 250px tall).
+            Full editorial text block below with dark bg.
+        ─────────────────────────────────────────────────────────────── */}
+        <div className="block md:hidden">
+          {/* Image at natural 3:2 — no upscaling, crisp on all phones */}
+          <div className="relative w-full overflow-hidden bg-[#141416]" style={{ aspectRatio: '1024 / 681' }}>
             <Image
               src="/images/society/shivanjali-kumari-dungarpur/01-hero.jpg"
-              alt="Princess Shivanjali Kumari Dungarpur on Dungarpur lake"
+              alt="Princess Shivanjali Kumari Dungarpur on Dungarpur lake with Udai Bilas Palace behind her"
               fill
               priority
-              quality={90}
+              quality={100}
               placeholder="blur"
               blurDataURL={blurDataURL}
               sizes="100vw"
               className="object-cover"
-              style={{ objectPosition: "45% 25%" }}
+              style={{ objectPosition: "45% 20%" }}
             />
-            {/* Top rubric overlay on image */}
-            <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
+            {/* Top pill label */}
+            <div className="absolute top-3 left-3 z-10">
               <span className="text-[9px] uppercase tracking-[0.26em] font-sans font-medium px-2.5 py-1 bg-black/60 border border-white/20 text-[#CDB27A]">
                 Portraits of Excellence
               </span>
             </div>
-            {/* Soft gradient bottom only */}
-            <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#141416] to-transparent pointer-events-none" />
+            {/* Bottom fade into dark section below */}
+            <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#141416] to-transparent pointer-events-none" />
           </div>
 
-          {/* Text block strictly below the face */}
-          <div className="px-6 pt-6 text-left">
-            <span className="text-[9px] uppercase tracking-[0.28em] font-sans font-semibold text-[#C4687F] block mb-2">
+          {/* Editorial text block — fully below the image, no text on face */}
+          <div className="bg-[#141416] px-6 pt-5 pb-10">
+            <span className="text-[9px] uppercase tracking-[0.28em] font-sans font-semibold text-[#C4687F] block mb-3">
               FEATURE · HERITAGE EDITION 2026
             </span>
-            <h1 className="text-4xl font-serif text-[#F8F7F4] leading-[1.05] tracking-tight mb-3">
+            <h1 className="text-[38px] leading-[1.04] font-serif text-[#F8F7F4] tracking-tight mb-3">
               Through the{" "}
               <span className="italic" style={{ color: "#CDB27A" }}>
                 Wild Lens
               </span>{" "}
               of Royalty
             </h1>
-            <p className="font-serif italic text-lg text-white/85 mb-6">
+            <p className="font-serif italic text-lg text-white/80 mb-6 leading-relaxed">
               Capturing the Untamed Heart of Rajasthan
             </p>
 
@@ -369,7 +375,7 @@ export default function ShivanjaliProfilePage() {
               <h2 className="text-2xl font-serif italic text-[#F8F7F4] leading-snug">
                 Shivanjali Kumari Dungarpur
               </h2>
-              <span className="text-[9px] uppercase tracking-[0.2em] font-sans text-white/60 block mt-1">
+              <span className="text-[9px] uppercase tracking-[0.2em] font-sans text-white/55 block mt-1">
                 WILDLIFE PHOTOGRAPHER · DUNGARPUR, RAJASTHAN
               </span>
             </div>
