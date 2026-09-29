@@ -15,6 +15,21 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
   if (pathname?.startsWith("/travel/the-balmoral")) {
     return null;
   }
@@ -184,88 +199,109 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       <div
-        className="lg:hidden absolute top-full left-0 w-full transition-all duration-500"
+        className="lg:hidden absolute top-full left-0 w-full transition-all duration-300 max-h-[calc(100dvh-70px)] overflow-y-auto overscroll-contain shadow-2xl"
         style={{
           background: "#11110F",
-          borderBottom: "1px solid rgba(138,115,82,0.2)",
+          borderBottom: "1px solid rgba(138,115,82,0.25)",
           opacity: isOpen ? 1 : 0,
           transform: isOpen ? "translateY(0)" : "translateY(-8px)",
           pointerEvents: isOpen ? "auto" : "none",
         }}
       >
-        <div className="flex flex-col items-center py-10 gap-4 text-lg font-sans" style={{ color: "#F4F0E7" }}>
-          {primaryLinks.map((link) => {
-            if (link.label === "Society") {
-              return (
-                <div key={link.href} className="flex flex-col items-center">
-                  <Link
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className="hover:text-[#B8A47A] transition-colors tracking-[0.14em] uppercase text-[15px] font-light"
-                  >
-                    {link.label}
-                  </Link>
-                  <div className="flex flex-col items-center gap-1.5 my-2 py-1.5 px-4 bg-white/5 border border-[rgba(138,115,82,0.2)]">
-                    <Link
-                      href="/society/portraits-of-heritage"
-                      onClick={() => setIsOpen(false)}
-                      className="text-xs uppercase tracking-[0.16em] text-[#D4673A] hover:underline"
-                    >
-                      ★ Portraits of Heritage
-                    </Link>
-                    <Link
-                      href="/society/aaliya-sultana-babi-dinosaur-princess-balasinor"
-                      onClick={() => setIsOpen(false)}
-                      className="text-[11px] font-serif italic text-[#F4F0E7]/80 hover:text-white"
-                    >
-                      The Dinosaur Princess Profile →
-                    </Link>
-                    <Link
-                      href="/society/shivanjali-kumari-dungarpur-wild-lens-of-royalty"
-                      onClick={() => setIsOpen(false)}
-                      className="text-[11px] font-serif italic text-[#C4687F] hover:text-white"
-                    >
-                      ★ Wild Lens of Royalty Profile →
-                    </Link>
-                  </div>
-                </div>
-              );
-            }
+        <div className="px-5 sm:px-8 py-6 flex flex-col gap-5 text-sm font-sans" style={{ color: "#F4F0E7" }}>
+          
+          {/* Editorial Sections Grid */}
+          <div>
+            <div className="text-[10px] uppercase tracking-[0.24em] font-sans font-semibold mb-2.5 px-1 text-[#8A7352]">
+              Sections
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              {primaryLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="px-3 py-2.5 rounded-xs tracking-[0.12em] uppercase text-[12px] font-medium transition-colors border border-white/5 bg-white/[0.02] hover:bg-[#8A7352]/20 hover:text-[#B8A47A] hover:border-[#8A7352]/40"
+                  style={{ color: pathname === link.href ? "#B8A47A" : "#F4F0E7" }}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
 
-            return (
+          {/* Society Special Series Feature Card */}
+          <div className="p-4 bg-white/[0.03] border border-[#8A7352]/30 rounded-xs">
+            <span className="text-[9px] uppercase tracking-[0.24em] font-semibold text-[#D4673A] block mb-1">
+              Curated Series · Society
+            </span>
+            <div className="flex flex-col gap-2 mt-2">
               <Link
-                key={link.href}
-                href={link.href}
+                href="/society/portraits-of-heritage"
                 onClick={() => setIsOpen(false)}
-                className="hover:text-[#B8A47A] transition-colors tracking-[0.14em] uppercase text-[15px] font-light"
+                className="text-[11px] uppercase tracking-[0.16em] text-[#B8A47A] hover:underline"
               >
-                {link.label}
+                ★ Portraits of Heritage
               </Link>
-            );
-          })}
-          <hr className="w-12 my-1" style={{ borderColor: "rgba(138,115,82,0.3)" }} />
-          {utilityLinks.map((link) => (
+              <Link
+                href="/society/shivanjali-kumari-dungarpur-wild-lens-of-royalty"
+                onClick={() => setIsOpen(false)}
+                className="text-[12px] font-serif italic text-white/90 hover:text-[#C4687F]"
+              >
+                Shivanjali Kumari Dungarpur — Wild Lens →
+              </Link>
+              <Link
+                href="/society/aaliya-sultana-babi-dinosaur-princess-balasinor"
+                onClick={() => setIsOpen(false)}
+                className="text-[12px] font-serif italic text-white/80 hover:text-white"
+              >
+                The Dinosaur Princess of Balasinor →
+              </Link>
+            </div>
+          </div>
+
+          {/* Utility & Membership */}
+          <div className="flex flex-col gap-3 pt-2 border-t border-white/10">
+            <div className="flex items-center justify-between text-xs tracking-[0.16em] uppercase text-[#9B9589] px-1">
+              {utilityLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="hover:text-[#B8A47A] transition-colors py-1"
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link
+                href="/about"
+                onClick={() => setIsOpen(false)}
+                className="hover:text-[#B8A47A] transition-colors py-1"
+              >
+                About
+              </Link>
+              <Link
+                href="/contact"
+                onClick={() => setIsOpen(false)}
+                className="hover:text-[#B8A47A] transition-colors py-1"
+              >
+                Contact
+              </Link>
+            </div>
+
             <Link
-              key={link.href}
-              href={link.href}
+              href="/membership"
               onClick={() => setIsOpen(false)}
-              className="text-[14px] uppercase tracking-[0.14em] font-light hover:text-[#B8A47A] transition-colors"
-              style={{ color: "#9B9589" }}
+              className="mt-1 w-full text-center py-3 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 font-sans"
+              style={{
+                color: "#F4F0E7",
+                background: "rgba(138,115,82,0.15)",
+                border: "1px solid rgba(184,164,122,0.6)",
+              }}
             >
-              {link.label}
+              Exclusive Membership
             </Link>
-          ))}
-          <Link
-            href="/membership"
-            onClick={() => setIsOpen(false)}
-            className="mt-2 px-7 py-3 text-sm uppercase tracking-[0.18em] font-medium transition-all duration-300 font-sans"
-            style={{
-              color: "#F4F0E7",
-              border: "1px solid rgba(138,115,82,0.5)",
-            }}
-          >
-            Membership
-          </Link>
+          </div>
         </div>
       </div>
     </nav>

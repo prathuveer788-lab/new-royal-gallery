@@ -732,57 +732,61 @@ export default function ShivanjaliProfilePage() {
               </span>
             </Link>
 
-            {/* Card 2: Raghavendra Rathore (Placeholder clearly marked) */}
-            <div className="border border-[#D8D6D0] bg-[#FBF9F5] p-6 sm:p-7 flex flex-col justify-between opacity-90">
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-[9px] uppercase tracking-[0.22em] font-sans font-semibold text-[#6A6A70]">
-                    Portraits of Excellence
-                  </span>
-                  <span className="text-[8px] uppercase tracking-[0.18em] font-sans px-2 py-0.5 bg-[#E3ECEE] text-[#6A6A70]">
-                    Forthcoming Profile
-                  </span>
-                </div>
-                <h4 className="text-xl font-serif text-[#1C1C1E] leading-snug mb-2">
-                  The Architect of the Modern Jodhpur Cut
-                </h4>
-                <p className="font-serif italic text-sm text-[#6A6A70] mb-3">
-                  Raghavendra Rathore
-                </p>
-                <p className="text-xs font-sans text-[#6A6A70] leading-relaxed">
-                  How royal lineage and disciplined bespoke tailoring created an internationally renowned design vocabulary.
-                </p>
+            {/* Card 2: Raghavendra Rathore (Published) */}
+            <Link
+              href="/people/raghavendra-rathore-the-man-who-gave-the-bandhgala-a-future"
+              className="group border border-[#D8D6D0] bg-[#FBF9F5] p-6 sm:p-7 flex flex-col justify-between hover:border-[#C4687F] transition-all hover:shadow-md"
+            >
+              <div className="relative aspect-[16/10] overflow-hidden mb-4 bg-[#141416]">
+                <Image
+                  src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80"
+                  alt="Raghavendra Rathore"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <span className="text-[10px] uppercase tracking-[0.2em] font-sans text-[#6A6A70]/80 mt-6 block">
-                Heritage Edition 2026 · In Curation
+              <span className="text-[9px] uppercase tracking-[0.22em] font-sans font-semibold text-[#8A7352] block mb-1">
+                Portraits of Excellence · Vol. XIV
               </span>
-            </div>
+              <h4 className="text-xl font-serif text-[#1C1C1E] leading-snug mb-2 group-hover:text-[#C4687F] transition-colors">
+                The Architect of the Modern Jodhpur Cut
+              </h4>
+              <p className="font-serif italic text-sm text-[#6A6A70] mb-3">
+                Raghavendra Rathore
+              </p>
+              <span className="text-[10px] uppercase tracking-[0.18em] font-sans text-[#1C1C1E] group-hover:text-[#C4687F] font-medium transition-colors">
+                Read Profile →
+              </span>
+            </Link>
 
-            {/* Card 3: House of Mewar (Placeholder clearly marked) */}
-            <div className="border border-[#D8D6D0] bg-[#FBF9F5] p-6 sm:p-7 flex flex-col justify-between opacity-90">
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-[9px] uppercase tracking-[0.22em] font-sans font-semibold text-[#6A6A70]">
-                    Portraits of Heritage
-                  </span>
-                  <span className="text-[8px] uppercase tracking-[0.18em] font-sans px-2 py-0.5 bg-[#E3ECEE] text-[#6A6A70]">
-                    Forthcoming Profile
-                  </span>
-                </div>
-                <h4 className="text-xl font-serif text-[#1C1C1E] leading-snug mb-2">
-                  Guardians of the Sun Dynasty
-                </h4>
-                <p className="font-serif italic text-sm text-[#6A6A70] mb-3">
-                  The House of Mewar in the 21st Century
-                </p>
-                <p className="text-xs font-sans text-[#6A6A70] leading-relaxed">
-                  A millennium of continuous cultural leadership, living palace museums and philanthropic trusts.
-                </p>
+            {/* Card 3: House of Mewar (Published) */}
+            <Link
+              href="/society/the-house-of-mewar-a-dynasty-in-the-21st-century"
+              className="group border border-[#D8D6D0] bg-[#FBF9F5] p-6 sm:p-7 flex flex-col justify-between hover:border-[#C4687F] transition-all hover:shadow-md"
+            >
+              <div className="relative aspect-[16/10] overflow-hidden mb-4 bg-[#141416]">
+                <Image
+                  src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80"
+                  alt="House of Mewar"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <span className="text-[10px] uppercase tracking-[0.2em] font-sans text-[#6A6A70]/80 mt-6 block">
-                Heritage Edition 2026 · In Curation
+              <span className="text-[9px] uppercase tracking-[0.22em] font-sans font-semibold text-[#8A7352] block mb-1">
+                Portraits of Heritage · Vol. XV
               </span>
-            </div>
+              <h4 className="text-xl font-serif text-[#1C1C1E] leading-snug mb-2 group-hover:text-[#C4687F] transition-colors">
+                Guardians of the Sun Dynasty
+              </h4>
+              <p className="font-serif italic text-sm text-[#6A6A70] mb-3">
+                The House of Mewar in the 21st Century
+              </p>
+              <span className="text-[10px] uppercase tracking-[0.18em] font-sans text-[#1C1C1E] group-hover:text-[#C4687F] font-medium transition-colors">
+                Read Profile →
+              </span>
+            </Link>
           </div>
         </div>
       </section>

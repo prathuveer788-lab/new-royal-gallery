@@ -197,7 +197,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
             {[
               { href: "/society/aaliya-sultana-babi-dinosaur-princess-balasinor", label: "Society · Profile", title: "The Woman Who Walks With Giants", meta: "Profile · 12 min read", img: "/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait.webp" },
-              { href: "/travel/the-balmoral", label: "Travel · Hotel Feature", title: "The Balmoral: Edinburgh's Grand Old Station Hotel", meta: "Review · 15 min read", img: "/images/experiences/43-edinburgh/img-01.webp" },
+              { href: "/travel/the-balmoral", label: "Travel · Hotel Feature", title: "The Balmoral: Edinburgh's Grand Old Station Hotel", meta: "Review · 15 min read", img: "/assets/images/balmoral/balmoral-exterior-hero.jpg" },
               { href: "/motoring/the-maharajas-garage-royal-vintage-cars", label: "Motoring · Classic Cars", title: "The Maharaja's Garage: India's Hidden Automotive Treasures", meta: "Investigation · 15 min read", img: "/images/motoring/maharaja-rolls-royce-vintage-collection.jpg" },
               { href: "/culture/indian-royal-art-collections", label: "Culture · Art & Lineage", title: "The Golden Thread: Royal Patronage and Artisan Heritage", meta: "Essay · 15 min read", img: "/images/hawa-mahal-palace-jaipur-india.jpg" },
             ].map((item) => (

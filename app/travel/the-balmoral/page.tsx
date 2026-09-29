@@ -165,20 +165,14 @@ export default function BalmoralArticlePage() {
         {/* ── HERO IMAGE ── */}
         <figure className="w-full mb-12 sm:mb-16">
           <div className="w-full relative aspect-[4/5] sm:aspect-[16/9] bg-[#EFE9DF] overflow-hidden">
-            <picture>
-              <source
-                media="(max-width: 640px)"
-                srcSet="/assets/images/balmoral/balmoral-exterior-hero.jpg"
-              />
-              <Image
-                src="/assets/images/balmoral/balmoral-exterior-hero.jpg"
-                alt="The Balmoral clock tower and Victorian Scottish Baronial façade at No. 1 Princes Street, Edinburgh"
-                fill
-                priority
-                sizes="100vw"
-                className="object-cover object-[80%_25%] sm:object-[center_35%]"
-              />
-            </picture>
+            <Image
+              src="/assets/images/balmoral/balmoral-exterior-hero.jpg"
+              alt="The Balmoral clock tower and Victorian Scottish Baronial façade at No. 1 Princes Street, Edinburgh"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-[80%_25%] sm:object-[center_35%]"
+            />
           </div>
           <figcaption className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 mt-3 flex flex-col sm:flex-row sm:items-baseline sm:justify-between text-xs text-[#5B5B5B] gap-1.5 font-sans">
             <span className="text-[13px] text-[#1A1A1A]">
@@ -396,6 +390,39 @@ export default function BalmoralArticlePage() {
               <p>
                 Downstairs, Number One provides the hotel’s formal fine-dining stage, framed by lacquered walls and contemporary art. Across the entrance hall, SCOTCH presents an amber library of more than five hundred single malts, blends, and rare vintages, tended by kilted Whisky Ambassadors who guide guests through Scotland’s distilling regions.
               </p>
+
+              {/* Bar & Dining Photo Feature */}
+              <div className="my-8 grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+                <figure className="flex flex-col">
+                  <div className="relative w-full aspect-[4/3] bg-[#EFE9DF] overflow-hidden border border-[#D9D4CA]">
+                    <Image
+                      src="/assets/images/balmoral/balmoral-scotch-bar.jpg"
+                      alt="SCOTCH whisky bar at The Balmoral with glowing amber shelves of over 500 whiskies"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 340px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <figcaption className="mt-2 text-xs text-[#5B5B5B] font-sans">
+                    <strong className="text-[#1A1A1A]">SCOTCH Whisky Bar.</strong> Over 500 varieties in glowing amber oak cabinets.
+                  </figcaption>
+                </figure>
+
+                <figure className="flex flex-col">
+                  <div className="relative w-full aspect-[4/3] bg-[#EFE9DF] overflow-hidden border border-[#D9D4CA]">
+                    <Image
+                      src="/assets/images/balmoral/balmoral-brasserie-prince.jpg"
+                      alt="Brasserie Prince at The Balmoral designed by Martin Brudnizki"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 340px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <figcaption className="mt-2 text-xs text-[#5B5B5B] font-sans">
+                    <strong className="text-[#1A1A1A]">Brasserie Prince.</strong> Martin Brudnizki design with street entrance.
+                  </figcaption>
+                </figure>
+              </div>
             </section>
 
             {/* Sub-section: The spa */}
@@ -419,6 +446,22 @@ export default function BalmoralArticlePage() {
                 The Balmoral tartan was made for the hotel by the Edinburgh kiltmakers Kinloch Anderson, and is worn in kilt and in trews. In an era when hotel uniforms often lean towards global uniformity, the sight of doormen greeting arrivals at the foot of Princes Street in bespoke kilt and tailored wool asserts an unapologetic sense of place.
               </p>
 
+              {/* Doorman Tartan Photo Feature */}
+              <figure className="my-6 not-prose">
+                <div className="relative w-full aspect-[16/9] sm:aspect-[21/9] bg-[#EFE9DF] overflow-hidden border border-[#D9D4CA]">
+                  <Image
+                    src="/assets/images/balmoral/balmoral-doorman-tartan.jpg"
+                    alt="The Balmoral doorman in bespoke Kinloch Anderson tartan on Princes Street"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 680px"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="mt-2 text-xs text-[#5B5B5B] font-sans">
+                  <strong className="text-[#1A1A1A]">Kinloch Anderson Tartan.</strong> Bespoke kilt and trews tailored for No. 1 Princes Street.
+                </figcaption>
+              </figure>
+
               <p>
                 General Manager Andrew McPherson captures the house ethos: <em className="text-[#1A1A1A]">“…a hotel that has been welcoming the world to Edinburgh for over a century.”</em>
               </p>
@@ -433,6 +476,22 @@ export default function BalmoralArticlePage() {
               <p>
                 Waverley takes its name from Scott’s novels; in 2004 Edinburgh became the first UNESCO City of Literature. The literary lineage of the capital permeates the stones of the hotel. In January 2007, in a room upstairs, J.K. Rowling finished the last of the Harry Potter novels, signing the marble bust in Room 552—now preserved as the J.K. Rowling Suite—before closing a defining chapter in modern English fiction.
               </p>
+
+              {/* J.K. Rowling Suite Photo Feature */}
+              <figure className="my-6 not-prose">
+                <div className="relative w-full aspect-[16/9] sm:aspect-[21/9] bg-[#EFE9DF] overflow-hidden border border-[#D9D4CA]">
+                  <Image
+                    src="/assets/images/balmoral/balmoral-jk-rowling-suite.jpg"
+                    alt="The J.K. Rowling Suite at The Balmoral with signed Hermes marble bust"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 680px"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="mt-2 text-xs text-[#5B5B5B] font-sans">
+                  <strong className="text-[#1A1A1A]">The J.K. Rowling Suite.</strong> Room 552, where the final lines of the series were written.
+                </figcaption>
+              </figure>
             </section>
 
             {/* Pull Quote 2 */}

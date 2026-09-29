@@ -8,9 +8,7 @@ interface Plate {
   label: string;
   caption: string;
   file: string;
-  isMissing?: boolean;
   alt: string;
-  notes?: string;
 }
 
 const PLATES: Plate[] = [
@@ -30,16 +28,7 @@ const PLATES: Plate[] = [
   },
   {
     roman: "III",
-    label: "III · THE FAMILY",
-    caption: "The most personal frame in her portfolio.",
-    file: "/images/society/shivanjali-kumari-dungarpur/05-plate-family.jpg",
-    isMissing: true,
-    alt: "Plate III: Cheetah and cubs on the mound (black and white) — pending archival delivery",
-    notes: "Archival Slot 05-plate-family · Requested from editors",
-  },
-  {
-    roman: "IV",
-    label: "IV · LAST LIGHT",
+    label: "III · LAST LIGHT",
     caption: "“Every hour before sunrise.”",
     file: "/images/society/shivanjali-kumari-dungarpur/06-plate-last-light.jpg",
     alt: "A hyena standing in golden savannah grasses in the Masai Mara",
@@ -69,7 +58,6 @@ export default function PortfolioGallery() {
           prev !== null ? (prev - 1 + PLATES.length) % PLATES.length : null
         );
       } else if (e.key === "Tab") {
-        // Focus trap inside lightbox
         if (!lightboxRef.current) return;
         const focusableElements = lightboxRef.current.querySelectorAll<HTMLElement>(
           'button, [href], [tabindex]:not([tabindex="-1"])'
@@ -94,7 +82,6 @@ export default function PortfolioGallery() {
     if (activeLightboxIndex !== null) {
       window.addEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "hidden";
-      // Auto focus close button
       const closeBtn = lightboxRef.current?.querySelector<HTMLButtonElement>("#lightbox-close-btn");
       closeBtn?.focus();
     } else {
@@ -143,30 +130,30 @@ export default function PortfolioGallery() {
     <section
       id="the-portfolio"
       aria-labelledby="portfolio-heading"
-      className="py-20 sm:py-28 px-6 sm:px-10 lg:px-16 border-t border-b border-[#D8D6D0]"
+      className="py-16 sm:py-24 md:py-28 px-4 sm:px-8 lg:px-16 border-t border-b border-[#D8D6D0]"
       style={{ backgroundColor: "#F8F7F4" }}
     >
       <div className="max-w-7xl mx-auto">
         
         {/* Header Block */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-[#D8D6D0] pb-6 mb-12 sm:mb-16 gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-[#D8D6D0] pb-6 mb-10 sm:mb-16 gap-4">
           <div>
             <span
               className="text-[10px] sm:text-[11px] uppercase tracking-[0.32em] font-sans font-medium block mb-2"
               style={{ color: "#C4687F" }}
             >
-              Exhibition Plates I–IV
+              Exhibition Plates I–III
             </span>
             <h2
               id="portfolio-heading"
-              className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1C1C1E] tracking-tight"
+              className="text-2xl sm:text-4xl md:text-5xl font-serif text-[#1C1C1E] tracking-tight"
               style={{ fontWeight: 400 }}
             >
               The Portfolio · Masai Mara
             </h2>
           </div>
           <div className="text-left sm:text-right">
-            <span className="text-[11px] uppercase tracking-[0.2em] font-sans text-[#6A6A70]">
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] font-sans text-[#6A6A70]">
               Photographs © Shivanjali Kumari Dungarpur
             </span>
           </div>
@@ -174,16 +161,16 @@ export default function PortfolioGallery() {
 
         {/* ── DESKTOP GALLERY WALL (>= 768px) ── */}
         <div className="hidden md:block">
-          {/* Top row: Plate I (7 cols) + Stack of Plate II & III (5 cols) */}
+          {/* Top row: Side-by-side balanced Plates I & II */}
           <div className="grid grid-cols-12 gap-8 lg:gap-12 items-start mb-12">
             
-            {/* Plate I: 7 cols */}
-            <div className="col-span-7 flex flex-col">
+            {/* Plate I: 6 cols */}
+            <div className="col-span-6 flex flex-col">
               <button
                 ref={(el) => { triggerRefs.current[0] = el; }}
                 type="button"
                 onClick={() => setActiveLightboxIndex(0)}
-                className="group block relative w-full aspect-[4/3] bg-white p-4 sm:p-5 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-[#D8D6D0]/70 cursor-zoom-in text-left transition-transform duration-500 hover:-translate-y-1"
+                className="group block relative w-full aspect-[4/3] bg-white p-4 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-[#D8D6D0]/70 cursor-zoom-in text-left transition-transform duration-500 hover:-translate-y-1"
                 aria-label="View Plate I in lightbox: The Vigil"
               >
                 <div className="relative w-full h-full overflow-hidden bg-[#141416]">
@@ -191,7 +178,7 @@ export default function PortfolioGallery() {
                     src={PLATES[0].file}
                     alt={PLATES[0].alt}
                     fill
-                    sizes="(max-width: 1200px) 58vw, 680px"
+                    sizes="(max-width: 1200px) 50vw, 600px"
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                   />
                   <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/60 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 backdrop-blur-xs font-sans">
@@ -200,7 +187,6 @@ export default function PortfolioGallery() {
                 </div>
               </button>
 
-              {/* Gallery wall label */}
               <div className="mt-4 px-2">
                 <span className="text-[10px] uppercase tracking-[0.26em] font-sans font-medium text-[#C4687F] block mb-1">
                   {PLATES[0].label}
@@ -214,91 +200,56 @@ export default function PortfolioGallery() {
               </div>
             </div>
 
-            {/* Stacked Plates II & III: 5 cols */}
-            <div className="col-span-5 flex flex-col gap-10">
-              
-              {/* Plate II */}
-              <div className="flex flex-col">
-                <button
-                  ref={(el) => { triggerRefs.current[1] = el; }}
-                  type="button"
-                  onClick={() => setActiveLightboxIndex(1)}
-                  className="group block relative w-full aspect-[16/10] bg-white p-3.5 sm:p-4 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-[#D8D6D0]/70 cursor-zoom-in text-left transition-transform duration-500 hover:-translate-y-1"
-                  aria-label="View Plate II in lightbox: The Arrival"
-                >
-                  <div className="relative w-full h-full overflow-hidden bg-[#141416]">
-                    <Image
-                      src={PLATES[1].file}
-                      alt={PLATES[1].alt}
-                      fill
-                      sizes="(max-width: 1200px) 42vw, 480px"
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                    />
-                    <div className="absolute top-2.5 right-2.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/60 text-white text-[9px] uppercase tracking-widest px-2 py-0.5 backdrop-blur-xs font-sans">
-                      View Plate ↗
-                    </div>
+            {/* Plate II: 6 cols */}
+            <div className="col-span-6 flex flex-col">
+              <button
+                ref={(el) => { triggerRefs.current[1] = el; }}
+                type="button"
+                onClick={() => setActiveLightboxIndex(1)}
+                className="group block relative w-full aspect-[4/3] bg-white p-4 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-[#D8D6D0]/70 cursor-zoom-in text-left transition-transform duration-500 hover:-translate-y-1"
+                aria-label="View Plate II in lightbox: The Arrival"
+              >
+                <div className="relative w-full h-full overflow-hidden bg-[#141416]">
+                  <Image
+                    src={PLATES[1].file}
+                    alt={PLATES[1].alt}
+                    fill
+                    sizes="(max-width: 1200px) 50vw, 600px"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  />
+                  <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/60 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 backdrop-blur-xs font-sans">
+                    View Plate ↗
                   </div>
-                </button>
-                <div className="mt-3 px-2">
-                  <span className="text-[10px] uppercase tracking-[0.26em] font-sans font-medium text-[#C4687F] block mb-0.5">
-                    {PLATES[1].label}
-                  </span>
-                  <p className="font-serif italic text-sm text-[#1C1C1E] leading-snug">
-                    {PLATES[1].caption}
-                  </p>
                 </div>
-              </div>
+              </button>
 
-              {/* Plate III: Missing, neutral --mist placeholder */}
-              <div className="flex flex-col">
-                <button
-                  ref={(el) => { triggerRefs.current[2] = el; }}
-                  type="button"
-                  onClick={() => setActiveLightboxIndex(2)}
-                  className="group block relative w-full aspect-[16/10] bg-white p-3.5 sm:p-4 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-[#D8D6D0]/70 cursor-zoom-in text-left transition-transform duration-500 hover:-translate-y-1"
-                  aria-label="View Plate III in lightbox: The Family (Slot Placeholder)"
-                >
-                  <div
-                    className="relative w-full h-full flex flex-col items-center justify-center p-6 border border-dashed border-[#6A6A70]/40 transition-colors group-hover:border-[#C4687F]"
-                    style={{ backgroundColor: "#E3ECEE" }}
-                  >
-                    <span className="text-[9px] uppercase tracking-[0.26em] font-sans font-medium text-[#6A6A70] mb-1">
-                      Archival Slot · 05-plate-family
-                    </span>
-                    <span className="font-serif italic text-base text-[#1C1C1E] text-center mb-1">
-                      III · The Family
-                    </span>
-                    <span className="text-[8px] uppercase tracking-widest font-sans text-[#C4687F]">
-                      In Exhibition Curation · Editors to Supply
-                    </span>
-                  </div>
-                </button>
-                <div className="mt-3 px-2">
-                  <span className="text-[10px] uppercase tracking-[0.26em] font-sans font-medium text-[#C4687F] block mb-0.5">
-                    {PLATES[2].label}
-                  </span>
-                  <p className="font-serif italic text-sm text-[#1C1C1E] leading-snug">
-                    {PLATES[2].caption}
-                  </p>
-                </div>
+              <div className="mt-4 px-2">
+                <span className="text-[10px] uppercase tracking-[0.26em] font-sans font-medium text-[#C4687F] block mb-1">
+                  {PLATES[1].label}
+                </span>
+                <p className="font-serif italic text-base text-[#1C1C1E] leading-snug">
+                  {PLATES[1].caption}
+                </p>
+                <p className="text-[10px] uppercase tracking-[0.18em] font-sans text-[#6A6A70] mt-1">
+                  Masai Mara, Kenya · Archival Pigment Print
+                </p>
               </div>
-
             </div>
           </div>
 
-          {/* Bottom row: Plate IV (wide underneath) */}
+          {/* Bottom row: Plate III (wide landscape feature) */}
           <div className="flex flex-col max-w-4xl mx-auto">
             <button
-              ref={(el) => { triggerRefs.current[3] = el; }}
+              ref={(el) => { triggerRefs.current[2] = el; }}
               type="button"
-              onClick={() => setActiveLightboxIndex(3)}
+              onClick={() => setActiveLightboxIndex(2)}
               className="group block relative w-full aspect-[16/9] sm:aspect-[21/9] bg-white p-4 sm:p-5 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-[#D8D6D0]/70 cursor-zoom-in text-left transition-transform duration-500 hover:-translate-y-1"
-              aria-label="View Plate IV in lightbox: Last Light"
+              aria-label="View Plate III in lightbox: Last Light"
             >
               <div className="relative w-full h-full overflow-hidden bg-[#141416]">
                 <Image
-                  src={PLATES[3].file}
-                  alt={PLATES[3].alt}
+                  src={PLATES[2].file}
+                  alt={PLATES[2].alt}
                   fill
                   sizes="1000px"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
@@ -310,10 +261,10 @@ export default function PortfolioGallery() {
             </button>
             <div className="mt-4 px-2 text-center">
               <span className="text-[10px] uppercase tracking-[0.26em] font-sans font-medium text-[#C4687F] block mb-1">
-                {PLATES[3].label}
+                {PLATES[2].label}
               </span>
               <p className="font-serif italic text-base text-[#1C1C1E]">
-                {PLATES[3].caption}
+                {PLATES[2].caption}
               </p>
             </div>
           </div>
@@ -328,30 +279,14 @@ export default function PortfolioGallery() {
           {/* Plate Card */}
           <div className="bg-white p-3.5 shadow-md border border-[#D8D6D0] mb-4">
             <div className="relative aspect-[4/3] overflow-hidden bg-[#141416]">
-              {PLATES[mobileIndex].isMissing ? (
-                <div
-                  className="w-full h-full flex flex-col items-center justify-center p-4 border border-dashed border-[#6A6A70]/40"
-                  style={{ backgroundColor: "#E3ECEE" }}
-                >
-                  <span className="text-[9px] uppercase tracking-[0.24em] font-sans text-[#6A6A70] mb-1">
-                    Slot: 05-plate-family
-                  </span>
-                  <span className="font-serif italic text-base text-[#1C1C1E] text-center mb-1">
-                    III · The Family
-                  </span>
-                  <span className="text-[8px] uppercase tracking-widest font-sans text-[#C4687F]">
-                    Curation Pending
-                  </span>
-                </div>
-              ) : (
-                <Image
-                  src={PLATES[mobileIndex].file}
-                  alt={PLATES[mobileIndex].alt}
-                  fill
-                  sizes="92vw"
-                  className="object-cover"
-                />
-              )}
+              <Image
+                src={PLATES[mobileIndex].file}
+                alt={PLATES[mobileIndex].alt}
+                fill
+                sizes="(max-width: 768px) 92vw, 400px"
+                className="object-cover"
+                priority
+              />
             </div>
 
             {/* Label below mobile image */}
@@ -359,26 +294,27 @@ export default function PortfolioGallery() {
               <span className="text-[10px] uppercase tracking-[0.26em] font-sans font-medium text-[#C4687F] block mb-1">
                 {PLATES[mobileIndex].label}
               </span>
-              <p className="font-serif italic text-sm text-[#1C1C1E] mb-2">
+              <p className="font-serif italic text-sm text-[#1C1C1E] mb-3">
                 {PLATES[mobileIndex].caption}
               </p>
               <button
                 type="button"
                 onClick={() => setActiveLightboxIndex(mobileIndex)}
-                className="text-[10px] uppercase tracking-[0.2em] font-sans text-[#6A6A70] underline py-1"
+                className="inline-flex items-center gap-1.5 px-4 py-2 border border-[#C4687F]/40 text-[#C4687F] text-[10px] uppercase tracking-[0.2em] font-sans hover:bg-[#C4687F] hover:text-white transition-colors"
               >
-                Expand Lightbox View ↗
+                <span>Expand Fullscreen</span>
+                <span>↗</span>
               </button>
             </div>
           </div>
 
-          {/* Mobile Navigation Bar & 1 / 4 Counter */}
+          {/* Mobile Navigation Bar & 1 / 3 Counter */}
           <div className="flex items-center justify-between px-2 pt-2">
             <button
               type="button"
               onClick={() => setMobileIndex((prev) => Math.max(0, prev - 1))}
               disabled={mobileIndex === 0}
-              className="text-xs uppercase tracking-[0.2em] font-sans px-4 py-2 border border-[#D8D6D0] disabled:opacity-30 disabled:pointer-events-none"
+              className="text-xs uppercase tracking-[0.2em] font-sans px-4 py-2.5 border border-[#D8D6D0] bg-white disabled:opacity-30 disabled:pointer-events-none active:bg-gray-100 transition-colors"
             >
               ← Prev
             </button>
@@ -389,7 +325,7 @@ export default function PortfolioGallery() {
               type="button"
               onClick={() => setMobileIndex((prev) => Math.min(PLATES.length - 1, prev + 1))}
               disabled={mobileIndex === PLATES.length - 1}
-              className="text-xs uppercase tracking-[0.2em] font-sans px-4 py-2 border border-[#D8D6D0] disabled:opacity-30 disabled:pointer-events-none"
+              className="text-xs uppercase tracking-[0.2em] font-sans px-4 py-2.5 border border-[#D8D6D0] bg-white disabled:opacity-30 disabled:pointer-events-none active:bg-gray-100 transition-colors"
             >
               Next →
             </button>
@@ -413,7 +349,7 @@ export default function PortfolioGallery() {
           <div className="flex items-center justify-between w-full max-w-7xl mx-auto z-10 pb-4 border-b border-white/10">
             <div className="flex items-center gap-3">
               <span className="text-[10px] uppercase tracking-[0.3em] font-sans text-[#C4687F] font-medium">
-                Plate {PLATES[activeLightboxIndex].roman} of IV
+                Plate {PLATES[activeLightboxIndex].roman} of {PLATES.length}
               </span>
               <span className="text-white/20">|</span>
               <span className="text-[10px] uppercase tracking-[0.2em] font-sans text-[#F8F7F4]/60 hidden sm:inline">
@@ -441,39 +377,18 @@ export default function PortfolioGallery() {
             </div>
           </div>
 
-          {/* Lightbox Middle: Native Max Frame (Never stretched/upscaled) */}
+          {/* Lightbox Middle: Native Max Frame */}
           <div className="relative flex-1 flex items-center justify-center my-4 overflow-hidden">
-            {PLATES[activeLightboxIndex].isMissing ? (
-              <div
-                className="w-full max-w-xl aspect-[16/10] flex flex-col items-center justify-center p-8 border border-dashed border-[#6A6A70]"
-                style={{ backgroundColor: "#E3ECEE" }}
-              >
-                <span className="text-[10px] uppercase tracking-[0.28em] font-sans text-[#6A6A70] mb-2">
-                  Archival Slot: 05-plate-family.jpg
-                </span>
-                <h4 className="text-2xl font-serif text-[#1C1C1E] mb-2">
-                  III · The Family
-                </h4>
-                <p className="font-serif italic text-sm text-[#1C1C1E]/80 text-center max-w-md mb-4">
-                  The most personal frame in her portfolio — a cheetah mother and cubs upon the Mara mound.
-                </p>
-                <span className="text-[9px] uppercase tracking-[0.2em] font-sans px-3 py-1 bg-[#141416] text-[#F8F7F4]">
-                  Pending delivery from editors · Listed in MISSING_IMAGES.md
-                </span>
-              </div>
-            ) : (
-              <div className="relative max-w-full max-h-[75vh] w-auto h-auto flex items-center justify-center">
-                {/* Native dimensions without exceeding container */}
-                <Image
-                  src={PLATES[activeLightboxIndex].file}
-                  alt={PLATES[activeLightboxIndex].alt}
-                  width={1024}
-                  height={682}
-                  className="max-h-[72vh] max-w-[92vw] w-auto h-auto object-contain border border-white/10 shadow-2xl"
-                  priority
-                />
-              </div>
-            )}
+            <div className="relative max-w-full max-h-[75vh] w-auto h-auto flex items-center justify-center">
+              <Image
+                src={PLATES[activeLightboxIndex].file}
+                alt={PLATES[activeLightboxIndex].alt}
+                width={1024}
+                height={682}
+                className="max-h-[72vh] max-w-[92vw] w-auto h-auto object-contain border border-white/10 shadow-2xl"
+                priority
+              />
+            </div>
 
             {/* Prev / Next Buttons */}
             <button

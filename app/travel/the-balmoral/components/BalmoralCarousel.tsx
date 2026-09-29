@@ -166,13 +166,13 @@ export default function BalmoralCarousel() {
         onTouchEnd={handleTouchEnd}
       >
         <Image
+          key={current.src}
           src={current.src}
           alt={current.alt}
           fill
           sizes="(max-width: 768px) 100vw, 1100px"
           className="object-cover transition-opacity duration-500 ease-in-out"
-          priority={false}
-          loading="lazy"
+          priority={currentIndex === 0}
         />
 
         {/* Floating title badge on slide */}
