@@ -29,7 +29,7 @@ const footerSections = [
       { href: "/ecosystem", label: "Five Houses" },
       { href: "/global-vision", label: "Global Vision" },
       { href: "/impact", label: "Our Impact" },
-      { href: "/membership", label: "Membership" },
+      { href: "/membership", label: "The Royal Gallery Circle" },
       { href: "/image-credits", label: "Image Credits & Licensing" },
     ],
   },
@@ -39,7 +39,7 @@ const footerSections = [
       { href: "https://www.instagram.com/theroyalgallerys/", label: "Instagram" },
       { href: "mailto:hey.theroyalgallerys@gmail.com", label: "Email" },
       { href: "/advertise", label: "Advertise" },
-      { href: "/membership", label: "Newsletter" },
+      { href: "/member/login", label: "Member Login" },
     ],
   },
 ];

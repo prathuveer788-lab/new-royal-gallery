@@ -711,29 +711,35 @@ export default function HomePage() {
       </section>
 
       {/* ════════════════════════════════════════════════
-          14 — THE DISPATCH (Obsidian)
+          14 — THE ROYAL GALLERY CIRCLE (Obsidian)
           ════════════════════════════════════════════════ */}
       <section className="py-24 sm:py-32 md:py-40 px-6 sm:px-8 md:px-12 lg:px-16 text-center" style={{ background: C.obsidian }}>
         <div className="max-w-2xl mx-auto">
-          <SectionNumber n="14 — The Dispatch" />
-          <h2 className="text-[clamp(2rem,4vw,3.8rem)] font-serif leading-[1.05] tracking-tight mt-5 mb-6" style={{ color: C.ivory, fontWeight: 400 }}>
-            Join The Royal Gallerys
+          <SectionNumber n="14 — The Circle" />
+          <h2 className="text-[clamp(2rem,4vw,3.8rem)] font-serif leading-[1.05] tracking-tight mt-5 mb-4" style={{ color: C.ivory, fontWeight: 400 }}>
+            The Royal Gallery Circle
           </h2>
+          <p className="text-xs uppercase tracking-[0.3em] font-sans text-[#D4AF37] font-semibold mb-6">
+            ₹3,999 — LIFETIME MEMBERSHIP
+          </p>
           <p className="text-base sm:text-lg font-sans leading-relaxed mb-10 max-w-xl mx-auto" style={{ color: C.textStone, fontWeight: 400 }}>
-            A weekly edit of the finest stories in style, travel, design, culture and heritage — delivered to your inbox. Plus early access to our print edition, events, and private experiences.
+            Receive three physical print issues annually, unrestricted archival access, confidential private files, and direct priority access to our Editorial Office.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/membership"
-              className="inline-block text-[11px] sm:text-xs uppercase tracking-[0.22em] font-medium font-sans px-10 sm:px-12 py-3.5 transition-all duration-500"
-              style={{ color: C.obsidian, background: C.ivory }} >
-              Become a Member
+              className="inline-block text-[11px] sm:text-xs uppercase tracking-[0.22em] font-medium font-sans px-10 sm:px-12 py-3.5 transition-all duration-500 shadow-xl"
+              style={{
+                background: "linear-gradient(135deg, #B8A47A 0%, #D4AF37 50%, #C5A059 100%)",
+                color: "#0C0C0D",
+              }} >
+              Join The Circle →
             </Link>
             <Link
-              href="/journal"
+              href="/member/login"
               className="inline-block text-[11px] sm:text-xs uppercase tracking-[0.22em] font-medium font-sans px-10 sm:px-12 py-3.5 transition-all duration-500"
               style={{ color: C.champagne, border: "1px solid rgba(184,164,122,0.35)" }} >
-              Subscribe to Journal
+              Member Login
             </Link>
           </div>
         </div>

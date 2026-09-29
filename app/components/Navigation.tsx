@@ -8,6 +8,20 @@ export default function Navigation() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [member, setMember] = useState<{ firstName: string; membershipId: string } | null>(null);
+
+  useEffect(() => {
+    fetch("/api/member/me")
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (data?.authenticated && data?.member) {
+          setMember(data.member);
+        } else {
+          setMember(null);
+        }
+      })
+      .catch(() => setMember(null));
+  }, [pathname]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -168,7 +182,7 @@ export default function Navigation() {
           ))}
           <Link
             href="/membership"
-            className="ml-2 px-5 xl:px-6 py-2 text-[11px] xl:text-[12px] uppercase tracking-[0.16em] transition-all duration-500 font-sans font-medium"
+            className="ml-2 px-3 xl:px-4 py-2 text-[11px] xl:text-[12px] uppercase tracking-[0.16em] transition-all duration-500 font-sans font-medium"
             style={{
               color: "#F4F0E7",
               border: "1px solid rgba(138,115,82,0.45)",
@@ -182,8 +196,42 @@ export default function Navigation() {
               (e.target as HTMLElement).style.borderColor = "rgba(138,115,82,0.45)";
             }}
           >
-            Membership
+            The Circle
           </Link>
+          {member ? (
+            <Link
+              href="/member/dashboard"
+              className="ml-2 px-3 xl:px-4 py-2 text-[11px] xl:text-[12px] uppercase tracking-[0.16em] transition-all duration-500 font-sans font-medium flex items-center gap-1.5"
+              style={{
+                background: "linear-gradient(135deg, rgba(212,175,55,0.25) 0%, rgba(184,164,122,0.15) 100%)",
+                border: "1px solid rgba(212,175,55,0.7)",
+                color: "#F4F0E7",
+              }}
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              <span>Dashboard</span>
+            </Link>
+          ) : (
+            <Link
+              href="/member/login"
+              className="ml-2 px-3 xl:px-4 py-2 text-[11px] xl:text-[12px] uppercase tracking-[0.16em] transition-all duration-500 font-sans font-medium"
+              style={{
+                color: "#D4AF37",
+                border: "1px solid rgba(212,175,55,0.5)",
+                background: "rgba(212,175,55,0.06)",
+              }}
+              onMouseEnter={(e) => {
+                (e.target as HTMLElement).style.background = "rgba(212,175,55,0.18)";
+                (e.target as HTMLElement).style.color = "#FFFFFF";
+              }}
+              onMouseLeave={(e) => {
+                (e.target as HTMLElement).style.background = "rgba(212,175,55,0.06)";
+                (e.target as HTMLElement).style.color = "#D4AF37";
+              }}
+            >
+              Member Login
+            </Link>
+          )}
         </div>
 
         {/* ════════ MOBILE TOGGLE ════════ */}
@@ -292,15 +340,38 @@ export default function Navigation() {
             <Link
               href="/membership"
               onClick={() => setIsOpen(false)}
-              className="mt-1 w-full text-center py-3 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 font-sans"
+              className="mt-1 w-full text-center py-3 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 font-sans block"
               style={{
                 color: "#F4F0E7",
                 background: "rgba(138,115,82,0.15)",
                 border: "1px solid rgba(184,164,122,0.6)",
               }}
             >
-              Exclusive Membership
+              The Royal Gallery Circle (₹3,999 Lifetime)
             </Link>
+
+            {member ? (
+              <Link
+                href="/member/dashboard"
+                onClick={() => setIsOpen(false)}
+                className="w-full text-center py-3 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 font-sans flex items-center justify-center gap-2"
+                style={{
+                  background: "linear-gradient(135deg, #B8A47A 0%, #D4AF37 100%)",
+                  color: "#0C0C0D",
+                }}
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-800" />
+                <span>Enter Member Dashboard</span>
+              </Link>
+            ) : (
+              <Link
+                href="/member/login"
+                onClick={() => setIsOpen(false)}
+                className="w-full text-center py-3 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 font-sans border border-[#D4AF37]/50 text-[#D4AF37] hover:bg-[#D4AF37]/10 block"
+              >
+                Member Login
+              </Link>
+            )}
           </div>
         </div>
       </div>

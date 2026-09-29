@@ -68,7 +68,7 @@ export const allDiningArticles: EditorialArticle[] = [
     ],
     imageBreaks: [
       {
-        image: "/images/dining/rajasthani-royal-thali-banquet.webp",
+        image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1400&q=85",
         alt: "Rajasthani palace thali feast with authentic copper serving vessels",
         caption: "A royal feast arrayed in traditional metalwork: each copper and brass bowl represents a specific taste profile calibrated for courtly digestion.",
       },
@@ -108,7 +108,7 @@ export const allDiningArticles: EditorialArticle[] = [
     authorRole: "Senior Food & Wine Critic",
     readTime: "14 min read",
     publishedDate: "2026-08-25",
-    heroImage: "/images/dining/rajasthani-royal-thali-banquet.jpg",
+    heroImage: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1600&q=85",
     heroCaption: "Contemporary Indian gastronomy unites centuries of flavour balance with avant-garde culinary technique. Photograph: The Royal Gallerys.",
     sections: [
       {
@@ -149,7 +149,7 @@ export const allDiningArticles: EditorialArticle[] = [
     ],
     imageBreaks: [
       {
-        image: "/images/dining/rajasthani-royal-thali-banquet.jpg",
+        image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1400&q=85",
         alt: "Artisanal subcontinental ingredients and multi-spice elements",
         caption: "A symphony of regional components: modern fine dining treats each spice, lentil, and cold-pressed oil as a distinct terroir-driven ingredient.",
       },
@@ -179,7 +179,7 @@ export const allDiningArticles: EditorialArticle[] = [
     authorRole: "Spirits & Horology Correspondent",
     readTime: "12 min read",
     publishedDate: "2026-08-28",
-    heroImage: "/images/dining/rajasthani-royal-thali-banquet.jpg",
+    heroImage: "https://images.unsplash.com/photo-1527281400683-1aae777175f8?auto=format&fit=crop&w=1600&q=85",
     heroCaption: "Aged in oak casks under extreme subcontinental temperatures, Indian single malts extract intense wood complexity in a fraction of the time required in the Scottish Highlands.",
     sections: [
       {
@@ -220,7 +220,7 @@ export const allDiningArticles: EditorialArticle[] = [
     ],
     imageBreaks: [
       {
-        image: "/images/dining/rajasthani-royal-thali-banquet.webp",
+        image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1400&q=85",
         alt: "Fine crystal decanter and artisanal tasting elements",
         caption: "Deep mahogany hues born of intense oak respiration: Indian single malts achieve unparallelled wood concentration under tropical conditions.",
       },
@@ -260,7 +260,7 @@ export const allDiningArticles: EditorialArticle[] = [
     authorRole: "Tea Sommelier & Cultural Historian",
     readTime: "10 min read",
     publishedDate: "2026-09-02",
-    heroImage: "/images/dining/rajasthani-royal-thali-banquet.jpg",
+    heroImage: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=1600&q=85",
     heroCaption: "Rolling green terraces in the Himalayan foothills: high-altitude sunlight and cool night mists yield the prized muscatel notes of Darjeeling tea.",
     sections: [
       {
@@ -301,7 +301,7 @@ export const allDiningArticles: EditorialArticle[] = [
     ],
     imageBreaks: [
       {
-        image: "/images/dining/rajasthani-royal-thali-banquet.jpg",
+        image: "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=1400&q=85",
         alt: "Ceremonial tea service and fine porcelain teaware",
         caption: "Delicate spring infusions require unhurried appreciation: single-estate orthodox teas reveal distinctive aromatic top-notes of orchid and mountain honey.",
       },
@@ -331,7 +331,7 @@ export const allDiningArticles: EditorialArticle[] = [
     authorRole: "Senior Motoring & Lifestyle Editor",
     readTime: "13 min read",
     publishedDate: "2026-09-05",
-    heroImage: "/images/dining/rajasthani-royal-thali-banquet.jpg",
+    heroImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=85",
     heroCaption: "Grand courtly banqueting halls restored to pristine glory: where dining becomes a ceremonial encounter with royal lineage.",
     sections: [
       {
@@ -372,7 +372,7 @@ export const allDiningArticles: EditorialArticle[] = [
     ],
     imageBreaks: [
       {
-        image: "/images/dining/rajasthani-royal-thali-banquet.webp",
+        image: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1400&q=85",
         alt: "Grand banqueting arrangement in a palace dining setting",
         caption: "Silver service and candlelight: in India's palace restaurants, every dinner continues centuries of courtly dining ritual.",
       },

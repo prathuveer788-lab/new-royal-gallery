@@ -57,7 +57,7 @@ export const allWatchesArticles: EditorialArticle[] = [
       { quote: "A storefront that treats watches as inventory repels precisely the collector the brand most wants to attract.", context: "On retail experience" },
     ],
     imageBreaks: [
-      { image: "/images/watches/watch-inside.jpeg", alt: "Luxury timepiece detail", caption: "The detail work that defines luxury horology — a craft that rewards connoisseurship and commands premium pricing. Image: The Royal Gallerys." },
+      { image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1400&q=85", alt: "Luxury timepiece detail", caption: "The detail work that defines luxury horology — a craft that rewards connoisseurship and commands premium pricing. Image: The Royal Gallerys." },
     ],
     relatedSlugs: ["luxury-watch-marketing-india"],
     keywords: ["luxury watch market India", "watch collectors India", "horology India", "luxury watch brands", "Indian watch market", "watch retail India"],
@@ -88,7 +88,7 @@ export const allWatchesArticles: EditorialArticle[] = [
     authorRole: "Watches & Luxury Correspondent",
     readTime: "10 min read",
     publishedDate: "2026-08-08",
-    heroImage: "/images/watches/watch-outside.jpeg",
+    heroImage: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=85",
     heroCaption: "Luxury watchmaking — marketing to the connoisseur is a matter of expertise and respect, not volume. Image: The Royal Gallerys.",
     sections: [
       {
@@ -117,7 +117,7 @@ export const allWatchesArticles: EditorialArticle[] = [
       { quote: "The connoisseur who feels respected becomes the brand's most credible ambassador.", context: "On the compounding value of respect" },
     ],
     imageBreaks: [
-      { image: "/images/watches/watch-inside.jpeg", alt: "Luxury detail craftsmanship", caption: "The precision and craft that connoisseurs evaluate — and that credible marketing must engage with honestly." },
+      { image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1400&q=85", alt: "Luxury detail craftsmanship", caption: "The precision and craft that connoisseurs evaluate — and that credible marketing must engage with honestly." },
     ],
     relatedSlugs: ["indian-luxury-watch-market"],
     keywords: ["luxury watch marketing", "watch brand strategy India", "horology marketing", "watch collectors India", "editorial marketing", "luxury watch India"],
@@ -149,7 +149,7 @@ export const allWatchesArticles: EditorialArticle[] = [
     readTime: "12 min read",
     publishedDate: "2026-08-24",
     modifiedDate: "2026-08-24",
-    heroImage: "/images/watches/watch-inside.jpeg",
+    heroImage: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1600&q=85",
     heroCaption: "The mechanical watch as modern heirloom — a new generation of Indian collectors is turning to horology with a connoisseur's seriousness. Image: The Royal Gallerys.",
     sections: [
       {
@@ -183,8 +183,8 @@ export const allWatchesArticles: EditorialArticle[] = [
       { quote: "A mechanical watch is among the few luxury objects designed to outlive its first owner.", context: "On legacy and the appeal of the mechanical watch" },
     ],
     imageBreaks: [
-      { image: "/images/watches/watch-outside.jpeg", alt: "Mechanical watch movement detail", caption: "The intricacy of a mechanical movement — the reward of study that draws the serious collector. Image: The Royal Gallerys." },
-      { image: "/images/watches/watch-hero.jpeg", alt: "Luxury collector culture", caption: "A collector culture is sustained by conversation, community and a shared seriousness about craft. Image: The Royal Gallerys." },
+      { image: "https://images.unsplash.com/photo-1533139502658-0198f920d8e8?auto=format&fit=crop&w=1400&q=85", alt: "Mechanical watch movement detail", caption: "The intricacy of a mechanical movement — the reward of study that draws the serious collector. Image: The Royal Gallerys." },
+      { image: "/images/watches/watch-inside.jpeg", alt: "Luxury collector culture", caption: "A collector culture is sustained by conversation, community and a shared seriousness about craft. Image: The Royal Gallerys." },
     ],
     relatedSlugs: ["indian-luxury-watch-market", "luxury-watch-marketing-india", "watches-and-maharajas-horology-history", "iconic-luxury-watch-collectors-guide"],
     keywords: ["luxury watch collecting India", "Indian watch collectors", "mechanical watch India", "luxury watch store of value", "horology India", "watch collecting culture"],
@@ -216,7 +216,7 @@ export const allWatchesArticles: EditorialArticle[] = [
     readTime: "13 min read",
     publishedDate: "2026-08-25",
     modifiedDate: "2026-08-25",
-    heroImage: "/images/watches/watch-outside.jpeg",
+    heroImage: "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=1600&q=85",
     heroCaption: "Bejewelled craft — India's royal courts were among the most discerning patrons of the watchmaker's art. Image: The Royal Gallerys.",
     sections: [
       {
@@ -250,7 +250,7 @@ export const allWatchesArticles: EditorialArticle[] = [
       { quote: "When a maharaja commissioned the unprecedented, he effectively underwrote a craftsman's ambition.", context: "On how patronage shaped the craft" },
     ],
     imageBreaks: [
-      { image: "/images/watches/watch-inside.jpeg", alt: "Bejewelled timepiece detail", caption: "The bejewelled commission — where horology and high jewellery met at the behest of India's courts. Image: The Royal Gallerys." },
+      { image: "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&w=1400&q=85", alt: "Bejewelled timepiece detail", caption: "The bejewelled commission — where horology and high jewellery met at the behest of India's courts. Image: The Royal Gallerys." },
       { image: "/images/watches/watch-outside.jpeg", alt: "Heritage craftsmanship", caption: "The standard set by royal patronage continues to shape what collectors ask of the craft. Image: The Royal Gallerys." },
     ],
     relatedSlugs: ["indian-luxury-watch-market", "luxury-watch-marketing-india", "luxury-watch-collecting-india", "iconic-luxury-watch-collectors-guide"],
@@ -283,7 +283,7 @@ export const allWatchesArticles: EditorialArticle[] = [
     readTime: "12 min read",
     publishedDate: "2026-08-26",
     modifiedDate: "2026-08-26",
-    heroImage: "/images/watches/watch-hero.jpeg",
+    heroImage: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1600&q=85",
     heroCaption: "The grammar of collecting — dress, sports steel, complication and high jewellery, the categories that give watchmaking meaning. Image: The Royal Gallerys.",
     sections: [
       {
@@ -317,8 +317,8 @@ export const allWatchesArticles: EditorialArticle[] = [
       { quote: "A meaningful piece is never only about price; it is about the decisions, the craft and the history a knowledgeable eye can recognise.", context: "On what distinguishes a meaningful watch" },
     ],
     imageBreaks: [
-      { image: "/images/watches/watch-inside.jpeg", alt: "High-jewellery watch detail", caption: "High-jewellery watches demand judgement across two disciplines — mechanics and stone-setting alike. Image: The Royal Gallerys." },
-      { image: "/images/watches/watch-outside.jpeg", alt: "Luxury timepiece craftsmanship", caption: "The shared vocabulary of collecting — dress, sports, complication and jewel — is what gives watchmaking its depth. Image: The Royal Gallerys." },
+      { image: "https://images.unsplash.com/photo-1547996160-71dfabb1d451?auto=format&fit=crop&w=1400&q=85", alt: "High-jewellery watch detail", caption: "High-jewellery watches demand judgement across two disciplines — mechanics and stone-setting alike. Image: The Royal Gallerys." },
+      { image: "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1400&q=85", alt: "Luxury timepiece craftsmanship", caption: "The shared vocabulary of collecting — dress, sports, complication and jewel — is what gives watchmaking its depth. Image: The Royal Gallerys." },
     ],
     relatedSlugs: ["indian-luxury-watch-market", "luxury-watch-marketing-india", "luxury-watch-collecting-india", "watches-and-maharajas-horology-history"],
     keywords: ["iconic luxury watches", "luxury watch collector guide", "dress watches", "sports watches", "watch complications", "high jewellery watches"],
