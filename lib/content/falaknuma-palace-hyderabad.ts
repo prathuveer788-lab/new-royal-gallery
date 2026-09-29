@@ -12,7 +12,7 @@ The palace was commissioned in 1884 by Nawab Sir Viqar-ul-Umra, the Prime Minist
 
 A brief digression on Nizami wealth is necessary, because without it the palace makes no sense. The Nizams of Hyderabad ruled a kingdom the size of France — 86,000 square miles of the Deccan plateau — from 1724 until 1948, when the Indian Army annexed the state in Operation Polo. At its peak, the dynasty controlled the Golconda diamond mines, which produced the Koh-i-Noor, the Hope Diamond, the Orlov, and virtually every legendary gemstone in European crown collections. The seventh and last ruling Nizam, Mir Osman Ali Khan, was declared the richest man in the world by Time magazine in 1937. His personal fortune, estimated at $2 billion in 1940s dollars (approximately $230 billion today), was so vast that he used the 185-carat Jacob Diamond — one of the largest in the world — as a paperweight. For three decades.
 
-[[QUOTE:There are wealthy men, and then there was the Nizam. The difference is the Jacob Diamond — that he used as a paperweight.|The Royal Gallery Editorial]]
+[[QUOTE:There are wealthy men, and then there was the Nizam. The difference is the Jacob Diamond — that he used as a paperweight.|The Royal Gallerys Editorial]]
 
 This was the context in which Falaknuma operated. It was not merely a palace. It was a statement. When the Nizam received guests here — viceroys, maharajas, King George V, the Shah of Persia — he was not merely entertaining. He was demonstrating, in marble and crystal and Burmese teak, that the Deccan was a civilisation unto itself, answerable to no one.
 
@@ -84,7 +84,7 @@ The sixth Nizam died in 1911, and the palace passed to his son, Mir Osman Ali Kh
 
 The restoration took ten years and is reported to have cost over ₹100 crore ($12 million). Every fresco was cleaned centimetre by centimetre. Every chandelier was disassembled, its crystals catalogued, cleaned, and rehung. The library's walnut ceiling was restored by the same family of craftsmen who had carved it a century earlier — their great-grandsons, working from the original patterns. The result is not a recreation. It is a resurrection. When Falaknuma reopened as a hotel in 2010, it did not feel like a heritage conversion. It felt as though the Nizam had simply stepped out for a moment and would return at any time.
 
-[[QUOTE:Falaknuma is not a hotel in a palace. It is a palace that happens to take reservations — and only just barely.|The Royal Gallery Editorial]]
+[[QUOTE:Falaknuma is not a hotel in a palace. It is a palace that happens to take reservations — and only just barely.|The Royal Gallerys Editorial]]
 
 ## Insider Tips
 

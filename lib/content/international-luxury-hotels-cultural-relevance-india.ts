@@ -13,7 +13,7 @@ The difference is measurable, if not in the quarterly report then in the indicat
 
 A property that hosts weddings is culturally relevant. A property that hosts only room nights is visible but not yet significant. The international groups that understand this distinction from the outset build toward relevance; the ones that ignore it build a beautiful hotel that the market politely declines to care about.
 
-[[QUOTE:A property that hosts celebrations is culturally relevant. A property that hosts only room nights is visible but not yet significant.|The Royal Gallery Editorial]]
+[[QUOTE:A property that hosts celebrations is culturally relevant. A property that hosts only room nights is visible but not yet significant.|The Royal Gallerys Editorial]]
 
 ## 2. The Indian Consumer's Hierarchy of Value
 
@@ -37,7 +37,7 @@ The genuine version is intellectual: a hotel that integrates real cultural pract
 
 The distinction is rigour, and the Indian consumer can tell the difference. Wellness is the clearest example: India is the birthplace of Ayurveda, yoga and meditation, and the global wellness tourism market is projected to reach $1.4 trillion by 2027. A wellness programme at an Indian property operating within the tradition that originated the practice carries a weight that no imported spa concept can match. Genuine localisation is not a compromise with global standards; it is the source of the advantage.
 
-[[QUOTE:Genuine localisation is not a compromise with global standards; it is the source of the advantage.|The Royal Gallery Editorial]]
+[[QUOTE:Genuine localisation is not a compromise with global standards; it is the source of the advantage.|The Royal Gallerys Editorial]]
 
 ## 4. The Palace Hotel Benchmark
 

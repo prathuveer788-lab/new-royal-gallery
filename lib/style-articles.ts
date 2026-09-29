@@ -234,7 +234,7 @@ export const allStyleArticles: StyleArticle[] = [
     editorialSubcategory: "fashion",
     tags: ["fashion-trends-2026", "indian-fashion", "luxury-trends", "couture-trends", "runway"],
     headline: "10 Indian Fashion Trends Defining Luxury Style in 2026",
-    subtitle: "From the return of architectural silhouttes to the quiet revolution in menswear — the runway signals, couture collections, and consumer shifts that are reshaping Indian luxury fashion this year",
+    subtitle: "From the return of architectural silhouettes to the quiet revolution in menswear — the runway signals, couture collections, and consumer shifts that are reshaping Indian luxury fashion this year",
     authorName: "The Royal Gallerys Editorial",
     authorRole: "Fashion Trends Correspondent",
     readTime: "12 min read",

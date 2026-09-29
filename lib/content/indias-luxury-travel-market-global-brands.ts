@@ -15,7 +15,7 @@ Domestically, India's luxury hotels are anchored by an extraordinary concentrati
 
 Outbound, the same consumer who stays in a palace in Udaipur is chartering villas in Lake Como and taking suites at Cheval Blanc. The two markets are not separate; they are served by the same consumer and the same decision architecture. A global brand that understands the Indian guest domestically gains privileged access to their outbound decisions, and vice versa. Treating them as distinct markets is the first, most common strategic error.
 
-[[QUOTE:The Indian luxury traveller is not a smaller version of the Chinese outbound market. They are a distinct segment with distinct decision architecture.|The Royal Gallery Editorial]]
+[[QUOTE:The Indian luxury traveller is not a smaller version of the Chinese outbound market. They are a distinct segment with distinct decision architecture.|The Royal Gallerys Editorial]]
 
 ## 2. Three Pillars: Celebration, Family, Cultural Signalling
 
@@ -41,7 +41,7 @@ The third is underweighting celebration. Brands that design for individual leisu
 
 The fourth is competing on status rather than cultural intelligence. In a market where "luxury" is increasingly available to anyone with a credit card, the Indian consumer's premium increasingly attaches to experiences that signal taste, access and cultural fluency. Brands that sell status are competing on a commodity; brands that sell cultural intelligence are competing on a moat.
 
-[[QUOTE:The properties that outperform do so because they are impossible to separate from their location. They are destinations before they are hotels.|The Royal Gallery Editorial]]
+[[QUOTE:The properties that outperform do so because they are impossible to separate from their location. They are destinations before they are hotels.|The Royal Gallerys Editorial]]
 
 ## 4. The Competition You Are Not Watching
 

@@ -87,7 +87,7 @@ No stay at Umaid Bhawan is complete without understanding its relationship to Me
 
 Umaid Bhawan Palace is not the most expensive hotel in India. It is not the most modern. It is not the most convenient, if your definition of convenience involves being near a metropolitan airport or a beach club. But it is, without serious competition, the most complete expression of royal Indian hospitality that exists in the world today.
 
-[[QUOTE:There are great hotels. There are palaces. And then there is Umaid Bhawan — a category of one.|The Royal Gallery Editorial]]
+[[QUOTE:There are great hotels. There are palaces. And then there is Umaid Bhawan — a category of one.|The Royal Gallerys Editorial]]
 
 You come here not for a hotel stay but for an immersion in a way of life that no amount of money can recreate elsewhere. You come here because you understand that heritage is not something you visit — it is something you inhabit, if only for a few nights. You leave understanding why those three thousand starving farmers and their families, ninety years ago, took rough Chittar sandstone and their bare hands and built something that would outlast their suffering by centuries.
 

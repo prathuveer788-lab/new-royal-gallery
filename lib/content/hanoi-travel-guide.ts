@@ -23,7 +23,7 @@ The city's most famous pho establishments are institutions: Pho Gia Truyen on Ba
 
 [[PHOTO:portrait|/images/experiences/26-hanoi/03-pho-bo-hanoi.webp|/images/experiences/26-hanoi/img-03.webp|Pho emerged in the early 20th century in Nam Dinh province south of Hanoi, a hybrid of French colonial demand for beef (cattle were traditionally draught animals, not food) and Vietnamese noodle-soup traditions influenced by Chinese cooking techniques. The definitive Hanoi-style pho — pho bac — is characterised by a broth of extraordinary clarity, achieved through hours of careful simmering and the systematic skimming of impurities, seasoned only with charred ginger, star anise, cinnamon, and fish sauce. The accompanying plate of fresh herbs — Thai basil, culantro, mint, and the essential lime wedge — arrives separately, allowing each diner to calibrate the balance of aromatic freshness to their own taste.|Photo courtesy of Vietnam National Administration of Tourism]]
 
-[[QUOTE:Hanoi is the only city I know where the past feels not like a memory but like a presence — a friendly ghost who sits beside you at the pho stall and orders a second bowl.|The Royal Gallery Editorial]]
+[[QUOTE:Hanoi is the only city I know where the past feels not like a memory but like a presence — a friendly ghost who sits beside you at the pho stall and orders a second bowl.|The Royal Gallerys Editorial]]
 
 ## The French Quarter: Colonial Grandeur, Tropical Decay
 

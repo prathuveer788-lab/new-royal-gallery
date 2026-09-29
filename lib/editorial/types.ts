@@ -10,7 +10,12 @@ export type EditorialSectionSlug =
   | "weddings"
   | "design"
   | "culture"
-  | "business";
+  | "business"
+  | "motoring"
+  | "dining"
+  | "society"
+  | "people"
+  | "futures";
 
 /** SEO keyword map — the commercial/S2B intelligence brief per article. */
 export interface KeywordMap {
@@ -63,8 +68,9 @@ export interface EditorialArticle {
   sections: EditorialSection[];
   pullQuotes: EditorialPullQuote[];
   imageBreaks: EditorialImageBreak[];
-  relatedSlugs: string[];
-  keywords: string[];
+  relatedSlugs?: string[];
+  keywords?: string[];
+  faqs?: { question: string; answer: string }[];
 }
 
 /** Section landing-page config. */

@@ -1,4 +1,37 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Impact & Mission — The Living Heritage Archive | The Royal Gallerys",
+  description:
+    "Building the world's largest living heritage archive. Documenting royal legacies, historic architecture, and traditional crafts for future generations.",
+  alternates: { canonical: "https://theroyalgallerys.com/impact" },
+  openGraph: {
+    title: "Impact & Mission — The Living Heritage Archive | The Royal Gallerys",
+    description:
+      "Building the world's largest living heritage archive. Documenting royal legacies, historic architecture, and traditional crafts for future generations.",
+    url: "https://theroyalgallerys.com/impact",
+    type: "website",
+    siteName: "The Royal Gallerys",
+    images: [
+      {
+        url: "https://theroyalgallerys.com/images/hero/jaipur-city-palace-grand-facade.jpg",
+        width: 1200,
+        height: 630,
+        alt: "The Royal Gallerys Impact and Mission",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@theroyalgallerys",
+    creator: "@theroyalgallerys",
+    title: "Impact & Mission — The Living Heritage Archive | The Royal Gallerys",
+    description:
+      "Building the world's largest living heritage archive. Documenting royal legacies, historic architecture, and traditional crafts.",
+    images: ["https://theroyalgallerys.com/images/hero/jaipur-city-palace-grand-facade.jpg"],
+  },
+};
 
 const C = {
   obsidian: "#11110F",
@@ -72,15 +105,15 @@ export default function ImpactPage() {
           <div className="space-y-6 text-sm sm:text-base font-sans font-normal leading-relaxed" style={{ color: C.textStone }}>
             <p>Heritage is disappearing. Every year the world loses photographs, letters, voices and traditions that can never be recovered — fading quietly while we look away.</p>
             <p>But for the first time in history, technology can preserve it. And storytelling can amplify it — carrying the wisdom of the past into the hands of the future.</p>
-            <p>Future generations deserve access to the knowledge that built civilizations. The Royal Gallery exists to make certain they receive it.</p>
+            <p>Future generations deserve access to the knowledge that built civilizations. The Royal Gallerys exists to make certain they receive it.</p>
           </div>
-          <p className="mt-10 text-sm font-serif italic" style={{ color: C.champagne, fontWeight: 400 }}>— The Royal Gallery, Founding Office</p>
+          <p className="mt-10 text-sm font-serif italic" style={{ color: C.champagne, fontWeight: 400 }}>— The Royal Gallerys, Founding Office</p>
         </div>
       </section>
 
       <section className="py-16 sm:py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16 text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-6 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>Heritage Is Humanity&apos;s<br />Most Valuable Asset</h2>
-        <p className="text-sm sm:text-base font-sans font-normal max-w-xl mx-auto mb-10" style={{ color: C.textStone }}>The stories that built civilizations deserve to survive. The Royal Gallery exists to ensure they do.</p>
+        <p className="text-sm sm:text-base font-sans font-normal max-w-xl mx-auto mb-10" style={{ color: C.textStone }}>The stories that built civilizations deserve to survive. The Royal Gallerys exists to ensure they do.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/membership" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }} >Partner With Us</Link>
           <Link href="/global-vision" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.textDeep, border: `1px solid ${C.bronze}` }} >Explore the Vision</Link>

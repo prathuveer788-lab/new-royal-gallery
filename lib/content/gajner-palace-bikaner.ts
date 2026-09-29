@@ -13,7 +13,7 @@ The interiors have been carefully restored. The public rooms feature high ceilin
 
 [[PHOTO:portrait|/images/experiences/17-gajner-palace-bikaner/img-02.webp|The bar at Gajner Palace — dark wood panelling, leather armchairs, sepia photographs of royal hunting parties from the 1920s, the red sandstone walls glowing warm in the lamplight|The bar was once the trophy room of the Bikaner maharajas — the walls still bear photographs of royal shikar expeditions, when hunting parties would return to the palace after days tracking game in the Thar Desert]]
 
-[[QUOTE:Gajner is where the maharajas of Bikaner came to escape being maharajas. The informality of the place — the sense that even kings need a holiday — survives in every courtyard and corridor.|The Royal Gallery Editorial]]
+[[QUOTE:Gajner is where the maharajas of Bikaner came to escape being maharajas. The informality of the place — the sense that even kings need a holiday — survives in every courtyard and corridor.|The Royal Gallerys Editorial]]
 
 ## The Rooms: Colonial Simplicity, Modern Comfort
 

@@ -5,6 +5,32 @@ export const metadata: Metadata = {
   title: "Advertise With The Royal Gallerys | Luxury Heritage Media",
   description:
     "Connect your brand with India's most discerning audience. Download our media kit, rate card, and editorial calendar to explore advertising opportunities.",
+  alternates: { canonical: "https://theroyalgallerys.com/advertise" },
+  openGraph: {
+    title: "Advertise With The Royal Gallerys | Luxury Heritage Media",
+    description:
+      "Connect your brand with India's most discerning audience. Download our media kit, rate card, and editorial calendar to explore advertising opportunities.",
+    url: "https://theroyalgallerys.com/advertise",
+    type: "website",
+    siteName: "The Royal Gallerys",
+    images: [
+      {
+        url: "https://theroyalgallerys.com/images/hero/jaipur-city-palace-grand-facade.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Advertise with The Royal Gallerys",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@theroyalgallerys",
+    creator: "@theroyalgallerys",
+    title: "Advertise With The Royal Gallerys | Luxury Heritage Media",
+    description:
+      "Connect your brand with India's most discerning audience. Download our media kit, rate card, and editorial calendar to explore advertising opportunities.",
+    images: ["https://theroyalgallerys.com/images/hero/jaipur-city-palace-grand-facade.jpg"],
+  },
 };
 
 const C = {

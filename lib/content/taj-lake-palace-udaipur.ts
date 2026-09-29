@@ -28,7 +28,7 @@ The film brought the palace to international attention, and the hotel — which 
 
 Today, the palace screens Octopussy every evening in the courtyard bar. Guests sip martinis — shaken, not stirred, naturally — and watch Bond navigate the very terraces and corridors they have just explored. It is the rare cinematic tribute that enhances rather than diminishes the original, and it has become one of the most charming rituals of a Lake Palace stay.
 
-[[QUOTE:There are hotels you check into, and there are hotels you surrender to. The Lake Palace belongs entirely to the second category.|The Royal Gallery Editorial]]
+[[QUOTE:There are hotels you check into, and there are hotels you surrender to. The Lake Palace belongs entirely to the second category.|The Royal Gallerys Editorial]]
 
 ## The Suites: Sleeping Above Water
 

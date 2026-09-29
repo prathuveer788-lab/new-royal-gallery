@@ -15,7 +15,7 @@ India's heritage properties operate within a moat that no competitor can breach.
 
 The data confirms the moat's commercial value. Rajasthan's palace hotels command RevPAR premiums of 60 to 120 percent over comparable luxury chain properties in the same markets, according to hospitality industry benchmarks. This is not a small advantage; it is the difference between a commodity position and a monopoly position. The heritage moat is, quite literally, the most valuable asset most heritage hotels own — and the one they market least effectively.
 
-[[QUOTE:A palace in Rajasthan commands room rates three to four times the surrounding market — not because its thread count is higher, but because it can never be built again.|The Royal Gallery Editorial]]
+[[QUOTE:A palace in Rajasthan commands room rates three to four times the surrounding market — not because its thread count is higher, but because it can never be built again.|The Royal Gallerys Editorial]]
 
 ## 2. Who Is the International Heritage Traveller?
 
@@ -35,7 +35,7 @@ Pricing provenance means recognising that the property is competing in two marke
 
 The mechanism is straightforward. The international heritage traveller is comparing India not against other Indian hotels but against other once-in-a-lifetime heritage experiences. They are not asking "is this worth three times the Oberoi down the road?" They are asking "is this worth the trip, the time, the occasion?" For the properties that tell their story properly, the answer is consistently yes — and the rate should reflect that.
 
-[[QUOTE:The heritage moat is the most valuable asset most heritage hotels own — and the one they market least effectively.|The Royal Gallery Editorial]]
+[[QUOTE:The heritage moat is the most valuable asset most heritage hotels own — and the one they market least effectively.|The Royal Gallerys Editorial]]
 
 ## 4. Storytelling Is the Product
 

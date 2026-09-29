@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@theroyalsgallery",
-    creator: "@theroyalsgallery",
+    site: "@theroyalgallerys",
+    creator: "@theroyalgallerys",
     title: "THE ROYAL GALLERYS",
     description: "The international magazine for heritage, culture and luxury.",
     images: ["https://theroyalgallerys.com/og-image.jpg"],

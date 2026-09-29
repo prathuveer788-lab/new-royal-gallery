@@ -1,6 +1,39 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { allArticles } from "@/lib/travel-articles";
 import NewsletterForm from "../components/NewsletterForm";
+
+export const metadata: Metadata = {
+  title: "The Journal — In-Depth Features & Dispatches | The Royal Gallerys",
+  description:
+    "The editorial hub of The Royal Gallerys — in-depth features, original documentaries, podcasts and narrative photography across culture, travel, design and society.",
+  alternates: { canonical: "https://theroyalgallerys.com/journal" },
+  openGraph: {
+    title: "The Journal — In-Depth Features & Dispatches | The Royal Gallerys",
+    description:
+      "The editorial hub of The Royal Gallerys — in-depth features, original documentaries, podcasts and narrative photography across culture, travel, design and society.",
+    url: "https://theroyalgallerys.com/journal",
+    type: "website",
+    siteName: "The Royal Gallerys",
+    images: [
+      {
+        url: "https://theroyalgallerys.com/images/hero/jaipur-city-palace-grand-facade.jpg",
+        width: 1200,
+        height: 630,
+        alt: "The Royal Gallerys Journal",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@theroyalgallerys",
+    creator: "@theroyalgallerys",
+    title: "The Journal — In-Depth Features & Dispatches | The Royal Gallerys",
+    description:
+      "The editorial hub of The Royal Gallerys — in-depth features, original documentaries, podcasts and narrative photography.",
+    images: ["https://theroyalgallerys.com/images/hero/jaipur-city-palace-grand-facade.jpg"],
+  },
+};
 
 const C = {
   obsidian: "#11110F",

@@ -13,7 +13,7 @@ The interiors are the collaboration between Singh and Lesage: a marriage of rust
 
 [[PHOTO:portrait|/images/experiences/12-mihir-garh-jodhpur/img-02.webp|A suite at Mihir Garh — lime-washed walls in warm ochre, hand-embroidered textiles by Jean-Francois Lesage, reclaimed teak furniture, a private courtyard visible through arched doors, every surface bearing the trace of a human hand|Each of the nine suites is a self-contained sanctuary — the hand-embroidered textiles, produced by Lesage's Chennai atelier, represent some of the finest hand-stitching in the world and take months to complete for a single room]]
 
-[[QUOTE:Luxury is not about square footage or thread count. It is about the quality of attention — to materials, to craftsmanship, to the land. Mihir Garh is the most attentive building in Rajasthan.|The Royal Gallery Editorial]]
+[[QUOTE:Luxury is not about square footage or thread count. It is about the quality of attention — to materials, to craftsmanship, to the land. Mihir Garh is the most attentive building in Rajasthan.|The Royal Gallerys Editorial]]
 
 ## The Nine Suites: Sanctuary in the Desert
 

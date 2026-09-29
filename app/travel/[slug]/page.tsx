@@ -53,23 +53,33 @@ export async function generateMetadata({
   const article = allArticles.find((a) => a.slug === slug);
   if (!article) return { title: "Article Not Found" };
 
+  const fullImageUrl = article.heroImage.startsWith("http")
+    ? article.heroImage
+    : `https://theroyalgallerys.com${article.heroImage}`;
+  const canonicalUrl = `https://theroyalgallerys.com/travel/${slug}`;
+
   return {
     title: article.seoTitle,
     description: article.seoDescription,
+    alternates: { canonical: canonicalUrl },
     openGraph: {
       title: article.ogTitle,
       description: article.ogDescription,
+      url: canonicalUrl,
       type: "article",
+      siteName: "The Royal Gallerys",
       publishedTime: article.publishedDate,
       authors: [article.authorName],
-      images: [{ url: article.heroImage, width: 1200, height: 630, alt: article.ogTitle }],
+      images: [{ url: fullImageUrl, width: 1200, height: 630, alt: article.ogTitle }],
     },
     twitter: {
       card: "summary_large_image",
+      site: "@theroyalgallerys",
+      creator: "@theroyalgallerys",
       title: article.ogTitle,
       description: article.ogDescription,
+      images: [fullImageUrl],
     },
-    alternates: { canonical: `https://theroyalgallerys.com/travel/${slug}` },
   };
 }
 
@@ -251,8 +261,55 @@ export default async function TravelArticlePage({
     ? sections.map((s) => ({ id: s.id, label: s.heading }))
     : [];
 
+  const siteUrl = "https://theroyalgallerys.com";
+  const heroImgUrl = article.heroImage.startsWith("http")
+    ? article.heroImage
+    : `${siteUrl}${article.heroImage}`;
+
+  const articleLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.headline,
+    description: article.seoDescription,
+    image: heroImgUrl,
+    datePublished: article.publishedDate,
+    dateModified: article.publishedDate,
+    author: {
+      "@type": "Person",
+      name: article.authorName,
+      jobTitle: article.authorRole,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "The Royal Gallerys",
+      url: siteUrl,
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/travel/${slug}`,
+    },
+  };
+
+  const breadcrumbsLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+      { "@type": "ListItem", position: 2, name: "Travel", item: `${siteUrl}/travel` },
+      { "@type": "ListItem", position: 3, name: article.headline },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsLd) }}
+      />
       <ReadingProgress />
 
       <article style={{ background: C.ivory }}>

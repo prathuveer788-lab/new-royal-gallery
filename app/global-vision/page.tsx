@@ -1,4 +1,37 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Global Vision — Preserving Heritage Worldwide | The Royal Gallerys",
+  description:
+    "Building a global heritage preservation network — spanning continents, connecting royal traditions, and uniting cultural institutions in preserving civilization's memory.",
+  alternates: { canonical: "https://theroyalgallerys.com/global-vision" },
+  openGraph: {
+    title: "Global Vision — Preserving Heritage Worldwide | The Royal Gallerys",
+    description:
+      "Building a global heritage preservation network — spanning continents, connecting royal traditions, and uniting cultural institutions in preserving civilization's memory.",
+    url: "https://theroyalgallerys.com/global-vision",
+    type: "website",
+    siteName: "The Royal Gallerys",
+    images: [
+      {
+        url: "https://theroyalgallerys.com/images/hero/jaipur-city-palace-grand-facade.jpg",
+        width: 1200,
+        height: 630,
+        alt: "The Royal Gallerys Global Vision",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@theroyalgallerys",
+    creator: "@theroyalgallerys",
+    title: "Global Vision — Preserving Heritage Worldwide | The Royal Gallerys",
+    description:
+      "Building a global heritage preservation network — spanning continents, connecting royal traditions, and uniting cultural institutions.",
+    images: ["https://theroyalgallerys.com/images/hero/jaipur-city-palace-grand-facade.jpg"],
+  },
+};
 
 const C = {
   obsidian: "#11110F",
@@ -62,8 +95,8 @@ export default function GlobalVisionPage() {
 
       <section className="py-16 sm:py-24 px-6 sm:px-8 md:px-12 lg:px-16 text-center" style={{ background: C.cream }}>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-6 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>Join the Global Network</h2>
-        <p className="text-sm sm:text-base font-sans font-normal max-w-xl mx-auto mb-10" style={{ color: C.textStone }}>Partner with The Royal Gallery as we expand across continents.</p>
-        <Link href="/membership" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }} >Become a Partner</Link>
+        <p className="text-sm sm:text-base font-sans font-normal max-w-xl mx-auto mb-10" style={{ color: C.textStone }}>Partner with The Royal Gallerys as we expand across continents.</p>
+        <Link href="/advertise" className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }} >Become a Partner</Link>
       </section>
     </div>
   );

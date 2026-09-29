@@ -13,7 +13,7 @@ The UHNW traveller adds a decisive dimension: discretion. For India's most afflu
 
 This has direct commercial consequences. Properties and brands designed around social visibility — grand lobbies, see-and-be-seen spaces, experiences engineered for Instagram — may actually repel the highest-value Indian guests. The properties capturing the UHNW segment are often the ones that were never designed for visibility at all: heritage buildings with multiple private courtyards, villas with independent access, resorts where dispersion across the grounds is built into the architecture. The privacy premium is real and measurable, with properties that can credibly guarantee discretion capturing ADR premiums of 30 to 80 percent among UHNW travellers.
 
-[[QUOTE:For India's most affluent travellers, the most valuable experience is increasingly the one few people know they had.|The Royal Gallery Editorial]]
+[[QUOTE:For India's most affluent travellers, the most valuable experience is increasingly the one few people know they had.|The Royal Gallerys Editorial]]
 
 ## 2. The Referral Economy
 
@@ -35,7 +35,7 @@ For a luxury travel brand, this means that the most efficient path to relevance 
 
 The practical discipline is editorial, not promotional. Brands must think of themselves as stories — as worlds a reader might want to enter — rather than as products to be pushed. The publication does the work of contextualising the brand within a broader narrative of destination, design, history and culture; the brand's job is to be worth featuring.
 
-[[QUOTE:Among HNW consumers, editorial mentions and peer recommendations outweigh paid advertising as decision drivers by margins of three to one or greater.|The Royal Gallery Editorial]]
+[[QUOTE:Among HNW consumers, editorial mentions and peer recommendations outweigh paid advertising as decision drivers by margins of three to one or greater.|The Royal Gallerys Editorial]]
 
 ## 4. The Ecosystem: Entering the Community
 

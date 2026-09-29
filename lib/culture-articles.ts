@@ -222,8 +222,8 @@ export const allCultureArticles: EditorialArticle[] = [
     readTime: "11 min read",
     publishedDate: "2026-09-05",
     modifiedDate: "2026-09-05",
-    heroImage: "/images/colorful-vibrant-indian-landscape.jpg",
-    heroCaption: "A cultural landscape sustained for centuries by courts, temples and patrons — the enduring setting of India's artistic life. Image: Unsplash.",
+    heroImage: "/images/design/varanasi-silk-weaving-traditional-loom.jpg",
+    heroCaption: "A traditional pit loom in Varanasi: master weavers whose craft lineages were sustained across generations by court and temple patronage. Photograph: Jorge Royan / Wikimedia Commons.",
     sections: [
       {
         id: "the-idea-of-patronage",

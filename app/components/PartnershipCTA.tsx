@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 const C = {
   obsidian: "#11110F",
@@ -56,12 +57,12 @@ export default function PartnershipCTA() {
               Heritage is humanity&apos;s most valuable asset. The stories that built civilizations deserve to survive. The Royal Gallerys exists to ensure they do.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button onClick={() => setShowForm(true)} className="inline-block px-10 py-4 text-xs sm:text-sm uppercase tracking-[0.2em] font-medium font-sans cursor-pointer transition-all duration-500" style={{ color: C.ivory, background: C.obsidian, border: "none" }}>
+              <Link href="/advertise" className="inline-block px-10 py-4 text-xs sm:text-sm uppercase tracking-[0.2em] font-medium font-sans transition-all duration-500 text-center" style={{ color: C.ivory, background: C.obsidian, border: "none" }}>
                 Become a Partner
+              </Link>
+              <button onClick={() => setShowForm(true)} className="inline-block px-10 py-4 text-xs sm:text-sm uppercase tracking-[0.2em] font-medium font-sans cursor-pointer transition-all duration-500" style={{ color: C.textDeep, border: `1px solid rgba(138,115,82,0.35)`, background: "transparent" }}>
+                Quick Enquiry
               </button>
-              <a href="/global-vision" className="inline-block px-10 py-4 text-xs sm:text-sm uppercase tracking-[0.2em] font-medium font-sans transition-all duration-500" style={{ color: C.textDeep, border: `1px solid rgba(138,115,82,0.35)`, background: "transparent" }}>
-                Explore the Vision
-              </a>
             </div>
           </>
         ) : submitted ? (

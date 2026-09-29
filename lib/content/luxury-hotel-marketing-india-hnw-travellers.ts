@@ -17,7 +17,7 @@ Second, family. The Indian luxury travel decision is rarely individual. It invol
 
 Third, cultural signalling. Indian luxury consumers increasingly value experiences that signal cultural intelligence rather than pure expenditure. A suite upgrade is nice. A private audience with a master craftsman, a chef's table built around regional Indian ingredients reimagined through French technique, access to a collection not open to the public — these signal something more potent: that the traveller possesses taste, not merely money.
 
-[[QUOTE:The Indian HNW traveller is not a smaller version of the Chinese outbound market. They are a distinct segment with distinct decision architecture.|The Royal Gallery Editorial]]
+[[QUOTE:The Indian HNW traveller is not a smaller version of the Chinese outbound market. They are a distinct segment with distinct decision architecture.|The Royal Gallerys Editorial]]
 
 ## 2. The Heritage Moat: Why India's Luxury Story Cannot Be Copied
 
@@ -65,7 +65,7 @@ The properties winning this segment share common characteristics: genuine event 
 
 International properties seeking this market should note: the decision-maker for an Indian destination wedding is rarely the couple alone. The family — particularly the parents funding the event — carries significant influence, and the family's criteria (capacity for extended family, vegetarian and Jain dietary capability, suitability for elders, discretion around religious ceremonies) may not align with the couple's aesthetic preferences. Marketing that addresses both audiences simultaneously — aspirational imagery for the couple, operational reassurance for the parents — outperforms single-narrative campaigns.
 
-[[QUOTE:A single well-executed destination wedding can generate more qualified future leads than a year of digital advertising.|The Royal Gallery Editorial]]
+[[QUOTE:A single well-executed destination wedding can generate more qualified future leads than a year of digital advertising.|The Royal Gallerys Editorial]]
 
 ## 6. The Ecosystem Play: A Hotel Is Not an Island
 
@@ -91,7 +91,7 @@ The numbers bear this out. Studies of luxury purchase behaviour consistently sho
 
 At THE ROYAL GALLERYS, this understanding shapes everything we publish. Our editorial focus — the intersection of Indian royalty, heritage architecture, luxury hospitality, craftsmanship, and the cultural worlds that surround them — gives properties a context in which they are experienced rather than displayed. They appear within a broader narrative of destination, design, history, and culture that no standalone advertisement can replicate.
 
-[[QUOTE:A hotel that appears in a trusted editorial environment is not merely receiving exposure. It is receiving endorsement — implicit, unpaid, and therefore significantly more persuasive than any advertisement the same property could purchase.|The Royal Gallery Editorial]]
+[[QUOTE:A hotel that appears in a trusted editorial environment is not merely receiving exposure. It is receiving endorsement — implicit, unpaid, and therefore significantly more persuasive than any advertisement the same property could purchase.|The Royal Gallerys Editorial]]
 
 [[DIVIDER]]
 

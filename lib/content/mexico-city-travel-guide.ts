@@ -15,7 +15,7 @@ The Gran Hotel Ciudad de México, on the Zócalo's southwestern corner, is a Bel
 
 [[PHOTO:portrait|/images/experiences/50-mexico-city/img-02.webp|The Templo Mayor — the excavated ruins of the Mexica great temple, the layers of construction (seven major building phases spanning 200 years) visible in the walls, the cathedral of the conquistadors rising behind, the modern city an omnipresent hum beyond the site's walls, the sense of deep time — seven centuries of continuous urbanism — as palpable as the stones, which were laid by hands that have been dust for half a millennium|The Templo Mayor was the absolute centre of the Mexica universe—twin shrines crowning a stepped pyramid dedicated to Huitzilopochtli, god of war, and Tlaloc, god of rain, rebuilt seven times over two centuries of Aztec rule (1325–1521). Rediscovered in 1978 when electrical workers unearthed the 3.25-metre stone disc of Coyolxauhqui, the dismembered moon goddess, the site forced the demolition of colonial buildings to expose the sacred precinct. The adjoining museum, designed by Pedro Ramírez Vázquez and opened in 1987, houses over 7,000 objects excavated from the temple complex.]]
 
-[[QUOTE:When the conquistadors saw Tenochtitlan, rising from its lake like a vision of enchantment, they asked if they were dreaming. We ask the same question now. The answer — then and now — is yes, we are dreaming, and the dream is Mexico.|The Royal Gallery Editorial]]
+[[QUOTE:When the conquistadors saw Tenochtitlan, rising from its lake like a vision of enchantment, they asked if they were dreaming. We ask the same question now. The answer — then and now — is yes, we are dreaming, and the dream is Mexico.|The Royal Gallerys Editorial]]
 
 ## Chapultepec: The Museum Axis
 

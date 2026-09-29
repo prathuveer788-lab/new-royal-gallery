@@ -52,8 +52,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@theroyalsgallery",
-    creator: "@theroyalsgallery",
+    site: "@theroyalgallerys",
+    creator: "@theroyalgallerys",
     title:
       "The Woman Who Walks With Giants: Aaliya Sultana Babi, the Dinosaur Princess of Balasinor",
     description:
@@ -219,7 +219,7 @@ export default function AaliyaSultanaBabiProfilePage() {
             height={4359}
             fetchPriority="high"
             decoding="async"
-            className="w-full h-full object-cover hero-scale-motion"
+            className="w-full h-full object-cover"
             style={{ objectPosition: "50% 18%" }}
           />
         </picture>
@@ -529,50 +529,7 @@ export default function AaliyaSultanaBabiProfilePage() {
           </div>
         </section>
 
-        {/* ── 8. WIDE IMAGE MOMENT / MUSEUM PLATE (1200px) ── */}
-        <figure
-          aria-label="Plate I: The Dinosaur Princess at Balasinor"
-          className="my-16 sm:my-24 max-w-5xl mx-auto border border-[#D9CFC2] p-4 sm:p-6 bg-[#FBF9F5]"
-        >
-          <div className="relative aspect-[16/10] sm:aspect-[21/9] overflow-hidden bg-[#22344A]">
-            <picture className="w-full h-full block">
-              <source
-                type="image/avif"
-                srcSet="/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait.avif"
-              />
-              <source
-                type="image/webp"
-                srcSet="/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait-1024w.webp"
-              />
-              <img
-                src="/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait.jpg"
-                alt="Aaliya Sultana Babi at the historic residence in Balasinor, Gujarat"
-                loading="lazy"
-                width={2911}
-                height={4359}
-                className="w-full h-full object-cover"
-                style={{ objectPosition: "50% 25%" }}
-              />
-            </picture>
-          </div>
-          {/* Museum-Label Caption */}
-          <figcaption className="pt-4 sm:pt-5 border-t border-[#D9CFC2] mt-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-            <div>
-              <span
-                className="text-[11px] uppercase tracking-[0.28em] font-sans font-semibold mr-3 block sm:inline"
-                style={{ color: "#D4673A" }}
-              >
-                PLATE I
-              </span>
-              <span className="font-playfair italic text-sm sm:text-base text-[#1B1D21]">
-                Aaliya Sultana Babi at Balasinor — custodian of India&apos;s 65-million-year Cretaceous archive.
-              </span>
-            </div>
-            <span className="text-[10px] uppercase tracking-[0.16em] font-sans text-[#6B6F76] flex-shrink-0">
-              [Photographer credit TBC] · Print Feature Vol. XII
-            </span>
-          </figcaption>
-        </figure>
+
 
         {/* ── 9. CHAPTERS IV, V, VI + FACT PANEL ── */}
         <div className="flex items-start justify-between gap-12 lg:gap-16 relative">

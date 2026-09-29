@@ -21,7 +21,7 @@ The garden wing rooms are more contemporary in feeling — comfortable, well-app
 
 [[PHOTO:landscape|/images/experiences/08-samode-haveli-jaipur/01-courtyard.webp|A suite in the original haveli building — frescoed walls in dusty rose and faded indigo, carved wooden ceiling beams, antique furniture from the Samode family collection, French windows opening onto a private balcony above the garden courtyard|The best rooms feature frescoed walls, high ceilings with carved wooden beams, and windows overlooking the garden courtyard — they are furnished with carved wooden chests, miniature paintings, and hand-knotted durries in traditional Rajasthani geometries]]
 
-[[QUOTE:To stay at Samode Haveli is to understand what Jaipur was before it became a tourist destination — a city of noble families, hidden courtyards, and the quiet, enduring beauty of well-kept secrets.|The Royal Gallery Editorial]]
+[[QUOTE:To stay at Samode Haveli is to understand what Jaipur was before it became a tourist destination — a city of noble families, hidden courtyards, and the quiet, enduring beauty of well-kept secrets.|The Royal Gallerys Editorial]]
 
 ## Dining: Rajasthani Tradition in a Garden Courtyard
 

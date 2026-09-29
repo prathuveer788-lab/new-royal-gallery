@@ -27,7 +27,7 @@ Boat rides on the Upper Lake, arranged by the hotel, offer a different perspecti
 
 [[PHOTO:landscape|/images/experiences/18-noor-us-sabah-palace-bhopal/img-03.webp|The Upper Lake at sunset — the water turning gold beneath a pink sky, the mosques and minarets of Bhopal silhouetted on the far shore, a boatman poling his craft across the still surface, the call to prayer drifting across the water|Bhopal's Upper Lake, commissioned by Raja Bhoj in the 11th century, is one of India's oldest man-made lakes — the palace overlooks its northern shore, offering the finest sunset views in the city]]
 
-[[QUOTE:Bhopal is the most underrated city in India. Lakes, history, and the most extraordinary dynasty of women rulers the subcontinent has ever produced — and the world has barely heard of them.|The Royal Gallery Editorial]]
+[[QUOTE:Bhopal is the most underrated city in India. Lakes, history, and the most extraordinary dynasty of women rulers the subcontinent has ever produced — and the world has barely heard of them.|The Royal Gallerys Editorial]]
 
 ## Dining: The Flavours of Bhopal
 

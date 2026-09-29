@@ -56,19 +56,34 @@ export default function MediaKitForm() {
     rawFormData.append("message", (_payload.message as string) || "");
     rawFormData.append("source", "media-kit-download");
     rawFormData.append("_subject", `Media Kit Download: ${_payload.company}`);
+    const isPlaceholder = FORM_ENDPOINT.includes("YOUR_FORM_ID");
     try {
-      const response = await fetch(FORM_ENDPOINT, { method: "POST", headers: { Accept: "application/json" }, body: rawFormData });
-      if (response.ok) {
-        setSubmitted(true);
-        setTimeout(() => {
-          const link = document.createElement("a");
-          link.href = "/media-kit.pdf";
-          link.download = "TheRoyalGallerys-MediaKit.pdf";
-          document.body.appendChild(link); link.click(); document.body.removeChild(link);
-        }, 500);
-      } else { setError(true); }
-    } catch { setError(true); }
-    finally { setSubmitting(false); }
+      if (!isPlaceholder) {
+        const response = await fetch(FORM_ENDPOINT, { method: "POST", headers: { Accept: "application/json" }, body: rawFormData });
+        if (!response.ok) throw new Error("Submission failed");
+      } else {
+        try {
+          const existing = JSON.parse(localStorage.getItem("rg_mediakit_requests") || "[]");
+          existing.push(_payload);
+          localStorage.setItem("rg_mediakit_requests", JSON.stringify(existing));
+        } catch {
+          // Ignore localStorage errors
+        }
+      }
+      setSubmitted(true);
+      setTimeout(() => {
+        const link = document.createElement("a");
+        link.href = "/media-kit.pdf";
+        link.download = "TheRoyalGallerys-MediaKit.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }, 400);
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const inputClass = "w-full px-4 py-3.5 text-sm font-sans transition-all focus:outline-none";

@@ -15,7 +15,7 @@ The Chinese assembly halls — the Cantonese Assembly Hall, the Fujian Assembly 
 
 [[PHOTO:portrait|/images/experiences/28-hoi-an/02-japanese-covered-bridge.webp|/images/experiences/28-hoi-an/img-02.webp|The Chua Cau, or Japanese Covered Bridge, was built in the 1590s by Hoi An's Japanese merchant community to connect their enclave on the western bank of a narrow canal with the Chinese quarter on the eastern. The bridge's architectural anomaly — it functions simultaneously as a thoroughfare and a temple, with a small shrine to the Daoist deity Tran Vo Bac De built into its northern side — reflects the syncretic religious culture of a trading port where Japanese animism, Chinese Daoism, and Vietnamese folk worship coexisted for centuries. The pair of stone dogs and the pair of stone monkeys guarding the bridge's entrances correspond not to the Chinese zodiac but to two years of the Japanese zodiac cycle in which construction began and was completed.|Photo courtesy of Vietnam National Administration of Tourism]]
 
-[[QUOTE:Hoi An is the town that time forgot, and then remembered just in time. It is a place to wander without purpose — the highest form of travel.|The Royal Gallery Editorial]]
+[[QUOTE:Hoi An is the town that time forgot, and then remembered just in time. It is a place to wander without purpose — the highest form of travel.|The Royal Gallerys Editorial]]
 
 ## The Lanterns and the Full Moon
 

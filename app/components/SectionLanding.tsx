@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { C, blurDataURL } from "@/lib/design-tokens";
 import EditorialFeed from "@/app/components/EditorialFeed";
+import NewsletterForm from "@/app/components/NewsletterForm";
 import type { EditorialArticle, SectionConfig } from "@/lib/editorial/types";
 
 export interface SectionSpotlight {
@@ -287,16 +288,21 @@ export default function SectionLanding({
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif tracking-tight mb-4" style={{ color: C.ivory, fontWeight: 400 }}>
             The Finest Stories in Heritage &amp; Luxury, Weekly
           </h2>
-          <p className="text-sm sm:text-base font-sans mb-8 leading-relaxed" style={{ color: "rgba(244,240,231,0.65)", fontWeight: 400 }}>
-            {section.label}, culture, travel, design — curated by our editors and delivered to your inbox. Join the conversation at the intersection of heritage and contemporary luxury.
-          </p>
-          <Link
-            href="/membership"
-            className="inline-block px-10 py-4 text-xs uppercase tracking-[0.22em] font-medium font-sans transition-all duration-500"
-            style={{ border: `1px solid ${C.champagne}`, color: C.ivory }}
-          >
-            Subscribe to the Dispatch
-          </Link>
+          {(() => {
+            const standardTopics = ["Culture", "Travel", "Design", "Society", "Horology", "Gastronomy"];
+            const otherTopics = standardTopics
+              .filter((t) => t.toLowerCase() !== section.label.toLowerCase())
+              .slice(0, 3)
+              .map((t) => t.toLowerCase());
+            return (
+              <p className="text-sm sm:text-base font-sans mb-8 leading-relaxed" style={{ color: "rgba(244,240,231,0.65)", fontWeight: 400 }}>
+                {section.label}, {otherTopics.join(", ")} — curated by our editors and delivered to your inbox. Join the conversation at the intersection of heritage and contemporary luxury.
+              </p>
+            );
+          })()}
+          <div className="max-w-md mx-auto">
+            <NewsletterForm />
+          </div>
         </div>
       </section>
 

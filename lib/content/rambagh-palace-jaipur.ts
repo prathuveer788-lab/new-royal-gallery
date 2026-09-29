@@ -84,7 +84,7 @@ Book Suvarna Mahal at least one week in advance, particularly for weekend dinner
 
 Rambagh Palace is not competing with other hotels in Jaipur. It is competing with a memory — the memory of what a royal household once was, and what hospitality once meant before the age of efficiency metrics and standardized service protocols. That it succeeds so completely is a testament not to its management (though the Taj group runs the property with quiet excellence) but to its lineage. This was not built as a hotel. It was built as a home, and it has never quite stopped feeling like one.
 
-[[QUOTE:Rambagh does not try to be the best hotel in Jaipur. It tries to be the best version of itself — a royal household that happens to accept reservations.|The Royal Gallery Editorial]]
+[[QUOTE:Rambagh does not try to be the best hotel in Jaipur. It tries to be the best version of itself — a royal household that happens to accept reservations.|The Royal Gallerys Editorial]]
 
 You come to Rambagh not for a checklist of amenities but for an atmosphere that cannot be replicated: the scent of tuberoses in the lobby, the sound of peacocks on the lawn at dawn, the taste of a dal recipe that has been perfected over centuries, the sight of a sunset over the Aravalli Hills from a verandah that has witnessed a hundred years of such sunsets. You leave understanding that luxury, at its highest level, is not about what you are given. It is about what you are invited into.
 

@@ -135,6 +135,101 @@ export const SECTIONS: SectionConfig[] = [
     ogDescription:
       "The business of luxury — India's HNW consumers, market dynamics and the strategies that create commercial value.",
   },
+  {
+    slug: "motoring",
+    label: "Motoring",
+    heroImage: "/images/motoring/maharaja-rolls-royce-vintage-collection.jpg",
+    heroCaption: "The Maharaja's vintage Rolls-Royce collection — automotive culture, design, and bespoke engineering. Photograph: Jakub Hałun / Wikimedia Commons.",
+    heroAlt: "The Maharaja vintage Rolls-Royce collection — The Royal Gallerys Motoring section",
+    tagline: "Automotive Heritage · Bespoke Coachbuilding · Grand Touring · Supercars",
+    description:
+      "An exploration of automotive culture, design, and engineering — from the extraordinary vintage collections of India's royal houses to contemporary supercars and overland journeys.",
+    editorialStatement:
+      "Motoring at the highest tier is the convergence of mechanical sculpture, speed, and bespoke patronage. THE ROYAL GALLERYS chronicles the automobiles, artisans, and journeys that define the pinnacle of automotive culture.",
+    feedHeading: "A Curated Selection of Motoring Editorials",
+    seoTitle: "MOTORING — Classic Cars, Bespoke Coachbuilding & Grand Touring | The Royal Gallerys",
+    seoDescription:
+      "The Royal Gallerys Motoring section — royal vintage car collections, 4x4 overland culture, bespoke coachbuilding and high-performance super SUVs.",
+    ogTitle: "MOTORING — The Royal Gallerys Automotive Editorial",
+    ogDescription:
+      "Automotive culture, royal collections, and grand touring journeys.",
+  },
+  {
+    slug: "dining",
+    label: "Dining",
+    heroImage: "/images/dining/rajasthani-royal-thali-banquet.jpg",
+    heroCaption: "The royal thali feast — palace culinary archives and courtly gastronomic heritage. Photograph: Connie Ma / Wikimedia Commons.",
+    heroAlt: "Traditional Rajasthani Royal Thali and Palace Culinary Heritage — The Royal Gallerys Dining section",
+    tagline: "Palace Kitchens · Master Chefs · Terroir & Spirits · Gastronomic Heritage",
+    description:
+      "Restaurants, chefs, culinary culture, wine, single malts, and heritage tea estates — the world of fine dining and subcontinental gastronomic heritage.",
+    editorialStatement:
+      "Gastronomic heritage is living civilisational memory. THE ROYAL GALLERYS explores the courtly recipes, visionary chefs, and agricultural terroirs that define subcontinental culinary authority.",
+    feedHeading: "A Curated Selection of Gastronomic Editorials",
+    seoTitle: "DINING — Royal Kitchens, Fine Dining & Culinary Terroir | The Royal Gallerys",
+    seoDescription:
+      "The Royal Gallerys Dining section — royal palace recipes, Michelin-starred Indian chefs, single malt whisky terroir, and palace restaurant settings.",
+    ogTitle: "DINING — The Royal Gallerys Gastronomic Editorial",
+    ogDescription:
+      "Culinary heritage, royal kitchens, single malt spirits, and fine dining.",
+  },
+  {
+    slug: "society",
+    label: "Society",
+    heroImage: "/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg",
+    heroCaption: "The lakeside courtyards of Udaipur — royalty, polo, philanthropy, and living heritage. Image: Wikimedia Commons.",
+    heroAlt: "Lakeside view of Udaipur — The Royal Gallerys Society section",
+    tagline: "Royalty · Sacred Weddings · Polo Heritage · Cultural Philanthropy",
+    description:
+      "Royalty, weddings, polo, philanthropy, and cultural gatherings — the social architecture of living heritage and its modern custodians.",
+    editorialStatement:
+      "Society is the living tapestry where lineage, patronage, and civic responsibility intersect. THE ROYAL GALLERYS chronicles the families, rituals, and gatherings that shape our cultural landscape.",
+    feedHeading: "A Curated Selection of Society Editorials",
+    seoTitle: "SOCIETY — Royal Dynasties, Polo & Cultural Philanthropy | The Royal Gallerys",
+    seoDescription:
+      "The Royal Gallerys Society section — the House of Mewar, authentic royal weddings, Jodhpur polo seasons, and royal women leading social change.",
+    ogTitle: "SOCIETY — The Royal Gallerys Heritage & Society Editorial",
+    ogDescription:
+      "Royal lineages, sacred wedding ceremonies, polo heritage, and civic leadership.",
+  },
+  {
+    slug: "people",
+    label: "People",
+    heroImage: "/images/beautiful-shot-lodhi-garden-delhi-india-cloudy-sky.jpg",
+    heroCaption: "The visionaries shaping culture, luxury, and heritage. Image: Wikimedia Commons.",
+    heroAlt: "Historic heritage landscapes — The Royal Gallerys People section",
+    tagline: "Profiles · Visionaries · Master Artisans · Cultural Custodians",
+    description:
+      "Royal families, designers, founders, artists, collectors, and visionaries — in-depth profiles of the individuals shaping culture, luxury, and heritage.",
+    editorialStatement:
+      "History is made by individuals with the conviction to create. THE ROYAL GALLERYS presents in-depth portraits of the designers, collectors, hoteliers, and custodians who define our cultural era.",
+    feedHeading: "A Curated Selection of Profiles & Conversations",
+    seoTitle: "PEOPLE — Visionaries, Collectors & Cultural Pioneers | The Royal Gallerys",
+    seoDescription:
+      "The Royal Gallerys People section — in-depth profiles of Raghavendra Rathore, five-generation art collectors, fortress restorers, and royal chefs.",
+    ogTitle: "PEOPLE — The Royal Gallerys Profiles & Conversations",
+    ogDescription:
+      "Profiles of the visionaries, designers, and custodians shaping subcontinental luxury and heritage.",
+  },
+  {
+    slug: "futures",
+    label: "Futures",
+    heroImage: "/images/hallway-arches-with-dramatic-light-shadows.jpg",
+    heroCaption: "Where architectural vision meets future technology. Image: Wikimedia Commons.",
+    heroAlt: "Vaulted corridors and dramatic architectural lighting — The Royal Gallerys Futures section",
+    tagline: "Future Mobility · Sustainable Assets · Innovation · Heritage Intelligence",
+    description:
+      "Technology, future mobility, innovation, and sustainability — the forces reshaping heritage, culture, and luxury for the next century.",
+    editorialStatement:
+      "True innovation does not abandon heritage; it gives it new wings. THE ROYAL GALLERYS investigates how electric aviation, autonomous transit, and sustainable economics ensure that our cultural treasures survive for centuries to come.",
+    feedHeading: "A Curated Selection of Futures Editorials",
+    seoTitle: "FUTURES — Future Mobility, Innovation & Sustainability | The Royal Gallerys",
+    seoDescription:
+      "The Royal Gallerys Futures section — electric aviation, autonomous luxury travel, and cultural heritage as a resilient sustainable asset.",
+    ogTitle: "FUTURES — The Royal Gallerys Innovation & Sustainability Editorial",
+    ogDescription:
+      "Future mobility, sustainable economics, and the technologies preserving heritage for the next century.",
+  },
 ];
 
 const sectionMap = new Map<EditorialSectionSlug, SectionConfig>(

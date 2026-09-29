@@ -13,7 +13,7 @@ The couple is weighing venues on Instagram, on editorial features, on the visual
 
 This dual-audience reality has direct marketing implications. Single-narrative campaigns — a beautiful video aimed at the couple, or a dry capabilities document aimed at the parents — underperform. The winning campaigns address both: cinematic, editorial storytelling that captures the couple's imagination, layered over a credible demonstration of operational capacity that reassures the family funding the event.
 
-[[QUOTE:A single well-executed destination wedding can generate more qualified future leads than a year of digital advertising.|The Royal Gallery Editorial]]
+[[QUOTE:A single well-executed destination wedding can generate more qualified future leads than a year of digital advertising.|The Royal Gallerys Editorial]]
 
 ## 2. The Operational Reality
 
@@ -35,7 +35,7 @@ This is where heritage properties hold a structural advantage that new-build com
 
 For international luxury hotels seeking the Indian destination wedding market, this is the critical insight: the couple and family are not buying a room block, they are buying a stage for the most significant production their family will stage in a decade. The property that offers a stage with genuine character — and the operational capability to support the production — wins.
 
-[[QUOTE:The venue is not merely the setting for the celebration; it is part of the celebration's meaning.|The Royal Gallery Editorial]]
+[[QUOTE:The venue is not merely the setting for the celebration; it is part of the celebration's meaning.|The Royal Gallerys Editorial]]
 
 ## 4. Pricing and Packaging
 

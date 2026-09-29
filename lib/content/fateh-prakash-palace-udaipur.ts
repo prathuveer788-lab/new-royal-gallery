@@ -13,7 +13,7 @@ Today, the Durbar Hall serves afternoon tea from three o'clock, cocktails from s
 
 [[PHOTO:landscape|/images/experiences/06-fateh-prakash-palace-udaipur/01-durbar-hall.webp|Afternoon tea in the Durbar Hall — three-tiered silver stands laden with sandwiches and pastries, a pot of Darjeeling, the Bohemian crystal chandeliers reflecting the golden light that fills the hall through its towering arched windows|Afternoon tea is served from three o'clock daily — the ritual of taking tea beneath those chandeliers as the sun sets over Lake Pichola belongs on any serious list of Rajasthan's essential experiences]]
 
-[[QUOTE:To take tea in the Durbar Hall is to understand, in a single moment, why the maharanas were reluctant to leave Udaipur for any other place on earth.|The Royal Gallery Editorial]]
+[[QUOTE:To take tea in the Durbar Hall is to understand, in a single moment, why the maharanas were reluctant to leave Udaipur for any other place on earth.|The Royal Gallerys Editorial]]
 
 ## The Crystal Gallery: The World's Largest Private Collection
 

@@ -1,5 +1,38 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "The Ecosystem — Five Houses, One Heritage | The Royal Gallerys",
+  description:
+    "Explore the divisions of The Royal Gallerys: Media, Experiences, AI, Research, and Institute — preserving cultural memory through distinct disciplines.",
+  alternates: { canonical: "https://theroyalgallerys.com/ecosystem" },
+  openGraph: {
+    title: "The Ecosystem — Five Houses, One Heritage | The Royal Gallerys",
+    description:
+      "Explore the divisions of The Royal Gallerys: Media, Experiences, AI, Research, and Institute — preserving cultural memory through distinct disciplines.",
+    url: "https://theroyalgallerys.com/ecosystem",
+    type: "website",
+    siteName: "The Royal Gallerys",
+    images: [
+      {
+        url: "https://theroyalgallerys.com/images/hero/jaipur-city-palace-grand-facade.jpg",
+        width: 1200,
+        height: 630,
+        alt: "The Royal Gallerys Ecosystem",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@theroyalgallerys",
+    creator: "@theroyalgallerys",
+    title: "The Ecosystem — Five Houses, One Heritage | The Royal Gallerys",
+    description:
+      "Explore the divisions of The Royal Gallerys: Media, Experiences, AI, Research, and Institute.",
+    images: ["https://theroyalgallerys.com/images/hero/jaipur-city-palace-grand-facade.jpg"],
+  },
+};
 
 const blurDataURL = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGw9IiNkZGRkZGQiIGQ9Ik0wIDBoMXYxSDB6Ii8+PC9zdmc+";
 
@@ -17,31 +50,31 @@ const C = {
 
 const houses = [
   {
-    num: "01", title: "Royal Gallery Media", subtitle: "Stories That Carry Heritage to the World",
+    num: "01", title: "The Royal Gallerys Media", subtitle: "Stories That Carry Heritage to the World",
     desc: "The flagship media house producing the quarterly magazine, original documentaries, the Royal Conversations podcast, and global editorial storytelling — reaching millions across print, digital, film and audio.",
     services: ["Quarterly Magazine", "Documentaries", "Podcast", "Films", "Interviews", "Research Reports", "Digital Features", "Newsletter"],
-    img: "/images/colorful-vibrant-indian-landscape.jpg",
+    img: "/images/hero/jaipur-city-palace-grand-facade.jpg",
   },
   {
-    num: "02", title: "Royal Gallery Experiences", subtitle: "Heritage You Can Live",
+    num: "02", title: "The Royal Gallerys Experiences", subtitle: "Heritage You Can Live",
     desc: "Curating intimate heritage encounters — palace dinners with royal families, private journeys, cultural immersions and annual heritage summits where heritage is not observed but lived.",
     services: ["Palace Dinners", "Heritage Tours", "Royal Conversations", "Heritage Summits", "Luxury Retreats", "Archive Access", "Collectors Circles"],
-    img: "/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg",
+    img: "/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg",
   },
   {
-    num: "03", title: "Royal Gallery AI", subtitle: "Preserving Memory Through Technology",
+    num: "03", title: "The Royal Gallerys AI", subtitle: "Preserving Memory Through Technology",
     desc: "Building the world's most advanced heritage AI — digital preservation, interactive archives, AI heritage portraits, digital twins and multilingual access systems using ethical artificial intelligence.",
     services: ["AI Heritage Portraits", "Interactive Archives", "Digital Twins", "Museum AI", "Multilingual Access", "Digital Preservation", "Historical Reconstruction"],
     img: "/images/hallway-arches-with-dramatic-light-shadows.jpg",
   },
   {
-    num: "04", title: "Royal Gallery Research", subtitle: "Documenting Cultural Memory",
+    num: "04", title: "The Royal Gallerys Research", subtitle: "Documenting Cultural Memory",
     desc: "Archival documentation, oral histories, genealogical research and cultural intelligence — working with royal families, heritage institutions and scholars to document cultural knowledge before it is lost.",
     services: ["Archival Documentation", "Oral Histories", "Family Records", "Genealogical Research", "Cultural Intelligence", "Provenance Verification", "Scholarly Publishing"],
-    img: "/images/beautiful-shot-lodhi-garden-delhi-india-cloudy-sky.jpg",
+    img: "/images/design/varanasi-silk-weaving-traditional-loom.jpg",
   },
   {
-    num: "05", title: "Royal Gallery Institute", subtitle: "Educating the Custodians of Tomorrow",
+    num: "05", title: "The Royal Gallerys Institute", subtitle: "Educating the Custodians of Tomorrow",
     desc: "Masterclasses, heritage leadership programs, public lectures and academic partnerships — creating the next generation of heritage custodians, scholars and cultural leaders.",
     services: ["Masterclasses", "Leadership Programs", "Public Lectures", "Academic Partnerships", "Youth Initiatives", "Certification", "Fellowships"],
     img: "/images/architectural-marvel-with-ornate-columns-arches.jpg",
@@ -86,7 +119,7 @@ export default function EcosystemPage() {
         <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.22em] font-medium font-sans" style={{ color: C.bronze }}>Partnership</span>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mt-4 mb-6 tracking-tight" style={{ color: C.textDeep, fontWeight: 400 }}>Collaborate Across the Ecosystem</h2>
         <p className="font-sans font-normal text-sm sm:text-base leading-relaxed max-w-xl mx-auto mb-10" style={{ color: C.textStone }}>Partner with one house or across the entire ecosystem.</p>
-        <Link href="/membership" className="inline-block px-10 py-4 transition text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ border: `1px solid ${C.bronze}`, color: C.bronze }}>Become a Partner</Link>
+        <Link href="/advertise" className="inline-block px-10 py-4 transition text-xs uppercase tracking-[0.22em] font-medium font-sans" style={{ border: `1px solid ${C.bronze}`, color: C.bronze }}>Become a Partner</Link>
       </section>
     </div>
   );

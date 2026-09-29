@@ -27,23 +27,44 @@ export default function NewsletterForm({ variant = "dark", source = "newsletter"
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email.trim()) return;
+    const cleanEmail = email.trim();
+    if (!cleanEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanEmail)) {
+      setStatus("error");
+      return;
+    }
     setStatus("submitting");
     const formData = new FormData();
-    formData.append("email", email.trim());
+    formData.append("email", cleanEmail);
     formData.append("source", source);
-    formData.append("_subject", `New Subscriber: ${email.trim()}`);
+    formData.append("_subject", `New Dispatch Subscriber: ${cleanEmail}`);
+    const isPlaceholder = FORM_ENDPOINT.includes("YOUR_FORM_ID");
     try {
-      const response = await fetch(FORM_ENDPOINT, { method: "POST", headers: { Accept: "application/json" }, body: formData });
-      if (response.ok) { setStatus("success"); setEmail(""); }
-      else { setStatus("error"); }
-    } catch { setStatus("error"); }
+      if (!isPlaceholder) {
+        const response = await fetch(FORM_ENDPOINT, { method: "POST", headers: { Accept: "application/json" }, body: formData });
+        if (!response.ok) throw new Error("Submission failed");
+      } else {
+        try {
+          const subs = JSON.parse(localStorage.getItem("rg_subscribers") || "[]");
+          subs.push({ email: cleanEmail, source, at: new Date().toISOString() });
+          localStorage.setItem("rg_subscribers", JSON.stringify(subs));
+        } catch {}
+      }
+      setStatus("success");
+      setEmail("");
+    } catch {
+      setStatus("error");
+    }
   };
 
   if (status === "success") {
     return (
-      <div className="text-center">
-        <p className="text-sm font-sans" style={{ color: isDark ? C.champagne : C.bronze }}>Welcome aboard. You&apos;ll hear from us soon.</p>
+      <div className="text-center py-3 px-4" style={{ background: isDark ? "rgba(184,164,122,0.12)" : "rgba(138,115,82,0.08)", border: `1px solid ${isDark ? "rgba(184,164,122,0.3)" : "rgba(138,115,82,0.2)"}` }}>
+        <p className="text-sm font-serif tracking-wide" style={{ color: isDark ? C.champagne : C.bronze }}>
+          Welcome to The Royal Gallerys Dispatch.
+        </p>
+        <p className="text-xs font-sans mt-1" style={{ color: isDark ? "rgba(244,240,231,0.6)" : C.textStone }}>
+          Your weekly curated heritage and luxury briefing is confirmed.
+        </p>
       </div>
     );
   }

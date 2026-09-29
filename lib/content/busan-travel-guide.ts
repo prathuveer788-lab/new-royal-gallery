@@ -31,7 +31,7 @@ The upper floors are where you eat. Select your fish on the ground floor, and th
 
 [[PHOTO:wide|/images/experiences/24-busan/03-jagalchi-market.webp|/images/experiences/24-busan/img-03.webp|Jagalchi, Korea's largest seafood market, traces its origins to the period after the Korean War when women who had lost husbands and fathers in the conflict began selling fish on the Nampo-dong waterfront to support their families. The ajummas — the legendary "Jagalchi grandmothers" — evolved into a formidable economic force, collectively dominating Busan's seafood trade through sheer determination and business acumen. The modern market complex, opened in 2008, spans seven floors and incorporates both the traditional wet market on the ground floor and the elaborate restaurant setup upstairs, where still-twitching fish travel from tank to table in under ten minutes.|Photo courtesy of Korea Tourism Organization]]
 
-[[QUOTE:Busan without Jagalchi would be like Paris without the Seine — a city that had lost its connection to the element that made it.|The Royal Gallery Editorial]]
+[[QUOTE:Busan without Jagalchi would be like Paris without the Seine — a city that had lost its connection to the element that made it.|The Royal Gallerys Editorial]]
 
 ## Gamcheon: The Machu Picchu of Korea
 

@@ -25,7 +25,7 @@ A sunset boat ride on the Narmada is Ahilya Fort's essential experience. The boa
 
 [[PHOTO:landscape|/images/experiences/14-ahilya-fort-maheshwar/img-03.webp|The Narmada River at sunset — pilgrims bathing at the ghats, the spires of Maheshwar's temples silhouetted against a golden sky, a boatman poling his craft across the sacred water, the chant of the evening aarti drifting across the river|The ghats of Maheshwar are among the most beautiful in India — a sweeping arc of stone steps descending to the sacred Narmada, where the evening aarti ceremony transforms the riverbank into a theatre of fire, chant, and devotion]]
 
-[[QUOTE:Ahilya Fort is not a hotel. It is a meditation on what India was and what, in its best moments, it still can be.|The Royal Gallery Editorial]]
+[[QUOTE:Ahilya Fort is not a hotel. It is a meditation on what India was and what, in its best moments, it still can be.|The Royal Gallerys Editorial]]
 
 ## Dining: Flavours of Malwa
 

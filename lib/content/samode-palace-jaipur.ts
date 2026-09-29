@@ -13,7 +13,7 @@ The hall was designed for private audiences — the Rawal's meetings with his mi
 
 [[PHOTO:portrait|/images/experiences/07-samode-palace-jaipur/01-hero.webp|The Diwan-i-Khas at Samode Palace — walls, ceiling, and arches covered in nineteenth-century frescoes depicting Krishna's life, floral arabesques, and geometric patterns, their vegetable-dye colours softened by a century of gentle sunlight|The artists, working with pigments of ground lapis lazuli, terra verte, and iron oxide, covered every surface — the colours have aged into a palette no decorator could replicate: dusty rose, faded indigo, ochre, sage, the pale green of oxidized copper]]
 
-[[QUOTE:Samode is not a palace you visit. It is a palace you inhabit — and the longer you stay, the more it reveals.|The Royal Gallery Editorial]]
+[[QUOTE:Samode is not a palace you visit. It is a palace you inhabit — and the longer you stay, the more it reveals.|The Royal Gallerys Editorial]]
 
 ## The Rooms: Individual, Atmospheric, Unrepeatable
 

@@ -6,10 +6,37 @@ import NewsletterForm from "../components/NewsletterForm";
 import TravelEditorialFeed from "../components/TravelEditorialFeed";
 
 export const metadata: Metadata = {
-  title:
-    "Travel — Luxury Hotels, Palaces & Destinations | THE ROYAL GALLERYS",
+  title: "Travel — Luxury Hotels, Palaces & Destinations | The Royal Gallerys",
   description:
     "Explore extraordinary hotels, royal palaces, destinations, journeys and luxury travel experiences from India and around the world.",
+  alternates: { canonical: "https://theroyalgallerys.com/travel" },
+  openGraph: {
+    title: "Travel — Luxury Hotels, Palaces & Destinations | The Royal Gallerys",
+    description:
+      "Explore extraordinary hotels, royal palaces, destinations, journeys and luxury travel experiences from India and around the world.",
+    url: "https://theroyalgallerys.com/travel",
+    type: "website",
+    siteName: "The Royal Gallerys",
+    images: [
+      {
+        url: "https://theroyalgallerys.com/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg",
+        width: 1200,
+        height: 630,
+        alt: "The Royal Gallerys Grand Travel",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@theroyalgallerys",
+    creator: "@theroyalgallerys",
+    title: "Travel — Luxury Hotels, Palaces & Destinations | The Royal Gallerys",
+    description:
+      "Explore extraordinary hotels, royal palaces, destinations, journeys and luxury travel experiences from India and around the world.",
+    images: [
+      "https://theroyalgallerys.com/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg",
+    ],
+  },
 };
 
 const C = {
@@ -30,9 +57,12 @@ const blurDataURL =
 const travelArticles = allArticles.filter(
   (a) => a.editorialSection === "travel",
 );
-const hotelsCount = travelArticles.filter(
-  (a) => a.editorialSubcategory === "hotels",
+const storiesCount = travelArticles.length;
+const countriesCount = new Set(travelArticles.map((a) => a.country).filter(Boolean)).size;
+const palacesCount = travelArticles.filter(
+  (a) => a.category === "Indian Palace Hotels" || a.editorialSubcategory === "hotels",
 ).length;
+const continentsCount = 6;
 
 export default function TravelPage() {
   return (
@@ -41,8 +71,8 @@ export default function TravelPage() {
       <section className="relative min-h-[65vh] sm:min-h-[75vh] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/colorful-vibrant-indian-landscape.jpg"
-            alt="Luxury Travel"
+            src="/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg"
+            alt="Luxury heritage travel — Udaipur City Palace and royal destinations"
             fill
             priority
             placeholder="blur"
@@ -62,13 +92,13 @@ export default function TravelPage() {
             The world&apos;s most extraordinary journeys, places and experiences
           </p>
           <div className="flex items-center gap-3 text-[10px]/[11px] font-sans font-normal" style={{ color: "rgba(244,240,231,0.5)" }}>
-            <span>{travelArticles.length} Stories</span>
+            <span>{storiesCount} Stories</span>
             <span style={{ color: "rgba(244,240,231,0.2)" }}>·</span>
-            <span>6 Continents</span>
+            <span>{continentsCount} Continents</span>
             <span style={{ color: "rgba(244,240,231,0.2)" }}>·</span>
-            <span>20 Countries</span>
+            <span>{countriesCount} Countries</span>
             <span style={{ color: "rgba(244,240,231,0.2)" }}>·</span>
-            <span>{hotelsCount} Palaces</span>
+            <span>{palacesCount} Palaces</span>
           </div>
         </div>
       </section>

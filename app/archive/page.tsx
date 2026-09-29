@@ -1,5 +1,38 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "The Archive — Historical Folios & Heritage Collections | The Royal Gallerys",
+  description:
+    "Historical and modern photography, the Living Archive Project, royal collection documentation, and heritage records — preserving what time would erase.",
+  alternates: { canonical: "https://theroyalgallerys.com/archive" },
+  openGraph: {
+    title: "The Archive — Historical Folios & Heritage Collections | The Royal Gallerys",
+    description:
+      "Historical and modern photography, the Living Archive Project, royal collection documentation, and heritage records — preserving what time would erase.",
+    url: "https://theroyalgallerys.com/archive",
+    type: "website",
+    siteName: "The Royal Gallerys",
+    images: [
+      {
+        url: "https://theroyalgallerys.com/images/hero/jaipur-city-palace-grand-facade.jpg",
+        width: 1200,
+        height: 630,
+        alt: "The Royal Gallerys Archive",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@theroyalgallerys",
+    creator: "@theroyalgallerys",
+    title: "The Archive — Historical Folios & Heritage Collections | The Royal Gallerys",
+    description:
+      "Historical and modern photography, the Living Archive Project, royal collection documentation, and heritage records — preserving what time would erase.",
+    images: ["https://theroyalgallerys.com/images/hero/jaipur-city-palace-grand-facade.jpg"],
+  },
+};
 
 const blurDataURL = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGw9IiNkZGRkZGQiIGQ9Ik0wIDBoMXYxSDB6Ii8+PC9zdmc+";
 

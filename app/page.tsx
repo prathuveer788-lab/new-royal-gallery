@@ -194,27 +194,28 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
             {[
               { href: "/society/aaliya-sultana-babi-dinosaur-princess-balasinor", label: "Society · Profile", title: "The Woman Who Walks With Giants", meta: "Profile · 12 min read", img: "/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait.webp" },
-              { href: "/travel", label: "Travel", title: "The World's Most Extraordinary Palace Hotels", meta: "Hotels · 14 min read", img: "/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg" },
-              { href: "/culture", label: "Culture", title: "The Golden Thread: Royal Patronage and Artisan Heritage", meta: "Essay · 15 min read", img: "/images/hawa-mahal-palace-jaipur-india.jpg" },
+              { href: "/travel/the-balmoral", label: "Travel · Hotel Feature", title: "The Balmoral: Edinburgh's Grand Old Station Hotel", meta: "Review · 15 min read", img: "/images/experiences/43-edinburgh/img-01.webp" },
+              { href: "/motoring/the-maharajas-garage-royal-vintage-cars", label: "Motoring · Classic Cars", title: "The Maharaja's Garage: India's Hidden Automotive Treasures", meta: "Investigation · 15 min read", img: "/images/motoring/maharaja-rolls-royce-vintage-collection.jpg" },
+              { href: "/culture/indian-royal-art-collections", label: "Culture · Art & Lineage", title: "The Golden Thread: Royal Patronage and Artisan Heritage", meta: "Essay · 15 min read", img: "/images/hawa-mahal-palace-jaipur-india.jpg" },
             ].map((item) => (
               <Link key={item.href} href={item.href} className="group flex flex-col">
                 <div className="relative aspect-[3/4] overflow-hidden mb-6">
                   <Image
                     src={item.img} alt={item.label} fill placeholder="blur" blurDataURL={blurDataURL}
-                    sizes="(max-width:768px)100vw,33vw"
+                    sizes="(max-width:768px)100vw,25vw"
                     className="object-cover group-hover:scale-[1.03] transition-transform duration-1000 ease-in-out"
                   />
                 </div>
                 <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.22em] font-sans font-medium mb-2.5" style={{ color: C.bronze }}>
                   {item.label}
                 </span>
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-serif leading-[1.15] mb-3 transition-colors duration-300 group-hover:text-[#8A7352]" style={{ color: C.textDeep, fontWeight: 400 }}>
+                <h3 className="text-lg sm:text-xl font-serif leading-[1.18] mb-3 transition-colors duration-300 group-hover:text-[#8A7352]" style={{ color: C.textDeep, fontWeight: 400 }}>
                   {item.title}
                 </h3>
-                <span className="text-[11px] sm:text-xs font-sans tracking-wide font-light" style={{ color: C.textStone }}>
+                <span className="text-[11px] sm:text-xs font-sans tracking-wide font-light mt-auto" style={{ color: C.textStone }}>
                   {item.meta}
                 </span>
               </Link>
@@ -345,11 +346,11 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
             {[
-              { title: "The Fort Palaces of Rajasthan", sub: "Architecture", img: "/images/mehrangarh-fort.jpg" },
-              { title: "Inside the Homes of Indian Royalty", sub: "Interiors", img: "/images/hallway-arches-with-dramatic-light-shadows.jpg" },
-              { title: "The Craftsmen Keeping Centuries Alive", sub: "Craft", img: "/images/design/varanasi-silk-weaving-traditional-loom.jpg" },
+              { title: "The Architecture of Indian Palaces", sub: "Architecture", img: "/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg", href: "/design/indian-palace-architecture-guide" },
+              { title: "India's Luxury Interior Design Market", sub: "Interiors", img: "/images/hallway-arches-with-dramatic-light-shadows.jpg", href: "/design/luxury-interior-design-market-india" },
+              { title: "Luxury Hospitality Design: Heritage as Differentiation", sub: "Craft", img: "/images/design/varanasi-silk-weaving-traditional-loom.jpg", href: "/design/luxury-hospitality-design-india" },
             ].map((item) => (
-              <Link key={item.title} href="/design" className="group flex flex-col">
+              <Link key={item.title} href={item.href} className="group flex flex-col">
                 <div className="relative aspect-[4/5] overflow-hidden mb-5">
                   <Image
                     src={item.img} alt={item.title} fill placeholder="blur" blurDataURL={blurDataURL}
@@ -379,23 +380,29 @@ export default function HomePage() {
               From vintage Rolls-Royces in Rajasthan to the new Defenders crossing the Thar — an exploration of automotive culture, design and engineering.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
             {[
-              { title: "The Maharaja's Garage", sub: "Classic Cars", desc: "The extraordinary collections of vintage automobiles preserved by India's royal families — Rolls-Royce, Bentley, Daimler and beyond.", img: "/images/motoring/maharaja-rolls-royce-vintage-collection.jpg" },
-              { title: "Defender, G-Wagon & the Modern Safari", sub: "4×4", desc: "How the world's most capable vehicles are redefining luxury adventure travel across India, Africa, and beyond.", img: "/images/motoring/land-rover-defender-safari-expedition.jpg" },
+              { title: "The Maharaja's Garage", sub: "Classic Cars", desc: "The extraordinary collections of vintage automobiles preserved by India's royal families — Rolls-Royce, Bentley, Daimler and beyond.", img: "/images/motoring/maharaja-rolls-royce-vintage-collection.jpg", href: "/motoring/the-maharajas-garage-royal-vintage-cars" },
+              { title: "Defender, G-Wagon & Safari Culture", sub: "4×4", desc: "How the world's most capable vehicles are redefining luxury adventure travel across the Thar Desert, Scotland, and Africa.", img: "/images/motoring/land-rover-defender-safari-expedition.jpg", href: "/motoring/defender-gwagon-land-cruiser-luxury-safari" },
+              { title: "Rolls-Royce & the Maharajas", sub: "Bespoke Heritage", desc: "A century of bespoke patronage between Goodwood and the subcontinent's royal houses — from the Star of India to custom state Phantoms.", img: "/images/motoring/maharaja-rolls-royce-vintage-collection.jpg", href: "/motoring/rolls-royce-and-indian-maharajas-bespoke-history" },
             ].map((item) => (
-              <Link key={item.title} href="/motoring" className="group grid grid-cols-1 sm:grid-cols-5 gap-6 sm:gap-7 items-center transition-colors duration-300 p-5 sm:p-6 -m-5 sm:-m-6" style={{ background: C.ivory }}>
-                <div className="sm:col-span-2 relative aspect-[4/3] overflow-hidden">
+              <Link key={item.title} href={item.href} className="group flex flex-col transition-colors duration-300 p-5 sm:p-6" style={{ background: C.ivory, border: "1px solid rgba(138,115,82,0.15)" }}>
+                <div className="relative aspect-[4/3] overflow-hidden mb-5">
                   <Image
                     src={item.img} alt={item.title} fill placeholder="blur" blurDataURL={blurDataURL}
-                    sizes="(max-width:640px)100vw,40vw"
+                    sizes="(max-width:768px)100vw,33vw"
                     className="object-cover group-hover:scale-[1.03] transition-transform duration-1000 ease-in-out"
                   />
                 </div>
-                <div className="sm:col-span-3 space-y-3">
-                  <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.2em] font-sans font-medium" style={{ color: C.bronze }}>{item.sub}</span>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-serif leading-tight transition-colors duration-300 group-hover:text-[#8A7352]" style={{ color: C.textDeep, fontWeight: 400 }}>{item.title}</h3>
-                  <p className="text-sm font-sans leading-relaxed" style={{ color: C.textStone, fontWeight: 400 }}>{item.desc}</p>
+                <div className="space-y-3 flex-1 flex flex-col justify-between">
+                  <div>
+                    <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.2em] font-sans font-medium" style={{ color: C.bronze }}>{item.sub}</span>
+                    <h3 className="text-xl sm:text-2xl font-serif leading-tight mt-2 mb-2 transition-colors duration-300 group-hover:text-[#8A7352]" style={{ color: C.textDeep, fontWeight: 400 }}>{item.title}</h3>
+                    <p className="text-sm font-sans leading-relaxed" style={{ color: C.textStone, fontWeight: 400 }}>{item.desc}</p>
+                  </div>
+                  <span className="text-[10px] uppercase tracking-[0.16em] font-sans text-[#8A7352] mt-4 inline-block group-hover:underline">
+                    Read Story →
+                  </span>
                 </div>
               </Link>
             ))}
@@ -541,12 +548,12 @@ export default function HomePage() {
           {/* SECONDARY CARDS GRID (All link to specific article URLs) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" style={{ background: "transparent" }}>
             {[
-              { tag: "Royalty", title: "The House of Mewar: A Dynasty in the 21st Century", href: "/royalty/royal-heritage-matters-luxury-brands" },
-              { tag: "Profile", title: "Raghavendra Rathore: The Man Who Gave the Bandhgala a Future", href: "/style/new-indian-couture-heritage-meets-modern-luxury" },
-              { tag: "Polo", title: "The Sport of Kings Returns to Jodhpur", href: "/travel/umaid-bhawan-palace-jodhpur" },
-              { tag: "Interview", title: "The Collector: Inside Five Generations of Indian Art", href: "/culture/indian-royal-art-collections" },
-              { tag: "Philanthropy", title: "How India's Royal Women Are Leading Social Change", href: "/society/portraits-of-heritage" },
-              { tag: "Visionary", title: "The Hotelier Restoring Rajasthan's Forgotten Fortresses", href: "/design/indian-palace-architecture-guide" },
+              { tag: "Royalty", title: "The House of Mewar: A Dynasty in the 21st Century", href: "/society/the-house-of-mewar-a-dynasty-in-the-21st-century" },
+              { tag: "Profile", title: "Raghavendra Rathore: The Man Who Gave the Bandhgala a Future", href: "/people/raghavendra-rathore-the-man-who-gave-the-bandhgala-a-future" },
+              { tag: "Polo", title: "The Sport of Kings Returns to Jodhpur", href: "/society/the-sport-of-kings-returns-to-jodhpur" },
+              { tag: "Interview", title: "The Collector: Inside Five Generations of Indian Art", href: "/people/the-collector-inside-one-familys-five-generations-of-indian-art" },
+              { tag: "Philanthropy", title: "How India's Royal Women Are Leading Social Change", href: "/society/how-indias-royal-women-are-leading-social-change" },
+              { tag: "Visionary", title: "The Hotelier Restoring Rajasthan's Forgotten Fortresses", href: "/people/the-hotelier-restoring-rajasthans-forgotten-fortresses" },
             ].map((s) => (
               <Link key={s.title} href={s.href} className="group flex flex-col justify-between py-6 px-6 border border-[#D9CFC2] transition-colors duration-300 hover:border-[#8A7352]" style={{ background: C.ivory }}>
                 <div>

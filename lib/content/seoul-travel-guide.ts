@@ -23,7 +23,7 @@ The Huwon, or Secret Garden, is Changdeokgung's greatest treasure — a 78-acre 
 
 [[PHOTO:landscape|/images/experiences/25-seoul/03-buyongji-pond.webp|/images/experiences/25-seoul/img-03.webp|The Huwon, or Secret Garden, of Changdeokgung spans 78 acres of naturalistic landscape that was designed not as a garden in the European sense but as a curated wilderness — a philosophy of landscape architecture in which human intervention is deliberately invisible. The Buyongji pond, with its circular island representing the Daoist paradise of the immortals, was the setting where King Jeongjo (r. 1776-1800) composed poetry and held scholarly debates with the finest minds of the Joseon court. The garden's survival through Japanese occupation, the Korean War, and Seoul's relentless development is a minor miracle — and its UNESCO inscription in 1997 recognised it as an outstanding example of Far Eastern palace garden design.|Photo courtesy of Korea Tourism Organization]]
 
-[[QUOTE:Seoul is not a city that asks to be loved. It is a city that demands to be reckoned with — and in the reckoning, you discover that love has already arrived.|The Royal Gallery Editorial]]
+[[QUOTE:Seoul is not a city that asks to be loved. It is a city that demands to be reckoned with — and in the reckoning, you discover that love has already arrived.|The Royal Gallerys Editorial]]
 
 ## Insadong and Bukchon: The Old City, Alive
 

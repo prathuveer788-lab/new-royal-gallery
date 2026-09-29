@@ -15,7 +15,7 @@ The Diwan-i-Khas, the palace's formal reception room, is a treasure. Crystal cha
 
 [[PHOTO:portrait|/images/experiences/20-bhanwar-vilas-palace-karauli/img-01.webp|The Diwan-i-Khas at Bhanwar Vilas Palace — crystal chandeliers casting pools of warm light, a gilded ceiling reflecting the glitter, oil portraits of the Jadon Rajput rulers observing from the walls, the room unchanged since 1938|The chandeliers were imported from Czechoslovakia, the furniture from England, the carpets from Persia — the Diwan-i-Khas is a time capsule of the globalised aesthetic that defined princely taste in the final years before Indian independence]]
 
-[[QUOTE:In Karauli, the tourist tide has not yet arrived. What you find instead is a Rajasthan that exists for itself, not for the visitor — and a palace whose hospitality has nothing to do with performance.|The Royal Gallery Editorial]]
+[[QUOTE:In Karauli, the tourist tide has not yet arrived. What you find instead is a Rajasthan that exists for itself, not for the visitor — and a palace whose hospitality has nothing to do with performance.|The Royal Gallerys Editorial]]
 
 ## The Kitchens: Home Cooking from a Royal Kitchen
 

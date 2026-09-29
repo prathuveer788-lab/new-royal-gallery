@@ -15,7 +15,7 @@ The Four Seasons Firenze, occupying a converted Renaissance palace and a former 
 
 [[PHOTO:portrait|/images/experiences/37-tuscany/img-02.webp|The Duomo at sunrise — Brunelleschi's dome rising above the terracotta rooftops of Florence, the marble facade of the cathedral catching the first light, the city still sleeping, the Piazza del Duomo empty of all but the pigeons and the early-rising Florentines heading to work|Filippo Brunelleschi's dome, completed in 1436, remains the largest masonry dome ever built — spanning 45.5 metres, constructed without centering or buttresses, using a double-shell herringbone brick technique that engineers still study today. The marble facade, however, is a 19th-century confection: the original Gothic facade designed by Arnolfo di Cambio was dismantled in 1587 by the Medici and never replaced until Emilio De Fabris won the competition for the current neo-Gothic polychrome facade in 1871, completed in 1887. The Duomo — formally the Cattedrale di Santa Maria del Fiore — was designed to hold 30,000 worshippers, a declaration of Florentine ambition rivalling any city in Christendom.]]
 
-[[QUOTE:Florence is a city that makes you feel simultaneously inspired and inadequate — which is, perhaps, the most honest response to genius.|The Royal Gallery Editorial]]
+[[QUOTE:Florence is a city that makes you feel simultaneously inspired and inadequate — which is, perhaps, the most honest response to genius.|The Royal Gallerys Editorial]]
 
 ## Siena and the Palio
 

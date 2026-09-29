@@ -17,7 +17,7 @@ For those who prefer intimacy to grandeur, the Saint James Paris — a château-
 
 [[PHOTO:portrait|/images/experiences/30-paris/img-02.webp|The garden courtyard at Le Bristol — manicured box hedges and gravel paths, tables set for lunch beneath white parasols, the hotel's 18th-century facade glowing in the afternoon light, Fa-raon the Burmese surveying his domain from a strategic position on a Louis XV armchair|Le Bristol was opened in 1925 by Hippolyte Jammet, who named it after the 18th-century Earl of Bristol, a fabled traveller renowned for demanding the finest accommodations in Europe. The hotel sheltered Jewish refugees during the German occupation, and today the Oetker family — owners since 1978 — maintain the largest courtyard garden of any palace hotel in Paris at 1,200 square metres. The house cat Fa-raon, a pedigree Birman — not Burmese — follows a tradition of feline hoteliers that stretches back decades.]]
 
-[[QUOTE:Paris is not a city. It is a world — one that demands to be seen, tasted, walked, and loved in every conceivable light.|The Royal Gallery Editorial]]
+[[QUOTE:Paris is not a city. It is a world — one that demands to be seen, tasted, walked, and loved in every conceivable light.|The Royal Gallerys Editorial]]
 
 ## The Marais: Hidden Courtyards and Private Mansions
 

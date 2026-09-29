@@ -25,7 +25,7 @@ It is worth noting that the museum has been renamed several times — it was ori
 
 [[PHOTO:landscape|/images/experiences/27-ho-chi-minh-city/03-war-remnants-museum.webp|/images/experiences/27-ho-chi-minh-city/img-03.webp|The War Remnants Museum, housed in a former United States Information Agency building, opened in 1975 as the "Exhibition House for US and Puppet Crimes" — a title that reflected the raw, immediate anger of a country just emerging from thirty years of continuous war. The courtyard displays, including a F-5A fighter jet, an M48 Patton tank, and a UH-1 "Huey" helicopter, were captured from the US-supported South Vietnamese military during the 1975 Spring Offensive that ended the war. The exterior artillery pieces and aircraft have been left to weather naturally under the tropical sun rather than being restored to parade-ground condition — a curatorial decision that reflects the museum's commitment to showing war as it is: real, rusted, and terrible.|Photo courtesy of Vietnam National Administration of Tourism]]
 
-[[QUOTE:You cannot understand Vietnam without understanding the war. And you cannot understand the war without standing in this museum, looking at these photographs, and asking yourself what you would have done.|The Royal Gallery Editorial]]
+[[QUOTE:You cannot understand Vietnam without understanding the war. And you cannot understand the war without standing in this museum, looking at these photographs, and asking yourself what you would have done.|The Royal Gallerys Editorial]]
 
 ## Ben Thanh Market and the Art of Haggling
 
