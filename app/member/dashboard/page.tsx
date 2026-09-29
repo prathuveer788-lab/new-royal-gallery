@@ -5,82 +5,61 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import DigitalMembershipCard from "@/app/components/membership/DigitalMembershipCard";
+import CinematicEntrance from "@/app/components/membership/CinematicEntrance";
+import PrivateWorldHeader from "@/app/components/membership/PrivateWorldHeader";
+import StoryReaderModal from "@/app/components/membership/StoryReaderModal";
+import PrivateWorldSearch from "@/app/components/membership/PrivateWorldSearch";
+import {
+  PRIVATE_WORLDS,
+  getAllStories,
+  PrivateStory,
+} from "@/lib/membership/private-world-data";
 import type {
   SafeMember,
   PrintIssueItem,
-  ArchiveIssueItem,
-  PrivateFileItem,
-  CollectorEditionItem,
   EditorialSubmission,
-  MemberNotification,
 } from "@/lib/membership/store";
-
-const TABS = [
-  { id: "membership", label: "My Membership" },
-  { id: "print", label: "Print Issues" },
-  { id: "archive", label: "Archive" },
-  { id: "private-files", label: "Private Files" },
-  { id: "collector", label: "Collector's Edition" },
-  { id: "editorial-desk", label: "Editorial Desk" },
-  { id: "submissions", label: "My Submissions" },
-  { id: "notifications", label: "Notifications" },
-  { id: "profile", label: "My Profile" },
-];
-
-const CATEGORIES = [
-  "Heritage",
-  "Family History",
-  "Travel",
-  "Architecture",
-  "Culture",
-  "Archive",
-  "Art",
-  "Design",
-  "Society",
-  "Other",
-];
 
 export default function MemberDashboardPage() {
   const router = useRouter();
 
-  const [activeTab, setActiveTab] = useState("membership");
+  // Authentication State
   const [member, setMember] = useState<SafeMember | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Content
+  // Entrance Sequence (Screen 01)
+  const [showEntrance, setShowEntrance] = useState(true);
+
+  // Active View Tab: 'all' | 'timeline' | 'vault' | 'table' | 'object' | 'automobile' | 'palace' | 'book' | 'portrait' | 'room' | 'maps' | 'credential'
+  const [activeTab, setActiveTab] = useState("all");
+
+  // Reader Modal State
+  const [activeStory, setActiveStory] = useState<PrivateStory | null>(null);
+
+  // Search Modal
+  const [searchOpen, setSearchOpen] = useState(false);
+
+  // Timeline Period Filter
+  const [timelinePeriodFilter, setTimelinePeriodFilter] = useState("ALL");
+
+  // Content for Dossier
   const [printIssues, setPrintIssues] = useState<PrintIssueItem[]>([]);
-  const [archiveIssues, setArchiveIssues] = useState<ArchiveIssueItem[]>([]);
-  const [privateFiles, setPrivateFiles] = useState<PrivateFileItem[]>([]);
-  const [collectorEditions, setCollectorEditions] = useState<CollectorEditionItem[]>([]);
   const [submissions, setSubmissions] = useState<EditorialSubmission[]>([]);
-  const [notifications, setNotifications] = useState<MemberNotification[]>([]);
 
-  // Reader Modal
-  const [readingItem, setReadingItem] = useState<{
-    title: string;
-    subtitle?: string;
-    content: string;
-    code?: string;
-  } | null>(null);
-
-  // Editorial Desk Submission
+  // Editorial Desk Submission Form
   const [subTitle, setSubTitle] = useState("");
   const [subCategory, setSubCategory] = useState("Heritage");
   const [subDesc, setSubDesc] = useState("");
   const [subNotes, setSubNotes] = useState("");
   const [submittingStory, setSubmittingStory] = useState(false);
-  const [subSuccessMsg, setSubSuccessMsg] = useState("");
-  const [subErrorMsg, setSubErrorMsg] = useState("");
+  const [subMsg, setSubMsg] = useState("");
 
-  // Profile Form
+  // Profile Form State
   const [profName, setProfName] = useState("");
-  const [profEmail, setProfEmail] = useState("");
   const [profPhone, setProfPhone] = useState("");
-  const [profWhatsapp, setProfWhatsapp] = useState("");
   const [profStreet, setProfStreet] = useState("");
   const [profCity, setProfCity] = useState("");
   const [profState, setProfState] = useState("");
-  const [profCountry, setProfCountry] = useState("India");
   const [profPincode, setProfPincode] = useState("");
   const [savingProfile, setSavingProfile] = useState(false);
   const [profileMsg, setProfileMsg] = useState("");
@@ -102,173 +81,29 @@ export default function MemberDashboardPage() {
 
         const m: SafeMember = data.member;
         setMember(m);
-
-        setProfName(m.fullName);
-        setProfEmail(m.email);
-        setProfPhone(m.phone);
-        setProfWhatsapp(m.whatsapp || m.phone);
+        setProfName(m.fullName || "");
+        setProfPhone(m.phone || "");
         setProfStreet(m.address?.street || "");
         setProfCity(m.address?.city || "");
         setProfState(m.address?.state || "");
-        setProfCountry(m.address?.country || "India");
         setProfPincode(m.address?.pincode || "");
 
-        // Fetch submissions
-        const subRes = await fetch("/api/member/submit-story");
-        if (subRes.ok) {
-          const subData = await subRes.json();
-          setSubmissions(subData.submissions || []);
+        // Check if user already saw entrance in this session
+        const alreadySaw = sessionStorage.getItem("rg_seen_entrance");
+        if (alreadySaw === "true") {
+          setShowEntrance(false);
         }
 
-        setPrintIssues([
-          {
-            id: "vol-01-summer-2026",
-            issueNumber: "Volume I",
-            title: "The Living Heritage of Princely India",
-            period: "Summer 2026",
-            coverImage: "/images/hero/jaipur-city-palace-grand-facade.jpg",
-            status: "Delivered",
-            dispatchDate: "June 2026",
-            trackingNumber: "TRG-PRT-882910",
-            description:
-              "The inaugural international edition exploring palace restorations, royal archives of Rajasthan, and modern custodianship.",
-          },
-          {
-            id: "vol-02-autumn-2026",
-            issueNumber: "Volume II",
-            title: "Jewels, Horology & Haute Époque",
-            period: "Autumn 2026",
-            coverImage: "/images/watches/watch-hero.jpeg",
-            status: "Dispatched",
-            dispatchDate: "September 2026",
-            trackingNumber: "TRG-PRT-904122",
-            description:
-              "An in-depth inquiry into royal jewellery provenance, master watchmakers of the princely courts, and private connoisseurship.",
-          },
-          {
-            id: "vol-03-winter-2026",
-            issueNumber: "Volume III",
-            title: "Winter Salons & The Art of the Table",
-            period: "Winter 2026",
-            coverImage: "/images/dining/rajasthani-royal-thali-banquet.jpg",
-            status: "Preparing",
-            dispatchDate: "December 2026",
-            description:
-              "The winter banquet tradition, private cellar chronicles, and culinary dynasties of the Subcontinent.",
-          },
-        ]);
-
-        setArchiveIssues([
-          {
-            id: "arc-2026-v1",
-            title: "Volume I — Foundations of Grandeur",
-            volume: "Volume I",
-            season: "Summer",
-            year: 2026,
-            coverImage: "/images/hero/jaipur-city-palace-grand-facade.jpg",
-            pageCount: 224,
-            summary:
-              "The inaugural volume documenting the restoration of Baoris, Mewar royal kitchens, and the bespoke Rolls-Royces of the Maharajas.",
-            featuredStory: "Inside City Palace Jaipur: An Unbroken Lineage",
-          },
-          {
-            id: "arc-2025-retrospective",
-            title: "Special Retrospective — The Archival Portfolios",
-            volume: "Archival Special",
-            season: "Annual",
-            year: 2025,
-            coverImage: "/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg",
-            pageCount: 180,
-            summary:
-              "A private curated folio of glass-plate negatives from 1890–1930 documenting royal durbars and palace architectures.",
-            featuredStory: "The Forgotten Durbar Photographs of 1911",
-          },
-          {
-            id: "arc-2025-monograph",
-            title: "Monograph — Textiles, Weaves & Royal Looms",
-            volume: "Monograph IV",
-            season: "Autumn",
-            year: 2025,
-            coverImage: "/images/design/varanasi-silk-weaving-traditional-loom.jpg",
-            pageCount: 148,
-            summary:
-              "The royal patrons of Varanasi, Patan Patola, and Chanderi: preserving five centuries of handloom luxury.",
-            featuredStory: "Zari, Silver & Gold: The Guilds of Varanasi",
-          },
-        ]);
-
-        setPrivateFiles([
-          {
-            id: "pf-2026-01",
-            code: "DOSSIER NO. 01 / 2026",
-            title: "The Lost Cellars of Mewar & The Royal Recipes",
-            subtitle: "Unpublished manuscripts and oral histories from the royal kitchens of Udaipur",
-            description:
-              "A 64-page confidential digital dossier translating royal court recipes, banquet etiquette of the 19th century, and the secret spice blends passed through four generations of royal khansamas.",
-            publicationDate: "July 2026",
-            coverImage: "/images/dining/rajasthani-royal-thali-banquet.jpg",
-            readTime: "45 min read",
-            pageCount: 64,
-            fileSize: "18.4 MB",
-            restricted: true,
-          },
-          {
-            id: "pf-2026-02",
-            code: "DOSSIER NO. 02 / 2026",
-            title: "The Golconda Emerald & Diamond Provenance Register",
-            subtitle: "Tracing 18 royal gems from the Nizam's treasury to modern European private vaults",
-            description:
-              "Exclusively compiled with gemstone historians and museum archivists, featuring high-resolution gemological diagrams, archival receipts, and verified provenance records.",
-            publicationDate: "September 2026",
-            coverImage: "/images/style/article-07/high-jewellery-gold-luxury.jpg",
-            readTime: "60 min read",
-            pageCount: 88,
-            fileSize: "24.1 MB",
-            restricted: true,
-          },
-          {
-            id: "pf-2026-03",
-            code: "DOSSIER NO. 03 / 2026",
-            title: "Coachbuilt: The 42 Bespoke Phantoms of the Maharajas",
-            subtitle: "Chassis numbers, original build sheets, and royal special orders from 1907 to 1939",
-            description:
-              "The definitive archival dossier on the special-order Rolls-Royce and Bentley automobiles built for princely courts, complete with original coachbuilder correspondence.",
-            publicationDate: "November 2026",
-            coverImage: "/images/motoring/maharaja-rolls-royce-vintage-collection.jpg",
-            readTime: "50 min read",
-            pageCount: 76,
-            fileSize: "21.8 MB",
-            restricted: true,
-          },
-        ]);
-
-        setCollectorEditions([
-          {
-            id: "ce-2026",
-            year: 2026,
-            title: "The Princely Lineages of the Subcontinent",
-            subtitle: "A Collector's Compendium of Living Traditions, Architecture & Living Memory",
-            description:
-              "The Royal Gallerys 2026 Annual Collector's Edition: an encyclopedic, masterfully documented volume of 320 pages featuring 14 royal dynasties, private photographic collections, genealogical lineages, and exclusive architectural drawings.",
-            coverImage: "/images/hero/jaipur-city-palace-grand-facade.jpg",
-            releaseDate: "Autumn 2026",
-            pageCount: 320,
-            fileSize: "48.6 MB",
-          },
-        ]);
-
-        setNotifications([
-          {
-            id: "notif-welcome",
-            title: "Welcome to The Royal Gallery Circle",
-            message:
-              "Your account coordinates have been registered with the Editorial Office. Your private quarters are unlocked.",
-            category: "ANNOUNCEMENT",
-            createdAt: new Date().toISOString(),
-          },
-        ]);
+        // Fetch editorial content for dossier
+        fetch("/api/member/submit-story")
+          .then((r) => (r.ok ? r.json() : null))
+          .then((d) => {
+            if (d?.submissions) setSubmissions(d.submissions);
+          })
+          .catch(() => {});
       } catch (err) {
-        console.error("Dashboard load error:", err);
+        console.error("Member data load error:", err);
+        router.push("/member/login");
       } finally {
         setLoading(false);
       }
@@ -277,21 +112,27 @@ export default function MemberDashboardPage() {
     loadData();
   }, [router]);
 
-  const handleLogout = async () => {
-    try {
-      await fetch("/api/member/logout", { method: "POST" });
-      router.push("/member/login");
-      router.refresh();
-    } catch {
-      router.push("/member/login");
-    }
+  const handleEnterWorld = () => {
+    setShowEntrance(false);
+    sessionStorage.setItem("rg_seen_entrance", "true");
   };
 
-  const handleStorySubmit = async (e: React.FormEvent) => {
+  const handleReplayEntrance = () => {
+    setShowEntrance(true);
+  };
+
+  const handleSignOut = async () => {
+    try {
+      await fetch("/api/member/logout", { method: "POST" });
+    } catch {}
+    sessionStorage.removeItem("rg_seen_entrance");
+    router.push("/member/login");
+  };
+
+  const handleSubmitStory = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubSuccessMsg("");
-    setSubErrorMsg("");
     setSubmittingStory(true);
+    setSubMsg("");
 
     try {
       const res = await fetch("/api/member/submit-story", {
@@ -301,32 +142,31 @@ export default function MemberDashboardPage() {
           title: subTitle,
           category: subCategory,
           description: subDesc,
-          notes: subNotes,
-          attachments: [],
+          internalNotes: subNotes,
         }),
       });
 
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Submission failed.");
 
-      setSubSuccessMsg(
-        "Thank you. Your material has been received by The Royal Gallerys Editorial Office."
-      );
-      setSubmissions((prev) => [data.submission, ...prev]);
+      setSubMsg("✓ Your story proposal has been transmitted to the Editorial Office.");
       setSubTitle("");
       setSubDesc("");
       setSubNotes("");
+      if (data.submission) {
+        setSubmissions((prev) => [data.submission, ...prev]);
+      }
     } catch (err: unknown) {
-      setSubErrorMsg(err instanceof Error ? err.message : "Error submitting story.");
+      setSubMsg(err instanceof Error ? err.message : "Failed to transmit proposal.");
     } finally {
       setSubmittingStory(false);
     }
   };
 
-  const handleProfileSave = async (e: React.FormEvent) => {
+  const handleSaveProfile = async (e: React.FormEvent) => {
     e.preventDefault();
-    setProfileMsg("");
     setSavingProfile(true);
+    setProfileMsg("");
 
     try {
       const res = await fetch("/api/member/profile", {
@@ -334,24 +174,23 @@ export default function MemberDashboardPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           fullName: profName,
-          email: profEmail,
           phone: profPhone,
-          whatsapp: profWhatsapp,
-          address: profStreet,
-          city: profCity,
-          state: profState,
-          country: profCountry,
-          pincode: profPincode,
+          address: {
+            street: profStreet,
+            city: profCity,
+            state: profState,
+            pincode: profPincode,
+          },
         }),
       });
 
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Failed to save profile changes.");
+      if (!res.ok) throw new Error(data.error || "Update failed.");
 
-      setMember((prev) => (prev ? { ...prev, ...data.member } : null));
-      setProfileMsg("Personal coordinates updated successfully.");
+      setProfileMsg("✓ Dossier records updated successfully.");
+      if (data.member) setMember(data.member);
     } catch (err: unknown) {
-      setProfileMsg(err instanceof Error ? err.message : "Error saving profile.");
+      setProfileMsg(err instanceof Error ? err.message : "Update failed.");
     } finally {
       setSavingProfile(false);
     }
@@ -359,957 +198,776 @@ export default function MemberDashboardPage() {
 
   if (loading) {
     return (
-      <div
-        className="min-h-screen pt-36 pb-20 px-6 flex items-center justify-center bg-[#FAF8F5] text-[#111111]"
-      >
+      <div className="min-h-screen pt-36 px-6 flex items-center justify-center bg-[#FAF8F5] text-[#111111]">
         <div className="text-center space-y-3">
-          <div className="w-8 h-8 mx-auto border-2 border-[#111111] border-t-transparent rounded-full animate-spin" />
-          <p className="text-xs uppercase tracking-[0.28em] font-sans text-[#8A7352]">
-            Opening The Royal Gallery Circle...
+          <p className="text-[10px] uppercase tracking-[0.4em] text-[#8A7352] font-sans font-semibold">
+            The Royal Gallerys
           </p>
+          <h2
+            className="text-2xl font-serif text-[#111111]"
+            style={{ fontFamily: "var(--font-cormorant), serif" }}
+          >
+            Entering Private Members’ World...
+          </h2>
         </div>
       </div>
     );
   }
 
-  if (!member) {
-    return null;
-  }
+  if (!member) return null;
 
   const isApproved = member.status === "ACTIVE";
+  const allStories = getAllStories();
+
+  // Find Featured Stories for Living Cover
+  const devshreeStory = allStories.find((s) => s.id === "palace-one-night-at-devshree") || allStories[0];
+  const patialaStory = allStories.find((s) => s.id === "vault-patiala-necklace") || allStories[1];
+  const vladimirStory = allStories.find((s) => s.id === "object-vladimir-tiara") || allStories[2];
+  const rollsStory = allStories.find((s) => s.id === "automobile-rolls-royce-phantom-of-love") || allStories[3];
+  const banquetStory = allStories.find((s) => s.id === "table-buckingham-state-banquet") || allStories[4];
+  const haddonRoomStory = allStories.find((s) => s.id === "room-haddon-hall") || allStories[5];
+  const bookVol1Story = allStories.find((s) => s.id === "book-chronicles-palace-architecture") || allStories[6];
+
+  // Selected World if on a specific world tab
+  const currentWorldSection = PRIVATE_WORLDS.find((w) => w.id === activeTab);
 
   return (
-    <div style={{ background: "#FAF8F5", color: "#111111" }} className="min-h-screen pt-28 sm:pt-32 pb-24 px-4 sm:px-8 md:px-12">
-      <div className="max-w-7xl mx-auto">
-        {/* ════════════════════════════════════════════════
-            01 — LIGHT VOGUE MASTHEAD HEADER
-            ════════════════════════════════════════════════ */}
-        <header className="mb-8 pb-6 border-b border-[#111111]/15 flex flex-col md:flex-row md:items-end justify-between gap-4">
-          <div>
-            <div className="flex items-center gap-2 mb-2">
-              <span className={`w-2 h-2 rounded-full ${isApproved ? "bg-emerald-600" : "bg-amber-600 animate-pulse"}`} />
-              <span className="text-[10px] uppercase tracking-[0.3em] font-sans font-semibold text-[#8A7352]">
-                The Royal Gallery Circle · Private Quarters
+    <div style={{ background: "#FAF8F5", color: "#111111" }} className="min-h-screen">
+      {/* ════════════════════════════════════════════════
+          01 — THE CINEMATIC EDITORIAL ENTRANCE (SCREEN 01)
+          ════════════════════════════════════════════════ */}
+      {showEntrance && (
+        <CinematicEntrance
+          memberName={member.fullName}
+          membershipId={member.membershipId}
+          membershipType="LIFETIME MEMBER"
+          onEnter={handleEnterWorld}
+        />
+      )}
+
+      {/* ════════════════════════════════════════════════
+          02 — MINIMAL VOGUE EDITORIAL NAVIGATION
+          ════════════════════════════════════════════════ */}
+      <PrivateWorldHeader
+        activeTab={activeTab}
+        onSelectTab={(tabId) => {
+          setActiveTab(tabId);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+        memberName={member.fullName}
+        membershipId={member.membershipId}
+        onOpenSearch={() => setSearchOpen(true)}
+        onOpenCredential={() => setActiveTab("credential")}
+        onSignOut={handleSignOut}
+        onReplayEntrance={handleReplayEntrance}
+      />
+
+      {/* ════════════════════════════════════════════════
+          03 — LIVING COVER VIEW (ALL WORLDS DISCOVERY)
+          ════════════════════════════════════════════════ */}
+      {activeTab === "all" && (
+        <main className="space-y-16 sm:space-y-24 pb-32">
+          {/* ── LIVING EDITORIAL COVER HERO ── */}
+          <section className="pt-10 sm:pt-16 px-4 sm:px-8 md:px-12 max-w-7xl mx-auto">
+            <div className="text-center max-w-4xl mx-auto space-y-4 mb-10 sm:mb-14">
+              <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.45em] font-sans font-semibold text-[#8A7352]">
+                Private Members’ World · Curated Edition
               </span>
+              <h1
+                className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-[#111111] leading-[0.96] tracking-tight font-normal"
+                style={{ fontFamily: "var(--font-cormorant), 'Playfair Display', serif" }}
+              >
+                The Private World
+              </h1>
+              <div className="w-16 h-px mx-auto my-4 bg-[#8A7352]/40" />
+              <p className="text-base sm:text-xl font-serif italic text-[#555555] max-w-2xl mx-auto leading-relaxed">
+                Stories of heritage, royalty, people, places and objects—curated beyond the obvious.
+              </p>
             </div>
-            <h1
-              className="text-3xl sm:text-5xl font-serif text-[#111111]"
-              style={{ fontFamily: "var(--font-cormorant), serif", fontWeight: 400 }}
+
+            {/* ── FEATURE 01: FULL-WIDTH EDITORIAL HERO (ONE NIGHT AT DEVSHREE) ── */}
+            <div
+              onClick={() => setActiveStory(devshreeStory)}
+              className="group relative cursor-pointer overflow-hidden bg-[#111111] shadow-xl"
             >
-              WELCOME, {member.firstName.toUpperCase()}
-            </h1>
-            <p className="mt-1 text-sm sm:text-base font-serif italic text-[#555555]">
-              Welcome to The Royal Gallery Circle.
-            </p>
-          </div>
+              <div className="relative aspect-[16/10] sm:aspect-[21/9] w-full">
+                <Image
+                  src={devshreeStory.heroImage}
+                  alt={devshreeStory.title}
+                  fill
+                  priority
+                  sizes="(max-width: 1280px) 100vw, 1280px"
+                  className="object-cover transition-transform duration-1000 ease-out group-hover:scale-102"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/10 transition-opacity duration-700 group-hover:from-black/85" />
 
-          <div className="flex items-center gap-3">
-            <button
-              onClick={handleLogout}
-              className="px-5 py-2 text-xs uppercase tracking-[0.18em] font-sans border border-[#111111]/30 text-[#111111] hover:bg-[#111111] hover:text-[#FAF8F5] transition-colors"
-            >
-              Sign Out
-            </button>
-          </div>
-        </header>
-
-        {/* ════════════════════════════════════════════════
-            02 — MEMBERSHIP STATUS BANNER (LIGHT VOGUE)
-            ════════════════════════════════════════════════ */}
-        <div className="p-6 sm:p-8 bg-white border border-[#111111]/15 shadow-sm mb-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
-          <div>
-            <span className="text-[9px] uppercase tracking-[0.24em] font-sans text-[#8A7352] block mb-1">
-              Membership Rank
-            </span>
-            <span className="text-xl font-serif text-[#111111] font-medium tracking-wide">
-              {isApproved ? "LIFETIME MEMBER" : "APPLICATION LODGED"}
-            </span>
-            <span className="block text-xs text-[#777777] font-sans mt-0.5">
-              The Royal Gallery Circle
-            </span>
-          </div>
-
-          <div>
-            <span className="text-[9px] uppercase tracking-[0.24em] font-sans text-[#8A7352] block mb-1">
-              Permanent Identifier
-            </span>
-            <span className="text-xl font-mono text-[#111111] font-bold tracking-wider">
-              {member.membershipId}
-            </span>
-            <span className="block text-xs text-[#777777] font-sans mt-0.5">
-              {isApproved ? "Custodial Register Verified" : "Pending Office Activation"}
-            </span>
-          </div>
-
-          <div>
-            <span className="text-[9px] uppercase tracking-[0.24em] font-sans text-[#8A7352] block mb-1">
-              Account Status
-            </span>
-            <div className="flex items-center gap-2 mt-1">
-              <span className={`w-2 h-2 rounded-full ${isApproved ? "bg-emerald-600" : "bg-amber-500 animate-pulse"}`} />
-              <span
-                className={`text-xs font-sans font-bold tracking-widest uppercase ${
-                  isApproved ? "text-emerald-700" : "text-amber-700"
-                }`}
-              >
-                {member.status === "ACTIVE" ? "ACTIVE" : "UNDER EDITORIAL REVIEW"}
-              </span>
-            </div>
-            <span className="block text-xs text-[#777777] font-sans mt-0.5">
-              ₹3,999 Lifetime Tier
-            </span>
-          </div>
-
-          <div>
-            <span className="text-[9px] uppercase tracking-[0.24em] font-sans text-[#8A7352] block mb-1">
-              Date Applied
-            </span>
-            <span className="text-base font-serif text-[#111111]">
-              {new Date(member.joinedAt).toLocaleDateString("en-US", {
-                day: "numeric",
-                month: "long",
-                year: "numeric",
-              })}
-            </span>
-            <span className="block text-xs text-[#777777] font-sans mt-0.5">
-              {isApproved ? "Perpetual Standing" : "Awaiting Editorial Approval"}
-            </span>
-          </div>
-        </div>
-
-        {/* ════════ PENDING APPROVAL NOTICE (IF NOT YET APPROVED) ════════ */}
-        {!isApproved && (
-          <div className="mb-10 p-8 bg-amber-50/70 border border-amber-300 text-[#111111] space-y-3">
-            <span className="text-[10px] uppercase tracking-[0.3em] font-mono text-[#8A7352] font-semibold block">
-              Editorial Office Notification
-            </span>
-            <h3 className="text-2xl font-serif text-[#111111]">
-              Application Pending Editorial Office Approval
-            </h3>
-            <p className="text-xs sm:text-sm font-sans text-[#555555] leading-relaxed max-w-3xl">
-              Your details have been received and dispatched to The Royal Gallerys Editorial Office at{" "}
-              <strong className="text-[#111111]">hey.theroyalsgallery@gmail.com</strong>. Our editorial directors verify each membership candidate. As soon as your application is approved and your permanent identifier is confirmed, your Digital Membership Card will unlock here.
-            </p>
-            <div className="pt-2 flex items-center gap-4">
-              <Link
-                href="/editorial-office"
-                className="inline-block px-6 py-2.5 bg-[#111111] text-[#FAF8F5] text-xs uppercase tracking-wider font-sans font-medium hover:bg-[#8A7352] transition-colors"
-              >
-                Editorial Office Console (Approve Locally) →
-              </Link>
-            </div>
-          </div>
-        )}
-
-        {/* ════════════════════════════════════════════════
-            03 — NAVIGATION TABS
-            ════════════════════════════════════════════════ */}
-        <div className="mb-10 overflow-x-auto no-scrollbar border-b border-[#111111]/15">
-          <div className="flex gap-2 min-w-max pb-px">
-            {TABS.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-4 sm:px-6 py-3.5 text-xs uppercase tracking-[0.18em] font-sans font-medium transition-all duration-300 relative ${
-                  activeTab === tab.id
-                    ? "text-[#111111] font-bold"
-                    : "text-[#777777] hover:text-[#111111]"
-                }`}
-              >
-                {tab.label}
-                {activeTab === tab.id && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#111111]" />
-                )}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* ════════════════════════════════════════════════
-            TAB A — MY MEMBERSHIP
-            ════════════════════════════════════════════════ */}
-        {activeTab === "membership" && (
-          <div className="space-y-12">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-              {/* Digital Card on left / center */}
-              <div className="lg:col-span-7 flex flex-col items-center justify-center p-8 bg-white border border-[#111111]/10 shadow-sm">
-                <span className="text-[10px] uppercase tracking-[0.24em] font-sans text-[#8A7352] mb-6 font-semibold">
-                  Official Membership Credential
-                </span>
-                {isApproved ? (
-                  <DigitalMembershipCard
-                    fullName={member.fullName}
-                    membershipId={member.membershipId}
-                    joinedDate={member.joinedAt}
-                    status="ACTIVE"
-                  />
-                ) : (
-                  <div className="p-10 border border-dashed border-[#8A7352]/40 text-center max-w-md bg-[#FAF8F5]">
-                    <span className="text-xs uppercase tracking-widest text-[#8A7352] font-semibold block mb-2">
-                      Card Locked Pending Office Approval
+                <div className="absolute inset-0 p-6 sm:p-12 md:p-16 flex flex-col justify-between text-white">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.35em] font-sans font-semibold px-3 py-1 bg-white/20 backdrop-blur-xs text-white border border-white/30">
+                      06 · ONE NIGHT AT THE PALACE · LAUNCH FEATURE
                     </span>
-                    <p className="text-xs font-sans text-[#666666] leading-relaxed">
-                      Your high-resolution Light Vogue Digital Membership Card will generate automatically as soon as the Editorial Office approves your application.
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-white/80 hidden sm:inline">
+                      {devshreeStory.location}
+                    </span>
+                  </div>
+
+                  <div className="max-w-3xl space-y-3">
+                    <h2
+                      className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif leading-[1.05] tracking-tight font-normal text-white"
+                      style={{ fontFamily: "var(--font-cormorant), 'Playfair Display', serif" }}
+                    >
+                      {devshreeStory.title}
+                    </h2>
+                    <p className="text-xs sm:text-base font-serif italic text-white/90 line-clamp-2 leading-relaxed">
+                      {devshreeStory.subtitle}
                     </p>
+                    <div className="pt-2">
+                      <span className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.24em] font-sans font-medium text-[#FAF8F5] underline underline-offset-4 group-hover:text-[#DFC498] transition-colors">
+                        <span>Read Overnight Feature</span>
+                        <span>→</span>
+                      </span>
+                    </div>
                   </div>
-                )}
-              </div>
-
-              {/* Account summary on right */}
-              <div className="lg:col-span-5 p-8 bg-white border border-[#111111]/10 shadow-sm space-y-6">
-                <h3 className="text-2xl font-serif text-[#111111]">
-                  Membership Dossier
-                </h3>
-
-                <div className="space-y-4 text-xs font-sans">
-                  <div className="flex justify-between py-2 border-b border-[#111111]/5">
-                    <span className="text-[#777777]">Full Name</span>
-                    <span className="text-[#111111] font-medium">{member.fullName}</span>
-                  </div>
-                  <div className="flex justify-between py-2 border-b border-[#111111]/5">
-                    <span className="text-[#777777]">Permanent ID</span>
-                    <span className="text-[#8A7352] font-mono font-bold">{member.membershipId}</span>
-                  </div>
-                  <div className="flex justify-between py-2 border-b border-[#111111]/5">
-                    <span className="text-[#777777]">Standing</span>
-                    <span className="text-[#111111] font-medium">
-                      {isApproved ? "Lifetime Member (Active)" : "Pending Editorial Approval"}
-                    </span>
-                  </div>
-                  <div className="flex justify-between py-2 border-b border-[#111111]/5">
-                    <span className="text-[#777777]">Registered Email</span>
-                    <span className="text-[#111111]">{member.email}</span>
-                  </div>
-                  <div className="flex justify-between py-2 border-b border-[#111111]/5">
-                    <span className="text-[#777777]">Mobile Phone</span>
-                    <span className="text-[#111111]">{member.phone}</span>
-                  </div>
-                  <div className="flex justify-between py-2 border-b border-[#111111]/5">
-                    <span className="text-[#777777]">Mailing Address</span>
-                    <span className="text-[#111111] text-right max-w-[200px]">
-                      {member.address.street}, {member.address.city}, {member.address.state} — {member.address.pincode}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="pt-2">
-                  <button
-                    onClick={() => setActiveTab("profile")}
-                    className="w-full py-2.5 text-xs uppercase tracking-[0.2em] font-sans border border-[#111111] text-[#111111] hover:bg-[#111111] hover:text-[#FAF8F5] transition-colors"
-                  >
-                    Edit Delivery Coordinates →
-                  </button>
                 </div>
               </div>
             </div>
-          </div>
-        )}
+          </section>
 
-        {/* ════════════════════════════════════════════════
-            TAB B — PRINT ISSUES
-            ════════════════════════════════════════════════ */}
-        {activeTab === "print" && (
-          <div className="space-y-8">
-            <div className="border-b border-[#111111]/10 pb-4">
-              <h2 className="text-2xl sm:text-3xl font-serif text-[#111111]">
-                YOUR PRINT ISSUES
-              </h2>
-              <p className="text-sm font-sans text-[#666666] mt-1">
-                Your lifetime membership includes three physical hardcover volumes of The Royal Gallerys delivered to your registered mailing address.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {printIssues.map((issue) => (
-                <div
-                  key={issue.id}
-                  className="bg-white border border-[#111111]/10 shadow-sm flex flex-col justify-between"
-                >
-                  <div className="relative aspect-[4/5] w-full">
-                    <Image
-                      src={issue.coverImage}
-                      alt={issue.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 border border-[#111111]/10 text-[9px] uppercase tracking-[0.2em] font-sans font-bold text-[#111111]">
-                      {issue.period}
-                    </div>
-                  </div>
-
-                  <div className="p-6 flex-1 flex flex-col justify-between">
-                    <div>
-                      <span className="text-[10px] uppercase tracking-[0.2em] font-sans text-[#8A7352] block mb-1">
-                        {issue.issueNumber}
-                      </span>
-                      <h3 className="text-xl font-serif text-[#111111] mb-2 font-normal">
-                        {issue.title}
-                      </h3>
-                      <p className="text-xs text-[#666666] font-sans leading-relaxed mb-4">
-                        {issue.description}
-                      </p>
-                    </div>
-
-                    <div className="pt-4 border-t border-[#111111]/10 flex items-center justify-between">
-                      <div>
-                        <span className="text-[8px] uppercase tracking-wider text-[#777777] block">
-                          Delivery Status
-                        </span>
-                        <span
-                          className={`text-xs font-semibold uppercase tracking-wider ${
-                            issue.status === "Delivered"
-                              ? "text-emerald-700"
-                              : issue.status === "Dispatched"
-                              ? "text-amber-700"
-                              : "text-blue-700"
-                          }`}
-                        >
-                          ● {issue.status}
-                        </span>
-                      </div>
-
-                      {issue.trackingNumber && (
-                        <div className="text-right">
-                          <span className="text-[8px] uppercase tracking-wider text-[#777777] block">
-                            Dispatch Tracking
-                          </span>
-                          <span className="text-xs font-mono text-[#111111]">
-                            {issue.trackingNumber}
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* ════════════════════════════════════════════════
-            TAB C — ROYAL GALLERYS ARCHIVE
-            ════════════════════════════════════════════════ */}
-        {activeTab === "archive" && (
-          <div className="space-y-8">
-            <div className="border-b border-[#111111]/10 pb-4">
-              <h2 className="text-2xl sm:text-3xl font-serif text-[#111111]">
-                THE ROYAL GALLERYS ARCHIVE
-              </h2>
-              <p className="text-sm font-sans text-[#666666] mt-1">
-                Unrestricted digital access to previous volumes, retrospective editions, and designated member-only archival folios.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {archiveIssues.map((issue) => (
-                <div
-                  key={issue.id}
-                  className="bg-white border border-[#111111]/10 shadow-sm flex flex-col justify-between"
-                >
-                  <div className="relative aspect-[3/4] w-full">
-                    <Image
-                      src={issue.coverImage}
-                      alt={issue.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute top-4 right-4 bg-white/90 px-3 py-1 border border-[#111111]/10 text-[9px] uppercase tracking-[0.2em] font-mono text-[#111111]">
-                      {issue.pageCount} Pages
-                    </div>
-                  </div>
-
-                  <div className="p-6 flex-1 flex flex-col justify-between">
-                    <div>
-                      <span className="text-[10px] uppercase tracking-[0.2em] font-sans text-[#8A7352] block mb-1">
-                        {issue.volume} · {issue.season} {issue.year}
-                      </span>
-                      <h3 className="text-xl font-serif text-[#111111] mb-2 font-normal">
-                        {issue.title}
-                      </h3>
-                      <p className="text-xs text-[#666666] font-sans leading-relaxed mb-4">
-                        {issue.summary}
-                      </p>
-                    </div>
-
-                    <div className="pt-4 border-t border-[#111111]/10">
-                      <button
-                        onClick={() =>
-                          setReadingItem({
-                            title: issue.title,
-                            subtitle: `${issue.volume} · ${issue.year}`,
-                            content: `${issue.summary}\n\nKey Featured Investigation: ${issue.featuredStory}\n\nFull 220+ page digitized folio accessible for authenticated Circle members. High-resolution archival plates, translated royal manuscripts, and architectural plans.`,
-                          })
-                        }
-                        className="w-full py-2.5 text-xs uppercase tracking-[0.2em] font-sans font-medium bg-[#111111] text-[#FAF8F5] hover:bg-[#8A7352] transition-colors text-center"
-                      >
-                        Read Online →
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* ════════════════════════════════════════════════
-            TAB D — PRIVATE FILES
-            ════════════════════════════════════════════════ */}
-        {activeTab === "private-files" && (
-          <div className="space-y-8">
-            <div className="border-b border-[#111111]/10 pb-4">
-              <span className="text-[10px] uppercase tracking-[0.24em] font-sans text-[#8A7352] font-semibold">
-                Member Dossiers
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-serif text-[#111111] mt-1">
-                PRIVATE FILES
-              </h2>
-              <p className="text-sm font-sans text-[#666666] mt-1">
-                Three exclusive, substantial digital dossiers curated annually by our editors for Royal Gallery Circle members.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {privateFiles.map((file) => (
-                <div
-                  key={file.id}
-                  className="bg-white border border-[#111111]/10 shadow-sm flex flex-col justify-between"
-                >
-                  <div className="relative aspect-[16/10] w-full">
-                    <Image
-                      src={file.coverImage}
-                      alt={file.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute top-4 left-4 bg-white/90 px-2.5 py-1 text-[9px] uppercase tracking-wider font-mono text-[#8A7352] border border-[#111111]/10 font-bold">
-                      {file.code}
-                    </div>
-                  </div>
-
-                  <div className="p-6 flex-1 flex flex-col justify-between">
-                    <div>
-                      <span className="text-[10px] uppercase tracking-[0.16em] font-sans text-[#8A7352] block mb-1">
-                        Released {file.publicationDate} · {file.readTime}
-                      </span>
-                      <h3 className="text-xl font-serif text-[#111111] mb-2 font-normal">
-                        {file.title}
-                      </h3>
-                      <p className="text-xs font-serif italic text-[#777777] mb-3">
-                        {file.subtitle}
-                      </p>
-                      <p className="text-xs text-[#666666] font-sans leading-relaxed mb-4">
-                        {file.description}
-                      </p>
-                    </div>
-
-                    <div className="pt-4 border-t border-[#111111]/10">
-                      <button
-                        onClick={() =>
-                          setReadingItem({
-                            title: file.title,
-                            subtitle: `${file.code} — ${file.publicationDate}`,
-                            content: `${file.description}\n\n${file.subtitle}\n\nContents of this confidential file are reserved exclusively for members of The Royal Gallery Circle. Includes historical accounts, correspondence, and technical provenance notes.`,
-                            code: file.code,
-                          })
-                        }
-                        className="w-full py-2.5 text-xs uppercase tracking-[0.2em] font-sans font-medium bg-[#111111] text-[#FAF8F5] hover:bg-[#8A7352] transition-colors text-center"
-                      >
-                        Open Dossier →
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* ════════════════════════════════════════════════
-            TAB E — ANNUAL DIGITAL COLLECTOR'S EDITION
-            ════════════════════════════════════════════════ */}
-        {activeTab === "collector" && (
-          <div className="space-y-8">
-            <div className="border-b border-[#111111]/10 pb-4">
-              <span className="text-[10px] uppercase tracking-[0.24em] font-sans text-[#8A7352] font-semibold">
-                Encyclopedic Masterpiece
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-serif text-[#111111] mt-1">
-                ANNUAL DIGITAL COLLECTOR&apos;S EDITION
-              </h2>
-              <p className="text-sm font-sans text-[#666666] mt-1">
-                One separately curated annual digital heritage publication created as a lavish collector&apos;s edition.
-              </p>
-            </div>
-
-            {collectorEditions.map((ce) => (
+          {/* ── FEATURE 02: SPLIT-SCREEN MAGAZINE COMPOSITION ── */}
+          <section className="px-4 sm:px-8 md:px-12 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+              {/* Left Column: The Patiala Diamond Collar (Vault) */}
               <div
-                key={ce.id}
-                className="p-8 sm:p-12 bg-white border border-[#111111]/10 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-8 items-center"
+                onClick={() => setActiveStory(patialaStory)}
+                className="lg:col-span-6 group cursor-pointer bg-white p-8 sm:p-10 border border-[#111111]/12 flex flex-col justify-between shadow-xs hover:border-[#111111] transition-all duration-500"
               >
-                <div className="relative md:col-span-5 aspect-[4/5] overflow-hidden border border-[#111111]/10">
-                  <Image
-                    src={ce.coverImage}
-                    alt={ce.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute bottom-4 left-4 bg-white/90 px-3 py-1 text-xs font-mono uppercase text-[#111111]">
-                    {ce.year} Collector&apos;s Folio · {ce.pageCount} Pages
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[9px] uppercase tracking-[0.3em] font-sans font-semibold text-[#8A7352]">
+                      02 · THE PRIVATE VAULT
+                    </span>
+                    <span className="text-[10px] font-mono text-[#777777]">
+                      {patialaStory.accessionId}
+                    </span>
                   </div>
-                </div>
 
-                <div className="md:col-span-7 space-y-5">
-                  <span className="text-[10px] uppercase tracking-[0.3em] font-sans text-[#8A7352] font-semibold block">
-                    {ce.year} Definitive Compendium
-                  </span>
+                  <div className="relative aspect-[16/10] w-full bg-[#111111] overflow-hidden">
+                    <Image
+                      src={patialaStory.heroImage}
+                      alt={patialaStory.title}
+                      fill
+                      sizes="600px"
+                      className="object-cover group-hover:scale-104 transition-transform duration-700"
+                    />
+                  </div>
+
                   <h3
-                    className="text-2xl sm:text-4xl font-serif text-[#111111]"
+                    className="text-2xl sm:text-3xl font-serif text-[#111111] group-hover:text-[#8A7352] transition-colors leading-snug"
                     style={{ fontFamily: "var(--font-cormorant), serif" }}
                   >
-                    {ce.title}
+                    {patialaStory.title}
                   </h3>
-                  <p className="text-sm font-serif italic text-[#666666]">
-                    {ce.subtitle}
-                  </p>
-                  <p className="text-xs sm:text-sm font-sans text-[#555555] leading-relaxed">
-                    {ce.description}
-                  </p>
 
-                  <div className="pt-4">
-                    <button
-                      onClick={() =>
-                        setReadingItem({
-                          title: ce.title,
-                          subtitle: `${ce.year} Annual Collector's Edition`,
-                          content: `${ce.description}\n\nCurated over eighteen months in collaboration with private palace archives and custodians across 14 royal dynasties. Includes genealogical charts, full-page plates of 19th-century portraits, and architectural blueprints of private royal residences.`,
-                        })
-                      }
-                      className="px-8 py-3.5 text-xs uppercase tracking-[0.24em] font-sans font-medium transition-all bg-[#111111] text-[#FAF8F5] hover:bg-[#8A7352]"
-                    >
-                      Read Online →
-                    </button>
-                  </div>
+                  <p className="text-xs sm:text-sm font-serif italic text-[#555555] leading-relaxed">
+                    {patialaStory.subtitle}
+                  </p>
+                </div>
+
+                <div className="pt-6 mt-6 border-t border-[#111111]/10 flex items-center justify-between text-xs font-sans text-[#777777]">
+                  <span>{patialaStory.location}</span>
+                  <span className="group-hover:text-[#111111] group-hover:translate-x-1 transition-all">
+                    Inspect Vault File →
+                  </span>
                 </div>
               </div>
-            ))}
-          </div>
-        )}
 
-        {/* ════════════════════════════════════════════════
-            TAB F — EDITORIAL DESK
-            ════════════════════════════════════════════════ */}
-        {activeTab === "editorial-desk" && (
-          <div className="max-w-3xl mx-auto space-y-8">
-            <div className="border-b border-[#111111]/10 pb-4 text-center">
-              <span className="text-[10px] uppercase tracking-[0.3em] font-semibold text-[#8A7352]">
-                Privilege 04 & 05
+              {/* Right Column: The Vladimir Tiara (Object) */}
+              <div
+                onClick={() => setActiveStory(vladimirStory)}
+                className="lg:col-span-6 group cursor-pointer bg-white p-8 sm:p-10 border border-[#111111]/12 flex flex-col justify-between shadow-xs hover:border-[#111111] transition-all duration-500"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[9px] uppercase tracking-[0.3em] font-sans font-semibold text-[#8A7352]">
+                      04 · THE ROYAL OBJECT
+                    </span>
+                    <span className="text-[10px] font-mono text-[#777777]">
+                      {vladimirStory.accessionId}
+                    </span>
+                  </div>
+
+                  <div className="relative aspect-[16/10] w-full bg-[#111111] overflow-hidden">
+                    <Image
+                      src={vladimirStory.heroImage}
+                      alt={vladimirStory.title}
+                      fill
+                      sizes="600px"
+                      className="object-cover group-hover:scale-104 transition-transform duration-700"
+                    />
+                  </div>
+
+                  <h3
+                    className="text-2xl sm:text-3xl font-serif text-[#111111] group-hover:text-[#8A7352] transition-colors leading-snug"
+                    style={{ fontFamily: "var(--font-cormorant), serif" }}
+                  >
+                    {vladimirStory.title}
+                  </h3>
+
+                  <p className="text-xs sm:text-sm font-serif italic text-[#555555] leading-relaxed">
+                    {vladimirStory.subtitle}
+                  </p>
+                </div>
+
+                <div className="pt-6 mt-6 border-t border-[#111111]/10 flex items-center justify-between text-xs font-sans text-[#777777]">
+                  <span>{vladimirStory.location}</span>
+                  <span className="group-hover:text-[#111111] group-hover:translate-x-1 transition-all">
+                    Explore Provenance →
+                  </span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ── FEATURE 03: ASYMMETRICAL EDITORIAL TRIAD ── */}
+          <section className="px-4 sm:px-8 md:px-12 max-w-7xl mx-auto">
+            <div className="mb-6 flex items-end justify-between border-b border-[#111111]/10 pb-4">
+              <div>
+                <span className="text-[10px] uppercase tracking-[0.3em] font-sans text-[#8A7352] font-semibold">
+                  Curatorial Spotlight
+                </span>
+                <h3
+                  className="text-2xl sm:text-3xl font-serif text-[#111111] mt-0.5"
+                  style={{ fontFamily: "var(--font-cormorant), serif" }}
+                >
+                  Automobilia, Banqueting & Interior Secrets
+                </h3>
+              </div>
+              <button
+                type="button"
+                onClick={() => setSearchOpen(true)}
+                className="text-xs uppercase tracking-widest text-[#777777] hover:text-[#111111] hidden sm:block"
+              >
+                Search All 40 Works →
+              </button>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Card 1: Rolls-Royce */}
+              <div
+                onClick={() => setActiveStory(rollsStory)}
+                className="group cursor-pointer bg-white border border-[#111111]/10 p-6 flex flex-col justify-between hover:border-[#111111] transition-all"
+              >
+                <div className="space-y-3">
+                  <div className="relative aspect-[4/3] w-full bg-[#111111] overflow-hidden">
+                    <Image
+                      src={rollsStory.heroImage}
+                      alt={rollsStory.title}
+                      fill
+                      sizes="400px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <span className="text-[9px] uppercase tracking-[0.25em] font-sans font-semibold text-[#8A7352] block">
+                    05 · THE AUTOMOBILE ROOM
+                  </span>
+                  <h4
+                    className="text-lg font-serif text-[#111111] group-hover:text-[#8A7352] transition-colors leading-snug"
+                    style={{ fontFamily: "var(--font-cormorant), serif" }}
+                  >
+                    {rollsStory.title}
+                  </h4>
+                  <p className="text-xs font-sans text-[#666666] line-clamp-2">
+                    {rollsStory.subtitle}
+                  </p>
+                </div>
+                <div className="pt-4 mt-4 border-t border-[#111111]/5 text-[10px] uppercase tracking-wider text-[#888888]">
+                  <span>{rollsStory.period}</span>
+                </div>
+              </div>
+
+              {/* Card 2: Buckingham Palace Banquet */}
+              <div
+                onClick={() => setActiveStory(banquetStory)}
+                className="group cursor-pointer bg-white border border-[#111111]/10 p-6 flex flex-col justify-between hover:border-[#111111] transition-all"
+              >
+                <div className="space-y-3">
+                  <div className="relative aspect-[4/3] w-full bg-[#111111] overflow-hidden">
+                    <Image
+                      src={banquetStory.heroImage}
+                      alt={banquetStory.title}
+                      fill
+                      sizes="400px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <span className="text-[9px] uppercase tracking-[0.25em] font-sans font-semibold text-[#8A7352] block">
+                    03 · THE ROYAL TABLE
+                  </span>
+                  <h4
+                    className="text-lg font-serif text-[#111111] group-hover:text-[#8A7352] transition-colors leading-snug"
+                    style={{ fontFamily: "var(--font-cormorant), serif" }}
+                  >
+                    {banquetStory.title}
+                  </h4>
+                  <p className="text-xs font-sans text-[#666666] line-clamp-2">
+                    {banquetStory.subtitle}
+                  </p>
+                </div>
+                <div className="pt-4 mt-4 border-t border-[#111111]/5 text-[10px] uppercase tracking-wider text-[#888888]">
+                  <span>{banquetStory.location}</span>
+                </div>
+              </div>
+
+              {/* Card 3: Interactive Room (Haddon Hall) */}
+              <div
+                onClick={() => setActiveStory(haddonRoomStory)}
+                className="group cursor-pointer bg-white border border-[#111111]/10 p-6 flex flex-col justify-between hover:border-[#111111] transition-all"
+              >
+                <div className="space-y-3">
+                  <div className="relative aspect-[4/3] w-full bg-[#111111] overflow-hidden">
+                    <Image
+                      src={haddonRoomStory.heroImage}
+                      alt={haddonRoomStory.title}
+                      fill
+                      sizes="400px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute top-2 right-2 bg-[#111111]/80 text-[#FAF8F5] text-[9px] uppercase tracking-widest font-mono px-2 py-0.5 backdrop-blur-xs">
+                      Hotspots
+                    </div>
+                  </div>
+                  <span className="text-[9px] uppercase tracking-[0.25em] font-sans font-semibold text-[#8A7352] block">
+                    09 · THE ROOM · INTERACTIVE
+                  </span>
+                  <h4
+                    className="text-lg font-serif text-[#111111] group-hover:text-[#8A7352] transition-colors leading-snug"
+                    style={{ fontFamily: "var(--font-cormorant), serif" }}
+                  >
+                    {haddonRoomStory.title}
+                  </h4>
+                  <p className="text-xs font-sans text-[#666666] line-clamp-2">
+                    {haddonRoomStory.subtitle}
+                  </p>
+                </div>
+                <div className="pt-4 mt-4 border-t border-[#111111]/5 text-[10px] uppercase tracking-wider text-[#888888]">
+                  <span>Explore Interior Hotspots →</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ── FEATURE 04: THE BOOK OF THE MONTH DIGITAL MONOGRAPH ── */}
+          <section className="px-4 sm:px-8 md:px-12 max-w-7xl mx-auto">
+            <div
+              onClick={() => setActiveStory(bookVol1Story)}
+              className="group cursor-pointer bg-white p-8 sm:p-12 md:p-16 border-2 border-[#111111]/15 shadow-md flex flex-col lg:flex-row items-center justify-between gap-8 hover:border-[#111111] transition-all"
+            >
+              <div className="lg:max-w-xl space-y-4">
+                <span className="text-[10px] uppercase tracking-[0.35em] font-sans font-semibold text-[#8A7352] block">
+                  07 · THE BOOK OF THE MONTH · COFFEE-TABLE MONOGRAPH
+                </span>
+                <h3
+                  className="text-3xl sm:text-4xl font-serif text-[#111111] group-hover:text-[#8A7352] transition-colors leading-tight"
+                  style={{ fontFamily: "var(--font-cormorant), serif" }}
+                >
+                  {bookVol1Story.title}
+                </h3>
+                <p className="text-xs sm:text-sm font-sans text-[#555555] leading-relaxed">
+                  {bookVol1Story.subtitle} Four complete illustrated chapters exploring fortress engineering, water pavilions, zenana carvings, and 21st-century conservation.
+                </p>
+                <div className="pt-2">
+                  <span className="inline-block px-8 py-3 bg-[#111111] text-[#FAF8F5] text-xs uppercase tracking-[0.24em] font-sans font-medium group-hover:bg-[#8A7352] transition-colors">
+                    Open Monograph Reader →
+                  </span>
+                </div>
+              </div>
+
+              <div className="relative aspect-[4/3] w-full lg:w-96 bg-[#111111] overflow-hidden shadow-lg">
+                <Image
+                  src={bookVol1Story.heroImage}
+                  alt={bookVol1Story.title}
+                  fill
+                  sizes="400px"
+                  className="object-cover group-hover:scale-104 transition-transform duration-700"
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* ── FEATURE 05: THE 10 PERMANENT PRIVATE WORLDS DIRECTORY ── */}
+          <section className="px-4 sm:px-8 md:px-12 max-w-7xl mx-auto">
+            <div className="mb-10 text-center max-w-2xl mx-auto">
+              <span className="text-[10px] uppercase tracking-[0.35em] font-sans text-[#8A7352] font-semibold block mb-2">
+                The Curatorial Structure
               </span>
-              <h2 className="text-3xl sm:text-4xl font-serif text-[#111111] mt-1">
-                EDITORIAL DESK
-              </h2>
-              <p className="text-sm font-sans text-[#666666] max-w-xl mx-auto mt-2 leading-relaxed">
-                Have a story, archive, family history, heritage property, travel experience or cultural material to share with The Royal Gallerys? Submit it directly to our Editorial Office.
+              <h3
+                className="text-3xl sm:text-4xl font-serif text-[#111111]"
+                style={{ fontFamily: "var(--font-cormorant), serif" }}
+              >
+                The Ten Private Worlds
+              </h3>
+              <div className="w-12 h-px mx-auto my-3 bg-[#8A7352]/40" />
+              <p className="text-xs font-sans text-[#666666]">
+                Forty collectible, verified editorial works preserved for private members.
               </p>
             </div>
 
-            <div className="p-4 bg-amber-50 border border-amber-200 text-xs font-sans text-[#775522] text-center">
-              ★ Membership provides priority editorial consideration; publication is not guaranteed.
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              {PRIVATE_WORLDS.map((world) => (
+                <div
+                  key={world.id}
+                  onClick={() => {
+                    setActiveTab(world.id);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  className="group cursor-pointer bg-white p-5 border border-[#111111]/10 hover:border-[#111111] transition-all flex flex-col justify-between h-48"
+                >
+                  <div className="space-y-1">
+                    <span className="font-mono text-[#8A7352] text-xs font-semibold block">
+                      {world.number}
+                    </span>
+                    <h4
+                      className="text-sm font-serif text-[#111111] group-hover:text-[#8A7352] transition-colors leading-snug"
+                      style={{ fontFamily: "var(--font-cormorant), serif" }}
+                    >
+                      {world.title}
+                    </h4>
+                    <p className="text-[10px] font-serif italic text-[#777777] line-clamp-2">
+                      {world.tagline}
+                    </p>
+                  </div>
+
+                  <div className="pt-2 border-t border-[#111111]/5 flex items-center justify-between text-[10px] font-sans text-[#888888]">
+                    <span>4 Works</span>
+                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        </main>
+      )}
+
+      {/* ════════════════════════════════════════════════
+          04 — DEDICATED INDIVIDUAL WORLD CATEGORY VIEW
+          ════════════════════════════════════════════════ */}
+      {currentWorldSection && activeTab !== "all" && activeTab !== "credential" && (
+        <main className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 pt-10 sm:pt-14 pb-32 space-y-12">
+          {/* Category Header Masthead */}
+          <div className="text-center max-w-3xl mx-auto space-y-3 pb-8 border-b border-[#111111]/15">
+            <span className="text-[10px] uppercase tracking-[0.38em] font-sans font-semibold text-[#8A7352]">
+              {currentWorldSection.number} · {currentWorldSection.frenchTitle || "Collection Royale"}
+            </span>
+            <h1
+              className="text-3xl sm:text-5xl md:text-6xl font-serif text-[#111111] leading-tight font-normal"
+              style={{ fontFamily: "var(--font-cormorant), serif" }}
+            >
+              {currentWorldSection.title}
+            </h1>
+            <p className="text-xs sm:text-sm font-serif italic text-[#666666] max-w-xl mx-auto">
+              {currentWorldSection.description}
+            </p>
+          </div>
+
+          {/* Timeline Period Filter Bar if in The Royal Timeline */}
+          {activeTab === "timeline" && (
+            <div className="flex flex-wrap items-center justify-center gap-2 pt-2 pb-4 text-[10px] font-sans uppercase tracking-widest">
+              <span className="text-[#8A7352] mr-2">Filter Period:</span>
+              {["ALL", "17th Century", "Belle Époque"].map((p) => (
+                <button
+                  key={p}
+                  type="button"
+                  onClick={() => setTimelinePeriodFilter(p)}
+                  className={`px-3 py-1 border transition-colors ${
+                    timelinePeriodFilter === p
+                      ? "bg-[#111111] text-[#FAF8F5] border-[#111111]"
+                      : "bg-white text-[#666666] border-[#111111]/15 hover:border-[#111111]"
+                  }`}
+                >
+                  {p}
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* The 4 Stories for this World */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {currentWorldSection.stories
+              .filter((st) =>
+                activeTab === "timeline" && timelinePeriodFilter !== "ALL"
+                  ? st.period.includes(timelinePeriodFilter)
+                  : true
+              )
+              .map((story) => (
+                <article
+                  key={story.id}
+                  onClick={() => setActiveStory(story)}
+                  className="group cursor-pointer bg-white border border-[#111111]/12 p-8 sm:p-10 flex flex-col justify-between shadow-xs hover:border-[#111111] transition-all duration-500"
+                >
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[9px] uppercase tracking-[0.28em] font-sans font-semibold text-[#8A7352]">
+                        {story.period}
+                      </span>
+                      {story.accessionId && (
+                        <span className="text-[10px] font-mono text-[#777777]">
+                          {story.accessionId}
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="relative aspect-[16/10] w-full bg-[#111111] overflow-hidden">
+                      <Image
+                        src={story.heroImage}
+                        alt={story.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 600px"
+                        className="object-cover group-hover:scale-104 transition-transform duration-700"
+                      />
+                    </div>
+
+                    <h3
+                      className="text-2xl sm:text-3xl font-serif text-[#111111] group-hover:text-[#8A7352] transition-colors leading-snug"
+                      style={{ fontFamily: "var(--font-cormorant), serif" }}
+                    >
+                      {story.title}
+                    </h3>
+
+                    <p className="text-xs sm:text-sm font-serif italic text-[#555555] leading-relaxed">
+                      {story.subtitle}
+                    </p>
+
+                    <p className="text-xs font-sans text-[#666666] line-clamp-2 leading-relaxed">
+                      {story.intro}
+                    </p>
+                  </div>
+
+                  <div className="pt-6 mt-6 border-t border-[#111111]/10 flex items-center justify-between text-xs font-sans text-[#777777]">
+                    <span>{story.location}</span>
+                    <span className="text-[#111111] group-hover:text-[#8A7352] group-hover:translate-x-1 transition-all">
+                      Read Full Dossier →
+                    </span>
+                  </div>
+                </article>
+              ))}
+          </div>
+        </main>
+      )}
+
+      {/* ════════════════════════════════════════════════
+          05 — MY CREDENTIAL & DOSSIER (TAB 'credential')
+          ════════════════════════════════════════════════ */}
+      {activeTab === "credential" && (
+        <main className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 pt-10 sm:pt-14 pb-32 space-y-12">
+          {/* Header */}
+          <div className="text-center max-w-2xl mx-auto space-y-2 pb-6 border-b border-[#111111]/15">
+            <span className="text-[10px] uppercase tracking-[0.35em] font-sans font-semibold text-[#8A7352]">
+              Private Member Dossier
+            </span>
+            <h1
+              className="text-3xl sm:text-4xl font-serif text-[#111111]"
+              style={{ fontFamily: "var(--font-cormorant), serif" }}
+            >
+              Credential & Account Settings
+            </h1>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            {/* Left Column: Official Digital Membership Card */}
+            <div className="lg:col-span-7 bg-white p-8 sm:p-12 border border-[#111111]/12 shadow-sm space-y-6 flex flex-col items-center justify-center">
+              <span className="text-[10px] uppercase tracking-[0.3em] font-sans text-[#8A7352] font-semibold">
+                Official Lifetime Membership Credential
+              </span>
+
+              {isApproved ? (
+                <DigitalMembershipCard
+                  fullName={member.fullName}
+                  membershipId={member.membershipId}
+                  status="ACTIVE"
+                />
+              ) : (
+                <div className="p-8 border border-dashed border-[#8A7352]/40 text-center max-w-md bg-[#FAF8F5]">
+                  <span className="text-xs uppercase tracking-widest text-[#8A7352] font-semibold block mb-2">
+                    Card Locked Pending Payment Confirmation
+                  </span>
+                  <p className="text-xs font-sans text-[#666666]">
+                    Your card will unlock as soon as your ₹3,999 registration fee is confirmed by the Editorial Office.
+                  </p>
+                </div>
+              )}
             </div>
 
-            {subSuccessMsg && (
-              <div className="p-6 bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-sans text-center">
-                {subSuccessMsg}
+            {/* Right Column: Member Dossier Information */}
+            <div className="lg:col-span-5 bg-white p-8 sm:p-10 border border-[#111111]/12 shadow-sm space-y-6">
+              <h3 className="text-xl font-serif text-[#111111]">
+                Dossier Summary
+              </h3>
+
+              <div className="space-y-3 text-xs font-sans">
+                <div className="flex justify-between py-2 border-b border-[#111111]/5">
+                  <span className="text-[#777777]">Full Name</span>
+                  <span className="font-medium text-[#111111]">{member.fullName}</span>
+                </div>
+                <div className="flex justify-between py-2 border-b border-[#111111]/5">
+                  <span className="text-[#777777]">Permanent Identifier</span>
+                  <span className="font-mono font-bold text-[#8A7352]">{member.membershipId}</span>
+                </div>
+                <div className="flex justify-between py-2 border-b border-[#111111]/5">
+                  <span className="text-[#777777]">Standing</span>
+                  <span className="font-medium text-emerald-800">
+                    {isApproved ? "Lifetime Member (Active)" : "Pending Verification"}
+                  </span>
+                </div>
+                <div className="flex justify-between py-2 border-b border-[#111111]/5">
+                  <span className="text-[#777777]">Registered Email</span>
+                  <span className="text-[#111111]">{member.email}</span>
+                </div>
+                <div className="flex justify-between py-2 border-b border-[#111111]/5">
+                  <span className="text-[#777777]">Mobile Phone</span>
+                  <span className="text-[#111111]">{member.phone}</span>
+                </div>
+                <div className="flex justify-between py-2">
+                  <span className="text-[#777777]">Delivery Address</span>
+                  <span className="text-right text-[#111111] max-w-[200px]">
+                    {member.address?.street}, {member.address?.city} {member.address?.pincode}
+                  </span>
+                </div>
+              </div>
+
+              {/* Physical Print Volumes Status */}
+              <div className="pt-4 border-t border-[#111111]/10">
+                <span className="text-[10px] uppercase tracking-[0.25em] font-sans text-[#8A7352] font-semibold block mb-2">
+                  Annual Print Volumes (3 Issues / Year)
+                </span>
+                <div className="p-3 bg-[#FAF8F5] border border-[#111111]/10 text-xs font-sans space-y-1">
+                  <div className="flex justify-between">
+                    <span>Spring Volume I</span>
+                    <span className="text-emerald-700 font-semibold">Dispatched</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Summer Volume II</span>
+                    <span className="text-[#888888]">In Preparation</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Autumn Volume III</span>
+                    <span className="text-[#888888]">In Preparation</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Editorial Desk Story Proposal Form */}
+          <section className="bg-white p-8 sm:p-12 border border-[#111111]/12 shadow-sm max-w-4xl mx-auto space-y-6">
+            <div>
+              <span className="text-[10px] uppercase tracking-[0.3em] font-sans text-[#8A7352] font-semibold block">
+                Editorial Desk
+              </span>
+              <h3 className="text-2xl font-serif text-[#111111] mt-1">
+                Submit a Heritage Dossier or Story Proposal
+              </h3>
+              <p className="text-xs font-sans text-[#666666] mt-1">
+                Members may submit archival photographs, family histories, and estate dossiers directly to our Senior Curatorial Board for publication consideration.
+              </p>
+            </div>
+
+            {subMsg && (
+              <div className="p-4 bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs">
+                {subMsg}
               </div>
             )}
 
-            {subErrorMsg && (
-              <div className="p-4 bg-red-50 border border-red-200 text-red-800 text-xs font-sans">
-                {subErrorMsg}
-              </div>
-            )}
-
-            <form
-              onSubmit={handleStorySubmit}
-              className="p-8 sm:p-10 bg-white border border-[#111111]/15 shadow-sm space-y-6"
-            >
+            <form onSubmit={handleSubmitStory} className="space-y-4">
               <div>
-                <label className="block text-[10px] uppercase tracking-[0.2em] text-[#8A7352] mb-2 font-sans font-semibold">
-                  Submission Title *
+                <label className="block text-[10px] uppercase tracking-wider text-[#8A7352] mb-1 font-sans font-semibold">
+                  Story / Subject Title *
                 </label>
                 <input
                   type="text"
                   required
                   value={subTitle}
                   onChange={(e) => setSubTitle(e.target.value)}
-                  placeholder="e.g. The 1898 Durbar Photographs of Our Ancestral Haveli"
-                  className="w-full bg-[#FAF8F5] border border-[#111111]/20 px-4 py-3 text-sm text-[#111111] focus:border-[#111111] focus:outline-none"
+                  placeholder="e.g. The Lost 19th-Century Glassware of Mewar"
+                  className="w-full bg-[#FAF8F5] border border-[#111111]/20 px-4 py-2.5 text-xs text-[#111111] focus:border-[#111111] focus:outline-none"
                 />
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-[10px] uppercase tracking-[0.2em] text-[#8A7352] mb-2 font-sans font-semibold">
-                    Category *
+                  <label className="block text-[10px] uppercase tracking-wider text-[#8A7352] mb-1 font-sans font-semibold">
+                    Curatorial Category
                   </label>
                   <select
                     value={subCategory}
                     onChange={(e) => setSubCategory(e.target.value)}
-                    className="w-full bg-[#FAF8F5] border border-[#111111]/20 px-4 py-3 text-sm text-[#111111] focus:border-[#111111] focus:outline-none"
+                    className="w-full bg-[#FAF8F5] border border-[#111111]/20 px-3 py-2 text-xs text-[#111111] focus:border-[#111111] focus:outline-none"
                   >
-                    {CATEGORIES.map((c) => (
-                      <option key={c} value={c} className="bg-white text-[#111111]">
-                        {c}
-                      </option>
-                    ))}
+                    <option value="Heritage">Heritage</option>
+                    <option value="Royalty">Royalty</option>
+                    <option value="Architecture">Architecture</option>
+                    <option value="Jewellery">Jewellery & Objects</option>
+                    <option value="Automobilia">Automobilia</option>
+                    <option value="Archives">Archives & Documents</option>
                   </select>
                 </div>
 
                 <div>
-                  <label className="block text-[10px] uppercase tracking-[0.2em] text-[#8A7352] mb-2 font-sans font-semibold">
-                    Attach Digital Asset URL / Drive Link
+                  <label className="block text-[10px] uppercase tracking-wider text-[#8A7352] mb-1 font-sans font-semibold">
+                    Internal Reference / Notes
                   </label>
                   <input
-                    type="url"
+                    type="text"
                     value={subNotes}
                     onChange={(e) => setSubNotes(e.target.value)}
-                    placeholder="https://drive.google.com/... (optional)"
-                    className="w-full bg-[#FAF8F5] border border-[#111111]/20 px-4 py-3 text-sm text-[#111111] focus:border-[#111111] focus:outline-none"
+                    placeholder="Private collection number, family name, etc."
+                    className="w-full bg-[#FAF8F5] border border-[#111111]/20 px-3 py-2 text-xs text-[#111111] focus:border-[#111111] focus:outline-none"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[10px] uppercase tracking-[0.2em] text-[#8A7352] mb-2 font-sans font-semibold">
-                  Description / Story Details *
+                <label className="block text-[10px] uppercase tracking-wider text-[#8A7352] mb-1 font-sans font-semibold">
+                  Proposal Synopsis & Documentation *
                 </label>
                 <textarea
+                  rows={4}
                   required
-                  rows={6}
                   value={subDesc}
                   onChange={(e) => setSubDesc(e.target.value)}
-                  placeholder="Describe the heritage background, historical provenance, family archive, or cultural context..."
-                  className="w-full bg-[#FAF8F5] border border-[#111111]/20 p-4 text-sm text-[#111111] focus:border-[#111111] focus:outline-none leading-relaxed"
+                  placeholder="Describe the subject, historical period, available visual material, and documented provenance..."
+                  className="w-full bg-[#FAF8F5] border border-[#111111]/20 px-4 py-2.5 text-xs text-[#111111] focus:border-[#111111] focus:outline-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={submittingStory}
-                className="w-full py-4 text-xs uppercase tracking-[0.24em] font-sans font-medium transition-all bg-[#111111] text-[#FAF8F5] hover:bg-[#8A7352]"
+                className="px-8 py-3 bg-[#111111] text-[#FAF8F5] text-xs uppercase tracking-[0.24em] font-sans font-medium hover:bg-[#8A7352] transition-colors"
               >
-                {submittingStory ? "Transmitting to Editors..." : "SUBMIT TO EDITORIAL DESK →"}
+                {submittingStory ? "Transmitting..." : "Submit to Curatorial Board →"}
               </button>
             </form>
-          </div>
-        )}
+          </section>
+        </main>
+      )}
 
-        {/* ════════════════════════════════════════════════
-            TAB G — MY SUBMISSIONS
-            ════════════════════════════════════════════════ */}
-        {activeTab === "submissions" && (
-          <div className="space-y-8">
-            <div className="border-b border-[#111111]/10 pb-4">
-              <h2 className="text-2xl sm:text-3xl font-serif text-[#111111]">
-                MY SUBMISSIONS
-              </h2>
-              <p className="text-sm font-sans text-[#666666] mt-1">
-                Track the status of materials and stories submitted to The Royal Gallerys Editorial Office.
-              </p>
-            </div>
+      {/* ════════════════════════════════════════════════
+          06 — STORY READER MODAL
+          ════════════════════════════════════════════════ */}
+      <StoryReaderModal
+        story={activeStory}
+        onClose={() => setActiveStory(null)}
+        onSelectStory={(s) => setActiveStory(s)}
+      />
 
-            {submissions.length === 0 ? (
-              <div className="p-12 text-center border border-[#111111]/10 bg-white">
-                <p className="text-sm font-serif text-[#666666] mb-4">
-                  You have not submitted any materials to the Editorial Desk yet.
-                </p>
-                <button
-                  onClick={() => setActiveTab("editorial-desk")}
-                  className="px-6 py-2.5 text-xs uppercase tracking-[0.2em] font-sans border border-[#111111] text-[#111111] hover:bg-[#111111] hover:text-[#FAF8F5]"
-                >
-                  Submit Material Now →
-                </button>
-              </div>
-            ) : (
-              <div className="space-y-4">
-                {submissions.map((sub) => (
-                  <div
-                    key={sub.id}
-                    className="p-6 bg-white border border-[#111111]/10 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4"
-                  >
-                    <div className="space-y-1">
-                      <div className="flex items-center gap-3">
-                        <span className="text-[10px] font-mono text-[#8A7352] font-bold">
-                          {sub.id}
-                        </span>
-                        <span className="text-[10px] uppercase tracking-wider px-2 py-0.5 border border-[#111111]/10 text-[#666666]">
-                          {sub.category}
-                        </span>
-                      </div>
-                      <h4 className="text-lg font-serif text-[#111111]">
-                        {sub.title}
-                      </h4>
-                      <p className="text-xs text-[#666666] line-clamp-2 max-w-2xl">
-                        {sub.description}
-                      </p>
-                    </div>
-
-                    <div className="text-right flex-shrink-0">
-                      <span className="text-[9px] uppercase tracking-wider text-[#777777] block mb-1">
-                        Editorial Status
-                      </span>
-                      <span
-                        className={`inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-xs ${
-                          sub.status === "Published"
-                            ? "bg-emerald-50 text-emerald-700 border border-emerald-300"
-                            : sub.status === "Accepted"
-                            ? "bg-amber-50 text-amber-700 border border-amber-300"
-                            : sub.status === "Under Editorial Review"
-                            ? "bg-blue-50 text-blue-700 border border-blue-300"
-                            : "bg-neutral-100 text-[#111111] border border-neutral-300"
-                        }`}
-                      >
-                        {sub.status}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* ════════════════════════════════════════════════
-            TAB H — NOTIFICATIONS
-            ════════════════════════════════════════════════ */}
-        {activeTab === "notifications" && (
-          <div className="max-w-3xl mx-auto space-y-6">
-            <div className="border-b border-[#111111]/10 pb-4">
-              <h2 className="text-2xl sm:text-3xl font-serif text-[#111111]">
-                NOTIFICATIONS
-              </h2>
-              <p className="text-sm font-sans text-[#666666] mt-1">
-                Private member announcements, editorial notices, and print dispatch updates.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              {notifications.map((notif) => (
-                <div
-                  key={notif.id}
-                  className="p-6 bg-white border border-[#111111]/10 shadow-sm space-y-2"
-                >
-                  <div className="flex items-center justify-between text-[10px] uppercase tracking-wider">
-                    <span className="text-[#8A7352] font-semibold">{notif.category}</span>
-                    <span className="text-[#777777]">
-                      {new Date(notif.createdAt).toLocaleDateString("en-US", {
-                        month: "short",
-                        day: "numeric",
-                        year: "numeric",
-                      })}
-                    </span>
-                  </div>
-                  <h4 className="text-lg font-serif text-[#111111]">{notif.title}</h4>
-                  <p className="text-xs font-sans text-[#666666] leading-relaxed">
-                    {notif.message}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* ════════════════════════════════════════════════
-            TAB I — MY PROFILE
-            ════════════════════════════════════════════════ */}
-        {activeTab === "profile" && (
-          <div className="max-w-2xl mx-auto space-y-8">
-            <div className="border-b border-[#111111]/10 pb-4">
-              <h2 className="text-2xl sm:text-3xl font-serif text-[#111111]">
-                MY PROFILE
-              </h2>
-              <p className="text-sm font-sans text-[#666666] mt-1">
-                Manage your personal contact coordinates and delivery address.
-              </p>
-            </div>
-
-            {profileMsg && (
-              <div className="p-4 bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs font-sans">
-                {profileMsg}
-              </div>
-            )}
-
-            <form
-              onSubmit={handleProfileSave}
-              className="p-8 bg-white border border-[#111111]/15 shadow-sm space-y-5"
-            >
-              <div>
-                <label className="block text-[10px] uppercase tracking-[0.2em] text-[#8A7352] mb-2 font-sans font-semibold">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  required
-                  value={profName}
-                  onChange={(e) => setProfName(e.target.value)}
-                  className="w-full bg-[#FAF8F5] border border-[#111111]/20 px-4 py-3 text-sm text-[#111111] focus:border-[#111111] focus:outline-none"
-                />
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-[10px] uppercase tracking-[0.2em] text-[#8A7352] mb-2 font-sans font-semibold">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    value={profEmail}
-                    onChange={(e) => setProfEmail(e.target.value)}
-                    className="w-full bg-[#FAF8F5] border border-[#111111]/20 px-4 py-3 text-sm text-[#111111] focus:border-[#111111] focus:outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-[10px] uppercase tracking-[0.2em] text-[#8A7352] mb-2 font-sans font-semibold">
-                    Mobile Phone
-                  </label>
-                  <input
-                    type="tel"
-                    required
-                    value={profPhone}
-                    onChange={(e) => setProfPhone(e.target.value)}
-                    className="w-full bg-[#FAF8F5] border border-[#111111]/20 px-4 py-3 text-sm text-[#111111] focus:border-[#111111] focus:outline-none"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-[10px] uppercase tracking-[0.2em] text-[#8A7352] mb-2 font-sans font-semibold">
-                  WhatsApp Number
-                </label>
-                <input
-                  type="tel"
-                  value={profWhatsapp}
-                  onChange={(e) => setProfWhatsapp(e.target.value)}
-                  className="w-full bg-[#FAF8F5] border border-[#111111]/20 px-4 py-3 text-sm text-[#111111] focus:border-[#111111] focus:outline-none"
-                />
-              </div>
-
-              <div>
-                <label className="block text-[10px] uppercase tracking-[0.2em] text-[#8A7352] mb-2 font-sans font-semibold">
-                  Street Address / Estate Name
-                </label>
-                <input
-                  type="text"
-                  required
-                  value={profStreet}
-                  onChange={(e) => setProfStreet(e.target.value)}
-                  className="w-full bg-[#FAF8F5] border border-[#111111]/20 px-4 py-3 text-sm text-[#111111] focus:border-[#111111] focus:outline-none"
-                />
-              </div>
-
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                <div>
-                  <label className="block text-[10px] uppercase tracking-[0.2em] text-[#8A7352] mb-2 font-sans font-semibold">
-                    City
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={profCity}
-                    onChange={(e) => setProfCity(e.target.value)}
-                    className="w-full bg-[#FAF8F5] border border-[#111111]/20 px-3 py-2 text-sm text-[#111111] focus:border-[#111111] focus:outline-none"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[10px] uppercase tracking-[0.2em] text-[#8A7352] mb-2 font-sans font-semibold">
-                    State
-                  </label>
-                  <input
-                    type="text"
-                    value={profState}
-                    onChange={(e) => setProfState(e.target.value)}
-                    className="w-full bg-[#FAF8F5] border border-[#111111]/20 px-3 py-2 text-sm text-[#111111] focus:border-[#111111] focus:outline-none"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[10px] uppercase tracking-[0.2em] text-[#8A7352] mb-2 font-sans font-semibold">
-                    PIN / ZIP
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={profPincode}
-                    onChange={(e) => setProfPincode(e.target.value)}
-                    className="w-full bg-[#FAF8F5] border border-[#111111]/20 px-3 py-2 text-sm text-[#111111] focus:border-[#111111] focus:outline-none"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[10px] uppercase tracking-[0.2em] text-[#8A7352] mb-2 font-sans font-semibold">
-                    Country
-                  </label>
-                  <input
-                    type="text"
-                    value={profCountry}
-                    onChange={(e) => setProfCountry(e.target.value)}
-                    className="w-full bg-[#FAF8F5] border border-[#111111]/20 px-3 py-2 text-sm text-[#111111] focus:border-[#111111] focus:outline-none"
-                  />
-                </div>
-              </div>
-
-              <div className="pt-4">
-                <button
-                  type="submit"
-                  disabled={savingProfile}
-                  className="w-full py-3.5 text-xs uppercase tracking-[0.24em] font-sans font-medium transition-all bg-[#111111] text-[#FAF8F5] hover:bg-[#8A7352]"
-                >
-                  {savingProfile ? "Saving Details..." : "SAVE CHANGES"}
-                </button>
-              </div>
-            </form>
-          </div>
-        )}
-
-        {/* ── READER MODAL ── */}
-        {readingItem && (
-          <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-            <div className="max-w-3xl w-full max-h-[85vh] bg-[#FAF8F5] border border-[#111111] p-8 sm:p-12 overflow-y-auto space-y-6 shadow-2xl">
-              <div className="flex items-center justify-between border-b border-[#111111]/15 pb-4">
-                <div>
-                  <span className="text-[10px] uppercase tracking-[0.3em] font-mono text-[#8A7352] font-bold">
-                    The Royal Gallerys Private Archive Reader
-                  </span>
-                  <h3 className="text-2xl font-serif text-[#111111] mt-1">{readingItem.title}</h3>
-                  {readingItem.subtitle && (
-                    <p className="text-xs text-[#777777] font-sans mt-0.5">{readingItem.subtitle}</p>
-                  )}
-                </div>
-                <button
-                  onClick={() => setReadingItem(null)}
-                  className="text-2xl text-[#111111] hover:text-[#8A7352] p-2"
-                >
-                  ✕
-                </button>
-              </div>
-
-              <div className="text-sm font-sans text-[#333333] leading-relaxed whitespace-pre-line py-4">
-                {readingItem.content}
-              </div>
-
-              <div className="border-t border-[#111111]/15 pt-4 flex justify-between items-center text-xs font-sans text-[#777777]">
-                <span>● Authenticated Member Access Verified</span>
-                <button
-                  onClick={() => setReadingItem(null)}
-                  className="px-6 py-2 border border-[#111111] text-[#111111] hover:bg-[#111111] hover:text-[#FAF8F5]"
-                >
-                  Close Reader
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
+      {/* ════════════════════════════════════════════════
+          07 — SEARCH OVERLAY
+          ════════════════════════════════════════════════ */}
+      <PrivateWorldSearch
+        isOpen={searchOpen}
+        onClose={() => setSearchOpen(false)}
+        onSelectStory={(s) => setActiveStory(s)}
+      />
     </div>
   );
 }
