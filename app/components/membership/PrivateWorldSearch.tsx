@@ -121,14 +121,16 @@ export default function PrivateWorldSearch({
                 }}
                 className="group cursor-pointer p-3 bg-white border border-[#111111]/10 hover:border-[#111111] transition-all flex gap-3 items-center"
               >
-                <div className="relative w-16 h-16 shrink-0 bg-[#111111] overflow-hidden">
-                  <Image
-                    src={story.heroImage}
-                    alt={story.title}
-                    fill
-                    sizes="64px"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                <div className="relative w-16 h-16 shrink-0 bg-[#141414] overflow-hidden flex items-center justify-center p-0.5 border border-[#111111]/10">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={story.heroImage}
+                      alt={story.title}
+                      fill
+                      sizes="64px"
+                      className="object-contain group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
                 </div>
 
                 <div className="space-y-0.5 overflow-hidden">

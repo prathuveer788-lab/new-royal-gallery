@@ -13,12 +13,22 @@ export default function MemberLoginPage() {
   const [errorMsg, setErrorMsg] = useState("");
 
   useEffect(() => {
+    // If already authenticated, redirect straight to dashboard
+    fetch("/api/member/me")
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (data?.authenticated && data?.member) {
+          router.replace("/member/dashboard");
+        }
+      })
+      .catch(() => {});
+
     // Automatically prefill saved email if user previously logged in
     try {
       const saved = localStorage.getItem("rg_member_identifier");
       if (saved) setIdentifier(saved);
     } catch {}
-  }, []);
+  }, [router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

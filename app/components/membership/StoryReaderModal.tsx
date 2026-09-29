@@ -50,44 +50,62 @@ export default function StoryReaderModal({
         className="relative w-full max-w-4xl bg-[#FAF8F5] text-[#111111] shadow-2xl min-h-screen sm:min-h-0 sm:rounded-sm overflow-hidden z-10 my-auto"
       >
         {/* ── TOP STICKY EDITORIAL CONTROLS ── */}
-        <header className="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-sm border-b border-[#111111]/10 px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="text-[9px] uppercase tracking-[0.3em] font-sans font-semibold text-[#8A7352]">
+        <header className="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-sm border-b border-[#111111]/10 px-4 sm:px-6 py-3.5 flex items-center justify-between">
+          <div className="flex items-center gap-2 sm:gap-4">
+            <button
+              type="button"
+              onClick={onClose}
+              className="flex items-center gap-2 text-[11px] sm:text-xs uppercase tracking-[0.22em] font-sans font-medium text-[#111111] hover:text-[#8A7352] transition-colors py-1.5 px-3 sm:px-4 border border-[#111111]/20 hover:border-[#8A7352] bg-white shadow-xs"
+            >
+              <span>← Back to Dashboard</span>
+            </button>
+
+            <span className="hidden md:inline-block text-[9px] uppercase tracking-[0.3em] font-sans font-semibold text-[#8A7352]">
               {story.worldNumber} · {story.worldTitle}
             </span>
-            {story.accessionId && (
-              <>
-                <span className="text-[#8A7352]/40">|</span>
-                <span className="text-[9px] font-mono text-[#555555]">
-                  {story.accessionId}
-                </span>
-              </>
-            )}
           </div>
 
+          <div className="flex items-center gap-3">
+            {story.accessionId && (
+              <span className="hidden sm:inline-block text-[9px] font-mono text-[#777777] bg-white px-2 py-1 border border-[#111111]/10">
+                {story.accessionId}
+              </span>
+            )}
+            <button
+              type="button"
+              onClick={onClose}
+              className="text-xs uppercase tracking-[0.2em] font-sans text-[#777777] hover:text-[#111111] transition-colors py-1.5 px-3 border border-[#111111]/15 hover:border-[#111111] bg-white"
+            >
+              Close ✕
+            </button>
+          </div>
+        </header>
+
+        {/* ── FLOATING MOBILE QUICK RETURN BUTTON ── */}
+        <div className="fixed bottom-6 right-6 z-50 sm:hidden">
           <button
             type="button"
             onClick={onClose}
-            className="text-xs uppercase tracking-[0.2em] font-sans text-[#111111] hover:text-[#8A7352] transition-colors py-1 px-3 border border-[#111111]/20 hover:border-[#8A7352]"
+            className="flex items-center gap-2 px-4 py-2.5 bg-[#111111] text-[#FAF8F5] text-xs font-sans uppercase tracking-widest shadow-2xl border border-[#8A7352]/40"
           >
-            Close ✕
+            <span>← Back</span>
           </button>
-        </header>
+        </div>
 
         {/* ── FULL-BLEED HERO PHOTOGRAPHY ── */}
-        <div className="relative aspect-[16/10] sm:aspect-[21/10] w-full bg-[#111111] overflow-hidden select-none">
+        <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full max-h-[560px] bg-[#111111] overflow-hidden select-none">
           <Image
             src={story.heroImage}
             alt={story.title}
             fill
             priority
             sizes="(max-width: 1024px) 100vw, 1000px"
-            className="object-cover"
+            className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent pointer-events-none" />
           <div className="absolute bottom-4 left-6 right-6 flex items-end justify-between text-white text-[11px] font-sans tracking-wide">
-            <span>{story.location}</span>
-            <span className="font-mono text-white/80">{story.period}</span>
+            <span className="bg-black/50 backdrop-blur-xs px-2.5 py-1 border border-white/20">{story.location}</span>
+            <span className="font-mono text-white/90 bg-black/50 backdrop-blur-xs px-2.5 py-1 border border-white/20">{story.period}</span>
           </div>
         </div>
 
@@ -239,76 +257,82 @@ export default function StoryReaderModal({
               )}
 
               {sec.image && (
-                <div className="my-6 space-y-2">
-                  <div className="relative aspect-[16/9] w-full bg-[#111111] overflow-hidden">
-                    <Image
-                      src={sec.image}
-                      alt={sec.caption || story.title}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 800px"
-                      className="object-cover"
-                    />
+                <figure className="my-10 space-y-3">
+                  <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] bg-[#141414] overflow-hidden border border-[#111111]/15 p-2 sm:p-4 flex items-center justify-center shadow-xs">
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={sec.image}
+                        alt={sec.caption || story.title}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 820px"
+                        className="object-contain"
+                      />
+                    </div>
                   </div>
                   {sec.caption && (
-                    <p className="text-[11px] font-sans text-[#777777] italic text-center">
+                    <figcaption className="text-xs font-serif text-[#666666] italic text-center px-4 max-w-xl mx-auto leading-relaxed">
                       {sec.caption}
-                    </p>
+                    </figcaption>
                   )}
-                </div>
+                </figure>
               )}
             </div>
           ))}
 
           {/* Secondary Full Plate */}
           {story.secondaryImage && (
-            <div className="my-8 space-y-2">
-              <div className="relative aspect-[16/9] w-full bg-[#111111] overflow-hidden">
-                <Image
-                  src={story.secondaryImage}
-                  alt={story.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 800px"
-                  className="object-cover"
-                />
+            <figure className="my-10 space-y-3">
+              <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] bg-[#141414] overflow-hidden border border-[#111111]/15 p-2 sm:p-4 flex items-center justify-center shadow-xs">
+                <div className="relative w-full h-full">
+                  <Image
+                    src={story.secondaryImage}
+                    alt={story.title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 820px"
+                    className="object-contain"
+                  />
+                </div>
               </div>
-              <p className="text-[11px] font-sans text-[#777777] text-center italic">
+              <figcaption className="text-xs font-serif text-[#777777] text-center italic">
                 Archival plate preserved in the private collection of The Royal Gallerys.
-              </p>
-            </div>
+              </figcaption>
+            </figure>
           )}
 
           {/* Archival Folio & Plates Grid */}
           {story.galleryImages && story.galleryImages.length > 2 && (
-            <div className="my-12 pt-8 border-t border-[#111111]/10 space-y-4">
+            <div className="my-14 pt-8 border-t border-[#111111]/15 space-y-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <span className="text-[9px] uppercase tracking-[0.25em] font-sans text-[#8A7352] font-semibold block">
+                  <span className="text-[10px] uppercase tracking-[0.3em] font-sans text-[#8A7352] font-semibold block">
                     Curatorial Visual Folio
                   </span>
-                  <h4 className="text-lg font-serif text-[#111111]">
+                  <h4 className="text-xl font-serif text-[#111111] mt-0.5">
                     Archival Plates & Comparative Evidence
                   </h4>
                 </div>
-                <span className="text-[10px] font-mono text-[#777777]">
+                <span className="text-[10px] font-mono text-[#8A7352] px-2 py-1 border border-[#8A7352]/30 bg-white">
                   {story.galleryImages.length} Verified Plates
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
                 {story.galleryImages.map((imgSrc, pIdx) => (
-                  <div key={pIdx} className="space-y-1.5 group">
-                    <div className="relative aspect-[4/3] bg-[#111111] overflow-hidden border border-[#111111]/10">
-                      <Image
-                        src={imgSrc}
-                        alt={`${story.title} - Plate 0${pIdx + 1}`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 400px"
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
+                  <div key={pIdx} className="space-y-2 group bg-white p-3 border border-[#111111]/12 shadow-xs">
+                    <div className="relative aspect-[4/3] bg-[#141414] overflow-hidden border border-[#111111]/10 flex items-center justify-center p-2">
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={imgSrc}
+                          alt={`${story.title} - Plate 0${pIdx + 1}`}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 420px"
+                          className="object-contain transition-transform duration-500 group-hover:scale-102"
+                        />
+                      </div>
                     </div>
-                    <div className="flex justify-between items-center text-[10px] font-mono text-[#888888] px-1">
-                      <span>PLATE 0{pIdx + 1}</span>
-                      <span className="text-[#8A7352]">VERIFIED ARCHIVE</span>
+                    <div className="flex justify-between items-center text-[10px] font-mono text-[#888888] pt-1 px-1">
+                      <span className="font-semibold text-[#111111]">PLATE 0{pIdx + 1}</span>
+                      <span className="text-[#8A7352] uppercase tracking-wider text-[9px]">Archival Record</span>
                     </div>
                   </div>
                 ))}
@@ -367,13 +391,13 @@ export default function StoryReaderModal({
         )}
 
         {/* Bottom Close Bar */}
-        <div className="p-8 bg-[#FAF8F5] border-t border-[#111111]/10 text-center">
+        <div className="p-8 sm:p-12 bg-[#FAF8F5] border-t border-[#111111]/10 text-center">
           <button
             type="button"
             onClick={onClose}
-            className="px-10 py-3 text-xs uppercase tracking-[0.24em] font-sans font-medium transition-all bg-[#111111] text-[#FAF8F5] hover:bg-[#8A7352]"
+            className="inline-flex items-center gap-3 px-12 py-4 text-xs uppercase tracking-[0.28em] font-sans font-medium transition-all bg-[#111111] text-[#FAF8F5] hover:bg-[#8A7352] shadow-md"
           >
-            Return to Private World Overview
+            <span>← Return to Private Members’ World</span>
           </button>
         </div>
       </article>

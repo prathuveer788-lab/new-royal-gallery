@@ -807,7 +807,7 @@ export const PRIVATE_WORLDS: PrivateWorldSection[] = [
         location: "Devshree, Deogarh, Rajsamand District, Rajasthan",
         heroImage: "/images/private-world/06-palace/devshree-deogarh-01.jpg",
         secondaryImage: "/images/private-world/06-palace/devshree-deogarh-02.jpg",
-        galleryImages: ["/images/private-world/06-palace/devshree-deogarh-01.jpg", "/images/private-world/06-palace/devshree-deogarh-02.jpg", "/images/private-world/06-palace/devshree-deogarh-03.jpg", "/images/private-world/06-palace/devshree-deogarh-04.jpg"],
+        galleryImages: ["/images/private-world/06-palace/devshree-deogarh-01.jpg", "/images/private-world/06-palace/devshree-deogarh-02.jpg", "/images/private-world/06-palace/devshree-deogarh-03.jpg", "/images/private-world/06-palace/devshree-deogarh-04.jpg", "/images/private-world/06-palace/devshree-deogarh-05.jpg"],
         accessionId: "RG PALACE — 0001",
         collection: "Devshree Private Estate & Ghanerao Lineage Archives",
         provenanceSource: "Official Devshree Manor Architectural Folios & On-Site Editorial Field Visit",
@@ -822,7 +822,7 @@ export const PRIVATE_WORLDS: PrivateWorldSection[] = [
             heading: "The House: Courtyards, Verandas & Stone Jharokhas",
             text: "Designed in traditional Haveli architecture using local sandstone hand-chiselled by master stone-masons of Rajsamand, Devshree flows around an open central courtyard (chowk). Wide verandas with colonial wicker planter chairs, arched hallways hung with sepia family portraits, and shelves lined with brass polo trophies and botanical volumes create an atmosphere of quiet, timeless ease.",
             image: "/images/private-world/06-palace/devshree-deogarh-03.jpg",
-            caption: "Courtyard of Podar Haveli at Nawalgarh, Rajasthan, India. Parallel view images taken consecutively a"
+            caption: "Intimate Mewari candlelit dining on the veranda of Dev Shree"
           },
           {
             heading: "The Room: Hand-Blocked Linen & Afternoon Shadows",
@@ -1118,7 +1118,7 @@ export const PRIVATE_WORLDS: PrivateWorldSection[] = [
         location: "Devshree, Deogarh, Rajasthan",
         heroImage: "/images/private-world/08-portrait/shatrunjai-devshree-01.jpg",
         secondaryImage: "/images/private-world/08-portrait/shatrunjai-devshree-02.jpg",
-        galleryImages: ["/images/private-world/08-portrait/shatrunjai-devshree-01.jpg", "/images/private-world/08-portrait/shatrunjai-devshree-02.jpg", "/images/private-world/08-portrait/shatrunjai-devshree-03.jpg"],
+        galleryImages: ["/images/private-world/08-portrait/shatrunjai-devshree-01.jpg", "/images/private-world/08-portrait/shatrunjai-devshree-02.jpg", "/images/private-world/08-portrait/shatrunjai-devshree-03.jpg", "/images/private-world/08-portrait/shatrunjai-devshree-04.jpg"],
         accessionId: "RG PORTRAIT — 0001",
         collection: "Ghanerao-Deogarh House Archives",
         provenanceSource: "Exclusive Personal Interview & Field Documentation with Shatrunjai Singh",
@@ -1133,7 +1133,7 @@ export const PRIVATE_WORLDS: PrivateWorldSection[] = [
             heading: "Bhavna Singh and The Culinary Archive",
             text: "Bhavna Singh’s role at Devshree is that of a cultural archivist. She has spent twenty years recording recipes from royal aunts and rural village grandmothers—recipes that were never committed to print, relying on pinch measurements and intuitive temperature control over open wood fires.",
             image: "/images/private-world/08-portrait/shatrunjai-devshree-03.jpg",
-            caption: "Chokha had a special fascination with night scenes in which he could explore the effects of light. T"
+            caption: "Hospitality traditions and royal lineage at Dev Shree Deogarh"
           }
         ],
         relatedStoryIds: ["palace-one-night-at-devshree", "table-buckingham-state-banquet", "palace-one-night-at-ahilya-fort"]

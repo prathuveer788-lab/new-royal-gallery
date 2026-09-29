@@ -121,6 +121,39 @@ export default function MemberDashboardPage() {
     setShowEntrance(true);
   };
 
+  const handleOpenStory = (story: PrivateStory) => {
+    setActiveStory(story);
+    if (typeof window !== "undefined") {
+      window.history.pushState({ modal: "story", storyId: story.id }, "", `#story-${story.id}`);
+    }
+  };
+
+  const handleCloseStory = () => {
+    setActiveStory(null);
+    if (typeof window !== "undefined" && window.location.hash.startsWith("#story-")) {
+      window.history.back();
+    }
+  };
+
+  useEffect(() => {
+    const handlePopState = () => {
+      const hash = window.location.hash;
+      if (hash.startsWith("#story-")) {
+        const sId = hash.replace("#story-", "");
+        const all = getAllStories();
+        const found = all.find((s) => s.id === sId);
+        if (found) {
+          setActiveStory(found);
+          return;
+        }
+      }
+      setActiveStory(null);
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
   const handleSignOut = async () => {
     try {
       await fetch("/api/member/logout", { method: "POST" });
@@ -287,19 +320,19 @@ export default function MemberDashboardPage() {
 
             {/* ── FEATURE 01: FULL-WIDTH EDITORIAL HERO (ONE NIGHT AT DEVSHREE) ── */}
             <div
-              onClick={() => setActiveStory(devshreeStory)}
+              onClick={() => handleOpenStory(devshreeStory)}
               className="group relative cursor-pointer overflow-hidden bg-[#111111] shadow-xl"
             >
-              <div className="relative aspect-[16/10] sm:aspect-[21/9] w-full">
+              <div className="relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[16/8] max-h-[620px] w-full overflow-hidden">
                 <Image
                   src={devshreeStory.heroImage}
                   alt={devshreeStory.title}
                   fill
                   priority
                   sizes="(max-width: 1280px) 100vw, 1280px"
-                  className="object-cover transition-transform duration-1000 ease-out group-hover:scale-102"
+                  className="object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-101"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/10 transition-opacity duration-700 group-hover:from-black/85" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/10 transition-opacity duration-700 group-hover:from-black/90" />
 
                 <div className="absolute inset-0 p-6 sm:p-12 md:p-16 flex flex-col justify-between text-white">
                   <div className="flex items-center justify-between">
@@ -338,7 +371,7 @@ export default function MemberDashboardPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
               {/* Left Column: The Patiala Diamond Collar (Vault) */}
               <div
-                onClick={() => setActiveStory(patialaStory)}
+                onClick={() => handleOpenStory(patialaStory)}
                 className="lg:col-span-6 group cursor-pointer bg-white p-8 sm:p-10 border border-[#111111]/12 flex flex-col justify-between shadow-xs hover:border-[#111111] transition-all duration-500"
               >
                 <div className="space-y-4">
@@ -351,14 +384,16 @@ export default function MemberDashboardPage() {
                     </span>
                   </div>
 
-                  <div className="relative aspect-[16/10] w-full bg-[#111111] overflow-hidden">
-                    <Image
-                      src={patialaStory.heroImage}
-                      alt={patialaStory.title}
-                      fill
-                      sizes="600px"
-                      className="object-cover group-hover:scale-104 transition-transform duration-700"
-                    />
+                  <div className="relative aspect-[16/10] w-full bg-[#141414] overflow-hidden border border-[#111111]/10 flex items-center justify-center p-2">
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={patialaStory.heroImage}
+                        alt={patialaStory.title}
+                        fill
+                        sizes="600px"
+                        className="object-contain transition-transform duration-500 group-hover:scale-102"
+                      />
+                    </div>
                   </div>
 
                   <h3
@@ -383,7 +418,7 @@ export default function MemberDashboardPage() {
 
               {/* Right Column: The Vladimir Tiara (Object) */}
               <div
-                onClick={() => setActiveStory(vladimirStory)}
+                onClick={() => handleOpenStory(vladimirStory)}
                 className="lg:col-span-6 group cursor-pointer bg-white p-8 sm:p-10 border border-[#111111]/12 flex flex-col justify-between shadow-xs hover:border-[#111111] transition-all duration-500"
               >
                 <div className="space-y-4">
@@ -396,14 +431,16 @@ export default function MemberDashboardPage() {
                     </span>
                   </div>
 
-                  <div className="relative aspect-[16/10] w-full bg-[#111111] overflow-hidden">
-                    <Image
-                      src={vladimirStory.heroImage}
-                      alt={vladimirStory.title}
-                      fill
-                      sizes="600px"
-                      className="object-cover group-hover:scale-104 transition-transform duration-700"
-                    />
+                  <div className="relative aspect-[16/10] w-full bg-[#141414] overflow-hidden border border-[#111111]/10 flex items-center justify-center p-2">
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={vladimirStory.heroImage}
+                        alt={vladimirStory.title}
+                        fill
+                        sizes="600px"
+                        className="object-contain transition-transform duration-500 group-hover:scale-102"
+                      />
+                    </div>
                   </div>
 
                   <h3
@@ -454,18 +491,20 @@ export default function MemberDashboardPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Card 1: Rolls-Royce */}
               <div
-                onClick={() => setActiveStory(rollsStory)}
+                onClick={() => handleOpenStory(rollsStory)}
                 className="group cursor-pointer bg-white border border-[#111111]/10 p-6 flex flex-col justify-between hover:border-[#111111] transition-all"
               >
                 <div className="space-y-3">
-                  <div className="relative aspect-[4/3] w-full bg-[#111111] overflow-hidden">
-                    <Image
-                      src={rollsStory.heroImage}
-                      alt={rollsStory.title}
-                      fill
-                      sizes="400px"
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
+                  <div className="relative aspect-[4/3] w-full bg-[#141414] overflow-hidden flex items-center justify-center p-1.5">
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={rollsStory.heroImage}
+                        alt={rollsStory.title}
+                        fill
+                        sizes="400px"
+                        className="object-contain group-hover:scale-103 transition-transform duration-500"
+                      />
+                    </div>
                   </div>
                   <span className="text-[9px] uppercase tracking-[0.25em] font-sans font-semibold text-[#8A7352] block">
                     05 · THE AUTOMOBILE ROOM
@@ -480,25 +519,28 @@ export default function MemberDashboardPage() {
                     {rollsStory.subtitle}
                   </p>
                 </div>
-                <div className="pt-4 mt-4 border-t border-[#111111]/5 text-[10px] uppercase tracking-wider text-[#888888]">
+                <div className="pt-4 mt-4 border-t border-[#111111]/5 text-[10px] uppercase tracking-wider text-[#888888] flex items-center justify-between">
                   <span>{rollsStory.period}</span>
+                  <span className="group-hover:text-[#111111] group-hover:translate-x-1 transition-all">Inspect Automobilia →</span>
                 </div>
               </div>
 
               {/* Card 2: Buckingham Palace Banquet */}
               <div
-                onClick={() => setActiveStory(banquetStory)}
+                onClick={() => handleOpenStory(banquetStory)}
                 className="group cursor-pointer bg-white border border-[#111111]/10 p-6 flex flex-col justify-between hover:border-[#111111] transition-all"
               >
                 <div className="space-y-3">
-                  <div className="relative aspect-[4/3] w-full bg-[#111111] overflow-hidden">
-                    <Image
-                      src={banquetStory.heroImage}
-                      alt={banquetStory.title}
-                      fill
-                      sizes="400px"
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
+                  <div className="relative aspect-[4/3] w-full bg-[#141414] overflow-hidden flex items-center justify-center p-1.5">
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={banquetStory.heroImage}
+                        alt={banquetStory.title}
+                        fill
+                        sizes="400px"
+                        className="object-contain group-hover:scale-103 transition-transform duration-500"
+                      />
+                    </div>
                   </div>
                   <span className="text-[9px] uppercase tracking-[0.25em] font-sans font-semibold text-[#8A7352] block">
                     03 · THE ROYAL TABLE
@@ -513,26 +555,29 @@ export default function MemberDashboardPage() {
                     {banquetStory.subtitle}
                   </p>
                 </div>
-                <div className="pt-4 mt-4 border-t border-[#111111]/5 text-[10px] uppercase tracking-wider text-[#888888]">
+                <div className="pt-4 mt-4 border-t border-[#111111]/5 text-[10px] uppercase tracking-wider text-[#888888] flex items-center justify-between">
                   <span>{banquetStory.location}</span>
+                  <span className="group-hover:text-[#111111] group-hover:translate-x-1 transition-all">View Menu Folio →</span>
                 </div>
               </div>
 
               {/* Card 3: Interactive Room (Haddon Hall) */}
               <div
-                onClick={() => setActiveStory(haddonRoomStory)}
+                onClick={() => handleOpenStory(haddonRoomStory)}
                 className="group cursor-pointer bg-white border border-[#111111]/10 p-6 flex flex-col justify-between hover:border-[#111111] transition-all"
               >
                 <div className="space-y-3">
-                  <div className="relative aspect-[4/3] w-full bg-[#111111] overflow-hidden">
-                    <Image
-                      src={haddonRoomStory.heroImage}
-                      alt={haddonRoomStory.title}
-                      fill
-                      sizes="400px"
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute top-2 right-2 bg-[#111111]/80 text-[#FAF8F5] text-[9px] uppercase tracking-widest font-mono px-2 py-0.5 backdrop-blur-xs">
+                  <div className="relative aspect-[4/3] w-full bg-[#141414] overflow-hidden flex items-center justify-center p-1.5">
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={haddonRoomStory.heroImage}
+                        alt={haddonRoomStory.title}
+                        fill
+                        sizes="400px"
+                        className="object-contain group-hover:scale-103 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="absolute top-2 right-2 bg-[#111111]/90 text-[#FAF8F5] text-[9px] uppercase tracking-widest font-mono px-2 py-0.5 backdrop-blur-xs border border-white/20 z-10">
                       Hotspots
                     </div>
                   </div>
@@ -549,8 +594,9 @@ export default function MemberDashboardPage() {
                     {haddonRoomStory.subtitle}
                   </p>
                 </div>
-                <div className="pt-4 mt-4 border-t border-[#111111]/5 text-[10px] uppercase tracking-wider text-[#888888]">
-                  <span>Explore Interior Hotspots →</span>
+                <div className="pt-4 mt-4 border-t border-[#111111]/5 text-[10px] uppercase tracking-wider text-[#888888] flex items-center justify-between">
+                  <span>Interior Hotspots</span>
+                  <span className="group-hover:text-[#111111] group-hover:translate-x-1 transition-all">Explore Room →</span>
                 </div>
               </div>
             </div>
@@ -559,7 +605,7 @@ export default function MemberDashboardPage() {
           {/* ── FEATURE 04: THE BOOK OF THE MONTH DIGITAL MONOGRAPH ── */}
           <section className="px-4 sm:px-8 md:px-12 max-w-7xl mx-auto">
             <div
-              onClick={() => setActiveStory(bookVol1Story)}
+              onClick={() => handleOpenStory(bookVol1Story)}
               className="group cursor-pointer bg-white p-8 sm:p-12 md:p-16 border-2 border-[#111111]/15 shadow-md flex flex-col lg:flex-row items-center justify-between gap-8 hover:border-[#111111] transition-all"
             >
               <div className="lg:max-w-xl space-y-4">
@@ -582,14 +628,16 @@ export default function MemberDashboardPage() {
                 </div>
               </div>
 
-              <div className="relative aspect-[4/3] w-full lg:w-96 bg-[#111111] overflow-hidden shadow-lg">
-                <Image
-                  src={bookVol1Story.heroImage}
-                  alt={bookVol1Story.title}
-                  fill
-                  sizes="400px"
-                  className="object-cover group-hover:scale-104 transition-transform duration-700"
-                />
+              <div className="relative aspect-[4/3] w-full lg:w-96 bg-[#141414] overflow-hidden shadow-lg flex items-center justify-center p-2">
+                <div className="relative w-full h-full">
+                  <Image
+                    src={bookVol1Story.heroImage}
+                    alt={bookVol1Story.title}
+                    fill
+                    sizes="400px"
+                    className="object-contain group-hover:scale-103 transition-transform duration-500"
+                  />
+                </div>
               </div>
             </div>
           </section>
@@ -652,7 +700,24 @@ export default function MemberDashboardPage() {
           04 — DEDICATED INDIVIDUAL WORLD CATEGORY VIEW
           ════════════════════════════════════════════════ */}
       {currentWorldSection && activeTab !== "all" && activeTab !== "credential" && (
-        <main className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 pt-10 sm:pt-14 pb-32 space-y-12">
+        <main className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 pt-8 sm:pt-12 pb-32 space-y-10">
+          {/* Quick Return Navigation */}
+          <div className="flex items-center justify-between pb-4 border-b border-[#111111]/10">
+            <button
+              type="button"
+              onClick={() => {
+                setActiveTab("all");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#777777] hover:text-[#111111] transition-colors font-medium"
+            >
+              <span>← Back to All Worlds</span>
+            </button>
+            <span className="text-[10px] font-mono text-[#8A7352] uppercase tracking-wider hidden sm:inline">
+              Collection No. {currentWorldSection.number}
+            </span>
+          </div>
+
           {/* Category Header Masthead */}
           <div className="text-center max-w-3xl mx-auto space-y-3 pb-8 border-b border-[#111111]/15">
             <span className="text-[10px] uppercase tracking-[0.38em] font-sans font-semibold text-[#8A7352]">
@@ -701,7 +766,7 @@ export default function MemberDashboardPage() {
               .map((story) => (
                 <article
                   key={story.id}
-                  onClick={() => setActiveStory(story)}
+                  onClick={() => handleOpenStory(story)}
                   className="group cursor-pointer bg-white border border-[#111111]/12 p-8 sm:p-10 flex flex-col justify-between shadow-xs hover:border-[#111111] transition-all duration-500"
                 >
                   <div className="space-y-4">
@@ -716,14 +781,16 @@ export default function MemberDashboardPage() {
                       )}
                     </div>
 
-                    <div className="relative aspect-[16/10] w-full bg-[#111111] overflow-hidden">
-                      <Image
-                        src={story.heroImage}
-                        alt={story.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 600px"
-                        className="object-cover group-hover:scale-104 transition-transform duration-700"
-                      />
+                    <div className="relative aspect-[16/10] w-full bg-[#141414] overflow-hidden flex items-center justify-center p-2">
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={story.heroImage}
+                          alt={story.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 600px"
+                          className="object-contain group-hover:scale-103 transition-transform duration-500"
+                        />
+                      </div>
                     </div>
 
                     <h3
@@ -956,8 +1023,8 @@ export default function MemberDashboardPage() {
           ════════════════════════════════════════════════ */}
       <StoryReaderModal
         story={activeStory}
-        onClose={() => setActiveStory(null)}
-        onSelectStory={(s) => setActiveStory(s)}
+        onClose={handleCloseStory}
+        onSelectStory={(s) => handleOpenStory(s)}
       />
 
       {/* ════════════════════════════════════════════════
@@ -966,7 +1033,7 @@ export default function MemberDashboardPage() {
       <PrivateWorldSearch
         isOpen={searchOpen}
         onClose={() => setSearchOpen(false)}
-        onSelectStory={(s) => setActiveStory(s)}
+        onSelectStory={(s) => handleOpenStory(s)}
       />
     </div>
   );
