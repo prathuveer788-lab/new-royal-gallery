@@ -68,7 +68,14 @@ export default function GlobalFooter() {
             <p className="text-sm font-light leading-relaxed" style={{ color: "#9B9589" }}>
               The international magazine for heritage, culture and luxury — editorial authority on the people, places and ideas shaping our world.
             </p>
-            <p style={{ color: "#8A7352" }} className="text-[9px] sm:text-[10px] uppercase tracking-[0.28em] font-medium font-sans">hey.theroyalgallerys@gmail.com</p>
+            <div className="pt-2">
+              <a
+                href="mailto:hey.theroyalsgallery@gmail.com"
+                className="inline-block text-[10px] sm:text-[11px] uppercase tracking-[0.24em] font-mono text-[#C4A97D] hover:text-[#FAF8F5] transition-colors duration-300 break-all"
+              >
+                hey.theroyalsgallery@gmail.com
+              </a>
+            </div>
           </div>
 
           {footerSections.map((col) => (

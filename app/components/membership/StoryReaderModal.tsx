@@ -276,6 +276,45 @@ export default function StoryReaderModal({
               </p>
             </div>
           )}
+
+          {/* Archival Folio & Plates Grid */}
+          {story.galleryImages && story.galleryImages.length > 2 && (
+            <div className="my-12 pt-8 border-t border-[#111111]/10 space-y-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <span className="text-[9px] uppercase tracking-[0.25em] font-sans text-[#8A7352] font-semibold block">
+                    Curatorial Visual Folio
+                  </span>
+                  <h4 className="text-lg font-serif text-[#111111]">
+                    Archival Plates & Comparative Evidence
+                  </h4>
+                </div>
+                <span className="text-[10px] font-mono text-[#777777]">
+                  {story.galleryImages.length} Verified Plates
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                {story.galleryImages.map((imgSrc, pIdx) => (
+                  <div key={pIdx} className="space-y-1.5 group">
+                    <div className="relative aspect-[4/3] bg-[#111111] overflow-hidden border border-[#111111]/10">
+                      <Image
+                        src={imgSrc}
+                        alt={`${story.title} - Plate 0${pIdx + 1}`}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 400px"
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="flex justify-between items-center text-[10px] font-mono text-[#888888] px-1">
+                      <span>PLATE 0{pIdx + 1}</span>
+                      <span className="text-[#8A7352]">VERIFIED ARCHIVE</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* ── RELATED STORIES ENGINE (THE CONNECTED UNIVERSE) ── */}

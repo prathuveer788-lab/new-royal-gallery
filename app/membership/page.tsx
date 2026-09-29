@@ -298,9 +298,14 @@ export default function MembershipPage() {
             </h2>
             <div className="w-12 h-px mx-auto my-4 bg-[#8A7352]/40" />
             <p className="text-xs sm:text-sm font-sans text-[#666666] max-w-lg mx-auto leading-relaxed">
-              Complete your membership application. Upon submission, your details are transmitted directly to the Editorial Office at{" "}
-              <strong className="text-[#111111]">hey.theroyalsgallery@gmail.com</strong> for review and permanent credential assignment.
+              Complete your membership application below. Upon submission, your dossier is transmitted directly to the Curatorial & Editorial Office for review and permanent credential assignment.
             </p>
+            <div className="mt-3.5 inline-flex items-center gap-2 px-4 py-1.5 bg-[#FAF8F5] border border-[#8A7352]/30 text-[11px] sm:text-xs font-mono text-[#111111] tracking-wide break-all sm:break-normal">
+              <span className="text-[#8A7352] uppercase text-[9px] tracking-widest font-sans font-semibold">Editorial Desk:</span>
+              <a href="mailto:hey.theroyalsgallery@gmail.com" className="hover:text-[#8A7352] underline decoration-[#8A7352]/40 transition-colors">
+                hey.theroyalsgallery@gmail.com
+              </a>
+            </div>
           </div>
 
           {errorMsg && (

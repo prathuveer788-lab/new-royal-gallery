@@ -524,7 +524,7 @@ export default function EditorialOfficeAdminPage() {
                   Localhost Mailbox & Dispatched Alerts
                 </h3>
                 <p className="text-xs text-[#666666] font-sans mt-0.5">
-                  Every alert sent to hey.theroyalsgallery@gmail.com and member confirmations is recorded here.
+                  Every alert sent to <span className="font-mono text-[#111111] font-medium px-2 py-0.5 bg-[#FAF8F5] border border-[#111111]/15">hey.theroyalsgallery@gmail.com</span> and member confirmations is recorded here.
                 </p>
               </div>
               <span className="text-xs font-mono font-bold bg-white px-3 py-1 border border-[#111111]/15">
