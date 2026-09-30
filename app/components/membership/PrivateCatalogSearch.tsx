@@ -2,29 +2,28 @@
 
 import React, { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
-import { getAllCuratedObjects, CuratedObject } from "@/lib/membership/private-collections-data";
+import { CATALOG_ITEMS, CatalogItem } from "@/lib/membership/private-world-catalog";
+import { getAllEditorialStories, EditorialStory } from "@/lib/membership/private-collections-data";
 
 interface PrivateCatalogSearchProps {
   isOpen: boolean;
   onClose: () => void;
-  onSelectObject: (obj: CuratedObject) => void;
+  onSelectCatalogItem: (item: CatalogItem) => void;
+  onSelectStory?: (story: EditorialStory) => void;
 }
 
 export default function PrivateCatalogSearch({
   isOpen,
   onClose,
-  onSelectObject,
+  onSelectCatalogItem,
+  onSelectStory,
 }: PrivateCatalogSearchProps) {
   const [query, setQuery] = useState("");
-  const allObjects = useMemo(() => getAllCuratedObjects(), []);
+  const allStories = useMemo(() => getAllEditorialStories(), []);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
-      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
-        e.preventDefault();
-        // Toggle or focus
-      }
     };
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -36,20 +35,30 @@ export default function PrivateCatalogSearch({
     };
   }, [isOpen, onClose]);
 
-  const filtered = useMemo(() => {
-    if (!query.trim()) return allObjects.slice(0, 6);
+  const filteredItems = useMemo(() => {
+    if (!query.trim()) return CATALOG_ITEMS.slice(0, 8);
     const q = query.toLowerCase().trim();
-    return allObjects.filter(
-      (o) =>
-        o.title.toLowerCase().includes(q) ||
-        o.house.toLowerCase().includes(q) ||
-        o.subtitle.toLowerCase().includes(q) ||
-        o.worldTitle.toLowerCase().includes(q) ||
-        o.material.toLowerCase().includes(q) ||
-        o.accessionOrRef.toLowerCase().includes(q) ||
-        o.period.toLowerCase().includes(q)
+    return CATALOG_ITEMS.filter(
+      (item) =>
+        item.name.toLowerCase().includes(q) ||
+        item.brand.toLowerCase().includes(q) ||
+        item.description.toLowerCase().includes(q) ||
+        item.subcategory.toLowerCase().includes(q) ||
+        item.category.toLowerCase().includes(q) ||
+        item.tags.some((t) => t.toLowerCase().includes(q))
     );
-  }, [allObjects, query]);
+  }, [query]);
+
+  const filteredStories = useMemo(() => {
+    if (!query.trim()) return [];
+    const q = query.toLowerCase().trim();
+    return allStories.filter(
+      (s) =>
+        s.title.toLowerCase().includes(q) ||
+        s.category.toLowerCase().includes(q) ||
+        s.subtitle.toLowerCase().includes(q)
+    );
+  }, [allStories, query]);
 
   if (!isOpen) return null;
 
@@ -65,13 +74,13 @@ export default function PrivateCatalogSearch({
         <div className="flex items-center justify-between pb-4 border-b border-[#1C1C1C]">
           <div>
             <span className="text-[9px] uppercase tracking-[0.4em] font-mono text-[#C5A880] block">
-              ROYAL GALLERYS · CURATORIAL SEARCH
+              ROYAL GALLERYS · INTELLIGENCE SEARCH
             </span>
             <h3
               className="text-xl sm:text-2xl font-serif text-[#F7F5F0]"
               style={{ fontFamily: "var(--font-cormorant), serif" }}
             >
-              Search Private Collections
+              Curated Luxury & Archival Search
             </h3>
           </div>
 
@@ -91,21 +100,22 @@ export default function PrivateCatalogSearch({
             autoFocus
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search houses (Chanel, Patek, Cartier), references, materials, or periods..."
+            placeholder="Search houses (Chanel, Patek, Cartier, Purdey, Rolls-Royce, Faberge), categories, specs..."
             className="w-full bg-[#111111] border border-[#262626] px-5 py-4 text-sm font-serif text-[#F7F5F0] focus:border-[#C5A880] focus:outline-none placeholder:font-mono placeholder:text-xs placeholder:text-[#666666]"
           />
 
           <div className="mt-2.5 flex flex-wrap gap-2 text-[9px] font-mono text-[#666666]">
-            <span>Suggested:</span>
+            <span>Quick Filters:</span>
             {[
-              "Schiaparelli",
+              "Chanel",
               "Patek Philippe",
               "Cartier",
               "Rolls-Royce",
-              "Bugatti",
-              "Boulle",
-              "Boutet",
+              "Purdey",
+              "Breguet",
+              "Bulgari",
               "Dev Shree",
+              "Fabergé",
             ].map((tag) => (
               <button
                 key={tag}
@@ -120,48 +130,86 @@ export default function PrivateCatalogSearch({
         </div>
 
         {/* Results */}
-        <div className="space-y-3 max-h-[50vh] overflow-y-auto pr-2">
-          <span className="text-[9px] font-mono uppercase tracking-widest text-[#666666] block">
-            {filtered.length} Curated Works Found
-          </span>
+        <div className="space-y-6 max-h-[50vh] overflow-y-auto pr-2">
+          {/* Catalog Pieces */}
+          <div className="space-y-3">
+            <span className="text-[9px] font-mono uppercase tracking-widest text-[#C5A880] block">
+              {filteredItems.length} Catalog Creations
+            </span>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {filtered.map((obj) => (
-              <div
-                key={obj.id}
-                onClick={() => {
-                  onSelectObject(obj);
-                  onClose();
-                }}
-                className="group cursor-pointer p-3 bg-[#0E0E0E] border border-[#1A1A1A] hover:border-[#C5A880] transition-all flex gap-3 items-center"
-              >
-                <div className="relative w-16 h-16 shrink-0 bg-[#060606] overflow-hidden flex items-center justify-center border border-[#222222]">
-                  <Image
-                    src={obj.image}
-                    alt={obj.title}
-                    fill
-                    sizes="64px"
-                    className="object-contain group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {filteredItems.map((item) => (
+                <div
+                  key={item.id}
+                  onClick={() => {
+                    onSelectCatalogItem(item);
+                    onClose();
+                  }}
+                  className="group cursor-pointer p-3 bg-[#0E0E0E] border border-[#1A1A1A] hover:border-[#C5A880] transition-all flex gap-3 items-center"
+                >
+                  <div className="relative w-16 h-16 shrink-0 bg-[#060606] overflow-hidden flex items-center justify-center border border-[#222222]">
+                    <Image
+                      src={item.heroImage}
+                      alt={item.name}
+                      fill
+                      sizes="64px"
+                      className="object-contain group-hover:scale-105 transition-transform duration-500 p-1"
+                    />
+                  </div>
 
-                <div className="space-y-0.5 overflow-hidden">
-                  <span className="text-[8px] font-mono uppercase tracking-wider text-[#C5A880] block">
-                    {obj.house} · {obj.worldTitle}
-                  </span>
-                  <h4
-                    className="text-xs sm:text-sm font-serif text-[#F7F5F0] group-hover:text-[#C5A880] transition-colors truncate"
-                    style={{ fontFamily: "var(--font-cormorant), serif" }}
-                  >
-                    {obj.title}
-                  </h4>
-                  <p className="text-[10px] font-mono text-[#777777] truncate">
-                    {obj.period} · {obj.price.amountINR}
-                  </p>
+                  <div className="space-y-0.5 overflow-hidden">
+                    <span className="text-[8px] font-mono uppercase tracking-wider text-[#C5A880] block">
+                      {item.brand} · {item.subcategory}
+                    </span>
+                    <h4
+                      className="text-xs sm:text-sm font-serif text-[#F7F5F0] group-hover:text-[#C5A880] transition-colors truncate"
+                      style={{ fontFamily: "var(--font-cormorant), serif" }}
+                    >
+                      {item.name}
+                    </h4>
+                    <p className="text-[10px] font-mono text-[#888888] truncate">
+                      {item.price}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+
+          {/* Editorial Stories if matched */}
+          {filteredStories.length > 0 && (
+            <div className="space-y-3 pt-3 border-t border-[#1C1C1C]">
+              <span className="text-[9px] font-mono uppercase tracking-widest text-[#C5A880] block">
+                {filteredStories.length} Editorial Stories Found
+              </span>
+
+              <div className="space-y-2">
+                {filteredStories.map((story) => (
+                  <div
+                    key={story.id}
+                    onClick={() => {
+                      if (onSelectStory) onSelectStory(story);
+                      onClose();
+                    }}
+                    className="p-3 bg-[#0E0E0E] border border-[#1A1A1A] hover:border-[#C5A880] cursor-pointer flex justify-between items-center"
+                  >
+                    <div>
+                      <span className="text-[8px] font-mono uppercase text-[#C5A880] block">
+                        {story.category} · {story.readTime}
+                      </span>
+                      <h4
+                        className="text-sm font-serif text-[#F7F5F0]"
+                        style={{ fontFamily: "var(--font-cormorant), serif" }}
+                      >
+                        {story.title}
+                      </h4>
+                    </div>
+                    <span className="text-xs font-mono text-[#C5A880]">Read →</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

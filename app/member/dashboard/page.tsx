@@ -1,30 +1,31 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import PrivateNavigation, { NavView } from "@/app/components/membership/PrivateNavigation";
 import PrivateWorldTransition from "@/app/components/membership/PrivateWorldTransition";
 import CollectionsDiscoveryDrawer from "@/app/components/membership/CollectionsDiscoveryDrawer";
-import ObjectEditorialModal from "@/app/components/membership/ObjectEditorialModal";
+import CatalogDetailModal from "@/app/components/membership/CatalogDetailModal";
+import ArchiveView from "@/app/components/membership/ArchiveView";
+import MemberProfileView from "@/app/components/membership/MemberProfileView";
 import EditorialStoryModal from "@/app/components/membership/EditorialStoryModal";
 import SubmitYourWorld from "@/app/components/membership/SubmitYourWorld";
-import MyArchive from "@/app/components/membership/MyArchive";
 import PrivateCatalogSearch from "@/app/components/membership/PrivateCatalogSearch";
-import AdaptiveImageFrame from "@/app/components/membership/AdaptiveImageFrame";
+
 import {
-  CuratedObject,
+  CATALOG_CATEGORIES,
+  CATALOG_ITEMS,
+  CatalogItem,
+  getCatalogItemById,
+} from "@/lib/membership/private-world-catalog";
+
+import {
   EditorialStory,
-  WorldId,
-  WORLD_DEFINITIONS,
-  getAllCuratedObjects,
-  getObjectById,
-  getObjectsByWorld,
-  getFeaturedHeroObject,
-  getEditorialTriptych,
   getAllEditorialStories,
+  getStoryById,
 } from "@/lib/membership/private-collections-data";
+
 import type { SafeMember, EditorialSubmission } from "@/lib/membership/store";
 
 export default function MemberPrivateWorldPage() {
@@ -39,18 +40,19 @@ export default function MemberPrivateWorldPage() {
 
   // Navigation State
   const [activeView, setActiveView] = useState<NavView>("discover");
-  const [selectedWorld, setSelectedWorld] = useState<WorldId | "all">("all");
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string>("All");
+  const [selectedBrand, setSelectedBrand] = useState<string>("All");
+  const [catalogSearch, setCatalogSearch] = useState<string>("");
   const [collectionsDrawerOpen, setCollectionsDrawerOpen] = useState(false);
 
-  // Reader Modals
-  const [activeObject, setActiveObject] = useState<CuratedObject | null>(null);
+  // Modals
+  const [activeCatalogItem, setActiveCatalogItem] = useState<CatalogItem | null>(null);
   const [activeStory, setActiveStory] = useState<EditorialStory | null>(null);
-
-  // Search Modal
   const [searchOpen, setSearchOpen] = useState(false);
 
-  // Personal Archive (Saved objects & stories)
-  const [savedObjectIds, setSavedObjectIds] = useState<string[]>([]);
+  // Member Saved State
+  const [savedCatalogIds, setSavedCatalogIds] = useState<string[]>([]);
   const [savedStoryIds, setSavedStoryIds] = useState<string[]>([]);
   const [submissions, setSubmissions] = useState<EditorialSubmission[]>([]);
 
@@ -84,8 +86,8 @@ export default function MemberPrivateWorldPage() {
 
         // Load saved items from localStorage
         try {
-          const savedObj = localStorage.getItem("rg_saved_objects");
-          if (savedObj) setSavedObjectIds(JSON.parse(savedObj));
+          const savedCat = localStorage.getItem("rg_saved_catalog_items");
+          if (savedCat) setSavedCatalogIds(JSON.parse(savedCat));
           const savedSt = localStorage.getItem("rg_saved_stories");
           if (savedSt) setSavedStoryIds(JSON.parse(savedSt));
         } catch {}
@@ -99,15 +101,15 @@ export default function MemberPrivateWorldPage() {
     initSession();
   }, [router]);
 
-  // Handle URL hash and popstate for modals (so browser back closes reader!)
+  // Handle URL hash and popstate for modals (so browser back closes modal cleanly)
   useEffect(() => {
     const handlePopState = () => {
       const hash = window.location.hash;
-      if (hash.startsWith("#object-")) {
-        const objId = hash.replace("#object-", "");
-        const obj = getObjectById(objId);
-        if (obj) {
-          setActiveObject(obj);
+      if (hash.startsWith("#catalog-")) {
+        const itemId = hash.replace("#catalog-", "");
+        const item = getCatalogItemById(itemId);
+        if (item) {
+          setActiveCatalogItem(item);
           setActiveStory(null);
           return;
         }
@@ -117,11 +119,11 @@ export default function MemberPrivateWorldPage() {
         const found = allStories.find((s) => s.id === storyId || s.slug === storyId);
         if (found) {
           setActiveStory(found);
-          setActiveObject(null);
+          setActiveCatalogItem(null);
           return;
         }
       }
-      setActiveObject(null);
+      setActiveCatalogItem(null);
       setActiveStory(null);
     };
 
@@ -130,47 +132,59 @@ export default function MemberPrivateWorldPage() {
   }, []);
 
   // Modal Open Handlers with History Push
-  const handleOpenObject = (obj: CuratedObject) => {
-    setActiveObject(obj);
+  const handleOpenCatalogItem = useCallback((item: CatalogItem) => {
+    setActiveCatalogItem(item);
     setActiveStory(null);
     if (typeof window !== "undefined") {
-      window.history.pushState({ modal: "object", id: obj.id }, "", `#object-${obj.id}`);
+      window.history.pushState({ modal: "catalog", id: item.id }, "", `#catalog-${item.id}`);
     }
-  };
+  }, []);
 
-  const handleCloseObject = () => {
-    setActiveObject(null);
-    if (typeof window !== "undefined" && window.location.hash.startsWith("#object-")) {
+  const handleCloseCatalogItem = useCallback(() => {
+    setActiveCatalogItem(null);
+    if (typeof window !== "undefined" && window.location.hash.startsWith("#catalog-")) {
       window.history.pushState(null, "", window.location.pathname);
     }
-  };
+  }, []);
 
-  const handleOpenStory = (story: EditorialStory) => {
+  const handleOpenStory = useCallback((story: EditorialStory) => {
     setActiveStory(story);
-    setActiveObject(null);
+    setActiveCatalogItem(null);
     if (typeof window !== "undefined") {
       window.history.pushState({ modal: "story", id: story.id }, "", `#story-${story.id}`);
     }
-  };
+  }, []);
 
-  const handleCloseStory = () => {
+  const handleCloseStory = useCallback(() => {
     setActiveStory(null);
     if (typeof window !== "undefined" && window.location.hash.startsWith("#story-")) {
       window.history.pushState(null, "", window.location.pathname);
     }
-  };
+  }, []);
 
-  // Toggle Save Object
-  const handleToggleSaveObject = (objId: string) => {
-    setSavedObjectIds((prev) => {
-      const exists = prev.includes(objId);
-      const next = exists ? prev.filter((id) => id !== objId) : [...prev, objId];
+  // Toggle Save Catalog Item
+  const handleToggleSaveCatalogItem = useCallback((itemId: string) => {
+    setSavedCatalogIds((prev) => {
+      const exists = prev.includes(itemId);
+      const next = exists ? prev.filter((id) => id !== itemId) : [...prev, itemId];
       try {
-        localStorage.setItem("rg_saved_objects", JSON.stringify(next));
+        localStorage.setItem("rg_saved_catalog_items", JSON.stringify(next));
       } catch {}
       return next;
     });
-  };
+  }, []);
+
+  // Toggle Save Story
+  const handleToggleSaveStory = useCallback((storyId: string) => {
+    setSavedStoryIds((prev) => {
+      const exists = prev.includes(storyId);
+      const next = exists ? prev.filter((id) => id !== storyId) : [...prev, storyId];
+      try {
+        localStorage.setItem("rg_saved_stories", JSON.stringify(next));
+      } catch {}
+      return next;
+    });
+  }, []);
 
   // Sign out
   const handleSignOut = async () => {
@@ -181,7 +195,7 @@ export default function MemberPrivateWorldPage() {
     router.push("/member/login");
   };
 
-  // Profile update
+  // Profile update handler
   const handleUpdateProfile = async (payload: any) => {
     const res = await fetch("/api/member/profile", {
       method: "PATCH",
@@ -193,19 +207,63 @@ export default function MemberPrivateWorldPage() {
     if (data.member) setMember(data.member);
   };
 
-  // Memoized Curated Data
-  const heroObject = useMemo(() => getFeaturedHeroObject(), []);
-  const triptychObjects = useMemo(() => getEditorialTriptych(), []);
-  const allStories = useMemo(() => getAllEditorialStories(), []);
-  const currentWorldDef = useMemo(
-    () => WORLD_DEFINITIONS.find((w) => w.id === selectedWorld),
-    [selectedWorld]
-  );
-  const currentWorldObjects = useMemo(
-    () =>
-      selectedWorld === "all" ? getAllCuratedObjects() : getObjectsByWorld(selectedWorld),
-    [selectedWorld]
-  );
+  // Reset subcategory & brand when category changes
+  const handleSelectCategory = (catId: string) => {
+    setSelectedCategory(catId);
+    setSelectedSubcategory("All");
+    setSelectedBrand("All");
+  };
+
+  // Current category definition
+  const currentCategoryDef = useMemo(() => {
+    if (selectedCategory === "all") return null;
+    return CATALOG_CATEGORIES.find((c) => c.id === selectedCategory);
+  }, [selectedCategory]);
+
+  // Available brands in the current category
+  const availableBrands = useMemo(() => {
+    const sourceItems =
+      selectedCategory === "all"
+        ? CATALOG_ITEMS
+        : CATALOG_ITEMS.filter((i) => i.category === selectedCategory);
+    const set = new Set<string>();
+    sourceItems.forEach((i) => set.add(i.brand));
+    return ["All", ...Array.from(set)];
+  }, [selectedCategory]);
+
+  // Filtered Catalog Items
+  const filteredCatalogItems = useMemo(() => {
+    let list = CATALOG_ITEMS;
+
+    if (selectedCategory !== "all") {
+      list = list.filter((i) => i.category === selectedCategory);
+    }
+
+    if (selectedSubcategory !== "All") {
+      list = list.filter((i) => i.subcategory.toLowerCase() === selectedSubcategory.toLowerCase());
+    }
+
+    if (selectedBrand !== "All") {
+      list = list.filter((i) => i.brand.toLowerCase() === selectedBrand.toLowerCase());
+    }
+
+    if (catalogSearch.trim()) {
+      const q = catalogSearch.toLowerCase().trim();
+      list = list.filter(
+        (i) =>
+          i.name.toLowerCase().includes(q) ||
+          i.brand.toLowerCase().includes(q) ||
+          i.description.toLowerCase().includes(q) ||
+          i.subcategory.toLowerCase().includes(q) ||
+          i.tags.some((t) => t.toLowerCase().includes(q))
+      );
+    }
+
+    return list;
+  }, [selectedCategory, selectedSubcategory, selectedBrand, catalogSearch]);
+
+  // Featured spotlight piece (Chanel / Patek / Rolls)
+  const spotlightItem = useMemo(() => CATALOG_ITEMS[0], []);
 
   // Loading state
   if (loading) {
@@ -245,7 +303,7 @@ export default function MemberPrivateWorldPage() {
       )}
 
       {/* ════════════════════════════════════════════════
-          02 — TOP-LEVEL MINIMAL NAVIGATION
+          02 — TOP-LEVEL PRIVATE NAVIGATION
           ════════════════════════════════════════════════ */}
       <PrivateNavigation
         activeView={activeView}
@@ -268,9 +326,9 @@ export default function MemberPrivateWorldPage() {
       <CollectionsDiscoveryDrawer
         isOpen={collectionsDrawerOpen}
         onClose={() => setCollectionsDrawerOpen(false)}
-        selectedWorld={selectedWorld}
-        onSelectWorld={(worldId) => {
-          setSelectedWorld(worldId);
+        selectedCategory={selectedCategory}
+        onSelectCategory={(catId) => {
+          handleSelectCategory(catId);
           setActiveView("collections");
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}
@@ -280,153 +338,203 @@ export default function MemberPrivateWorldPage() {
           04 — MAIN VIEW CANVAS
           ════════════════════════════════════════════════ */}
       <div className="pt-24 sm:pt-28 pb-32">
-        {/* ── VIEW: DISCOVER (The Main Uncluttered Entry Experience) ── */}
+        {/* ── VIEW: DISCOVER (Primary Luxury Discovery Experience) ── */}
         {activeView === "discover" && (
-          <main className="space-y-20 sm:space-y-32">
-            {/* 01. MONUMENTAL MASTERWORK (HERO FOCAL POINT) */}
+          <main className="space-y-16 sm:space-y-24">
+            {/* 01. EDITORIAL HEADER */}
             <section className="max-w-7xl mx-auto px-4 sm:px-8">
               <div className="text-center max-w-3xl mx-auto space-y-3 mb-10 sm:mb-14">
                 <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.45em] font-mono text-[#C5A880] block">
-                  CURATED MONUMENT OF GRAVITY · ARCHIVAL ACQUISITION
+                  CONTEMPORARY LUXURY & LIVING HERITAGE
                 </span>
                 <h1
                   className="text-4xl sm:text-6xl md:text-7xl font-serif text-[#F7F5F0] leading-[0.98] tracking-tight font-normal"
                   style={{ fontFamily: "var(--font-cormorant), 'Playfair Display', serif" }}
                 >
-                  The Private Collection
+                  The Private Discovery
                 </h1>
                 <div className="w-16 h-px bg-[#C5A880]/40 mx-auto my-3" />
-                <p className="text-sm sm:text-lg font-serif italic text-[#A8A49C] leading-relaxed">
-                  Rare masterworks of couture, horology, gemmes, coachbuilt automobilia and dynastic archives.
+                <p className="text-sm sm:text-base font-serif italic text-[#A8A49C] leading-relaxed">
+                  One hundred peerless creations across fashion, high jewellery, haute horlogerie,
+                  coachbuilds, bespoke firearms, and dynastic collections.
                 </p>
               </div>
 
-              {/* Masterwork Hero Card */}
-              <div
-                onClick={() => handleOpenObject(heroObject)}
-                className="group relative cursor-pointer bg-[#0A0A0A] border border-[#222222] hover:border-[#C5A880] transition-all duration-700 shadow-2xl overflow-hidden"
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
-                  {/* Left Column: Visual with Adaptive Frame */}
-                  <div className="lg:col-span-7 bg-[#0E0E0E] p-4 sm:p-8 flex items-center justify-center">
-                    <div className="relative w-full max-w-md aspect-[3/4] overflow-hidden">
-                      <Image
-                        src={heroObject.image}
-                        alt={heroObject.title}
-                        fill
-                        priority
-                        sizes="(max-width: 1024px) 100vw, 600px"
-                        className="object-contain transition-transform duration-1000 group-hover:scale-102"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Right Column: High-Fashion Curatorial Essay Deck */}
-                  <div className="lg:col-span-5 p-8 sm:p-12 space-y-6">
-                    <div className="flex items-center justify-between text-[9px] font-mono text-[#C5A880] uppercase tracking-[0.3em]">
-                      <span>{heroObject.worldNumber} · {heroObject.worldTitle}</span>
-                      <span>{heroObject.accessionOrRef}</span>
+              {/* Spotlight Hero Card */}
+              {spotlightItem && (
+                <div
+                  onClick={() => handleOpenCatalogItem(spotlightItem)}
+                  className="group relative cursor-pointer bg-[#0A0A0A] border border-[#222222] hover:border-[#C5A880] transition-all duration-700 shadow-2xl overflow-hidden"
+                >
+                  <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
+                    {/* Left Column: Image Stage */}
+                    <div className="lg:col-span-7 bg-[#0E0E0E] p-4 sm:p-8 flex items-center justify-center">
+                      <div className="relative w-full max-w-md aspect-[3/4] overflow-hidden">
+                        <Image
+                          src={spotlightItem.heroImage}
+                          alt={spotlightItem.name}
+                          fill
+                          priority
+                          sizes="(max-width: 1024px) 100vw, 600px"
+                          className="object-contain transition-transform duration-1000 group-hover:scale-102"
+                        />
+                      </div>
                     </div>
 
-                    <div className="space-y-2">
-                      <span className="text-xs font-mono uppercase tracking-[0.25em] text-[#AAAAAA] block">
-                        {heroObject.house}
-                      </span>
-                      <h2
-                        className="text-2xl sm:text-4xl font-serif text-[#F7F5F0] group-hover:text-[#C5A880] transition-colors leading-tight font-normal"
-                        style={{ fontFamily: "var(--font-cormorant), serif" }}
-                      >
-                        {heroObject.title}
-                      </h2>
-                    </div>
+                    {/* Right Column: Curatorial Dossier */}
+                    <div className="lg:col-span-5 p-8 sm:p-12 space-y-6">
+                      <div className="flex items-center justify-between text-[9px] font-mono text-[#C5A880] uppercase tracking-[0.3em]">
+                        <span>01 · {spotlightItem.category.toUpperCase()}</span>
+                        <span>{spotlightItem.subcategory}</span>
+                      </div>
 
-                    <p className="text-sm sm:text-base font-serif italic text-[#A8A49C] leading-relaxed">
-                      {heroObject.subtitle}
-                    </p>
+                      <div className="space-y-2">
+                        <span className="text-xs font-mono uppercase tracking-[0.25em] text-[#AAAAAA] block">
+                          {spotlightItem.brand}
+                        </span>
+                        <h2
+                          className="text-2xl sm:text-4xl font-serif text-[#F7F5F0] group-hover:text-[#C5A880] transition-colors leading-tight font-normal"
+                          style={{ fontFamily: "var(--font-cormorant), serif" }}
+                        >
+                          {spotlightItem.name}
+                        </h2>
+                      </div>
 
-                    <div className="pt-2 border-t border-[#1C1C1C] flex items-center justify-between">
-                      <span className="text-xs font-mono text-[#F7F5F0]">
-                        {heroObject.price.amountINR}
-                      </span>
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#C5A880] group-hover:translate-x-1 transition-transform">
-                        Inspect Piece →
-                      </span>
+                      <p className="text-sm sm:text-base font-serif italic text-[#A8A49C] leading-relaxed">
+                        &ldquo;{spotlightItem.editorialNote}&rdquo;
+                      </p>
+
+                      <div className="pt-2 border-t border-[#1C1C1C] flex items-center justify-between">
+                        <span className="text-sm font-mono text-[#C5A880]">
+                          {spotlightItem.price}
+                        </span>
+                        <span className="text-[10px] font-mono uppercase tracking-widest text-[#C5A880] group-hover:translate-x-1 transition-transform">
+                          Inspect Folio & Multi-Angle Rail →
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              )}
             </section>
 
-            {/* 02. THE CURATORIAL TRIPTYCH (THREE WORLDS, THREE WORKS) */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-8 space-y-8">
-              <div className="flex items-end justify-between border-b border-[#1C1C1C] pb-4">
+            {/* 02. CATEGORY DISCOVERY STRIP (10 CATEGORIES) */}
+            <section className="max-w-7xl mx-auto px-4 sm:px-8 space-y-6">
+              <div className="flex items-end justify-between border-b border-[#1C1C1C] pb-3">
                 <div>
                   <span className="text-[9px] font-mono uppercase tracking-[0.35em] text-[#C5A880] block">
-                    SELECTION DE LA SEMAINE
+                    THE TEN EDITORIAL CATEGORIES
                   </span>
                   <h3
-                    className="text-2xl sm:text-3xl font-serif text-[#F7F5F0] mt-1"
+                    className="text-xl sm:text-2xl font-serif text-[#F7F5F0]"
                     style={{ fontFamily: "var(--font-cormorant), serif" }}
                   >
-                    The Curatorial Triptych
+                    Select an Atelier or Field of Craft
                   </h3>
                 </div>
 
                 <button
                   type="button"
                   onClick={() => {
-                    setSelectedWorld("all");
+                    handleSelectCategory("all");
                     setActiveView("collections");
                   }}
                   className="text-xs font-mono uppercase tracking-widest text-[#888888] hover:text-[#C5A880] transition-colors hidden sm:block"
                 >
-                  Explore All Collections →
+                  View Complete 100 Creations →
                 </button>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {triptychObjects.map((obj) => (
-                  <article
-                    key={obj.id}
-                    onClick={() => handleOpenObject(obj)}
-                    className="group cursor-pointer bg-[#0A0A0A] border border-[#1C1C1C] hover:border-[#C5A880] transition-all p-6 flex flex-col justify-between space-y-6"
+              {/* 10 Category Cards Grid */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+                {CATALOG_CATEGORIES.map((cat) => (
+                  <button
+                    key={cat.id}
+                    type="button"
+                    onClick={() => {
+                      handleSelectCategory(cat.id);
+                      setActiveView("collections");
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                    className="text-left p-4 bg-[#0A0A0A] border border-[#1A1A1A] hover:border-[#C5A880] transition-all group flex flex-col justify-between h-36"
                   >
-                    <div className="space-y-4">
-                      {/* Image container respecting orientation */}
-                      <div className="relative aspect-square w-full bg-[#0E0E0E] overflow-hidden flex items-center justify-center p-3 border border-[#1A1A1A]">
-                        <div className="relative w-full h-full">
-                          <Image
-                            src={obj.image}
-                            alt={obj.title}
-                            fill
-                            sizes="400px"
-                            className="object-contain group-hover:scale-103 transition-transform duration-500"
-                          />
-                        </div>
+                    <div>
+                      <div className="flex justify-between items-center text-[9px] font-mono text-[#C5A880]">
+                        <span>{cat.number}</span>
+                        <span className="text-[#666666]">10 Pieces</span>
+                      </div>
+                      <h4
+                        className="text-xs sm:text-sm font-serif text-[#F7F5F0] group-hover:text-[#C5A880] transition-colors leading-tight mt-1.5"
+                        style={{ fontFamily: "var(--font-cormorant), serif" }}
+                      >
+                        {cat.title}
+                      </h4>
+                    </div>
+
+                    <div className="text-[9px] font-mono text-[#777777] flex items-center justify-between pt-2 border-t border-[#141414]">
+                      <span className="truncate">{cat.subcategories[1] || "All"}</span>
+                      <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </section>
+
+            {/* 03. CURATED SELECTIONS ACROSS WORLDS */}
+            <section className="max-w-7xl mx-auto px-4 sm:px-8 space-y-6">
+              <div className="flex items-end justify-between border-b border-[#1C1C1C] pb-3">
+                <div>
+                  <span className="text-[9px] font-mono uppercase tracking-[0.35em] text-[#C5A880] block">
+                    SELECTION DE LA MAISON
+                  </span>
+                  <h3
+                    className="text-xl sm:text-2xl font-serif text-[#F7F5F0]"
+                    style={{ fontFamily: "var(--font-cormorant), serif" }}
+                  >
+                    Curated Highlights
+                  </h3>
+                </div>
+                <span className="text-xs font-mono text-[#777777]">
+                  Showing 8 of 100 Creations
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                {CATALOG_ITEMS.slice(0, 8).map((item) => (
+                  <article
+                    key={item.id}
+                    onClick={() => handleOpenCatalogItem(item)}
+                    className="group cursor-pointer bg-[#0A0A0A] border border-[#1C1C1C] hover:border-[#C5A880] transition-all p-4 flex flex-col justify-between"
+                  >
+                    <div className="space-y-3">
+                      <div className="relative aspect-[4/3] w-full bg-[#070707] overflow-hidden border border-[#161616] p-2">
+                        <Image
+                          src={item.heroImage}
+                          alt={item.name}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 25vw"
+                          className="object-contain p-1 group-hover:scale-104 transition-transform duration-500"
+                        />
                       </div>
 
                       <div className="space-y-1">
-                        <div className="flex justify-between items-center text-[8px] font-mono text-[#C5A880] uppercase tracking-wider">
-                          <span>{obj.house}</span>
-                          <span className="text-[#666666]">{obj.worldNumber}</span>
+                        <div className="flex items-center justify-between text-[9px] font-mono uppercase tracking-wider text-[#C5A880]">
+                          <span className="truncate">{item.brand}</span>
+                          <span className="text-[#666666]">{item.subcategory}</span>
                         </div>
 
                         <h4
-                          className="text-lg font-serif text-[#F7F5F0] group-hover:text-[#C5A880] transition-colors leading-snug line-clamp-2"
+                          className="text-sm font-serif text-[#F7F5F0] group-hover:text-[#C5A880] transition-colors leading-snug line-clamp-2"
                           style={{ fontFamily: "var(--font-cormorant), serif" }}
                         >
-                          {obj.title}
+                          {item.name}
                         </h4>
-
-                        <p className="text-xs font-serif italic text-[#888888] line-clamp-2 leading-relaxed">
-                          {obj.subtitle}
-                        </p>
                       </div>
                     </div>
 
-                    <div className="pt-4 border-t border-[#181818] flex items-center justify-between text-[10px] font-mono text-[#777777]">
-                      <span className="truncate max-w-[160px]">{obj.price.amountINR}</span>
-                      <span className="group-hover:text-[#C5A880] group-hover:translate-x-1 transition-all">
+                    <div className="pt-3 mt-3 border-t border-[#141414] flex items-center justify-between text-[10px] font-mono text-[#888888]">
+                      <span className="truncate max-w-[130px] text-[#CCCCCC]">{item.price}</span>
+                      <span className="text-[#C5A880] group-hover:translate-x-1 transition-transform">
                         Inspect →
                       </span>
                     </div>
@@ -434,197 +542,210 @@ export default function MemberPrivateWorldPage() {
                 ))}
               </div>
             </section>
-
-            {/* 03. DEEP READING HIGHLIGHT (EDITORIAL DOSSIER SPREAD) */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-8">
-              {allStories[0] && (
-                <div
-                  onClick={() => handleOpenStory(allStories[0])}
-                  className="group cursor-pointer bg-[#0A0A0A] border border-[#222222] hover:border-[#C5A880] p-8 sm:p-14 transition-all duration-500 flex flex-col lg:flex-row items-center justify-between gap-10 shadow-2xl"
-                >
-                  <div className="lg:max-w-xl space-y-4">
-                    <span className="text-[9px] font-mono uppercase tracking-[0.4em] text-[#C5A880] block">
-                      FEATURED CURATORIAL DOSSIER · {allStories[0].readTime}
-                    </span>
-
-                    <h3
-                      className="text-2xl sm:text-4xl font-serif text-[#F7F5F0] group-hover:text-[#C5A880] transition-colors leading-tight"
-                      style={{ fontFamily: "var(--font-cormorant), serif" }}
-                    >
-                      {allStories[0].title}
-                    </h3>
-
-                    <p className="text-sm font-serif italic text-[#A8A49C] leading-relaxed">
-                      {allStories[0].subtitle}
-                    </p>
-
-                    <div className="pt-2">
-                      <span className="inline-block px-8 py-3 bg-[#161616] group-hover:bg-[#F7F5F0] text-[#F7F5F0] group-hover:text-[#050505] text-xs font-mono uppercase tracking-[0.25em] font-medium transition-colors">
-                        Read Full Dossier →
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="relative aspect-[16/10] w-full lg:w-[480px] bg-[#0E0E0E] overflow-hidden border border-[#222222] flex items-center justify-center p-3">
-                    <div className="relative w-full h-full">
-                      <Image
-                        src={allStories[0].heroImage}
-                        alt={allStories[0].title}
-                        fill
-                        sizes="500px"
-                        className="object-contain group-hover:scale-103 transition-transform duration-500"
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
-            </section>
-
-            {/* 04. PROGRESSIVE GATEWAY: 9 WORLDS IN SILENCE */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-8">
-              <div className="p-8 sm:p-12 bg-[#080808] border border-[#1A1A1A] text-center space-y-6">
-                <span className="text-[10px] font-mono uppercase tracking-[0.4em] text-[#C5A880] block">
-                  ARCHITECTURAL DISCOVERY SYSTEM
-                </span>
-
-                <h3
-                  className="text-2xl sm:text-3xl font-serif text-[#F7F5F0]"
-                  style={{ fontFamily: "var(--font-cormorant), serif" }}
-                >
-                  Nine Curatorial Worlds Preserved in Silence
-                </h3>
-
-                <p className="text-xs sm:text-sm font-serif italic text-[#888888] max-w-xl mx-auto">
-                  Fashion, Horology, High Jewellery, Automobilia, Objets de Vertu, Dynastic Heritage,
-                  Historical Arms, Monumental Art, and Sanctuaries.
-                </p>
-
-                <div>
-                  <button
-                    type="button"
-                    onClick={() => setCollectionsDrawerOpen(true)}
-                    className="px-8 py-3.5 border border-[#333333] hover:border-[#C5A880] text-xs font-mono uppercase tracking-[0.25em] text-[#CCCCCC] hover:text-[#F7F5F0] transition-all"
-                  >
-                    Open Progressive Collections Drawer ▾
-                  </button>
-                </div>
-              </div>
-            </section>
           </main>
         )}
 
-        {/* ── VIEW: COLLECTIONS (The 9 Worlds & Objects Grid) ── */}
+        {/* ── VIEW: COLLECTIONS (Complete 100-Item Catalog Discovery Engine) ── */}
         {activeView === "collections" && (
-          <main className="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
-            {/* World Category Filter Bar */}
-            <div className="flex items-center justify-between pb-4 border-b border-[#1C1C1C] overflow-x-auto gap-3">
-              <div className="flex items-center gap-2">
+          <main className="max-w-7xl mx-auto px-4 sm:px-8 space-y-10">
+            {/* Category Switcher Tabs */}
+            <div className="flex items-center gap-2 overflow-x-auto pb-3 border-b border-[#1C1C1C]">
+              <button
+                type="button"
+                onClick={() => handleSelectCategory("all")}
+                className={`px-3 py-1.5 text-[10px] font-mono uppercase tracking-widest border whitespace-nowrap transition-all ${
+                  selectedCategory === "all"
+                    ? "bg-[#C5A880] text-black border-[#C5A880] font-semibold"
+                    : "bg-[#0E0E0E] text-[#888888] border-[#1C1C1C] hover:text-white"
+                }`}
+              >
+                All (100)
+              </button>
+
+              {CATALOG_CATEGORIES.map((cat) => (
                 <button
+                  key={cat.id}
                   type="button"
-                  onClick={() => setSelectedWorld("all")}
-                  className={`px-3 py-1.5 text-[10px] font-mono uppercase tracking-widest border transition-all ${
-                    selectedWorld === "all"
-                      ? "bg-[#C5A880] text-[#050505] border-[#C5A880] font-semibold"
+                  onClick={() => handleSelectCategory(cat.id)}
+                  className={`px-3 py-1.5 text-[10px] font-mono uppercase tracking-widest border whitespace-nowrap transition-all ${
+                    selectedCategory === cat.id
+                      ? "bg-[#C5A880] text-black border-[#C5A880] font-semibold"
                       : "bg-[#0E0E0E] text-[#888888] border-[#1C1C1C] hover:text-white"
                   }`}
                 >
-                  All ({getAllCuratedObjects().length})
+                  {cat.number} {cat.title.split("&")[0].trim()}
                 </button>
-
-                {WORLD_DEFINITIONS.map((w) => (
-                  <button
-                    key={w.id}
-                    type="button"
-                    onClick={() => setSelectedWorld(w.id)}
-                    className={`px-3 py-1.5 text-[10px] font-mono uppercase tracking-widest border whitespace-nowrap transition-all ${
-                      selectedWorld === w.id
-                        ? "bg-[#C5A880] text-[#050505] border-[#C5A880] font-semibold"
-                        : "bg-[#0E0E0E] text-[#888888] border-[#1C1C1C] hover:text-white"
-                    }`}
-                  >
-                    {w.number} {w.title}
-                  </button>
-                ))}
-              </div>
+              ))}
             </div>
 
-            {/* World Masthead if a specific category is chosen */}
-            {currentWorldDef && selectedWorld !== "all" && (
-              <div className="p-8 sm:p-12 bg-[#0A0A0A] border border-[#1C1C1C] space-y-3">
-                <span className="text-[9px] font-mono uppercase tracking-[0.4em] text-[#C5A880] block">
-                  WORLD NO. {currentWorldDef.number} · {currentWorldDef.frenchTitle}
-                </span>
-
+            {/* Category Masthead (when specific category chosen) */}
+            {currentCategoryDef && (
+              <div className="p-6 sm:p-10 bg-[#0A0A0A] border border-[#1C1C1C] space-y-3">
+                <div className="flex items-center justify-between text-[9px] font-mono text-[#C5A880] uppercase tracking-[0.3em]">
+                  <span>CATEGORY {currentCategoryDef.number}</span>
+                  <span>10 CURATED CREATIONS</span>
+                </div>
                 <h1
-                  className="text-3xl sm:text-5xl font-serif text-[#F7F5F0] font-normal"
+                  className="text-2xl sm:text-4xl font-serif text-[#F7F5F0]"
                   style={{ fontFamily: "var(--font-cormorant), serif" }}
                 >
-                  {currentWorldDef.title}
+                  {currentCategoryDef.title}
                 </h1>
-
-                <p className="text-sm sm:text-base font-serif italic text-[#A8A49C] max-w-2xl">
-                  {currentWorldDef.description}
+                <p className="text-xs sm:text-sm font-serif italic text-[#A8A49C] max-w-3xl leading-relaxed">
+                  {currentCategoryDef.descriptor}
                 </p>
               </div>
             )}
 
-            {/* Objects Grid (Respecting natural image framing) */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              {currentWorldObjects.map((obj) => (
-                <article
-                  key={obj.id}
-                  onClick={() => handleOpenObject(obj)}
-                  className="group cursor-pointer bg-[#0A0A0A] border border-[#1C1C1C] hover:border-[#C5A880] transition-all p-6 sm:p-7 flex flex-col justify-between space-y-6"
-                >
-                  <div className="space-y-4">
-                    {/* Header */}
-                    <div className="flex items-center justify-between text-[9px] font-mono text-[#C5A880]">
-                      <span>{obj.house}</span>
-                      <span className="text-[#666666]">{obj.accessionOrRef}</span>
-                    </div>
+            {/* Granular Filters: Subcategory + Brand + Search Input */}
+            <div className="p-4 bg-[#090909] border border-[#1A1A1A] space-y-4">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                {/* Search Bar */}
+                <div className="relative flex-1 max-w-md">
+                  <input
+                    type="text"
+                    value={catalogSearch}
+                    onChange={(e) => setCatalogSearch(e.target.value)}
+                    placeholder="Search by brand, model, material, or keyword..."
+                    className="w-full bg-[#121212] border border-[#282828] px-4 py-2 text-xs font-mono text-[#F7F5F0] focus:border-[#C5A880] focus:outline-none placeholder:text-[#666666]"
+                  />
+                  {catalogSearch && (
+                    <button
+                      type="button"
+                      onClick={() => setCatalogSearch("")}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-[#666666] hover:text-white font-mono"
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
 
-                    {/* Image container respecting orientation */}
-                    <div className="relative aspect-[4/3] w-full bg-[#0E0E0E] overflow-hidden flex items-center justify-center p-3 border border-[#181818]">
-                      <div className="relative w-full h-full">
+                {/* Brand Filter */}
+                <div className="flex items-center gap-2 text-xs font-mono text-[#888888]">
+                  <span className="uppercase text-[10px] tracking-wider text-[#666666]">Brand:</span>
+                  <select
+                    value={selectedBrand}
+                    onChange={(e) => setSelectedBrand(e.target.value)}
+                    className="bg-[#121212] border border-[#282828] text-xs font-mono text-[#F7F5F0] px-3 py-1.5 focus:border-[#C5A880] focus:outline-none"
+                  >
+                    {availableBrands.map((b) => (
+                      <option key={b} value={b}>
+                        {b}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Counter */}
+                <div className="text-[10px] font-mono text-[#C5A880] uppercase tracking-wider">
+                  Displaying {filteredCatalogItems.length} of {CATALOG_ITEMS.length} Creations
+                </div>
+              </div>
+
+              {/* Subcategories (if in a specific category) */}
+              {currentCategoryDef && (
+                <div className="flex items-center gap-2 overflow-x-auto pt-2 border-t border-[#141414]">
+                  <span className="text-[9px] font-mono uppercase tracking-widest text-[#666666] shrink-0">
+                    Subcategory:
+                  </span>
+                  {currentCategoryDef.subcategories.map((sub) => (
+                    <button
+                      key={sub}
+                      type="button"
+                      onClick={() => setSelectedSubcategory(sub)}
+                      className={`px-2.5 py-1 text-[9px] font-mono uppercase tracking-wider border whitespace-nowrap transition-all ${
+                        selectedSubcategory === sub
+                          ? "bg-[#222222] text-[#F7F5F0] border-[#C5A880]"
+                          : "bg-transparent text-[#777777] border-transparent hover:text-white"
+                      }`}
+                    >
+                      {sub}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Catalog Grid */}
+            {filteredCatalogItems.length === 0 ? (
+              <div className="p-16 text-center bg-[#090909] border border-[#1A1A1A] space-y-3">
+                <p className="text-sm font-serif text-[#777777]">
+                  No items matched your filter criteria in this category.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedSubcategory("All");
+                    setSelectedBrand("All");
+                    setCatalogSearch("");
+                  }}
+                  className="px-4 py-1.5 text-xs font-mono uppercase tracking-widest text-[#C5A880] border border-[#2B2B2B]"
+                >
+                  Reset Filters
+                </button>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                {filteredCatalogItems.map((item) => (
+                  <article
+                    key={item.id}
+                    onClick={() => handleOpenCatalogItem(item)}
+                    className="group cursor-pointer bg-[#0A0A0A] border border-[#1C1C1C] hover:border-[#C5A880] transition-all p-5 flex flex-col justify-between space-y-4"
+                  >
+                    <div className="space-y-4">
+                      {/* Brand & Subcategory Header */}
+                      <div className="flex items-center justify-between text-[9px] font-mono text-[#C5A880] uppercase tracking-wider">
+                        <span className="font-semibold">{item.brand}</span>
+                        <span className="text-[#666666]">{item.subcategory}</span>
+                      </div>
+
+                      {/* Image Stage */}
+                      <div className="relative aspect-[4/3] w-full bg-[#070707] overflow-hidden border border-[#181818] p-3 flex items-center justify-center">
                         <Image
-                          src={obj.image}
-                          alt={obj.title}
+                          src={item.heroImage}
+                          alt={item.name}
                           fill
-                          sizes="450px"
-                          className="object-contain group-hover:scale-103 transition-transform duration-500"
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-contain p-2 group-hover:scale-104 transition-transform duration-500"
                         />
+                        {/* Multi-angle indicator pill */}
+                        {item.gallery && item.gallery.length > 1 && (
+                          <div className="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 border border-white/10 text-[8px] font-mono text-[#AAAAAA]">
+                            {item.gallery.length} Views
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Title & Short Editorial */}
+                      <div className="space-y-1.5">
+                        <h3
+                          className="text-base sm:text-lg font-serif text-[#F7F5F0] group-hover:text-[#C5A880] transition-colors leading-snug line-clamp-2"
+                          style={{ fontFamily: "var(--font-cormorant), serif" }}
+                        >
+                          {item.name}
+                        </h3>
+
+                        <p className="text-xs font-serif italic text-[#888888] line-clamp-2 leading-relaxed">
+                          {item.description}
+                        </p>
                       </div>
                     </div>
 
-                    {/* Title & Deck */}
-                    <div className="space-y-1.5">
-                      <h3
-                        className="text-lg sm:text-xl font-serif text-[#F7F5F0] group-hover:text-[#C5A880] transition-colors leading-snug line-clamp-2"
-                        style={{ fontFamily: "var(--font-cormorant), serif" }}
-                      >
-                        {obj.title}
-                      </h3>
-
-                      <p className="text-xs font-serif italic text-[#888888] line-clamp-2 leading-relaxed">
-                        {obj.subtitle}
-                      </p>
+                    {/* Footer Info: Price + CTA */}
+                    <div className="pt-3 border-t border-[#161616] flex items-center justify-between text-[10px] font-mono">
+                      <span className="text-[#CCCCCC] truncate max-w-[170px]">{item.price}</span>
+                      <span className="text-[#C5A880] group-hover:translate-x-1 transition-transform">
+                        Inspect Piece →
+                      </span>
                     </div>
-                  </div>
-
-                  {/* Footnote */}
-                  <div className="pt-4 border-t border-[#181818] flex items-center justify-between text-[10px] font-mono text-[#777777]">
-                    <span className="truncate max-w-[180px]">{obj.price.amountINR}</span>
-                    <span className="group-hover:text-[#C5A880] group-hover:translate-x-1 transition-all">
-                      Inspect Dossier →
-                    </span>
-                  </div>
-                </article>
-              ))}
-            </div>
+                  </article>
+                ))}
+              </div>
+            )}
           </main>
         )}
 
-        {/* ── VIEW: STORIES (Editorial Dossiers) ── */}
+        {/* ── VIEW: STORIES (Editorial Investigations) ── */}
         {activeView === "stories" && (
           <main className="max-w-6xl mx-auto px-4 sm:px-8 space-y-12">
             <div className="text-center max-w-3xl mx-auto space-y-3 pb-8 border-b border-[#1C1C1C]">
@@ -645,7 +766,7 @@ export default function MemberPrivateWorldPage() {
             </div>
 
             <div className="space-y-8">
-              {allStories.map((story) => (
+              {getAllEditorialStories().map((story) => (
                 <div
                   key={story.id}
                   onClick={() => handleOpenStory(story)}
@@ -689,20 +810,14 @@ export default function MemberPrivateWorldPage() {
           </main>
         )}
 
-        {/* ── VIEW: ARCHIVE (My Archive & Folio) ── */}
+        {/* ── VIEW: ARCHIVE (Editorial Publication Memory: Issues & Monographs) ── */}
         {activeView === "archive" && (
-          <MyArchive
-            member={member}
-            savedObjectIds={savedObjectIds}
-            savedStoryIds={savedStoryIds}
-            submissions={submissions}
-            onSelectObject={handleOpenObject}
+          <ArchiveView
             onSelectStory={handleOpenStory}
-            onRemoveSavedObject={(id) => handleToggleSaveObject(id)}
-            onRemoveSavedStory={(id) => {
-              setSavedStoryIds((prev) => prev.filter((stId) => stId !== id));
+            onOpenSubmit={() => {
+              setActiveView("submit");
+              window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            onUpdateProfile={handleUpdateProfile}
           />
         )}
 
@@ -717,33 +832,39 @@ export default function MemberPrivateWorldPage() {
           />
         )}
 
-        {/* ── VIEW: PROFILE (Direct Dossier Settings) ── */}
+        {/* ── VIEW: PROFILE (Member Sanctuary & Credentials & Dispatch) ── */}
         {activeView === "profile" && (
-          <MyArchive
+          <MemberProfileView
             member={member}
-            savedObjectIds={savedObjectIds}
+            savedCatalogIds={savedCatalogIds}
             savedStoryIds={savedStoryIds}
             submissions={submissions}
-            onSelectObject={handleOpenObject}
+            onSelectCatalogItem={handleOpenCatalogItem}
             onSelectStory={handleOpenStory}
-            onRemoveSavedObject={(id) => handleToggleSaveObject(id)}
-            onRemoveSavedStory={(id) => {
-              setSavedStoryIds((prev) => prev.filter((stId) => stId !== id));
-            }}
+            onRemoveSavedCatalogItem={handleToggleSaveCatalogItem}
+            onRemoveSavedStory={handleToggleSaveStory}
             onUpdateProfile={handleUpdateProfile}
+            onNavigateToDiscover={() => {
+              setActiveView("collections");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            onNavigateToSubmit={() => {
+              setActiveView("submit");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
           />
         )}
       </div>
 
       {/* ════════════════════════════════════════════════
-          05 — OBJECT EDITORIAL MODAL
+          05 — CATALOG DETAIL MODAL (MULTI-IMAGE GALLERY)
           ════════════════════════════════════════════════ */}
-      <ObjectEditorialModal
-        object={activeObject}
-        onClose={handleCloseObject}
-        onSelectObject={(obj) => handleOpenObject(obj)}
-        isSaved={activeObject ? savedObjectIds.includes(activeObject.id) : false}
-        onToggleSave={handleToggleSaveObject}
+      <CatalogDetailModal
+        item={activeCatalogItem}
+        onClose={handleCloseCatalogItem}
+        onSelectItem={(item) => handleOpenCatalogItem(item)}
+        isSaved={activeCatalogItem ? savedCatalogIds.includes(activeCatalogItem.id) : false}
+        onToggleSave={handleToggleSaveCatalogItem}
       />
 
       {/* ════════════════════════════════════════════════
@@ -752,7 +873,13 @@ export default function MemberPrivateWorldPage() {
       <EditorialStoryModal
         story={activeStory}
         onClose={handleCloseStory}
-        onSelectObject={(obj) => handleOpenObject(obj)}
+        onSelectObject={(obj) => {
+          // If related object matches a catalog item, open it
+          const found = CATALOG_ITEMS.find((c) => c.id === obj.id || c.name === obj.title);
+          if (found) {
+            handleOpenCatalogItem(found);
+          }
+        }}
       />
 
       {/* ════════════════════════════════════════════════
@@ -761,7 +888,8 @@ export default function MemberPrivateWorldPage() {
       <PrivateCatalogSearch
         isOpen={searchOpen}
         onClose={() => setSearchOpen(false)}
-        onSelectObject={(obj) => handleOpenObject(obj)}
+        onSelectCatalogItem={handleOpenCatalogItem}
+        onSelectStory={handleOpenStory}
       />
     </div>
   );
