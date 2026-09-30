@@ -47,7 +47,7 @@ const footerSections = [
 export default function GlobalFooter() {
   const pathname = usePathname();
 
-  if (pathname?.startsWith("/travel/the-balmoral")) {
+  if (pathname?.startsWith("/travel/the-balmoral") || pathname?.startsWith("/member/dashboard")) {
     return null;
   }
 

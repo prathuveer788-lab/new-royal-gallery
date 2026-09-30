@@ -44,7 +44,7 @@ export default function Navigation() {
     setIsOpen(false);
   }, [pathname]);
 
-  if (pathname?.startsWith("/travel/the-balmoral")) {
+  if (pathname?.startsWith("/travel/the-balmoral") || pathname?.startsWith("/member/dashboard")) {
     return null;
   }
 
