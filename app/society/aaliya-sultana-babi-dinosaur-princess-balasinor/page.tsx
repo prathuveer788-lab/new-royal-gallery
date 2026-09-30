@@ -195,142 +195,135 @@ export default function AaliyaSultanaBabiProfilePage() {
         }}
       />
 
-      {/* ── 2. CINEMATIC FULL-BLEED EDITORIAL HERO ── */}
+      {/* ── 2. EDITORIAL HERO — Full Portrait + Clean Title Panel ── */}
       <section
         aria-label="Article Hero: The Woman Who Walks With Giants"
-        className="relative w-full overflow-hidden"
-        style={{ height: "100svh", minHeight: "600px" }}
+        style={{ backgroundColor: "#22344A" }}
       >
-        {/* Full-bleed Portrait */}
-        <picture className="absolute inset-0 w-full h-full">
-          <source
-            type="image/avif"
-            srcSet="/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait.avif"
-          />
-          <source
-            type="image/webp"
-            srcSet="/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait-640w.webp 640w, /images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait-1024w.webp 1024w, /images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait.webp 1600w"
-            sizes="100vw"
-          />
-          <img
-            src="/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait.jpg"
-            alt="Aaliya Sultana Babi, The Dinosaur Princess of Balasinor, seated in a gilded chair in Gujarat"
-            width={2911}
-            height={4359}
-            fetchPriority="high"
-            decoding="async"
-            className="w-full h-full object-cover"
-            style={{ objectPosition: "50% 18%" }}
-          />
-        </picture>
-
-        {/* Top fade — navbar legibility */}
+        {/* ── Thin ember gradient strip at very top (print page XXXIV) ── */}
         <div
-          className="absolute inset-x-0 top-0 h-40 pointer-events-none"
-          style={{
-            background: "linear-gradient(to bottom, rgba(20,18,14,0.55) 0%, transparent 100%)",
-          }}
+          className="w-full h-[3px]"
+          style={{ background: "linear-gradient(90deg, #D4673A 0%, #22344A 100%)" }}
         />
 
-        {/* Bottom gradient — deep navy rising from footer */}
-        <div
-          className="absolute inset-x-0 bottom-0 pointer-events-none"
-          style={{
-            height: "68%",
-            background:
-              "linear-gradient(to top, rgba(22,32,46,0.98) 0%, rgba(22,32,46,0.88) 28%, rgba(22,32,46,0.55) 58%, transparent 100%)",
-          }}
-        />
+        {/* ── Portrait: full image, natural proportions, no crop ── */}
+        <div className="relative w-full flex justify-center" style={{ backgroundColor: "#22344A" }}>
 
-        {/* ── TITLE BLOCK ── */}
-        <div className="absolute inset-x-0 bottom-0 z-10 px-6 sm:px-10 md:px-14 lg:px-20 pb-10 sm:pb-14 lg:pb-16">
+          {/* Subtle left/right vignette on navy bg */}
+          <div className="absolute inset-y-0 left-0 w-16 sm:w-24 pointer-events-none z-10"
+            style={{ background: "linear-gradient(to right, rgba(22,32,46,0.6), transparent)" }} />
+          <div className="absolute inset-y-0 right-0 w-16 sm:w-24 pointer-events-none z-10"
+            style={{ background: "linear-gradient(to left, rgba(22,32,46,0.6), transparent)" }} />
 
-          {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" className="mb-5">
-            <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] uppercase tracking-[0.22em] font-sans">
-              <li>
-                <Link href="/" className="text-white/50 hover:text-white/90 transition-colors">
-                  The Royal Gallerys
-                </Link>
-              </li>
-              <li className="text-white/25">/</li>
-              <li>
-                <Link href="/society" className="text-white/50 hover:text-white/90 transition-colors">
-                  Society
-                </Link>
-              </li>
-              <li className="text-white/25">/</li>
-              <li>
-                <Link href="/society/portraits-of-heritage" className="text-[#D4673A] hover:underline transition-colors">
-                  Portraits of Heritage
-                </Link>
-              </li>
-            </ol>
-          </nav>
-
-          {/* Rubric */}
-          <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-8 sm:w-10" style={{ backgroundColor: "#D4673A" }} />
-            <span
-              className="text-[10px] sm:text-[11px] uppercase tracking-[0.28em] font-sans font-semibold"
-              style={{ color: "#D4673A" }}
-            >
-              Portraits of Heritage · Heritage Edition 2026
-            </span>
-          </div>
-
-          {/* H1 */}
-          <h1
-            className="font-playfair text-[clamp(2.4rem,6vw,6.5rem)] leading-[0.93] text-white tracking-tight mb-3"
-            style={{ fontWeight: 700, textShadow: "0 2px 24px rgba(0,0,0,0.35)" }}
-          >
-            The Woman Who<br className="hidden sm:block" /> Walks With{" "}
-            <em style={{ color: "#D4673A", fontStyle: "italic" }}>Giants.</em>
-          </h1>
-
-          {/* Name + Subtitle */}
-          <div className="mt-2 mb-6 sm:mb-8">
-            <h2
-              className="font-playfair italic text-[clamp(1.25rem,2.8vw,2.4rem)] text-white/90 leading-snug"
-              style={{ fontWeight: 400 }}
-            >
-              Aaliya Sultana Babi
-            </h2>
-            <p
-              className="font-cormorant italic text-[clamp(1rem,2vw,1.45rem)] mt-0.5 leading-snug"
-              style={{ color: "rgba(239,227,210,0.75)", fontWeight: 400 }}
-            >
-              The Dinosaur Princess of Balasinor
-            </p>
-          </div>
-
-          {/* Credits */}
-          <div className="pt-4 border-t" style={{ borderColor: "rgba(243,231,211,0.18)" }}>
-            <p
-              className="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] font-sans leading-relaxed"
-              style={{ color: "#B8A47A" }}
-            >
-              Words by Krishanpriya Rajawat&nbsp;·&nbsp;Raiyoli, Gujarat, India
-            </p>
-            <p
-              className="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] font-sans mt-1"
-              style={{ color: "rgba(239,227,210,0.4)" }}
-            >
-              Vol. XII, pp. XXXIII–XXXIV · Balasinor, Gujarat · 65 Million Years
-            </p>
-          </div>
+          <picture className="block w-full max-w-3xl mx-auto">
+            <source
+              type="image/avif"
+              srcSet="/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait.avif"
+            />
+            <source
+              type="image/webp"
+              srcSet="/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait-640w.webp 640w, /images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait-1024w.webp 1024w, /images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait.webp 1600w"
+              sizes="(max-width: 768px) 100vw, 896px"
+            />
+            <img
+              src="/images/aaliya-sultana-babi/01-hero-aaliya-sultana-babi-portrait.jpg"
+              alt="Aaliya Sultana Babi, The Dinosaur Princess of Balasinor, seated in a gilded chair in Gujarat"
+              width={2911}
+              height={4359}
+              fetchPriority="high"
+              decoding="async"
+              className="w-full h-auto block"
+              style={{ display: "block" }}
+            />
+          </picture>
         </div>
 
-        {/* Scroll cue */}
+        {/* ── Title Panel: clean, dark, below the full portrait ── */}
         <div
-          className="absolute bottom-6 right-6 sm:right-10 z-10 flex flex-col items-end gap-1.5 opacity-50"
-          aria-hidden="true"
+          className="w-full px-6 sm:px-12 md:px-20 lg:px-28 pt-10 pb-12 sm:pt-12 sm:pb-16"
+          style={{ backgroundColor: "#22344A" }}
         >
-          <span className="text-[8px] uppercase tracking-[0.22em] font-sans text-white">Scroll</span>
-          <div
-            className="w-px h-10 sm:h-14 mx-auto"
-            style={{ background: "linear-gradient(to bottom, rgba(255,255,255,0.7), transparent)" }}
-          />
+          <div className="max-w-4xl mx-auto">
+
+            {/* Breadcrumb */}
+            <nav aria-label="Breadcrumb" className="mb-6">
+              <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] uppercase tracking-[0.22em] font-sans">
+                <li>
+                  <Link href="/" className="text-white/40 hover:text-white/80 transition-colors">
+                    The Royal Gallerys
+                  </Link>
+                </li>
+                <li className="text-white/20">/</li>
+                <li>
+                  <Link href="/society" className="text-white/40 hover:text-white/80 transition-colors">
+                    Society
+                  </Link>
+                </li>
+                <li className="text-white/20">/</li>
+                <li>
+                  <Link href="/society/portraits-of-heritage" className="hover:underline transition-colors" style={{ color: "#D4673A" }}>
+                    Portraits of Heritage
+                  </Link>
+                </li>
+              </ol>
+            </nav>
+
+            {/* Rubric line */}
+            <div className="flex items-center gap-3 mb-5">
+              <div className="h-[1.5px] w-10 flex-shrink-0" style={{ backgroundColor: "#D4673A" }} />
+              <span
+                className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-sans font-semibold"
+                style={{ color: "#D4673A" }}
+              >
+                Portraits of Heritage · Heritage Edition 2026
+              </span>
+            </div>
+
+            {/* H1 */}
+            <h1
+              className="font-playfair text-[clamp(2.8rem,5.5vw,7rem)] leading-[0.92] tracking-tight mb-4"
+              style={{ fontWeight: 800, color: "#F3E7D3" }}
+            >
+              The Woman Who<br />
+              Walks With{" "}
+              <em style={{ color: "#D4673A", fontStyle: "italic" }}>Giants.</em>
+            </h1>
+
+            {/* Divider */}
+            <div className="w-14 h-[1.5px] mb-6" style={{ backgroundColor: "#D4673A" }} />
+
+            {/* Name + subtitle */}
+            <div className="mb-8">
+              <h2
+                className="font-playfair italic text-[clamp(1.4rem,3vw,2.6rem)] leading-snug mb-1"
+                style={{ fontWeight: 400, color: "#F3E7D3" }}
+              >
+                Aaliya Sultana Babi
+              </h2>
+              <p
+                className="font-cormorant italic text-[clamp(1.05rem,2vw,1.5rem)] leading-snug"
+                style={{ color: "rgba(239,227,210,0.65)", fontWeight: 400 }}
+              >
+                The Dinosaur Princess of Balasinor
+              </p>
+            </div>
+
+            {/* Credits */}
+            <div className="pt-5 border-t" style={{ borderColor: "rgba(243,231,211,0.15)" }}>
+              <p
+                className="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] font-sans"
+                style={{ color: "#B8A47A" }}
+              >
+                Words by Krishanpriya Rajawat&nbsp;·&nbsp;Raiyoli, Gujarat, India
+              </p>
+              <p
+                className="text-[9px] sm:text-[10px] uppercase tracking-[0.16em] font-sans mt-1.5"
+                style={{ color: "rgba(239,227,210,0.35)" }}
+              >
+                Vol. XII, pp. XXXIII–XXXIV · Balasinor, Gujarat · 65 Million Years
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
