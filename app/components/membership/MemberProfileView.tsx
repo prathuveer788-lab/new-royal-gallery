@@ -73,22 +73,48 @@ export default function MemberProfileView({
     }
   };
 
+  const upperFullName = member?.fullName ? member.fullName.trim().toUpperCase() : "PRIVATE MEMBER";
+  const initials = member?.fullName
+    ? member.fullName
+        .trim()
+        .toUpperCase()
+        .split(" ")
+        .filter(Boolean)
+        .map((n) => n[0])
+        .slice(0, 2)
+        .join("")
+    : "RG";
+
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-8 py-10 sm:py-14 space-y-12 animate-fadeIn">
       {/* ── PROFILE SANCTUARY HEADER ── */}
-      <div className="text-center max-w-3xl mx-auto space-y-3 pb-8 border-b border-[#1C1C1C]">
-        <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#121212] border border-[#222222] text-[9px] font-mono uppercase tracking-[0.35em] text-[#C5A880]">
+      <div className="text-center max-w-3xl mx-auto space-y-4 pb-8 border-b border-[#1C1C1C]">
+        {/* Sovereign Member Monogram Medallion */}
+        <div className="w-16 h-16 rounded-full border border-[#C5A880]/50 bg-gradient-to-b from-[#181818] via-[#111111] to-[#0A0A0A] flex items-center justify-center mx-auto shadow-[0_0_30px_rgba(197,168,128,0.15)] ring-1 ring-[#C5A880]/20">
+          <span
+            className="font-serif text-[#DFC498] text-xl tracking-[0.25em] font-semibold pl-1"
+            style={{ fontFamily: "var(--font-cormorant), serif" }}
+          >
+            {initials}
+          </span>
+        </div>
+
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#121212] border border-[#262626] text-[9px] font-mono uppercase tracking-[0.35em] text-[#C5A880]">
           <span>MEMBER SANCTUARY & CREDENTIAL</span>
         </div>
 
         <h1
-          className="text-3xl sm:text-5xl font-serif text-[#F7F5F0] font-normal"
+          className="text-3xl sm:text-5xl lg:text-6xl font-serif text-[#F7F5F0] font-normal uppercase tracking-[0.08em]"
           style={{ fontFamily: "var(--font-cormorant), serif" }}
         >
-          {member?.fullName || "Private Member"}
+          {upperFullName}
         </h1>
 
-        <div className="w-14 h-px bg-[#C5A880]/50 mx-auto" />
+        <div className="flex items-center justify-center gap-3">
+          <div className="w-14 h-px bg-gradient-to-r from-transparent to-[#C5A880]/60" />
+          <span className="text-[#C5A880] text-xs">✦</span>
+          <div className="w-14 h-px bg-gradient-to-l from-transparent to-[#C5A880]/60" />
+        </div>
 
         <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-[#888888] uppercase tracking-wider">
           <span>
@@ -97,26 +123,28 @@ export default function MemberProfileView({
           <span className="text-[#444444]">·</span>
           <span>Standing: <span className="text-[#55B374]">Active Fellow</span></span>
           <span className="text-[#444444]">·</span>
-          <span>Tier: <span className="text-[#CCCCCC]">Living Heritage Patron</span></span>
+          <span>Tier: <span className="text-[#CCCCCC]">Living Heritage Patron ({member?.membershipType || "LIFETIME"})</span></span>
+          <span className="text-[#444444]">·</span>
+          <span>Access: <span className="text-[#C5A880]">Salon Privé Clearance</span></span>
         </div>
       </div>
 
       {/* ── TABS ── */}
-      <div className="flex border-b border-[#222222] text-xs font-mono tracking-widest uppercase overflow-x-auto justify-center">
+      <div className="flex border-b border-[#222222] text-xs font-mono tracking-widest uppercase overflow-x-auto justify-center gap-1 sm:gap-2">
         {[
-          { id: "card", label: "DIGITAL MEMBERSHIP CARD" },
+          { id: "card", label: "DIGITAL PATRON CREDENTIAL" },
           { id: "saved", label: `SAVED FOLIO (${savedItems.length + savedStories.length})` },
-          { id: "submissions", label: `SUBMISSIONS (${submissions.length})` },
+          { id: "submissions", label: `EDITORIAL INTAKE (${submissions.length})` },
           { id: "dispatch", label: "DISPATCH ADDRESS & DOSSIER" },
         ].map((tab) => (
           <button
             key={tab.id}
             type="button"
             onClick={() => setActiveTab(tab.id as any)}
-            className={`py-3.5 px-5 sm:px-8 whitespace-nowrap transition-all border-b-2 -mb-px text-[10px] sm:text-xs ${
+            className={`py-3.5 px-4 sm:px-7 whitespace-nowrap transition-all border-b-2 -mb-px text-[10px] sm:text-xs tracking-[0.2em] ${
               activeTab === tab.id
-                ? "border-[#C5A880] text-[#F7F5F0] font-semibold"
-                : "border-transparent text-[#666666] hover:text-[#AAAAAA]"
+                ? "border-[#C5A880] text-[#F7F5F0] font-semibold bg-[#121212]/50"
+                : "border-transparent text-[#666666] hover:text-[#CCCCCC]"
             }`}
           >
             {tab.label}
@@ -139,7 +167,7 @@ export default function MemberProfileView({
           {/* Card Component */}
           <div className="py-4">
             <DigitalMembershipCard
-              fullName={member?.fullName || "PATRON OF LIVING HERITAGE"}
+              fullName={upperFullName}
               membershipId={member?.membershipId || "RGC-003594"}
               joinedDate={member?.createdAt}
               status="ACTIVE"

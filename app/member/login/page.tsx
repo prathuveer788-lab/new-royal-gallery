@@ -12,23 +12,32 @@ export default function MemberLoginPage() {
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
+  const [authenticatedMember, setAuthenticatedMember] = useState<{
+    fullName: string;
+    email: string;
+    membershipId: string;
+  } | null>(null);
+
   useEffect(() => {
-    // If already authenticated, redirect straight to dashboard
+    // Check if already authenticated, but DO NOT auto-redirect!
+    // Authentication into private collections must ONLY happen on explicit user action.
     fetch("/api/member/me")
       .then((res) => (res.ok ? res.json() : null))
       .then((data) => {
         if (data?.authenticated && data?.member) {
-          router.replace("/member/dashboard");
+          setAuthenticatedMember(data.member);
+          // If identifier is not set yet, fill with their active email or membership ID
+          setIdentifier((prev) => prev || data.member.email || data.member.membershipId || "");
         }
       })
       .catch(() => {});
 
-    // Automatically prefill saved email if user previously logged in
+    // Prefill saved email if user previously entered credentials
     try {
       const saved = localStorage.getItem("rg_member_identifier");
-      if (saved) setIdentifier(saved);
+      if (saved) setIdentifier((prev) => prev || saved);
     } catch {}
-  }, [router]);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -87,6 +96,49 @@ export default function MemberLoginPage() {
           {errorMsg && (
             <div className="mb-6 p-3.5 bg-red-50 border border-red-200 text-red-800 text-xs font-sans">
               {errorMsg}
+            </div>
+          )}
+
+          {/* Active Session Notification — User can choose to enter directly or re-authenticate */}
+          {authenticatedMember && (
+            <div className="mb-6 p-4 bg-[#8A7352]/10 border border-[#8A7352]/40 text-left">
+              <div className="flex items-center justify-between mb-1.5">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="text-[10px] uppercase tracking-[0.2em] font-sans font-semibold text-[#8A7352]">
+                    Active Member Session
+                  </span>
+                </div>
+                <span className="text-[9px] font-mono text-[#888888] uppercase">
+                  {authenticatedMember.membershipId}
+                </span>
+              </div>
+              <p className="text-xs text-[#111111] font-serif leading-relaxed">
+                You are currently signed in as{" "}
+                <strong className="font-semibold text-[#111111] uppercase tracking-wider">
+                  {authenticatedMember.fullName}
+                </strong>.
+              </p>
+              <div className="mt-3.5 flex flex-wrap items-center gap-2.5">
+                <button
+                  type="button"
+                  onClick={() => router.push("/member/dashboard")}
+                  className="px-4 py-2.5 bg-[#111111] hover:bg-[#8A7352] text-[#FAF8F5] text-[10px] uppercase tracking-[0.2em] font-sans font-medium transition-colors inline-flex items-center gap-1.5"
+                >
+                  <span>Enter Private World Directly ✦</span>
+                </button>
+                <Link
+                  href="/"
+                  className="px-3 py-2 border border-[#111111]/20 hover:border-[#111111] text-[#666666] hover:text-[#111111] text-[10px] uppercase tracking-[0.16em] font-sans transition-colors inline-flex items-center gap-1"
+                >
+                  <span>Public Site ↗</span>
+                </Link>
+              </div>
+              <div className="mt-3 pt-3 border-t border-[#8A7352]/20">
+                <span className="text-[10px] uppercase tracking-wider text-[#777777] font-sans">
+                  Or enter credentials below to sign in:
+                </span>
+              </div>
             </div>
           )}
 

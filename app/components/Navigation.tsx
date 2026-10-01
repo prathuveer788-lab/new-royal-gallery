@@ -2,13 +2,22 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Navigation() {
   const pathname = usePathname();
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [member, setMember] = useState<{ firstName: string; membershipId: string } | null>(null);
+
+  const handlePublicSignOut = async () => {
+    try {
+      await fetch("/api/member/logout", { method: "POST" });
+    } catch {}
+    setMember(null);
+    router.refresh();
+  };
 
   useEffect(() => {
     fetch("/api/member/me")
@@ -199,18 +208,34 @@ export default function Navigation() {
             The Circle
           </Link>
           {member ? (
-            <Link
-              href="/member/dashboard"
-              className="ml-2 px-3 xl:px-4 py-2 text-[11px] xl:text-[12px] uppercase tracking-[0.16em] transition-all duration-500 font-sans font-medium flex items-center gap-1.5"
-              style={{
-                background: "linear-gradient(135deg, rgba(212,175,55,0.25) 0%, rgba(184,164,122,0.15) 100%)",
-                border: "1px solid rgba(212,175,55,0.7)",
-                color: "#F4F0E7",
-              }}
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              <span>Dashboard</span>
-            </Link>
+            <div className="flex items-center gap-1.5 ml-2">
+              <Link
+                href="/member/dashboard"
+                className="px-3 xl:px-4 py-2 text-[11px] xl:text-[12px] uppercase tracking-[0.16em] transition-all duration-300 font-sans font-medium flex items-center gap-2 group"
+                style={{
+                  background: "linear-gradient(135deg, rgba(212,175,55,0.22) 0%, rgba(184,164,122,0.12) 100%)",
+                  border: "1px solid rgba(212,175,55,0.75)",
+                  color: "#F7F5F0",
+                }}
+                title={`Enter Private World as ${member.firstName ? member.firstName.toUpperCase() : "MEMBER"}`}
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="tracking-[0.18em]">✦ PRIVATE WORLD</span>
+                {member.firstName && (
+                  <span className="text-[10px] text-[#C5A880] tracking-wider uppercase font-mono pl-1.5 border-l border-[#8A7352]/40 hidden xl:inline">
+                    {member.firstName.toUpperCase()}
+                  </span>
+                )}
+              </Link>
+              <button
+                type="button"
+                onClick={handlePublicSignOut}
+                className="px-2 py-2 text-[10px] uppercase tracking-wider font-sans text-[#777777] hover:text-[#D4AF37] transition-colors"
+                title="Sign Out of Circle"
+              >
+                Sign Out
+              </button>
+            </div>
           ) : (
             <Link
               href="/member/login"
@@ -351,18 +376,43 @@ export default function Navigation() {
             </Link>
 
             {member ? (
-              <Link
-                href="/member/dashboard"
-                onClick={() => setIsOpen(false)}
-                className="w-full text-center py-3 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 font-sans flex items-center justify-center gap-2"
-                style={{
-                  background: "linear-gradient(135deg, #B8A47A 0%, #D4AF37 100%)",
-                  color: "#0C0C0D",
-                }}
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-800" />
-                <span>Enter Member Dashboard</span>
-              </Link>
+              <div className="space-y-2 p-3 bg-white/[0.04] border border-[#D4AF37]/40 rounded-xs">
+                <div className="flex items-center justify-between text-[10px] font-mono">
+                  <span className="text-[#D4AF37] uppercase tracking-widest flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    MEMBER ACTIVE
+                  </span>
+                  {member.firstName && (
+                    <span className="text-[#C5A880] uppercase">
+                      {member.firstName.toUpperCase()}
+                    </span>
+                  )}
+                </div>
+                <Link
+                  href="/member/dashboard"
+                  onClick={() => setIsOpen(false)}
+                  className="w-full text-center py-3 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 font-sans flex items-center justify-center gap-2 shadow-lg"
+                  style={{
+                    background: "linear-gradient(135deg, #B8A47A 0%, #D4AF37 100%)",
+                    color: "#0C0C0D",
+                  }}
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-800" />
+                  <span>✦ Enter Private World</span>
+                </Link>
+                <div className="text-center pt-1">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsOpen(false);
+                      handlePublicSignOut();
+                    }}
+                    className="text-[11px] uppercase tracking-wider text-[#888888] hover:text-red-400 transition-colors"
+                  >
+                    Sign Out →
+                  </button>
+                </div>
+              </div>
             ) : (
               <Link
                 href="/member/login"

@@ -82,7 +82,7 @@ export default function PrivateNavigation({
           {/* Member identity badge: [MEMBER NAME] / PRIVATE ACCESS */}
           <div className="hidden sm:flex items-center gap-2 text-[9px] font-mono uppercase tracking-widest text-[#888888]">
             <span className="text-[#C5A880] font-semibold truncate max-w-[140px] md:max-w-[180px]">
-              {memberName || "MEMBER"}
+              {memberName ? memberName.trim().toUpperCase() : "MEMBER"}
             </span>
             <span className="text-[#444444]">/</span>
             <span className="text-[#999999]">PRIVATE ACCESS</span>
@@ -158,13 +158,24 @@ export default function PrivateNavigation({
             </kbd>
           </button>
 
-          {/* Sign Out */}
+          {/* Visit Public Site / Magazine (Preserves member session completely) */}
+          <Link
+            href="/"
+            className="text-[9px] font-mono uppercase tracking-widest text-[#B8A47A] hover:text-[#FAF8F5] border border-[#8A7352]/40 hover:border-[#C5A880] px-2.5 py-1.5 transition-all hidden sm:inline-flex items-center gap-1.5 bg-[#111111]/60"
+            title="Explore Public Magazine (Stay Signed In)"
+          >
+            <span>PUBLIC SITE</span>
+            <span className="text-[10px]">↗</span>
+          </Link>
+
+          {/* Explicit Sign Out */}
           <button
             type="button"
             onClick={onSignOut}
-            className="text-[9px] font-mono uppercase tracking-widest text-[#777777] hover:text-[#C5A880] transition-colors hidden sm:block"
+            className="text-[9px] font-mono uppercase tracking-widest text-[#666666] hover:text-red-400 transition-colors hidden sm:block"
+            title="Sign Out of Private Circle"
           >
-            EXIT
+            SIGN OUT
           </button>
 
           {/* Mobile Menu Button */}
@@ -227,20 +238,35 @@ export default function PrivateNavigation({
             ))}
           </div>
 
-          <div className="pt-2 flex justify-between items-center text-xs font-mono text-[#777777]">
-            <button
-              type="button"
-              onClick={() => {
-                onOpenSearch();
-                setMobileMenuOpen(false);
-              }}
-              className="text-[#C5A880]"
+          <div className="pt-2 space-y-3 font-mono text-xs">
+            <Link
+              href="/"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-[#C5A880] hover:text-[#FAF8F5] flex items-center justify-between p-3 bg-[#111111] border border-[#222222] transition-colors"
             >
-              Open Search ↗
-            </button>
-            <button type="button" onClick={onSignOut} className="hover:text-white">
-              Sign Out →
-            </button>
+              <span>Explore Public Magazine</span>
+              <span>↗</span>
+            </Link>
+
+            <div className="flex justify-between items-center text-[#777777] px-1 pt-1">
+              <button
+                type="button"
+                onClick={() => {
+                  onOpenSearch();
+                  setMobileMenuOpen(false);
+                }}
+                className="text-[#C5A880] hover:underline"
+              >
+                Search Catalog ⌘K
+              </button>
+              <button
+                type="button"
+                onClick={onSignOut}
+                className="hover:text-red-400 transition-colors text-[11px] uppercase tracking-wider"
+              >
+                Sign Out →
+              </button>
+            </div>
           </div>
         </div>
       )}
