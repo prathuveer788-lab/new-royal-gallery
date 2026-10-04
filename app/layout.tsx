@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { Cormorant_Garamond, Manrope, Playfair_Display, EB_Garamond } from "next/font/google";
 import Navigation from "./components/Navigation";
 import GlobalFooter from "./components/GlobalFooter";
 
@@ -20,9 +19,14 @@ export const metadata: Metadata = {
   publisher: "The Royal Gallerys",
   formatDetection: { email: false, telephone: false, address: false },
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
+    icon: [
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   robots: {
     index: true,
@@ -31,7 +35,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_GB",
     url: "https://theroyalgallerys.com",
     siteName: "The Royal Gallerys",
     title: "THE ROYAL GALLERYS — Heritage, Culture & Luxury",
@@ -46,41 +50,21 @@ export const metadata: Metadata = {
     description: "The international magazine for heritage, culture and luxury.",
     images: ["https://theroyalgallerys.com/og-image.jpg"],
   },
-  alternates: { canonical: "https://theroyalgallerys.com" },
 };
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  variable: "--font-cormorant",
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  weight: ["300", "400", "500", "600"],
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  weight: ["400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
-});
-
-const ebGaramond = EB_Garamond({
-  subsets: ["latin"],
-  variable: "--font-eb-garamond",
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`${cormorant.variable} ${manrope.variable} ${playfair.variable} ${ebGaramond.variable} font-sans min-h-screen flex flex-col antialiased`}
-        style={{ background: "#F4F0E7" }}
+        className="font-sans min-h-screen flex flex-col antialiased"
+        style={{
+          background: "#F4F0E7",
+          fontFamily: "'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          ["--font-manrope" as string]: "'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          ["--font-cormorant" as string]: "'Cormorant Garamond', 'Playfair Display', 'EB Garamond', Georgia, serif",
+          ["--font-playfair" as string]: "'Playfair Display', Georgia, serif",
+          ["--font-eb-garamond" as string]: "'EB Garamond', Garamond, Georgia, serif",
+        }}
       >
         <Navigation />
         <main className="flex-grow">{children}</main>

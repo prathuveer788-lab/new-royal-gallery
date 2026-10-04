@@ -117,6 +117,7 @@ export default function TravelPage() {
           </h2>
           <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
             {[
+              { href: "/uk", label: "UK Edition" },
               { href: "/design", label: "Design" },
               { href: "/culture", label: "Culture" },
               { href: "/dining", label: "Dining" },

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function MemberLoginPage() {
@@ -76,6 +77,16 @@ export default function MemberLoginPage() {
       <div className="w-full max-w-md">
         {/* Masthead Title */}
         <div className="text-center mb-10">
+          <div className="flex justify-center mb-5">
+            <Image
+              src="/icon.png"
+              alt="The Royal Gallery"
+              width={80}
+              height={80}
+              priority
+              className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl shadow-md border border-[#111111]/10 object-contain"
+            />
+          </div>
           <p className="text-[10px] uppercase tracking-[0.38em] font-sans text-[#8A7352] mb-2 font-semibold">
             The Royal Gallery Circle
           </p>

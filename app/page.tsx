@@ -1,7 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { allArticles } from "@/lib/travel-articles";
 import PartnershipCTA from "./components/PartnershipCTA";
+
+export const metadata: Metadata = {
+  title: "THE ROYAL GALLERYS | Heritage, Culture & Luxury — The International Magazine",
+  description:
+    "The international magazine for heritage, culture and luxury — authoritative journalism on British, European and subcontinental royal houses, palace hotels, historic country estates, and the future of living tradition.",
+  alternates: {
+    canonical: "https://theroyalgallerys.com",
+  },
+};
 
 const blurDataURL = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGw9IiNkZGRkZGQiIGQ9Ik0wIDBoMXYxSDB6Ii8+PC9zdmc+";
 
@@ -288,6 +298,27 @@ export default function HomePage() {
                 </div>
               </Link>
             ))}
+          </div>
+
+          {/* Dedicated UK Heritage Editorial Banner */}
+          <div className="mt-12 sm:mt-16 p-8 sm:p-12 border border-[#8A7352]/25 bg-[#FAF8F4] flex flex-col md:flex-row md:items-center justify-between gap-8">
+            <div className="max-w-2xl">
+              <span className="text-[9px] uppercase tracking-[0.26em] font-sans font-semibold text-[#8A7352] block mb-2">
+                United Kingdom Edition · Living Heritage
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-serif text-[#181714] leading-snug mb-3 font-normal">
+                British Royalty, Scottish Castle Hotels &amp; Historic Country Estates
+              </h3>
+              <p className="text-xs sm:text-sm font-sans text-[#9B9589] leading-relaxed">
+                Explore our dedicated UK editorial hub — documenting Balmoral Castle, Edinburgh&apos;s No. 1 Princes Street, Highland sporting retreats, and the architectural wonders of Britain.
+              </p>
+            </div>
+            <Link
+              href="/uk"
+              className="inline-block text-[10px] sm:text-[11px] uppercase tracking-[0.22em] font-sans font-semibold px-8 py-4 text-[#F4F0E7] bg-[#11110F] hover:bg-[#8A7352] transition-colors self-start md:self-center flex-shrink-0"
+            >
+              Enter UK Edition →
+            </Link>
           </div>
 
           <div className="text-center mt-12 sm:hidden">

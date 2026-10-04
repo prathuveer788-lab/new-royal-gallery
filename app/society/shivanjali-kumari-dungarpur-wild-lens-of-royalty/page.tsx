@@ -12,7 +12,7 @@ import { FAQS } from "./data";
 import NewsletterForm from "@/app/components/NewsletterForm";
 
 const CANONICAL_URL =
-  "https://www.theroyalgallerys.com/society/shivanjali-kumari-dungarpur-wild-lens-of-royalty";
+  "https://theroyalgallerys.com/society/shivanjali-kumari-dungarpur-wild-lens-of-royalty";
 
 const blurDataURL =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGw9IiMxNDE0MTYiIGQ9Ik0wIDBoMXYxSDB6Ii8+PC9zdmc+";

@@ -646,31 +646,31 @@ export default function BalmoralArticlePage() {
                 </p>
               </article>
 
-              {/* Card 3: Rambagh Palace */}
+              {/* Card 3: UK Edition Hub */}
               <article className="group">
                 <div className="relative w-full aspect-[4/5] bg-[#D9D4CA] overflow-hidden mb-3 border border-[#D9D4CA]">
                   <Image
-                    src="/images/experiences/02-rambagh-palace-jaipur/img-01.webp"
-                    alt="Rambagh Palace Jaipur garden façade"
+                    src="/images/uk-heritage/balmoral-castle.webp"
+                    alt="Balmoral Castle estate in Royal Deeside, Aberdeenshire, Scotland"
                     fill
                     sizes="(max-width: 768px) 100vw, 380px"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
                   <span className="absolute top-3 left-3 bg-[#FAF8F4]/90 text-[10px] uppercase tracking-[0.16em] px-2 py-0.5 text-[#24424F] font-sans font-medium">
-                    Palace Hotels
+                    UK Edition
                   </span>
                 </div>
                 <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#24424F] font-sans block mb-1">
-                  Travel · Rajasthan
+                  Living Heritage · Britain
                 </span>
                 <h4 className="text-lg font-serif text-[#1A1A1A] group-hover:text-[#24424F] transition-colors leading-snug">
-                  <Link href="/travel/rambagh-palace-jaipur">
-                    Rambagh Palace: The Jewel of Jaipur
+                  <Link href="/uk">
+                    British Heritage, Royalty &amp; Luxury Travel
                   </Link>
                 </h4>
                 <p className="mt-1 text-xs text-[#5B5B5B] font-serif italic">
-                  The former residence of the Maharaja of Jaipur, nestled in forty-seven acres.
+                  Royal estates, Scottish castles, English country houses, and luxury travel.
                 </p>
               </article>
             </div>

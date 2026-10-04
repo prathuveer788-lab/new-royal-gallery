@@ -63,6 +63,7 @@ export default function Navigation() {
     { href: "/watches", label: "Watches" },
     { href: "/weddings", label: "Weddings" },
     { href: "/travel", label: "Travel" },
+    { href: "/uk", label: "UK" },
     { href: "/design", label: "Design" },
     { href: "/culture", label: "Culture" },
     { href: "/royalty", label: "Royalty" },

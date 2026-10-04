@@ -2,6 +2,7 @@ import Link from "next/link";
 
 export default function BalmoralFooter() {
   const categories = [
+    { label: "UK Edition", href: "/uk" },
     { label: "Royalty", href: "/royalty" },
     { label: "Travel & Hotels", href: "/travel" },
     { label: "Style", href: "/style" },

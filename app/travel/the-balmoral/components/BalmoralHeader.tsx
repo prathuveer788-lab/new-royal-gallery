@@ -18,6 +18,7 @@ export default function BalmoralHeader() {
   }, []);
 
   const navLinks = [
+    { label: "UK Edition", href: "/uk" },
     { label: "Royalty", href: "/royalty" },
     { label: "Travel", href: "/travel" },
     { label: "Style", href: "/style" },

@@ -57,8 +57,7 @@ function breadcrumbSchema(article: EditorialArticle, section: SectionConfig) {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE },
       { "@type": "ListItem", position: 2, name: section.label, item: `${SITE}/${section.slug}` },
-      { "@type": "ListItem", position: 3, name: article.category, item: `${SITE}/${section.slug}` },
-      { "@type": "ListItem", position: 4, name: article.headline },
+      { "@type": "ListItem", position: 3, name: article.headline, item: `${SITE}/${section.slug}/${article.slug}` },
     ],
   };
 }

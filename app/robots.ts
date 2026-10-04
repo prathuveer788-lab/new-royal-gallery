@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/', '/.next/', '/public/'],
+      disallow: ['/api/', '/.next/'],
     },
     sitemap: 'https://theroyalgallerys.com/sitemap.xml',
   }
