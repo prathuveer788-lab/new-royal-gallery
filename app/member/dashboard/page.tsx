@@ -66,23 +66,38 @@ export default function MemberPrivateWorldPage() {
           return;
         }
         const data = await res.json();
+
+        // If not authenticated or member missing, redirect to login
+        if (!data.authenticated || !data.member) {
+          router.replace("/member/login");
+          return;
+        }
+
         setMember(data.member);
 
-        // Fetch member submissions
-        const dataRes = await fetch("/api/admin/data");
-        if (dataRes.ok) {
-          const allData = await dataRes.json();
-          const userSubs = (allData.submissions || []).filter(
-            (s: EditorialSubmission) => s.memberEmail === data.member.email
-          );
-          setSubmissions(userSubs);
+        // Fetch member submissions — guarded so crash here won't block dashboard
+        try {
+          const dataRes = await fetch("/api/admin/data");
+          if (dataRes.ok) {
+            const allData = await dataRes.json();
+            const userSubs = (allData.submissions || []).filter(
+              (s: EditorialSubmission) =>
+                data.member?.email && s.memberEmail === data.member.email
+            );
+            setSubmissions(userSubs);
+          }
+        } catch (subErr) {
+          console.warn("[Dashboard] Could not load submissions:", subErr);
+          // Non-fatal — dashboard still loads
         }
 
         // Initialize transition seen check
-        const seen = sessionStorage.getItem("rg_private_access_transition");
-        if (seen === "true") {
-          setShowTransition(false);
-        }
+        try {
+          const seen = sessionStorage.getItem("rg_private_access_transition");
+          if (seen === "true") {
+            setShowTransition(false);
+          }
+        } catch {}
 
         // Load saved items from localStorage
         try {
@@ -91,7 +106,9 @@ export default function MemberPrivateWorldPage() {
           const savedSt = localStorage.getItem("rg_saved_stories");
           if (savedSt) setSavedStoryIds(JSON.parse(savedSt));
         } catch {}
-      } catch {
+
+      } catch (err) {
+        console.error("[Dashboard] Session init error:", err);
         router.replace("/member/login");
       } finally {
         setLoading(false);
