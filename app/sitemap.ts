@@ -37,7 +37,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/membership`, changeFrequency: 'weekly', priority: 0.8, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },
     { url: `${baseUrl}/advertise`, changeFrequency: 'monthly', priority: 0.8, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },
     { url: `${baseUrl}/impact`, changeFrequency: 'monthly', priority: 0.7, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },
-    { url: `${baseUrl}/image-credits`, changeFrequency: 'monthly', priority: 0.5, lastModified: now },
   ]
 
   const travelArticleRoutes: MetadataRoute.Sitemap = allArticles.map((article) => ({

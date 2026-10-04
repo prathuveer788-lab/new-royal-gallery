@@ -48,7 +48,7 @@ export async function POST(req: Request) {
     }
 
     // Verify amount is exactly the one-time membership price
-    const expectedAmount = store.config.membershipPrice || 3999;
+    const expectedAmount = store.config.membershipPrice || 40000;
 
     // Simulate / verify transaction details
     const verifiedTransactionId =

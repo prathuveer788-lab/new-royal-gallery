@@ -149,7 +149,7 @@ export interface DispatchedEmail {
 export interface MembershipStoreData {
   config: {
     memberCount: number; // Base count: 3592
-    membershipPrice: number; // 3999
+    membershipPrice: number; // 40000
     currency: string; // "INR"
     editorialEmail: string; // hey.theroyalsgallery@gmail.com
   };
@@ -169,7 +169,7 @@ const STORE_FILE = path.join(DATA_DIR, "membership-store.json");
 const INITIAL_DATA: MembershipStoreData = {
   config: {
     memberCount: 3592,
-    membershipPrice: 3999,
+    membershipPrice: 40000,
     currency: "INR",
     editorialEmail: "hey.theroyalsgallery@gmail.com",
   },

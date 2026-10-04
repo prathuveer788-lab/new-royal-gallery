@@ -99,7 +99,7 @@ export async function POST(req: Request) {
         pincode: pincode ? pincode.trim() : "",
       },
       membershipType: "LIFETIME",
-      amountPaid: store.config.membershipPrice || 3999,
+      amountPaid: store.config.membershipPrice || 40000,
       status: "PENDING_APPROVAL", // Editorial Office must approve
       joinedAt: now,
       payment: {
@@ -107,7 +107,7 @@ export async function POST(req: Request) {
         orderId,
         paidAt: now,
         method: "Application Lodged / Editorial Verification",
-        amount: store.config.membershipPrice || 3999,
+        amount: store.config.membershipPrice || 40000,
         verified: false,
       },
       createdAt: existing?.createdAt || now,

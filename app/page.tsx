@@ -720,7 +720,7 @@ export default function HomePage() {
             The Royal Gallery Circle
           </h2>
           <p className="text-xs uppercase tracking-[0.3em] font-sans text-[#D4AF37] font-semibold mb-6">
-            ₹3,999 — LIFETIME MEMBERSHIP
+            ₹40,000 — LIFETIME MEMBERSHIP
           </p>
           <p className="text-base sm:text-lg font-sans leading-relaxed mb-10 max-w-xl mx-auto" style={{ color: C.textStone, fontWeight: 400 }}>
             Receive three physical print issues annually, unrestricted archival access, confidential private files, and direct priority access to our Editorial Office.
