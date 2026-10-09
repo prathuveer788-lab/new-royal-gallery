@@ -51,6 +51,7 @@ interface CountryHouse {
   collectionHighlight: string;
   image: string;
   alt: string;
+  href: string;
 }
 
 const HOUSES: CountryHouse[] = [
@@ -66,6 +67,7 @@ const HOUSES: CountryHouse[] = [
       "The Devonshire Collection: Over 4,000 Old Master drawings, Roman marbles, and Canova's marble statue of Madame Mère.",
     image: "/images/uk-heritage/chatsworth-house.webp",
     alt: "Chatsworth House south facade overlooking the fountain and grounds",
+    href: "/travel/chatsworth-house",
   },
   {
     name: "Highclere Castle",
@@ -79,6 +81,7 @@ const HOUSES: CountryHouse[] = [
       "The Carnarvon Egyptian Antiquities Collection, including original artifacts brought back from Luxor by the 5th Earl.",
     image: "/images/uk-heritage/highclere-castle.webp",
     alt: "Highclere Castle facade and gardens",
+    href: "/travel/highclere-castle",
   },
   {
     name: "Blenheim Palace",
@@ -92,6 +95,7 @@ const HOUSES: CountryHouse[] = [
       "The Long Library (55 meters long), housing 10,000 books and the great Henry Willis pipe organ, beneath Grinling Gibbons woodcarvings.",
     image: "/images/uk-heritage/blenheim-palace.webp",
     alt: "Blenheim Palace grand baroque facade in Oxfordshire",
+    href: "/travel/blenheim-palace",
   },
 ];
 
@@ -232,12 +236,18 @@ export default function BritishCountryHousesPage() {
                 </p>
               </div>
 
-              <div className="pt-2">
+              <div className="pt-2 flex flex-wrap items-center gap-6">
+                <Link
+                  href={house.href}
+                  className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-sans font-semibold text-[#1A1A1A] hover:text-[#8A7352] transition-colors border-b border-[#1A1A1A] pb-0.5"
+                >
+                  Read Full Dedicated Feature →
+                </Link>
                 <Link
                   href="/uk"
                   className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-sans font-semibold text-[#8A7352] hover:text-[#1A1A1A] transition-colors"
                 >
-                  Return to UK Hub →
+                  UK Hub
                 </Link>
               </div>
             </div>

@@ -51,6 +51,7 @@ interface RoyalEstate {
   keyFeature: string;
   image: string;
   alt: string;
+  href: string;
 }
 
 const ESTATES: RoyalEstate[] = [
@@ -64,8 +65,9 @@ const ESTATES: RoyalEstate[] = [
       "When Prince Albert purchased the 50,000-acre Balmoral estate in 1852 for £32,000 without having initially set eyes on it, he commenced a transformation that reshaped European royal leisure. Deeming the original 15th-century castle insufficient for the royal household, Albert collaborated with Aberdeen city architect William Smith to construct a new Scottish Baronial palace of pale Glengelder granite. Its 80-foot clock tower, corbelled corner bartizans, and crow-stepped gables revived medieval Scots forms through the prism of German Romanticism. For five generations of British monarchs, Balmoral has served not as a state stage, but as an intimate family sanctuary.",
     keyFeature:
       "The Balmoral Tartan designed by Prince Albert in 1853, exclusively reserved for the reigning monarch and members of the Royal Family.",
-    image: "/images/experiences/32-scottish-highlands/img-01.webp",
-    alt: "Balmoral Castle Highland estate landscape and pine glens",
+    image: "/images/uk-heritage/balmoral-castle.webp",
+    alt: "Balmoral Castle estate exterior with clock tower in Royal Deeside, Aberdeenshire",
+    href: "/travel/balmoral-castle",
   },
   {
     name: "The Palace of Holyroodhouse",
@@ -77,8 +79,9 @@ const ESTATES: RoyalEstate[] = [
       "Standing at the eastern terminal of Edinburgh's historic Royal Mile beneath Salisbury Crags, the Palace of Holyroodhouse originated as an Augustinian abbey founded in 1128 by King David I. In the early 16th century, James IV transformed the guesthouse into a royal palace. It was here that Mary, Queen of Scots lived out the most tempestuous episodes of her reign, including the assassination of David Rizzio in her private supper chamber. Rebuilt under Charles II by Sir William Bruce into a harmonious Baroque quadrangle with Doric and Ionic pilasters, Holyroodhouse remains the vibrant center of the Sovereign's official 'Royal Week' in Scotland each summer.",
     keyFeature:
       "The Great Gallery, hung with 110 portraits of Scottish monarchs painted between 1684 and 1686 by Dutch artist Jacob de Wet II.",
-    image: "/images/experiences/31-edinburgh/img-01.webp",
-    alt: "Palace of Holyroodhouse quadrangle and Edinburgh volcanic backdrop",
+    image: "/images/uk-heritage/holyroodhouse.webp",
+    alt: "Palace of Holyroodhouse grand facade and historic courtyard fountain in Edinburgh",
+    href: "/travel/palace-of-holyroodhouse",
   },
   {
     name: "The Castle of Mey",
@@ -90,8 +93,9 @@ const ESTATES: RoyalEstate[] = [
       "In 1952, shortly following the death of King George VI, Queen Elizabeth The Queen Mother was visiting friends in northern Scotland when she saw the derelict Barrogill Castle perched six miles west of John o' Groats. Overlooking the turbulent tides of the Pentland Firth toward the Orkney Islands, the 16th-century stronghold had fallen into near-total abandonment. The Queen Mother purchased the estate, restored its original historic name of the Castle of Mey, and created a haven of walled gardens, rare hybrid roses, and Scottish tweed interiors. The estate is now stewarded by The King's Foundation, continuing her legacy of rural craftsmanship and Highland hospitality.",
     keyFeature:
       "The two-acre Walled Garden, ingeniously protected from North Sea gales by high stone ramparts and thriving with English roses, sweet peas, and vegetables.",
-    image: "/images/experiences/32-scottish-highlands/img-03.webp",
-    alt: "The Castle of Mey coastal Highland landscape overlooking the Pentland Firth",
+    image: "/images/uk-heritage/castle-of-mey.webp",
+    alt: "The Castle of Mey coastal fortress and grounds overlooking the Pentland Firth in Caithness",
+    href: "/travel/castle-of-mey",
   },
 ];
 
@@ -235,12 +239,18 @@ export default function RoyalEstatesScotlandPage() {
                 </p>
               </div>
 
-              <div className="pt-2">
+              <div className="pt-2 flex flex-wrap items-center gap-6">
+                <Link
+                  href={estate.href}
+                  className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-sans font-semibold text-[#1A1A1A] hover:text-[#8A7352] transition-colors border-b border-[#1A1A1A] pb-0.5"
+                >
+                  Read Full Dedicated Feature →
+                </Link>
                 <Link
                   href="/uk"
                   className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-sans font-semibold text-[#8A7352] hover:text-[#1A1A1A] transition-colors"
                 >
-                  Return to UK Hub →
+                  UK Hub
                 </Link>
               </div>
             </div>

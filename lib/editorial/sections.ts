@@ -24,21 +24,21 @@ export const SECTIONS: SectionConfig[] = [
   {
     slug: "jewellery",
     label: "Jewellery",
-    heroImage: "/images/style/article-07/high-jewellery-gold-luxury.jpg",
-    heroCaption: "High jewellery — where Indian craftsmanship and royal patronage meet the global luxury market. Image: Unsplash.",
-    heroAlt: "High jewellery gold luxury — The Royal Gallerys Jewellery section",
-    tagline: "High Jewellery · Gemstones · Craftsmanship · Brand Strategy",
+    heroImage: "/images/jewellery/mayfair-bond-street-jewellers.jpg",
+    heroCaption: "The historic Cartier maison on Old Bond Street in Mayfair, London — capital of high jewellery connoisseurship. Image: The Royal Gallerys.",
+    heroAlt: "Old Bond Street Mayfair London — The Royal Gallerys Jewellery editorial",
+    tagline: "High Jewellery · Royal Collections · British Craft · Gemstones · Collectors",
     description:
-      "An editorial destination for the world of fine and high jewellery — Indian craftsmanship, gemstone heritage, the royal collections that defined it, and the market intelligence brands need to reach India's most affluent consumers.",
+      "An international luxury editorial chronicle of high jewellery — the historic royal collections of Britain and Europe, the private salons of Mayfair and Place Vendôme, legendary gemstones, and master ateliers.",
     editorialStatement:
-      "India's jewellery tradition is the oldest continuous luxury craft on earth — and its consumer base is now among the most valuable in the world. THE ROYAL GALLERYS chronicles the craft, the collections and the commercial opportunity at the intersection of Indian jewellery heritage and the global luxury market.",
-    feedHeading: "A Curated Selection of Jewellery Editorials",
-    seoTitle: "JEWELLERY — High Jewellery, Craft & Market Intelligence | The Royal Gallerys",
+      "High jewellery is the ultimate union of geological rarity, sovereign history, and artisanal mastery. THE ROYAL GALLERYS chronicles the grand maisons of London, Paris, and Rome, royal tiaras and historic auctions, and the collectors who preserve the world's most extraordinary treasures.",
+    feedHeading: "The Jewellery Edit — High Jewellery, Royal Collections & Great Maisons",
+    seoTitle: "JEWELLERY — High Jewellery, Royal Collections & Great Maisons | The Royal Gallerys",
     seoDescription:
-      "The Royal Gallerys Jewellery section — high jewellery, Indian craftsmanship, gemstone heritage and the market intelligence luxury jewellery brands need to reach India's affluent consumers.",
-    ogTitle: "JEWELLERY — The Royal Gallerys High Jewellery Editorial",
+      "The Royal Gallerys Jewellery section — international high jewellery, British and European royal collections, Mayfair jewellers, Cartier, Garrard, Graff, and historic tiaras.",
+    ogTitle: "JEWELLERY — High Jewellery, Royal Collections & Great Maisons",
     ogDescription:
-      "High jewellery, Indian craftsmanship and the commercial opportunity of the world's most heritage-rich luxury jewellery market.",
+      "International luxury editorial on high jewellery, British and European royal collections, Mayfair private salons, Cartier, Garrard, and historic gemstones.",
   },
   {
     slug: "watches",

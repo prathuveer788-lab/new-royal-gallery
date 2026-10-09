@@ -53,6 +53,7 @@ interface CastleHotel {
   image: string;
   alt: string;
   tariffs: string;
+  href: string;
 }
 
 const CASTLES: CastleHotel[] = [
@@ -68,57 +69,61 @@ const CASTLES: CastleHotel[] = [
       "Original Italian frescoes, 17th-century French tapestries, ceiling paintings by Bohemian craftsmen, and billiards room with Victorian snooker table.",
     diningNote:
       "Seasgair by Michel Roux Jr. — classical Highland venison, langoustines from Mallaig, and hand-dived scallops served in the Queen's dining room.",
-    image: "/images/uk-heritage/inveraray-castle.webp",
-    alt: "Inverlochy Castle estate and Highland landscape",
+    image: "/images/uk-heritage/inverlochy-castle.webp",
+    alt: "Inverlochy Castle Hotel grand entrance and Highland facade in Fort William, Scotland",
     tariffs: "From £580 to £2,400 per night",
+    href: "/travel/inverlochy-castle",
   },
   {
-    name: "Glengorm Castle",
-    location: "Tobermory, Isle of Mull",
-    region: "Inner Hebrides",
-    heritageEra: "1860 · Hebridean Fortress",
-    headline: "Turrets Clinging to Sea Cliffs Above the North Atlantic",
+    name: "Inveraray Castle & Estate",
+    location: "Loch Fyne, Argyll",
+    region: "West Highlands / Argyll",
+    headline: "The Duke of Argyll's Gothic Revival Fortress on Loch Fyne",
+    heritageEra: "1746 · Gothic Revival Fortress",
     description:
-      "Standing on the northernmost tip of the Isle of Mull, Glengorm Castle looks out over the Sea of the Hebrides toward the islands of Rum, Eigg, and the Outer Hebrides. Built in 1860 by James Forsyth on the site of ancient standing stones dating back to the Bronze Age, the castle is crowned with crow-stepped gables and round corner turrets. The library features a perpetual fire of Scottish peat, a collection of single malts available on an honor-bar system, and windows framing Atlantic gales in total baronial shelter.",
+      "Rising on the tranquil shores of Loch Fyne, Inveraray Castle is the ancestral seat of the Duke of Argyll, Chief of Clan Campbell. Designed by Roger Morris and Robert Mylne, the castle is celebrated for its conical slate-roofed corner turrets and dry moat. The central Armoury Hall soars 68 feet, lined with 1,300 weapons including broadswords carried at Culloden.",
     architecturalHighlights:
-      "Granite masonry quarried from the estate, Hebridean tower rooms with panoramic sea views, and adjacent Neolithic standing stones circle.",
+      "The 68-foot Armoury Hall, Beauvais tapestries woven in Paris, and 16 miles of estate walks along the River Aray to the Dun na Cuaiche watchtower.",
     diningNote:
-      "The Glengorm Coffee Shop & Larder serves Highland cattle beef raised on the castle's own 5,000-acre organic coastal estate.",
-    image: "/images/uk-heritage/eilean-donan-castle.webp",
-    alt: "Glengorm Castle Hebridean sea views and stone turrets",
-    tariffs: "From £320 to £950 per night",
+      "Loch Fyne oysters, langoustines, and wild Argyll venison paired with single malts from neighboring Islay and Campbeltown distilleries.",
+    image: "/images/uk-heritage/inveraray-castle.webp",
+    alt: "Inveraray Castle southwest Gothic Revival facade and circular corner towers in Argyll, Scotland",
+    tariffs: "Estate Day Passes & Private Clan Tours from £180",
+    href: "/travel/inveraray-castle",
   },
   {
-    name: "Crossbasket Castle",
-    location: "High Blantyre, South Lanarkshire",
-    region: "Lowlands / Clyde Valley",
-    heritageEra: "15th Century · Tower House",
-    headline: "A 600-Year-Old Lindsey Clan Stronghold Reborn as an Architectural Sanctuary",
-    description:
-      "Dating to the 1430s when it was the fortress of the Lindsey family, Crossbasket Castle is dominated by a majestic four-story medieval stone tower overlooking the rushing waterfalls of the Calder Water. Painstakingly restored from near-ruin over five years by heritage conservationists Steve and Alison Timoney, the castle features gold-leaf cornicing, Renaissance stone archways, and a brand-new £15 million hotel wing.",
-    architecturalHighlights:
-      "15th-century barrel-vaulted stone chambers, the Lindsay Tower bridal suite spanning four vertical levels, and private river walks through ancient oak woodlands.",
-    diningNote:
-      "Trocadero's restaurant by Michel Roux Jr. — an opulent grand dining salon celebrating Scottish larder ingredients with French haute cuisine precision.",
-    image: "/images/uk-heritage/cliveden-house.webp",
-    alt: "Crossbasket Castle riverside estate architecture",
-    tariffs: "From £410 to £1,650 per night",
-  },
-  {
-    name: "Fonab Castle Hotel & Spa",
-    location: "Pitlochry, Perthshire",
+    name: "Gleneagles Hotel & Resort",
+    location: "Auchterarder, Perthshire",
     region: "Perthshire Highlands",
-    heritageEra: "1892 · Port-na-Craig Estate",
-    headline: "Highland Baronial Elegance on the Shores of Loch Faskally",
+    heritageEra: "1924 · Caledonian Grand Hotel",
+    headline: "The Glorious Playground in the Rolling Perthshire Hills",
     description:
-      "Built in 1892 for the Clark family of Paisley — who generated a global fortune from the Scottish spool cotton thread industry — Fonab Castle combines rich red sandstone masonry with Victorian baronial turrets. Nestled amidst towering Douglas firs and weeping willows on the banks of Loch Faskally, the castle offers floor-to-ceiling glass dining terraces that reflect the autumnal Perthshire foliage.",
+      "Opened in 1924 as the 'Riviera in the Highlands', Gleneagles spans 850 acres of championship sporting estate. Long celebrated for its King's and Queen's courses sculpted by James Braid, the resort hosted the 2014 Ryder Cup and 2019 Solheim Cup. Today, it remains Britain's premier countryside sporting sanctuary.",
     architecturalHighlights:
-      "Red sandstone oriel windows, baronial spiral staircases, wood-burning stone fireplaces, and modern woodland lodges blending into ancient pines.",
+      "French chateau-inspired Mansard roofs, grand Strathearn dining salons, British School of Falconry, and private equestrian arenas.",
     diningNote:
-      "Sandemans Fine Dining (3 AA Rosettes) — 7-course tasting menus paired with rare Scottish single malts from nearby Blair Athol and Edradour distilleries.",
+      "Restaurant Andrew Fairlie (Scotland's only two-Michelin-starred restaurant) — featuring home-smoked Scottish lobster over whisky barrel oak chips.",
     image: "/images/uk-heritage/gleneagles-hotel.webp",
-    alt: "Fonab Castle Perthshire estate lakeside view",
-    tariffs: "From £390 to £1,400 per night",
+    alt: "Gleneagles Hotel grand chateau facade and manicured Perthshire grounds in Auchterarder, Scotland",
+    tariffs: "From £475 to £2,800 per night",
+    href: "/travel/gleneagles-hotel",
+  },
+  {
+    name: "Eilean Donan Castle & Strongholds",
+    location: "Dornie, Kyle of Lochalsh",
+    region: "Western Highlands",
+    heritageEra: "13th Century · Island Fortress",
+    headline: "The Iconic Tidal Island Fortress Where Three Sea Lochs Meet",
+    description:
+      "Perched on a small tidal island where Loch Duich, Loch Long, and Loch Alsh converge, Eilean Donan is the archetype of the romantic Scottish stronghold. Founded in the 13th century as a Clan Mackenzie defense against Norse raiders, it was painstakingly rebuilt in the early 20th century by Lt. Col. John Macrae-Gilstrap.",
+    architecturalHighlights:
+      "Ancient arched stone bridge, barrel-vaulted banqueting hall, and panoramic battlements overlooking the Isle of Skye peaks.",
+    diningNote:
+      "Hebridean seafood platters and fresh langoustines served in waterside inns throughout the Kyle of Lochalsh.",
+    image: "/images/uk-heritage/eilean-donan-castle.webp",
+    alt: "Eilean Donan Castle illuminated across Loch Duich at dusk in the Western Highlands",
+    tariffs: "Private Exclusive Evenings on Request",
+    href: "/travel/scottish-highlands-travel-guide",
   },
 ];
 
@@ -320,12 +325,18 @@ export default function CastleHotelsScotlandPage() {
                 </div>
               </div>
 
-              <div className="pt-4">
+              <div className="pt-4 flex flex-wrap items-center gap-6">
+                <Link
+                  href={castle.href}
+                  className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-sans font-semibold text-[#1A1A1A] hover:text-[#8A7352] transition-colors border-b border-[#1A1A1A] pb-0.5"
+                >
+                  Read Full Dedicated Feature →
+                </Link>
                 <Link
                   href="/uk"
                   className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-sans font-semibold text-[#8A7352] hover:text-[#1A1A1A] transition-colors"
                 >
-                  Explore in UK Hub →
+                  UK Hub
                 </Link>
               </div>
             </div>
