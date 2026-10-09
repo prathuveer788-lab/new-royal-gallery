@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/society/shivanjali-kumari-dungarpur-wild-lens-of-royalty`, changeFrequency: 'monthly', priority: 0.95, lastModified: now, images: [absImg('/images/society/shivanjali-kumari-dungarpur/01-hero.jpg')] },
     { url: `${baseUrl}/people`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/people/raghavendra-rathore-bespoke-atelier.jpg')] },
     { url: `${baseUrl}/motoring`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/motoring/maharaja-rolls-royce-vintage-collection.jpg')] },
-    { url: `${baseUrl}/dining`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/dining/rajasthani-royal-thali-banquet.jpg')] },
+    { url: `${baseUrl}/dining`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/dining/hero-palace-dining.webp')] },
     { url: `${baseUrl}/business`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/business/mumbai-luxury-skyline-marine-drive.jpg')] },
     { url: `${baseUrl}/royalty`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg')] },
     { url: `${baseUrl}/jewellery`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/jewellery/mayfair-bond-street-jewellers.jpg')] },

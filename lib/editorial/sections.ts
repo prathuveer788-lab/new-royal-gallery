@@ -157,21 +157,21 @@ export const SECTIONS: SectionConfig[] = [
   {
     slug: "dining",
     label: "Dining",
-    heroImage: "/images/dining/rajasthani-royal-thali-banquet.jpg",
-    heroCaption: "The royal thali feast — palace culinary archives and courtly gastronomic heritage. Photograph: Connie Ma / Wikimedia Commons.",
-    heroAlt: "Traditional Rajasthani Royal Thali and Palace Culinary Heritage — The Royal Gallerys Dining section",
-    tagline: "Palace Kitchens · Master Chefs · Terroir & Spirits · Gastronomic Heritage",
+    heroImage: "/images/dining/hero-palace-dining.webp",
+    heroCaption: "The art of the imperial table — palace culinary archives, tablescaping, and courtly gastronomic heritage. Photograph: The Royal Gallerys.",
+    heroAlt: "The Art of the Table: Dining at The Royal Gallerys",
+    tagline: "The Art of the Table · Culinary Heritage · Exceptional Restaurants · Gastronomic Travel",
     description:
-      "Restaurants, chefs, culinary culture, wine, single malts, and heritage tea estates — the world of fine dining and subcontinental gastronomic heritage.",
+      "Contemporary Rajputana dining culture, India's historic royal kitchens, exceptional international restaurants and chefs, British country-house dining, and the art of fine hospitality.",
     editorialStatement:
-      "Gastronomic heritage is living civilisational memory. THE ROYAL GALLERYS explores the courtly recipes, visionary chefs, and agricultural terroirs that define subcontinental culinary authority.",
+      "Gastronomy at its highest expression is the meeting of food, place, craftsmanship and hospitality. THE ROYAL GALLERYS chronicles the living culinary traditions of royal courts, visionary master chefs, and the world's most atmospheric dining rooms.",
     feedHeading: "A Curated Selection of Gastronomic Editorials",
-    seoTitle: "DINING — Royal Kitchens, Fine Dining & Culinary Terroir | The Royal Gallerys",
+    seoTitle: "DINING — The Art of the Table, Royal Kitchens & Fine Gastronomy | The Royal Gallerys",
     seoDescription:
-      "The Royal Gallerys Dining section — royal palace recipes, Michelin-starred Indian chefs, single malt whisky terroir, and palace restaurant settings.",
-    ogTitle: "DINING — The Royal Gallerys Gastronomic Editorial",
+      "The Royal Gallerys Dining edition — contemporary Rajputana dining, historic royal kitchens, international fine dining, British country-house feasts, and the art of hospitality.",
+    ogTitle: "DINING — The Royal Gallerys Culinary Editorial",
     ogDescription:
-      "Culinary heritage, royal kitchens, single malt spirits, and fine dining.",
+      "Contemporary Rajputana dining, historic royal kitchens, international fine dining, and the art of the table.",
   },
   {
     slug: "society",
