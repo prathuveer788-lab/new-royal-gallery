@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { allArticles } from "@/lib/travel-articles";
 import PartnershipCTA from "./components/PartnershipCTA";
+import IntroVideo from "./components/IntroVideo";
 
 export const metadata: Metadata = {
   title: "THE ROYAL GALLERYS | Heritage, Culture & Luxury — The International Magazine",
@@ -161,6 +162,11 @@ export default function HomePage() {
           <div className="w-px h-12" style={{ background: `linear-gradient(to bottom, ${C.ivory}, transparent)` }} />
         </div>
       </section>
+
+      {/* ════════════════════════════════════════════════
+          OFFICIAL INTRODUCTION FILM
+          ════════════════════════════════════════════════ */}
+      <IntroVideo />
 
       {/* ════════════════════════════════════════════════
           02 — THE MAGAZINE
