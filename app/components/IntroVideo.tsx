@@ -79,28 +79,51 @@ export default function IntroVideo() {
   const [showPlayButton, setShowPlayButton] = useState(false);
   const [progress, setProgress] = useState(0);
 
-  /* ── Autoplay attempt ───────────────────────────────── */
+  /* ── Scroll-triggered IntersectionObserver Autoplay ── */
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
-    const tryAutoplay = async () => {
+    // Ensure video is properly initialized for mobile and modern desktop browsers
+    video.muted = true;
+    video.defaultMuted = true;
+
+    const playVideo = async () => {
       try {
         video.muted = true;
         await video.play();
         setIsPlaying(true);
         setIsMuted(true);
+        setShowPlayButton(false);
       } catch {
-        // Autoplay blocked — show manual play button
         setShowPlayButton(true);
         setIsPlaying(false);
       }
     };
 
-    if (video.readyState >= 3) {
-      tryAutoplay();
+    const pauseVideo = () => {
+      video.pause();
+      setIsPlaying(false);
+    };
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.25) {
+              playVideo();
+            } else if (!entry.isIntersecting) {
+              pauseVideo();
+            }
+          });
+        },
+        { threshold: [0, 0.25, 0.5] }
+      );
+
+      observer.observe(video);
+      return () => observer.disconnect();
     } else {
-      video.addEventListener("canplay", () => tryAutoplay(), { once: true });
+      playVideo();
     }
   }, []);
 
@@ -217,7 +240,7 @@ export default function IntroVideo() {
               {/* The video element — original file, untouched */}
               <video
                 ref={videoRef}
-                className="absolute inset-0 w-full h-full"
+                className="absolute inset-0 w-full h-full cursor-pointer"
                 style={{
                   objectFit: "contain",
                   background: C.obsidian,
@@ -226,7 +249,10 @@ export default function IntroVideo() {
                 }}
                 playsInline
                 muted
+                autoPlay
+                loop
                 preload="auto"
+                onClick={togglePlay}
                 onLoadedData={handleLoaded}
                 onError={handleError}
                 onEnded={handleEnded}

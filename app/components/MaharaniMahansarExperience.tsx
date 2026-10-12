@@ -79,12 +79,16 @@ export default function MaharaniMahansarExperience() {
   // Clean, URL-safe path to prevent encoding issues across browsers & CDNs
   const videoSourceUrl = "/maharani-mahansar-intro.mp4";
 
-  // Intersection or direct autoplay attempt
+  // Scroll-triggered IntersectionObserver Autoplay
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
-    const attemptAutoplay = async () => {
+    // Ensure video is properly initialized for mobile and modern desktop browsers
+    video.muted = true;
+    video.defaultMuted = true;
+
+    const playVideo = async () => {
       try {
         video.muted = true;
         await video.play();
@@ -97,17 +101,30 @@ export default function MaharaniMahansarExperience() {
       }
     };
 
-    video.addEventListener("canplay", attemptAutoplay, { once: true });
-    video.addEventListener("loadeddata", attemptAutoplay, { once: true });
-
-    if (video.readyState >= 2) {
-      attemptAutoplay();
-    }
-
-    return () => {
-      video.removeEventListener("canplay", attemptAutoplay);
-      video.removeEventListener("loadeddata", attemptAutoplay);
+    const pauseVideo = () => {
+      video.pause();
+      setIsPlaying(false);
     };
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.25) {
+              playVideo();
+            } else if (!entry.isIntersecting) {
+              pauseVideo();
+            }
+          });
+        },
+        { threshold: [0, 0.25, 0.5] }
+      );
+
+      observer.observe(video);
+      return () => observer.disconnect();
+    } else {
+      playVideo();
+    }
   }, []);
 
   // Time tracking
