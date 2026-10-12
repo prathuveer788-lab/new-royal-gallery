@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { allArticles } from "@/lib/travel-articles";
 import PartnershipCTA from "./components/PartnershipCTA";
 import IntroVideo from "./components/IntroVideo";
+import MaharaniMahansarExperience from "./components/MaharaniMahansarExperience";
 
 export const metadata: Metadata = {
   title: "THE ROYAL GALLERYS | Heritage, Culture & Luxury — The International Magazine",
@@ -167,6 +168,11 @@ export default function HomePage() {
           OFFICIAL INTRODUCTION FILM
           ════════════════════════════════════════════════ */}
       <IntroVideo />
+
+      {/* ════════════════════════════════════════════════
+          MAHARANI MAHANSAR — HERITAGE LIQUEUR EXPERIENCE
+          ════════════════════════════════════════════════ */}
+      <MaharaniMahansarExperience />
 
       {/* ════════════════════════════════════════════════
           02 — THE MAGAZINE
