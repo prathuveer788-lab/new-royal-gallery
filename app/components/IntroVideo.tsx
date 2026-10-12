@@ -11,6 +11,56 @@ const C = {
   textStone: "#9B9589",
 };
 
+/* ── PLAY ICON (SVG) ────────────────────────────────── */
+function PlayIcon() {
+  return (
+    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="32" cy="32" r="31" stroke="rgba(184,164,122,0.6)" strokeWidth="1" />
+      <polygon points="26,20 46,32 26,44" fill="rgba(244,240,231,0.9)" />
+    </svg>
+  );
+}
+
+/* ── PAUSE ICON (SVG) ───────────────────────────────── */
+function PauseIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="3" width="3" height="12" rx="0.5" fill="currentColor" />
+      <rect x="11" y="3" width="3" height="12" rx="0.5" fill="currentColor" />
+    </svg>
+  );
+}
+
+/* ── SMALL PLAY ICON ────────────────────────────────── */
+function SmallPlayIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="5,2 16,9 5,16" fill="currentColor" />
+    </svg>
+  );
+}
+
+/* ── SOUND ICONS ────────────────────────────────────── */
+function SoundOnIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 7h3l4-4v12l-4-4H2V7z" fill="currentColor" />
+      <path d="M12 5.5c1.5 1 2.2 2.3 2.2 3.5s-.7 2.5-2.2 3.5" stroke="currentColor" strokeWidth="1.2" fill="none" strokeLinecap="round" />
+      <path d="M13.5 3c2.2 1.5 3.5 3.5 3.5 6s-1.3 4.5-3.5 6" stroke="currentColor" strokeWidth="1.2" fill="none" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function SoundOffIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 7h3l4-4v12l-4-4H2V7z" fill="currentColor" />
+      <line x1="12" y1="6" x2="17" y2="12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+      <line x1="17" y1="6" x2="12" y2="12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 /**
  * IntroVideo — The Royal Gallerys official introduction film.
  *
@@ -105,46 +155,6 @@ export default function IntroVideo() {
     setShowPlayButton(true);
     setProgress(100);
   }, []);
-
-  /* ── PLAY ICON (SVG) ────────────────────────────────── */
-  const PlayIcon = () => (
-    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="32" cy="32" r="31" stroke="rgba(184,164,122,0.6)" strokeWidth="1" />
-      <polygon points="26,20 46,32 26,44" fill="rgba(244,240,231,0.9)" />
-    </svg>
-  );
-
-  /* ── PAUSE ICON (SVG) ───────────────────────────────── */
-  const PauseIcon = () => (
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="4" y="3" width="3" height="12" rx="0.5" fill="currentColor" />
-      <rect x="11" y="3" width="3" height="12" rx="0.5" fill="currentColor" />
-    </svg>
-  );
-
-  /* ── SMALL PLAY ICON ────────────────────────────────── */
-  const SmallPlayIcon = () => (
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="5,2 16,9 5,16" fill="currentColor" />
-    </svg>
-  );
-
-  /* ── SOUND ICONS ────────────────────────────────────── */
-  const SoundOnIcon = () => (
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M2 7h3l4-4v12l-4-4H2V7z" fill="currentColor" />
-      <path d="M12 5.5c1.5 1 2.2 2.3 2.2 3.5s-.7 2.5-2.2 3.5" stroke="currentColor" strokeWidth="1.2" fill="none" strokeLinecap="round" />
-      <path d="M13.5 3c2.2 1.5 3.5 3.5 3.5 6s-1.3 4.5-3.5 6" stroke="currentColor" strokeWidth="1.2" fill="none" strokeLinecap="round" />
-    </svg>
-  );
-
-  const SoundOffIcon = () => (
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M2 7h3l4-4v12l-4-4H2V7z" fill="currentColor" />
-      <line x1="12" y1="6" x2="17" y2="12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-      <line x1="17" y1="6" x2="12" y2="12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-    </svg>
-  );
 
   return (
     <section
