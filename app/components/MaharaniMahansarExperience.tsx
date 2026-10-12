@@ -266,7 +266,8 @@ export default function MaharaniMahansarExperience() {
               onClick={togglePlay}
               onEnded={handleEnded}
             >
-              <source src={videoSourceUrl} type='video/mp4; codecs="avc1"' />
+              <source src="/maharani-mahansar-intro.mp4" type='video/mp4; codecs="avc1"' />
+              <source src="https://maharanimahansar.in/wp-content/uploads/2025/01/1.2.mp4" type='video/mp4; codecs="avc1"' />
               Your browser does not support HTML5 video.
             </video>
 
