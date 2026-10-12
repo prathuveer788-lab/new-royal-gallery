@@ -254,17 +254,16 @@ export default function MaharaniMahansarExperience() {
               aspectRatio: "16 / 9",
             }}
           >
-            {/* The Master Video Asset */}
+            {/* The Master Video Asset — exact requested full Instagram reel film in highest quality */}
             <video
               ref={videoRef}
-              src="https://maharanimahansar.in/wp-content/uploads/2025/01/1.2.mp4"
+              src="/maharani-mahansar-reel.mp4"
               className="absolute inset-0 w-full h-full object-contain cursor-pointer"
               playsInline
               muted
               autoPlay
               loop
               preload="auto"
-              crossOrigin="anonymous"
               onClick={togglePlay}
               onPlay={() => {
                 setIsPlaying(true);
