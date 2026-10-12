@@ -244,8 +244,6 @@ export default function IntroVideo() {
                 style={{
                   objectFit: "contain",
                   background: C.obsidian,
-                  opacity: isLoaded ? 1 : 0,
-                  transition: "opacity 0.8s ease-in-out",
                 }}
                 playsInline
                 muted
