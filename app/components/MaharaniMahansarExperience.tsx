@@ -1,21 +1,17 @@
 "use client";
 
 import { useRef, useState, useEffect, useCallback } from "react";
-import Image from "next/image";
 
 /* ── LUXURY COLOR SYSTEM FOR MAHARANI MAHANSAR ────── */
 const M = {
   burgundy: "#2A080C",
   deepBurgundy: "#180407",
   charcoal: "#141113",
-  walnut: "#1C1412",
   antiqueBrass: "#C49A45",
-  antiqueBrassMuted: "rgba(196, 154, 69, 0.4)",
   champagne: "#D8C7A5",
   ivory: "#F6F1EA",
   parchment: "#ECE4D6",
   mutedText: "#A39990",
-  subtleBorder: "rgba(196, 154, 69, 0.18)",
 };
 
 /* ── ICONS (Module level) ─────────────────────────── */
@@ -70,24 +66,20 @@ function VolumeOffIcon() {
  * MaharaniMahansarExperience
  *
  * Dedicated luxury heritage showcase for Maharani Mahansar Heritage Liqueur.
- * Positioned on the homepage immediately after The Royal Gallerys official introduction video.
- *
- * Preserves the original master video:
- * File: "DAY 1 CINEMATIC M4 (206)_2 (1).mp4" (1920x1080 Full HD, H.264, AAC audio, 38.2s)
+ * Pure video presentation + concise editorial narrative.
+ * Fast, instant video loading via normalized URL and metadata prebuffering.
  */
 export default function MaharaniMahansarExperience() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
   const [showPlayOverlay, setShowPlayOverlay] = useState(false);
   const [progress, setProgress] = useState(0);
 
-  // Safely encoded URL for the video file
-  const videoSourceUrl = "/DAY%201%20CINEMATIC%20M4%20(206)_2%20(1).mp4";
+  // Clean, URL-safe path to prevent encoding issues across browsers & CDNs
+  const videoSourceUrl = "/maharani-mahansar-intro.mp4";
 
-  // IntersectionObserver or early canplay handler
+  // Intersection or direct autoplay attempt
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -98,17 +90,24 @@ export default function MaharaniMahansarExperience() {
         await video.play();
         setIsPlaying(true);
         setIsMuted(true);
+        setShowPlayOverlay(false);
       } catch {
         setShowPlayOverlay(true);
         setIsPlaying(false);
       }
     };
 
-    if (video.readyState >= 3) {
+    video.addEventListener("canplay", attemptAutoplay, { once: true });
+    video.addEventListener("loadeddata", attemptAutoplay, { once: true });
+
+    if (video.readyState >= 2) {
       attemptAutoplay();
-    } else {
-      video.addEventListener("canplay", () => attemptAutoplay(), { once: true });
     }
+
+    return () => {
+      video.removeEventListener("canplay", attemptAutoplay);
+      video.removeEventListener("loadeddata", attemptAutoplay);
+    };
   }, []);
 
   // Time tracking
@@ -138,6 +137,7 @@ export default function MaharaniMahansarExperience() {
       } else {
         video.pause();
         setIsPlaying(false);
+        setShowPlayOverlay(true);
       }
     } catch {
       setShowPlayOverlay(true);
@@ -149,14 +149,6 @@ export default function MaharaniMahansarExperience() {
     if (!video) return;
     video.muted = !video.muted;
     setIsMuted(video.muted);
-  }, []);
-
-  const handleLoaded = useCallback(() => {
-    setIsLoaded(true);
-  }, []);
-
-  const handleError = useCallback(() => {
-    setHasError(true);
   }, []);
 
   const handleEnded = useCallback(() => {
@@ -176,10 +168,10 @@ export default function MaharaniMahansarExperience() {
       }}
       aria-label="Maharani Mahansar — Heritage Liqueur Brand Showcase"
     >
-      {/* ── TOP EDITORIAL CURATION SIGNATURE ──────────────── */}
+      {/* ── TOP EDITORIAL HEADER ─────────────────────────── */}
       <div className="max-w-5xl mx-auto pt-20 sm:pt-28 md:pt-36 pb-12 sm:pb-16 px-6 sm:px-8 text-center">
         {/* Dual Signature Badges */}
-        <div className="flex items-center justify-center gap-3 sm:gap-4 mb-8">
+        <div className="flex items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
           <span
             className="text-[9px] sm:text-[10px] uppercase tracking-[0.32em] font-sans font-semibold"
             style={{ color: M.antiqueBrass }}
@@ -245,119 +237,84 @@ export default function MaharaniMahansarExperience() {
               aspectRatio: "16 / 9",
             }}
           >
-            {hasError ? (
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center bg-[#150508]">
-                <p className="font-serif text-xl sm:text-2xl text-[#F6F1EA] mb-2 font-normal">
-                  Maharani Mahansar Heritage Film
-                </p>
-                <p className="font-sans text-xs sm:text-sm text-[#A39990] max-w-md">
-                  Experience the artisanal distillation story from the historic heart of Shekhawati.
-                </p>
-              </div>
-            ) : (
-              <>
-                {/* The Master Video Asset */}
-                <video
-                  ref={videoRef}
-                  className="absolute inset-0 w-full h-full"
-                  style={{
-                    objectFit: "contain",
-                    opacity: isLoaded ? 1 : 0,
-                    transition: "opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1)",
-                  }}
-                  playsInline
-                  muted
-                  preload="metadata"
-                  onLoadedData={handleLoaded}
-                  onError={handleError}
-                  onEnded={handleEnded}
+            {/* The Master Video Asset with auto preloading for instant response */}
+            <video
+              ref={videoRef}
+              className="absolute inset-0 w-full h-full object-contain cursor-pointer"
+              playsInline
+              muted
+              autoPlay
+              loop
+              preload="auto"
+              onClick={togglePlay}
+              onEnded={handleEnded}
+            >
+              <source src={videoSourceUrl} type='video/mp4; codecs="avc1"' />
+              Your browser does not support HTML5 video.
+            </video>
+
+            {/* Play Overlay (when paused or blocked by browser policy) */}
+            {showPlayOverlay && (
+              <button
+                onClick={togglePlay}
+                className="absolute inset-0 flex flex-col items-center justify-center z-20 cursor-pointer transition-colors duration-500 group bg-black/40 hover:bg-black/25"
+                aria-label="Play Maharani Mahansar Film"
+              >
+                <div className="transform group-hover:scale-105 transition-transform duration-500 drop-shadow-2xl">
+                  <PlayGlyph />
+                </div>
+                <span
+                  className="mt-4 text-[10px] uppercase tracking-[0.28em] font-sans font-medium text-[#F6F1EA]/90 group-hover:text-[#F6F1EA]"
                 >
-                  <source src={videoSourceUrl} type='video/mp4; codecs="avc1"' />
-                  Your browser does not support HTML5 video.
-                </video>
-
-                {/* Loading state before first buffer */}
-                {!isLoaded && !hasError && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#180407] gap-4">
-                    <div
-                      className="w-12 h-12 rounded-full border-2 border-t-transparent animate-spin"
-                      style={{ borderColor: `${M.antiqueBrass} transparent transparent transparent` }}
-                    />
-                    <span
-                      className="text-[9px] uppercase tracking-[0.3em] font-sans"
-                      style={{ color: M.champagne }}
-                    >
-                      Loading Film…
-                    </span>
-                  </div>
-                )}
-
-                {/* Large Center Play Overlay (when paused / completed / blocked) */}
-                {showPlayOverlay && isLoaded && (
-                  <button
-                    onClick={togglePlay}
-                    className="absolute inset-0 flex flex-col items-center justify-center z-20 cursor-pointer transition-colors duration-500 group bg-black/40 hover:bg-black/25"
-                    aria-label="Play Maharani Mahansar Film"
-                  >
-                    <div className="transform group-hover:scale-105 transition-transform duration-500 drop-shadow-2xl">
-                      <PlayGlyph />
-                    </div>
-                    <span
-                      className="mt-4 text-[10px] uppercase tracking-[0.28em] font-sans font-medium text-[#F6F1EA]/90 group-hover:text-[#F6F1EA]"
-                    >
-                      Watch the Heritage Film
-                    </span>
-                  </button>
-                )}
-
-                {/* Subtle Controls Bar */}
-                {isLoaded && (
-                  <div
-                    className="absolute bottom-0 left-0 right-0 z-30 flex items-center gap-3 px-4 sm:px-6 py-3.5"
-                    style={{
-                      background: "linear-gradient(to top, rgba(14, 4, 6, 0.85) 0%, rgba(14, 4, 6, 0) 100%)",
-                    }}
-                  >
-                    {/* Play/Pause Button */}
-                    <button
-                      onClick={togglePlay}
-                      className="flex items-center justify-center w-8 h-8 rounded-full text-[#F6F1EA] hover:text-[#C49A45] transition-colors cursor-pointer"
-                      aria-label={isPlaying ? "Pause video" : "Play video"}
-                    >
-                      {isPlaying ? <PauseIcon /> : <SmallPlayIcon />}
-                    </button>
-
-                    {/* Timeline Progress */}
-                    <div
-                      className="flex-1 h-[2px] rounded-full overflow-hidden"
-                      style={{ background: "rgba(196, 154, 69, 0.25)" }}
-                    >
-                      <div
-                        className="h-full transition-[width] duration-200 ease-linear"
-                        style={{
-                          width: `${progress}%`,
-                          background: `linear-gradient(to right, ${M.antiqueBrass}, ${M.champagne})`,
-                        }}
-                      />
-                    </div>
-
-                    {/* Audio Toggle (Preserving authentic soundtrack) */}
-                    <button
-                      onClick={toggleMute}
-                      className="flex items-center justify-center w-8 h-8 rounded-full text-[#F6F1EA] hover:text-[#C49A45] transition-colors cursor-pointer"
-                      aria-label={isMuted ? "Unmute audio" : "Mute audio"}
-                    >
-                      {isMuted ? <VolumeOffIcon /> : <VolumeOnIcon />}
-                    </button>
-                  </div>
-                )}
-              </>
+                  Watch the Heritage Film
+                </span>
+              </button>
             )}
+
+            {/* Subtle Controls Bar */}
+            <div
+              className="absolute bottom-0 left-0 right-0 z-30 flex items-center gap-3 px-4 sm:px-6 py-3.5"
+              style={{
+                background: "linear-gradient(to top, rgba(14, 4, 6, 0.85) 0%, rgba(14, 4, 6, 0) 100%)",
+              }}
+            >
+              {/* Play/Pause Button */}
+              <button
+                onClick={togglePlay}
+                className="flex items-center justify-center w-8 h-8 rounded-full text-[#F6F1EA] hover:text-[#C49A45] transition-colors cursor-pointer"
+                aria-label={isPlaying ? "Pause video" : "Play video"}
+              >
+                {isPlaying ? <PauseIcon /> : <SmallPlayIcon />}
+              </button>
+
+              {/* Timeline Progress */}
+              <div
+                className="flex-1 h-[2px] rounded-full overflow-hidden"
+                style={{ background: "rgba(196, 154, 69, 0.25)" }}
+              >
+                <div
+                  className="h-full transition-[width] duration-200 ease-linear"
+                  style={{
+                    width: `${progress}%`,
+                    background: `linear-gradient(to right, ${M.antiqueBrass}, ${M.champagne})`,
+                  }}
+                />
+              </div>
+
+              {/* Audio Toggle (Preserving authentic soundtrack) */}
+              <button
+                onClick={toggleMute}
+                className="flex items-center justify-center w-8 h-8 rounded-full text-[#F6F1EA] hover:text-[#C49A45] transition-colors cursor-pointer"
+                aria-label={isMuted ? "Unmute audio" : "Mute audio"}
+              >
+                {isMuted ? <VolumeOffIcon /> : <VolumeOnIcon />}
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* ── EDITORIAL STORY NARRATIVE ────────────────────── */}
+      {/* ── PURE EDITORIAL STORY NARRATIVE (No Triptych/Tables) ── */}
       <div className="max-w-5xl mx-auto px-6 sm:px-8 md:px-12 pb-24 sm:pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left Column: Heading and Context */}
@@ -428,107 +385,6 @@ export default function MaharaniMahansarExperience() {
               >
                 Editorial Feature · Autumn 2026
               </span>
-            </div>
-          </div>
-        </div>
-
-        {/* ── ARCHITECTURAL & CRAFT TRIPTYCH ───────────────── */}
-        <div className="mt-20 pt-16 border-t border-[rgba(196,154,69,0.15)]">
-          <div className="text-center mb-12">
-            <span
-              className="text-[9px] uppercase tracking-[0.3em] font-sans font-semibold block mb-2"
-              style={{ color: M.antiqueBrass }}
-            >
-              Terroir &amp; Atmosphere
-            </span>
-            <h4 className="text-xl sm:text-2xl font-serif text-[#F6F1EA] font-normal">
-              The Architecture of Spirit
-            </h4>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            {/* Feature 1: Shekhawati Frescoes */}
-            <div
-              className="p-6 sm:p-7 border transition-all duration-500 hover:border-[#C49A45]/40"
-              style={{
-                background: "rgba(24, 4, 7, 0.6)",
-                borderColor: M.subtleBorder,
-              }}
-            >
-              <div className="relative aspect-[4/3] overflow-hidden mb-5">
-                <Image
-                  src="/images/hallway-arches-with-dramatic-light-shadows.jpg"
-                  alt="Historic Shekhawati palace architecture"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
-                />
-              </div>
-              <span className="text-[8px] uppercase tracking-[0.24em] font-sans text-[#C49A45] font-semibold block mb-2">
-                01 · Heritage Landscape
-              </span>
-              <h5 className="font-serif text-lg text-[#F6F1EA] mb-2 font-normal">
-                Shekhawati Haveli Provenance
-              </h5>
-              <p className="text-xs font-sans text-[#A39990] leading-relaxed font-light">
-                Intricate wall frescoes and centuries of architectural stewardship define the timeless village of Mahansar.
-              </p>
-            </div>
-
-            {/* Feature 2: Copper Distillation Craft */}
-            <div
-              className="p-6 sm:p-7 border transition-all duration-500 hover:border-[#C49A45]/40"
-              style={{
-                background: "rgba(24, 4, 7, 0.6)",
-                borderColor: M.subtleBorder,
-              }}
-            >
-              <div className="relative aspect-[4/3] overflow-hidden mb-5">
-                <Image
-                  src="/images/dining/copper-whisky-stills.webp"
-                  alt="Traditional distillation copper crafts"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
-                />
-              </div>
-              <span className="text-[8px] uppercase tracking-[0.24em] font-sans text-[#C49A45] font-semibold block mb-2">
-                02 · The Alchemy
-              </span>
-              <h5 className="font-serif text-lg text-[#F6F1EA] mb-2 font-normal">
-                Slow Artisanal Distillation
-              </h5>
-              <p className="text-xs font-sans text-[#A39990] leading-relaxed font-light">
-                Centuries-old royal liqueur recipes crafted with copper stills and rare botanicals revered by Rajasthan&apos;s princely states.
-              </p>
-            </div>
-
-            {/* Feature 3: Royal Hospitality */}
-            <div
-              className="p-6 sm:p-7 border transition-all duration-500 hover:border-[#C49A45]/40"
-              style={{
-                background: "rgba(24, 4, 7, 0.6)",
-                borderColor: M.subtleBorder,
-              }}
-            >
-              <div className="relative aspect-[4/3] overflow-hidden mb-5">
-                <Image
-                  src="/images/dining/hero-palace-dining.webp"
-                  alt="Grand royal banquet table"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
-                />
-              </div>
-              <span className="text-[8px] uppercase tracking-[0.24em] font-sans text-[#C49A45] font-semibold block mb-2">
-                03 · The Royal Table
-              </span>
-              <h5 className="font-serif text-lg text-[#F6F1EA] mb-2 font-normal">
-                Princely Durbar Banquets
-              </h5>
-              <p className="text-xs font-sans text-[#A39990] leading-relaxed font-light">
-                An honored staple of high ceremonial dinners, celebrating the hospitality rituals of the noble royal houses.
-              </p>
             </div>
           </div>
         </div>
