@@ -254,20 +254,28 @@ export default function MaharaniMahansarExperience() {
               aspectRatio: "16 / 9",
             }}
           >
-            {/* The Master Video Asset with auto preloading for instant response */}
+            {/* The Master Video Asset */}
             <video
               ref={videoRef}
+              src="https://maharanimahansar.in/wp-content/uploads/2025/01/1.2.mp4"
               className="absolute inset-0 w-full h-full object-contain cursor-pointer"
               playsInline
               muted
               autoPlay
               loop
               preload="auto"
+              crossOrigin="anonymous"
               onClick={togglePlay}
+              onPlay={() => {
+                setIsPlaying(true);
+                setShowPlayOverlay(false);
+              }}
+              onPause={() => {
+                setIsPlaying(false);
+                setShowPlayOverlay(true);
+              }}
               onEnded={handleEnded}
             >
-              <source src="/maharani-mahansar-intro.mp4" type='video/mp4; codecs="avc1"' />
-              <source src="https://maharanimahansar.in/wp-content/uploads/2025/01/1.2.mp4" type='video/mp4; codecs="avc1"' />
               Your browser does not support HTML5 video.
             </video>
 
