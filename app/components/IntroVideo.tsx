@@ -240,6 +240,7 @@ export default function IntroVideo() {
               {/* The video element — original file, untouched */}
               <video
                 ref={videoRef}
+                src="/royal-gallerys-intro.mp4"
                 className="absolute inset-0 w-full h-full cursor-pointer"
                 style={{
                   objectFit: "contain",
@@ -251,39 +252,22 @@ export default function IntroVideo() {
                 loop
                 preload="auto"
                 onClick={togglePlay}
-                onLoadedData={handleLoaded}
+                onPlay={() => {
+                  setIsPlaying(true);
+                  setShowPlayButton(false);
+                }}
+                onPause={() => {
+                  setIsPlaying(false);
+                  setShowPlayButton(true);
+                }}
                 onError={handleError}
                 onEnded={handleEnded}
               >
-                <source
-                  src="/Royal_Gallerys_Intro_2K_v5.mp4"
-                  type='video/mp4; codecs="avc1"'
-                />
                 Your browser does not support the video element.
               </video>
 
-              {/* Loading shimmer (before video loads) */}
-              {!isLoaded && !hasError && (
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div
-                    className="animate-pulse flex flex-col items-center gap-4"
-                  >
-                    <div
-                      className="w-12 h-12 rounded-full border"
-                      style={{ borderColor: "rgba(184,164,122,0.3)" }}
-                    />
-                    <p
-                      className="text-[10px] uppercase tracking-[0.28em] font-sans"
-                      style={{ color: C.textStone }}
-                    >
-                      Loading Film…
-                    </p>
-                  </div>
-                </div>
-              )}
-
-              {/* Large centre play button (shown when autoplay blocked or video ended) */}
-              {showPlayButton && isLoaded && (
+              {/* Large centre play button (shown when paused or autoplay blocked) */}
+              {showPlayButton && (
                 <button
                   onClick={togglePlay}
                   className="absolute inset-0 flex items-center justify-center z-20 cursor-pointer group"
@@ -297,49 +281,47 @@ export default function IntroVideo() {
               )}
 
               {/* Bottom controls bar */}
-              {isLoaded && (
-                <div
-                  className="absolute bottom-0 left-0 right-0 z-30 flex items-center gap-3 px-4 sm:px-5 py-3"
-                  style={{
-                    background:
-                      "linear-gradient(to top, rgba(17,17,15,0.7), transparent)",
-                  }}
+              <div
+                className="absolute bottom-0 left-0 right-0 z-30 flex items-center gap-3 px-4 sm:px-5 py-3"
+                style={{
+                  background:
+                    "linear-gradient(to top, rgba(17,17,15,0.7), transparent)",
+                }}
+              >
+                {/* Play / Pause */}
+                <button
+                  onClick={togglePlay}
+                  className="flex items-center justify-center w-8 h-8 rounded-full transition-colors duration-200 cursor-pointer"
+                  style={{ color: C.ivory }}
+                  aria-label={isPlaying ? "Pause" : "Play"}
                 >
-                  {/* Play / Pause */}
-                  <button
-                    onClick={togglePlay}
-                    className="flex items-center justify-center w-8 h-8 rounded-full transition-colors duration-200 cursor-pointer"
-                    style={{ color: C.ivory }}
-                    aria-label={isPlaying ? "Pause" : "Play"}
-                  >
-                    {isPlaying ? <PauseIcon /> : <SmallPlayIcon />}
-                  </button>
+                  {isPlaying ? <PauseIcon /> : <SmallPlayIcon />}
+                </button>
 
-                  {/* Progress bar */}
+                {/* Progress bar */}
+                <div
+                  className="flex-1 h-[2px] rounded-full overflow-hidden"
+                  style={{ background: "rgba(184,164,122,0.2)" }}
+                >
                   <div
-                    className="flex-1 h-[2px] rounded-full overflow-hidden"
-                    style={{ background: "rgba(184,164,122,0.2)" }}
-                  >
-                    <div
-                      className="h-full rounded-full transition-[width] duration-200 ease-linear"
-                      style={{
-                        width: `${progress}%`,
-                        background: C.champagne,
-                      }}
-                    />
-                  </div>
-
-                  {/* Mute / Unmute */}
-                  <button
-                    onClick={toggleMute}
-                    className="flex items-center justify-center w-8 h-8 rounded-full transition-colors duration-200 cursor-pointer"
-                    style={{ color: C.ivory }}
-                    aria-label={isMuted ? "Unmute" : "Mute"}
-                  >
-                    {isMuted ? <SoundOffIcon /> : <SoundOnIcon />}
-                  </button>
+                    className="h-full rounded-full transition-[width] duration-200 ease-linear"
+                    style={{
+                      width: `${progress}%`,
+                      background: C.champagne,
+                    }}
+                  />
                 </div>
-              )}
+
+                {/* Mute / Unmute */}
+                <button
+                  onClick={toggleMute}
+                  className="flex items-center justify-center w-8 h-8 rounded-full transition-colors duration-200 cursor-pointer"
+                  style={{ color: C.ivory }}
+                  aria-label={isMuted ? "Unmute" : "Mute"}
+                >
+                  {isMuted ? <SoundOffIcon /> : <SoundOnIcon />}
+                </button>
+              </div>
             </>
           )}
         </div>
