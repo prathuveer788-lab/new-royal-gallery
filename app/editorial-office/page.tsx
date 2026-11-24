@@ -27,8 +27,8 @@ export default function EditorialOfficeAdminPage() {
   const [printIssues, setPrintIssues] = useState<PrintIssueItem[]>([]);
   const [notifications, setNotifications] = useState<MemberNotification[]>([]);
   const [dispatchedEmails, setDispatchedEmails] = useState<DispatchedEmail[]>([]);
-  const [liveMemberCount, setLiveMemberCount] = useState<number>(3592);
-  const [baseMemberCount, setBaseMemberCount] = useState<number>(3592);
+  const [liveMemberCount, setLiveMemberCount] = useState<number>(0);
+  const [baseMemberCount, setBaseMemberCount] = useState<number>(0);
   const [membershipPrice, setMembershipPrice] = useState<number>(3999);
 
   // Search & Filters
@@ -47,9 +47,9 @@ export default function EditorialOfficeAdminPage() {
         setPrintIssues(data.printIssues || []);
         setNotifications(data.notifications || []);
         setDispatchedEmails(data.dispatchedEmails || []);
-        setLiveMemberCount(data.liveMemberCount || 3592);
+        setLiveMemberCount(data.liveMemberCount ?? (data.members || []).length);
         if (data.config) {
-          setBaseMemberCount(data.config.memberCount || 3592);
+          setBaseMemberCount(data.config.memberCount ?? 0);
           setMembershipPrice(data.config.membershipPrice || 3999);
         }
         setIsAuthenticated(true);
@@ -329,13 +329,13 @@ export default function EditorialOfficeAdminPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="p-6 bg-white border border-[#111111]/10 shadow-sm">
             <span className="text-[9px] uppercase tracking-wider text-[#8A7352] font-semibold block">
-              Live Public Member Count
+              Actual Member Count
             </span>
             <span className="text-3xl sm:text-4xl font-serif text-[#111111]">
-              {liveMemberCount.toLocaleString("en-IN")}
+              {members.length.toLocaleString("en-IN")}
             </span>
             <span className="block text-[10px] text-[#666666] mt-1 font-sans">
-              Base: {baseMemberCount} + {activeMembers.length} Approved
+              {activeMembers.length} Approved · {pendingMembers.length} Pending (Public: {liveMemberCount.toLocaleString("en-IN")})
             </span>
           </div>
 

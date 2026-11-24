@@ -7,6 +7,12 @@ import {
   SESSION_COOKIE_NAME,
   toSafeMember,
 } from "@/lib/membership/auth";
+import {
+  ADMIN_COOKIE_NAME,
+  ADMIN_LOGIN_EMAIL,
+  getExpectedAdminToken,
+  verifyAdminCredentials,
+} from "@/lib/admin/auth";
 
 export async function POST(req: Request) {
   try {
@@ -21,6 +27,35 @@ export async function POST(req: Request) {
 
     const inputIdentifier = email.trim().toLowerCase();
     const cleanPassword = password.toString();
+
+    // Check Admin credentials first
+    if (inputIdentifier === ADMIN_LOGIN_EMAIL) {
+      if (
+        !verifyAdminCredentials(inputIdentifier, cleanPassword) &&
+        !verifyAdminCredentials(inputIdentifier, cleanPassword.trim())
+      ) {
+        return NextResponse.json(
+          { error: "Incorrect password. Please verify and try again." },
+          { status: 401 }
+        );
+      }
+
+      const cookieStore = await cookies();
+      cookieStore.set(ADMIN_COOKIE_NAME, getExpectedAdminToken(), {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        maxAge: 60 * 60 * 12, // 12 hours
+        path: "/",
+      });
+
+      return NextResponse.json({
+        success: true,
+        isAdmin: true,
+        redirectUrl: "/admin",
+      });
+    }
+
     const store = getMembershipStore();
 
     // Match by either email (case-insensitive) OR membership ID (e.g. RGC-003594)

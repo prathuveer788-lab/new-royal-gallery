@@ -3,11 +3,13 @@ import path from "path";
 import {
   BLOG_CATEGORIES,
   type BlogCategory,
+  type BlogContentMode,
   type BlogPost,
 } from "./constants";
+import { stripHtmlToExcerpt } from "./sanitize";
 
 export { BLOG_CATEGORIES, SOCIETY_SUBCATEGORIES, BLOG_FORMATS } from "./constants";
-export type { BlogCategory, BlogPost } from "./constants";
+export type { BlogCategory, BlogContentMode, BlogPost } from "./constants";
 
 interface BlogsStore {
   blogs: BlogPost[];
@@ -93,7 +95,7 @@ export function saveAllBlogs(blogs: BlogPost[]): void {
 
 export function createBlog(input: {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   category: BlogCategory;
   subcategory?: string;
   format?: string;
@@ -101,6 +103,10 @@ export function createBlog(input: {
   authorName?: string;
   coverImage: string;
   content: string;
+  contentMode?: BlogContentMode;
+  metaTitle?: string;
+  metaDescription?: string;
+  metaKeywords?: string;
   featuredOnHome?: boolean;
   published?: boolean;
   slug?: string;
@@ -114,11 +120,16 @@ export function createBlog(input: {
   }
 
   const now = new Date().toISOString();
+  const resolvedSubtitle =
+    input.subtitle?.trim() ||
+    input.metaDescription?.trim() ||
+    stripHtmlToExcerpt(input.content);
+
   const blog: BlogPost = {
     id: `blog-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
     slug: uniqueSlug,
     title: input.title.trim(),
-    subtitle: input.subtitle.trim(),
+    subtitle: resolvedSubtitle,
     category: input.category,
     subcategory: (input.subcategory || "Editorial").trim(),
     format: (input.format || "Feature").trim(),
@@ -126,6 +137,10 @@ export function createBlog(input: {
     authorName: (input.authorName || "The Royal Gallerys Editorial Desk").trim(),
     coverImage: input.coverImage.trim(),
     content: input.content.trim(),
+    contentMode: input.contentMode || (/^\s*</.test(input.content) ? "html" : "text"),
+    metaTitle: input.metaTitle?.trim() || input.title.trim(),
+    metaDescription: input.metaDescription?.trim() || resolvedSubtitle,
+    metaKeywords: input.metaKeywords?.trim() || "",
     featuredOnHome: input.featuredOnHome ?? true,
     published: input.published ?? true,
     publishedAt: now,

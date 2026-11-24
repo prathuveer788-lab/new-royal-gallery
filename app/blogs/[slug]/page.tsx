@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBlogBySlug, getPublishedBlogs } from "@/lib/blogs/store";
+import { isHtmlContent, normalizeBlogHtml } from "@/lib/blogs/sanitize";
 import { BlogCard } from "@/app/components/CuratedBlogsSection";
 
 export const dynamic = "force-dynamic";
@@ -74,14 +75,32 @@ export async function generateMetadata({
   if (!blog || !blog.published) {
     return { title: "Blog Not Found — The Royal Gallerys" };
   }
+
+  const seoTitle =
+    blog.metaTitle?.trim() || `${blog.title} — ${blog.category} | The Royal Gallerys`;
+  const seoDescription = blog.metaDescription?.trim() || blog.subtitle;
+  const keywords = blog.metaKeywords
+    ? blog.metaKeywords
+        .split(",")
+        .map((k) => k.trim())
+        .filter(Boolean)
+    : undefined;
+
   return {
-    title: `${blog.title} — ${blog.category} | The Royal Gallerys`,
-    description: blog.subtitle,
+    title: seoTitle,
+    description: seoDescription,
+    keywords,
     openGraph: {
-      title: blog.title,
-      description: blog.subtitle,
+      title: seoTitle,
+      description: seoDescription,
       type: "article",
       images: blog.coverImage ? [{ url: blog.coverImage }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: seoTitle,
+      description: seoDescription,
+      images: blog.coverImage ? [blog.coverImage] : undefined,
     },
   };
 }
@@ -107,6 +126,8 @@ export default async function BlogDetailPage({
     day: "numeric",
     year: "numeric",
   });
+
+  const renderAsHtml = isHtmlContent(blog.content, blog.contentMode);
 
   return (
     <article style={{ background: C.ivory }}>
@@ -197,11 +218,18 @@ export default async function BlogDetailPage({
             </Link>
           </div>
 
-          <div>
-            {blog.content
-              .split(/\n\s*\n/)
-              .map((para, idx) => renderParagraph(para, idx))}
-          </div>
+          {renderAsHtml ? (
+            <div
+              className="blog-code-body text-[#181714] space-y-5 [&_h1]:text-3xl [&_h1]:sm:text-4xl [&_h1]:font-serif [&_h1]:mt-8 [&_h1]:mb-4 [&_h2]:text-2xl [&_h2]:sm:text-3xl [&_h2]:font-serif [&_h2]:mt-10 [&_h2]:mb-4 [&_h3]:text-xl [&_h3]:sm:text-2xl [&_h3]:font-serif [&_h3]:mt-8 [&_h3]:mb-3 [&_p]:text-base [&_p]:sm:text-lg [&_p]:font-sans [&_p]:leading-relaxed [&_p]:mb-5 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:space-y-2 [&_blockquote]:border-l-2 [&_blockquote]:border-[#8A7352] [&_blockquote]:pl-5 [&_blockquote]:italic [&_blockquote]:font-serif [&_blockquote]:text-xl [&_blockquote]:my-8 [&_a]:text-[#8A7352] [&_a]:underline [&_img]:w-full [&_img]:my-8"
+              dangerouslySetInnerHTML={{ __html: normalizeBlogHtml(blog.content) }}
+            />
+          ) : (
+            <div>
+              {blog.content
+                .split(/\n\s*\n/)
+                .map((para, idx) => renderParagraph(para, idx))}
+            </div>
+          )}
         </div>
       </section>
 

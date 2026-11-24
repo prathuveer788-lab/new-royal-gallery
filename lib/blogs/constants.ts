@@ -33,6 +33,8 @@ export const BLOG_FORMATS = [
   "Dispatch",
 ] as const;
 
+export type BlogContentMode = "html" | "text";
+
 export interface BlogPost {
   id: string;
   slug: string;
@@ -45,6 +47,10 @@ export interface BlogPost {
   authorName: string;
   coverImage: string;
   content: string;
+  contentMode?: BlogContentMode;
+  metaTitle?: string;
+  metaDescription?: string;
+  metaKeywords?: string;
   featuredOnHome: boolean;
   published: boolean;
   publishedAt: string;

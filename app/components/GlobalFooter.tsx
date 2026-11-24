@@ -3,11 +3,28 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+const objectiveFooterLinks = [
+  { href: "/blogs?category=Style", label: "Style" },
+  { href: "/blogs?category=Jewellery", label: "Jewellery" },
+  { href: "/blogs?category=Watches", label: "Watches" },
+  { href: "/blogs?category=Weddings", label: "Weddings" },
+  { href: "/blogs?category=Travel", label: "Travel" },
+  { href: "/blogs?category=UK", label: "UK" },
+  { href: "/blogs?category=Design", label: "Design" },
+  { href: "/blogs?category=Culture", label: "Culture" },
+  { href: "/blogs?category=Royalty", label: "Royalty" },
+  { href: "/blogs?category=Society", label: "Society" },
+  { href: "/blogs?category=Motoring", label: "Motoring" },
+  { href: "/blogs?category=Dining", label: "Dining" },
+  { href: "/blogs?category=Business", label: "Business" },
+  { href: "/blogs?category=Future", label: "Future" },
+];
+
 const footerSections = [
   {
-    title: "Editorial",
+    title: "Institute",
     links: [
-      { href: "/blogs", label: "The Edit · Blogs" },
+      { href: "/blogs", label: "Objective · All Blogs" },
       { href: "/ecosystem", label: "Five Houses" },
       { href: "/global-vision", label: "Global Vision" },
       { href: "/impact", label: "Our Impact" },
@@ -37,7 +54,7 @@ export default function GlobalFooter() {
       <div className="max-w-7xl mx-auto">
         <hr className="editorial-rule mb-16 sm:mb-20 opacity-30" />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 mb-16 sm:mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 sm:gap-12 mb-16 sm:mb-20">
           <div className="lg:col-span-1 space-y-5">
             <div className="text-center sm:text-left leading-none" style={{ fontFamily: "var(--font-cormorant), serif" }}>
               <span className="block text-[clamp(7px,1vw,10px)] tracking-[0.38em] uppercase font-light opacity-50" style={{ color: "#9B9589" }}>The</span>
@@ -57,6 +74,23 @@ export default function GlobalFooter() {
                 hey.theroyalsgallery@gmail.com
               </a>
             </div>
+          </div>
+
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] font-semibold font-sans mb-5" style={{ color: "#8A7352" }}>
+              <Link href="/blogs" className="hover:text-[#F4F0E7] transition-colors duration-300">
+                Objective
+              </Link>
+            </h4>
+            <ul className="grid grid-cols-2 gap-x-6 gap-y-3 text-sm font-light" style={{ color: "#9B9589" }}>
+              {objectiveFooterLinks.map((link) => (
+                <li key={link.label}>
+                  <Link href={link.href} className="hover:text-[#F4F0E7] transition-colors duration-300">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {footerSections.map((col) => (

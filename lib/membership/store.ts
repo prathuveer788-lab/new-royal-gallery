@@ -371,7 +371,7 @@ export function saveMembershipStore(data: MembershipStoreData): void {
  * base 3592 + all APPROVED active members.
  */
 export function getLiveMemberCount(store: MembershipStoreData): number {
-  const base = store.config.memberCount || 3592;
+  const base = store.config.memberCount ?? 3592;
   const activeCount = store.members.filter((m) => m.status === "ACTIVE").length;
   return base + activeCount;
 }

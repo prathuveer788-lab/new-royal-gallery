@@ -64,14 +64,18 @@ export async function POST(req: Request) {
       coverImage,
       imageData,
       content,
+      contentMode,
+      metaTitle,
+      metaDescription,
+      metaKeywords,
       featuredOnHome,
       published,
       slug,
     } = body;
 
-    if (!title?.trim() || !subtitle?.trim() || !content?.trim()) {
+    if (!title?.trim() || !content?.trim()) {
       return NextResponse.json(
-        { error: "Title, subtitle, and blog content are required." },
+        { error: "Title and Blog Code / Content are required." },
         { status: 400 }
       );
     }
@@ -102,6 +106,10 @@ export async function POST(req: Request) {
       authorName,
       coverImage: resolvedImage,
       content,
+      contentMode,
+      metaTitle,
+      metaDescription,
+      metaKeywords,
       featuredOnHome,
       published,
       slug,

@@ -79,7 +79,7 @@ export default function MembershipPage() {
     fetch("/api/member/me")
       .then((res) => res.json())
       .then((data) => {
-        if (data.config?.memberCount) {
+        if (typeof data.config?.memberCount === "number") {
           setMemberCount(data.config.memberCount);
         }
         if (data.config?.price) {

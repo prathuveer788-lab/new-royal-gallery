@@ -1,15 +1,42 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+
+const LIGHT_HEADER_ROUTES = [
+  "/membership",
+  "/member/login",
+  "/member/forgot-password",
+  "/member/reset-password",
+  "/editorial-office",
+  "/admin",
+  "/circle",
+];
+
+function isLightRgbColor(bg: string): boolean | null {
+  const match = bg.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)(?:\s*,\s*([\d.]+))?\s*\)/i);
+  if (!match) return null;
+  const alpha = match[4] !== undefined ? parseFloat(match[4]) : 1;
+  if (alpha < 0.5) return null;
+  const r = Number(match[1]);
+  const g = Number(match[2]);
+  const b = Number(match[3]);
+  const luminance = 0.299 * r + 0.587 * g + 0.114 * b;
+  return luminance > 185;
+}
 
 export default function Navigation() {
   const pathname = usePathname();
   const router = useRouter();
-  const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef<HTMLElement | null>(null);
+  const [openPath, setOpenPath] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [detectedLightBg, setDetectedLightBg] = useState(false);
   const [member, setMember] = useState<{ firstName: string; membershipId: string } | null>(null);
+
+  const isOpen = openPath === pathname;
+  const setIsOpen = (next: boolean) => setOpenPath(next ? pathname : null);
 
   const handlePublicSignOut = async () => {
     try {
@@ -33,10 +60,43 @@ export default function Navigation() {
   }, [pathname]);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    const checkBehindNav = () => {
+      const isScrolled = window.scrollY > 60;
+      setScrolled(isScrolled);
+      if (isScrolled) {
+        setDetectedLightBg(false);
+        return;
+      }
+
+      const elements = document.elementsFromPoint(window.innerWidth / 2, 32);
+      for (const el of elements) {
+        if (navRef.current && navRef.current.contains(el)) continue;
+        if (el.tagName === "IMG" || el.tagName === "VIDEO" || el.tagName === "CANVAS") {
+          setDetectedLightBg(false);
+          return;
+        }
+        const style = window.getComputedStyle(el);
+        if (style.backgroundImage && style.backgroundImage !== "none") {
+          setDetectedLightBg(false);
+          return;
+        }
+        const isLight = isLightRgbColor(style.backgroundColor);
+        if (isLight !== null) {
+          setDetectedLightBg(isLight);
+          return;
+        }
+      }
+      setDetectedLightBg(false);
+    };
+
+    checkBehindNav();
+    window.addEventListener("scroll", checkBehindNav, { passive: true });
+    window.addEventListener("resize", checkBehindNav, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", checkBehindNav);
+      window.removeEventListener("resize", checkBehindNav);
+    };
+  }, [pathname]);
 
   useEffect(() => {
     if (isOpen) {
@@ -48,10 +108,6 @@ export default function Navigation() {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
-
-  useEffect(() => {
-    setIsOpen(false);
-  }, [pathname]);
 
   if (pathname?.startsWith("/member/dashboard")) {
     return null;
@@ -85,15 +141,28 @@ export default function Navigation() {
     { href: "/ecosystem", label: "Institute" },
   ];
 
-  // On hero (transparent): ivory text. On scroll: dark bg, ivory text.
-  const textColor = scrolled ? "text-[#F4F0E7]" : "text-[#F4F0E7]";
+  const isKnownLightRoute = LIGHT_HEADER_ROUTES.some((route) =>
+    pathname?.startsWith(route)
+  );
+  const isLightTop = !scrolled && (isKnownLightRoute || detectedLightBg);
+
+  // On light/white backgrounds at top: black text (#11110F). On dark hero or scrolled bar: ivory text (#F4F0E7).
+  const textColor = isLightTop ? "text-[#11110F]" : "text-[#F4F0E7]";
+  const navLinkColor = scrolled ? "#9B9589" : isLightTop ? "#11110F" : "#B8A47A";
+  const utilityColor = scrolled ? "#9B9589" : isLightTop ? "#11110F" : "#8A7352";
+  const hoverTextColor = isLightTop ? "#8A7352" : "#F4F0E7";
 
   return (
     <nav
+      ref={navRef}
       className="fixed top-0 w-full z-[100] transition-all duration-700"
       style={{
         background: scrolled ? "#11110F" : "transparent",
-        borderBottom: scrolled ? "1px solid rgba(138,115,82,0.18)" : "1px solid transparent",
+        borderBottom: scrolled
+          ? "1px solid rgba(138,115,82,0.18)"
+          : isLightTop
+            ? "1px solid rgba(17,17,15,0.08)"
+            : "1px solid transparent",
       }}
     >
       <div className="flex items-center justify-between gap-6 px-6 sm:px-8 lg:px-10 py-4">
@@ -101,7 +170,7 @@ export default function Navigation() {
         {/* ════════ MASTHEAD LOGO ════════ */}
         <Link href="/" className="group flex-shrink-0 select-none" aria-label="The Royal Gallerys — Home">
           <div className="leading-none" style={{ fontFamily: "var(--font-cormorant), serif" }}>
-            <span className={`block text-[9px] sm:text-[10px] tracking-[0.38em] uppercase font-light transition-colors duration-500 ${textColor} opacity-60`}>
+            <span className={`block text-[9px] sm:text-[10px] tracking-[0.38em] uppercase font-light transition-colors duration-500 ${textColor} ${isLightTop ? "opacity-70" : "opacity-60"}`}>
               The
             </span>
             <span className={`block text-[20px] sm:text-[22px] lg:text-[24px] tracking-[0.07em] uppercase font-normal transition-colors duration-500 leading-none ${textColor}`}>
@@ -117,11 +186,11 @@ export default function Navigation() {
               href="/blogs"
               className="px-1.5 xl:px-2.5 py-2 text-[13px] xl:text-[14px] tracking-[0.14em] uppercase transition-colors duration-300 whitespace-nowrap font-sans inline-flex items-center gap-1"
               style={{
-                color: scrolled ? "#9B9589" : "#B8A47A",
+                color: navLinkColor,
                 fontWeight: 400,
               }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "#F4F0E7"; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = scrolled ? "#9B9589" : "#B8A47A"; }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = hoverTextColor; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = navLinkColor; }}
               aria-haspopup="true"
             >
               <span>Objective</span>
@@ -184,18 +253,21 @@ export default function Navigation() {
               })}
             </div>
           </div>
-          <span className="w-px h-3.5 mx-2 transition-colors duration-500" style={{ background: "rgba(138,115,82,0.3)" }} />
+          <span
+            className="w-px h-3.5 mx-2 transition-colors duration-500"
+            style={{ background: isLightTop ? "rgba(17,17,15,0.22)" : "rgba(138,115,82,0.3)" }}
+          />
           {utilityLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className="px-1.5 xl:px-2 py-2 text-[12px] xl:text-[13px] tracking-[0.14em] uppercase transition-colors duration-300 whitespace-nowrap font-sans"
               style={{
-                color: scrolled ? "#9B9589" : "#8A7352",
+                color: utilityColor,
                 fontWeight: 400,
               }}
-              onMouseEnter={(e) => { (e.target as HTMLElement).style.color = "#F4F0E7"; }}
-              onMouseLeave={(e) => { (e.target as HTMLElement).style.color = scrolled ? "#9B9589" : "#8A7352"; }}
+              onMouseEnter={(e) => { (e.target as HTMLElement).style.color = hoverTextColor; }}
+              onMouseLeave={(e) => { (e.target as HTMLElement).style.color = utilityColor; }}
             >
               {link.label}
             </Link>
@@ -204,16 +276,16 @@ export default function Navigation() {
             href="/membership"
             className="ml-2 px-3 xl:px-4 py-2 text-[11px] xl:text-[12px] uppercase tracking-[0.16em] transition-all duration-500 font-sans font-medium"
             style={{
-              color: "#F4F0E7",
-              border: "1px solid rgba(138,115,82,0.45)",
+              color: isLightTop ? "#11110F" : "#F4F0E7",
+              border: isLightTop ? "1px solid rgba(17,17,15,0.45)" : "1px solid rgba(138,115,82,0.45)",
             }}
             onMouseEnter={(e) => {
-              (e.target as HTMLElement).style.background = "rgba(138,115,82,0.15)";
-              (e.target as HTMLElement).style.borderColor = "rgba(184,164,122,0.7)";
+              (e.target as HTMLElement).style.background = isLightTop ? "rgba(17,17,15,0.08)" : "rgba(138,115,82,0.15)";
+              (e.target as HTMLElement).style.borderColor = isLightTop ? "#11110F" : "rgba(184,164,122,0.7)";
             }}
             onMouseLeave={(e) => {
               (e.target as HTMLElement).style.background = "transparent";
-              (e.target as HTMLElement).style.borderColor = "rgba(138,115,82,0.45)";
+              (e.target as HTMLElement).style.borderColor = isLightTop ? "rgba(17,17,15,0.45)" : "rgba(138,115,82,0.45)";
             }}
           >
             The Circle
@@ -226,7 +298,7 @@ export default function Navigation() {
                 style={{
                   background: "linear-gradient(135deg, rgba(212,175,55,0.22) 0%, rgba(184,164,122,0.12) 100%)",
                   border: "1px solid rgba(212,175,55,0.75)",
-                  color: "#F7F5F0",
+                  color: isLightTop ? "#11110F" : "#F7F5F0",
                 }}
                 title={`Enter Private World as ${member.firstName ? member.firstName.toUpperCase() : "MEMBER"}`}
               >
@@ -252,17 +324,17 @@ export default function Navigation() {
               href="/member/login"
               className="ml-2 px-3 xl:px-4 py-2 text-[11px] xl:text-[12px] uppercase tracking-[0.16em] transition-all duration-500 font-sans font-medium"
               style={{
-                color: "#D4AF37",
-                border: "1px solid rgba(212,175,55,0.5)",
-                background: "rgba(212,175,55,0.06)",
+                color: isLightTop ? "#11110F" : "#D4AF37",
+                border: isLightTop ? "1px solid rgba(17,17,15,0.55)" : "1px solid rgba(212,175,55,0.5)",
+                background: isLightTop ? "rgba(17,17,15,0.05)" : "rgba(212,175,55,0.06)",
               }}
               onMouseEnter={(e) => {
-                (e.target as HTMLElement).style.background = "rgba(212,175,55,0.18)";
+                (e.target as HTMLElement).style.background = isLightTop ? "#11110F" : "rgba(212,175,55,0.18)";
                 (e.target as HTMLElement).style.color = "#FFFFFF";
               }}
               onMouseLeave={(e) => {
-                (e.target as HTMLElement).style.background = "rgba(212,175,55,0.06)";
-                (e.target as HTMLElement).style.color = "#D4AF37";
+                (e.target as HTMLElement).style.background = isLightTop ? "rgba(17,17,15,0.05)" : "rgba(212,175,55,0.06)";
+                (e.target as HTMLElement).style.color = isLightTop ? "#11110F" : "#D4AF37";
               }}
             >
               Member Login
@@ -273,7 +345,7 @@ export default function Navigation() {
         {/* ════════ MOBILE TOGGLE ════════ */}
         <button
           className="lg:hidden text-2xl p-2 transition-colors duration-500 flex-shrink-0"
-          style={{ color: "#F4F0E7" }}
+          style={{ color: isLightTop ? "#11110F" : "#F4F0E7" }}
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
