@@ -6,6 +6,7 @@ import {
   createBlog,
   deleteBlog,
   getAllBlogs,
+  getBlogStorageMode,
   isValidCategory,
   slugifyTitle,
   updateBlog,
@@ -13,7 +14,7 @@ import {
 
 export const dynamic = "force-dynamic";
 
-function saveUploadedCoverImage(imageData: string, titleHint: string): string {
+async function saveUploadedCoverImage(imageData: string, titleHint: string): Promise<string> {
   const match = imageData.match(/^data:image\/(png|jpe?g|webp|avif);base64,(.+)$/i);
   if (!match) {
     throw new Error("Unsupported image format. Please upload PNG, JPG, WEBP, or AVIF.");
@@ -21,20 +22,58 @@ function saveUploadedCoverImage(imageData: string, titleHint: string): string {
 
   const rawExt = match[1].toLowerCase();
   const ext = rawExt === "jpeg" ? "jpg" : rawExt;
+  const contentType = `image/${rawExt === "jpg" ? "jpeg" : rawExt}`;
   const buffer = Buffer.from(match[2], "base64");
   if (buffer.length > 8 * 1024 * 1024) {
     throw new Error("Cover image must be under 8 MB.");
   }
 
-  const dir = path.join(process.cwd(), "public", "images", "blogs");
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-
   const safeName = slugifyTitle(titleHint) || "blog";
   const filename = `${safeName}-${Date.now()}.${ext}`;
-  fs.writeFileSync(path.join(dir, filename), buffer);
-  return `/images/blogs/${filename}`;
+
+  // 1. If Vercel Blob token is configured, upload directly to Vercel Blob
+  const blobToken = process.env.BLOB_READ_WRITE_TOKEN;
+  if (blobToken) {
+    const res = await fetch(`https://blob.vercel-storage.com/blogs/${filename}`, {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${blobToken}`,
+        "x-api-version": "7",
+        "x-content-type": contentType,
+      },
+      body: buffer,
+    });
+    if (res.ok) {
+      const data = (await res.json()) as { url?: string };
+      if (data.url) return data.url;
+    }
+  }
+
+  // 2. Try saving to public/images/blogs/ on writable local/VPS filesystems
+  if (!process.env.VERCEL && !process.env.AWS_LAMBDA_FUNCTION_NAME) {
+    try {
+      const dir = path.join(process.cwd(), "public", "images", "blogs");
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+      fs.writeFileSync(path.join(dir, filename), buffer);
+      return `/images/blogs/${filename}`;
+    } catch (err: unknown) {
+      const code = (err as NodeJS.ErrnoException)?.code;
+      if (code !== "EROFS" && code !== "EACCES" && code !== "EPERM") {
+        throw err;
+      }
+    }
+  }
+
+  // 3. Fallback on read-only serverless filesystems (e.g. Vercel without Blob):
+  // Keep inline Data URL so image renders cleanly without EROFS error.
+  if (buffer.length > 2 * 1024 * 1024) {
+    throw new Error(
+      "On Vercel read-only storage, please upload an image under 2 MB or paste an image URL."
+    );
+  }
+  return imageData;
 }
 
 export async function GET(req: Request) {
@@ -42,7 +81,10 @@ export async function GET(req: Request) {
   if (!isAuthed) {
     return NextResponse.json({ error: "Unauthorized Editorial Office access." }, { status: 401 });
   }
-  return NextResponse.json({ blogs: getAllBlogs() });
+  return NextResponse.json({
+    blogs: await getAllBlogs(),
+    storageMode: getBlogStorageMode(),
+  });
 }
 
 export async function POST(req: Request) {
@@ -89,14 +131,14 @@ export async function POST(req: Request) {
 
     let resolvedImage = (coverImage || "").trim();
     if (imageData && typeof imageData === "string") {
-      resolvedImage = saveUploadedCoverImage(imageData, title);
+      resolvedImage = await saveUploadedCoverImage(imageData, title);
     }
 
     if (!resolvedImage) {
       resolvedImage = "/images/hero/jaipur-city-palace-grand-facade.jpg";
     }
 
-    const blog = createBlog({
+    const blog = await createBlog({
       title,
       subtitle,
       category,
@@ -115,7 +157,11 @@ export async function POST(req: Request) {
       slug,
     });
 
-    return NextResponse.json({ success: true, blog });
+    return NextResponse.json({
+      success: true,
+      blog,
+      storageMode: getBlogStorageMode(),
+    });
   } catch (err: unknown) {
     return NextResponse.json(
       { error: err instanceof Error ? err.message : "Failed to create blog." },
@@ -142,19 +188,23 @@ export async function PATCH(req: Request) {
     }
 
     if (imageData && typeof imageData === "string") {
-      updates.coverImage = saveUploadedCoverImage(imageData, updates.title || "blog");
+      updates.coverImage = await saveUploadedCoverImage(imageData, updates.title || "blog");
     }
 
     if (updates.slug) {
       updates.slug = slugifyTitle(updates.slug);
     }
 
-    const updated = updateBlog(id, updates);
+    const updated = await updateBlog(id, updates);
     if (!updated) {
       return NextResponse.json({ error: "Blog not found." }, { status: 404 });
     }
 
-    return NextResponse.json({ success: true, blog: updated });
+    return NextResponse.json({
+      success: true,
+      blog: updated,
+      storageMode: getBlogStorageMode(),
+    });
   } catch (err: unknown) {
     return NextResponse.json(
       { error: err instanceof Error ? err.message : "Failed to update blog." },
@@ -176,7 +226,7 @@ export async function DELETE(req: Request) {
       return NextResponse.json({ error: "Blog id is required." }, { status: 400 });
     }
 
-    const removed = deleteBlog(id);
+    const removed = await deleteBlog(id);
     if (!removed) {
       return NextResponse.json({ error: "Blog not found." }, { status: 404 });
     }

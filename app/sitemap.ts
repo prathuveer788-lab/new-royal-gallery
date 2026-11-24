@@ -3,7 +3,7 @@ import { getPublishedBlogs } from '@/lib/blogs/store'
 
 export const dynamic = 'force-dynamic'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://theroyalgallerys.com'
   const now = new Date()
 
@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/impact`, changeFrequency: 'monthly', priority: 0.7, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },
   ]
 
-  const blogRoutes: MetadataRoute.Sitemap = getPublishedBlogs().map((blog) => ({
+  const blogRoutes: MetadataRoute.Sitemap = (await getPublishedBlogs()).map((blog) => ({
     url: `${baseUrl}/blogs/${blog.slug}`,
     changeFrequency: 'monthly',
     priority: 0.8,

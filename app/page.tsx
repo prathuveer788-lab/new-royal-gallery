@@ -61,8 +61,8 @@ function EditorialRule({ short }: { short?: boolean }) {
 }
 
 /* ── PAGE ────────────────────────────────────────────── */
-export default function HomePage() {
-  const curatedBlogs = getHomeCuratedBlogs();
+export default async function HomePage() {
+  const curatedBlogs = await getHomeCuratedBlogs();
 
   return (
     <div style={{ background: C.ivory }}>

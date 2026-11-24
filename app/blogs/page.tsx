@@ -18,7 +18,7 @@ export default async function BlogsPage({
   searchParams: Promise<{ category?: string; sub?: string }>;
 }) {
   const { category, sub } = await searchParams;
-  const blogs = getPublishedBlogs();
+  const blogs = await getPublishedBlogs();
 
   const matchedCategory =
     category &&

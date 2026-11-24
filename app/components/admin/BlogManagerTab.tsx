@@ -50,6 +50,7 @@ export default function BlogManagerTab({
   onFeedback: (msg: string) => void;
 }) {
   const [blogs, setBlogs] = useState<BlogPost[]>([]);
+  const [storageMode, setStorageMode] = useState<"kv" | "local" | "tmp" | null>(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [filterCat, setFilterCat] = useState<string>("All");
@@ -63,6 +64,7 @@ export default function BlogManagerTab({
       if (res.ok) {
         const data = await res.json();
         setBlogs(data.blogs || []);
+        if (data.storageMode) setStorageMode(data.storageMode);
       }
     } catch (e) {
       console.error("Failed to fetch blogs:", e);
@@ -72,21 +74,76 @@ export default function BlogManagerTab({
   }, []);
 
   useEffect(() => {
-    loadBlogs();
-  }, [loadBlogs]);
+    let active = true;
+    fetch("/api/admin/blogs")
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (!active || !data) return;
+        setBlogs(data.blogs || []);
+        if (data.storageMode) setStorageMode(data.storageMode);
+      })
+      .catch((e) => console.error("Failed to fetch blogs:", e))
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   const handleImageFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
     const reader = new FileReader();
     reader.onload = () => {
-      if (typeof reader.result === "string") {
+      if (typeof reader.result !== "string") return;
+      const rawDataUrl = reader.result;
+
+      if (file.size <= 250 * 1024) {
         setForm((prev) => ({
           ...prev,
-          imageData: reader.result as string,
+          imageData: rawDataUrl,
           coverImage: prev.coverImage || file.name,
         }));
+        return;
       }
+
+      // Compress larger images client-side so serverless payloads stay small and fast
+      const img = new Image();
+      img.onload = () => {
+        const maxDim = 1400;
+        const scale = Math.min(1, maxDim / Math.max(img.width, img.height));
+        const canvas = document.createElement("canvas");
+        canvas.width = Math.round(img.width * scale);
+        canvas.height = Math.round(img.height * scale);
+        const ctx = canvas.getContext("2d");
+        if (!ctx) {
+          setForm((prev) => ({
+            ...prev,
+            imageData: rawDataUrl,
+            coverImage: prev.coverImage || file.name,
+          }));
+          return;
+        }
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        const compressed = canvas.toDataURL("image/webp", 0.82);
+        const finalUrl = compressed.startsWith("data:image/webp")
+          ? compressed
+          : canvas.toDataURL("image/jpeg", 0.82);
+        setForm((prev) => ({
+          ...prev,
+          imageData: finalUrl,
+          coverImage: prev.coverImage || file.name,
+        }));
+      };
+      img.onerror = () => {
+        setForm((prev) => ({
+          ...prev,
+          imageData: rawDataUrl,
+          coverImage: prev.coverImage || file.name,
+        }));
+      };
+      img.src = rawDataUrl;
     };
     reader.readAsDataURL(file);
   };
@@ -211,6 +268,12 @@ export default function BlogManagerTab({
 
   return (
     <div className="space-y-10">
+      {storageMode === "tmp" && (
+        <div className="p-4 bg-amber-50 border border-amber-300 text-amber-900 text-xs leading-relaxed">
+          <strong>Serverless Notice:</strong> Vercel&apos;s filesystem is read-only, so blogs and uploaded images are currently stored temporarily (<code>/tmp</code> + inline image data). For permanent cloud persistence across deployments, add <code>UPSTASH_REDIS_REST_URL</code> &amp; <code>UPSTASH_REDIS_REST_TOKEN</code> (or <code>KV_REST_API_URL</code> &amp; <code>KV_REST_API_TOKEN</code>) and optionally <code>BLOB_READ_WRITE_TOKEN</code> in Vercel Environment Variables.
+        </div>
+      )}
+
       {/* ── CREATE / EDIT BLOG FORM ── */}
       <form
         onSubmit={handleSubmit}

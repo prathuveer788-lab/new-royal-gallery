@@ -10,8 +10,8 @@ export async function GET(req: Request) {
 
   const blogs =
     featured === "true" && !category
-      ? getHomeCuratedBlogs()
-      : getPublishedBlogs(category);
+      ? await getHomeCuratedBlogs()
+      : await getPublishedBlogs(category);
 
   return NextResponse.json({ blogs });
 }

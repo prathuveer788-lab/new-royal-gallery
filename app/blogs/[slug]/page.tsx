@@ -71,7 +71,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const blog = getBlogBySlug(slug);
+  const blog = await getBlogBySlug(slug);
   if (!blog || !blog.published) {
     return { title: "Blog Not Found — The Royal Gallerys" };
   }
@@ -111,13 +111,13 @@ export default async function BlogDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const blog = getBlogBySlug(slug);
+  const blog = await getBlogBySlug(slug);
 
   if (!blog || !blog.published) {
     notFound();
   }
 
-  const relatedBlogs = getPublishedBlogs()
+  const relatedBlogs = (await getPublishedBlogs())
     .filter((b) => b.id !== blog.id)
     .slice(0, 4);
 
