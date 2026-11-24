@@ -3,6 +3,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import IntroVideo from "./components/IntroVideo";
 import MaharaniMahansarExperience from "./components/MaharaniMahansarExperience";
+import CuratedBlogsSection from "./components/CuratedBlogsSection";
+import { getHomeCuratedBlogs } from "@/lib/blogs/store";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "THE ROYAL GALLERYS | Heritage, Culture & Luxury — The International Magazine",
@@ -58,6 +62,8 @@ function EditorialRule({ short }: { short?: boolean }) {
 
 /* ── PAGE ────────────────────────────────────────────── */
 export default function HomePage() {
+  const curatedBlogs = getHomeCuratedBlogs();
+
   return (
     <div style={{ background: C.ivory }}>
 
@@ -105,7 +111,7 @@ export default function HomePage() {
 
           {/* Deck */}
           <p className="text-[clamp(11px,1.3vw,14px)] uppercase tracking-[0.26em] font-light font-sans mb-14 sm:mb-16" style={{ color: C.textStone }}>
-            Royalty · Travel · Style · Design · Culture · Society
+            Heritage · Culture · Luxury · Influence
           </p>
 
           {/* CTA */}
@@ -162,6 +168,11 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      {/* ════════════════════════════════════════════════
+          03 — THE EDIT / BLOGS
+          ════════════════════════════════════════════════ */}
+      <CuratedBlogsSection blogs={curatedBlogs} variant="home" />
 
     </div>
   );

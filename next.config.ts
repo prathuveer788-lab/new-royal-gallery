@@ -57,9 +57,6 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      { source: "/heritage", destination: "/royalty", permanent: true },
-      { source: "/heritage-ai", destination: "/futures", permanent: true },
-      { source: "/gallery", destination: "/archive", permanent: true },
       { source: "/image-credits", destination: "/", permanent: true },
     ];
   },

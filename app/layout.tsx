@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className="font-sans min-h-screen flex flex-col antialiased"
         style={{
@@ -67,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         }}
       >
         <Navigation />
-        <main className="flex-grow">{children}</main>
+        <main>{children}</main>
         <GlobalFooter />
       </body>
     </html>

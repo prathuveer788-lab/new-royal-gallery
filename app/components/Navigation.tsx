@@ -53,32 +53,32 @@ export default function Navigation() {
     setIsOpen(false);
   }, [pathname]);
 
-  if (pathname?.startsWith("/travel/the-balmoral") || pathname?.startsWith("/member/dashboard")) {
+  if (pathname?.startsWith("/member/dashboard")) {
     return null;
   }
 
   const objectiveLinks = [
-    { href: "/style", label: "Style" },
-    { href: "/jewellery", label: "Jewellery" },
-    { href: "/watches", label: "Watches" },
-    { href: "/weddings", label: "Weddings" },
-    { href: "/travel", label: "Travel" },
-    { href: "/uk", label: "UK" },
-    { href: "/design", label: "Design" },
-    { href: "/culture", label: "Culture" },
-    { href: "/royalty", label: "Royalty" },
-    { href: "/society", label: "Society" },
-    { href: "/motoring", label: "Motoring" },
-    { href: "/dining", label: "Dining" },
-    { href: "/business", label: "Business" },
-    { href: "/futures", label: "Future" },
+    { href: "/blogs?category=Style", label: "Style" },
+    { href: "/blogs?category=Jewellery", label: "Jewellery" },
+    { href: "/blogs?category=Watches", label: "Watches" },
+    { href: "/blogs?category=Weddings", label: "Weddings" },
+    { href: "/blogs?category=Travel", label: "Travel" },
+    { href: "/blogs?category=UK", label: "UK" },
+    { href: "/blogs?category=Design", label: "Design" },
+    { href: "/blogs?category=Culture", label: "Culture" },
+    { href: "/blogs?category=Royalty", label: "Royalty" },
+    { href: "/blogs?category=Society", label: "Society" },
+    { href: "/blogs?category=Motoring", label: "Motoring" },
+    { href: "/blogs?category=Dining", label: "Dining" },
+    { href: "/blogs?category=Business", label: "Business" },
+    { href: "/blogs?category=Future", label: "Future" },
   ];
 
   const societyLinks = [
-    { href: "/society", label: "Society Overview" },
-    { href: "/society/portraits-of-heritage", label: "★ Portraits of Heritage" },
-    { href: "/society/aaliya-sultana-babi-dinosaur-princess-balasinor", label: "The Dinosaur Princess Profile →" },
-    { href: "/society/shivanjali-kumari-dungarpur-wild-lens-of-royalty", label: "★ Wild Lens of Royalty Profile →" },
+    { href: "/blogs?category=Society", label: "Society Overview" },
+    { href: "/blogs?category=Society&sub=Portraits%20of%20Heritage", label: "★ Portraits of Heritage" },
+    { href: "/blogs?category=Society&sub=The%20Dinosaur%20Princess%20Profile", label: "The Dinosaur Princess Profile →" },
+    { href: "/blogs?category=Society&sub=Wild%20Lens%20of%20Royalty%20Profile", label: "★ Wild Lens of Royalty Profile →" },
   ];
 
   const utilityLinks = [
@@ -113,9 +113,9 @@ export default function Navigation() {
         {/* ════════ DESKTOP NAV ════════ */}
         <div className="hidden lg:flex items-center gap-0.5">
           <div className="relative group/objective">
-            <button
-              type="button"
-              className="px-1.5 xl:px-2.5 py-2 text-[13px] xl:text-[14px] tracking-[0.14em] uppercase transition-colors duration-300 whitespace-nowrap font-sans inline-flex items-center gap-1 cursor-default"
+            <Link
+              href="/blogs"
+              className="px-1.5 xl:px-2.5 py-2 text-[13px] xl:text-[14px] tracking-[0.14em] uppercase transition-colors duration-300 whitespace-nowrap font-sans inline-flex items-center gap-1"
               style={{
                 color: scrolled ? "#9B9589" : "#B8A47A",
                 fontWeight: 400,
@@ -126,7 +126,7 @@ export default function Navigation() {
             >
               <span>Objective</span>
               <span className="text-[8px] opacity-60">▾</span>
-            </button>
+            </Link>
 
             {/* Objective dropdown */}
             <div
@@ -136,7 +136,7 @@ export default function Navigation() {
               {objectiveLinks.map((link) => {
                 if (link.label === "Society") {
                   return (
-                    <div key={link.href} className="relative group/society">
+                    <div key={link.label} className="relative group/society">
                       <Link
                         href={link.href}
                         className="flex items-center justify-between gap-6 px-5 py-2 text-xs uppercase tracking-[0.16em] font-sans text-[#F4F0E7]/80 hover:text-[#D4673A] hover:bg-white/5 transition-colors"
@@ -152,7 +152,7 @@ export default function Navigation() {
                       >
                         {societyLinks.map((s, i) => (
                           <Link
-                            key={s.href}
+                            key={s.label}
                             href={s.href}
                             className={
                               i === 0
@@ -174,7 +174,7 @@ export default function Navigation() {
 
                 return (
                   <Link
-                    key={link.href}
+                    key={link.label}
                     href={link.href}
                     className="block px-5 py-2 text-xs uppercase tracking-[0.16em] font-sans text-[#F4F0E7]/80 hover:text-[#D4673A] hover:bg-white/5 transition-colors"
                   >
@@ -293,7 +293,7 @@ export default function Navigation() {
         }}
       >
         <div className="px-5 sm:px-8 py-6 flex flex-col gap-5 text-sm font-sans" style={{ color: "#F4F0E7" }}>
-          
+
           {/* Editorial Sections Grid */}
           <div>
             <div className="text-[10px] uppercase tracking-[0.24em] font-sans font-semibold mb-2.5 px-1 text-[#8A7352]">
@@ -302,11 +302,11 @@ export default function Navigation() {
             <div className="grid grid-cols-2 gap-2">
               {objectiveLinks.map((link) => (
                 <Link
-                  key={link.href}
+                  key={link.label}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
                   className="px-3 py-2.5 rounded-xs tracking-[0.12em] uppercase text-[12px] font-medium transition-colors border border-white/5 bg-white/[0.02] hover:bg-[#8A7352]/20 hover:text-[#B8A47A] hover:border-[#8A7352]/40"
-                  style={{ color: pathname === link.href ? "#B8A47A" : "#F4F0E7" }}
+                  style={{ color: "#F4F0E7" }}
                 >
                   {link.label}
                 </Link>
@@ -320,27 +320,24 @@ export default function Navigation() {
               Curated Series · Society
             </span>
             <div className="flex flex-col gap-2 mt-2">
-              <Link
-                href="/society/portraits-of-heritage"
-                onClick={() => setIsOpen(false)}
-                className="text-[11px] uppercase tracking-[0.16em] text-[#B8A47A] hover:underline"
-              >
-                ★ Portraits of Heritage
-              </Link>
-              <Link
-                href="/society/shivanjali-kumari-dungarpur-wild-lens-of-royalty"
-                onClick={() => setIsOpen(false)}
-                className="text-[12px] font-serif italic text-white/90 hover:text-[#C4687F]"
-              >
-                Shivanjali Kumari Dungarpur — Wild Lens →
-              </Link>
-              <Link
-                href="/society/aaliya-sultana-babi-dinosaur-princess-balasinor"
-                onClick={() => setIsOpen(false)}
-                className="text-[12px] font-serif italic text-white/80 hover:text-white"
-              >
-                The Dinosaur Princess of Balasinor →
-              </Link>
+              {societyLinks.map((s, i) => (
+                <Link
+                  key={s.label}
+                  href={s.href}
+                  onClick={() => setIsOpen(false)}
+                  className={
+                    i === 0
+                      ? "text-[11px] uppercase tracking-[0.16em] text-[#F4F0E7]/85 hover:text-[#D4673A]"
+                      : i === 1
+                        ? "text-[11px] uppercase tracking-[0.16em] text-[#B8A47A] hover:underline"
+                        : i === 2
+                          ? "text-[12px] font-serif italic text-white/80 hover:text-white"
+                          : "text-[12px] font-serif italic text-white/90 hover:text-[#C4687F]"
+                  }
+                >
+                  {s.label}
+                </Link>
+              ))}
             </div>
           </div>
 

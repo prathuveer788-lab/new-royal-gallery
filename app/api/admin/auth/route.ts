@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
-import crypto from "crypto";
-
-const ADMIN_PASSCODE = process.env.EDITORIAL_ADMIN_KEY || "GSingh1977@@";
-const ADMIN_COOKIE_NAME = "rg_admin_token";
+import {
+  ADMIN_COOKIE_NAME,
+  ADMIN_PASSCODE,
+  getExpectedAdminToken,
+} from "@/lib/admin/auth";
 
 export async function POST(req: Request) {
   try {
@@ -16,7 +17,7 @@ export async function POST(req: Request) {
       );
     }
 
-    const token = crypto.createHmac("sha256", ADMIN_PASSCODE).update("rg-editorial-admin-access").digest("hex");
+    const token = getExpectedAdminToken();
 
     const cookieStore = await cookies();
     cookieStore.set(ADMIN_COOKIE_NAME, token, {

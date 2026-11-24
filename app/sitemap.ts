@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
-import { allArticles } from '@/lib/travel-articles'
-import { allStyleArticles } from '@/lib/style-articles'
-import { getAllEditorialArticles } from '@/lib/editorial/registry'
+import { getPublishedBlogs } from '@/lib/blogs/store'
+
+export const dynamic = 'force-dynamic'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://theroyalgallerys.com'
@@ -10,41 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const absImg = (path: string) =>
     path.startsWith('http') ? path : `${baseUrl}${path.startsWith('/') ? '' : '/'}${path}`
 
-  const primaryRoutes: MetadataRoute.Sitemap = [
+  const staticRoutes: MetadataRoute.Sitemap = [
     { url: baseUrl, changeFrequency: 'weekly', priority: 1, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },
-    { url: `${baseUrl}/style`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/style/article-07/high-jewellery-gold-luxury.jpg')] },
-    { url: `${baseUrl}/travel`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg')] },
-    { url: `${baseUrl}/uk`, changeFrequency: 'weekly', priority: 0.95, lastModified: now, images: [absImg('/images/uk-heritage/balmoral-castle.webp')] },
-    { url: `${baseUrl}/travel/the-balmoral`, changeFrequency: 'monthly', priority: 0.85, lastModified: now, images: [absImg('/assets/images/balmoral/balmoral-exterior-hero.jpg')] },
-    { url: `${baseUrl}/travel/castle-hotels-scotland`, changeFrequency: 'monthly', priority: 0.85, lastModified: now, images: [absImg('/images/uk-heritage/inverlochy-castle.webp')] },
-    { url: `${baseUrl}/travel/royal-estates-scotland`, changeFrequency: 'monthly', priority: 0.85, lastModified: now, images: [absImg('/images/uk-heritage/balmoral-castle.webp')] },
-    { url: `${baseUrl}/travel/british-country-houses`, changeFrequency: 'monthly', priority: 0.85, lastModified: now, images: [absImg('/images/uk-heritage/highclere-castle.webp')] },
-    { url: `${baseUrl}/travel/balmoral-castle`, changeFrequency: 'monthly', priority: 0.85, lastModified: now, images: [absImg('/images/uk-heritage/balmoral-castle.webp')] },
-    { url: `${baseUrl}/travel/palace-of-holyroodhouse`, changeFrequency: 'monthly', priority: 0.85, lastModified: now, images: [absImg('/images/uk-heritage/holyroodhouse.webp')] },
-    { url: `${baseUrl}/travel/castle-of-mey`, changeFrequency: 'monthly', priority: 0.85, lastModified: now, images: [absImg('/images/uk-heritage/castle-of-mey.webp')] },
-    { url: `${baseUrl}/travel/highclere-castle`, changeFrequency: 'monthly', priority: 0.85, lastModified: now, images: [absImg('/images/uk-heritage/highclere-castle.webp')] },
-    { url: `${baseUrl}/travel/chatsworth-house`, changeFrequency: 'monthly', priority: 0.85, lastModified: now, images: [absImg('/images/uk-heritage/chatsworth-house.webp')] },
-    { url: `${baseUrl}/travel/blenheim-palace`, changeFrequency: 'monthly', priority: 0.85, lastModified: now, images: [absImg('/images/uk-heritage/blenheim-palace.webp')] },
-    { url: `${baseUrl}/travel/inverlochy-castle`, changeFrequency: 'monthly', priority: 0.85, lastModified: now, images: [absImg('/images/uk-heritage/inverlochy-castle.webp')] },
-    { url: `${baseUrl}/travel/inveraray-castle`, changeFrequency: 'monthly', priority: 0.85, lastModified: now, images: [absImg('/images/uk-heritage/inveraray-castle.webp')] },
-    { url: `${baseUrl}/travel/gleneagles-hotel`, changeFrequency: 'monthly', priority: 0.85, lastModified: now, images: [absImg('/images/uk-heritage/gleneagles-hotel.webp')] },
-    { url: `${baseUrl}/design`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/design/varanasi-silk-weaving-traditional-loom.jpg')] },
-    { url: `${baseUrl}/culture`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/culture/indian-royal-art-collections.jpg')] },
-    { url: `${baseUrl}/society`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/society/house-of-mewar-city-palace-udaipur.jpg')] },
-    { url: `${baseUrl}/society/portraits-of-heritage`, changeFrequency: 'weekly', priority: 0.85, lastModified: now, images: [absImg('/images/udaipur-city-view-from-hotel-balcony-rajasthan-india.jpg')] },
-    { url: `${baseUrl}/society/aaliya-sultana-babi-dinosaur-princess-balasinor`, changeFrequency: 'monthly', priority: 0.95, lastModified: now, images: [absImg('/images/society/aaliya-sultana-babi/01-hero.jpg')] },
-    { url: `${baseUrl}/society/shivanjali-kumari-dungarpur-wild-lens-of-royalty`, changeFrequency: 'monthly', priority: 0.95, lastModified: now, images: [absImg('/images/society/shivanjali-kumari-dungarpur/01-hero.jpg')] },
-    { url: `${baseUrl}/people`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/people/raghavendra-rathore-bespoke-atelier.jpg')] },
-    { url: `${baseUrl}/motoring`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/motoring/maharaja-rolls-royce-vintage-collection.jpg')] },
-    { url: `${baseUrl}/dining`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/dining/hero-palace-dining.webp')] },
-    { url: `${baseUrl}/business`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/business/mumbai-luxury-skyline-marine-drive.jpg')] },
-    { url: `${baseUrl}/royalty`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/badi-mahal-garden-palace-city-palace-udaipur-rajasthan-india.jpg')] },
-    { url: `${baseUrl}/jewellery`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/jewellery/mayfair-bond-street-jewellers.jpg')] },
-    { url: `${baseUrl}/watches`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/watches/watch-hero.jpeg')] },
-    { url: `${baseUrl}/weddings`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/weddings/article-01/royal-palace-wedding-mandap.jpg')] },
-    { url: `${baseUrl}/futures`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/futures/heritage-ai-digital-preservation.jpg')] },
-    { url: `${baseUrl}/archive`, changeFrequency: 'weekly', priority: 0.9, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },
-    { url: `${baseUrl}/journal`, changeFrequency: 'weekly', priority: 0.8, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },
+    { url: `${baseUrl}/blogs`, changeFrequency: 'daily', priority: 0.9, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },
     { url: `${baseUrl}/ecosystem`, changeFrequency: 'monthly', priority: 0.8, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },
     { url: `${baseUrl}/global-vision`, changeFrequency: 'monthly', priority: 0.7, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },
     { url: `${baseUrl}/membership`, changeFrequency: 'weekly', priority: 0.8, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },
@@ -52,29 +20,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/impact`, changeFrequency: 'monthly', priority: 0.7, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },
   ]
 
-  const travelArticleRoutes: MetadataRoute.Sitemap = allArticles.map((article) => ({
-    url: `${baseUrl}/travel/${article.slug}`,
+  const blogRoutes: MetadataRoute.Sitemap = getPublishedBlogs().map((blog) => ({
+    url: `${baseUrl}/blogs/${blog.slug}`,
     changeFrequency: 'monthly',
-    priority: 0.7,
-    lastModified: new Date(article.publishedDate),
-    images: [absImg(article.heroImage)],
+    priority: 0.8,
+    lastModified: new Date(blog.updatedAt),
+    images: blog.coverImage ? [absImg(blog.coverImage)] : undefined,
   }))
 
-  const styleArticleRoutes: MetadataRoute.Sitemap = allStyleArticles.map((article) => ({
-    url: `${baseUrl}/style/${article.slug}`,
-    changeFrequency: 'monthly',
-    priority: 0.75,
-    lastModified: new Date(article.publishedDate),
-    images: [absImg(article.heroImage)],
-  }))
-
-  const editorialArticleRoutes: MetadataRoute.Sitemap = getAllEditorialArticles().map((article) => ({
-    url: `${baseUrl}/${article.section}/${article.slug}`,
-    changeFrequency: 'monthly',
-    priority: 0.75,
-    lastModified: new Date(article.publishedDate),
-    images: [absImg(article.heroImage)],
-  }))
-
-  return [...primaryRoutes, ...travelArticleRoutes, ...styleArticleRoutes, ...editorialArticleRoutes]
+  return [...staticRoutes, ...blogRoutes]
 }

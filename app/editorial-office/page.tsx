@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import BlogManagerTab from "@/app/components/admin/BlogManagerTab";
 import type {
   SafeMember,
   PrintIssueItem,
@@ -18,7 +19,7 @@ export default function EditorialOfficeAdminPage() {
 
   // Admin Data
   const [activeTab, setActiveTab] = useState<
-    "pending" | "members" | "emails" | "submissions" | "issues" | "config"
+    "pending" | "members" | "emails" | "submissions" | "blogs" | "issues" | "config"
   >("pending");
 
   const [members, setMembers] = useState<SafeMember[]>([]);
@@ -382,6 +383,7 @@ export default function EditorialOfficeAdminPage() {
             { id: "emails", label: `Dispatched Emails (${dispatchedEmails.length})` },
             { id: "members", label: `All Members (${members.length})` },
             { id: "submissions", label: `Editorial Submissions (${submissions.length})` },
+            { id: "blogs", label: "Website Blogs" },
             { id: "issues", label: "Print Issues" },
             { id: "config", label: "Counter & Pricing" },
           ].map((tab) => (
@@ -740,6 +742,8 @@ export default function EditorialOfficeAdminPage() {
             )}
           </div>
         )}
+
+        {activeTab === "blogs" && <BlogManagerTab onFeedback={setActionMsg} />}
 
         {/* ── TAB 5: PRINT ISSUES ── */}
         {activeTab === "issues" && (

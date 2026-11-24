@@ -5,12 +5,12 @@ const blurDataURL =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGw9IiNkZGRkZGQiIGQ9Ik0wIDBoMXYxSDB6Ii8+PC9zdmc+";
 
 const featuredSections = [
-  { name: "Grand Travel", href: "/travel", desc: "Palace hotels, private estates & journeys" },
-  { name: "Royalty & Heritage", href: "/royalty", desc: "Living dynasties, lineages & custodians" },
-  { name: "Culture & Arts", href: "/culture", desc: "Museum collections, music & architecture" },
-  { name: "Haute Horlogerie", href: "/watches", desc: "Independent watchmaking & rare complications" },
-  { name: "Style & Couturiers", href: "/style", desc: "Heritage ateliers, bandhgalas & craftsmanship" },
-  { name: "The Archive", href: "/archive", desc: "Historical folios, letters & photography" },
+  { name: "The Institute", href: "/ecosystem", desc: "Five institutional houses & preservation" },
+  { name: "Global Vision", href: "/global-vision", desc: "Heritage, culture and contemporary luxury" },
+  { name: "Our Impact", href: "/impact", desc: "Preserving cultural memory & legacy" },
+  { name: "The Circle", href: "/membership", desc: "Private membership & archive access" },
+  { name: "The Edit · Blogs", href: "/blogs", desc: "Curated essays, profiles & dispatches" },
+  { name: "Member Login", href: "/member/login", desc: "Access the Private World" },
 ];
 
 export default function NotFound() {
