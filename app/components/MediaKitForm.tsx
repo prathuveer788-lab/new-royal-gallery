@@ -11,8 +11,6 @@ const C = {
   cream: "#EAE3D5",
 };
 
-const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
-
 const BRAND_CATEGORIES = [
   "Luxury Hospitality", "Fashion & Apparel", "Spirits & Beverages", "Automobile",
   "Watches & Jewellery", "Travel & Tourism", "Real Estate", "Beauty & Fragrance",
@@ -38,38 +36,27 @@ export default function MediaKitForm() {
     setError(false);
     const form = e.currentTarget;
     const formData = new FormData(form);
-    const _payload = {
-      fullName: formData.get("fullName"), workEmail: formData.get("workEmail"),
-      company: formData.get("company"), jobTitle: formData.get("jobTitle"),
-      brandCategory: formData.get("brandCategory"), phone: formData.get("phone") || null,
-      interests: formData.getAll("interests"), message: formData.get("message") || null,
-      source: "media-kit-download", submittedAt: new Date().toISOString(),
+    const payload = {
+      type: "media-kit" as const,
+      fullName: String(formData.get("fullName") || "").trim(),
+      workEmail: String(formData.get("workEmail") || "").trim(),
+      company: String(formData.get("company") || "").trim(),
+      jobTitle: String(formData.get("jobTitle") || "").trim(),
+      brandCategory: String(formData.get("brandCategory") || "").trim(),
+      phone: String(formData.get("phone") || "").trim() || undefined,
+      interests: formData.getAll("interests").map((v) => String(v)),
+      message: String(formData.get("message") || "").trim() || undefined,
+      source: "media-kit-download",
     };
-    const rawFormData = new FormData();
-    rawFormData.append("fullName", _payload.fullName as string);
-    rawFormData.append("workEmail", _payload.workEmail as string);
-    rawFormData.append("company", _payload.company as string);
-    rawFormData.append("jobTitle", _payload.jobTitle as string);
-    rawFormData.append("brandCategory", _payload.brandCategory as string);
-    rawFormData.append("phone", (_payload.phone as string) || "");
-    rawFormData.append("interests", _payload.interests.join(", "));
-    rawFormData.append("message", (_payload.message as string) || "");
-    rawFormData.append("source", "media-kit-download");
-    rawFormData.append("_subject", `Media Kit Download: ${_payload.company}`);
-    const isPlaceholder = FORM_ENDPOINT.includes("YOUR_FORM_ID");
+
     try {
-      if (!isPlaceholder) {
-        const response = await fetch(FORM_ENDPOINT, { method: "POST", headers: { Accept: "application/json" }, body: rawFormData });
-        if (!response.ok) throw new Error("Submission failed");
-      } else {
-        try {
-          const existing = JSON.parse(localStorage.getItem("rg_mediakit_requests") || "[]");
-          existing.push(_payload);
-          localStorage.setItem("rg_mediakit_requests", JSON.stringify(existing));
-        } catch {
-          // Ignore localStorage errors
-        }
-      }
+      const response = await fetch("/api/submissions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!response.ok) throw new Error("Submission failed");
+
       setSubmitted(true);
       setTimeout(() => {
         const link = document.createElement("a");
@@ -107,7 +94,7 @@ export default function MediaKitForm() {
     <form onSubmit={handleSubmit} className="max-w-xl mx-auto text-left">
       {error && (
         <div className="mb-8 p-4 text-xs font-sans text-center" style={{ border: "1px solid rgba(138,115,82,0.25)", background: "rgba(138,115,82,0.06)", color: C.textDeep }}>
-          Something went wrong. Please try again or email us directly at <a href="mailto:hey.theroyalgallerys@gmail.com" className="underline font-medium" style={{ color: C.bronze }}>hey.theroyalgallerys@gmail.com</a>
+          Something went wrong. Please try again or email us directly at <a href="mailto:hey.theroyalsgallery@gmail.com" className="underline font-medium" style={{ color: C.bronze }}>hey.theroyalsgallery@gmail.com</a>
         </div>
       )}
       <div className="space-y-5">

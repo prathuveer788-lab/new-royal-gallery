@@ -76,9 +76,6 @@ export default function MaharaniMahansarExperience() {
   const [showPlayOverlay, setShowPlayOverlay] = useState(false);
   const [progress, setProgress] = useState(0);
 
-  // Clean, URL-safe path to prevent encoding issues across browsers & CDNs
-  const videoSourceUrl = "/maharani-mahansar-intro.mp4";
-
   // Scroll-triggered IntersectionObserver Autoplay
   useEffect(() => {
     const video = videoRef.current;
@@ -186,18 +183,18 @@ export default function MaharaniMahansarExperience() {
       aria-label="Maharani Mahansar — Heritage Liqueur Brand Showcase"
     >
       {/* ── TOP EDITORIAL HEADER ─────────────────────────── */}
-      <div className="max-w-5xl mx-auto pt-20 sm:pt-28 md:pt-36 pb-12 sm:pb-16 px-6 sm:px-8 text-center">
+      <div className="max-w-5xl mx-auto pt-10 sm:pt-12 pb-6 sm:pb-8 px-6 sm:px-8 text-center">
         {/* Dual Signature Badges */}
-        <div className="flex items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-3">
           <span
-            className="text-[9px] sm:text-[10px] uppercase tracking-[0.32em] font-sans font-semibold"
+            className="text-[9px] sm:text-[10px] uppercase tracking-[0.28em] font-sans font-semibold"
             style={{ color: M.antiqueBrass }}
           >
             An Exclusive Heritage Collaboration
           </span>
           <span className="w-1.5 h-1.5 rounded-full" style={{ background: M.antiqueBrass }} />
           <span
-            className="text-[9px] sm:text-[10px] uppercase tracking-[0.28em] font-sans font-medium"
+            className="text-[9px] sm:text-[10px] uppercase tracking-[0.26em] font-sans font-medium"
             style={{ color: M.mutedText }}
           >
             The Royal Gallerys
@@ -206,14 +203,14 @@ export default function MaharaniMahansarExperience() {
 
         {/* Brand Display Name */}
         <p
-          className="text-[11px] sm:text-xs md:text-[13px] uppercase tracking-[0.45em] font-sans font-medium mb-3 sm:mb-4"
+          className="text-[10px] sm:text-xs uppercase tracking-[0.38em] font-sans font-medium mb-2"
           style={{ color: M.champagne }}
         >
           Heritage Liqueur of Rajasthan
         </p>
 
         <h2
-          className="text-[clamp(2.4rem,5.5vw,5.2rem)] font-serif leading-[1.04] tracking-tight mb-6 sm:mb-8 font-normal"
+          className="text-[clamp(1.85rem,4vw,3.4rem)] font-serif leading-[1.04] tracking-tight mb-2.5 font-normal"
           style={{ color: M.ivory }}
         >
           MAHARANI MAHANSAR
@@ -221,7 +218,7 @@ export default function MaharaniMahansarExperience() {
 
         {/* Editorial Sub-line */}
         <p
-          className="font-playfair italic text-lg sm:text-2xl md:text-3xl max-w-2xl mx-auto mb-8 sm:mb-10 font-normal leading-snug"
+          className="font-playfair italic text-base sm:text-xl max-w-2xl mx-auto mb-4 font-normal leading-snug"
           style={{ color: M.champagne }}
         >
           &ldquo;The Heritage of Mahansar. The Spirit of Rajasthan.&rdquo;
@@ -238,176 +235,159 @@ export default function MaharaniMahansarExperience() {
         />
       </div>
 
-      {/* ── CINEMATIC BRAND FILM PRESENTATION ──────────────── */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 pb-16 sm:pb-24">
-        {/* Frame with subtle double-border luxury matting */}
-        <div
-          className="relative p-1.5 sm:p-2.5 rounded-sm"
-          style={{
-            background: "linear-gradient(145deg, rgba(196,154,69,0.3) 0%, rgba(42,8,12,0.6) 50%, rgba(196,154,69,0.15) 100%)",
-            boxShadow: "0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(42, 8, 12, 0.4)",
-          }}
-        >
-          <div
-            className="relative w-full overflow-hidden bg-black"
-            style={{
-              aspectRatio: "16 / 9",
-            }}
-          >
-            {/* The Master Video Asset — exact requested full Instagram reel film in highest quality */}
-            <video
-              ref={videoRef}
-              src="/maharani-mahansar-reel.mp4"
-              className="absolute inset-0 w-full h-full object-contain cursor-pointer"
-              playsInline
-              muted
-              autoPlay
-              loop
-              preload="auto"
-              onClick={togglePlay}
-              onPlay={() => {
-                setIsPlaying(true);
-                setShowPlayOverlay(false);
-              }}
-              onPause={() => {
-                setIsPlaying(false);
-                setShowPlayOverlay(true);
-              }}
-              onEnded={handleEnded}
-            >
-              Your browser does not support HTML5 video.
-            </video>
-
-            {/* Play Overlay (when paused or blocked by browser policy) */}
-            {showPlayOverlay && (
-              <button
-                onClick={togglePlay}
-                className="absolute inset-0 flex flex-col items-center justify-center z-20 cursor-pointer transition-colors duration-500 group bg-black/40 hover:bg-black/25"
-                aria-label="Play Maharani Mahansar Film"
-              >
-                <div className="transform group-hover:scale-105 transition-transform duration-500 drop-shadow-2xl">
-                  <PlayGlyph />
-                </div>
-                <span
-                  className="mt-4 text-[10px] uppercase tracking-[0.28em] font-sans font-medium text-[#F6F1EA]/90 group-hover:text-[#F6F1EA]"
-                >
-                  Watch the Heritage Film
-                </span>
-              </button>
-            )}
-
-            {/* Subtle Controls Bar */}
+      {/* ── SIDE-BY-SIDE FILM & EDITORIAL NARRATIVE (Compact Single-Screen Fit) ── */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 pb-12 sm:pb-14">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+          {/* Left: Cinematic Film Frame */}
+          <div className="lg:col-span-7">
             <div
-              className="absolute bottom-0 left-0 right-0 z-30 flex items-center gap-3 px-4 sm:px-6 py-3.5"
+              className="relative p-1.5 sm:p-2 rounded-sm"
               style={{
-                background: "linear-gradient(to top, rgba(14, 4, 6, 0.85) 0%, rgba(14, 4, 6, 0) 100%)",
+                background: "linear-gradient(145deg, rgba(196,154,69,0.3) 0%, rgba(42,8,12,0.6) 50%, rgba(196,154,69,0.15) 100%)",
+                boxShadow: "0 20px 50px -15px rgba(0, 0, 0, 0.8), 0 0 32px rgba(42, 8, 12, 0.4)",
               }}
             >
-              {/* Play/Pause Button */}
-              <button
-                onClick={togglePlay}
-                className="flex items-center justify-center w-8 h-8 rounded-full text-[#F6F1EA] hover:text-[#C49A45] transition-colors cursor-pointer"
-                aria-label={isPlaying ? "Pause video" : "Play video"}
-              >
-                {isPlaying ? <PauseIcon /> : <SmallPlayIcon />}
-              </button>
-
-              {/* Timeline Progress */}
               <div
-                className="flex-1 h-[2px] rounded-full overflow-hidden"
-                style={{ background: "rgba(196, 154, 69, 0.25)" }}
+                className="relative w-full overflow-hidden bg-black"
+                style={{
+                  aspectRatio: "16 / 9",
+                }}
               >
-                <div
-                  className="h-full transition-[width] duration-200 ease-linear"
-                  style={{
-                    width: `${progress}%`,
-                    background: `linear-gradient(to right, ${M.antiqueBrass}, ${M.champagne})`,
+                {/* The Master Video Asset — exact requested full Instagram reel film in highest quality */}
+                <video
+                  ref={videoRef}
+                  src="/maharani-mahansar-reel.mp4"
+                  className="absolute inset-0 w-full h-full object-contain cursor-pointer"
+                  playsInline
+                  muted
+                  autoPlay
+                  loop
+                  preload="auto"
+                  onClick={togglePlay}
+                  onPlay={() => {
+                    setIsPlaying(true);
+                    setShowPlayOverlay(false);
                   }}
-                />
-              </div>
+                  onPause={() => {
+                    setIsPlaying(false);
+                    setShowPlayOverlay(true);
+                  }}
+                  onEnded={handleEnded}
+                >
+                  Your browser does not support HTML5 video.
+                </video>
 
-              {/* Audio Toggle (Preserving authentic soundtrack) */}
-              <button
-                onClick={toggleMute}
-                className="flex items-center justify-center w-8 h-8 rounded-full text-[#F6F1EA] hover:text-[#C49A45] transition-colors cursor-pointer"
-                aria-label={isMuted ? "Unmute audio" : "Mute audio"}
-              >
-                {isMuted ? <VolumeOffIcon /> : <VolumeOnIcon />}
-              </button>
+                {/* Play Overlay (when paused or blocked by browser policy) */}
+                {showPlayOverlay && (
+                  <button
+                    onClick={togglePlay}
+                    className="absolute inset-0 flex flex-col items-center justify-center z-20 cursor-pointer transition-colors duration-500 group bg-black/40 hover:bg-black/25"
+                    aria-label="Play Maharani Mahansar Film"
+                  >
+                    <div className="transform group-hover:scale-105 transition-transform duration-500 drop-shadow-2xl">
+                      <PlayGlyph />
+                    </div>
+                    <span
+                      className="mt-4 text-[10px] uppercase tracking-[0.28em] font-sans font-medium text-[#F6F1EA]/90 group-hover:text-[#F6F1EA]"
+                    >
+                      Watch the Heritage Film
+                    </span>
+                  </button>
+                )}
+
+                {/* Subtle Controls Bar */}
+                <div
+                  className="absolute bottom-0 left-0 right-0 z-30 flex items-center gap-3 px-4 sm:px-5 py-2.5"
+                  style={{
+                    background: "linear-gradient(to top, rgba(14, 4, 6, 0.85) 0%, rgba(14, 4, 6, 0) 100%)",
+                  }}
+                >
+                  {/* Play/Pause Button */}
+                  <button
+                    onClick={togglePlay}
+                    className="flex items-center justify-center w-8 h-8 rounded-full text-[#F6F1EA] hover:text-[#C49A45] transition-colors cursor-pointer"
+                    aria-label={isPlaying ? "Pause video" : "Play video"}
+                  >
+                    {isPlaying ? <PauseIcon /> : <SmallPlayIcon />}
+                  </button>
+
+                  {/* Timeline Progress */}
+                  <div
+                    className="flex-1 h-[2px] rounded-full overflow-hidden"
+                    style={{ background: "rgba(196, 154, 69, 0.25)" }}
+                  >
+                    <div
+                      className="h-full transition-[width] duration-200 ease-linear"
+                      style={{
+                        width: `${progress}%`,
+                        background: `linear-gradient(to right, ${M.antiqueBrass}, ${M.champagne})`,
+                      }}
+                    />
+                  </div>
+
+                  {/* Audio Toggle (Preserving authentic soundtrack) */}
+                  <button
+                    onClick={toggleMute}
+                    className="flex items-center justify-center w-8 h-8 rounded-full text-[#F6F1EA] hover:text-[#C49A45] transition-colors cursor-pointer"
+                    aria-label={isMuted ? "Unmute audio" : "Mute audio"}
+                  >
+                    {isMuted ? <VolumeOffIcon /> : <VolumeOnIcon />}
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* ── PURE EDITORIAL STORY NARRATIVE (No Triptych/Tables) ── */}
-      <div className="max-w-5xl mx-auto px-6 sm:px-8 md:px-12 pb-24 sm:pb-32">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-          {/* Left Column: Heading and Context */}
+          {/* Right: Editorial Narrative */}
           <div className="lg:col-span-5 space-y-4">
-            <span
-              className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] font-sans font-semibold block"
-              style={{ color: M.antiqueBrass }}
-            >
-              The Cultural Narrative
-            </span>
+            <div>
+              <span
+                className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] font-sans font-semibold block mb-1.5"
+                style={{ color: M.antiqueBrass }}
+              >
+                The Cultural Narrative
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-serif leading-[1.12] text-[#F6F1EA] font-normal">
+                A Legacy Rooted in Rajasthan
+              </h3>
+              <p className="text-[11px] font-sans tracking-wide text-[#A39990] uppercase mt-1.5">
+                Shekhawati Region · Living Tradition · Crafted Lineage
+              </p>
+            </div>
 
-            <h3
-              className="text-2xl sm:text-3xl md:text-4xl font-serif leading-[1.12] text-[#F6F1EA] font-normal"
-            >
-              A Legacy Rooted in Rajasthan
-            </h3>
-
-            <p className="text-xs sm:text-sm font-sans tracking-wide text-[#A39990] uppercase pt-2">
-              Shekhawati Region · Living Tradition · Crafted Lineage
-            </p>
-          </div>
-
-          {/* Right Column: Editorial Essay */}
-          <div className="lg:col-span-7 space-y-6">
             <p
-              className="text-base sm:text-lg font-serif leading-relaxed font-normal"
+              className="text-sm sm:text-base font-serif leading-relaxed font-normal"
               style={{ color: M.parchment }}
             >
               Set within Rajasthan&apos;s historic Shekhawati region, Mahansar holds a distinctive
               cultural landscape shaped by monumental havelis, frescoed chambers, and generations of
-              refinement. Here, heritage is not a static museum exhibit, but a living sensory tradition
-              handed down through time.
+              refinement — a living sensory tradition handed down through time.
             </p>
 
             <p
-              className="text-sm sm:text-base font-sans font-light leading-relaxed"
+              className="text-xs sm:text-sm font-sans font-light leading-relaxed"
               style={{ color: M.mutedText }}
             >
               Maharani Mahansar brings the royal liqueur craftsmanship of the desert court into contemporary
-              focus. Formulated with botanicals, traditional distillation methods, and an uncompromising
-              reverence for local terroir, each bottle reflects the regal hospitalities of Rajasthan&apos;s
-              storied past.
-            </p>
-
-            <p
-              className="text-sm sm:text-base font-sans font-light leading-relaxed"
-              style={{ color: M.mutedText }}
-            >
-              Through the editorial lens of <em className="text-[#F6F1EA] font-serif not-italic">The Royal Gallerys</em>,
-              we present this collaboration as an exploration of place, prestige, and the enduring authority
-              of authentic regional luxury.
+              focus, formulated with botanicals and traditional distillation reflecting the regal
+              hospitalities of Rajasthan&apos;s storied past. Through the lens of{" "}
+              <em className="text-[#F6F1EA] font-serif not-italic">The Royal Gallerys</em>, this collaboration
+              celebrates place, prestige, and authentic regional luxury.
             </p>
 
             {/* Official External Link & Signature */}
-            <div className="pt-6 border-t border-[rgba(196,154,69,0.2)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="pt-4 border-t border-[rgba(196,154,69,0.2)] flex flex-col sm:flex-row lg:flex-col xl:flex-row sm:items-center lg:items-start xl:items-center justify-between gap-2.5">
               <a
                 href="https://maharanimahansar.in/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] uppercase tracking-[0.24em] font-sans font-semibold transition-colors duration-300 hover:underline"
+                className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] uppercase tracking-[0.22em] font-sans font-semibold transition-colors duration-300 hover:underline"
                 style={{ color: M.antiqueBrass }}
               >
                 Discover the Maison · maharanimahansar.in →
               </a>
 
-              <span
-                className="text-[9px] uppercase tracking-[0.2em] font-sans font-light text-[#A39990]"
-              >
+              <span className="text-[9px] uppercase tracking-[0.2em] font-sans font-light text-[#A39990]">
                 Editorial Feature · Autumn 2026
               </span>
             </div>

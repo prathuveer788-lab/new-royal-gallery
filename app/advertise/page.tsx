@@ -111,7 +111,7 @@ export default function AdvertisePage() {
               Download Media Kit
             </a>
             <a
-              href="mailto:hey.theroyalgallerys@gmail.com"
+              href="mailto:hey.theroyalsgallery@gmail.com"
               className="inline-block px-10 py-4 transition-colors text-xs sm:text-sm uppercase tracking-[0.22em] font-medium font-sans"
               style={{ color: C.ivory, border: `1px solid ${C.bronze}` }} >
               Contact Partnerships
@@ -247,7 +247,7 @@ export default function AdvertisePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:hey.theroyalgallerys@gmail.com?subject=Partnership%20Enquiry"
+              href="mailto:hey.theroyalsgallery@gmail.com?subject=Partnership%20Enquiry"
               className="inline-block px-10 py-4 transition-colors text-xs uppercase tracking-[0.22em] font-medium font-sans"
               style={{ background: C.obsidian, color: C.ivory, border: `1px solid ${C.obsidian}` }} >
               Email Partnerships

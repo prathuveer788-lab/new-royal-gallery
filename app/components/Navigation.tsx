@@ -249,6 +249,18 @@ export default function Navigation() {
             </div>
           </div>
           <Link
+            href="/#the-royal-encounters"
+            className="px-1.5 xl:px-2.5 py-2 text-[13px] xl:text-[14px] tracking-[0.14em] uppercase transition-colors duration-300 whitespace-nowrap font-sans"
+            style={{
+              color: navLinkColor,
+              fontWeight: 400,
+            }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = hoverTextColor; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = navLinkColor; }}
+          >
+            Royal Encounters
+          </Link>
+          <Link
             href="/membership"
             className="ml-2 px-3 xl:px-4 py-2 text-[11px] xl:text-[12px] uppercase tracking-[0.16em] transition-all duration-500 font-sans font-medium"
             style={{
@@ -391,7 +403,14 @@ export default function Navigation() {
 
           {/* Utility & Membership */}
           <div className="flex flex-col gap-3 pt-2 border-t border-white/10">
-            <div className="flex items-center justify-between text-xs tracking-[0.16em] uppercase text-[#9B9589] px-1">
+            <div className="flex flex-wrap items-center justify-between gap-2 text-xs tracking-[0.16em] uppercase text-[#9B9589] px-1">
+              <Link
+                href="/#the-royal-encounters"
+                onClick={() => setIsOpen(false)}
+                className="text-[#B8A47A] hover:text-[#F4F0E7] transition-colors py-1"
+              >
+                Royal Encounters
+              </Link>
               <Link
                 href="/blogs"
                 onClick={() => setIsOpen(false)}
@@ -400,18 +419,18 @@ export default function Navigation() {
                 Blogs
               </Link>
               <Link
-                href="/about"
+                href="/global-vision"
                 onClick={() => setIsOpen(false)}
                 className="hover:text-[#B8A47A] transition-colors py-1"
               >
-                About
+                Vision
               </Link>
               <Link
-                href="/contact"
+                href="/advertise"
                 onClick={() => setIsOpen(false)}
                 className="hover:text-[#B8A47A] transition-colors py-1"
               >
-                Contact
+                Advertise
               </Link>
             </div>
 

@@ -21,7 +21,7 @@ const C = {
 export function BlogCard({ blog }: { blog: BlogPost }) {
   return (
     <Link href={`/blogs/${blog.slug}`} className="group flex flex-col">
-      <div className="relative aspect-[3/4] overflow-hidden mb-4 bg-[#1C1B18]">
+      <div className="relative aspect-[4/3] overflow-hidden mb-3 bg-[#1C1B18]">
         <img
           src={blog.coverImage}
           alt={blog.title}
@@ -36,7 +36,7 @@ export function BlogCard({ blog }: { blog: BlogPost }) {
         {blog.category} · {blog.subcategory}
       </span>
       <h3
-        className="text-xl sm:text-2xl font-serif mt-2 mb-1.5 leading-snug transition-colors duration-300 group-hover:text-[#8A7352]"
+        className="text-lg sm:text-xl font-serif mt-1.5 mb-1 leading-snug transition-colors duration-300 group-hover:text-[#8A7352]"
         style={{ color: C.textDeep, fontWeight: 400 }}
       >
         {blog.title}
@@ -95,25 +95,25 @@ export default function CuratedBlogsSection({
   return (
     <section
       id="the-edit"
-      className="py-24 sm:py-32 md:py-40 px-6 sm:px-8 md:px-12 lg:px-16"
+      className="py-12 sm:py-16 md:py-20 px-6 sm:px-8 md:px-12 lg:px-16 scroll-mt-16"
       style={{ background: variant === "home" ? C.cream : C.ivory }}
     >
       <div className="max-w-7xl mx-auto">
-        {/* Header — matches 03 — THE EDIT / A Curated Selection */}
-        <div className="text-center mb-12 sm:mb-16">
+        {/* Header — matches 05 — THE EDIT / A Curated Selection */}
+        <div className="text-center mb-7 sm:mb-9">
           <span
-            className="block text-[10px] sm:text-[11px] uppercase tracking-[0.22em] font-medium font-sans mb-5 sm:mb-6"
+            className="block text-[10px] sm:text-[11px] uppercase tracking-[0.22em] font-medium font-sans mb-2.5 sm:mb-3"
             style={{ color: C.bronze }}
           >
-            {variant === "home" ? "03 — The Edit" : "Editorial Archive · Blogs"}
+            {variant === "home" ? "05 — The Edit" : "Editorial Archive · Blogs"}
           </span>
           <h2
-            className="text-[clamp(2rem,4.5vw,4.2rem)] font-serif leading-[1.08] tracking-tight"
+            className="text-[clamp(1.75rem,3.6vw,3.1rem)] font-serif leading-[1.08] tracking-tight"
             style={{ color: C.textDeep, fontWeight: 400 }}
           >
             {variant === "home" ? "A Curated Selection" : "All Editorial Blogs"}
           </h2>
-          <div className="mt-8 sm:mt-9">
+          <div className="mt-4 sm:mt-5">
             <hr
               className="border-0 mx-auto"
               style={{
@@ -126,7 +126,7 @@ export default function CuratedBlogsSection({
         </div>
 
         {/* Category Filter Strip */}
-        <div className="mb-10 sm:mb-14 space-y-4">
+        <div className="mb-7 sm:mb-9 space-y-3">
           {variant === "archive" && (
             <div className="max-w-md mx-auto mb-6">
               <input
@@ -216,7 +216,7 @@ export default function CuratedBlogsSection({
             )}
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
             {filteredBlogs.map((blog) => (
               <BlogCard key={blog.id} blog={blog} />
             ))}
@@ -225,7 +225,7 @@ export default function CuratedBlogsSection({
 
         {/* Footer CTA */}
         {variant === "home" && (
-          <div className="mt-14 sm:mt-16 text-center">
+          <div className="mt-8 sm:mt-10 text-center">
             <Link
               href="/blogs"
               className="inline-block text-[11px] sm:text-xs uppercase tracking-[0.22em] font-medium font-sans transition-all duration-500 px-8 sm:px-10 py-3"

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import IntroVideo from "./components/IntroVideo";
 import MaharaniMahansarExperience from "./components/MaharaniMahansarExperience";
 import CuratedBlogsSection from "./components/CuratedBlogsSection";
+import RoyalEncountersSection from "./components/RoyalEncountersSection";
 import { getHomeCuratedBlogs } from "@/lib/blogs/store";
 
 export const dynamic = "force-dynamic";
@@ -65,12 +66,12 @@ export default async function HomePage() {
   const curatedBlogs = await getHomeCuratedBlogs();
 
   return (
-    <div style={{ background: C.ivory }}>
+    <div style={{ background: C.ivory }} className="overflow-x-hidden">
 
       {/* ════════════════════════════════════════════════
           01 — HERO / MAGAZINE COVER
           ════════════════════════════════════════════════ */}
-      <section className="relative min-h-screen flex items-center justify-center">
+      <section className="relative min-h-[calc(100svh)] flex items-center justify-center py-16 sm:py-20">
         <div className="absolute inset-0">
           <Image
             src="/images/hero/jaipur-city-palace-grand-facade.jpg"
@@ -87,46 +88,46 @@ export default async function HomePage() {
 
         {/* Decorative top accent */}
         <div
-          className="absolute top-14 sm:top-18 left-1/2 -translate-x-1/2"
+          className="absolute top-12 sm:top-16 left-1/2 -translate-x-1/2"
           style={{ width: "clamp(40px,8vw,80px)", height: 1, background: "rgba(184,164,122,0.5)" }}
         />
 
-        <div className="relative z-10 w-full max-w-4xl mx-auto px-6 sm:px-8 md:px-12 pt-20 pb-16 text-center">
+        <div className="relative z-10 w-full max-w-4xl mx-auto px-6 sm:px-8 md:px-12 pt-8 pb-10 text-center">
           {/* Volume */}
-          <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.48em] font-medium font-sans mb-10 sm:mb-12" style={{ color: C.champagne, opacity: 0.75 }}>
+          <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.44em] font-medium font-sans mb-5 sm:mb-7" style={{ color: C.champagne, opacity: 0.75 }}>
             Volume I · Summer 2026
           </p>
 
           {/* Masthead */}
-          <p className="text-[clamp(10px,1.1vw,12px)] uppercase tracking-[0.32em] font-light font-sans mb-6 sm:mb-8" style={{ color: C.bronze }}>
+          <p className="text-[clamp(10px,1.1vw,12px)] uppercase tracking-[0.32em] font-light font-sans mb-4 sm:mb-5" style={{ color: C.bronze }}>
             The Royal Gallerys
           </p>
 
           {/* Main cover line */}
-          <h1 className="text-[clamp(2.2rem,4.8vw,4.6rem)] font-serif leading-[1.05] mb-8 sm:mb-10" style={{ color: C.ivory, fontWeight: 400 }}>
+          <h1 className="text-[clamp(2rem,4.4vw,4rem)] font-serif leading-[1.06] mb-5 sm:mb-6" style={{ color: C.ivory, fontWeight: 400 }}>
             The International<br />
             Magazine of<br />
             Heritage &amp; Luxury
           </h1>
 
           {/* Deck */}
-          <p className="text-[clamp(11px,1.3vw,14px)] uppercase tracking-[0.26em] font-light font-sans mb-14 sm:mb-16" style={{ color: C.textStone }}>
+          <p className="text-[clamp(10px,1.2vw,13px)] uppercase tracking-[0.26em] font-light font-sans mb-8 sm:mb-10" style={{ color: C.textStone }}>
             Heritage · Culture · Luxury · Influence
           </p>
 
           {/* CTA */}
           <a
             href="#the-magazine"
-            className="inline-block text-[11px] sm:text-xs uppercase tracking-[0.28em] font-medium font-sans px-10 sm:px-14 py-3.5 sm:py-4 transition-all duration-700"
+            className="inline-block text-[11px] sm:text-xs uppercase tracking-[0.28em] font-medium font-sans px-8 sm:px-12 py-3 sm:py-3.5 transition-all duration-700"
             style={{ color: C.champagne, border: "1px solid rgba(184,164,122,0.35)" }} >
             Enter the Magazine →
           </a>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" style={{ color: C.ivory, opacity: 0.18 }}>
+        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5" style={{ color: C.ivory, opacity: 0.2 }}>
           <span className="text-[8px] uppercase tracking-[0.32em] font-sans">Scroll</span>
-          <div className="w-px h-12" style={{ background: `linear-gradient(to bottom, ${C.ivory}, transparent)` }} />
+          <div className="w-px h-8" style={{ background: `linear-gradient(to bottom, ${C.ivory}, transparent)` }} />
         </div>
       </section>
 
@@ -143,26 +144,26 @@ export default async function HomePage() {
       {/* ════════════════════════════════════════════════
           02 — THE MAGAZINE
           ════════════════════════════════════════════════ */}
-      <section id="the-magazine" className="py-24 sm:py-32 md:py-40 px-6 sm:px-8 md:px-12 lg:px-16" style={{ background: C.ivory }}>
+      <section id="the-magazine" className="py-16 sm:py-20 md:py-24 px-6 sm:px-8 md:px-12 lg:px-16 scroll-mt-16" style={{ background: C.ivory }}>
         <div className="max-w-4xl mx-auto text-center">
           <SectionNumber n="02 — The Magazine" />
 
-          <h2 className="text-[clamp(2rem,4.5vw,4.2rem)] font-serif leading-[1.08] tracking-tight mb-8 sm:mb-10" style={{ color: C.textDeep, fontWeight: 400 }}>
+          <h2 className="text-[clamp(1.85rem,4vw,3.5rem)] font-serif leading-[1.08] tracking-tight mb-6 sm:mb-7" style={{ color: C.textDeep, fontWeight: 400 }}>
             A World of Heritage.<br />
             <span style={{ color: C.bronze }}>A New Language of Luxury.</span>
           </h2>
 
-          <div className="mb-10 sm:mb-12">
+          <div className="mb-6 sm:mb-8">
             <EditorialRule short />
           </div>
 
-          <p className="text-base sm:text-lg md:text-xl font-sans leading-relaxed max-w-3xl mx-auto mb-12 sm:mb-14" style={{ color: C.textStone, fontWeight: 400 }}>
+          <p className="text-sm sm:text-base md:text-lg font-sans leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-10" style={{ color: C.textStone, fontWeight: 400 }}>
             THE ROYAL GALLERYS is an international magazine dedicated to the worlds of heritage, culture and contemporary luxury. From royal families and historic estates to fashion, jewellery, architecture, travel, art, hospitality and design — we document the people and places carrying extraordinary traditions into the modern world.
           </p>
 
           <Link
             href="/global-vision"
-            className="inline-block text-[11px] sm:text-xs uppercase tracking-[0.22em] font-medium font-sans px-10 sm:px-12 py-3.5 transition-all duration-500"
+            className="inline-block text-[11px] sm:text-xs uppercase tracking-[0.22em] font-medium font-sans px-9 sm:px-12 py-3.5 transition-all duration-500"
             style={{ color: C.ivory, background: C.obsidian }} >
             Read Our Story →
           </Link>
@@ -170,7 +171,12 @@ export default async function HomePage() {
       </section>
 
       {/* ════════════════════════════════════════════════
-          03 — THE EDIT / BLOGS
+          03 — THE ROYAL ENCOUNTERS (INAUGURAL EDITION)
+          ════════════════════════════════════════════════ */}
+      <RoyalEncountersSection />
+
+      {/* ════════════════════════════════════════════════
+          05 — THE EDIT / BLOGS
           ════════════════════════════════════════════════ */}
       <CuratedBlogsSection blogs={curatedBlogs} variant="home" />
 

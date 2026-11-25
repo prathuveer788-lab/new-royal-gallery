@@ -13,8 +13,6 @@ const C = {
   cream: "#EAE3D5",
 };
 
-const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
-
 export default function PartnershipCTA() {
   const [showForm, setShowForm] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -28,19 +26,35 @@ export default function PartnershipCTA() {
     if (!name.trim() || !email.trim()) return;
     setSubmitting(true);
     setError(false);
-    const formData = new FormData();
-    formData.append("fullName", name.trim());
-    formData.append("email", email.trim());
-    formData.append("source", "partnership-cta");
-    formData.append("_subject", `Partnership Enquiry: ${name.trim()}`);
     try {
-      const response = await fetch(FORM_ENDPOINT, { method: "POST", headers: { Accept: "application/json" }, body: formData });
-      if (response.ok) { setSubmitted(true); } else { setError(true); }
-    } catch { setError(true); }
-    finally { setSubmitting(false); }
+      const response = await fetch("/api/submissions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "partnership",
+          fullName: name.trim(),
+          email: email.trim(),
+          source: "partnership-cta",
+        }),
+      });
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
-  const handleReset = () => { setShowForm(false); setSubmitted(false); setName(""); setEmail(""); };
+  const handleReset = () => {
+    setShowForm(false);
+    setSubmitted(false);
+    setName("");
+    setEmail("");
+  };
 
   return (
     <section className="py-24 sm:py-32 md:py-40 px-6 sm:px-8 md:px-12 lg:px-16" style={{ background: C.cream }}>
@@ -82,7 +96,7 @@ export default function PartnershipCTA() {
 
             {error && (
               <div className="max-w-md mx-auto mb-6 p-3 text-xs font-sans text-center" style={{ border: "1px solid rgba(138,115,82,0.25)", background: "rgba(138,115,82,0.06)", color: C.textDeep }}>
-                Something went wrong. Please email us directly at <a href="mailto:hey.theroyalgallerys@gmail.com" className="underline font-medium" style={{ color: C.bronze }}>hey.theroyalgallerys@gmail.com</a>
+                Something went wrong. Please email us directly at <a href="mailto:hey.theroyalsgallery@gmail.com" className="underline font-medium" style={{ color: C.bronze }}>hey.theroyalsgallery@gmail.com</a>
               </div>
             )}
 
@@ -95,20 +109,20 @@ export default function PartnershipCTA() {
                 />
               </div>
               <div>
-                <label htmlFor="partner-email" className="block text-[10px] sm:text-[11px] uppercase tracking-[0.2em] font-medium font-sans mb-2" style={{ color: C.textStone }}>Email Address</label>
-                <input id="partner-email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="your@email.com"
+                <label htmlFor="partner-email" className="block text-[10px] sm:text-[11px] uppercase tracking-[0.2em] font-medium font-sans mb-2" style={{ color: C.textStone }}>Work Email</label>
+                <input id="partner-email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@company.com"
                   className="w-full px-4 py-3.5 text-sm font-sans transition-all focus:outline-none"
                   style={{ background: C.ivory, border: `1px solid rgba(138,115,82,0.25)`, color: C.textDeep, fontWeight: 400 }}
                 />
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <button type="submit" disabled={submitting}
-                  className="flex-1 px-8 py-3.5 disabled:cursor-not-allowed transition-all duration-500 text-xs sm:text-sm uppercase tracking-[0.2em] font-medium font-sans cursor-pointer"
+                  className="flex-1 px-8 py-4 text-xs sm:text-sm uppercase tracking-[0.2em] font-medium font-sans cursor-pointer transition-all duration-500 disabled:cursor-not-allowed"
                   style={{ color: C.ivory, background: C.obsidian, border: "none", opacity: submitting ? 0.5 : 1 }}
                 >{submitting ? "Sending…" : "Submit Enquiry"}</button>
-                <button type="button" onClick={handleReset} disabled={submitting}
-                  className="flex-1 px-8 py-3.5 disabled:opacity-30 transition-all duration-500 text-xs sm:text-sm uppercase tracking-[0.16em] font-medium font-sans cursor-pointer"
-                  style={{ color: C.textStone, border: `1px solid rgba(138,115,82,0.25)`, background: "transparent" }}
+                <button type="button" onClick={handleReset}
+                  className="px-6 py-4 text-xs uppercase tracking-[0.2em] font-medium font-sans cursor-pointer transition-all duration-500"
+                  style={{ color: C.textDeep, border: `1px solid rgba(138,115,82,0.35)`, background: "transparent" }}
                 >Cancel</button>
               </div>
             </form>

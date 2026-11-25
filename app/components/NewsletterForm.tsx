@@ -12,8 +12,6 @@ const C = {
   cream: "#EAE3D5",
 };
 
-const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
-
 interface NewsletterFormProps {
   variant?: "dark" | "light";
   source?: string;
@@ -33,22 +31,17 @@ export default function NewsletterForm({ variant = "dark", source = "newsletter"
       return;
     }
     setStatus("submitting");
-    const formData = new FormData();
-    formData.append("email", cleanEmail);
-    formData.append("source", source);
-    formData.append("_subject", `New Dispatch Subscriber: ${cleanEmail}`);
-    const isPlaceholder = FORM_ENDPOINT.includes("YOUR_FORM_ID");
     try {
-      if (!isPlaceholder) {
-        const response = await fetch(FORM_ENDPOINT, { method: "POST", headers: { Accept: "application/json" }, body: formData });
-        if (!response.ok) throw new Error("Submission failed");
-      } else {
-        try {
-          const subs = JSON.parse(localStorage.getItem("rg_subscribers") || "[]");
-          subs.push({ email: cleanEmail, source, at: new Date().toISOString() });
-          localStorage.setItem("rg_subscribers", JSON.stringify(subs));
-        } catch {}
-      }
+      const response = await fetch("/api/submissions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "newsletter",
+          email: cleanEmail,
+          source,
+        }),
+      });
+      if (!response.ok) throw new Error("Submission failed");
       setStatus("success");
       setEmail("");
     } catch {
@@ -70,7 +63,7 @@ export default function NewsletterForm({ variant = "dark", source = "newsletter"
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+    <form onSubmit={handleSubmit} className="relative flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
       <input
         type="email" required value={email} onChange={(e) => setEmail(e.target.value)}
         placeholder="Your email address" disabled={status === "submitting"}

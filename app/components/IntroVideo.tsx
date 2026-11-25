@@ -75,7 +75,6 @@ export default function IntroVideo() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [hasError, setHasError] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
   const [showPlayButton, setShowPlayButton] = useState(false);
   const [progress, setProgress] = useState(0);
 
@@ -165,10 +164,6 @@ export default function IntroVideo() {
     setIsMuted(video.muted);
   }, []);
 
-  const handleLoaded = useCallback(() => {
-    setIsLoaded(true);
-  }, []);
-
   const handleError = useCallback(() => {
     setHasError(true);
   }, []);
@@ -181,26 +176,26 @@ export default function IntroVideo() {
 
   return (
     <section
-      className="relative w-full"
+      className="relative w-full overflow-hidden"
       style={{ background: C.obsidian }}
     >
       {/* ── Top editorial accent ────────────────────────── */}
-      <div className="relative z-10 text-center pt-16 sm:pt-20 md:pt-24 pb-8 sm:pb-10 md:pb-12 px-6">
+      <div className="relative z-10 text-center pt-10 sm:pt-12 pb-5 sm:pb-6 px-6">
         <p
-          className="text-[10px] sm:text-[11px] uppercase tracking-[0.32em] font-medium font-sans mb-4"
+          className="text-[10px] sm:text-[11px] uppercase tracking-[0.32em] font-medium font-sans mb-2.5"
           style={{ color: C.bronze }}
         >
           The Royal Gallerys Presents
         </p>
         <h2
-          className="text-[clamp(1.1rem,2.5vw,1.6rem)] font-serif leading-[1.3] tracking-wide"
+          className="text-[clamp(1.1rem,2.3vw,1.5rem)] font-serif leading-[1.25] tracking-wide"
           style={{ color: C.ivory, fontWeight: 400 }}
         >
           The International Magazine of Heritage &amp; Luxury
         </h2>
         {/* Decorative rule */}
         <div
-          className="mx-auto mt-6 sm:mt-8"
+          className="mx-auto mt-4"
           style={{
             width: "clamp(40px,8vw,80px)",
             height: 1,
@@ -210,7 +205,7 @@ export default function IntroVideo() {
       </div>
 
       {/* ── Video container ─────────────────────────────── */}
-      <div className="relative w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 pb-16 sm:pb-20 md:pb-24">
+      <div className="relative w-full mx-auto px-4 sm:px-6 md:px-8 pb-10 sm:pb-12" style={{ maxWidth: "min(1080px, calc(66vh * 16 / 9 + 4rem))" }}>
         {/* Aspect-ratio wrapper — prevents layout shift */}
         <div
           className="relative w-full overflow-hidden"
