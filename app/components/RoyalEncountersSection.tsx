@@ -660,11 +660,11 @@ export default function RoyalEncountersSection() {
         <div className="max-w-6xl mx-auto space-y-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-4">
-              <div className="p-2.5 border border-[#B8A47A]/50 rounded-t-[48%]">
+              <div className="p-3 border border-[#B8A47A]/45 bg-[#14090B]/35">
                 <PlateButton
                   plateId="kesar-bhawan"
                   onOpen={openPlate}
-                  imgClassName="w-full h-auto max-h-[48vh] object-contain mx-auto block rounded-t-[46%]"
+                  imgClassName="w-full h-auto max-h-[50vh] object-contain mx-auto block"
                   lightCaption={true}
                 />
               </div>
