@@ -13,7 +13,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: baseUrl, changeFrequency: 'weekly', priority: 1, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },
     { url: `${baseUrl}/blogs`, changeFrequency: 'daily', priority: 0.9, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },
-    { url: `${baseUrl}/ecosystem`, changeFrequency: 'monthly', priority: 0.8, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },
     { url: `${baseUrl}/global-vision`, changeFrequency: 'monthly', priority: 0.7, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },
     { url: `${baseUrl}/membership`, changeFrequency: 'weekly', priority: 0.8, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },
     { url: `${baseUrl}/advertise`, changeFrequency: 'monthly', priority: 0.8, lastModified: now, images: [absImg('/images/hero/jaipur-city-palace-grand-facade.jpg')] },

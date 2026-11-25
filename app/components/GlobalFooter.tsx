@@ -22,16 +22,6 @@ const objectiveFooterLinks = [
 
 const footerSections = [
   {
-    title: "Institute",
-    links: [
-      { href: "/blogs", label: "Objective · All Blogs" },
-      { href: "/ecosystem", label: "Five Houses" },
-      { href: "/global-vision", label: "Global Vision" },
-      { href: "/impact", label: "Our Impact" },
-      { href: "/membership", label: "The Royal Gallery Circle" },
-    ],
-  },
-  {
     title: "Connect",
     links: [
       { href: "https://www.instagram.com/theroyalgallerys/", label: "Instagram" },
@@ -54,7 +44,7 @@ export default function GlobalFooter() {
       <div className="max-w-7xl mx-auto">
         <hr className="editorial-rule mb-16 sm:mb-20 opacity-30" />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 sm:gap-12 mb-16 sm:mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-16 sm:mb-20">
           <div className="lg:col-span-1 space-y-5">
             <div className="text-center sm:text-left leading-none" style={{ fontFamily: "var(--font-cormorant), serif" }}>
               <span className="block text-[clamp(7px,1vw,10px)] tracking-[0.38em] uppercase font-light opacity-50" style={{ color: "#9B9589" }}>The</span>

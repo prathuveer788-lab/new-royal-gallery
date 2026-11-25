@@ -137,10 +137,6 @@ export default function Navigation() {
     { href: "/blogs?category=Society&sub=Wild%20Lens%20of%20Royalty%20Profile", label: "★ Wild Lens of Royalty Profile →" },
   ];
 
-  const utilityLinks = [
-    { href: "/ecosystem", label: "Institute" },
-  ];
-
   const isKnownLightRoute = LIGHT_HEADER_ROUTES.some((route) =>
     pathname?.startsWith(route)
   );
@@ -149,7 +145,6 @@ export default function Navigation() {
   // On light/white backgrounds at top: black text (#11110F). On dark hero or scrolled bar: ivory text (#F4F0E7).
   const textColor = isLightTop ? "text-[#11110F]" : "text-[#F4F0E7]";
   const navLinkColor = scrolled ? "#9B9589" : isLightTop ? "#11110F" : "#B8A47A";
-  const utilityColor = scrolled ? "#9B9589" : isLightTop ? "#11110F" : "#8A7352";
   const hoverTextColor = isLightTop ? "#8A7352" : "#F4F0E7";
 
   return (
@@ -253,25 +248,6 @@ export default function Navigation() {
               })}
             </div>
           </div>
-          <span
-            className="w-px h-3.5 mx-2 transition-colors duration-500"
-            style={{ background: isLightTop ? "rgba(17,17,15,0.22)" : "rgba(138,115,82,0.3)" }}
-          />
-          {utilityLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="px-1.5 xl:px-2 py-2 text-[12px] xl:text-[13px] tracking-[0.14em] uppercase transition-colors duration-300 whitespace-nowrap font-sans"
-              style={{
-                color: utilityColor,
-                fontWeight: 400,
-              }}
-              onMouseEnter={(e) => { (e.target as HTMLElement).style.color = hoverTextColor; }}
-              onMouseLeave={(e) => { (e.target as HTMLElement).style.color = utilityColor; }}
-            >
-              {link.label}
-            </Link>
-          ))}
           <Link
             href="/membership"
             className="ml-2 px-3 xl:px-4 py-2 text-[11px] xl:text-[12px] uppercase tracking-[0.16em] transition-all duration-500 font-sans font-medium"
@@ -416,16 +392,13 @@ export default function Navigation() {
           {/* Utility & Membership */}
           <div className="flex flex-col gap-3 pt-2 border-t border-white/10">
             <div className="flex items-center justify-between text-xs tracking-[0.16em] uppercase text-[#9B9589] px-1">
-              {utilityLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="hover:text-[#B8A47A] transition-colors py-1"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              <Link
+                href="/blogs"
+                onClick={() => setIsOpen(false)}
+                className="hover:text-[#B8A47A] transition-colors py-1"
+              >
+                Blogs
+              </Link>
               <Link
                 href="/about"
                 onClick={() => setIsOpen(false)}

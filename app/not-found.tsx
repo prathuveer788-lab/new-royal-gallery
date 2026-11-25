@@ -5,7 +5,7 @@ const blurDataURL =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGw9IiNkZGRkZGQiIGQ9Ik0wIDBoMXYxSDB6Ii8+PC9zdmc+";
 
 const featuredSections = [
-  { name: "The Institute", href: "/ecosystem", desc: "Five institutional houses & preservation" },
+  { name: "Advertise", href: "/advertise", desc: "Brand partnerships & media kit" },
   { name: "Global Vision", href: "/global-vision", desc: "Heritage, culture and contemporary luxury" },
   { name: "Our Impact", href: "/impact", desc: "Preserving cultural memory & legacy" },
   { name: "The Circle", href: "/membership", desc: "Private membership & archive access" },
